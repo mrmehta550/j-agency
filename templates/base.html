@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M Agency - AI Development, Web Design, Digital Marketing & Business Automation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tech.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/privacy.css' %}">
+    <link rel="stylesheet" href="{% static 'css/terms.css' %}">
+    {% comment %} <script src="{% static 'js/privacy.js' %}"></script> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/web.css' %}">
+    <link rel="stylesheet" href="{% static 'css/uiux.css' %}">
+    <link rel="stylesheet" href="{% static 'css/seo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/aisol.css' %}">
+    <link rel="stylesheet" href="{% static 'css/maint.css' %}">
+    <link rel="stylesheet" href="{% static 'css/logo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/video.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/blog_detail.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+<body>
+
+    {% include "base/nav.html" %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include "base/footer.html" %}
+
+    {% comment %} <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // interactive visuals (guarded)
+            document.querySelectorAll('.visual-card').forEach((card) => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left - rect.width / 2;
+                    const y = e.clientY - rect.top - rect.height / 2;
+                    card.style.transform = `translateY(-8px) scale(1.02) rotateX(${(-y * 0.05).toFixed(2)}deg) rotateY(${(x * 0.05).toFixed(2)}deg)`;
+                });
+                card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+            });
+
+            // services slider (guarded)
+            (function initSlider() {
+                const slider = document.querySelector('.services-grid');
+                const cards = document.querySelectorAll('.service-card');
+                const next = document.querySelector('.right');
+                const prev = document.querySelector('.left');
+                if (!slider || cards.length === 0 || !next || !prev) return;
+
+                let index = 0;
+                const cardWidth = cards[0].offsetWidth + 25;
+                const moveSlider = () => { slider.style.transform = `translateX(-${index * cardWidth}px)`; };
+
+                next.addEventListener('click', () => {
+                    index++;
+                    if (index > cards.length - 3) index = 0;
+                    moveSlider();
+                });
+
+                prev.addEventListener('click', () => {
+                    index--;
+                    if (index < 0) index = Math.max(0, cards.length - 3);
+                    moveSlider();
+                });
+
+                setInterval(() => { index = (index + 1) % Math.max(1, cards.length - 2); moveSlider(); }, 3000);
+            })();
+        }); {% endcomment %}
+    </script>
+    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+    <script src="{% static 'js/pricing.js' %}"></script>
+    <script src="{% static 'js/about.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/booking.js' %}"></script>
+    <script src="{% static 'js/blog.js' %}"></script>
+    <script src="{% static 'js/tech.js' %}"></script>
+    <script src="{% static 'js/privacy.js' %}"></script>
+    <script src="{% static 'js/terms.js' %}"></script>
+    <script src="{% static 'js/web.js' %}"></script>
+    <script src="{% static 'js/uiux.js' %}"></script>
+    <script src="{% static 'js/seo.js' %}"></script>
+    <script src="{% static 'js/dm.js' %}"></script>
+    <script src="{% static 'js/aisol.js' %}"></script>
+    <script src="{% static 'js/maint.js' %}"></script>
+    <script src="{% static 'js/logo.js' %}"></script>
+    <script src="{% static 'js/video.js' %}"></script>
+    {% comment %} <script src="{% static 'js/maint.js' %}"></script> {% endcomment %}
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

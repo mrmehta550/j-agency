@@ -1,0 +1,631 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--=========================================
+BLOG HERO
+==========================================-->
+
+<section class="blog-hero">
+
+    <div class="container">
+
+        <div class="blog-hero-wrapper">
+
+            <!--=========================
+            LEFT
+            ==========================-->
+
+            <div class="blog-hero-content">
+
+                <span class="blog-hero-badge">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    OUR BLOG
+
+                </span>
+
+                <h1>
+
+                    Insights, Ideas &
+                    <span>Inspiration</span>
+
+                </h1>
+
+                <p>
+
+                    Explore expert articles on AI,
+                    Web Development, UI/UX,
+                    Automation and Digital Marketing.
+
+                </p>
+
+                <!-- Search -->
+
+                <form
+                    method="GET"
+                    action="{% url 'blog' %}"
+                    class="blog-search-form">
+
+                    <input
+                        type="text"
+                        name="search"
+                        value="{{ request.GET.search }}"
+                        placeholder="Search articles...">
+
+                    <button>
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </form>
+
+                <!-- Stats -->
+
+                <div class="blog-stats">
+
+                    <div class="blog-stat-card">
+
+                        <h2>
+
+                            {{ total_blogs }}
+
+                        </h2>
+
+                        <span>
+
+                            Articles
+
+                        </span>
+
+                    </div>
+
+                    <div class="blog-stat-card">
+
+                        <h2>
+
+                            {{ total_views }}+
+
+                        </h2>
+
+                        <span>
+
+                            Readers
+
+                        </span>
+
+                    </div>
+
+                    <div class="blog-stat-card">
+
+                        <h2>
+
+                            {{ total_categories }}
+
+                        </h2>
+
+                        <span>
+
+                            Categories
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--=========================
+            RIGHT
+            ==========================-->
+
+            <div class="blog-hero-visual">
+
+                <img
+                    src="{% static 'images/blog/blog-hero.webp' %}"
+                    alt="Blog">
+
+                <div class="hero-floating-card card1">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    <div>
+
+                        <h4>
+
+                            New Tutorials
+
+                        </h4>
+
+                        <span>
+
+                            Updated Weekly
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-floating-card card2">
+
+                    <i class="fa-solid fa-fire"></i>
+
+                    <div>
+
+                        <h4>
+
+                            AI Insights
+
+                        </h4>
+
+                        <span>
+
+                            Trending Articles
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-floating-card card3">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    <div>
+
+                        <h4>
+
+                            Web Development
+
+                        </h4>
+
+                        <span>
+
+                            Expert Guides
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+CATEGORY FILTER
+==========================================-->
+
+<section class="blog-category-section">
+
+    <div class="container">
+
+        <div class="blog-category-filter">
+
+            <a
+                href="{% url 'blog' %}"
+                class="{% if not request.GET.category %}active{% endif %}">
+
+                All Categories
+
+            </a>
+
+            {% for category in categories %}
+
+            <a
+                href="?category={{ category.slug }}"
+                class="{% if request.GET.category == category.slug %}active{% endif %}">
+
+                {{ category.name }}
+
+            </a>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+TOP 3 FEATURED BLOGS
+==========================================-->
+
+<section class="featured-blog-section">
+
+    <div class="container">
+
+        {% for blog in top_blogs %}
+
+        <article class="featured-blog-card">
+
+            <!-- Image -->
+
+            <div class="featured-blog-image">
+
+                <img
+                    src="{{ blog.image.url }}"
+                    alt="{{ blog.title }}">
+
+                <span class="featured-category">
+
+                    {{ blog.category.name }}
+
+                </span>
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="featured-blog-content">
+
+                <div class="featured-meta">
+
+                    <span>
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        {{ blog.created_at|date:"M d, Y" }}
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        {{ blog.read_time }} min read
+
+                    </span>
+
+                    <span>
+
+                        <i class="fa-regular fa-eye"></i>
+
+                        {{ blog.views }}
+
+                    </span>
+
+                </div>
+
+                <h2>
+
+                    {{ blog.title }}
+
+                </h2>
+
+                <p>
+
+                    {{ blog.short_description|truncatewords:28 }}
+
+                </p>
+
+                <a
+                    href="{% url 'blog_detail' blog.slug %}"
+                    class="featured-read-btn">
+
+                    Read Article
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+<!--=========================================
+LATEST ARTICLES
+==========================================-->
+
+<section class="blog-main-section">
+
+    <div class="container">
+
+        <div class="blog-main-layout">
+
+            <!--=================================
+                    LEFT
+            =================================-->
+
+            <div class="blog-left">
+
+                <div class="section-heading">
+
+                    <span>
+
+                        Latest Articles
+
+                    </span>
+
+                    <h2>
+
+                        Explore Our Latest Insights
+
+                    </h2>
+
+                </div>
+
+                <div class="latest-blog-grid">
+
+                    {% for blog in blogs %}
+
+                    <article class="latest-blog-card">
+
+                        <div class="latest-blog-image">
+
+                            <img
+                                src="{{ blog.image.url }}"
+                                alt="{{ blog.title }}">
+
+                            <span>
+
+                                {{ blog.category.name }}
+
+                            </span>
+
+                        </div>
+
+                        <div class="latest-blog-content">
+
+                            <div class="latest-blog-meta">
+
+                                <span>
+
+                                    <i class="fa-regular fa-calendar"></i>
+
+                                    {{ blog.created_at|date:"M d, Y" }}
+
+                                </span>
+
+                                <span>
+
+                                    <i class="fa-regular fa-clock"></i>
+
+                                    {{ blog.read_time }} min
+
+                                </span>
+
+                            </div>
+
+                            <h3>
+
+                                {{ blog.title }}
+
+                            </h3>
+
+                            <p>
+
+                                {{ blog.short_description|truncatewords:18 }}
+
+                            </p>
+
+                            <a
+                                href="{% url 'blog_detail' blog.slug %}"
+                                class="latest-blog-btn">
+
+                                Read More
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+            <!--=================================
+                    SIDEBAR
+            =================================-->
+
+            <aside class="blog-sidebar">
+
+                <!-- About -->
+
+                <div class="sidebar-widget">
+
+                    <div class="widget-icon">
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                    </div>
+
+                    <h3>
+
+                        About Our Blog
+
+                    </h3>
+
+                    <p>
+
+                        Stay updated with Web Development,
+                        AI, Business, UI/UX and
+                        Digital Marketing.
+
+                    </p>
+
+                    <a href="#" class="widget-btn">
+
+                        Learn More
+
+                    </a>
+
+                </div>
+
+                <!-- Search -->
+
+                <div class="sidebar-widget">
+
+                    <h3>
+
+                        Search
+
+                    </h3>
+
+                    <form
+                        method="GET"
+                        action="{% url 'blog' %}"
+                        class="sidebar-search">
+
+                        <input
+                            type="text"
+                            name="search"
+                            placeholder="Search article">
+
+                        <button>
+
+                            <i class="fa-solid fa-search"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- Latest -->
+
+                <div class="sidebar-widget">
+
+                    <h3>
+
+                        Latest Posts
+
+                    </h3>
+
+                    {% for latest in latest_posts %}
+
+                    <a
+                        href="{% url 'blog_detail' latest.slug %}"
+                        class="sidebar-post">
+
+                        <img
+                            src="{{ latest.image.url }}"
+                            alt="{{ latest.title }}">
+
+                        <div>
+
+                            <h4>
+
+                                {{ latest.title|truncatewords:6 }}
+
+                            </h4>
+
+                            <span>
+
+                                {{ latest.created_at|date:"M d, Y" }}
+
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    {% endfor %}
+
+                </div>
+
+                <!-- Popular -->
+
+                <div class="sidebar-widget">
+
+                    <h3>
+
+                        Popular Posts
+
+                    </h3>
+
+                    {% for blog in popular_posts %}
+
+                    <a
+                        href="{% url 'blog_detail' blog.slug %}"
+                        class="sidebar-post">
+
+                        <img
+                            src="{{ blog.image.url }}"
+                            alt="{{ blog.title }}">
+
+                        <div>
+
+                            <h4>
+
+                                {{ blog.title|truncatewords:6 }}
+
+                            </h4>
+
+                            <span>
+
+                                {{ blog.views }} Views
+
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    {% endfor %}
+
+                </div>
+
+                <!-- Categories -->
+
+                <div class="sidebar-widget">
+
+                    <h3>
+
+                        Categories
+
+                    </h3>
+
+                    <div class="sidebar-categories">
+
+                        {% for category in categories %}
+
+                        <a href="?category={{ category.slug }}">
+
+                            {{ category.name }}
+
+                            <span>
+
+                                {{ category.blogs.count }}
+
+                            </span>
+
+                        </a>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

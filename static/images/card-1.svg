@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#e8f2ed"/>
+  <rect x="80" y="120" width="440" height="320" rx="36" fill="#0d2e27"/>
+  <rect x="130" y="190" width="220" height="90" rx="18" fill="#f4f6f5"/>
+  <rect x="130" y="320" width="180" height="18" rx="9" fill="#cdd8d3"/>
+  <rect x="130" y="350" width="140" height="16" rx="8" fill="#aebeb7"/>
+  <circle cx="430" cy="260" r="70" fill="#194138"/>
+  <text x="300" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#0b1a16">Secure payments</text>
+</svg>

@@ -1,0 +1,683 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <style>
+        /* ===========================
+           GLOBAL & VARIABLES
+        =========================== */
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #EEF2FF;
+            --primary-dark: #3730A3;
+            --dark: #0F172A;
+            --text-main: #334155;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
+            --white: #110f0f;
+            --border: #E2E8F0;
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--white);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===========================
+           SHARED COMPONENTS
+        =========================== */
+        section { padding: 100px 0; }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover { background-color: var(--primary-dark); }
+
+        .btn-outline {
+            border: 2px solid var(--border);
+            color: var(--dark);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--dark);
+        }
+
+        .badge {
+            background: var(--primary-light);
+            color: var(--primary);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        /* Tech Category/Card Layouts */
+        .tech-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .tech-info h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 20px;
+        }
+
+        .tech-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+
+        .tech-/*width:100%;*/ { font-size: 2.5rem; margin-bottom: 12px; }
+        .tech-name { font-weight: 600; color: var(--dark); }
+
+        .bg-gray { background-color: var(--bg-light); }
+
+        /* ===========================
+           1. HERO SECTION
+        =========================== */
+        .hero {
+            padding: 120px 0 100px;
+            text-align: center;
+            background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.03em;
+        }
+        
+        .hero h1 span { color: var(--primary); }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        /* ===========================
+           2. TECHNOLOGY CATEGORIES
+        =========================== */
+        .tech-categories { padding: 40px 0; border-bottom: 1px solid var(--border); }
+        .cat-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+        }
+        .cat-link {
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: var(--bg-light);
+            color: var(--text-muted);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        .cat-link:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* ===========================
+           3-7. TECH SECTIONS (Frontend to Cloud)
+        =========================== */
+        /* Alternating layout for tech sections */
+        .tech-section:nth-child(even) .tech-layout {
+            direction: rtl; /* Reverse columns */
+        }
+        .tech-section:nth-child(even) .tech-info,
+        .tech-section:nth-child(even) .tech-grid {
+            direction: ltr; /* Reset text direction */
+        }
+
+        /* ===========================
+           8. DEVELOPMENT PROCESS
+        =========================== */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            position: relative;
+        }
+        .process-step { text-align: center; position: relative; z-index: 1; }
+        .step-num {
+            width: 60px; height: 60px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 24px;
+            border: 6px solid var(--primary-light);
+        }
+        .process-step h4 { font-size: 1.25rem; color: var(--dark); margin-bottom: 12px; }
+
+        /* ===========================
+           9. WHY CHOOSE OUR STACK
+        =========================== */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        .why-card { text-align: left; }
+        .why-/*width:100%;*/ {
+            width: 50px; height: 50px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .why-card h4 { color: var(--dark); font-size: 1.25rem; margin-bottom: 12px; }
+
+        /* ===========================
+           10. PROJECTS
+        =========================== */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        .project-card {
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
+        .project-img {
+            width: 100%; height: 300px;
+            background: #E2E8F0;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--text-muted);
+        }
+        .project-content { padding: 30px; }
+        .project-content h4 { font-size: 1.5rem; color: var(--dark); margin-bottom: 10px; }
+        .project-tags span {
+            font-size: 0.8rem; background: var(--bg-light);
+            padding: 4px 10px; border-radius: 4px; margin-right: 8px; font-weight: 500;
+        }
+
+        /* ===========================
+           11. STATISTICS
+        =========================== */
+        .stats-section {
+            background: var(--dark);
+            color: var(--white);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+        .stat-number { font-size: 3.5rem; font-weight: 800; color: var(--primary); margin-bottom: 10px; }
+        .stat-label { font-size: 1.125rem; color: #94A3B8; }
+
+        /* ===========================
+           12. CLIENTS
+        =========================== */
+        .client-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            align-items: center;
+            opacity: 0.6;
+        }
+        .client-logo { font-size: 1.5rem; font-weight: 700; color: var(--text-muted); }
+
+        /* ===========================
+           13. FAQ
+        =========================== */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        details {
+            background: var(--bg-light);
+            margin-bottom: 16px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+        summary {
+            padding: 24px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: var(--dark);
+            cursor: pointer;
+            list-style: none;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after { content: '+'; color: var(--primary); font-size: 1.5rem; }
+        details[open] summary::after { content: '-'; }
+        .faq-content { padding: 0 24px 24px; color: var(--text-muted); }
+
+        /* ===========================
+           14. CTA
+        =========================== */
+        .cta-section {
+            padding: 100px 0;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 24px;
+            padding: 80px 40px;
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-box h2 { font-size: 3rem; margin-bottom: 20px; font-weight: 800; color: var(--white); }
+        .cta-box p { font-size: 1.25rem; margin-bottom: 40px; opacity: 0.9; }
+        .cta-box .btn-outline { border-color: transparent; background: var(--white); color: var(--primary); }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .tech-layout, .tech-section:nth-child(even) .tech-layout {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+            .process-grid, .why-grid { grid-template-columns: repeat(2, 1fr); gap: 40px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero h1 { font-size: 3rem; }
+        }
+        @media (max-width: 768px) {
+            .process-grid, .why-grid, .project-grid, .stats-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.5rem; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. HERO -->
+    <header class="hero">
+        <div class="container">
+            <span class="badge">Enterprise Technology Partner</span>
+            <h1>Architecting the Future with <span>Modern Tech Stacks</span></h1>
+            <p>We build scalable, secure, and lightning-fast digital solutions using the most powerful and modern technologies available today.</p>
+            <div class="hero-btns">
+                <a href="#cta" class="btn btn-primary">Start Your Project</a>
+                <a href="#projects" class="btn btn-outline">View Our Work</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. TECHNOLOGY CATEGORIES -->
+    <section class="tech-categories bg-gray" id="categories">
+        <div class="container">
+            <div class="cat-nav">
+                <a href="#frontend" class="cat-link">Frontend</a>
+                <a href="#backend" class="cat-link">Backend</a>
+                <a href="#ai-ml" class="cat-link">AI & ML</a>
+                <a href="#database" class="cat-link">Database</a>
+                <a href="#cloud-devops" class="cat-link">Cloud & DevOps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. FRONTEND -->
+    <section class="tech-section" id="frontend">
+        <div class="container tech-layout">
+            <div class="tech-info">
+                <span class="badge">User Interface</span>
+                <h3>Frontend Development</h3>
+                <p>We craft highly interactive, responsive, and accessible user interfaces. Our frontend stack ensures your users get a seamless experience across all devices with near-instant load times.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-/*width:100%;*/">⚛️</div><div class="tech-name">React.js</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">▲</div><div class="tech-name">Next.js</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">💚</div><div class="tech-name">Vue.js</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">💨</div><div class="tech-name">Tailwind</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">📜</div><div class="tech-name">TypeScript</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">📱</div><div class="tech-name">React Native</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BACKEND -->
+    <section class="tech-section bg-gray" id="backend">
+        <div class="container tech-layout">
+            <div class="tech-info">
+                <span class="badge">Server Side</span>
+                <h3>Backend Engineering</h3>
+                <p>Robust, secure, and scalable backend architectures. We build APIs and microservices that can handle millions of requests without breaking a sweat.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🟢</div><div class="tech-name">Node.js</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🐍</div><div class="tech-name">Python</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🚀</div><div class="tech-name">Django</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🐹</div><div class="tech-name">Go</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">☕</div><div class="tech-name">Java</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">⚡</div><div class="tech-name">FastAPI</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. AI & ML -->
+    <section class="tech-section" id="ai-ml">
+        <div class="container tech-layout">
+            <div class="tech-info">
+                <span class="badge">Intelligence</span>
+                <h3>Artificial Intelligence & ML</h3>
+                <p>Empower your products with intelligent algorithms. From predictive analytics to generative AI, we integrate cutting-edge machine learning into your infrastructure.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🧠</div><div class="tech-name">OpenAI</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🔥</div><div class="tech-name">PyTorch</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">📊</div><div class="tech-name">TensorFlow</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🤗</div><div class="tech-name">HuggingFace</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">👁️</div><div class="tech-name">Computer Vision</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">💬</div><div class="tech-name">NLP</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. DATABASE -->
+    <section class="tech-section bg-gray" id="database">
+        <div class="container tech-layout">
+            <div class="tech-info">
+                <span class="badge">Data Storage</span>
+                <h3>Database Solutions</h3>
+                <p>Data is the lifeblood of modern apps. We design relational, NoSQL, and Vector databases optimized for speed, security, and scale.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🐘</div><div class="tech-name">PostgreSQL</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🍃</div><div class="tech-name">MongoDB</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🗄️</div><div class="tech-name">Redis</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🔎</div><div class="tech-name">Elasticsearch</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🎯</div><div class="tech-name">Pinecone</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">❄️</div><div class="tech-name">Snowflake</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CLOUD & DEVOPS -->
+    <section class="tech-section" id="cloud-devops">
+        <div class="container tech-layout">
+            <div class="tech-info">
+                <span class="badge">Infrastructure</span>
+                <h3>Cloud & DevOps</h3>
+                <p>Continuous Integration, Continuous Deployment. We automate your infrastructure to ensure zero downtime and infinite scalability.</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card"><div class="tech-/*width:100%;*/">☁️</div><div class="tech-name">AWS</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🚢</div><div class="tech-name">Docker</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">☸️</div><div class="tech-name">Kubernetes</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">♾️</div><div class="tech-name">CI / CD</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🧱</div><div class="tech-name">Terraform</div></div>
+                <div class="tech-card"><div class="tech-/*width:100%;*/">🐧</div><div class="tech-name">Linux</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. DEVELOPMENT PROCESS -->
+    <section class="bg-gray" id="process">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Development Process</h2>
+                <p>A proven, agile methodology that guarantees delivery on time and within budget.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num">1</div>
+                    <h4>Discovery</h4>
+                    <p>Understanding your business goals, target audience, and technical requirements.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">2</div>
+                    <h4>Design & Architecture</h4>
+                    <p>Prototyping UI/UX and defining the database schemas and system architecture.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">3</div>
+                    <h4>Agile Development</h4>
+                    <p>Writing clean, testable code in sprints with regular client updates.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num">4</div>
+                    <h4>Launch & Scale</h4>
+                    <p>Thorough QA, automated deployment, and post-launch monitoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. WHY CHOOSE OUR STACK -->
+    <section id="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Our Stack?</h2>
+                <p>We don't just write code; we build digital assets designed for the future.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">⚡</div>
+                    <h4>High Performance</h4>
+                    <p>Optimized architectures ensure sub-second load times and high concurrency handling.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">🛡️</div>
+                    <h4>Enterprise Security</h4>
+                    <p>Security embedded at every layer, from network configurations to data encryption at rest.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">📈</div>
+                    <h4>Infinite Scalability</h4>
+                    <p>Cloud-native design patterns that scale up automatically as your user base grows.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">🔄</div>
+                    <h4>Future-Proof</h4>
+                    <p>Built with modern, heavily supported open-source technologies to prevent vendor lock-in.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">🤝</div>
+                    <h4>Easy Integration</h4>
+                    <p>API-first approach allows seamless connection with third-party tools and legacy systems.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-/*width:100%;*/">💰</div>
+                    <h4>Cost Efficiency</h4>
+                    <p>Serverless and microservice setups ensure you only pay for the computing power you actually use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. PROJECTS -->
+    <section class="bg-gray" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recent Implementations</h2>
+                <p>See how our technology stack translates into real-world business value.</p>
+            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-img">Mockup Image Placeholder</div>
+                    <div class="project-content">
+                        <h4>FinTech Payment Gateway</h4>
+                        <p style="margin-bottom: 16px; color: var(--text-muted);">A high-throughput transaction system processing $1M+ daily with sub-second latency.</p>
+                        <div class="project-tags">
+                            <span>Go</span><span>React</span><span>PostgreSQL</span><span>AWS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-img">Mockup Image Placeholder</div>
+                    <div class="project-content">
+                        <h4>AI Medical Assistant</h4>
+                        <p style="margin-bottom: 16px; color: var(--text-muted);">HIPAA-compliant LLM integration for analyzing patient data and assisting doctors.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>OpenAI</span><span>Next.js</span><span>Pinecone</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. STATISTICS -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div>
+                    <div class="stat-number">250+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div>
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime SLA</div>
+                </div>
+                <div>
+                    <div class="stat-number">50M+</div>
+                    <div class="stat-label">API Calls Handled Daily</div>
+                </div>
+                <div>
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Tech Experts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. CLIENTS -->
+    <section id="clients">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted By Innovative Teams</h2>
+            </div>
+            <div class="client-logos">
+                <div class="client-logo">TECHCORP</div>
+                <div class="client-logo">GLOBAL.AI</div>
+                <div class="client-logo">FINANCE+</div>
+                <div class="client-logo">NEXUS_HEALTH</div>
+                <div class="client-logo">E-COMM_PRO</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. FAQ -->
+    <section class="bg-gray" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <details>
+                    <summary>Do you offer custom technology stacks?</summary>
+                    <div class="faq-content">Yes. While we have our preferred robust stacks, we tailor the technology choices based entirely on your specific project requirements, scalability needs, and budget.</div>
+                </details>
+                <details>
+                    <summary>How do you handle project security?</summary>
+                    <div class="faq-content">Security is integrated into our CI/CD pipelines. We follow OWASP guidelines, implement strict IAM roles, use automated vulnerability scanning, and conduct regular penetration testing.</div>
+                </details>
+                <details>
+                    <summary>Will I own the source code?</summary>
+                    <div class="faq-content">Absolutely. Once the project is completed and fully paid, all Intellectual Property (IP) and source code are fully transferred to your organization.</div>
+                </details>
+                <details>
+                    <summary>Do you provide post-launch maintenance?</summary>
+                    <div class="faq-content">Yes, we offer ongoing SLA-based support, DevOps monitoring, and maintenance packages to ensure your application stays updated and runs smoothly.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. CTA -->
+    <section class="cta-section" id="cta">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to build something amazing?</h2>
+                <p>Let's discuss your architecture, tech stack, and how we can bring your vision to life.</p>
+                <a href="mailto:hello@example.com" class="btn btn-outline">Schedule a Technical Consultation</a>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

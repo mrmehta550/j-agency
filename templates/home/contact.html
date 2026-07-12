@@ -1,0 +1,579 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+  <!-- =========================================
+CONTACT HERO
+========================================== -->
+
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- ==============================
+            LEFT CONTENT
+            ============================== -->
+
+        <div class="contact-content">
+          <span class="contact-section-tag">CONTACT US</span>
+
+          <h1>Let's Build Something Amazing Together</h1>
+
+          <p>Whether you need a professional website, AI automation, digital marketing, or a custom software solution, M Agency is ready to help your business grow.</p>
+
+          <div class="contact-hero-buttons">
+            <a href="#contactForm" class="contact-btn-primary">Get Free Consultation</a>
+
+            <a href="#map" class="contact-btn-outline">Find Our Office</a>
+          </div>
+
+          <!-- ==============================
+                HIGHLIGHTS
+                ============================== -->
+
+          <div class="contact-highlights">
+            <!-- Card -->
+
+            <div class="contact-highlight-card">
+              <div class="contact-highlight-icon">📞</div>
+
+              <div>
+                <h4>Call Us</h4>
+
+                <span>+91 XXXXX XXXXX</span>
+              </div>
+            </div>
+
+            <!-- Card -->
+
+            <div class="contact-highlight-card">
+              <div class="contact-highlight-icon">✉️</div>
+
+              <div>
+                <h4>Email Us</h4>
+
+                <span>info@magency.com</span>
+              </div>
+            </div>
+
+            <!-- Card -->
+
+            <div class="contact-highlight-card">
+              <div class="contact-highlight-icon">📍</div>
+
+              <div>
+                <h4>Office</h4>
+
+                <span>Chandigarh, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ==============================
+            RIGHT IMAGE
+            ============================== -->
+
+        <div class="contact-image">
+          <div class="contact-image-bg"></div>
+
+          <img src="{% static 'images/contact/contact-hero.png' %}" alt="Contact M Agency" />
+
+          <!-- Floating Card -->
+
+          <div class="contact-floating-card contact-card-one">
+            <h3>500+</h3>
+
+            <span>Projects Delivered</span>
+          </div>
+
+          <!-- Floating Card -->
+
+          <div class="contact-floating-card contact-card-two">
+            <h3>24/7</h3>
+
+            <span>Expert Support</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================================
+CONTACT FORM
+========================================== -->
+
+  <section class="contact-form-section" id="contactForm">
+    <div class="container">
+      <div class="contact-wrapper">
+        <!-- =================================
+            LEFT INFO
+            ================================== -->
+
+        <div class="contact-info">
+          <span class="contact-section-tag">GET IN TOUCH</span>
+
+          <h2>Let's Discuss Your Project</h2>
+
+          <p>Fill out the form below and our team will contact you within 24 hours to understand your business requirements and provide the best solution.</p>
+
+          <!-- Info Card -->
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">📞</div>
+
+            <div>
+              <h4>Phone Number</h4>
+
+              <span>+91 XXXXX XXXXX</span>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">✉️</div>
+
+            <div>
+              <h4>Email Address</h4>
+
+              <span>info@magency.com</span>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">📍</div>
+
+            <div>
+              <h4>Office</h4>
+
+              <span>Chandigarh, India</span>
+            </div>
+          </div>
+
+          <!-- Info Card -->
+
+          <div class="contact-info-box">
+            <div class="contact-info-icon">🕒</div>
+
+            <div>
+              <h4>Working Hours</h4>
+
+              <span>
+                Monday - Saturday
+
+                <br />
+
+                9:00 AM - 7:00 PM
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================================
+            CONTACT FORM
+            ================================== -->
+
+        <div class="contact-form-card">
+          <form method="POST" action="{% url 'contact' %}">
+            {% csrf_token %}
+
+            <!-- Row -->
+
+            <div class="contact-input-grid">
+              <div class="contact-input-group">
+                <label>Full Name</label>
+
+                <input type="text" name="full_name" placeholder="Enter your full name" required />
+              </div>
+
+              <div class="contact-input-group">
+                <label>Email Address</label>
+
+                <input type="email" name="email" placeholder="example@gmail.com" required />
+              </div>
+            </div>
+
+            <!-- Row -->
+
+            <div class="contact-input-grid">
+              <div class="contact-input-group">
+                <label>Phone Number</label>
+
+                <input type="text" name="phone" placeholder="+91 XXXXX XXXXX" required />
+              </div>
+
+              <div class="contact-input-group">
+                <label>Company Name</label>
+
+                <input type="text" name="company" placeholder="Your Company" />
+              </div>
+            </div>
+
+            <!-- Service -->
+
+            <div class="contact-input-group">
+              <label>Select Service</label>
+
+              <select name="service" required>
+                <option value="Website Development">Website Development</option>
+
+                <option value="AI Automation">AI Automation</option>
+
+                <option value="Mobile App Development">Mobile App Development</option>
+
+                <option value="UI / UX Design">UI / UX Design</option>
+
+                <option value="SEO Optimization">SEO Optimization</option>
+
+                <option value="Digital Marketing">Digital Marketing</option>
+
+                <option value="Cloud Solutions">Cloud Solutions</option>
+
+                <option value="E-Commerce Development">E-Commerce Development</option>
+              </select>
+            </div>
+
+            <!-- Budget -->
+
+            <div class="contact-input-group">
+              <label>Estimated Budget</label>
+
+              <select name="budget" required>
+                <option value="Under ₹25,000">Under ₹25,000</option>
+
+                <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+
+                <option value="Above ₹1,00,000">Above ₹1,00,000</option>
+              </select>
+            </div>
+
+            <!-- Project -->
+
+            <div class="contact-input-group">
+              <label>Project Details</label>
+
+              <textarea rows="6" name="message" placeholder="Tell us about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="contact-submit-btn">Send Message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================================
+OFFICE LOCATION
+========================================== -->
+
+  <section class="contact-office-section" id="map">
+    <div class="container">
+      <div class="contact-section-title">
+        <span>OUR OFFICE</span>
+
+        <h2>Visit M Agency</h2>
+
+        <p>We work with clients across the globe. You can visit our office, schedule a meeting, or connect with us online.</p>
+      </div>
+
+      <div class="contact-office-grid">
+        <!-- ==============================
+            GOOGLE MAP
+            ============================== -->
+
+        <div class="contact-map-card">
+          <iframe src="https://www.google.com/maps?q=Chandigarh&output=embed" loading="lazy" allowfullscreen=""></iframe>
+        </div>
+
+        <!-- ==============================
+            OFFICE DETAILS
+            ============================== -->
+
+        <div class="contact-office-info">
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">📍</div>
+
+            <div>
+              <h3>Head Office</h3>
+
+              <p>Chandigarh, Punjab, India</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">📞</div>
+
+            <div>
+              <h3>Phone</h3>
+
+              <p>+91 XXXXX XXXXX</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">✉️</div>
+
+            <div>
+              <h3>Email</h3>
+
+              <p>info@magency.com</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">🌐</div>
+
+            <div>
+              <h3>Website</h3>
+
+              <p>www.magency.com</p>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">🕒</div>
+
+            <div>
+              <h3>Business Hours</h3>
+
+              <p>
+                Monday - Saturday
+
+                <br />
+
+                9:00 AM - 7:00 PM
+              </p>
+            </div>
+          </div>
+
+          <!-- Card -->
+
+          <div class="contact-office-card">
+            <div class="contact-office-icon">💬</div>
+
+            <div>
+              <h3>Live Support</h3>
+
+              <p>Chat with our experts anytime during business hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================================
+WHY CHOOSE M AGENCY
+========================================== -->
+
+  <section class="contact-why-section">
+    <div class="container">
+      <div class="contact-section-title">
+        <span>WHY CHOOSE M AGENCY</span>
+
+        <h2>We Build Digital Experiences That Drive Real Business Growth</h2>
+
+        <p>From startups to enterprise businesses, we combine creativity, technology and AI to deliver world-class digital solutions.</p>
+      </div>
+
+      <div class="contact-feature-grid">
+        <!-- Card 1 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🚀</div>
+
+          <h3>Fast Project Delivery</h3>
+
+          <p>We deliver projects on schedule without compromising quality or performance.</p>
+        </div>
+
+        <!-- Card 2 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🤖</div>
+
+          <h3>AI Powered Solutions</h3>
+
+          <p>Intelligent automation, AI chatbots, LLM integrations, and business workflow solutions.</p>
+        </div>
+
+        <!-- Card 3 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🌐</div>
+
+          <h3>Modern Web Development</h3>
+
+          <p>High-performance websites built with modern technologies and responsive design.</p>
+        </div>
+
+        <!-- Card 4 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">📱</div>
+
+          <h3>Mobile Applications</h3>
+
+          <p>Android and iOS applications designed for performance, scalability and user experience.</p>
+        </div>
+
+        <!-- Card 5 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🔒</div>
+
+          <h3>Secure & Reliable</h3>
+
+          <p>Enterprise-grade security, cloud infrastructure and reliable deployment.</p>
+        </div>
+
+        <!-- Card 6 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">📈</div>
+
+          <h3>Digital Marketing</h3>
+
+          <p>SEO, Google Ads, social media marketing and lead generation strategies.</p>
+        </div>
+
+        <!-- Card 7 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🎯</div>
+
+          <h3>Business Strategy</h3>
+
+          <p>We understand your goals and create custom digital solutions for long-term growth.</p>
+        </div>
+
+        <!-- Card 8 -->
+
+        <div class="contact-feature-card">
+          <div class="contact-feature-icon">🤝</div>
+
+          <h3>Lifetime Support</h3>
+
+          <p>Dedicated support, maintenance and updates even after project delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================================
+CONTACT CTA
+========================================== -->
+
+  <section class="contact-cta">
+    <div class="container">
+      <div class="contact-cta-box">
+        <div class="contact-cta-left">
+          <span class="contact-section-tag">START YOUR PROJECT</span>
+
+          <h2>Ready To Grow Your Business With M Agency?</h2>
+
+          <p>Whether you're looking for a modern website, AI automation, mobile application, digital marketing, or complete digital transformation, our experts are ready to help.</p>
+
+          <div class="contact-cta-buttons">
+            <a href="{% url 'booking' %}" class="contact-btn-primary">Book Free Consultation</a>
+
+            <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-btn-outline">WhatsApp Us</a>
+          </div>
+        </div>
+
+        <div class="contact-cta-right">
+          <div class="contact-cta-card">
+            <div class="contact-cta-icon">🚀</div>
+
+            <h3>Free Consultation</h3>
+
+            <p>30 Minute Strategy Session</p>
+          </div>
+
+          <div class="contact-cta-card">
+            <div class="contact-cta-icon">⚡</div>
+
+            <h3>Fast Response</h3>
+
+            <p>Reply Within 1 Hour</p>
+          </div>
+
+          <div class="contact-cta-card">
+            <div class="contact-cta-icon">🤝</div>
+
+            <h3>Dedicated Team</h3>
+
+            <p>Professional Designers, Developers & AI Experts</p>
+          </div>
+
+          <div class="contact-cta-card">
+            <div class="contact-cta-icon">⭐</div>
+
+            <h3>500+ Projects</h3>
+
+            <p>Trusted By Businesses Around The World</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+NEWSLETTER
+========================================== -->
+
+  <section class="contact-newsletter">
+    <div class="container">
+      <div class="contact-newsletter-box">
+        <span>NEWSLETTER</span>
+
+        <h2>Stay Updated With M Agency</h2>
+
+        <p>Subscribe to receive the latest updates, AI trends, web development insights, SEO tips and exclusive business resources.</p>
+
+        <form class="contact-newsletter-form">
+          <input type="email" placeholder="Enter your email address" required />
+
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <div class="contact-newsletter-stats">
+          <div>
+            <h3>500+</h3>
+
+            <span>Projects</span>
+          </div>
+
+          <div>
+            <h3>98%</h3>
+
+            <span>Client Satisfaction</span>
+          </div>
+
+          <div>
+            <h3>24/7</h3>
+
+            <span>Support</span>
+          </div>
+
+          <div>
+            <h3>10+</h3>
+
+            <span>Digital Services</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

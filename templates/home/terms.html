@@ -1,0 +1,1878 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!--=========================================
+            HERO SECTION
+==========================================-->
+
+<section class="terms-hero">
+
+    <div class="container">
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <a href="{% url 'home' %}">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-angle-right"></i>
+
+            </span>
+
+            <span>
+
+                Terms & Conditions
+
+            </span>
+
+        </div>
+
+        <div class="terms-grid">
+
+            <!-- Left -->
+
+            <div class="terms-content">
+
+                <span class="hero-badge">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                    Legal Information
+
+                </span>
+
+                <h1>
+
+                    Terms &
+                    <span>Conditions</span>
+
+                </h1>
+
+                <p>
+
+                    These Terms & Conditions govern your access
+                    to our website and the use of our services.
+                    By using our website or purchasing any of our
+                    digital solutions, you agree to comply with
+                    these terms.
+
+                </p>
+
+                <div class="terms-info">
+
+                    <div class="info-card">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Last Updated
+
+                            </h4>
+
+                            <p>
+
+                                June 30, 2026
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <i class="fa-solid fa-file-contract"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Legal Agreement
+
+                            </h4>
+
+                            <p>
+
+                                Applicable Worldwide
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="terms-image-wrapper">
+
+                <div class="floating-card top-card">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                    <div>
+
+                        <h5>
+
+                            Fair Policies
+
+                        </h5>
+
+                        <small>
+
+                            Transparent & Secure
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <img
+
+                    src="{% static 'images/privacy/terms.jpg' %}"
+
+                    alt="Terms"
+
+                    class="terms-image"
+
+                >
+
+                <div class="floating-card bottom-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <div>
+
+                        <h5>
+
+                            Protected Services
+
+                        </h5>
+
+                        <small>
+
+                            Trusted Agreement
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        OVERVIEW CARDS
+==========================================-->
+
+<section class="terms-features">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-file-contract"></i>
+
+                </div>
+
+                <h3>
+
+                    Fair Agreement
+
+                </h3>
+
+                <p>
+
+                    Transparent terms that
+                    protect both our company
+                    and our clients.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <h3>
+
+                    Secure Payments
+
+                </h3>
+
+                <p>
+
+                    Clear payment schedules,
+                    invoices and billing
+                    procedures.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h3>
+
+                    Data Protection
+
+                </h3>
+
+                <p>
+
+                    Your confidential project
+                    information remains
+                    protected.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-scale-balanced"></i>
+
+                </div>
+
+                <h3>
+
+                    Legal Compliance
+
+                </h3>
+
+                <p>
+
+                    Our services comply with
+                    applicable laws and
+                    business standards.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        TERMS CONTENT
+==========================================-->
+
+<section class="terms-content-section">
+
+    <div class="container">
+
+        <div class="terms-layout">
+
+            <!--=================================
+                    SIDEBAR
+            =================================-->
+
+            <aside class="terms-sidebar">
+
+                <div class="sidebar-card">
+
+                    <h3>
+
+                        Table of Contents
+
+                    </h3>
+
+                    <ul>
+
+                        <li>
+
+                            <a href="#introduction">
+
+                                Introduction
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#definitions">
+
+                                Definitions
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#services">
+
+                                Services
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#payments">
+
+                                Payment Terms
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#liability">
+
+                                Liability
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#contact">
+
+                                Contact
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+            <!--=================================
+                    MAIN CONTENT
+            =================================-->
+
+            <div class="terms-main">
+
+                <!-- Introduction -->
+
+                <section
+                    id="introduction"
+                    class="terms-card">
+
+                    <span class="section-tag">
+
+                        Introduction
+
+                    </span>
+
+                    <h2>
+
+                        Welcome To Our Terms &
+                        Conditions
+
+                    </h2>
+
+                    <p>
+
+                        These Terms & Conditions
+                        govern your access to our
+                        website and digital
+                        services. By accessing or
+                        using our services, you
+                        agree to comply with these
+                        terms.
+
+                    </p>
+
+                    <p>
+
+                        Please read this document
+                        carefully before using our
+                        website or entering into
+                        any service agreement with
+                        NovaStudio.
+
+                    </p>
+
+                </section>
+
+                <!-- Definitions -->
+
+                <section
+                    id="definitions"
+                    class="terms-card">
+
+                    <span class="section-tag">
+
+                        Definitions
+
+                    </span>
+
+                    <h2>
+
+                        Key Definitions
+
+                    </h2>
+
+                    <div class="definition-grid">
+
+                        <div class="definition-card">
+
+                            <i class="fa-solid fa-building"></i>
+
+                            <h4>
+
+                                Company
+
+                            </h4>
+
+                            <p>
+
+                                Refers to NovaStudio,
+                                its employees,
+                                partners and
+                                representatives.
+
+                            </p>
+
+                        </div>
+
+                        <div class="definition-card">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <h4>
+
+                                Client
+
+                            </h4>
+
+                            <p>
+
+                                Any person or
+                                organization
+                                purchasing our
+                                services.
+
+                            </p>
+
+                        </div>
+
+                        <div class="definition-card">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <h4>
+
+                                Website
+
+                            </h4>
+
+                            <p>
+
+                                The official
+                                NovaStudio website
+                                and all associated
+                                web pages.
+
+                            </p>
+
+                        </div>
+
+                        <div class="definition-card">
+
+                            <i class="fa-solid fa-laptop-code"></i>
+
+                            <h4>
+
+                                Services
+
+                            </h4>
+
+                            <p>
+
+                                Website development,
+                                AI solutions,
+                                marketing,
+                                SEO and digital
+                                consulting.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                <!--=========================================
+        SERVICES
+==========================================-->
+
+<section
+    id="services"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Services
+
+    </span>
+
+    <h2>
+
+        Services We Provide
+
+    </h2>
+
+    <p>
+
+        NovaStudio provides professional digital
+        services designed to help businesses
+        establish and grow their online presence.
+
+    </p>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h4>
+
+                Website Development
+
+            </h4>
+
+            <p>
+
+                Custom responsive websites,
+                web applications and
+                eCommerce solutions.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-mobile-screen-button"></i>
+
+            <h4>
+
+                Mobile Applications
+
+            </h4>
+
+            <p>
+
+                Android and iOS application
+                development with modern UI.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-palette"></i>
+
+            <h4>
+
+                UI / UX Design
+
+            </h4>
+
+            <p>
+
+                Modern user interface and
+                user experience design.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h4>
+
+                Digital Marketing
+
+            </h4>
+
+            <p>
+
+                SEO, social media,
+                branding and online
+                marketing strategies.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h4>
+
+                AI Solutions
+
+            </h4>
+
+            <p>
+
+                AI chatbots,
+                automation,
+                RAG systems,
+                and LLM integrations.
+
+            </p>
+
+        </div>
+
+        <div class="service-card">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <h4>
+
+                Cloud & Support
+
+            </h4>
+
+            <p>
+
+                Deployment,
+                maintenance,
+                monitoring and
+                technical support.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+    CLIENT RESPONSIBILITIES
+==========================================-->
+
+<section
+    id="responsibilities"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Client Responsibilities
+
+    </span>
+
+    <h2>
+
+        Responsibilities Of The Client
+
+    </h2>
+
+    <p>
+
+        To ensure successful project delivery,
+        clients agree to fulfill the following
+        responsibilities.
+
+    </p>
+
+    <div class="responsibility-list">
+
+        <div class="responsibility-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+
+                Provide accurate project requirements.
+
+            </span>
+
+        </div>
+
+        <div class="responsibility-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+
+                Deliver logos, content and media on time.
+
+            </span>
+
+        </div>
+
+        <div class="responsibility-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+
+                Review completed work promptly.
+
+            </span>
+
+        </div>
+
+        <div class="responsibility-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+
+                Maintain confidentiality of login credentials.
+
+            </span>
+
+        </div>
+
+        <div class="responsibility-item">
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <span>
+
+                Complete payments according to invoices.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PAYMENT TERMS
+==========================================-->
+
+<section
+    id="payments"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Payment Policy
+
+    </span>
+
+    <h2>
+
+        Payment Terms
+
+    </h2>
+
+    <p>
+
+        Payment schedules are agreed upon
+        before project commencement.
+
+    </p>
+
+    <div class="payment-grid">
+
+        <div class="payment-card">
+
+            <i class="fa-solid fa-wallet"></i>
+
+            <h4>
+
+                Advance Payment
+
+            </h4>
+
+            <p>
+
+                30%–50% advance may be
+                required before work begins.
+
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <i class="fa-solid fa-money-bill-wave"></i>
+
+            <h4>
+
+                Final Payment
+
+            </h4>
+
+            <p>
+
+                Remaining payment is due
+                before project delivery.
+
+            </p>
+
+        </div>
+
+        <div class="payment-card">
+
+            <i class="fa-solid fa-receipt"></i>
+
+            <h4>
+
+                Invoice
+
+            </h4>
+
+            <p>
+
+                Digital invoices are provided
+                for every completed milestone.
+
+            </p>
+
+        </div>
+
+                <div class="payment-card">
+
+            <i class="fa-solid fa-clock"></i>
+
+            <h4>
+
+                Late Payments
+
+            </h4>
+
+            <p>
+
+                Delayed payments may result
+                in project delays or temporary
+                suspension of services until
+                outstanding invoices are cleared.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PROJECT TIMELINE
+==========================================-->
+
+<section
+    id="timeline"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Workflow
+
+    </span>
+
+    <h2>
+
+        Standard Project Timeline
+
+    </h2>
+
+    <p>
+
+        Every project follows a structured
+        development process to ensure
+        transparency and timely delivery.
+
+    </p>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-comments"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Requirement Discussion
+
+                </h4>
+
+                <p>
+
+                    Understanding project goals,
+                    features, timeline and scope.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Design Approval
+
+                </h4>
+
+                <p>
+
+                    Wireframes, UI design and
+                    branding approval before
+                    development starts.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-code"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Development
+
+                </h4>
+
+                <p>
+
+                    Frontend, backend and
+                    database implementation
+                    according to approved scope.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-vial-circle-check"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Testing & QA
+
+                </h4>
+
+                <p>
+
+                    Quality assurance,
+                    responsiveness,
+                    security and performance
+                    testing.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-rocket"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Deployment
+
+                </h4>
+
+                <p>
+
+                    Website or application is
+                    deployed to the production
+                    server after final approval.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-headset"></i>
+
+            </div>
+
+            <div class="timeline-content">
+
+                <h4>
+
+                    Maintenance & Support
+
+                </h4>
+
+                <p>
+
+                    Ongoing maintenance,
+                    updates and technical
+                    support based on the
+                    selected support plan.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        INTELLECTUAL PROPERTY
+==========================================-->
+
+<section
+    id="intellectual"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Ownership
+
+    </span>
+
+    <h2>
+
+        Intellectual Property Rights
+
+    </h2>
+
+    <p>
+
+        All source code, designs, graphics,
+        documents and digital assets created
+        during the project remain the property
+        of NovaStudio until full payment has
+        been received.
+
+    </p>
+
+    <div class="property-grid">
+
+        <div class="property-card">
+
+            <i class="fa-solid fa-code"></i>
+
+            <h4>
+
+                Source Code
+
+            </h4>
+
+            <p>
+
+                Ownership transfers after
+                the project has been fully
+                paid unless otherwise
+                specified.
+
+            </p>
+
+        </div>
+
+        <div class="property-card">
+
+            <i class="fa-solid fa-image"></i>
+
+            <h4>
+
+                Design Assets
+
+            </h4>
+
+            <p>
+
+                UI designs, illustrations and
+                graphics become the client's
+                property after project completion.
+
+            </p>
+
+        </div>
+
+        <div class="property-card">
+
+            <i class="fa-solid fa-copyright"></i>
+
+            <h4>
+
+                Copyright
+
+            </h4>
+
+            <p>
+
+                Third-party libraries,
+                fonts and licensed resources
+                remain subject to their
+                respective licenses.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        CONFIDENTIALITY
+==========================================-->
+
+<section
+    id="confidentiality"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Confidentiality
+
+    </span>
+
+    <h2>
+
+        Confidential Information
+
+    </h2>
+
+    <p>
+
+        Both parties agree to keep project
+        information, credentials, business
+        strategies and confidential documents
+        secure and private.
+
+    </p>
+
+    <div class="confidentiality-list">
+
+        <div class="confidentiality-item">
+
+            <i class="fa-solid fa-lock"></i>
+
+            <span>
+
+                Secure storage of confidential data.
+
+            </span>
+
+        </div>
+
+        <div class="confidentiality-item">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            <span>
+
+                Limited access to authorized personnel only.
+
+            </span>
+
+        </div>
+
+        <div class="confidentiality-item">
+
+            <i class="fa-solid fa-file-shield"></i>
+
+            <span>
+
+                No disclosure without written permission.
+
+            </span>
+
+        </div>
+
+        <div class="confidentiality-item">
+
+            <i class="fa-solid fa-user-secret"></i>
+
+            <span>
+
+                Client credentials remain confidential.
+
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        REVISIONS
+==========================================-->
+
+<section
+    id="revisions"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Revisions
+
+    </span>
+
+    <h2>
+
+        Revision Policy
+
+    </h2>
+
+    <p>
+
+        Each project includes a predefined
+        number of revisions. Additional
+        revisions may require extra charges.
+
+    </p>
+
+    <div class="revision-grid">
+
+        <div class="revision-card">
+
+            <h3>
+
+                Website Design
+
+            </h3>
+
+            <h1>
+
+                3
+
+            </h1>
+
+            <p>
+
+                Free Design Revisions
+
+            </p>
+
+        </div>
+
+        <div class="revision-card">
+
+            <h3>
+
+                Development
+
+            </h3>
+
+            <h1>
+
+                2
+
+            </h1>
+
+            <p>
+
+                Functional Revisions
+
+            </p>
+
+        </div>
+
+        <div class="revision-card">
+
+            <h3>
+
+                Extra Changes
+
+            </h3>
+
+            <h1>
+
+                ₹
+
+            </h1>
+
+            <p>
+
+                Additional charges may apply
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        CANCELLATION & REFUND
+==========================================-->
+
+<section
+    id="refund"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Cancellation
+
+    </span>
+
+    <h2>
+
+        Cancellation & Refund Policy
+
+    </h2>
+
+    <p>
+
+        Project cancellations and refunds
+        are handled according to the stage
+        of project completion and the agreed
+        service contract.
+
+    </p>
+
+    <div class="refund-grid">
+
+        <div class="refund-card">
+
+            <i class="fa-solid fa-ban"></i>
+
+            <h4>
+
+                Client Cancellation
+
+            </h4>
+
+            <p>
+
+                Work completed before
+                cancellation will be billed
+                accordingly.
+
+            </p>
+
+        </div>
+
+        <div class="refund-card">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            <h4>
+
+                Refund Requests
+
+            </h4>
+
+            <p>
+
+                Eligible refunds are reviewed
+                based on completed milestones.
+
+            </p>
+
+        </div>
+
+        <div class="refund-card">
+
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+
+            <h4>
+
+                Non-refundable
+
+            </h4>
+
+            <p>
+
+                Domain registration,
+                hosting and third-party
+                licenses are non-refundable.
+
+            </p>
+
+        </div>
+
+        <div class="refund-card">
+
+            <i class="fa-solid fa-scale-balanced"></i>
+
+            <h4>
+
+                Mutual Agreement
+
+            </h4>
+
+            <p>
+
+                Refunds may also be resolved
+                through mutual written agreement.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        LIMITATION OF LIABILITY
+==========================================-->
+
+<section
+    id="liability"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Liability
+
+    </span>
+
+    <h2>
+
+        Limitation Of Liability
+
+    </h2>
+
+    <p>
+
+        While we strive to deliver reliable and
+        high-quality digital solutions, NovaStudio
+        shall not be held responsible for losses
+        caused by factors outside our reasonable
+        control.
+
+    </p>
+
+    <div class="liability-grid">
+
+        <div class="liability-card">
+
+            <i class="fa-solid fa-server"></i>
+
+            <h4>
+
+                Hosting Issues
+
+            </h4>
+
+            <p>
+
+                Downtime caused by third-party
+                hosting providers is outside
+                our responsibility.
+
+            </p>
+
+        </div>
+
+        <div class="liability-card">
+
+            <i class="fa-solid fa-globe"></i>
+
+            <h4>
+
+                Domain Providers
+
+            </h4>
+
+            <p>
+
+                Domain renewal, transfer or
+                registrar-related issues are
+                managed by the provider.
+
+            </p>
+
+        </div>
+
+        <div class="liability-card">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <h4>
+
+                Payment Gateway
+
+            </h4>
+
+            <p>
+
+                We are not liable for failures
+                caused by external payment
+                providers.
+
+            </p>
+
+        </div>
+
+        <div class="liability-card">
+
+            <i class="fa-solid fa-shield-virus"></i>
+
+            <h4>
+
+                Cyber Attacks
+
+            </h4>
+
+            <p>
+
+                Security incidents beyond our
+                control cannot be guaranteed
+                against completely.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        THIRD PARTY SERVICES
+==========================================-->
+
+<section
+    id="third-party"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Third-Party Services
+
+    </span>
+
+    <h2>
+
+        External Services & Integrations
+
+    </h2>
+
+    <p>
+
+        Some of our services rely on trusted
+        third-party providers for hosting,
+        payments, analytics, AI and cloud
+        infrastructure.
+
+    </p>
+
+    <div class="third-party-grid">
+
+        <div class="third-party-card">
+
+            <i class="fa-brands fa-google"></i>
+
+            <h4>Google Services</h4>
+
+        </div>
+
+        <div class="third-party-card">
+
+            <i class="fa-brands fa-aws"></i>
+
+            <h4>Amazon AWS</h4>
+
+        </div>
+
+        <div class="third-party-card">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <h4>Cloudflare</h4>
+
+        </div>
+
+        <div class="third-party-card">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <h4>Stripe / Razorpay</h4>
+
+        </div>
+
+        <div class="third-party-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h4>AI APIs</h4>
+
+        </div>
+
+        <div class="third-party-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h4>Email Services</h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        GOVERNING LAW
+==========================================-->
+
+<section
+    id="law"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Governing Law
+
+    </span>
+
+    <h2>
+
+        Applicable Law
+
+    </h2>
+
+    <p>
+
+        These Terms & Conditions shall be
+        governed and interpreted according
+        to the laws of India. Any disputes
+        arising from these terms shall be
+        resolved through the appropriate
+        legal authorities.
+
+    </p>
+
+</section>
+
+<!--=========================================
+        CONTACT
+==========================================-->
+
+<section
+    id="contact"
+    class="terms-card">
+
+    <span class="section-tag">
+
+        Contact
+
+    </span>
+
+    <h2>
+
+        Need Legal Assistance?
+
+    </h2>
+
+    <p>
+
+        If you have questions regarding
+        these Terms & Conditions, feel
+        free to contact our team.
+
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h4>
+
+                Office
+
+            </h4>
+
+            <p>
+
+                Chandigarh, India
+
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h4>
+
+                Email
+
+            </h4>
+
+            <p>
+
+                hello@novastudio.com
+
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <h4>
+
+                Phone
+
+            </h4>
+
+            <p>
+
+                +91 98765 43210
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        CTA
+==========================================-->
+
+<section class="terms-cta">
+
+    <div class="cta-box">
+
+        <span>
+
+            STILL HAVE QUESTIONS?
+
+        </span>
+
+        <h2>
+
+            We're Happy To Help
+
+        </h2>
+
+        <p>
+
+            If you need clarification about
+            our terms, payment policies,
+            project process or legal
+            agreements, our team is ready
+            to assist you.
+
+        </p>
+
+        <a href="{% url 'contact' %}" class="cta-btn">
+
+            Contact Us
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+</div>
+<!-- End .terms-main -->
+
+</div>
+<!-- End .terms-layout -->
+
+</div>
+<!-- End .container -->
+
+</section>
+           
+
+{% endblock %}
+

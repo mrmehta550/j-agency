@@ -1,0 +1,1435 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- ==========================================
+                HERO SECTION
+=========================================== -->
+
+<section class="privacy-hero">
+
+    <div class="container">
+
+        <!-- Breadcrumb -->
+
+        <div class="breadcrumb">
+
+            <a href="{% url 'home' %}">
+
+                <i class="fa-solid fa-house"></i>
+
+                Home
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-angle-right"></i>
+
+            </span>
+
+            <span>
+
+                Privacy Policy
+
+            </span>
+
+        </div>
+
+        <div class="privacy-grid">
+
+            <!-- Left -->
+
+            <div class="privacy-content">
+
+                <span class="hero-badge">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    Your Privacy Matters
+
+                </span>
+
+                <h1>
+
+                    Privacy
+                    <span>Policy</span>
+
+                </h1>
+
+                <p>
+
+                    We value your trust and are committed to protecting
+                    your personal information. This Privacy Policy explains
+                    how we collect, use, store, and safeguard your data
+                    whenever you interact with our website or digital services.
+
+                </p>
+
+                <div class="policy-info">
+
+                    <div class="info-card">
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Last Updated
+
+                            </h4>
+
+                            <p>
+
+                                June 30, 2026
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Secure Website
+
+                            </h4>
+
+                            <p>
+
+                                SSL Protected
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="privacy-image-wrapper">
+
+                <div class="floating-card top-card">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                    <div>
+
+                        <h5>
+
+                            Data Protection
+
+                        </h5>
+
+                        <small>
+
+                            100% Secure
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+                <img
+
+                    src="{% static 'images/privacy/privacy-hero.jpg' %}"
+
+                    alt="Privacy Policy"
+
+                    class="privacy-image"
+
+                >
+
+                <div class="floating-card bottom-card">
+
+                    <i class="fa-solid fa-cookie-bite"></i>
+
+                    <div>
+
+                        <h5>
+
+                            Cookie Policy
+
+                        </h5>
+
+                        <small>
+
+                            Fully Transparent
+
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        QUICK PRIVACY FEATURES
+==========================================-->
+
+<section class="privacy-features">
+
+    <div class="container">
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                </div>
+
+                <h3>
+
+                    Secure Data
+
+                </h3>
+
+                <p>
+
+                    Your information is protected
+                    using modern security standards
+                    and encryption.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-cookie-bite"></i>
+
+                </div>
+
+                <h3>
+
+                    Cookies
+
+                </h3>
+
+                <p>
+
+                    We use cookies to improve
+                    user experience and
+                    website performance.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h3>
+
+                    Privacy First
+
+                </h3>
+
+                <p>
+
+                    Your personal information
+                    is never sold to third parties.
+
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-/*width:100%;*/">
+
+                    <i class="fa-solid fa-server"></i>
+
+                </div>
+
+                <h3>
+
+                    Secure Servers
+
+                </h3>
+
+                <p>
+
+                    All data is stored on
+                    secure cloud infrastructure.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        PRIVACY CONTENT
+==========================================-->
+
+<section class="privacy-content-section">
+
+    <div class="container">
+
+        <div class="privacy-layout">
+
+            <!--==========================
+                    SIDEBAR
+            ===========================-->
+
+            <aside class="privacy-sidebar">
+
+                <div class="sidebar-card">
+
+                    <h3>
+
+                        Table of Contents
+
+                    </h3>
+
+                    <ul>
+
+                        <li>
+
+                            <a href="#introduction">
+
+                                Introduction
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#collection">
+
+                                Information We Collect
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#usage">
+
+                                How We Use Information
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#cookies">
+
+                                Cookies Policy
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#security">
+
+                                Data Security
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#rights">
+
+                                User Rights
+
+                            </a>
+
+                        </li>
+
+                        <li>
+
+                            <a href="#contact">
+
+                                Contact Us
+
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </aside>
+
+            <!--==========================
+                MAIN CONTENT
+            ===========================-->
+
+            <div class="privacy-main">
+
+                <!-- Introduction -->
+
+                <section
+                    id="introduction"
+                    class="policy-card">
+
+                    <span class="section-tag">
+
+                        Introduction
+
+                    </span>
+
+                    <h2>
+
+                        Your Privacy Is
+                        Important To Us
+
+                    </h2>
+
+                    <p>
+
+                        Welcome to NovaStudio.
+                        We respect your privacy
+                        and are committed to protecting
+                        the personal information you
+                        share with us.
+
+                    </p>
+
+                    <p>
+
+                        This Privacy Policy explains
+                        what information we collect,
+                        why we collect it,
+                        how we use it,
+                        and the choices you have
+                        regarding your personal data.
+
+                    </p>
+
+                </section>
+
+                <!-- Information -->
+
+                <section
+                    id="collection"
+                    class="policy-card">
+
+                    <span class="section-tag">
+
+                        Information Collection
+
+                    </span>
+
+                    <h2>
+
+                        Information We Collect
+
+                    </h2>
+
+                    <div class="info-grid">
+
+                        <div class="info-box">
+
+                            <i class="fa-solid fa-user"></i>
+
+                            <h4>
+
+                                Personal Information
+
+                            </h4>
+
+                            <ul>
+
+                                <li>Full Name</li>
+
+                                <li>Email Address</li>
+
+                                <li>Phone Number</li>
+
+                                <li>Company Name</li>
+
+                            </ul>
+
+                        </div>
+
+                        <div class="info-box">
+
+                            <i class="fa-solid fa-desktop"></i>
+
+                            <h4>
+
+                                Technical Information
+
+                            </h4>
+
+                            <ul>
+
+                                <li>IP Address</li>
+
+                                <li>Browser Type</li>
+
+                                <li>Device Information</li>
+
+                                <li>Operating System</li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        HOW WE USE INFORMATION
+==========================================-->
+
+<section
+    id="usage"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Data Usage
+
+    </span>
+
+    <h2>
+
+        How We Use Your Information
+
+    </h2>
+
+    <p>
+
+        The information we collect helps us
+        deliver better services, improve your
+        experience, and communicate effectively.
+
+    </p>
+
+    <div class="usage-grid">
+
+        <div class="usage-card">
+
+            <i class="fa-solid fa-envelope-open-text"></i>
+
+            <h4>
+
+                Communication
+
+            </h4>
+
+            <p>
+
+                Respond to inquiries,
+                support requests,
+                and project discussions.
+
+            </p>
+
+        </div>
+
+        <div class="usage-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h4>
+
+                Analytics
+
+            </h4>
+
+            <p>
+
+                Improve website performance
+                and understand visitor behavior.
+
+            </p>
+
+        </div>
+
+        <div class="usage-card">
+
+            <i class="fa-solid fa-gears"></i>
+
+            <h4>
+
+                Service Improvement
+
+            </h4>
+
+            <p>
+
+                Enhance features,
+                optimize workflows,
+                and improve security.
+
+            </p>
+
+        </div>
+
+        <div class="usage-card">
+
+            <i class="fa-solid fa-bullhorn"></i>
+
+            <h4>
+
+                Marketing
+
+            </h4>
+
+            <p>
+
+                Share updates,
+                newsletters,
+                and service announcements
+                (only with your consent).
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+            COOKIES POLICY
+==========================================-->
+
+<section
+    id="cookies"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Cookies
+
+    </span>
+
+    <h2>
+
+        Cookies & Tracking Technologies
+
+    </h2>
+
+    <p>
+
+        Cookies help us provide a smoother,
+        faster and more personalized
+        browsing experience.
+
+    </p>
+
+    <div class="cookie-grid">
+
+        <div class="cookie-card">
+
+            <i class="fa-solid fa-cookie"></i>
+
+            <h4>
+
+                Essential Cookies
+
+            </h4>
+
+            <p>
+
+                Required for login,
+                navigation,
+                and website functionality.
+
+            </p>
+
+        </div>
+
+        <div class="cookie-card">
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            <h4>
+
+                Analytics Cookies
+
+            </h4>
+
+            <p>
+
+                Measure website usage
+                and improve performance.
+
+            </p>
+
+        </div>
+
+        <div class="cookie-card">
+
+            <i class="fa-solid fa-sliders"></i>
+
+            <h4>
+
+                Preference Cookies
+
+            </h4>
+
+            <p>
+
+                Remember your language,
+                theme,
+                and user preferences.
+
+            </p>
+
+        </div>
+
+        <div class="cookie-card">
+
+            <i class="fa-solid fa-bullseye"></i>
+
+            <h4>
+
+                Marketing Cookies
+
+            </h4>
+
+            <p>
+
+                Deliver relevant advertisements
+                and promotional campaigns.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        THIRD PARTY SERVICES
+==========================================-->
+
+<section
+    id="third-party"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Integrations
+
+    </span>
+
+    <h2>
+
+        Third-Party Services
+
+    </h2>
+
+    <p>
+
+        We work with trusted service providers
+        to improve website functionality,
+        analytics,
+        communication,
+        and secure payment processing.
+
+    </p>
+
+    <div class="third-party-grid">
+
+        <div class="third-card">
+
+            <i class="fa-brands fa-google"></i>
+
+            <h4>
+
+                Google Analytics
+
+            </h4>
+
+        </div>
+
+        <div class="third-card">
+
+            <i class="fa-brands fa-aws"></i>
+
+            <h4>
+
+                Amazon AWS
+
+            </h4>
+
+        </div>
+
+        <div class="third-card">
+
+            <i class="fa-solid fa-cloud"></i>
+
+            <h4>
+
+                Cloudflare
+
+            </h4>
+
+        </div>
+
+        <div class="third-card">
+
+            <i class="fa-solid fa-credit-card"></i>
+
+            <h4>
+
+                Razorpay / Stripe
+
+            </h4>
+
+        </div>
+
+        <div class="third-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h4>
+
+                AI Services
+
+            </h4>
+
+        </div>
+
+        <div class="third-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h4>
+
+                Email Platforms
+
+            </h4>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        DATA SECURITY
+==========================================-->
+
+<section
+    id="security"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Security
+
+    </span>
+
+    <h2>
+
+        How We Protect Your Data
+
+    </h2>
+
+    <p>
+
+        We implement industry-standard
+        security measures to safeguard
+        your information from unauthorized
+        access, alteration, or disclosure.
+
+    </p>
+
+    <div class="security-timeline">
+
+        <div class="security-item">
+
+            <div class="security-/*width:100%;*/">
+
+                <i class="fa-solid fa-lock"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    SSL Encryption
+
+                </h4>
+
+                <p>
+
+                    Secure encrypted communication.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="security-item">
+
+            <div class="security-/*width:100%;*/">
+
+                <i class="fa-solid fa-server"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Secure Cloud Storage
+
+                </h4>
+
+                <p>
+
+                    Protected hosting infrastructure.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="security-item">
+
+            <div class="security-/*width:100%;*/">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Access Control
+
+                </h4>
+
+                <p>
+
+                    Limited access to authorized staff.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        USER RIGHTS
+==========================================-->
+
+<section
+    id="rights"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Your Rights
+
+    </span>
+
+    <h2>
+
+        Your Privacy Rights
+
+    </h2>
+
+    <p>
+
+        We believe you should always have
+        control over your personal data.
+        Depending on your location and
+        applicable laws, you may exercise
+        the following rights.
+
+    </p>
+
+    <div class="rights-grid">
+
+        <div class="right-card">
+
+            <i class="fa-solid fa-eye"></i>
+
+            <h4>
+
+                Right to Access
+
+            </h4>
+
+            <p>
+
+                Request a copy of the
+                personal information
+                we store about you.
+
+            </p>
+
+        </div>
+
+        <div class="right-card">
+
+            <i class="fa-solid fa-pen"></i>
+
+            <h4>
+
+                Right to Correction
+
+            </h4>
+
+            <p>
+
+                Update or correct
+                inaccurate personal
+                information.
+
+            </p>
+
+        </div>
+
+        <div class="right-card">
+
+            <i class="fa-solid fa-trash"></i>
+
+            <h4>
+
+                Right to Delete
+
+            </h4>
+
+            <p>
+
+                Request deletion of
+                your personal data
+                when legally permitted.
+
+            </p>
+
+        </div>
+
+        <div class="right-card">
+
+            <i class="fa-solid fa-download"></i>
+
+            <h4>
+
+                Data Portability
+
+            </h4>
+
+            <p>
+
+                Receive your personal
+                information in a
+                portable format.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        DATA RETENTION
+==========================================-->
+
+<section
+    id="retention"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Data Retention
+
+    </span>
+
+    <h2>
+
+        How Long We Keep Your Information
+
+    </h2>
+
+    <p>
+
+        We retain personal information only
+        as long as necessary to provide our
+        services, comply with legal
+        obligations and resolve disputes.
+
+    </p>
+
+    <div class="retention-timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-user"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Account Information
+
+                </h4>
+
+                <p>
+
+                    Stored while your
+                    account remains active.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-file-invoice"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Billing Records
+
+                </h4>
+
+                <p>
+
+                    Retained for legal
+                    and tax compliance.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-/*width:100%;*/">
+
+                <i class="fa-solid fa-trash-can"></i>
+
+            </div>
+
+            <div>
+
+                <h4>
+
+                    Secure Deletion
+
+                </h4>
+
+                <p>
+
+                    Information is safely
+                    deleted when no longer
+                    required.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        CHILDREN'S PRIVACY
+==========================================-->
+
+<section
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Children's Privacy
+
+    </span>
+
+    <h2>
+
+        Protecting Children
+
+    </h2>
+
+    <p>
+
+        Our website and services are not
+        intended for children under the age
+        of 13. We do not knowingly collect
+        personal information from children.
+
+    </p>
+
+</section>
+
+
+<!--=========================================
+        POLICY UPDATES
+==========================================-->
+
+<section
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Updates
+
+    </span>
+
+    <h2>
+
+        Changes To This Privacy Policy
+
+    </h2>
+
+    <p>
+
+        We may update this Privacy Policy
+        periodically to reflect changes in
+        our services, technology or legal
+        requirements.
+
+    </p>
+
+    <div class="update-box">
+
+        <i class="fa-solid fa-bell"></i>
+
+        <div>
+
+            <h4>
+
+                We'll Notify You
+
+            </h4>
+
+            <p>
+
+                Significant updates will be
+                communicated through email
+                or website announcements.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        CONTACT
+==========================================-->
+
+<section
+    id="contact"
+    class="policy-card">
+
+    <span class="section-tag">
+
+        Contact Us
+
+    </span>
+
+    <h2>
+
+        Questions About Privacy?
+
+    </h2>
+
+    <p>
+
+        If you have any questions regarding
+        this Privacy Policy or your personal
+        information, feel free to contact us.
+
+    </p>
+
+    <div class="contact-grid">
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <h4>
+
+                Office
+
+            </h4>
+
+            <p>
+
+                Chandigarh, India
+
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <h4>
+
+                Email
+
+            </h4>
+
+            <p>
+
+                hello@novastudio.com
+
+            </p>
+
+        </div>
+
+        <div class="contact-card">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <h4>
+
+                Phone
+
+            </h4>
+
+            <p>
+
+                +91 98765 43210
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!--=========================================
+        CTA
+==========================================-->
+
+<section class="privacy-cta">
+
+    <div class="cta-box">
+
+        <span>
+
+            NEED MORE INFORMATION?
+
+        </span>
+
+        <h2>
+
+            We're Always Here To Help
+
+        </h2>
+
+        <p>
+
+            Contact our team if you have
+            questions about your privacy,
+            personal information, or our
+            data protection practices.
+
+        </p>
+
+        <a href="{% url 'contact' %}" class="cta-btn">
+
+            Contact Our Team
+
+            <i class="fa-solid fa-arrow-right"></i>
+
+        </a>
+
+    </div>
+
+</section>
+
+</div>
+<!-- End .privacy-main -->
+
+</div>
+<!-- End .privacy-layout -->
+
+</div>
+<!-- End .container -->
+
+</section>
+
+{% endblock %}
+

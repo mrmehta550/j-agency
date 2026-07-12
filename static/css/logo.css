@@ -1,0 +1,7414 @@
+/*=========================================
+LOGO SERVICE HERO
+=========================================*/
+
+.logo-service-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:140px 0 120px;
+
+    background:linear-gradient(
+    135deg,
+    #081423 0%,
+    #0f2b46 45%,
+    #2563eb 100%);
+
+}
+
+/*=========================================
+BACKGROUND
+=========================================*/
+
+.logo-service-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+GRID
+=========================================*/
+
+.logo-service-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.2) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.2) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+}
+
+/*=========================================
+BLOBS
+=========================================*/
+
+.logo-service-blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    animation:logoBlob 14s ease-in-out infinite;
+
+}
+
+.logo-service-blob-1{
+
+    width:420px;
+
+    height:420px;
+
+    background:#2563eb;
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.logo-service-blob-2{
+
+    width:360px;
+
+    height:360px;
+
+    background:#7c3aed;
+
+    right:-120px;
+
+    bottom:-120px;
+
+    animation-delay:3s;
+
+}
+
+.logo-service-blob-3{
+
+    width:260px;
+
+    height:260px;
+
+    background:#38bdf8;
+
+    left:48%;
+
+    top:35%;
+
+    animation-delay:6s;
+
+}
+
+@keyframes logoBlob{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-40px) scale(1.12);
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/*=========================================
+WRAPPER
+=========================================*/
+
+.logo-service-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*=========================================
+LEFT CONTENT
+=========================================*/
+
+.logo-service-content{
+
+    position:relative;
+
+}
+
+/*=========================================
+BADGE
+=========================================*/
+
+.logo-service-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 28px;
+
+    border-radius:60px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    color:#ffffff;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:28px;
+
+}
+
+.logo-service-badge i{
+
+    color:#38bdf8;
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.logo-service-title{
+
+    font-size:64px;
+
+    line-height:1.12;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin-bottom:28px;
+
+}
+
+.logo-service-title span{
+
+    display:block;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #38bdf8,
+
+    #c084fc);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.logo-service-description{
+
+    max-width:670px;
+
+    color:rgba(255,255,255,.88);
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:42px;
+
+}
+
+/*=========================================
+LIGHT EFFECT
+=========================================*/
+
+.logo-service-content::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    left:-80px;
+
+    top:100px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(56,189,248,.12),
+
+    transparent 70%);
+
+    filter:blur(20px);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+TEXT ANIMATION
+=========================================*/
+
+.logo-service-badge,
+
+.logo-service-title,
+
+.logo-service-description{
+
+    animation:logoFadeUp .8s ease forwards;
+
+    opacity:0;
+
+}
+
+.logo-service-title{
+
+    animation-delay:.2s;
+
+}
+
+.logo-service-description{
+
+    animation-delay:.4s;
+
+}
+
+@keyframes logoFadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*=========================================
+FEATURE LIST
+=========================================*/
+
+.logo-service-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+.logo-service-feature{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:16px 22px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.logo-service-feature:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.14);
+
+    border-color:rgba(255,255,255,.22);
+
+}
+
+.logo-service-feature i{
+
+    color:#22c55e;
+
+    font-size:20px;
+
+}
+
+.logo-service-feature span{
+
+    color:#ffffff;
+
+    font-size:16px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+BUTTONS
+=========================================*/
+
+.logo-service-buttons{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:60px;
+
+}
+
+.logo-service-btn-primary{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:18px 38px;
+
+    overflow:hidden;
+
+    border-radius:60px;
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.logo-service-btn-primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-130%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.65),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-btn-primary:hover::before{
+
+    left:180%;
+
+}
+
+.logo-service-btn-primary:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 45px rgba(255,255,255,.22);
+
+}
+
+.logo-service-btn-primary i{
+
+    transition:.35s;
+
+}
+
+.logo-service-btn-primary:hover i{
+
+    transform:translateX(6px);
+
+}
+
+/*=============================*/
+
+.logo-service-btn-secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:18px 36px;
+
+    border-radius:60px;
+
+    border:2px solid rgba(255,255,255,.22);
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.logo-service-btn-secondary:hover{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+    border-color:#ffffff;
+
+}
+
+/*=========================================
+STATISTICS
+=========================================*/
+
+.logo-service-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+}
+
+.logo-service-stat-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:28px 20px;
+
+    text-align:center;
+
+    border-radius:24px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.logo-service-stat-card:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.14);
+
+    border-color:rgba(255,255,255,.22);
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.18);
+
+}
+
+.logo-service-stat-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:radial-gradient(circle,
+
+    rgba(255,255,255,.18),
+
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.logo-service-stat-card:hover::before{
+
+    opacity:1;
+
+}
+
+.logo-service-stat-card h2{
+
+    position:relative;
+
+    z-index:2;
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.logo-service-stat-card p{
+
+    position:relative;
+
+    z-index:2;
+
+    color:rgba(255,255,255,.82);
+
+    font-size:14px;
+
+    line-height:1.6;
+
+}
+
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+.logo-service-stat-card{
+
+    animation:logoStatFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-stat-card:nth-child(2){
+
+    animation-delay:.3s;
+
+}
+
+.logo-service-stat-card:nth-child(3){
+
+    animation-delay:.6s;
+
+}
+
+.logo-service-stat-card:nth-child(4){
+
+    animation-delay:.9s;
+
+}
+
+@keyframes logoStatFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+/*=========================================
+RIGHT VISUAL
+=========================================*/
+
+.logo-service-visual{
+
+    position:relative;
+
+    width:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.logo-service-image-box{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:560px;
+
+    padding:18px;
+
+    border-radius:34px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 40px 90px rgba(0,0,0,.28);
+
+}
+
+.logo-service-image{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:24px;
+
+    transition:.45s;
+
+}
+
+.logo-service-image-box:hover .logo-service-image{
+
+    transform:scale(1.05);
+
+}
+
+/*=========================================
+IMAGE GLOW
+=========================================*/
+
+.logo-service-image-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:34px;
+
+    background:linear-gradient(
+    135deg,
+    rgba(255,255,255,.08),
+    transparent);
+
+    pointer-events:none;
+
+}
+
+.logo-service-image-box::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(56,189,248,.20),
+    transparent 70%);
+
+    filter:blur(35px);
+
+    z-index:-1;
+
+}
+
+/*=========================================
+FLOATING CARDS
+=========================================*/
+
+.logo-service-floating-card{
+
+    position:absolute;
+
+    width:100%;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 22px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    color:#ffffff;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.20);
+
+    animation:logoFloatingCard 6s ease-in-out infinite;
+
+}
+
+.logo-service-card{
+
+    position:relative;
+}
+
+.logo-service-card-icon{
+
+    position:absolute;
+
+    top:-20px;
+    left:30px;
+
+    width:64px;
+    height:64px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:18px;
+
+    background:#fff;
+
+    color:#2563eb;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    z-index:10;
+}
+
+.logo-service-floating-card h5{
+
+    font-size:18px;
+
+    margin-bottom:4px;
+
+    color:#ffffff;
+
+}
+
+.logo-service-floating-card p{
+
+    color:rgba(255,255,255,.80);
+
+    font-size:14px;
+
+}
+
+/*=========================================
+CARD POSITIONS
+=========================================*/
+
+.logo-card-1{
+
+    top:35px;
+
+    left:-60px;
+
+}
+
+.logo-card-2{
+
+    right:-70px;
+
+    top:48%;
+
+    animation-delay:2s;
+
+}
+
+.logo-card-3{
+
+    left:10px;
+
+    bottom:20px;
+
+    animation-delay:4s;
+
+}
+
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+@keyframes logoFloatingCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+IMAGE FLOAT
+=========================================*/
+
+.logo-service-image-box{
+
+    animation:logoImageFloat 8s ease-in-out infinite;
+
+}
+
+@keyframes logoImageFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-wrapper{
+
+    gap:60px;
+
+}
+
+.logo-service-title{
+
+    font-size:54px;
+
+}
+
+.logo-service-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 992
+=========================================*/
+
+@media(max-width:992px){
+
+.logo-service-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-content{
+
+    text-align:center;
+
+}
+
+.logo-service-description{
+
+    margin:auto;
+
+}
+
+.logo-service-features{
+
+    max-width:700px;
+
+    margin:0 auto 45px;
+
+}
+
+.logo-service-buttons{
+
+    justify-content:center;
+
+}
+
+.logo-card-1,
+
+.logo-card-2,
+
+.logo-card-3{
+
+    display:none;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-hero{
+
+    padding:100px 0;
+
+}
+
+.logo-service-title{
+
+    font-size:42px;
+
+}
+
+.logo-service-description{
+
+    font-size:16px;
+
+}
+
+.logo-service-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-buttons{
+
+    flex-direction:column;
+
+}
+
+.logo-service-btn-primary,
+
+.logo-service-btn-secondary{
+
+    width:100%;
+
+    justify-content:center;
+
+}
+
+.logo-service-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-title{
+
+    font-size:34px;
+
+}
+
+.logo-service-badge{
+
+    font-size:12px;
+
+    padding:10px 18px;
+
+}
+
+.logo-service-image-box{
+
+    padding:12px;
+
+}
+
+.logo-service-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-stat-card{
+
+    padding:24px;
+
+}
+
+.logo-service-stat-card h2{
+
+    font-size:30px;
+
+}
+
+}
+/*=========================================
+WHY CHOOSE SECTION
+=========================================*/
+
+.logo-service-why{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#f8fbff;
+
+}
+
+.logo-service-why::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    border-radius:50%;
+
+    left:-250px;
+
+    top:-250px;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.08),
+    transparent 70%);
+
+}
+
+.logo-service-why::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    border-radius:50%;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+SECTION HEADER
+=========================================*/
+
+.logo-service-heading{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:760px;
+
+    margin:auto;
+
+    text-align:center;
+
+    margin-bottom:80px;
+
+}
+
+.logo-service-section-tag{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    border-radius:60px;
+
+    background:#ede9fe;
+
+    color:#7c3aed;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:22px;
+
+}
+
+.logo-service-heading h2{
+
+    font-size:54px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+    color:#0f172a;
+
+    margin-bottom:22px;
+
+}
+
+.logo-service-heading h2 span{
+
+    display:block;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #2563eb,
+
+    #7c3aed);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.logo-service-heading p{
+
+    color:#64748b;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+GRID
+=========================================*/
+
+.logo-service-why-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*=========================================
+CARD
+=========================================*/
+
+.logo-service-why-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+.logo-service-why-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 70px rgba(37,99,235,.16);
+
+}
+
+/*=========================================
+ICON
+=========================================*/
+
+.logo-service-why-icon{
+
+    width:84px;
+
+    height:84px;
+
+
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:24px;
+
+    margin-bottom:28px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563eb,
+
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    transition:.35s;
+
+}
+
+
+/*=========================================
+TEXT
+=========================================*/
+
+.logo-service-why-card h3{
+
+    font-size:25px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.logo-service-why-card:hover h3{
+
+    color:#2563eb;
+
+}
+
+.logo-service-why-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-why-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #2563eb,
+
+    #7c3aed);
+
+    transition:.35s;
+
+}
+
+.logo-service-why-card:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/*=========================================
+GLOW EFFECT
+=========================================*/
+
+.logo-service-why-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.12),
+
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.logo-service-why-card:hover::before{
+
+    opacity:1;
+
+}
+
+.logo-service-why-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+.logo-service-why-card{
+
+    animation:logoWhyFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-why-card:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-why-card:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+.logo-service-why-card:nth-child(4){
+
+    animation-delay:.75s;
+
+}
+
+.logo-service-why-card:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+.logo-service-why-card:nth-child(6){
+
+    animation-delay:1.25s;
+
+}
+
+@keyframes logoWhyFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+ICON SHINE EFFECT
+=========================================*/
+
+.logo-service-why-icon{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.logo-service-why-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-why-card:hover
+.logo-service-why-icon::before{
+
+    left:180%;
+
+}
+
+/*=========================================
+ICON SHADOW
+=========================================*/
+
+.logo-service-why-icon{
+
+    box-shadow:
+
+    0 20px 45px rgba(37,99,235,.20);
+
+}
+
+.logo-service-why-card:hover
+.logo-service-why-icon{
+
+    box-shadow:
+
+    0 30px 65px rgba(124,58,237,.30);
+
+}
+
+/*=========================================
+TEXT EFFECT
+=========================================*/
+
+.logo-service-why-card h3{
+
+    transition:.35s;
+
+}
+
+.logo-service-why-card:hover h3{
+
+    color:#2563eb;
+
+}
+
+.logo-service-why-card p{
+
+    transition:.35s;
+
+}
+
+.logo-service-why-card:hover p{
+
+    color:#475569;
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-why-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    border-radius:50%;
+
+    top:-120px;
+
+    right:-120px;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-why-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:240px;
+
+    height:240px;
+
+    border-radius:50%;
+
+    left:-100px;
+
+    bottom:-100px;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+CARD HOVER OVERLAY
+=========================================*/
+
+.logo-service-why-card{
+
+    isolation:isolate;
+
+}
+
+.logo-service-why-card .logo-service-why-icon,
+
+.logo-service-why-card h3,
+
+.logo-service-why-card p{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.logo-service-why-card::before{
+
+    z-index:1;
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-heading h2{
+
+    font-size:46px;
+
+}
+
+.logo-service-why-grid{
+
+    gap:24px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 992
+=========================================*/
+
+@media(max-width:992px){
+
+.logo-service-why{
+
+    padding:100px 0;
+
+}
+
+.logo-service-why-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.logo-service-heading h2{
+
+    font-size:40px;
+
+}
+
+.logo-service-heading p{
+
+    font-size:17px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-why{
+
+    padding:90px 0;
+
+}
+
+.logo-service-heading{
+
+    margin-bottom:60px;
+
+}
+
+.logo-service-heading h2{
+
+    font-size:34px;
+
+}
+
+.logo-service-heading p{
+
+    font-size:16px;
+
+}
+
+.logo-service-why-grid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.logo-service-why-card{
+
+    padding:35px 28px;
+
+}
+
+.logo-service-why-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:30px;
+
+}
+
+.logo-service-why-card h3{
+
+    font-size:22px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-heading h2{
+
+    font-size:28px;
+
+}
+
+.logo-service-section-tag{
+
+    font-size:12px;
+
+    padding:10px 18px;
+
+}
+
+.logo-service-heading p{
+
+    font-size:15px;
+
+}
+
+.logo-service-why-card{
+
+    padding:30px 22px;
+
+    border-radius:22px;
+
+}
+
+.logo-service-why-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+    font-size:24px;
+
+}
+
+.logo-service-why-card h3{
+
+    font-size:20px;
+
+}
+
+.logo-service-why-card p{
+
+    font-size:14px;
+
+}
+
+}
+/*=========================================
+LOGO SERVICES SECTION
+=========================================*/
+
+.logo-service-services{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+}
+
+.logo-service-services::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.07),
+    transparent 70%);
+
+}
+
+.logo-service-services::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.07),
+    transparent 70%);
+
+}
+
+/*=========================================
+SERVICES GRID
+=========================================*/
+
+.logo-service-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+/*=========================================
+SERVICE CARD
+=========================================*/
+
+.logo-service-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 35px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+/* .logo-service-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 75px rgba(37,99,235,.16);
+
+} */
+
+/*=========================================
+ICON
+=========================================*/
+
+.logo-service-icon{
+
+    width:84px;
+
+    height:84px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    margin-bottom:30px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    transition:.35s;
+
+}
+
+.logo-service-card:hover
+.logo-service-icon{
+
+    transform:rotate(-8deg)
+    scale(1.08);
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.logo-service-card h3{
+
+    font-size:25px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.logo-service-card:hover h3{
+
+    color:#2563eb;
+
+}
+
+/*=========================================
+DESCRIPTION
+=========================================*/
+
+.logo-service-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:28px;
+
+}
+
+/*=========================================
+FEATURE LIST
+=========================================*/
+
+.logo-service-card ul{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+    width:100%;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.logo-service-card ul li{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#334155;
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.logo-service-card ul li::before{
+
+    content:"✓";
+
+    width:24px;
+
+    height:24px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#dbeafe;
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.logo-service-card:hover ul li::before{
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed);
+
+    transition:.4s;
+
+}
+
+.logo-service-card:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/*=========================================
+GLOW EFFECT
+=========================================*/
+
+.logo-service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.12),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.4s;
+
+}
+
+.logo-service-card:hover::before{
+
+    opacity:1;
+
+}
+
+.logo-service-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+.logo-service-card{
+
+    animation:logoServiceFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-card:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.logo-service-card:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+.logo-service-card:nth-child(4){
+
+    animation-delay:.6s;
+
+}
+
+.logo-service-card:nth-child(5){
+
+    animation-delay:.8s;
+
+}
+
+.logo-service-card:nth-child(6){
+
+    animation-delay:1s;
+
+}
+
+.logo-service-card:nth-child(7){
+
+    animation-delay:1.2s;
+
+}
+
+.logo-service-card:nth-child(8){
+
+    animation-delay:1.4s;
+
+}
+
+@keyframes logoServiceFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+ICON SHINE EFFECT
+=========================================*/
+
+.logo-service-icon{
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 18px 45px rgba(37,99,235,.22);
+
+}
+
+.logo-service-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-card:hover
+.logo-service-icon::before{
+
+    left:180%;
+
+}
+
+.logo-service-card:hover
+.logo-service-icon{
+
+    box-shadow:
+
+    0 30px 70px rgba(124,58,237,.30);
+
+}
+
+/*=========================================
+FEATURE LIST ANIMATION
+=========================================*/
+
+.logo-service-card ul li{
+
+    transition:.35s;
+
+}
+
+.logo-service-card:hover ul li{
+
+    transform:translateX(8px);
+
+}
+
+.logo-service-card:hover ul li::before{
+
+    transform:scale(1.15);
+
+}
+
+/*=========================================
+CARD OVERLAY
+=========================================*/
+
+.logo-service-card{
+
+    isolation:isolate;
+
+}
+
+.logo-service-card::after{
+
+    z-index:1;
+
+}
+
+.logo-service-card::before{
+
+    z-index:1;
+
+}
+
+.logo-service-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+RESPONSIVE 1400
+=========================================*/
+
+@media(max-width:1400px){
+
+.logo-service-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-services{
+
+    padding:100px 0;
+
+}
+
+.logo-service-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.logo-service-card{
+
+    padding:35px 30px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-services{
+
+    padding:90px 0;
+
+}
+
+.logo-service-grid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.logo-service-card{
+
+    padding:32px 26px;
+
+}
+
+.logo-service-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:28px;
+
+}
+
+.logo-service-card h3{
+
+    font-size:22px;
+
+}
+
+.logo-service-card p{
+
+    font-size:15px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-card{
+
+    padding:28px 20px;
+
+    border-radius:22px;
+
+}
+
+.logo-service-icon{
+
+    width:62px;
+
+    height:62px;
+
+    font-size:24px;
+
+    border-radius:18px;
+
+}
+
+.logo-service-card h3{
+
+    font-size:20px;
+
+}
+
+.logo-service-card p{
+
+    font-size:14px;
+
+}
+
+.logo-service-card ul li{
+
+    font-size:14px;
+
+}
+
+}
+/*=========================================
+LOGO DESIGN PROCESS
+=========================================*/
+
+.logo-service-process{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#f8fbff;
+
+}
+
+.logo-service-process::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.08),
+    transparent 70%);
+
+}
+
+.logo-service-process::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-200px;
+
+    bottom:-200px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+PROCESS WRAPPER
+=========================================*/
+
+.logo-service-process-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:24px;
+
+    flex-wrap:wrap;
+
+}
+/*=========================================
+PROCESS CARD
+=========================================*/
+
+.logo-service-process-card{
+
+    position:relative;
+
+    flex:1;
+
+    min-width:270px;
+
+    max-width:330px;
+
+    padding:42px 30px;
+
+    text-align:center;
+
+    background:#ffffff;
+
+    border-radius:30px;
+
+    border:1px solid #e2e8f0;
+
+    overflow:hidden;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 50px rgba(15,23,42,.06);
+
+}
+
+/* .logo-service-process-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 80px rgba(37,99,235,.18);
+
+} */
+
+/*=========================================
+STEP NUMBER
+=========================================*/
+
+.logo-service-process-number{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    width:54px;
+
+    height:54px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    box-shadow:
+
+    0 18px 40px rgba(37,99,235,.25);
+
+}
+
+/*=========================================
+PROCESS ICON
+=========================================*/
+
+.logo-service-process-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:0 auto 30px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:36px;
+    display: flex;
+    transition:.35s;
+
+}
+.logo-service-process-card{
+
+    opacity:1 !important;
+
+    visibility:visible;
+
+}
+/* .logo-service-process-card:hover
+.logo-service-process-icon{
+
+    transform:rotate(-10deg)
+    scale(1.08);
+
+} */
+
+/*=========================================
+TEXT
+=========================================*/
+
+.logo-service-process-card h3{
+
+    font-size:25px;
+
+    color:#0f172a;
+
+    margin-bottom:18px;
+
+    transition:.35s;
+
+}
+
+.logo-service-process-card:hover h3{
+
+    color:#2563eb;
+
+}
+
+.logo-service-process-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+CONNECTOR LINE
+=========================================*/
+
+.logo-service-process-line{
+
+    width:80px;
+
+    height:4px;
+
+    margin-top:95px;
+
+    flex-shrink:0;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed);
+
+    opacity:.35;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-process-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed);
+
+    transition:.35s;
+
+}
+
+.logo-service-process-card:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/*=========================================
+GLOW EFFECT
+=========================================*/
+
+.logo-service-process-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.12),
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.logo-service-process-card:hover::before{
+
+    opacity:1;
+
+}
+
+.logo-service-process-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+/*=========================================
+PROCESS FLOAT ANIMATION
+=========================================*/
+
+.logo-service-process-card{
+
+    animation:logoProcessFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-process-card:nth-child(1){
+
+    animation-delay:0s;
+
+}
+
+.logo-service-process-card:nth-child(3){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-process-card:nth-child(5){
+
+    animation-delay:.5s;
+
+}
+
+.logo-service-process-card:nth-child(7){
+
+    animation-delay:.75s;
+
+}
+
+.logo-service-process-card:nth-child(9){
+
+    animation-delay:1s;
+
+}
+
+.logo-service-process-card:nth-child(11){
+
+    animation-delay:1.25s;
+
+}
+
+@keyframes logoProcessFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+ICON SHINE EFFECT
+=========================================*/
+
+.logo-service-process-icon{
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 18px 45px rgba(37,99,235,.22);
+
+}
+
+.logo-service-process-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-process-card:hover
+.logo-service-process-icon::before{
+
+    left:180%;
+
+}
+
+.logo-service-process-card:hover
+.logo-service-process-icon{
+
+    box-shadow:
+
+    0 30px 70px rgba(124,58,237,.35);
+
+}
+
+/*=========================================
+STEP NUMBER EFFECT
+=========================================*/
+
+.logo-service-process-number{
+
+    transition:.35s;
+
+}
+
+/* .logo-service-process-card:hover
+.logo-service-process-number{
+
+    transform:scale(1.1) rotate(8deg);
+
+    box-shadow:
+
+    0 22px 50px rgba(124,58,237,.35);
+
+} */
+
+/*=========================================
+CONNECTOR LINE ANIMATION
+=========================================*/
+
+.logo-service-process-line{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.logo-service-process-line::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:#ffffff;
+
+    opacity:.7;
+
+    animation:logoProcessLine 2.5s linear infinite;
+
+}
+
+@keyframes logoProcessLine{
+
+    100%{
+
+        left:100%;
+
+    }
+
+}
+
+/*=========================================
+TEXT EFFECT
+=========================================*/
+
+.logo-service-process-card h3{
+
+    transition:.35s;
+
+}
+
+.logo-service-process-card:hover h3{
+
+    color:#2563eb;
+
+}
+
+.logo-service-process-card p{
+
+    transition:.35s;
+
+}
+
+.logo-service-process-card:hover p{
+
+    color:#475569;
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-process-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-process-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-process-wrapper{
+
+    gap:20px;
+
+}
+
+.logo-service-process-card{
+
+    max-width:300px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 992
+=========================================*/
+
+@media(max-width:992px){
+
+.logo-service-process{
+
+    padding:100px 0;
+
+}
+
+.logo-service-process-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.logo-service-process-line{
+
+    display:none;
+
+}
+
+.logo-service-process-card{
+
+    max-width:100%;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-process{
+
+    padding:90px 0;
+
+}
+
+.logo-service-process-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-process-card{
+
+    padding:35px 28px;
+
+}
+
+.logo-service-process-icon{
+
+    width:75px;
+
+    height:75px;
+
+    font-size:30px;
+
+}
+
+.logo-service-process-number{
+
+    width:48px;
+
+    height:48px;
+
+    font-size:16px;
+
+}
+
+.logo-service-process-card h3{
+
+    font-size:22px;
+
+}
+
+.logo-service-process-card p{
+
+    font-size:15px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-process-card{
+
+    padding:30px 22px;
+
+    border-radius:22px;
+
+}
+
+.logo-service-process-icon{
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:18px;
+
+    font-size:24px;
+
+}
+
+.logo-service-process-number{
+
+    width:42px;
+
+    height:42px;
+
+    top:15px;
+
+    right:15px;
+
+    font-size:14px;
+
+}
+
+.logo-service-process-card h3{
+
+    font-size:20px;
+
+}
+
+.logo-service-process-card p{
+
+    font-size:14px;
+
+}
+
+}
+/*=========================================
+PORTFOLIO SECTION
+=========================================*/
+
+.logo-service-portfolio{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+}
+
+.logo-service-portfolio::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.07),
+    transparent 70%);
+
+}
+
+.logo-service-portfolio::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+FILTER BUTTONS
+=========================================*/
+
+.logo-service-filter{
+
+    width:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:16px;
+
+    margin:60px 0;
+
+}
+
+.logo-service-filter button{
+
+    padding:14px 28px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:50px;
+
+    background:#f1f5f9;
+
+    color:#334155;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.logo-service-filter button:hover,
+
+.logo-service-filter button.active{
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.25);
+
+}
+
+/*=========================================
+PORTFOLIO GRID
+=========================================*/
+
+.logo-service-portfolio-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+/*=========================================
+PORTFOLIO CARD
+=========================================*/
+
+.logo-service-portfolio-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.08);
+
+    transition:.4s;
+
+}
+
+.logo-service-portfolio-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+
+    0 35px 70px rgba(37,99,235,.18);
+
+}
+
+/*=========================================
+IMAGE
+=========================================*/
+
+.logo-service-portfolio-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.logo-service-portfolio-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+/*=========================================
+OVERLAY
+=========================================*/
+
+.logo-service-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:30px;
+
+    background:linear-gradient(
+
+    transparent,
+
+    rgba(15,23,42,.95));
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.logo-service-portfolio-card:hover
+
+.logo-service-overlay{
+
+    opacity:1;
+
+}
+
+/*=========================================
+TEXT
+=========================================*/
+
+.logo-service-overlay span{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:#2563eb;
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:16px;
+
+}
+
+.logo-service-overlay h3{
+
+    color:#ffffff;
+
+    font-size:26px;
+
+    font-weight:700;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-portfolio-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #2563eb,
+
+    #7c3aed);
+
+}
+
+.logo-service-portfolio-card:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/*=========================================
+GLOW
+=========================================*/
+
+.logo-service-portfolio-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    width:260px;
+
+    height:260px;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.18),
+
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:1;
+
+}
+
+.logo-service-portfolio-card:hover::before{
+
+    opacity:1;
+
+}
+
+.logo-service-overlay{
+
+    z-index:2;
+
+}
+/*=========================================
+PORTFOLIO FLOAT ANIMATION
+=========================================*/
+
+.logo-service-portfolio-card{
+
+    animation:logoPortfolioFloat 7s ease-in-out infinite;
+
+}
+
+.logo-service-portfolio-card:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-portfolio-card:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+.logo-service-portfolio-card:nth-child(4){
+
+    animation-delay:.75s;
+
+}
+
+.logo-service-portfolio-card:nth-child(5){
+
+    animation-delay:1s;
+
+}
+
+.logo-service-portfolio-card:nth-child(6){
+
+    animation-delay:1.25s;
+
+}
+
+.logo-service-portfolio-card:nth-child(7){
+
+    animation-delay:1.5s;
+
+}
+
+.logo-service-portfolio-card:nth-child(8){
+
+    animation-delay:1.75s;
+
+}
+
+@keyframes logoPortfolioFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+IMAGE SHINE
+=========================================*/
+
+.logo-service-portfolio-card{
+
+    isolation:isolate;
+
+}
+
+.logo-service-portfolio-card::after{
+
+    z-index:3;
+
+}
+
+.logo-service-portfolio-card img{
+
+    position:relative;
+
+}
+
+.logo-service-portfolio-card img::before{
+
+    display:none;
+
+}
+
+.logo-service-portfolio-card .portfolio-shine{
+
+    position:absolute;
+
+    top:0;
+
+    left:-150%;
+
+    width:60%;
+
+    height:100%;
+
+    background:linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.35),
+
+        transparent
+
+    );
+
+    transform:skewX(-25deg);
+
+    transition:1s;
+
+    z-index:4;
+
+}
+
+.logo-service-portfolio-card:hover .portfolio-shine{
+
+    left:180%;
+
+}
+
+/*=========================================
+OVERLAY ANIMATION
+=========================================*/
+
+.logo-service-overlay{
+
+    transform:translateY(30px);
+
+}
+
+.logo-service-portfolio-card:hover
+.logo-service-overlay{
+
+    transform:translateY(0);
+
+}
+
+.logo-service-overlay span{
+
+    transition:.35s;
+
+}
+
+.logo-service-portfolio-card:hover
+.logo-service-overlay span{
+
+    transform:translateY(-4px);
+
+}
+
+.logo-service-overlay h3{
+
+    transition:.35s;
+
+}
+
+.logo-service-portfolio-card:hover
+.logo-service-overlay h3{
+
+    letter-spacing:.5px;
+
+}
+
+/*=========================================
+PORTFOLIO STATS
+=========================================*/
+
+.logo-service-portfolio-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:90px;
+
+}
+
+.logo-service-portfolio-stat{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+    transition:.35s;
+
+}
+
+.logo-service-portfolio-stat:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 70px rgba(37,99,235,.16);
+
+}
+
+.logo-service-portfolio-stat h2{
+
+    font-size:42px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #2563eb,
+
+        #7c3aed);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.logo-service-portfolio-stat span{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-portfolio-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-portfolio-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+
+    height:250px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+RESPONSIVE 1400
+=========================================*/
+
+@media(max-width:1400px){
+
+.logo-service-portfolio-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-portfolio{
+
+    padding:100px 0;
+
+}
+
+.logo-service-portfolio-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.logo-service-portfolio-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-portfolio{
+
+    padding:90px 0;
+
+}
+
+.logo-service-filter{
+
+    gap:12px;
+
+}
+
+.logo-service-filter button{
+
+    padding:12px 20px;
+
+    font-size:14px;
+
+}
+
+.logo-service-portfolio-grid{
+
+    grid-template-columns:1fr;
+
+    gap:22px;
+
+}
+
+.logo-service-portfolio-card img{
+
+    height:280px;
+
+}
+
+.logo-service-portfolio-stat{
+
+    padding:28px 20px;
+
+}
+
+.logo-service-portfolio-stat h2{
+
+    font-size:34px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-filter{
+
+    justify-content:flex-start;
+
+}
+
+.logo-service-filter button{
+
+    width:100%;
+
+}
+
+.logo-service-overlay{
+
+    padding:20px;
+
+}
+
+.logo-service-overlay h3{
+
+    font-size:22px;
+
+}
+
+.logo-service-portfolio-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-portfolio-stat{
+
+    border-radius:22px;
+
+}
+
+.logo-service-portfolio-stat h2{
+
+    font-size:30px;
+
+}
+
+.logo-service-portfolio-stat span{
+
+    font-size:14px;
+
+}
+
+}
+/*=========================================
+PRICING SECTION
+=========================================*/
+
+.logo-service-pricing{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#f8fbff;
+
+}
+
+.logo-service-pricing::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.08),
+    transparent 70%);
+
+}
+
+.logo-service-pricing::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+GRID
+=========================================*/
+
+.logo-service-pricing-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    align-items:stretch;
+
+}
+
+/*=========================================
+CARD
+=========================================*/
+
+.logo-service-pricing-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.06);
+
+}
+
+.logo-service-pricing-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 70px rgba(37,99,235,.16);
+
+}
+
+/*=========================================
+POPULAR PLAN
+=========================================*/
+
+.logo-service-popular{
+
+    border:2px solid #2563eb;
+
+    transform:scale(1.04);
+
+    box-shadow:
+
+    0 35px 80px rgba(37,99,235,.18);
+
+}
+
+.logo-service-popular:hover{
+
+    transform:scale(1.04) translateY(-10px);
+
+}
+
+/*=========================================
+POPULAR BADGE
+=========================================*/
+
+.logo-service-popular-badge{
+
+    position:absolute;
+
+    top:20px;
+
+    right:20px;
+
+    padding:10px 18px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+}
+
+/*=========================================
+PLAN ICON
+=========================================*/
+
+.logo-service-plan-icon{
+
+    width:88px;
+
+    height:88px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:22px;
+
+    margin-bottom:30px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:34px;
+
+    transition:.35s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-plan-icon{
+
+    transform:rotate(-10deg)
+    scale(1.08);
+
+}
+
+/*=========================================
+TITLE
+=========================================*/
+
+.logo-service-pricing-card h3{
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    margin-bottom:15px;
+
+}
+
+.logo-service-plan-description{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+/*=========================================
+PRICE
+=========================================*/
+
+.logo-service-price{
+
+    width:100%;
+
+    align-items:flex-end;
+
+    gap:8px;
+
+    margin-bottom:35px;
+
+}
+
+.logo-service-currency{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#2563eb;
+
+    margin-bottom:12px;
+
+}
+
+.logo-service-price h2{
+
+    font-size:56px;
+
+    font-weight:800;
+
+    color:#0f172a;
+
+    line-height:1;
+
+}
+
+/*=========================================
+FEATURES
+=========================================*/
+
+.logo-service-plan-features{
+
+    list-style:none;
+
+    margin:0 0 40px;
+
+    padding:0;
+
+    width:100%;
+
+    flex-direction:column;
+
+    gap:16px;
+
+}
+
+.logo-service-plan-features li{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#334155;
+
+    font-size:15px;
+
+    line-height:1.7;
+
+}
+
+.logo-service-plan-features i{
+
+    color:#22c55e;
+
+    font-size:18px;
+
+}
+
+/*=========================================
+BUTTON
+=========================================*/
+
+.logo-service-plan-button{
+
+    width:100%;
+
+    justify-content:center;
+
+    align-items:center;
+
+    /* width:100%; */
+
+    height:70px;
+
+    border-radius:60px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:6px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.logo-service-plan-button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+    0 18px 40px rgba(37,99,235,.25);
+
+}
+/*=========================================
+PRICING FLOAT ANIMATION
+=========================================*/
+
+.logo-service-pricing-card{
+
+    animation:logoPricingFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-pricing-card:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-pricing-card:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+.logo-service-pricing-card:nth-child(4){
+
+    animation-delay:.75s;
+
+}
+
+@keyframes logoPricingFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+ICON SHINE
+=========================================*/
+
+.logo-service-plan-icon{
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 18px 45px rgba(37,99,235,.20);
+
+}
+
+.logo-service-plan-icon::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-plan-icon::before{
+
+    left:180%;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-plan-icon{
+
+    box-shadow:
+
+    0 30px 70px rgba(124,58,237,.35);
+
+}
+
+/*=========================================
+POPULAR CARD GLOW
+=========================================*/
+
+.logo-service-popular{
+
+    position:relative;
+
+}
+
+.logo-service-popular::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:32px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        rgba(37,99,235,.15),
+
+        rgba(124,58,237,.15));
+
+    z-index:-1;
+
+    filter:blur(20px);
+
+}
+
+/*=========================================
+FEATURE ANIMATION
+=========================================*/
+
+.logo-service-plan-features li{
+
+    transition:.35s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-plan-features li{
+
+    transform:translateX(8px);
+
+}
+
+.logo-service-plan-features li i{
+
+    transition:.35s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-plan-features li i{
+
+    transform:scale(1.2);
+
+    color:#2563eb;
+
+}
+
+/*=========================================
+PRICE EFFECT
+=========================================*/
+
+.logo-service-price h2{
+
+    transition:.35s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-price h2{
+
+    color:#2563eb;
+
+}
+
+.logo-service-currency{
+
+    transition:.35s;
+
+}
+
+.logo-service-pricing-card:hover
+.logo-service-currency{
+
+    transform:translateY(-4px);
+
+}
+
+/*=========================================
+BUTTON EFFECT
+=========================================*/
+
+.logo-service-plan-button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.logo-service-plan-button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-plan-button:hover::before{
+
+    left:180%;
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-pricing-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    right:-120px;
+
+    top:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-pricing-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+RESPONSIVE 1400
+=========================================*/
+
+@media(max-width:1400px){
+
+.logo-service-pricing-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-pricing{
+
+    padding:100px 0;
+
+}
+
+.logo-service-pricing-card{
+
+    padding:40px 30px;
+
+}
+
+.logo-service-price h2{
+
+    font-size:48px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-pricing{
+
+    padding:90px 0;
+
+}
+
+.logo-service-pricing-grid{
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+}
+
+.logo-service-popular{
+
+    transform:none;
+
+}
+
+.logo-service-popular:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.logo-service-plan-icon{
+
+    width:72px;
+
+    height:72px;
+
+    font-size:28px;
+
+}
+
+.logo-service-pricing-card h3{
+
+    font-size:24px;
+
+}
+
+.logo-service-price h2{
+
+    font-size:42px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-pricing-card{
+
+    padding:30px 22px;
+
+    border-radius:22px;
+
+}
+
+.logo-service-plan-icon{
+
+    width:64px;
+
+    height:64px;
+
+    border-radius:18px;
+
+    font-size:24px;
+
+}
+
+.logo-service-pricing-card h3{
+
+    font-size:22px;
+
+}
+
+.logo-service-price h2{
+
+    font-size:36px;
+
+}
+
+.logo-service-currency{
+
+    font-size:22px;
+
+}
+
+.logo-service-plan-button{
+
+    height:52px;
+
+    font-size:15px;
+
+}
+
+.logo-service-plan-features li{
+
+    font-size:14px;
+
+}
+
+}
+/*=========================================
+TESTIMONIAL SECTION
+=========================================*/
+
+.logo-service-testimonials{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+}
+
+.logo-service-testimonials::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.07),
+    transparent 70%);
+
+}
+
+.logo-service-testimonials::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+REVIEW STATS
+=========================================*/
+
+.logo-service-review-stats{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin:70px 0 90px;
+
+}
+
+.logo-service-review-stat{
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+    transition:.4s;
+
+}
+
+.logo-service-review-stat:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 70px rgba(37,99,235,.18);
+
+}
+
+.logo-service-review-stat h2{
+
+    font-size:44px;
+
+    font-weight:800;
+
+    margin-bottom:12px;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.logo-service-review-stat span{
+
+    color:#64748b;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+TESTIMONIAL GRID
+=========================================*/
+
+.logo-service-testimonial-grid{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*=========================================
+TESTIMONIAL CARD
+=========================================*/
+
+.logo-service-testimonial-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px 35px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+.logo-service-testimonial-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 35px 75px rgba(37,99,235,.16);
+
+}
+
+/*=========================================
+QUOTE ICON
+=========================================*/
+
+.logo-service-testimonial-card::after{
+
+    content:"\201D";
+
+    position:absolute;
+
+    top:25px;
+
+    right:30px;
+
+    font-size:90px;
+
+    font-weight:800;
+
+    color:rgba(37,99,235,.08);
+
+    line-height:1;
+
+}
+
+/*=========================================
+STARS
+=========================================*/
+
+.logo-service-stars{
+
+    width:100%;
+
+    gap:6px;
+
+    margin-bottom:25px;
+
+}
+
+.logo-service-stars i{
+
+    color:#fbbf24;
+
+    font-size:18px;
+
+}
+
+/*=========================================
+REVIEW
+=========================================*/
+
+.logo-service-testimonial-card p{
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+/*=========================================
+CLIENT
+=========================================*/
+
+.logo-service-client{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.logo-service-client img{
+
+    width:72px;
+
+    height:72px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid #eef2ff;
+
+}
+
+.logo-service-client h4{
+
+    color:#0f172a;
+
+    font-size:20px;
+
+    margin-bottom:6px;
+
+}
+
+.logo-service-client span{
+
+    color:#64748b;
+
+    font-size:14px;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-testimonial-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    transition:.35s;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed);
+
+}
+
+.logo-service-testimonial-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+.logo-service-testimonial-card{
+
+    animation:logoTestimonialFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-testimonial-card:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-testimonial-card:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+@keyframes logoTestimonialFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+STAR ANIMATION
+=========================================*/
+
+.logo-service-stars i{
+
+    animation:logoStarGlow 2s ease-in-out infinite;
+
+}
+
+.logo-service-stars i:nth-child(2){
+
+    animation-delay:.15s;
+
+}
+
+.logo-service-stars i:nth-child(3){
+
+    animation-delay:.30s;
+
+}
+
+.logo-service-stars i:nth-child(4){
+
+    animation-delay:.45s;
+
+}
+
+.logo-service-stars i:nth-child(5){
+
+    animation-delay:.60s;
+
+}
+
+@keyframes logoStarGlow{
+
+    0%,100%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.25);
+
+        color:#f59e0b;
+
+    }
+
+}
+
+/*=========================================
+CLIENT IMAGE
+=========================================*/
+
+.logo-service-client img{
+
+    transition:.35s;
+
+}
+
+.logo-service-testimonial-card:hover
+.logo-service-client img{
+
+    transform:scale(1.08);
+
+    border-color:#2563eb;
+
+}
+
+/*=========================================
+COMPANY LOGOS
+=========================================*/
+
+.logo-service-company-section{
+
+    margin-top:100px;
+
+    text-align:center;
+
+}
+
+.logo-service-company-section h3{
+
+    font-size:28px;
+
+    color:#0f172a;
+
+    margin-bottom:45px;
+
+}
+
+.logo-service-company-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+}
+
+.logo-service-company-grid img{
+
+    width:100%;
+
+    max-width:150px;
+
+    margin:auto;
+
+    filter:grayscale(100%);
+
+    opacity:.65;
+
+    transition:.35s;
+
+}
+
+.logo-service-company-grid img:hover{
+
+    filter:grayscale(0);
+
+    opacity:1;
+
+    transform:scale(1.08);
+
+}
+
+/*=========================================
+REVIEW STAT HOVER
+=========================================*/
+
+.logo-service-review-stat{
+
+    animation:logoReviewFloat 7s ease-in-out infinite;
+
+}
+
+.logo-service-review-stat:nth-child(2){
+
+    animation-delay:.25s;
+
+}
+
+.logo-service-review-stat:nth-child(3){
+
+    animation-delay:.5s;
+
+}
+
+.logo-service-review-stat:nth-child(4){
+
+    animation-delay:.75s;
+
+}
+
+@keyframes logoReviewFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-testimonial-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+}
+
+.logo-service-testimonial-grid::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-review-stats{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.logo-service-testimonial-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.logo-service-company-grid{
+
+    grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-testimonials{
+
+    padding:90px 0;
+
+}
+
+.logo-service-review-stats{
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+}
+
+.logo-service-testimonial-grid{
+
+    grid-template-columns:1fr;
+
+    gap:24px;
+
+}
+
+.logo-service-testimonial-card{
+
+    padding:32px 26px;
+
+}
+
+.logo-service-company-grid{
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.logo-service-company-section{
+
+    margin-top:70px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-testimonial-card{
+
+    padding:28px 20px;
+
+    border-radius:22px;
+
+}
+
+.logo-service-client img{
+
+    width:60px;
+
+    height:60px;
+
+}
+
+.logo-service-client h4{
+
+    font-size:18px;
+
+}
+
+.logo-service-company-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-review-stat{
+
+    border-radius:22px;
+
+    padding:28px 20px;
+
+}
+
+.logo-service-review-stat h2{
+
+    font-size:34px;
+
+}
+
+.logo-service-review-stat span{
+
+    font-size:14px;
+
+}
+
+.logo-service-company-section h3{
+
+    font-size:24px;
+
+}
+
+}
+/*=========================================
+FAQ SECTION
+=========================================*/
+
+.logo-service-faq{
+
+    position:relative;
+
+    padding:120px 0;
+
+    overflow:hidden;
+
+    background:#f8fbff;
+
+}
+
+.logo-service-faq::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    left:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(37,99,235,.08),
+    transparent 70%);
+
+}
+
+.logo-service-faq::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+
+    height:520px;
+
+    right:-180px;
+
+    bottom:-180px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+    rgba(124,58,237,.08),
+    transparent 70%);
+
+}
+
+/*=========================================
+FAQ WRAPPER
+=========================================*/
+
+.logo-service-faq-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:950px;
+
+    margin:70px auto 0;
+
+}
+
+/*=========================================
+FAQ ITEM
+=========================================*/
+
+.logo-service-faq-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    margin-bottom:22px;
+
+    border-radius:24px;
+
+    background:#ffffff;
+
+    border:1px solid #e2e8f0;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+.logo-service-faq-item:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#2563eb;
+
+    box-shadow:
+
+    0 30px 70px rgba(37,99,235,.15);
+
+}
+
+/*=========================================
+ACTIVE
+=========================================*/
+
+.logo-service-faq-item.active{
+
+    border-color:#2563eb;
+
+}
+
+/*=========================================
+QUESTION
+=========================================*/
+
+.logo-service-faq-question{
+
+    width:100%;
+
+    /*  */
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:25px;
+
+    padding:28px 35px;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    text-align:left;
+
+}
+
+.logo-service-faq-question span{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    line-height:1.6;
+
+}
+
+/*=========================================
+PLUS ICON
+=========================================*/
+
+.logo-service-faq-question i{
+
+    width:48px;
+
+    height:48px;
+
+    /* width:100%; */
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    transition:.35s;
+
+}
+
+.logo-service-faq-item.active
+.logo-service-faq-question i{
+
+    transform:rotate(45deg);
+
+}
+
+/*=========================================
+ANSWER
+=========================================*/
+
+.logo-service-faq-answer{
+
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:max-height .45s ease;
+
+}
+
+.logo-service-faq-answer p{
+
+    padding:0 35px 30px;
+
+    color:#64748b;
+
+    font-size:16px;
+
+    line-height:1.9;
+
+}
+
+/*=========================================
+TOP BORDER
+=========================================*/
+
+.logo-service-faq-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    transform:scaleX(0);
+
+    transform-origin:left;
+
+    background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed);
+
+    transition:.35s;
+
+}
+
+.logo-service-faq-item:hover::before,
+
+.logo-service-faq-item.active::before{
+
+    transform:scaleX(1);
+
+}
+
+/*=========================================
+GLOW EFFECT
+=========================================*/
+
+.logo-service-faq-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.10),
+
+    transparent 70%);
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.logo-service-faq-item:hover::after{
+
+    opacity:1;
+
+}
+
+.logo-service-faq-question,
+
+.logo-service-faq-answer{
+
+    position:relative;
+
+    z-index:2;
+
+}
+/*=========================================
+FAQ FLOAT ANIMATION
+=========================================*/
+
+.logo-service-faq-item{
+
+    animation:logoFaqFloat 6s ease-in-out infinite;
+
+}
+
+.logo-service-faq-item:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.logo-service-faq-item:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+.logo-service-faq-item:nth-child(4){
+
+    animation-delay:.6s;
+
+}
+
+.logo-service-faq-item:nth-child(5){
+
+    animation-delay:.8s;
+
+}
+
+.logo-service-faq-item:nth-child(6){
+
+    animation-delay:1s;
+
+}
+
+.logo-service-faq-item:nth-child(7){
+
+    animation-delay:1.2s;
+
+}
+
+.logo-service-faq-item:nth-child(8){
+
+    animation-delay:1.4s;
+
+}
+
+.logo-service-faq-item:nth-child(9){
+
+    animation-delay:1.6s;
+
+}
+
+.logo-service-faq-item:nth-child(10){
+
+    animation-delay:1.8s;
+
+}
+
+@keyframes logoFaqFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+QUESTION HOVER
+=========================================*/
+
+.logo-service-faq-question{
+
+    transition:.35s;
+
+}
+
+.logo-service-faq-item:hover
+.logo-service-faq-question span{
+
+    color:#2563eb;
+
+}
+
+/*=========================================
+ICON SHINE
+=========================================*/
+
+.logo-service-faq-question i{
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+
+    0 15px 40px rgba(37,99,235,.20);
+
+}
+
+.logo-service-faq-question i::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-140%;
+
+    width:120%;
+
+    height:400%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.55),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    transition:1s;
+
+}
+
+.logo-service-faq-item:hover
+.logo-service-faq-question i::before{
+
+    left:180%;
+
+}
+
+/*=========================================
+ACTIVE STATE
+=========================================*/
+
+.logo-service-faq-item.active{
+
+    box-shadow:
+
+    0 30px 70px rgba(37,99,235,.16);
+
+}
+
+.logo-service-faq-item.active
+.logo-service-faq-question i{
+
+    box-shadow:
+
+    0 25px 60px rgba(124,58,237,.30);
+
+}
+
+/*=========================================
+BACKGROUND DECORATION
+=========================================*/
+
+.logo-service-faq-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+
+    height:320px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(37,99,235,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+.logo-service-faq-wrapper::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+
+    height:260px;
+
+    left:-120px;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,
+
+    rgba(124,58,237,.05),
+
+    transparent 70%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-faq{
+
+    padding:100px 0;
+
+}
+
+.logo-service-faq-wrapper{
+
+    max-width:100%;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-faq{
+
+    padding:90px 0;
+
+}
+
+.logo-service-faq-wrapper{
+
+    margin-top:55px;
+
+}
+
+.logo-service-faq-question{
+
+    padding:24px;
+
+}
+
+.logo-service-faq-question span{
+
+    font-size:18px;
+
+}
+
+.logo-service-faq-question i{
+
+    width:42px;
+
+    height:42px;
+
+    font-size:16px;
+
+}
+
+.logo-service-faq-answer p{
+
+    padding:0 24px 24px;
+
+    font-size:15px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-faq-item{
+
+    border-radius:20px;
+
+    margin-bottom:18px;
+
+}
+
+.logo-service-faq-question{
+
+    padding:20px;
+
+    gap:15px;
+
+}
+
+.logo-service-faq-question span{
+
+    font-size:16px;
+
+    line-height:1.5;
+
+}
+
+.logo-service-faq-question i{
+
+    width:38px;
+
+    height:38px;
+
+    font-size:14px;
+
+}
+
+.logo-service-faq-answer p{
+
+    padding:0 20px 20px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+}
+
+}
+/*=========================================
+FINAL CTA SECTION
+=========================================*/
+
+.logo-service-cta{
+
+    position:relative;
+
+    padding:130px 0;
+
+    overflow:hidden;
+
+    background:linear-gradient(
+    135deg,
+    #071a2d 0%,
+    #0b2c47 45%,
+    #2563eb 100%);
+
+}
+
+.logo-service-cta *{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/*=========================================
+BACKGROUND
+=========================================*/
+
+.logo-service-cta-bg{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.logo-service-cta-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.08;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.2) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.2) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+}
+
+/*=========================================
+BLOBS
+=========================================*/
+
+.logo-service-cta-blob{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(90px);
+
+    animation:logoCtaBlob 12s ease-in-out infinite;
+
+}
+
+.logo-service-cta-blob-1{
+
+    width:420px;
+
+    height:420px;
+
+    background:#2563eb;
+
+    left:-120px;
+
+    top:-120px;
+
+}
+
+.logo-service-cta-blob-2{
+
+    width:360px;
+
+    height:360px;
+
+    background:#7c3aed;
+
+    right:-120px;
+
+    bottom:-120px;
+
+    animation-delay:3s;
+
+}
+
+@keyframes logoCtaBlob{
+
+    0%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+    50%{
+
+        transform:translateY(-35px) scale(1.1);
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(1);
+
+    }
+
+}
+
+/*=========================================
+WRAPPER
+=========================================*/
+
+.logo-service-cta-wrapper{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*=========================================
+LEFT SIDE
+=========================================*/
+
+.logo-service-cta-content{
+
+    color:#ffffff;
+
+}
+
+.logo-service-cta-tag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    padding:14px 28px;
+
+    border-radius:60px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    margin-bottom:30px;
+
+}
+
+.logo-service-cta-content h2{
+
+    font-size:60px;
+
+    line-height:1.12;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.logo-service-cta-content h2 span{
+
+    display:block;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #38bdf8,
+
+    #c084fc);
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+}
+
+.logo-service-cta-content p{
+
+    color:rgba(255,255,255,.86);
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/*=========================================
+FEATURES
+=========================================*/
+
+.logo-service-cta-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+    margin-bottom:45px;
+
+}
+
+.logo-service-cta-feature{
+
+    width:100%;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    transition:.35s;
+
+}
+
+.logo-service-cta-feature:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.logo-service-cta-feature i{
+
+    color:#22c55e;
+
+    font-size:20px;
+
+}
+
+.logo-service-cta-feature span{
+
+    color:#ffffff;
+
+    font-weight:600;
+
+}
+
+/*=========================================
+BUTTONS
+=========================================*/
+
+.logo-service-cta-buttons{
+
+    width:100%;
+
+    gap:8px;
+
+    flex-wrap:wrap;
+
+}
+
+.logo-service-cta-btn,
+
+.logo-service-cta-outline{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    height:60px;
+
+    padding:0 34px;
+
+    border-radius:60px;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.logo-service-cta-btn{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+}
+
+.logo-service-cta-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 45px rgba(255,255,255,.22);
+
+}
+
+.logo-service-cta-outline{
+
+    border:2px solid rgba(255,255,255,.18);
+
+    color:#ffffff;
+
+}
+
+.logo-service-cta-outline:hover{
+
+    background:#ffffff;
+
+    color:#2563eb;
+
+}
+
+/*=========================================
+CTA RIGHT CARD
+=========================================*/
+
+.logo-service-cta-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:40px;
+
+    border-radius:32px;
+
+    background:rgba(255,255,255,.10);
+
+    backdrop-filter:blur(24px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.20);
+
+    animation:logoCtaFloat 7s ease-in-out infinite;
+
+}
+
+.logo-service-cta-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+    135deg,
+
+    rgba(255,255,255,.08),
+
+    transparent 60%);
+
+    pointer-events:none;
+
+}
+
+/*=========================================
+HEADER
+=========================================*/
+
+.logo-service-cta-card-header{
+
+    margin-bottom:35px;
+
+}
+
+.logo-service-cta-card-header h3{
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+.logo-service-cta-card-header span{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:15px;
+
+}
+
+/*=========================================
+FEATURE LIST
+=========================================*/
+
+.logo-service-cta-list{
+
+    width:100%;
+
+    flex-direction:column;
+
+    gap:22px;
+
+    margin-bottom:40px;
+
+}
+
+.logo-service-cta-item i{
+
+    width:100%;
+
+    align-items:flex-start;
+     
+    gap:18px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+/* .logo-service-cta-item:hover{
+
+    transform:translateX(8px);
+
+    background:rgba(255,255,255,.14);
+
+} */
+
+.logo-service-cta-item i{
+
+    width:56px;
+
+    height:56px;
+
+    
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563eb,
+
+    #7c3aed);
+
+    color:#ffffff;
+
+    font-size:22px;
+
+    flex-shrink:0;
+
+}
+
+.logo-service-cta-item h4{
+
+    color:#ffffff;
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+}
+
+.logo-service-cta-item p{
+
+    color:rgba(255,255,255,.78);
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+/*=========================================
+STATS
+=========================================*/
+
+.logo-service-cta-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+}
+
+.logo-service-cta-stats>div{
+
+    padding:22px 16px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+
+    transition:.35s;
+
+}
+
+.logo-service-cta-stats>div:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.14);
+
+}
+
+.logo-service-cta-stats h2{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    color:#ffffff;
+
+    margin-bottom:8px;
+
+}
+
+.logo-service-cta-stats span{
+
+    color:rgba(255,255,255,.72);
+
+    font-size:14px;
+
+}
+
+/*=========================================
+SHINE EFFECT
+=========================================*/
+
+.logo-service-cta-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:-180%;
+
+    left:-150%;
+
+    width:120%;
+
+    height:420%;
+
+    background:linear-gradient(
+
+        120deg,
+
+        transparent,
+
+        rgba(255,255,255,.18),
+
+        transparent
+
+    );
+
+    transform:rotate(25deg);
+
+    animation:logoCtaShine 7s linear infinite;
+
+}
+
+@keyframes logoCtaShine{
+
+    100%{
+
+        left:180%;
+
+    }
+
+}
+
+/*=========================================
+FLOAT ANIMATION
+=========================================*/
+
+@keyframes logoCtaFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*=========================================
+RESPONSIVE 1200
+=========================================*/
+
+@media(max-width:1200px){
+
+.logo-service-cta-wrapper{
+
+    gap:60px;
+
+}
+
+.logo-service-cta-content h2{
+
+    font-size:50px;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 992
+=========================================*/
+
+@media(max-width:992px){
+
+.logo-service-cta{
+
+    padding:100px 0;
+
+}
+
+.logo-service-cta-wrapper{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-cta-content{
+
+    text-align:center;
+
+}
+
+.logo-service-cta-features{
+
+    max-width:700px;
+
+    margin:0 auto 40px;
+
+}
+.logo-service-process-number{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+.logo-service-cta-buttons{
+
+    justify-content:center;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 768
+=========================================*/
+
+@media(max-width:768px){
+
+.logo-service-cta{
+
+    padding:90px 0;
+
+}
+
+.logo-service-cta-content h2{
+
+    font-size:40px;
+
+}
+
+.logo-service-cta-content p{
+
+    font-size:16px;
+
+}
+
+.logo-service-cta-features{
+
+    grid-template-columns:1fr;
+
+}
+
+.logo-service-cta-buttons{
+
+    flex-direction:column;
+
+}
+
+.logo-service-cta-btn,
+
+.logo-service-cta-outline{
+
+    width:100%;
+
+}
+
+.logo-service-cta-card{
+
+    padding:30px;
+
+}
+
+.logo-service-cta-stats{
+
+    grid-template-columns:1fr;
+
+}
+
+}
+
+/*=========================================
+RESPONSIVE 480
+=========================================*/
+
+@media(max-width:480px){
+
+.logo-service-cta-content h2{
+
+    font-size:32px;
+
+}
+
+.logo-service-cta-tag{
+
+    padding:10px 18px;
+
+    font-size:12px;
+
+}
+
+.logo-service-cta-card{
+
+    padding:24px 20px;
+
+    border-radius:24px;
+
+}
+
+.logo-service-cta-card-header h3{
+
+    font-size:24px;
+
+}
+
+.logo-service-cta-item{
+
+    flex-direction:column;
+
+    text-align:center;
+
+    align-items:center;
+
+}
+
+.logo-service-cta-item i{
+
+    width:52px;
+
+    height:52px;
+
+    font-size:20px;
+
+}
+
+.logo-service-cta-stats h2{
+
+    font-size:28px;
+
+}
+
+.logo-service-cta-stats span{
+
+    font-size:13px;
+
+}
+
+}

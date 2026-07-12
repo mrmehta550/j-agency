@@ -1,0 +1,67 @@
+{% load static %}
+
+<nav class="navbar">
+    <div class="container">
+        <a href="{% url 'home' %}" class="logo">
+            
+            <img src="{% static 'images/favicon.png' %}" alt="M Agency Logo">
+        
+            <span>M Agency</span>
+        </a>
+
+        <ul id="navMenu" class="nav-menu">
+            <li>
+                <a href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    Services
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'webdev' %}">Website Development</a></li>
+                    <li><a href="#">E-Commerce</a></li>
+                    <li><a href="{% url 'uiux' %}">UI/UX Design</a></li>
+                    <li><a href="{% url 'seo' %}">SEO Optimization</a></li>
+                    <li><a href="{% url 'dm' %}">Digital Marketing</a></li>
+                    <li><a href="{% url 'ai' %}">AI Solutions</a></li>
+                    <li><a href="{% url 'maint' %}">Maintenance</a></li>
+                    <li><a href="{% url 'logo' %}">Logo Design</a></li>
+                    <li><a href="{% url 'video' %}">Video Editing</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Portfolio</a>
+            </li>
+            <li>
+                <a href="{% url 'price' %}">Pricing</a>
+            </li>
+            <li class="dropdown">
+                <a href="#">
+                    Company
+                    <i class="fa-solid fa-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'tech' %}">Technology</a></li>
+                    <li><a href="{% url 'blog' %}">Blogs</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+            </li>
+            <li>
+                <a href="{% url 'contact' %}">Contact</a>
+            </li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="{% url 'booking' %}" class="quote-btn">Get Free Quote</a>
+            <button id="hamburgerBtn" class="hamburger" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>

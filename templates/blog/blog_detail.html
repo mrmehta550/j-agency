@@ -1,0 +1,1050 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--=========================================
+            BLOG DETAIL HERO
+==========================================-->
+
+<section class="blog-detail-page-hero">
+
+    <div class="container">
+
+        <!--=========================
+        Breadcrumb
+        =========================-->
+
+        <div class="blog-detail-breadcrumb">
+
+            <a href="{% url 'home' %}">
+
+                Home
+
+            </a>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+            <a href="{% url 'blog' %}">
+
+                Blog
+
+            </a>
+
+            <i class="fa-solid fa-angle-right"></i>
+
+            <span>
+
+                {{ blog.title|truncatewords:5 }}
+
+            </span>
+
+        </div>
+
+        <!--=========================
+        Category
+        =========================-->
+
+        <div class="blog-detail-top-meta">
+
+            <span class="blog-detail-category">
+
+                <i class="fa-solid fa-folder-open"></i>
+
+                {{ blog.category.name }}
+
+            </span>
+
+            <span>
+
+                <i class="fa-regular fa-calendar"></i>
+
+                {{ blog.created_at|date:"F d, Y" }}
+
+            </span>
+
+            <span>
+
+                <i class="fa-regular fa-clock"></i>
+
+                {{ blog.read_time }} Min Read
+
+            </span>
+
+            <span>
+
+                <i class="fa-regular fa-eye"></i>
+
+                {{ blog.views }} Views
+
+            </span>
+
+        </div>
+
+        <!--=========================
+        Title
+        =========================-->
+
+        <h1 class="blog-detail-main-title">
+
+            {{ blog.title }}
+
+        </h1>
+
+        <!--=========================
+        Description
+        =========================-->
+
+        <p class="blog-detail-short-text">
+
+            {{ blog.short_description }}
+
+        </p>
+
+        <!--=========================
+        Author Card
+        =========================-->
+
+        <div class="blog-detail-author-bar">
+
+            <div class="blog-detail-author-left">
+
+                <img
+                    src="{% static 'images/default-user.png' %}"
+                    alt="Author">
+
+                <div>
+
+                    <h4>
+
+                        {% if blog.author %}
+
+                            {% if blog.author.get_full_name %}
+
+                                {{ blog.author.get_full_name }}
+
+                            {% else %}
+
+                                {{ blog.author.username }}
+
+                            {% endif %}
+
+                        {% else %}
+
+                            M Agency Team
+
+                        {% endif %}
+
+                    </h4>
+
+                    <span>
+
+                        Senior Content Writer • M Agency
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="blog-detail-author-right">
+
+                <div class="blog-detail-reading-time">
+
+                    <i class="fa-solid fa-book-open-reader"></i>
+
+                    <span>
+
+                        {{ blog.read_time }} Minutes
+
+                    </span>
+
+                </div>
+
+                <div class="blog-detail-share-icons">
+
+                    <a href="#">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-whatsapp"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--=========================
+        Featured Image
+        =========================-->
+
+        <div class="blog-detail-featured-image">
+
+            {% if blog.image %}
+
+            <img
+
+                src="{{ blog.image.url }}"
+
+                alt="{{ blog.title }}">
+
+            {% else %}
+
+            <img
+
+                src="{% static 'images/blog/default-blog.webp' %}"
+
+                alt="Blog">
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        BLOG CONTENT START
+==========================================-->
+
+<section class="blog-detail-page-section">
+
+    <div class="container">
+
+        <div class="blog-detail-page-layout">
+
+            <!--=========================
+                    LEFT CONTENT
+            =========================-->
+
+            <div class="blog-detail-left-column">
+                                <!--=========================================
+                        ARTICLE CONTENT
+                ==========================================-->
+
+                <article class="blog-detail-article-card">
+
+                    <div class="blog-detail-article-content">
+
+                        {{ blog.content|linebreaks }}
+
+                    </div>
+
+                    <!--=========================================
+                            HIGHLIGHT QUOTE
+                    ==========================================-->
+
+                    <div class="blog-detail-highlight-quote">
+
+                        <div class="blog-detail-quote-icon">
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h3>
+
+                                Expert Insight
+
+                            </h3>
+
+                            <p>
+
+                                Great digital products are not built by
+                                writing more code. They are built by
+                                solving real business problems with the
+                                right technology.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!--=========================================
+                            BLOG IMAGE
+                    ==========================================-->
+
+                    {% if blog.image %}
+
+                    <div class="blog-detail-inline-image">
+
+                        <img
+
+                            src="{{ blog.image.url }}"
+
+                            alt="{{ blog.title }}">
+
+                    </div>
+
+                    {% endif %}
+
+                    <!--=========================================
+                            KEY TAKEAWAYS
+                    ==========================================-->
+
+                    <div class="blog-detail-takeaways">
+
+                        <h2>
+
+                            Key Takeaways
+
+                        </h2>
+
+                        <div class="blog-detail-takeaway-grid">
+
+                            <div class="blog-detail-takeaway-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <span>
+
+                                    Build clean, scalable applications.
+
+                                </span>
+
+                            </div>
+
+                            <div class="blog-detail-takeaway-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <span>
+
+                                    Focus on user experience first.
+
+                                </span>
+
+                            </div>
+
+                            <div class="blog-detail-takeaway-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <span>
+
+                                    Improve website performance regularly.
+
+                                </span>
+
+                            </div>
+
+                            <div class="blog-detail-takeaway-item">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                <span>
+
+                                    Optimize for SEO and accessibility.
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!--=========================================
+                            TAGS + SHARE
+                    ==========================================-->
+
+                    <div class="blog-detail-footer-bar">
+
+                        <div class="blog-detail-tags">
+
+                            <span>
+
+                                Tags
+
+                            </span>
+
+                            <a href="#">
+
+                                Django
+
+                            </a>
+
+                            <a href="#">
+
+                                Python
+
+                            </a>
+
+                            <a href="#">
+
+                                Web Development
+
+                            </a>
+
+                            <a href="#">
+
+                                AI
+
+                            </a>
+
+                        </div>
+
+                        <div class="blog-detail-share">
+
+                            <span>
+
+                                Share
+
+                            </span>
+
+                            <a href="#">
+
+                                <i class="fab fa-facebook-f"></i>
+
+                            </a>
+
+                            <a href="#">
+
+                                <i class="fab fa-linkedin-in"></i>
+
+                            </a>
+
+                            <a href="#">
+
+                                <i class="fab fa-x-twitter"></i>
+
+                            </a>
+
+                            <a href="#">
+
+                                <i class="fab fa-whatsapp"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <!--=========================================
+                    STICKY SIDEBAR
+            ==========================================-->
+
+            <aside class="blog-detail-right-sidebar">
+
+                <!-- Search -->
+
+                <div class="blog-detail-sidebar-card">
+
+                    <h3>
+
+                        Search Articles
+
+                    </h3>
+
+                    <form
+                        method="GET"
+                        action="{% url 'blog' %}"
+                        class="blog-detail-search-form">
+
+                        <input
+
+                            type="text"
+
+                            name="search"
+
+                            placeholder="Search articles...">
+
+                        <button>
+
+                            <i class="fa-solid fa-search"></i>
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <!-- Latest -->
+
+                <div class="blog-detail-sidebar-card">
+
+                    <h3>
+
+                        Latest Articles
+
+                    </h3>
+
+                    {% for item in latest %}
+
+                    <a
+
+                        href="{% url 'blog_detail' item.slug %}"
+
+                        class="blog-detail-latest-item">
+
+                        {% if item.image %}
+
+                        <img
+
+                            src="{{ item.image.url }}"
+
+                            alt="{{ item.title }}">
+
+                        {% endif %}
+
+                        <div>
+
+                            <h4>
+
+                                {{ item.title|truncatewords:6 }}
+
+                            </h4>
+
+                            <span>
+
+                                {{ item.created_at|date:"M d, Y" }}
+
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    {% endfor %}
+
+                </div>
+
+                <!-- Categories -->
+
+                <div class="blog-detail-sidebar-card">
+
+                    <h3>
+
+                        Categories
+
+                    </h3>
+
+                    <div class="blog-detail-category-list">
+
+                        {% for category in categories %}
+
+                        <a
+
+                            href="{% url 'blog' %}?category={{ category.slug }}">
+
+                            <span>
+
+                                {{ category.name }}
+
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                <!-- Newsletter -->
+
+                <div class="blog-detail-sidebar-newsletter">
+
+                    <span>
+
+                        JOIN OUR COMMUNITY
+
+                    </span>
+
+                    <h3>
+
+                        Get Weekly Tech Insights
+
+                    </h3>
+
+                    <p>
+
+                        Receive tutorials, AI tips and web
+                        development articles every week.
+
+                    </p>
+
+                    <form>
+
+                        <input
+
+                            type="email"
+
+                            placeholder="Enter your email">
+
+                        <button>
+
+                            Subscribe
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        AUTHOR SECTION
+==========================================-->
+
+<section class="blog-detail-author-section">
+
+    <div class="container">
+
+        <div class="blog-detail-author-card">
+
+            <div class="blog-detail-author-image">
+
+                <img
+                    src="{% static 'images/default-user.png' %}"
+                    alt="Author">
+
+            </div>
+
+            <div class="blog-detail-author-content">
+
+                <span>
+
+                    ARTICLE WRITTEN BY
+
+                </span>
+
+                <h2>
+
+                        {% if blog.author %}
+
+                            {% if blog.author.get_full_name %}
+
+                                {{ blog.author.get_full_name }}
+
+                            {% else %}
+
+                                {{ blog.author.username }}
+
+                            {% endif %}
+
+                        {% else %}
+
+                            M Agency Team
+
+                        {% endif %}
+
+                </h2>
+
+                <p>
+
+                    Passionate developer and technical writer at
+                    <strong>M Agency</strong>. We publish practical
+                    guides on Web Development, Artificial Intelligence,
+                    UI/UX Design and Digital Marketing to help
+                    businesses grow online.
+
+                </p>
+
+                <div class="blog-detail-author-social">
+
+                    <a href="#">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-github"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-x-twitter"></i>
+
+                    </a>
+
+                    <a href="#">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PREVIOUS / NEXT BLOG
+==========================================-->
+
+<section class="blog-detail-navigation-section">
+
+    <div class="container">
+
+        <div class="blog-detail-navigation-grid">
+
+            {% if previous_blog %}
+
+            <a
+
+                href="{% url 'blog_detail' previous_blog.slug %}"
+
+                class="blog-detail-navigation-card">
+
+                <small>
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Previous Article
+
+                </small>
+
+                <h3>
+
+                    {{ previous_blog.title|truncatewords:7 }}
+
+                </h3>
+
+            </a>
+
+            {% endif %}
+
+            {% if next_blog %}
+
+            <a
+
+                href="{% url 'blog_detail' next_blog.slug %}"
+
+                class="blog-detail-navigation-card blog-detail-navigation-next">
+
+                <small>
+
+                    Next Article
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </small>
+
+                <h3>
+
+                    {{ next_blog.title|truncatewords:7 }}
+
+                </h3>
+
+            </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        RELATED ARTICLES
+==========================================-->
+
+<section class="blog-detail-related-section">
+
+    <div class="container">
+
+        <div class="blog-detail-section-heading">
+
+            <span>
+
+                MORE ARTICLES
+
+            </span>
+
+            <h2>
+
+                Related Articles
+
+            </h2>
+
+        </div>
+
+        <div class="blog-detail-related-grid">
+
+            {% for item in related %}
+
+            <article class="blog-detail-related-card">
+
+                <div class="blog-detail-related-image">
+
+                    {% if item.image %}
+
+                    <img
+
+                        src="{{ item.image.url }}"
+
+                        alt="{{ item.title }}">
+
+                    {% endif %}
+
+                    <span>
+
+                        {{ item.category.name }}
+
+                    </span>
+
+                </div>
+
+                <div class="blog-detail-related-content">
+
+                    <div class="blog-detail-related-meta">
+
+                        <span>
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            {{ item.created_at|date:"M d, Y" }}
+
+                        </span>
+
+                    </div>
+
+                    <h3>
+
+                        {{ item.title|truncatewords:8 }}
+
+                    </h3>
+
+                    <p>
+
+                        {{ item.short_description|truncatewords:18 }}
+
+                    </p>
+
+                    <a
+
+                        href="{% url 'blog_detail' item.slug %}">
+
+                        Read Article
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        COMMENTS
+==========================================-->
+
+<section class="blog-detail-comment-section">
+
+    <div class="container">
+
+        <div class="blog-detail-comment-wrapper">
+
+            <div class="blog-detail-section-heading">
+
+                <span>
+
+                    YOUR FEEDBACK
+
+                </span>
+
+                <h2>
+
+                    Leave a Comment
+
+                </h2>
+
+            </div>
+
+            <form
+
+                method="POST"
+
+                class="blog-detail-comment-form">
+
+                {% csrf_token %}
+
+                <div class="blog-detail-comment-grid">
+
+                    <input
+
+                        type="text"
+
+                        name="name"
+
+                        placeholder="Your Name"
+
+                        required>
+
+                    <input
+
+                        type="email"
+
+                        name="email"
+
+                        placeholder="Your Email"
+
+                        required>
+
+                </div>
+
+                <textarea
+
+                    name="message"
+
+                    rows="7"
+
+                    placeholder="Write your comment..."
+
+                    required>
+
+                </textarea>
+
+                <button
+                    type="submit">
+
+                    <i class="fa-solid fa-paper-plane"></i>
+
+                    Post Comment
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        NEWSLETTER CTA
+==========================================-->
+
+<section class="blog-detail-newsletter-section">
+
+    <div class="container">
+
+        <div class="blog-detail-newsletter-card">
+
+            <div class="blog-detail-newsletter-content">
+
+                <span>
+
+                    JOIN OUR COMMUNITY
+
+                </span>
+
+                <h2>
+
+                    Never Miss Our Latest Articles
+
+                </h2>
+
+                <p>
+
+                    Subscribe to receive the latest tutorials,
+                    web development tips, AI insights and
+                    digital marketing strategies directly
+                    in your inbox.
+
+                </p>
+
+            </div>
+
+            <form
+                method="POST"
+
+                class="blog-detail-newsletter-form">
+
+                {% csrf_token %}
+
+                <input
+
+                    type="email"
+
+                    name="email"
+
+                    placeholder="Enter your email"
+
+                    required>
+
+                <button>
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<button
+id="blogDetailBackTop"
+
+class="blog-detail-back-top">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<div
+id="blogDetailReadingProgress"
+
+class="blog-detail-reading-progress">
+
+</div>
+
+{% endblock %}
