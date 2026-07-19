@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Select Elements
     const track = document.getElementById('pricingTrack');
-    const cards = document.querySelectorAll('.pricing-card');
+    const cards = track ? track.querySelectorAll('.pricing-card') : [];
     
     // Top Arrows
     const prevArrow = document.querySelector('.arrow.prev');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next-btn');
 
     let currentIndex = 0;
-    const gap = 24; // This must match the gap: 24px in the CSS
+    const gap = 26; // This must match the gap: 26px in the CSS
 
     // Function to check how many cards are visible based on screen size
     function getVisibleCards() {

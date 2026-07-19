@@ -200,6 +200,7 @@ newsletter.reset();
 document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("contactForm");
+
     const btn = document.getElementById("submitBtn");
 
     if (!form || !btn) return;
@@ -208,9 +209,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", function (e) {
 
-        if (isSubmitting) {
-            e.preventDefault();
+        if (!form.checkValidity()) {
+
             return;
+
+        }
+
+        if (isSubmitting) {
+
+            e.preventDefault();
+
+            return;
+
         }
 
         isSubmitting = true;
@@ -220,8 +230,11 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.style.pointerEvents = "none";
 
         btn.innerHTML = `
-            <span class="spinner"></span>
+
+            <i class="fa-solid fa-spinner fa-spin"></i>
+
             Sending...
+
         `;
 
     });

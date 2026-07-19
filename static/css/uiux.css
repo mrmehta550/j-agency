@@ -3192,7 +3192,8 @@ FEATURED
 
 }
 
-.ux-testimonial-card.featured .stars i{
+.ux-testimonial-card.featured .stars i,
+.ux-testimonial-card.featured .ux-stars i{
 
     color:#fbbf24;
 
@@ -3367,7 +3368,8 @@ CLIENT INFO
 
 }
 
-.ux-testimonial-card.featured .client-info img{
+.ux-testimonial-card.featured .client-info img,
+.ux-testimonial-card.featured .ux-client-info img{
 
     border-color:rgba(255,255,255,.5);
 
@@ -3385,7 +3387,8 @@ CLIENT INFO
 
 }
 
-.ux-testimonial-card.featured .client-info h4{
+.ux-testimonial-card.featured .client-info h4,
+.ux-testimonial-card.featured .ux-client-info h4{
 
     color:#fff;
 
@@ -3399,7 +3402,8 @@ CLIENT INFO
 
 }
 
-.ux-testimonial-card.featured .client-info span{
+.ux-testimonial-card.featured .client-info span,
+.ux-testimonial-card.featured .ux-client-info span{
 
     color:rgba(255,255,255,.8);
 

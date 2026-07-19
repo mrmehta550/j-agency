@@ -27,7 +27,7 @@ class Blog(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.CASCADE,
-        related_name="blogs"
+        related_name="blogs",
     )
 
     author = models.ForeignKey(
@@ -45,14 +45,16 @@ class Blog(models.Model):
     image = models.ImageField(
         upload_to="blogs/",
         blank=True,
-        null=True
+        null=True,
     )
 
     short_description = models.TextField()
 
     content = models.TextField()
 
-    views = models.PositiveIntegerField(default=0)
+    # db_index=True: ORDER BY views DESC is used for "popular posts".
+    # Without an index, every popularity sort is a full table scan.
+    views = models.PositiveIntegerField(default=0, db_index=True)
 
     featured = models.BooleanField(default=False)
 
@@ -64,12 +66,33 @@ class Blog(models.Model):
 
     class Meta:
         ordering = ["-created_at"]
+        indexes = [
+            # Composite index for the most common query:
+            # Blog.objects.filter(status=True).order_by('-created_at')
+            models.Index(fields=['status', '-created_at'], name='blog_status_created_idx'),
+            # Index for featured+status filter
+            models.Index(fields=['status', 'featured'], name='blog_status_featured_idx'),
+        ]
 
     def save(self, *args, **kwargs):
+        """
+        Generate a unique slug from the title on first save.
 
+        FIXED: previously only checked `if not self.slug`, but if a blog is
+        deleted and a new one with the same title is created, slugify() would
+        produce the same slug, causing an IntegrityError crash.
+
+        Now appends a counter suffix until a unique slug is found.
+        """
         if not self.slug:
-            self.slug = slugify(self.title)
-
+            base = slugify(self.title) or 'post'
+            slug = base
+            counter = 1
+            # Keep trying slug-1, slug-2, slug-3... until unique
+            while Blog.objects.filter(slug=slug).exclude(pk=self.pk).exists():
+                slug = f"{base}-{counter}"
+                counter += 1
+            self.slug = slug
         super().save(*args, **kwargs)
 
     @property

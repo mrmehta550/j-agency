@@ -461,38 +461,38 @@ card.style.transform="translateY(0px)";
 TECH CARD TILT
 =========================================*/
 
-document.querySelectorAll(".home-tech-card").forEach(card=>{
+// document.querySelectorAll(".home-tech-card").forEach(card=>{
 
-card.addEventListener("mousemove",(e)=>{
+// card.addEventListener("mousemove",(e)=>{
 
-const rect=card.getBoundingClientRect();
+// const rect=card.getBoundingClientRect();
 
-const x=e.clientX-rect.left;
+// const x=e.clientX-rect.left;
 
-const y=e.clientY-rect.top;
+// const y=e.clientY-rect.top;
 
-const rotateX=((y/rect.height)-.5)*12;
+// const rotateX=((y/rect.height)-.5)*12;
 
-const rotateY=((x/rect.width)-.5)*-12;
+// const rotateY=((x/rect.width)-.5)*-12;
 
-card.style.transform=
+// card.style.transform=
 
-`perspective(1000px)
-rotateX(${rotateX}deg)
-rotateY(${rotateY}deg)
-translateY(-8px)`;
+// `perspective(1000px)
+// rotateX(${rotateX}deg)
+// rotateY(${rotateY}deg)
+// translateY(-8px)`;
 
-});
+// });
 
-card.addEventListener("mouseleave",()=>{
+// card.addEventListener("mouseleave",()=>{
 
-card.style.transform=
+// card.style.transform=
 
-"perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)";
+// "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)";
 
-});
+// });
 
-});
+// });
 
 /*=========================================
 SECTION PARALLAX SHAPES
@@ -779,40 +779,22 @@ faqItems.forEach(item => {
 TECH CARD HOVER EFFECT
 =========================================*/
 
-document.querySelectorAll(".home-tech-card").forEach(card => {
+// document.querySelectorAll(".home-tech-card").forEach(card => {
 
-    card.addEventListener("mouseenter", () => {
+//     card.addEventListener("mouseenter", () => {
 
-        card.classList.add("active");
+//         card.classList.add("active");
 
-    });
+//     });
 
-    card.addEventListener("mouseleave", () => {
+//     card.addEventListener("mouseleave", () => {
 
-        card.classList.remove("active");
+//         card.classList.remove("active");
 
-    });
+//     });
 
-});
+// });
 
-/*=========================================
-TECH ICON FLOAT
-=========================================*/
-
-document.querySelectorAll(".home-tech-card i").forEach(icon => {
-
-    let direction = 1;
-
-    setInterval(() => {
-
-        icon.style.transform =
-            `translateY(${direction * 6}px)`;
-
-        direction *= -1;
-
-    }, 1200);
-
-});
 
 /*=========================================
 PORTFOLIO IMAGE ZOOM
@@ -880,32 +862,32 @@ document.querySelectorAll(".home-cta-card").forEach(card => {
 
 /*=========================================
 SERVICE CARD ICON ROTATION
-=========================================*/
+// =========================================*/
 
-document.querySelectorAll(".home-service-card").forEach(card => {
+// document.querySelectorAll(".home-service-card").forEach(card => {
 
-    const icon = card.querySelector("i");
+//     const icon = card.querySelector("i");
 
-    // Use pointer events and only animate for mouse pointers
-    const onPointerEnter = (e) => {
-        if (e && e.pointerType && e.pointerType !== 'mouse') return;
-        if (icon) icon.style.transform = "rotate(15deg) scale(1.15)";
-    };
+//     // Use pointer events and only animate for mouse pointers
+//     const onPointerEnter = (e) => {
+//         if (e && e.pointerType && e.pointerType !== 'mouse') return;
+//         if (icon) icon.style.transform = "rotate(15deg) scale(1.15)";
+//     };
 
-    const onPointerLeave = (e) => {
-        if (e && e.pointerType && e.pointerType !== 'mouse') return;
-        if (icon) icon.style.transform = "rotate(0deg) scale(1)";
-    };
+//     const onPointerLeave = (e) => {
+//         if (e && e.pointerType && e.pointerType !== 'mouse') return;
+//         if (icon) icon.style.transform = "rotate(0deg) scale(1)";
+//     };
 
-    // Preferred: pointer events (works for mouse, pen, touch). We restrict to mouse above.
-    card.addEventListener("pointerenter", onPointerEnter);
-    card.addEventListener("pointerleave", onPointerLeave);
+//     // Preferred: pointer events (works for mouse, pen, touch). We restrict to mouse above.
+//     card.addEventListener("pointerenter", onPointerEnter);
+//     card.addEventListener("pointerleave", onPointerLeave);
 
-    // Fallback for environments that may not support pointer events: keep mouse handlers
-    card.addEventListener("mouseenter", onPointerEnter);
-    card.addEventListener("mouseleave", onPointerLeave);
+//     // Fallback for environments that may not support pointer events: keep mouse handlers
+//     card.addEventListener("mouseenter", onPointerEnter);
+//     card.addEventListener("mouseleave", onPointerLeave);
 
-});
+// });
 
 /*=========================================
 SECTION TITLE UNDERLINE
@@ -1049,39 +1031,39 @@ ripple.remove();
 CUSTOM CURSOR
 =========================================*/
 
-const cursor=document.querySelector(".home-cursor");
+// const cursor=document.querySelector(".home-cursor");
 
-if(cursor){
+// if(cursor){
 
-window.addEventListener("mousemove",(e)=>{
+// window.addEventListener("mousemove",(e)=>{
 
-cursor.style.left=e.clientX+"px";
+// cursor.style.left=e.clientX+"px";
 
-cursor.style.top=e.clientY+"px";
+// cursor.style.top=e.clientY+"px";
 
-});
+// });
 
-document.querySelectorAll(
+// document.querySelectorAll(
 
-"a,button,.home-service-card,.home-tech-card,.home-blog-card"
+// "a,button,.home-service-card,.home-tech-card,.home-blog-card"
 
-).forEach(item=>{
+// ).forEach(item=>{
 
-item.addEventListener("mouseenter",()=>{
+// item.addEventListener("mouseenter",()=>{
 
-cursor.classList.add("active");
+// cursor.classList.add("active");
 
-});
+// });
 
-item.addEventListener("mouseleave",()=>{
+// item.addEventListener("mouseleave",()=>{
 
-cursor.classList.remove("active");
+// cursor.classList.remove("active");
 
-});
+// });
 
-});
+// });
 
-}
+// }
 
 /*=========================================
 PRELOADER

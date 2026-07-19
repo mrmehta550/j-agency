@@ -1,0 +1,2339 @@
+/*==================================================
+            ECOMMERCE HERO
+==================================================*/
+
+.ecommerce-hero-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:170px 0 120px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #eef5ff 50%,
+    #ffffff 100%);
+
+}
+
+.ecommerce-hero-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+
+    height:700px;
+
+    right:-250px;
+
+    top:-250px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+
+    rgba(37,99,235,.08),
+
+    transparent 70%
+
+    );
+
+}
+
+.ecommerce-hero-grid{
+
+    display:grid;
+
+    grid-template-columns:1.1fr .9fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+/*==================================================
+BADGE
+==================================================*/
+
+.ecommerce-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:#ffffff;
+
+    color:#2563EB;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    box-shadow:
+
+    0 15px 35px rgba(37,99,235,.08);
+
+}
+
+.ecommerce-badge i{
+
+    font-size:15px;
+
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.ecommerce-hero-content h1{
+
+    margin:28px 0;
+
+    font-size:68px;
+
+    line-height:1.1;
+
+    color:#0F172A;
+
+    font-weight:800;
+
+}
+
+.ecommerce-hero-content h1 span{
+
+    color:#2563EB;
+
+}
+
+.ecommerce-hero-content p{
+
+    max-width:650px;
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+FEATURES
+==================================================*/
+
+.ecommerce-feature-list{
+
+    margin:40px 0;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.ecommerce-feature-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#475569;
+
+    font-weight:600;
+
+}
+
+.ecommerce-feature-item i{
+
+    color:#2563EB;
+
+}
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.ecommerce-hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:45px;
+
+}
+
+.ecommerce-primary-btn{
+
+    padding:18px 36px;
+
+    border-radius:60px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.ecommerce-primary-btn:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 18px 35px rgba(37,99,235,.25);
+
+}
+
+.ecommerce-secondary-btn{
+
+    padding:18px 36px;
+
+    border-radius:60px;
+
+    background:#ffffff;
+
+    color:#2563EB;
+
+    border:1px solid #DCE8FF;
+
+    font-weight:700;
+
+    transition:.35s;
+
+}
+
+.ecommerce-secondary-btn:hover{
+
+    transform:translateY(-6px);
+
+    border-color:#2563EB;
+
+}
+
+/*==================================================
+STATS
+==================================================*/
+
+.ecommerce-stats{
+
+    margin-top:60px;
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+.ecommerce-stat-box{
+
+    flex:1;
+
+    background:#ffffff;
+
+    padding:28px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    box-shadow:
+
+    0 18px 35px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-stat-box h3{
+
+    color:#2563EB;
+
+    font-size:36px;
+
+    margin-bottom:8px;
+
+}
+
+.ecommerce-stat-box span{
+
+    color:#64748B;
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.ecommerce-hero-image{
+
+    position:relative;
+
+}
+
+.ecommerce-hero-image img{
+
+    width:100%;
+
+    border-radius:34px;
+
+    display:block;
+
+    box-shadow:
+
+    0 40px 90px rgba(15,23,42,.12);
+
+}
+
+/*==================================================
+FLOATING CARDS
+==================================================*/
+
+.ecommerce-floating-card{
+
+    position:absolute;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    width:280px;
+
+    padding:18px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+
+    0 18px 40px rgba(15,23,42,.10);
+
+}
+
+.ecommerce-floating-card i{
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:
+
+    linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-size:22px;
+
+}
+
+.ecommerce-floating-card h4{
+
+    font-size:16px;
+
+    color:#0F172A;
+
+    margin-bottom:6px;
+
+}
+
+.ecommerce-floating-card span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+}
+
+.card-one{
+
+    top:20px;
+
+    left:-40px;
+
+}
+
+.card-two{
+
+    right:-35px;
+
+    top:180px;
+
+}
+
+.card-three{
+
+    left:-20px;
+
+    bottom:25px;
+
+}
+
+/*==================================================
+TRUSTED BRANDS
+==================================================*/
+
+.ecommerce-brands-section{
+
+    padding:110px 0;
+
+    background:#ffffff;
+
+}
+
+.ecommerce-section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.ecommerce-section-title span{
+
+    color:#2563EB;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+.ecommerce-section-title h2{
+
+    margin-top:18px;
+
+    font-size:46px;
+
+    color:#0F172A;
+
+}
+
+.ecommerce-brand-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.ecommerce-brand-card{
+
+    height:130px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #E7EEF8;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 40px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-brand-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 25px 60px rgba(37,99,235,.12);
+
+}
+
+.ecommerce-brand-card img{
+
+    max-width:110px;
+
+    max-height:55px;
+
+    transition:.35s;
+
+}
+
+.ecommerce-brand-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.ecommerce-hero-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-floating-card{
+
+display:none;
+
+}
+
+.ecommerce-brand-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ecommerce-hero-section{
+
+padding:140px 0 80px;
+
+}
+
+.ecommerce-hero-content h1{
+
+font-size:46px;
+
+}
+
+.ecommerce-feature-list{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-hero-buttons{
+
+flex-direction:column;
+
+}
+
+.ecommerce-stats{
+
+flex-direction:column;
+
+}
+
+.ecommerce-brand-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-section-title h2{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.ecommerce-hero-content h1{
+
+font-size:36px;
+
+}
+
+.ecommerce-badge{
+
+font-size:12px;
+
+padding:10px 18px;
+
+}
+
+.ecommerce-primary-btn,
+
+.ecommerce-secondary-btn{
+
+width:100%;
+
+text-align:center;
+
+}
+
+}
+/*==================================================
+            SECTION HEADING
+==================================================*/
+
+.ecommerce-section-heading{
+
+    max-width:760px;
+
+    margin:0 auto 70px;
+
+    text-align:center;
+
+}
+
+.ecommerce-section-heading span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.ecommerce-section-heading h2{
+
+    margin:25px 0;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#0F172A;
+
+    font-weight:800;
+
+}
+
+.ecommerce-section-heading p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+/*==================================================
+            SERVICES
+==================================================*/
+
+.ecommerce-services-section{
+
+    padding:120px 0;
+
+    background:#F8FBFF;
+
+}
+
+.ecommerce-services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/*==================================================
+            SERVICE CARD
+==================================================*/
+
+.ecommerce-service-card{
+
+    position:relative;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #E7EEF8;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 45px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.ecommerce-service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 25px 60px rgba(37,99,235,.15);
+
+}
+
+.ecommerce-service-card:hover::before{
+
+    transform:scaleX(1);
+
+}
+
+/*==================================================
+            ICON
+==================================================*/
+
+.ecommerce-service-icon{
+
+    width:78px;
+
+    height:78px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:22px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    margin-bottom:30px;
+
+    transition:.35s;
+
+}
+
+/* No Rotation */
+
+.ecommerce-service-card:hover .ecommerce-service-icon{
+
+    transform:scale(1.06);
+
+}
+
+/*==================================================
+            CONTENT
+==================================================*/
+
+.ecommerce-service-card h3{
+
+    font-size:28px;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+}
+
+.ecommerce-service-card p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+.ecommerce-service-card ul{
+
+    list-style:none;
+
+    margin-bottom:30px;
+
+}
+
+.ecommerce-service-card ul li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#475569;
+
+    margin-bottom:14px;
+
+}
+
+.ecommerce-service-card ul li::before{
+
+    content:"✓";
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.ecommerce-service-card a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#2563EB;
+
+    font-weight:700;
+
+}
+
+.ecommerce-service-card:hover a{
+
+    gap:18px;
+
+}
+
+/*==================================================
+            WHY US
+==================================================*/
+
+.ecommerce-why-section{
+
+    padding:130px 0;
+
+    background:#ffffff;
+
+}
+
+.ecommerce-why-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+/*==================================================
+            IMAGE
+==================================================*/
+
+.ecommerce-why-image{
+
+    position:relative;
+
+}
+
+.ecommerce-why-image img{
+
+    width:100%;
+
+    border-radius:34px;
+
+    display:block;
+
+    box-shadow:
+
+    0 40px 90px rgba(15,23,42,.10);
+
+}
+
+/*==================================================
+            EXPERIENCE
+==================================================*/
+
+.ecommerce-experience-card{
+
+    position:absolute;
+
+    right:-35px;
+
+    bottom:35px;
+
+    width:180px;
+
+    padding:28px;
+
+    border-radius:28px;
+
+    text-align:center;
+
+    background:#ffffff;
+
+    box-shadow:
+
+    0 25px 60px rgba(15,23,42,.10);
+
+}
+
+.ecommerce-experience-card h2{
+
+    color:#2563EB;
+
+    font-size:46px;
+
+    margin-bottom:8px;
+
+}
+
+.ecommerce-experience-card span{
+
+    color:#64748B;
+
+}
+
+/*==================================================
+            CONTENT
+==================================================*/
+
+.ecommerce-why-content span{
+
+    display:inline-flex;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.ecommerce-why-content h2{
+
+    margin:25px 0;
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    color:#0F172A;
+
+}
+
+.ecommerce-why-content p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    margin-bottom:40px;
+
+}
+
+/*==================================================
+            BENEFITS
+==================================================*/
+
+.ecommerce-benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+}
+
+.ecommerce-benefit-card{
+
+    display:flex;
+
+    gap:18px;
+
+    padding:24px;
+
+    border-radius:24px;
+
+    background:#ffffff;
+
+    border:1px solid #E7EEF8;
+
+    transition:.35s;
+
+}
+
+.ecommerce-benefit-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 20px 45px rgba(37,99,235,.10);
+
+}
+
+.ecommerce-benefit-card i{
+
+    width:58px;
+
+    height:58px;
+
+    flex-shrink:0;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-size:22px;
+
+}
+
+.ecommerce-benefit-card h4{
+
+    color:#0F172A;
+
+    margin-bottom:8px;
+
+}
+
+.ecommerce-benefit-card p{
+
+    margin:0;
+
+    color:#64748B;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.ecommerce-services-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.ecommerce-why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-experience-card{
+
+right:20px;
+
+bottom:20px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ecommerce-services-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-benefits-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-section-heading h2{
+
+font-size:36px;
+
+}
+
+.ecommerce-why-content h2{
+
+font-size:38px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.ecommerce-service-card{
+
+padding:30px;
+
+}
+
+.ecommerce-why-content h2{
+
+font-size:30px;
+
+}
+
+.ecommerce-experience-card{
+
+position:relative;
+
+right:auto;
+
+bottom:auto;
+
+margin-top:25px;
+
+width:100%;
+
+}
+
+}
+/*==================================================
+            STORE FEATURES
+==================================================*/
+
+.ecommerce-features-section{
+
+    padding:130px 0;
+
+    background:#F8FBFF;
+
+}
+
+.ecommerce-feature-bento{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    grid-auto-rows:260px;
+
+    gap:30px;
+
+}
+
+.ecommerce-feature-large{
+
+    grid-column:span 2;
+
+}
+
+.ecommerce-feature-large,
+.ecommerce-feature-small{
+
+    position:relative;
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-feature-large:hover,
+.ecommerce-feature-small:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 30px 65px rgba(37,99,235,.12);
+
+}
+
+.ecommerce-feature-large::before,
+.ecommerce-feature-small::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:linear-gradient(
+
+    90deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+}
+
+.ecommerce-feature-icon{
+
+    width:72px;
+
+    height:72px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-size:28px;
+
+    margin-bottom:28px;
+
+    transition:.35s;
+
+}
+
+/* NO ROTATION */
+
+.ecommerce-feature-large:hover .ecommerce-feature-icon,
+.ecommerce-feature-small:hover .ecommerce-feature-icon{
+
+    transform:scale(1.05);
+
+}
+
+.ecommerce-feature-large h3,
+.ecommerce-feature-small h3{
+
+    font-size:28px;
+
+    color:#0F172A;
+
+    margin-bottom:18px;
+
+}
+
+.ecommerce-feature-small h3{
+
+    font-size:22px;
+
+}
+
+.ecommerce-feature-large p,
+.ecommerce-feature-small p{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+}
+
+/*==================================================
+            PROCESS
+==================================================*/
+
+.ecommerce-process-section{
+
+    padding:130px 0;
+
+    background:#ffffff;
+
+}
+
+.ecommerce-process-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    position:relative;
+
+}
+
+.ecommerce-process-grid::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:10%;
+
+    top:62px;
+
+    width:80%;
+
+    height:3px;
+
+    background:#E8EEF8;
+
+    z-index:0;
+
+}
+
+.ecommerce-process-card{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    transition:.35s;
+
+}
+
+.ecommerce-process-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 22px 45px rgba(37,99,235,.10);
+
+}
+
+.ecommerce-process-card span{
+
+    display:inline-flex;
+
+    width:42px;
+
+    height:42px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-weight:700;
+
+    margin-bottom:22px;
+
+}
+
+.ecommerce-process-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:0 auto 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+
+    135deg,
+
+    #2563EB,
+
+    #4F46E5
+
+    );
+
+    color:#ffffff;
+
+    font-size:30px;
+
+    transition:.35s;
+
+}
+
+.ecommerce-process-card:hover .ecommerce-process-icon{
+
+    transform:scale(1.05);
+
+}
+
+.ecommerce-process-card h3{
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+    color:#0F172A;
+
+}
+
+.ecommerce-process-card p{
+
+    color:#64748B;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+            TECHNOLOGY
+==================================================*/
+
+.ecommerce-tech-section{
+
+    padding:130px 0;
+
+    background:#F8FBFF;
+
+}
+
+.ecommerce-tech-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:28px;
+
+}
+
+.ecommerce-tech-card{
+
+    padding:35px 25px;
+
+    text-align:center;
+    justify-content: center; 
+
+    border-radius:28px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 18px 40px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-tech-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+
+    0 30px 60px rgba(37,99,235,.12);
+
+}
+
+.ecommerce-tech-card img{
+
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    display: block;
+
+
+    margin-bottom:20px;
+    
+
+    transition:.35s;
+
+}
+
+/* NO ROTATION */
+
+.ecommerce-tech-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.ecommerce-tech-card h4{
+
+    font-size:18px;
+
+    color:#0F172A;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+.ecommerce-tech-grid{
+
+grid-template-columns:repeat(4,1fr);
+
+}
+
+}
+
+@media(max-width:991px){
+
+.ecommerce-feature-bento{
+
+grid-template-columns:1fr;
+
+grid-auto-rows:auto;
+
+}
+
+.ecommerce-feature-large{
+
+grid-column:span 1;
+
+}
+
+.ecommerce-process-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.ecommerce-process-grid::before{
+
+display:none;
+
+}
+
+.ecommerce-tech-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ecommerce-tech-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.ecommerce-process-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.ecommerce-tech-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.ecommerce-feature-large,
+.ecommerce-feature-small{
+
+padding:30px;
+
+}
+
+}
+/*==================================================
+            PORTFOLIO
+==================================================*/
+
+.ecommerce-portfolio-section{
+
+    padding:130px 0;
+
+    background:#ffffff;
+
+}
+
+.ecommerce-portfolio-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:32px;
+
+}
+
+.ecommerce-portfolio-card{
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    transition:.4s;
+
+    box-shadow:
+
+    0 18px 45px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-portfolio-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+
+    0 30px 65px rgba(37,99,235,.12);
+
+}
+
+.ecommerce-portfolio-card img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.ecommerce-portfolio-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.ecommerce-portfolio-content{
+
+    padding:30px;
+
+}
+
+.ecommerce-portfolio-content span{
+
+    display:inline-block;
+
+    margin-bottom:14px;
+
+    padding:8px 18px;
+
+    border-radius:40px;
+
+    background:#EEF4FF;
+
+    color:#2563EB;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.ecommerce-portfolio-content h3{
+
+    font-size:28px;
+
+    color:#0F172A;
+
+    margin-bottom:16px;
+
+}
+
+.ecommerce-portfolio-content p{
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+
+}
+
+.ecommerce-portfolio-content a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#2563EB;
+
+    font-weight:700;
+
+}
+
+.ecommerce-portfolio-content a:hover{
+
+    gap:18px;
+
+}
+
+/*==================================================
+            PRICING
+==================================================*/
+
+.ecommerce-pricing-section{
+
+    padding:130px 0;
+
+    background:#F8FBFF;
+
+}
+
+.ecommerce-pricing-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.ecommerce-price-card{
+
+    position:relative;
+
+    padding:45px;
+
+    border-radius:32px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    transition:.35s;
+
+    box-shadow:
+
+    0 20px 45px rgba(15,23,42,.05);
+
+}
+
+.ecommerce-price-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.featured-plan{
+
+    background:linear-gradient(
+    135deg,
+    #2563EB,
+    #4F46E5);
+
+    color:#ffffff;
+
+    transform:scale(1.05);
+
+}
+
+.featured-plan h2,
+
+.featured-plan h3,
+
+.featured-plan ul,
+
+.featured-plan li{
+
+    color:#ffffff;
+
+}
+
+.popular-tag{
+
+    position:absolute;
+
+    right:30px;
+
+    top:-15px;
+
+    background:#ffffff;
+
+    color:#2563EB;
+
+    padding:10px 20px;
+
+    border-radius:40px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+}
+
+.ecommerce-price-card h3{
+
+    font-size:26px;
+
+    margin-bottom:20px;
+
+}
+
+.ecommerce-price-card h2{
+
+    font-size:52px;
+
+    margin-bottom:30px;
+
+    color:#2563EB;
+
+}
+
+.ecommerce-price-card ul{
+
+    list-style:none;
+
+    margin-bottom:35px;
+
+}
+
+.ecommerce-price-card li{
+
+    margin-bottom:16px;
+
+    color:#64748B;
+
+}
+
+.ecommerce-price-card a{
+
+    display:block;
+
+    text-align:center;
+
+    padding:18px;
+
+    border-radius:60px;
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+    font-weight:700;
+
+}
+
+.featured-plan a{
+
+    background:#ffffff;
+
+    color:#2563EB;
+
+}
+
+/*==================================================
+            TESTIMONIAL
+==================================================*/
+
+.ecommerce-testimonial-section{
+
+    padding:130px 0;
+
+    background:#ffffff;
+
+}
+
+.ecommerce-testimonial-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.ecommerce-testimonial-card{
+
+    padding:40px;
+
+    border-radius:30px;
+
+    border:1px solid #E8EEF8;
+
+    background:#ffffff;
+
+    transition:.35s;
+
+}
+
+.ecommerce-testimonial-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.stars{
+
+    color:#FFC107;
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.ecommerce-testimonial-card p{
+
+    line-height:1.9;
+
+    color:#64748B;
+
+    margin-bottom:25px;
+
+}
+
+.ecommerce-testimonial-card h4{
+
+    color:#0F172A;
+
+    margin-bottom:8px;
+
+}
+
+.ecommerce-testimonial-card span{
+
+    color:#64748B;
+
+}
+
+/*==================================================
+            FAQ
+==================================================*/
+
+.ecommerce-faq-section{
+
+    padding:130px 0;
+
+    background:#F8FBFF;
+
+}
+
+.ecommerce-faq-wrapper{
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.ecommerce-faq-wrapper details{
+
+    margin-bottom:20px;
+
+    border-radius:22px;
+
+    background:#ffffff;
+
+    border:1px solid #E8EEF8;
+
+    overflow:hidden;
+
+}
+
+.ecommerce-faq-wrapper summary{
+
+    cursor:pointer;
+
+    padding:24px 30px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+}
+
+.ecommerce-faq-wrapper p{
+
+    padding:0 30px 25px;
+
+    color:#64748B;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+            CTA
+==================================================*/
+
+.ecommerce-cta-section{
+
+    padding:130px 0;
+
+}
+
+.ecommerce-cta-box{
+
+    padding:80px;
+
+    text-align:center;
+
+    border-radius:36px;
+
+    background:linear-gradient(
+    135deg,
+    #2563EB,
+    #4F46E5);
+
+    color:#ffffff;
+
+}
+
+.ecommerce-cta-box span{
+
+    letter-spacing:1px;
+
+    font-weight:700;
+
+}
+
+.ecommerce-cta-box h2{
+
+    font-size:54px;
+
+    margin:25px 0;
+
+}
+
+.ecommerce-cta-box p{
+
+    max-width:720px;
+
+    margin:0 auto 45px;
+
+    line-height:1.9;
+
+    opacity:.92;
+
+}
+
+.ecommerce-cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:22px;
+
+}
+
+/*==================================================
+            BACK TO TOP
+==================================================*/
+
+.ecommerce-back-top{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:58px;
+
+    height:58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    color:#ffffff;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:999;
+
+}
+
+.ecommerce-back-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/*==================================================
+            PROGRESS BAR
+==================================================*/
+
+.ecommerce-progress{
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    width:0;
+
+    height:4px;
+
+    background:linear-gradient(
+    90deg,
+    #2563EB,
+    #4F46E5);
+
+    z-index:9999;
+
+}
+
+/*==================================================
+            RESPONSIVE
+==================================================*/
+
+@media(max-width:1100px){
+
+.ecommerce-portfolio-grid,
+
+.ecommerce-pricing-grid,
+
+.ecommerce-testimonial-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.featured-plan{
+
+transform:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.ecommerce-cta-box{
+
+padding:45px 30px;
+
+}
+
+.ecommerce-cta-box h2{
+
+font-size:36px;
+
+}
+
+.ecommerce-cta-buttons{
+
+flex-direction:column;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.ecommerce-price-card{
+
+padding:30px;
+
+}
+
+.ecommerce-portfolio-content h3{
+
+font-size:22px;
+
+}
+
+.ecommerce-cta-box h2{
+
+font-size:30px;
+
+}
+
+}

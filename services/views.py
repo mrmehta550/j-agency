@@ -1,16 +1,21 @@
 from django.shortcuts import render
+from casestudy.models import CaseStudy
 
 def webdev(request):
     return render(request, "services/web.html")
 
 def uiux(request):
-    return render(request, "services/uiux.html")
+    case_studies = CaseStudy.objects.filter(category="UI/UX Design").order_by("-created_at")[:3]
+    context = {"case_studies": case_studies,}
+    return render(request, "services/uiux.html",context)
 
 def ecom(request):
     return render(request, "services/ecom.html")
 
 def seo(request):
-    return render(request, "services/seo.html")
+    case_studies = CaseStudy.objects.filter(category="SEO").order_by("-created_at")[:3]
+    context = {"seo_case_studies": case_studies,}
+    return render(request, "services/seo.html",context)
 
 def ai(request):
     return render(request, "services/aisol.html")

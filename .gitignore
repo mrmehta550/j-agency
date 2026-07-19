@@ -1,0 +1,58 @@
+# ============================================================
+# M Agency — .gitignore
+# ============================================================
+
+# ── Environment & Secrets ────────────────────────────────────
+.env
+.env.*
+!.env.example          # .env.example IS committed (has no real values)
+local_settings.py
+
+# ── Python bytecode ──────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual Environment ──────────────────────────────────────
+venv/
+env/
+ENV/
+.venv/
+
+# ── Django ───────────────────────────────────────────────────
+*.log
+db.sqlite3
+media/
+staticfiles/
+static_collected/
+
+# ── OS files ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ─────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ── Testing & Coverage ───────────────────────────────────────
+htmlcov/
+.coverage
+.coverage.*
+.cache
+.pytest_cache/
+
+# ── Build artifacts ──────────────────────────────────────────
+dist/
+build/
+*.egg-info/
+
+# ── Node (if ever used) ──────────────────────────────────────
+node_modules/
+npm-debug.log*

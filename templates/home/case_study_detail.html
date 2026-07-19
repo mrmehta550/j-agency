@@ -1,0 +1,1254 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!--=========================================
+        CASE STUDY HERO
+==========================================-->
+
+<section class="case-study-hero">
+
+    <div class="container">
+
+        <!--=================================
+                BREADCRUMB
+        ==================================-->
+
+        <div class="case-study-breadcrumb">
+
+            <a href="{% url 'home' %}">
+
+                Home
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-angle-right"></i>
+
+            </span>
+
+            <a href="{% url 'case_study' %}">
+
+                Case Studies
+
+            </a>
+
+            <span>
+
+                <i class="fa-solid fa-angle-right"></i>
+
+            </span>
+
+            <span class="case-current-page">
+
+                {{ case_study.title }}
+
+            </span>
+
+        </div>
+
+        <!--=================================
+                HERO CONTENT
+        ==================================-->
+
+        <div class="case-study-hero-content">
+
+            <div class="case-study-badge">
+
+                <i class="fa-solid fa-layer-group"></i>
+
+                {{ case_study.category }}
+
+            </div>
+
+            <h1>
+
+                {{ case_study.title }}
+
+            </h1>
+
+            <p>
+
+                {{ case_study.short_description }}
+
+            </p>
+
+            <!--==============================
+                    META INFO
+            ===============================-->
+
+            <div class="case-study-meta">
+
+                <div class="case-meta-box">
+
+                    <i class="fa-regular fa-calendar"></i>
+
+                    <div>
+
+                        <small>
+
+                            Published
+
+                        </small>
+
+                        <span>
+
+                            {{ case_study.created_at|date:"F d, Y" }}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="case-meta-box">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <div>
+
+                        <small>
+
+                            Reading Time
+
+                        </small>
+
+                        <span>
+
+                            5 Min Read
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="case-meta-box">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <div>
+
+                        <small>
+
+                            Category
+
+                        </small>
+
+                        <span>
+
+                            {{ case_study.category }}
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        FEATURE IMAGE
+==========================================-->
+
+<section class="case-study-banner-section">
+
+    <div class="container">
+
+        <div class="case-study-banner">
+
+            {% if case_study.image %}
+
+            <img
+
+                src="{{ case_study.image.url }}"
+
+                alt="{{ case_study.title }}"
+
+            >
+
+            {% else %}
+
+            <img
+
+                src="{% static 'images/case-study/default-case-study.webp' %}"
+
+                alt="{{ case_study.title }}"
+
+            >
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        MAIN CONTENT
+==========================================-->
+
+<section class="case-study-content-section">
+
+    <div class="container">
+
+        <div class="case-study-wrapper">
+
+            <!--=================================
+                    LEFT CONTENT
+            ==================================-->
+
+            <div class="case-study-left">
+                                <!--=========================================
+                        PROJECT OVERVIEW
+                ==========================================-->
+
+                <article class="case-study-article">
+
+                    <div class="case-section-title">
+
+                        <span>
+
+                            Project Overview
+
+                        </span>
+
+                        <h2>
+
+                            About This Design
+
+                        </h2>
+
+                    </div>
+
+                    <p>
+
+                        {{ case_study.description|safe }}
+
+                    </p>
+
+                </article>
+
+                <!--=========================================
+                        DESIGN GOALS
+                ==========================================-->
+
+                <section class="case-goal-section">
+
+                    <div class="case-section-title">
+
+                        <span>
+
+                            Design Goals
+
+                        </span>
+
+                        <h2>
+
+                            What We Wanted To Achieve
+
+                        </h2>
+
+                    </div>
+
+                    <div class="case-goal-grid">
+
+                        <div class="case-goal-card">
+
+                            <div class="case-goal-icon">
+
+                                <i class="fa-solid fa-layer-group"></i>
+
+                            </div>
+
+                            <h4>
+
+                                Clean Interface
+
+                            </h4>
+
+                            <p>
+
+                                Create a modern interface with
+                                proper spacing, hierarchy and
+                                minimal distractions.
+
+                            </p>
+
+                        </div>
+
+                        <div class="case-goal-card">
+
+                            <div class="case-goal-icon">
+
+                                <i class="fa-solid fa-mobile-screen"></i>
+
+                            </div>
+
+                            <h4>
+
+                                Responsive Design
+
+                            </h4>
+
+                            <p>
+
+                                Ensure every screen works
+                                perfectly across desktop,
+                                tablet and mobile.
+
+                            </p>
+
+                        </div>
+
+                        <div class="case-goal-card">
+
+                            <div class="case-goal-icon">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                            </div>
+
+                            <h4>
+
+                                Better Experience
+
+                            </h4>
+
+                            <p>
+
+                                Improve usability through
+                                intuitive navigation and
+                                user-friendly interactions.
+
+                            </p>
+
+                        </div>
+
+                        <div class="case-goal-card">
+
+                            <div class="case-goal-icon">
+
+                                <i class="fa-solid fa-shield-halved"></i>
+
+                            </div>
+
+                            <h4>
+
+                                Professional Look
+
+                            </h4>
+
+                            <p>
+
+                                Use premium UI components,
+                                consistent typography and
+                                modern color palettes.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+            <!--=========================================
+                    SIDEBAR
+            ==========================================-->
+
+            <aside class="case-study-sidebar">
+
+                <!--=============================
+                        QUICK INFO
+                ==============================-->
+
+                <div class="case-sidebar-widget">
+
+                    <h3>
+
+                        Quick Information
+
+                    </h3>
+
+                    <ul>
+
+                        <li>
+
+                            <span>
+
+                                Category
+
+                            </span>
+
+                            <strong>
+
+                                {{ case_study.category }}
+
+                            </strong>
+
+                        </li>
+
+                        <li>
+
+                            <span>
+
+                                Published
+
+                            </span>
+
+                            <strong>
+
+                                {{ case_study.created_at|date:"M d, Y" }}
+
+                            </strong>
+
+                        </li>
+
+                        <li>
+
+                            <span>
+
+                                Reading Time
+
+                            </span>
+
+                            <strong>
+
+                                5 Minutes
+
+                            </strong>
+
+                        </li>
+
+                        <li>
+
+                            <span>
+
+                                Type
+
+                            </span>
+
+                            <strong>
+
+                                Design Showcase
+
+                            </strong>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!--=============================
+                        SHARE
+                ==============================-->
+
+                <div class="case-sidebar-widget">
+
+                    <h3>
+
+                        Share This Article
+
+                    </h3>
+
+                    <div class="case-share-icons">
+
+                        <a href="#">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-x-twitter"></i>
+
+                        </a>
+
+                        <a href="#">
+
+                            <i class="fab fa-whatsapp"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!--=============================
+                        CONTACT BOX
+                ==============================-->
+
+                <div class="case-contact-widget">
+
+                    <span>
+
+                        Need A Similar Design?
+
+                    </span>
+
+                    <h3>
+
+                        Let's Build Your Next Digital Product
+
+                    </h3>
+
+                    <p>
+
+                        From websites to dashboards and
+                        mobile applications, Magency creates
+                        modern digital experiences for
+                        businesses of every size.
+
+                    </p>
+
+                    <a
+
+                        href="{% url 'booking' %}"
+
+                        class="case-contact-btn"
+
+                    >
+
+                        Book Free Consultation
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        DESIGN HIGHLIGHTS
+==========================================-->
+
+<section class="case-highlight-section">
+
+    <div class="container">
+
+        <div class="case-section-heading">
+
+            <span>
+
+                Design Highlights
+
+            </span>
+
+            <h2>
+
+                Key Design Decisions
+
+            </h2>
+
+            <p>
+
+                Every design decision was made to improve
+                usability, accessibility and create a
+                modern digital experience.
+
+            </p>
+
+        </div>
+
+        <div class="case-highlight-grid">
+
+            <!--===========================-->
+
+            <div class="case-highlight-card">
+
+                <div class="case-highlight-icon">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                </div>
+
+                <h3>
+
+                    Modern Layout
+
+                </h3>
+
+                <p>
+
+                    Clean spacing, visual hierarchy
+                    and organized sections improve
+                    readability.
+
+                </p>
+
+            </div>
+
+            <!--===========================-->
+
+            <div class="case-highlight-card">
+
+                <div class="case-highlight-icon">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+
+                <h3>
+
+                    Responsive Design
+
+                </h3>
+
+                <p>
+
+                    Optimized for desktop,
+                    tablet and mobile devices.
+
+                </p>
+
+            </div>
+
+            <!--===========================-->
+
+            <div class="case-highlight-card">
+
+                <div class="case-highlight-icon">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                </div>
+
+                <h3>
+
+                    Premium UI
+
+                </h3>
+
+                <p>
+
+                    Soft colors, rounded corners,
+                    premium shadows and clean cards.
+
+                </p>
+
+            </div>
+
+            <!--===========================-->
+
+            <div class="case-highlight-card">
+
+                <div class="case-highlight-icon">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                </div>
+
+                <h3>
+
+                    Better Performance
+
+                </h3>
+
+                <p>
+
+                    Lightweight design
+                    focused on speed and
+                    user experience.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        TOOLS & TECHNOLOGIES
+==========================================-->
+
+<section class="case-tools-section">
+
+    <div class="container">
+
+        <div class="case-section-heading">
+
+            <span>
+
+                Tools Used
+
+            </span>
+
+            <h2>
+
+                Design & Development Tools
+
+            </h2>
+
+        </div>
+
+        <div class="case-tools-grid">
+
+            <div class="case-tool-card">
+
+                <i class="fa-brands fa-figma"></i>
+
+                <h4>
+
+                    Figma
+
+                </h4>
+
+            </div>
+
+            <div class="case-tool-card">
+
+                <i class="fa-solid fa-pen-ruler"></i>
+
+                <h4>
+
+                    Adobe XD
+
+                </h4>
+
+            </div>
+
+            <div class="case-tool-card">
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h4>
+
+                    HTML5
+
+                </h4>
+
+            </div>
+
+            <div class="case-tool-card">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h4>
+
+                    CSS3
+
+                </h4>
+
+            </div>
+
+            <div class="case-tool-card">
+
+                <i class="fa-brands fa-js"></i>
+
+                <h4>
+
+                    JavaScript
+
+                </h4>
+
+            </div>
+
+            <div class="case-tool-card">
+
+                <i class="fa-brands fa-bootstrap"></i>
+
+                <h4>
+
+                    Bootstrap
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        KEY FEATURES
+==========================================-->
+
+<section class="case-feature-section">
+
+    <div class="container">
+
+        <div class="case-section-heading">
+
+            <span>
+
+                Features
+
+            </span>
+
+            <h2>
+
+                What Makes This Design Better
+
+            </h2>
+
+        </div>
+
+        <div class="case-feature-grid">
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        Modern Dashboard
+
+                    </h4>
+
+                    <p>
+
+                        Clean cards, organized layout
+                        and minimal distractions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        Responsive Interface
+
+                    </h4>
+
+                    <p>
+
+                        Designed to work beautifully
+                        on every screen size.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        User Friendly Navigation
+
+                    </h4>
+
+                    <p>
+
+                        Easy navigation with
+                        better user flow.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        Scalable Components
+
+                    </h4>
+
+                    <p>
+
+                        Reusable design system
+                        for future expansion.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        Premium Visual Style
+
+                    </h4>
+
+                    <p>
+
+                        Elegant typography,
+                        soft gradients and
+                        modern UI elements.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="case-feature-card">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                <div>
+
+                    <h4>
+
+                        Accessibility
+
+                    </h4>
+
+                    <p>
+
+                        High contrast,
+                        readable typography
+                        and comfortable spacing.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        CONCLUSION
+==========================================-->
+
+<section class="case-conclusion-section">
+
+    <div class="container">
+
+        <div class="case-conclusion-content">
+
+            <span class="case-section-label">
+
+                Final Thoughts
+
+            </span>
+
+            <h2>
+
+                Conclusion
+
+            </h2>
+
+            <p>
+
+                This design showcases how thoughtful planning,
+                modern UI principles and a user-centered
+                approach can create an engaging digital
+                experience. Every screen was designed with
+                simplicity, accessibility and scalability in
+                mind, ensuring a seamless experience across
+                all devices.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        RELATED CASE STUDIES
+==========================================-->
+
+<section class="case-related-section">
+
+    <div class="container">
+
+        <div class="case-section-heading">
+
+            <span>
+
+                Continue Reading
+
+            </span>
+
+            <h2>
+
+                Related Case Studies
+
+            </h2>
+
+        </div>
+
+        <div class="case-related-grid">
+
+            {% for item in related %}
+
+            <article class="case-related-card">
+
+                <div class="case-related-image">
+
+                    {% if item.image %}
+
+                    <img
+
+                        src="{{ item.image.url }}"
+
+                        alt="{{ item.title }}"
+
+                    >
+
+                    {% else %}
+
+                    <img
+
+                        src="{% static 'images/case-study/default-case-study.webp' %}"
+
+                        alt="{{ item.title }}"
+
+                    >
+
+                    {% endif %}
+
+                </div>
+
+                <div class="case-related-content">
+
+                    <span>
+
+                        {{ item.category }}
+
+                    </span>
+
+                    <h3>
+
+                        {{ item.title }}
+
+                    </h3>
+
+                    <p>
+
+                        {{ item.short_description|truncatewords:18 }}
+
+                    </p>
+
+                    <a
+
+                        href="{% url 'case_study_detail' item.slug %}"
+
+                        class="case-read-btn"
+
+                    >
+
+                        Read Case Study
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            {% empty %}
+
+            <div class="case-empty">
+
+                <p>
+
+                    No related case studies available.
+
+                </p>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        CALL TO ACTION
+==========================================-->
+
+<section class="case-cta-section">
+
+    <div class="container">
+
+        <div class="case-cta-box">
+
+            <span>
+
+                Ready To Start?
+
+            </span>
+
+            <h2>
+
+                Let's Build Your Next
+                Digital Experience
+
+            </h2>
+
+            <p>
+
+                Whether you need a modern website,
+                mobile application or UI/UX design,
+                Magency is here to help transform
+                your ideas into impactful digital
+                products.
+
+            </p>
+
+            <div class="case-cta-buttons">
+
+                <a
+
+                    href="{% url 'booking' %}"
+
+                    class="case-primary-btn"
+
+                >
+
+                    Book Free Consultation
+
+                </a>
+
+                <a
+
+                    href="{% url 'contact' %}"
+
+                    class="case-secondary-btn"
+
+                >
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        NEWSLETTER
+==========================================-->
+
+<section class="case-newsletter-section">
+
+    <div class="container">
+
+        <div class="case-newsletter-wrapper">
+
+            <span>
+
+                JOIN OUR COMMUNITY
+
+            </span>
+
+            <h2>
+
+                Never Miss Our Latest
+                Case Studies
+
+            </h2>
+
+            <p>
+
+                Subscribe to receive the latest
+                UI/UX design insights, web
+                development tutorials and digital
+                strategy articles directly in your inbox.
+
+            </p>
+
+            <form
+
+                method="POST"
+
+                action="#"
+
+                class="case-newsletter-form"
+
+            >
+
+                {% csrf_token %}
+
+                <input
+
+                    type="email"
+
+                    name="email"
+
+                    placeholder="Enter your email address"
+
+                    required
+
+                >
+
+                <button type="submit">
+
+                    Subscribe
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

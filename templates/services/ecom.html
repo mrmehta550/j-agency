@@ -1,0 +1,1774 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!--=========================================
+        ECOMMERCE HERO
+==========================================-->
+
+<section class="ecommerce-hero-section">
+
+    <div class="container">
+
+        <div class="ecommerce-hero-grid">
+
+            <!--=================================
+                    LEFT CONTENT
+            =================================-->
+
+            <div class="ecommerce-hero-content">
+
+                <span class="ecommerce-badge">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    E-Commerce Development
+
+                </span>
+
+                <h1>
+
+                    Build Online Stores That
+
+                    <span>Sell More.</span>
+
+                </h1>
+
+                <p>
+
+                    We design and develop modern Shopify,
+                    WooCommerce and Custom eCommerce
+                    websites that are fast, secure,
+                    scalable and optimized for higher
+                    conversions.
+
+                </p>
+
+                <!-- Features -->
+
+                <div class="ecommerce-feature-list">
+
+                    <div class="ecommerce-feature-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Secure Payment Gateway
+
+                    </div>
+
+                    <div class="ecommerce-feature-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Mobile Responsive Store
+
+                    </div>
+
+                    <div class="ecommerce-feature-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        SEO Optimized
+
+                    </div>
+
+                    <div class="ecommerce-feature-item">
+
+                        <i class="fa-solid fa-circle-check"></i>
+
+                        Lightning Fast Performance
+
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="ecommerce-hero-buttons">
+
+                    <a href="{% url 'contact' %}"
+
+                        class="ecommerce-primary-btn">
+
+                        Start Your Project
+
+                    </a>
+
+                    <a href="#portfolio"
+
+                        class="ecommerce-secondary-btn">
+
+                        View Portfolio
+
+                    </a>
+
+                </div>
+
+                <!-- Stats -->
+
+                <div class="ecommerce-stats">
+
+                    <div class="ecommerce-stat-box">
+
+                        <h3>
+
+                            250+
+
+                        </h3>
+
+                        <span>
+
+                            Stores Built
+
+                        </span>
+
+                    </div>
+
+                    <div class="ecommerce-stat-box">
+
+                        <h3>
+
+                            98%
+
+                        </h3>
+
+                        <span>
+
+                            Client Satisfaction
+
+                        </span>
+
+                    </div>
+
+                    <div class="ecommerce-stat-box">
+
+                        <h3>
+
+                            24/7
+
+                        </h3>
+
+                        <span>
+
+                            Support
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--=================================
+                    RIGHT IMAGE
+            =================================-->
+
+            <div class="ecommerce-hero-image">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/ecommerce-hero.jpg' %}"
+
+                    alt="Ecommerce Development">
+
+                <!-- Floating Card -->
+
+                <div class="ecommerce-floating-card card-one">
+
+                    <i class="fa-brands fa-shopify"></i>
+
+                    <div>
+
+                        <h4>
+
+                            Shopify
+
+                        </h4>
+
+                        <span>
+
+                            Premium Store
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="ecommerce-floating-card card-two">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <div>
+
+                        <h4>
+
+                            Secure Payment
+
+                        </h4>
+
+                        <span>
+
+                            Stripe • Razorpay
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="ecommerce-floating-card card-three">
+
+                    <i class="fa-solid fa-chart-line"></i>
+
+                    <div>
+
+                        <h4>
+
+                            High Conversion
+
+                        </h4>
+
+                        <span>
+
+                            Optimized Checkout
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        TRUSTED BRANDS
+==========================================-->
+
+<section class="ecommerce-brands-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-title">
+
+            <span>
+
+                Trusted Technologies
+
+            </span>
+
+            <h2>
+
+                Platforms We Work With
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-brand-grid">
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/shopify.svg' %}"
+
+                    alt="Shopify">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/woocommerce.svg' %}"
+
+                    alt="WooCommerce">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/stripe.svg' %}"
+
+                    alt="Stripe">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/razorpay.svg' %}"
+
+                    alt="Razorpay">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/paypal.svg' %}"
+
+                    alt="PayPal">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/meta.svg' %}"
+
+                    alt="Meta">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/google.svg' %}"
+
+                    alt="Google">
+
+            </div>
+
+            <div class="ecommerce-brand-card">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/aws.svg' %}"
+
+                    alt="AWS">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        OUR ECOMMERCE SERVICES
+==========================================-->
+
+<section class="ecommerce-services-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                WHAT WE OFFER
+
+            </span>
+
+            <h2>
+
+                Complete eCommerce Development Solutions
+
+            </h2>
+
+            <p>
+
+                We build modern online stores that deliver exceptional shopping
+                experiences and maximize your business growth.
+
+            </p>
+
+        </div>
+
+        <div class="ecommerce-services-grid">
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-brands fa-shopify"></i>
+
+                </div>
+
+                <h3>
+
+                    Shopify Development
+
+                </h3>
+
+                <p>
+
+                    Beautiful Shopify stores with premium themes,
+                    custom features and optimized checkout.
+
+                </p>
+
+                <ul>
+
+                    <li>Custom Theme</li>
+
+                    <li>Payment Integration</li>
+
+                    <li>SEO Ready</li>
+
+                    <li>Speed Optimized</li>
+
+                </ul>
+
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-brands fa-wordpress"></i>
+
+                </div>
+
+                <h3>
+
+                    WooCommerce
+
+                </h3>
+
+                <p>
+
+                    Powerful WooCommerce stores with complete
+                    inventory and order management.
+
+                </p>
+
+                <ul>
+
+                    <li>WordPress CMS</li>
+
+                    <li>Secure Checkout</li>
+
+                    <li>Coupons</li>
+
+                    <li>Analytics</li>
+
+                </ul>
+
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>
+
+                    Custom eCommerce
+
+                </h3>
+
+                <p>
+
+                    Fully customized eCommerce platforms built
+                    using Django and React.
+
+                </p>
+
+                <ul>
+
+                    <li>Custom Dashboard</li>
+
+                    <li>Inventory</li>
+
+                    <li>Orders</li>
+
+                    <li>Reports</li>
+
+                </ul>
+
+                
+            </article>
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-solid fa-store"></i>
+
+                </div>
+
+                <h3>
+
+                    Multi Vendor Marketplace
+
+                </h3>
+
+                <p>
+
+                    Marketplace solutions where multiple sellers
+                    manage products independently.
+
+                </p>
+
+                <ul>
+
+                    <li>Vendor Dashboard</li>
+
+                    <li>Commission</li>
+
+                    <li>Withdrawals</li>
+
+                    <li>Reports</li>
+
+                </ul>
+
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <h3>
+
+                    Payment Integration
+
+                </h3>
+
+                <p>
+
+                    Integrate Stripe, Razorpay, PayPal and
+                    international payment gateways.
+
+                </p>
+
+                <ul>
+
+                    <li>Stripe</li>
+
+                    <li>Razorpay</li>
+
+                    <li>PayPal</li>
+
+                    <li>UPI</li>
+
+                </ul>
+
+                
+
+            </article>
+
+            <!-- Card -->
+
+            <article class="ecommerce-service-card">
+
+                <div class="ecommerce-service-icon">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                </div>
+
+                <h3>
+
+                    Maintenance & Support
+
+                </h3>
+
+                <p>
+
+                    Continuous updates, backups,
+                    monitoring and technical support.
+
+                </p>
+
+                <ul>
+
+                    <li>Security</li>
+
+                    <li>Backup</li>
+
+                    <li>Monitoring</li>
+
+                    <li>Updates</li>
+
+                </ul>
+
+                
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        WHY CHOOSE US
+==========================================-->
+
+<section class="ecommerce-why-section">
+
+    <div class="container">
+
+        <div class="ecommerce-why-grid">
+
+            <!-- Left -->
+
+            <div class="ecommerce-why-image">
+
+                <img
+
+                    src="{% static 'images/services/ecommerce/why-us.jpg' %}"
+
+                    alt="Why Choose Us">
+
+                <div class="ecommerce-experience-card">
+
+                    <h2>
+
+                        5+
+
+                    </h2>
+
+                    <span>
+
+                        Years Experience
+
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Right -->
+
+            <div class="ecommerce-why-content">
+
+                <span>
+
+                    WHY M AGENCY
+
+                </span>
+
+                <h2>
+
+                    Why Businesses Choose Our eCommerce Solutions
+
+                </h2>
+
+                <p>
+
+                    We create high-performance online stores that
+                    deliver seamless shopping experiences and drive
+                    long-term business growth.
+
+                </p>
+
+                <div class="ecommerce-benefits-grid">
+
+                    <div class="ecommerce-benefit-card">
+
+                        <i class="fa-solid fa-bolt"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Lightning Fast
+
+                            </h4>
+
+                            <p>
+
+                                Optimized performance.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ecommerce-benefit-card">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Secure Checkout
+
+                            </h4>
+
+                            <p>
+
+                                SSL & secure payments.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ecommerce-benefit-card">
+
+                        <i class="fa-solid fa-mobile-screen"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Mobile Ready
+
+                            </h4>
+
+                            <p>
+
+                                Responsive shopping.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="ecommerce-benefit-card">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <div>
+
+                            <h4>
+
+                                Higher Conversions
+
+                            </h4>
+
+                            <p>
+
+                                Conversion focused UI.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!--=========================================
+        STORE FEATURES
+==========================================-->
+
+<section class="ecommerce-features-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                STORE FEATURES
+
+            </span>
+
+            <h2>
+
+                Everything Your Online Store Needs
+
+            </h2>
+
+            <p>
+
+                Powerful features designed to improve customer
+                experience and increase your online sales.
+
+            </p>
+
+        </div>
+
+        <div class="ecommerce-feature-bento">
+
+            <div class="ecommerce-feature-large">
+
+                <div class="ecommerce-feature-icon">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                </div>
+
+                <h3>
+
+                    Inventory Management
+
+                </h3>
+
+                <p>
+
+                    Manage unlimited products, stock levels,
+                    product variations and warehouse inventory
+                    from one powerful dashboard.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-feature-small">
+
+                <div class="ecommerce-feature-icon">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                </div>
+
+                <h3>
+
+                    Secure Payments
+
+                </h3>
+
+                <p>
+
+                    Stripe, Razorpay,
+                    PayPal & UPI.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-feature-small">
+
+                <div class="ecommerce-feature-icon">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+                <h3>
+
+                    Shipping
+
+                </h3>
+
+                <p>
+
+                    Real-time shipping,
+                    tracking & logistics.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-feature-small">
+
+                <div class="ecommerce-feature-icon">
+
+                    <i class="fa-solid fa-chart-simple"></i>
+
+                </div>
+
+                <h3>
+
+                    Analytics
+
+                </h3>
+
+                <p>
+
+                    Sales reports,
+                    revenue & customer insights.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-feature-large">
+
+                <div class="ecommerce-feature-icon">
+
+                    <i class="fa-solid fa-user-shield"></i>
+
+                </div>
+
+                <h3>
+
+                    Admin Dashboard
+
+                </h3>
+
+                <p>
+
+                    Powerful admin panel to manage
+                    products, customers, orders,
+                    coupons and reports.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        DEVELOPMENT PROCESS
+==========================================-->
+
+<section class="ecommerce-process-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                OUR PROCESS
+
+            </span>
+
+            <h2>
+
+                Simple & Transparent Workflow
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-process-grid">
+
+            <div class="ecommerce-process-card">
+
+                <span>
+
+                    01
+
+                </span>
+
+                <div class="ecommerce-process-icon">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                </div>
+
+                <h3>
+
+                    Discovery
+
+                </h3>
+
+                <p>
+
+                    Understand your goals,
+                    products and audience.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-process-card">
+
+                <span>
+
+                    02
+
+                </span>
+
+                <div class="ecommerce-process-icon">
+
+                    <i class="fa-solid fa-pen-ruler"></i>
+
+                </div>
+
+                <h3>
+
+                    UI / UX Design
+
+                </h3>
+
+                <p>
+
+                    Wireframes, branding
+                    and user journey.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-process-card">
+
+                <span>
+
+                    03
+
+                </span>
+
+                <div class="ecommerce-process-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+                <h3>
+
+                    Development
+
+                </h3>
+
+                <p>
+
+                    Store development,
+                    integrations & testing.
+
+                </p>
+
+            </div>
+
+            <div class="ecommerce-process-card">
+
+                <span>
+
+                    04
+
+                </span>
+
+                <div class="ecommerce-process-icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <h3>
+
+                    Launch
+
+                </h3>
+
+                <p>
+
+                    Deployment,
+                    optimization and support.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        TECHNOLOGY STACK
+==========================================-->
+
+<section class="ecommerce-tech-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                TECHNOLOGIES
+
+            </span>
+
+            <h2>
+
+                Modern Technologies We Use
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-tech-grid">
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/html.svg' %}" alt="HTML">
+
+                <h4>
+
+                    HTML5
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/css.svg' %}" alt="CSS">
+
+                <h4>
+
+                    CSS3
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/javascript.svg' %}" alt="JavaScript">
+
+                <h4>
+
+                    JavaScript
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/react.svg' %}" alt="React">
+
+                <h4>
+
+                    React
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/django.svg' %}" alt="Django">
+
+                <h4>
+
+                    Django
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/python.svg' %}" alt="Python">
+
+                <h4>
+
+                    Python
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/shopify.svg' %}" alt="Shopify">
+
+                <h4>
+
+                    Shopify
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/woocommerce.svg' %}" alt="WooCommerce">
+
+                <h4>
+
+                    WooCommerce
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/stripe.svg' %}" alt="Stripe">
+
+                <h4>
+
+                    Stripe
+
+                </h4>
+
+            </div>
+
+            <div class="ecommerce-tech-card">
+
+                <img src="{% static 'images/services/ecommerce/razorpay.svg' %}" alt="Razorpay">
+
+                <h4>
+
+                    Razorpay
+
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PORTFOLIO
+==========================================-->
+
+<section class="ecommerce-portfolio-section" id="portfolio">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                OUR WORK
+
+            </span>
+
+            <h2>
+
+                Recent eCommerce Projects
+
+            </h2>
+
+            <p>
+
+                Explore some of the online stores we've built for businesses across different industries.
+
+            </p>
+
+        </div>
+
+        <div class="ecommerce-portfolio-grid">
+
+            <article class="ecommerce-portfolio-card">
+
+                <img src="{% static 'images/services/ecommerce/Fashion1.jpg' %}" alt="Fashion Store">
+
+                <div class="ecommerce-portfolio-content">
+
+                    <span>Fashion Store</span>
+
+                    <h3>
+
+                        Luxury Clothing Brand
+
+                    </h3>
+
+                    <p>
+
+                        Shopify • Payment Gateway • SEO
+
+                    </p>
+
+                    
+
+                </div>
+
+            </article>
+
+            <article class="ecommerce-portfolio-card">
+
+                <img src="{% static 'images/services/ecommerce/Electronics.jpg' %}" alt="Electronics">
+
+                <div class="ecommerce-portfolio-content">
+
+                    <span>Electronics</span>
+
+                    <h3>
+
+                        Gadget Marketplace
+
+                    </h3>
+
+                    <p>
+
+                        WooCommerce • Inventory • Analytics
+
+                    </p>
+
+                    
+                </div>
+
+            </article>
+
+            <article class="ecommerce-portfolio-card">
+
+                <img src="{% static 'images/services/ecommerce/Furniture.jpg' %}" alt="Furniture">
+
+                <div class="ecommerce-portfolio-content">
+
+                    <span>Furniture</span>
+
+                    <h3>
+
+                        Premium Furniture Store
+
+                    </h3>
+
+                    <p>
+
+                        Django • React • Razorpay
+
+                    </p>
+
+                    
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        PRICING
+==========================================-->
+
+<section class="ecommerce-pricing-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                PRICING
+
+            </span>
+
+            <h2>
+
+                Flexible Plans
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-pricing-grid">
+
+            <div class="ecommerce-price-card">
+
+                <h3>
+
+                    Starter
+
+                </h3>
+
+                <h2>
+
+                    ₹29,999
+
+                </h2>
+
+                <ul>
+
+                    <li>✔ 10 Products</li>
+
+                    <li>✔ Payment Gateway</li>
+
+                    <li>✔ Responsive Design</li>
+
+                    <li>✔ Basic SEO</li>
+
+                </ul>
+
+                <a href="{% url 'contact' %}">
+
+                    Get Started
+
+                </a>
+
+            </div>
+
+            <div class="ecommerce-price-card">
+
+                <span class="popular-tag" style="margin-top: 5%;">
+
+                    Most Popular
+
+                </span>
+
+                <h3>
+
+                    Business
+
+                </h3>
+
+                <h2>
+
+                    ₹59,999
+
+                </h2>
+
+                <ul>
+
+                    <li>✔ Unlimited Products</li>
+
+                    <li>✔ Custom Design</li>
+
+                    <li>✔ Razorpay + Stripe</li>
+
+                    <li>✔ Analytics</li>
+
+                    <li>✔ SEO</li>
+
+                    <li>✔ Admin Dashboard</li>
+
+                </ul>
+
+                <a href="{% url 'contact' %}">
+
+                    Choose Plan
+
+                </a>
+
+            </div>
+
+            <div class="ecommerce-price-card">
+
+                <h3>
+
+                    Enterprise
+
+                </h3>
+
+                <h2>
+
+                    Custom
+
+                </h2>
+
+                <ul>
+
+                    <li>✔ Multi Vendor</li>
+
+                    <li>✔ ERP Integration</li>
+
+                    <li>✔ Mobile App</li>
+
+                    <li>✔ AI Features</li>
+
+                </ul>
+
+                <a href="{% url 'contact' %}">
+
+                    Contact Us
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        TESTIMONIALS
+==========================================-->
+
+<section class="ecommerce-testimonial-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                CLIENT REVIEWS
+
+            </span>
+
+            <h2>
+
+                What Clients Say
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-testimonial-grid">
+
+            <div class="ecommerce-testimonial-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    M Agency built an amazing Shopify store. Sales increased dramatically after launch.
+
+                </p>
+
+                <h4>
+
+                    Rahul Sharma
+
+                </h4>
+
+                <span>
+
+                    Fashion Brand
+
+                </span>
+
+            </div>
+
+            <div class="ecommerce-testimonial-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    Professional team with outstanding support. Highly recommended.
+
+                </p>
+
+                <h4>
+
+                    Aman Verma
+
+                </h4>
+
+                <span>
+
+                    Electronics Store
+
+                </span>
+
+            </div>
+
+            <div class="ecommerce-testimonial-card">
+
+                <div class="stars">
+
+                    ★★★★★
+
+                </div>
+
+                <p>
+
+                    Beautiful UI, fast loading website and secure payment integration.
+
+                </p>
+
+                <h4>
+
+                    Priya Singh
+
+                </h4>
+
+                <span>
+
+                    Beauty Store
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        FAQ
+==========================================-->
+
+<section class="ecommerce-faq-section">
+
+    <div class="container">
+
+        <div class="ecommerce-section-heading">
+
+            <span>
+
+                FAQ
+
+            </span>
+
+            <h2>
+
+                Frequently Asked Questions
+
+            </h2>
+
+        </div>
+
+        <div class="ecommerce-faq-wrapper">
+
+            <details>
+
+                <summary>
+
+                    How long does it take to build an online store?
+
+                </summary>
+
+                <p>
+
+                    Usually 2–6 weeks depending on the project size.
+
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+
+                    Which payment gateways do you support?
+
+                </summary>
+
+                <p>
+
+                    Stripe, Razorpay, PayPal, UPI and many more.
+
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+
+                    Will my website be mobile responsive?
+
+                </summary>
+
+                <p>
+
+                    Yes. Every website is fully responsive.
+
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+
+                    Do you provide maintenance?
+
+                </summary>
+
+                <p>
+
+                    Yes. We offer monthly support and maintenance plans.
+
+                </p>
+
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!--=========================================
+        FINAL CTA
+==========================================-->
+
+<section class="ecommerce-cta-section">
+
+    <div class="container">
+
+        <div class="ecommerce-cta-box">
+
+            <span>
+
+                LET'S BUILD YOUR STORE
+
+            </span>
+
+            <h2>
+
+                Ready To Launch Your eCommerce Business?
+
+            </h2>
+
+            <p>
+
+                Start selling online with a modern, secure and high-converting eCommerce website built by M Agency.
+
+            </p>
+
+            <div class="ecommerce-cta-buttons" >
+
+                <a href="{% url 'contact' %}"
+
+                    class="ecommerce-primary-btn" style="background-color:beige;">
+
+                    Book Free Consultation
+
+                </a>
+
+                <a href="tel:+919942637879"
+
+                    class="ecommerce-secondary-btn">
+
+                    Call Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

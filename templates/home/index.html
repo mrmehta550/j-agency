@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}M Agency — AI Development, Web Design, Digital Marketing & Business Automation{% endblock %}
+{% block meta_description %}M Agency is a full-service digital agency specialising in AI development, website design, mobile apps, SEO, and digital marketing for startups and businesses worldwide.{% endblock %}
+
 {% block content %}
 
 <section class="home-hero">
@@ -519,7 +523,7 @@
 
                 </p>
 
-                <a href="">
+                <a href="{% url 'cloud' %}">
 
                     Learn More
 

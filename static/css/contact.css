@@ -681,29 +681,44 @@ HIGHLIGHTS
 RIGHT IMAGE
 ==================================================*/
 
-.contact-image{
+/*=========================================
+        CONTACT IMAGE
+=========================================*/
 
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.contact-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 .contact-image img{
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 
-    width:100%;
-    max-width:520px;
+    /* Show complete image */
+    object-fit: contain;
 
-    position:relative;
+    display: block;
+    position: relative;
+    z-index: 2;
 
-    z-index:2;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.15);
 }
+
+/* Background Circle */
 
 .contact-image-bg{
 
     position:absolute;
 
     width:420px;
+
     height:420px;
 
     border-radius:50%;
@@ -712,10 +727,11 @@ RIGHT IMAGE
 
     opacity:.08;
 
-    filter:blur(15px);
+    filter:blur(20px);
+
+    z-index:1;
+
 }
-
-
 /*==================================================
 FLOATING CARDS
 ==================================================*/

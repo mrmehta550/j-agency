@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}About Us | M Agency — Our Story, Mission & Team{% endblock %}
+{% block meta_description %}Learn about M Agency — our story, mission, values, and the expert team behind AI development, web design, and digital marketing solutions.{% endblock %}
+
 {% block content %}
 <section class="about-hero">
 
@@ -233,7 +237,7 @@
 
             <div class="stat-card">
 
-                <h2 class="counter" data-target="250">0</h2>
+                <h2 class="counter" data-target="250">0+</h2>
 
                 <p>Projects Completed</p>
 
@@ -241,7 +245,7 @@
 
             <div class="stat-card">
 
-                <h2 class="counter" data-target="120">0</h2>
+                <h2 class="counter" data-target="120">0+</h2>
 
                 <p>Happy Clients</p>
 
@@ -249,7 +253,7 @@
 
             <div class="stat-card">
 
-                <h2 class="counter" data-target="8">0</h2>
+                <h2 class="counter" data-target="8">0+</h2>
 
                 <p>Years Experience</p>
 
@@ -257,7 +261,7 @@
 
             <div class="stat-card">
 
-                <h2 class="counter" data-target="25">0</h2>
+                <h2 class="counter" data-target="25">0+</h2>
 
                 <p>Professional Experts</p>
 
@@ -665,182 +669,68 @@
             <div class="technology-track">
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/python.png' %}">
+                    <img src="{% static 'image/services/web-development/python.jpg' %}">
                     <h3>Python</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/django.png' %}">
+                    <img src="{% static 'images/services/web-development/django.jpg' %}">
                     <h3>Django</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/react.png' %}">
+                    <img src="{% static 'images/services/web-development/react.jpg' %}">
                     <h3>React</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/nextjs.png' %}">
+                    <img src="{% static 'images/services/web-development/nextjs.jpg' %}">
                     <h3>Next JS</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/node.png' %}">
+                    <img src="{% static 'images/services/web-development/node.jpg' %}">
                     <h3>Node JS</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/docker.png' %}">
+                    <img src="{% static 'images/services/web-development/docker.jpg' %}">
                     <h3>Docker</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/aws.png' %}">
+                    <img src="{% static 'images/services/web-development/aws.jpg' %}">
                     <h3>AWS</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/openai.png' %}">
+                    <img src="{% static 'images/services/web-development/openai.jpg' %}">
                     <h3>OpenAI</h3>
                 </div>
 
                 <!-- Duplicate for Infinite Loop -->
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/python.png' %}">
+                    <img src="{% static 'images/services/web-development/python.jpg' %}">
                     <h3>Python</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/django.png' %}">
+                    <img src="{% static 'images/services/web-development/django.jpg' %}">
                     <h3>Django</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/react.png' %}">
+                    <img src="{% static 'images/services/web-development/react.jpg' %}">
                     <h3>React</h3>
                 </div>
 
                 <div class="tech-card">
-                    <img src="{% static 'images/technology/nextjs.png' %}">
+                    <img src="{% static 'images/services/web-development/nextjs.jpg' %}">
                     <h3>Next JS</h3>
                 </div>
 
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-<section class="testimonial-section">
-
-    <div class="container">
-
-        <div class="section-heading">
-
-            <span>TESTIMONIALS</span>
-
-            <h2>What Our Clients Say</h2>
-
-            <p>
-                Trusted by startups, businesses, and enterprises worldwide.
-            </p>
-
-        </div>
-
-        <div class="testimonial-wrapper">
-
-            <button class="testimonial-btn prev-btn">
-                &#10094;
-            </button>
-
-            <div class="testimonial-slider">
-
-                <div class="testimonial-track" id="testimonialTrack">
-
-                    <!-- Card 1 -->
-                    <div class="testimonial-card">
-
-                        <img src="{% static 'images/client/client1.jpg' %}" alt="">
-
-                        <div class="stars">★★★★★</div>
-
-                        <p>
-                            The team delivered an outstanding website.
-                            Professional communication and excellent support.
-                        </p>
-
-                        <h3>John Smith</h3>
-
-                        <span>CEO, StartupX</span>
-
-                    </div>
-
-                    <!-- Card 2 -->
-
-                    <div class="testimonial-card">
-
-                        <img src="{% static 'images/client/client2.jpg' %}" alt="">
-
-                        <div class="stars">★★★★★</div>
-
-                        <p>
-                            Their AI solutions helped automate our workflow.
-                            Highly recommended.
-                        </p>
-
-                        <h3>Emma Wilson</h3>
-
-                        <span>Marketing Director</span>
-
-                    </div>
-
-                    <!-- Card 3 -->
-
-                    <div class="testimonial-card">
-
-                        <img src="{% static 'images/client/client3.jpg' %}" alt="">
-
-                        <div class="stars">★★★★★</div>
-
-                        <p>
-                            Beautiful UI and excellent performance.
-                            We loved working with this agency.
-                        </p>
-
-                        <h3>David Lee</h3>
-
-                        <span>Founder</span>
-
-                    </div>
-
-                    <!-- Card 4 -->
-
-                    <div class="testimonial-card">
-
-                        <img src="{% static 'images/client/client4.jpg' %}" alt="">
-
-                        <div class="stars">★★★★★</div>
-
-                        <p>
-                            Excellent development team with outstanding
-                            project management.
-                        </p>
-
-                        <h3>Sophia Brown</h3>
-
-                        <span>Business Owner</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <button class="testimonial-btn next-btn">
-                &#10095;
-            </button>
 
         </div>
 
@@ -854,11 +744,11 @@
                 <span class="section-tag">
                     LET'S BUILD TOGETHER
                 </span>
-                <h2>
+                <h2 style="color: blueviolet;">
                     Ready To Grow Your Business
                     With M Agency?
                 </h2>
-                <p>
+                <p style="color: black;">
                     Whether you're launching a startup,
                     upgrading your website,
                     building an AI product,
@@ -866,7 +756,7 @@
                     our team is here to help.
                 </p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn-primary">
+                    <a href="{% url 'booking' %}" class="btn-primary">
                         Book Free Consultation
                     </a>
                     <a href="{% url 'contact' %}" class="btn-outline">

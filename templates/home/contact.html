@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Contact Us | M Agency — Get a Free Consultation{% endblock %}
+{% block meta_description %}Contact M Agency for a free consultation on AI development, web design, digital marketing, SEO, and mobile app development. Reply within 30 minutes.{% endblock %}
+
 {% block content %}
 
   <!-- =========================================
@@ -77,7 +80,7 @@ CONTACT HERO
         <div class="contact-image">
           <div class="contact-image-bg"></div>
 
-          <img src="{% static 'images/contact/contact-hero.png' %}" alt="Contact M Agency" />
+          <img src="{% static 'images/services/contact/contact-dashboard.jpg' %}" alt="Contact M Agency" />
 
           <!-- Floating Card -->
 
@@ -102,7 +105,7 @@ CONTACT HERO
 CONTACT FORM
 ========================================== -->
 
-  <section class="contact-form-section" id="contactForm">
+  <section class="contact-form-section" id="contactFormSection">
     <div class="container">
       <div class="contact-wrapper">
         <!-- =================================
@@ -111,7 +114,7 @@ CONTACT FORM
 
         <div class="contact-info">
           <span class="contact-section-tag">GET IN TOUCH</span>
-
+ 
           <h2>Let's Discuss Your Project</h2>
 
           <p>Fill out the form below and our team will contact you within 24 hours to understand your business requirements and provide the best solution.</p>
@@ -175,8 +178,19 @@ CONTACT FORM
             CONTACT FORM
             ================================== -->
 
+        <!-- Django flash messages (success / error / warning) -->
+        {% if messages %}
+          <div class="contact-messages" role="alert" aria-live="polite">
+            {% for message in messages %}
+              <div class="contact-message contact-message--{{ message.tags }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
         <div class="contact-form-card">
-          <form method="POST" action="{% url 'contact' %}">
+          <form method="POST" action="{% url 'contact' %}" id="contactForm">
             {% csrf_token %}
 
             <!-- Row -->
@@ -259,7 +273,14 @@ CONTACT FORM
               <textarea rows="6" name="message" placeholder="Tell us about your project..." required></textarea>
             </div>
 
-            <button type="submit" class="contact-submit-btn">Send Message →</button>
+            <button
+              type="submit"
+              class="contact-submit-btn"
+              id="submitBtn"
+              aria-label="Send your message"
+              data-default-text="Send Message →"
+              data-loading-text="Sending…"
+            >Send Message →</button>
           </form>
         </div>
       </div>
@@ -576,4 +597,109 @@ NEWSLETTER
       </div>
     </div>
   </section>
+
+<style>
+  /* ── Flash message styles ───────────────────────────────── */
+  .contact-messages {
+    margin-bottom: 1.25rem;
+  }
+  .contact-message {
+    padding: 0.85rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid transparent;
+  }
+  .contact-message--success {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #10b981;
+  }
+  .contact-message--error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #ef4444;
+  }
+  .contact-message--warning {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #f59e0b;
+  }
+  .contact-message--info {
+    background: #dbeafe;
+    color: #1e40af;
+    border-color: #3b82f6;
+  }
+
+  /* ── Submit button loading state ───────────────────────── */
+  #submitBtn.is-loading {
+    opacity: 0.75;
+    cursor: not-allowed;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .contact-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: contact-spin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes contact-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var form      = document.getElementById("contactForm");
+  var submitBtn = document.getElementById("submitBtn");
+
+  if (!form || !submitBtn) return;   // guard: elements must exist
+
+  var defaultText  = submitBtn.dataset.defaultText  || "Send Message →";
+  var loadingText  = submitBtn.dataset.loadingText  || "Sending…";
+  var isSubmitting = false;           // in-memory flag prevents double-submission
+
+  // ── Disable the button and show the spinner on first submit ──
+  form.addEventListener("submit", function () {
+    if (isSubmitting) {
+      // Second click while already submitting — do nothing.
+      return;
+    }
+
+    isSubmitting = true;
+
+    // Swap button text → spinner + loading label.
+    submitBtn.classList.add("is-loading");
+    submitBtn.disabled = true;
+    submitBtn.innerHTML =
+      '<span class="contact-spinner" aria-hidden="true"></span>' +
+      '<span>' + loadingText + '</span>';
+  });
+
+  // ── Re-enable the button when the user navigates back ──────
+  // Without this, a back-button navigation leaves the button permanently
+  // disabled because the browser restores the DOM in its last state.
+  window.addEventListener("pageshow", function (event) {
+    // event.persisted is true when the page is served from the
+    // back/forward cache (bfcache).
+    if (event.persisted || isSubmitting) {
+      isSubmitting = false;
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("is-loading");
+      submitBtn.innerHTML = defaultText;
+    }
+  });
+}());
+</script>
+
 {% endblock %}

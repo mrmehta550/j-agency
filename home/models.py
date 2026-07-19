@@ -64,8 +64,14 @@ class Contact(models.Model):
     company = models.CharField(max_length=200, blank=True)
     service = models.CharField(max_length=100, choices=SERVICE_CHOICES)
     budget = models.CharField(max_length=50, choices=BUDGET_CHOICES)
-    message = models.TextField()
-    project_details = models.TextField()
+    # FIXED: blank=True, default='' — the BookingForm uses 'project_details'
+    # instead of 'message'. Without this, every booking form.save() raises
+    # IntegrityError in MySQL strict mode (empty string on required column).
+    message = models.TextField(blank=True, default='')
+    # FIXED: blank=True, default='' — the ContactForm uses 'message' not
+    # 'project_details'. Without this, contact form.save() (Contact.objects.create)
+    # would fail to set project_details, violating NOT NULL on MySQL.
+    project_details = models.TextField(blank=True, default='')
     preferred_date = models.DateField(null=True,
     blank=True)
     preferred_time = models.TimeField(null=True,
@@ -83,3 +89,19 @@ class Contact(models.Model):
 
     def __str__(self):
         return self.full_name
+
+
+class ContactSubmissionLock(models.Model):
+    submission_fingerprint = models.CharField(
+        max_length=64,
+        unique=True,
+        db_index=True,
+    )
+    last_submitted_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-last_submitted_at"]
+
+    def __str__(self):
+        return self.submission_fingerprint

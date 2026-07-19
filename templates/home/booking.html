@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Book Free Consultation | M Agency — AI, Web & Marketing Experts{% endblock %}
+{% block meta_description %}Book a free strategy consultation with M Agency. Our experts in AI development, web design, SEO, and digital marketing will contact you within 30 minutes.{% endblock %}
+
 {% block content %}
 
 <!--=========================================
@@ -731,13 +734,24 @@ BOOKING FORM
 
             </div>
 
-            <!--==============================
+        <!--==============================
             RIGHT SIDE
             ==============================-->
 
             <div class="booking-form-card">
 
-                <form method="POST" action="{% url 'booking' %}">
+                <!-- Django flash messages (success / error / warning) -->
+                {% if messages %}
+                  <div class="booking-messages" role="alert" aria-live="polite">
+                    {% for message in messages %}
+                      <div class="booking-message booking-message--{{ message.tags }}">
+                        {{ message }}
+                      </div>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <form method="POST" action="{% url 'booking' %}" id="bookingForm">
 
                     {% csrf_token %}
 
@@ -753,7 +767,7 @@ BOOKING FORM
                             type="text"
                             name="full_name"
                             placeholder="Enter your full name"
-                            required>
+                           required>
 
                     </div>
 
@@ -818,53 +832,57 @@ BOOKING FORM
 
                             </label>
 
+                            <!--
+                                value= attributes are required so the browser
+                                sends the clean key, not the display text.
+                            -->
                             <select
                                 id="selectedService"
                                 name="service">
 
-                                <option>
+                                <option value="Website Development">
 
                                     Website Development
 
                                 </option>
 
-                                <option>
+                                <option value="AI Automation">
 
                                     AI Automation
 
                                 </option>
 
-                                <option>
+                                <option value="Mobile App Development">
 
                                     Mobile App Development
 
                                 </option>
 
-                                <option>
+                                <option value="UI / UX Design">
 
                                     UI / UX Design
 
                                 </option>
 
-                                <option>
+                                <option value="SEO Optimization">
 
                                     SEO Optimization
 
                                 </option>
 
-                                <option>
+                                <option value="Digital Marketing">
 
                                     Digital Marketing
 
                                 </option>
 
-                                <option>
+                                <option value="Cloud Solutions">
 
                                     Cloud Solutions
 
                                 </option>
 
-                                <option>
+                                <option value="E-Commerce Development">
 
                                     E-Commerce Development
 
@@ -882,28 +900,32 @@ BOOKING FORM
 
                             </label>
 
+                            <!--
+                                value= attributes are required so the browser
+                                sends the clean key, not the display text.
+                            -->
                             <select
                                 name="budget">
 
-                                <option>
+                                <option value="Under ₹25,000">
 
                                     Under ₹25,000
 
                                 </option>
 
-                                <option>
+                                <option value="₹25,000 - ₹50,000">
 
                                     ₹25,000 - ₹50,000
 
                                 </option>
 
-                                <option>
+                                <option value="₹50,000 - ₹1,00,000">
 
                                     ₹50,000 - ₹1,00,000
 
                                 </option>
 
-                                <option>
+                                <option value="Above ₹1,00,000">
 
                                     Above ₹1,00,000
 
@@ -923,9 +945,14 @@ BOOKING FORM
 
                         </label>
 
+                        <!--
+                            BUGFIX: was name="message" — BookingForm expects
+                            name="project_details".  The old value was silently
+                            dropped and an empty string saved to the database.
+                        -->
                         <textarea
                             rows="6"
-                            name="message"
+                            name="project_details"
                             placeholder="Describe your project..."></textarea>
 
                     </div>
@@ -940,9 +967,13 @@ BOOKING FORM
 
                             </label>
 
+                            <!--
+                                BUGFIX: was name="date" — BookingForm expects
+                                name="preferred_date". Date was never saved.
+                            -->
                             <input
                                 type="date"
-                                name="date">
+                                name="preferred_date">
 
                         </div>
 
@@ -954,9 +985,13 @@ BOOKING FORM
 
                             </label>
 
+                            <!--
+                                BUGFIX: was name="time" — BookingForm expects
+                                name="preferred_time". Time was never saved.
+                            -->
                             <input
                                 type="time"
-                                name="time">
+                                name="preferred_time">
 
                         </div>
 
@@ -964,11 +999,12 @@ BOOKING FORM
 
                     <button
                         type="submit"
-                        class="booking-submit-btn">
-
-                        Book Free Consultation
-
-                    </button>
+                        class="booking-submit-btn"
+                        id="bookingSubmitBtn"
+                        aria-label="Submit your booking"
+                        data-default-text="Book Free Consultation"
+                        data-loading-text="Booking…"
+                    >Book Free Consultation</button>
 
                 </form>
 
@@ -1206,3 +1242,107 @@ FINAL CTA
 </section>
 
 {% endblock %}
+
+<style>
+  /* ── Booking flash message styles ──────────────────────── */
+  .booking-messages {
+    margin-bottom: 1.25rem;
+  }
+  .booking-message {
+    padding: 0.85rem 1.1rem;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid transparent;
+  }
+  .booking-message--success {
+    background: #d1fae5;
+    color: #065f46;
+    border-color: #10b981;
+  }
+  .booking-message--error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-color: #ef4444;
+  }
+  .booking-message--warning {
+    background: #fef3c7;
+    color: #92400e;
+    border-color: #f59e0b;
+  }
+  .booking-message--info {
+    background: #dbeafe;
+    color: #1e40af;
+    border-color: #3b82f6;
+  }
+
+  /* ── Submit button loading state ──────────────────────── */
+  #bookingSubmitBtn.is-loading {
+    opacity: 0.75;
+    cursor: not-allowed;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+  .booking-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: booking-spin 0.7s linear infinite;
+    flex-shrink: 0;
+  }
+  @keyframes booking-spin {
+    to { transform: rotate(360deg); }
+  }
+</style>
+
+<script>
+(function () {
+  "use strict";
+
+  var form      = document.getElementById("bookingForm");
+  var submitBtn = document.getElementById("bookingSubmitBtn");
+
+  if (!form || !submitBtn) return;   // guard: elements must exist
+
+  var defaultText  = submitBtn.dataset.defaultText  || "Book Free Consultation";
+  var loadingText  = submitBtn.dataset.loadingText  || "Booking\u2026";
+  var isSubmitting = false;   // in-memory flag prevents double-submission
+
+  // ── Disable the button and show the spinner on first submit ──
+  form.addEventListener("submit", function () {
+    if (isSubmitting) {
+      // Second click while already submitting — do nothing.
+      return;
+    }
+
+    isSubmitting = true;
+
+    // Swap button text → spinner + loading label.
+    submitBtn.classList.add("is-loading");
+    submitBtn.disabled = true;
+    submitBtn.innerHTML =
+      '<span class="booking-spinner" aria-hidden="true"></span>' +
+      '<span>' + loadingText + '</span>';
+  });
+
+  // ── Re-enable the button when the user navigates back ──────
+  // Without this, a browser back-navigation leaves the button
+  // permanently disabled because the browser restores the DOM
+  // in its last-seen state (bfcache).
+  window.addEventListener("pageshow", function (event) {
+    if (event.persisted || isSubmitting) {
+      isSubmitting = false;
+      submitBtn.disabled = false;
+      submitBtn.classList.remove("is-loading");
+      submitBtn.innerHTML = defaultText;
+    }
+  });
+}());
+</script>

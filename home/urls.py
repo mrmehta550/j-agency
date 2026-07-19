@@ -11,5 +11,11 @@ urlpatterns = [
     path("blog/<slug:slug>/", views.blog_detail, name="blog_detail"),
     path("technology/", views.tech, name="tech"),
     path("privacy/", views.privacy, name="privacy"),
-    path("terms & conditions/", views.term, name="term"),
+
+    # FIXED: was "terms & conditions/" — space + & are not valid URL characters.
+    # Browsers URL-encode them as %20 and %26, causing a permanent 404.
+    # All {% url 'term' %} template tags will automatically use the new path.
+    path("terms-and-conditions/", views.term, name="term"),
+
+    path("cloud/", views.cloud, name="cloud"),
 ]

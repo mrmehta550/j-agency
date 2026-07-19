@@ -80,6 +80,12 @@
 
 
 
+  
+.pricing-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
 
 .pricing-track {
   display: flex;

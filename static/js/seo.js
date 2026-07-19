@@ -1,47 +1,216 @@
 /*=========================================
-SEO FAQ ACCORDION
+        SCROLL PROGRESS BAR
 =========================================*/
 
-document.addEventListener("DOMContentLoaded", function () {
+const seoProgress = document.querySelector(".seo-progress");
 
-    const seoFaqItems = document.querySelectorAll(".seo-faq-item");
+window.addEventListener("scroll", () => {
 
-    seoFaqItems.forEach(function (item) {
+    if(!seoProgress) return;
 
-        const question = item.querySelector(".seo-faq-question");
-        const answer = item.querySelector(".seo-faq-answer");
+    const totalHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
 
-        // Open the default active FAQ
-        if (item.classList.contains("active")) {
+    const progress =
+    (window.pageYOffset / totalHeight) * 100;
 
-            answer.style.maxHeight = answer.scrollHeight + "px";
+    seoProgress.style.width = progress + "%";
 
-        }
+});
 
-        question.addEventListener("click", function () {
+/*=========================================
+        BACK TO TOP
+=========================================*/
 
-            const isOpen = item.classList.contains("active");
+const seoBackTop = document.querySelector(".seo-back-top");
 
-            // Close all FAQs
-            seoFaqItems.forEach(function (faq) {
+window.addEventListener("scroll", () => {
 
-                faq.classList.remove("active");
+    if(!seoBackTop) return;
 
-                faq.querySelector(".seo-faq-answer").style.maxHeight = null;
+    if(window.scrollY > 500){
 
-            });
+        seoBackTop.classList.add("show");
 
-            // Open clicked FAQ
-            if (!isOpen) {
+    }else{
 
-                item.classList.add("active");
+        seoBackTop.classList.remove("show");
 
-                answer.style.maxHeight = answer.scrollHeight + "px";
+    }
 
-            }
+});
 
-        });
+seoBackTop?.addEventListener("click",()=>{
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
 
     });
+
+});
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+const seoReveal = document.querySelectorAll(
+
+".seo-service-card,\
+.seo-benefit-card,\
+.seo-process-card,\
+.seo-tool-card,\
+.seo-case-study-card,\
+.seo-price-card,\
+.seo-testimonial-card"
+
+);
+
+const seoObserver = new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("seo-show");
+
+}
+
+});
+
+},
+
+{
+
+threshold:.15
+
+}
+
+);
+
+seoReveal.forEach(item=>{
+
+item.classList.add("seo-hidden");
+
+seoObserver.observe(item);
+
+});
+
+/*=========================================
+        FAQ
+=========================================*/
+
+const seoFaq = document.querySelectorAll(
+
+".seo-faq-wrapper details"
+
+);
+
+seoFaq.forEach(item=>{
+
+item.addEventListener("toggle",()=>{
+
+if(item.open){
+
+seoFaq.forEach(other=>{
+
+if(other!==item){
+
+other.removeAttribute("open");
+
+}
+
+});
+
+}
+
+});
+
+});
+
+/*=========================================
+        HERO PARALLAX
+=========================================*/
+
+const seoHeroImage = document.querySelector(
+
+".seo-hero-visual"
+
+);
+
+window.addEventListener("mousemove",(e)=>{
+
+if(!seoHeroImage) return;
+
+const x=(window.innerWidth/2-e.clientX)/45;
+
+const y=(window.innerHeight/2-e.clientY)/45;
+
+seoHeroImage.style.transform=
+
+`translate(${x}px,${y}px)`;
+
+});
+
+/*=========================================
+        COUNTER
+=========================================*/
+
+const counters = document.querySelectorAll(
+
+".seo-stat-box h3"
+
+);
+
+const counterObserver = new IntersectionObserver(
+
+(entries)=>{
+
+entries.forEach(entry=>{
+
+if(!entry.isIntersecting) return;
+
+const counter = entry.target;
+
+const target = parseInt(counter.innerText);
+
+let count = 0;
+
+const speed = target / 60;
+
+const update=()=>{
+
+count += speed;
+
+if(count < target){
+
+counter.innerText=Math.ceil(count)+"+";
+
+requestAnimationFrame(update);
+
+}else{
+
+counter.innerText=target+"+";
+
+}
+
+};
+
+update();
+
+counterObserver.unobserve(counter);
+
+});
+
+});
+
+counters.forEach(counter=>{
+
+counterObserver.observe(counter);
 
 });

@@ -68,44 +68,100 @@ document.addEventListener("DOMContentLoaded", () => {
     CALENDAR DATE
     =========================================*/
 
-    const dates = document.querySelectorAll(".booking-calendar-grid button");
+    const calendarGrid = document.querySelector(".booking-calendar-grid");
+    const calendarMonth = document.querySelector(".booking-calendar-month");
+    const dateInput = document.querySelector('input[name="date"]');
 
-    dates.forEach(button => {
+    let selectedDate = new Date();
+    let midnightTimer = null;
 
-        button.addEventListener("click", () => {
+    function formatDateValue(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    }
 
-            dates.forEach(date => {
+    function renderCalendar(referenceDate) {
+        if (!calendarGrid) return;
 
-                date.classList.remove("active");
+        const year = referenceDate.getFullYear();
+        const month = referenceDate.getMonth();
+        const today = new Date();
 
+        if (calendarMonth) {
+            calendarMonth.textContent = referenceDate.toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric"
             });
+        }
 
-            button.classList.add("active");
+        calendarGrid.innerHTML = "";
 
-            const dateInput = document.querySelector(
-                'input[name="date"]'
-            );
-
-            if (dateInput) {
-
-                const today = new Date();
-
-                const month = today.getMonth();
-
-                const year = today.getFullYear();
-
-                const day = button.innerText.padStart(2, "0");
-
-                const value =
-                    `${year}-${String(month + 1).padStart(2, "0")}-${day}`;
-
-                dateInput.value = value;
-
-            }
-
+        ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"].forEach(label => {
+            const weekday = document.createElement("span");
+            weekday.textContent = label;
+            calendarGrid.appendChild(weekday);
         });
 
-    });
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+        for (let i = 0; i < firstDay; i++) {
+            const spacer = document.createElement("span");
+            spacer.setAttribute("aria-hidden", "true");
+            calendarGrid.appendChild(spacer);
+        }
+
+        for (let day = 1; day <= daysInMonth; day++) {
+            const button = document.createElement("button");
+            button.type = "button";
+            button.textContent = String(day);
+
+            const buttonDate = new Date(year, month, day);
+            const isToday =
+                buttonDate.getDate() === today.getDate() &&
+                buttonDate.getMonth() === today.getMonth() &&
+                buttonDate.getFullYear() === today.getFullYear();
+            const isSelected =
+                buttonDate.getDate() === selectedDate.getDate() &&
+                buttonDate.getMonth() === selectedDate.getMonth() &&
+                buttonDate.getFullYear() === selectedDate.getFullYear();
+
+            if (isToday || isSelected) {
+                button.classList.add("active");
+            }
+
+            button.addEventListener("click", () => {
+                selectedDate = new Date(buttonDate);
+                renderCalendar(selectedDate);
+
+                if (dateInput) {
+                    dateInput.value = formatDateValue(selectedDate);
+                }
+            });
+
+            calendarGrid.appendChild(button);
+        }
+
+        if (dateInput) {
+            dateInput.value = formatDateValue(selectedDate);
+        }
+
+        if (midnightTimer) {
+            clearTimeout(midnightTimer);
+        }
+
+        const nextMidnight = new Date();
+        nextMidnight.setHours(24, 0, 0, 0);
+
+        midnightTimer = setTimeout(() => {
+            selectedDate = new Date();
+            renderCalendar(selectedDate);
+        }, nextMidnight.getTime() - Date.now());
+    }
+
+    renderCalendar(selectedDate);
 
 
     /*=========================================
