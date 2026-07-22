@@ -9,19 +9,19 @@
 
     {# ── SEO: per-page title and description ────────────────────────────────── #}
     {# FIXED: was a single hardcoded title — every page looked identical in Google #}
-    <title>{% block title %}M Agency — AI Development, Web Design & Digital Marketing{% endblock %}</title>
+    <title>{% block title %}Magencyinfo — AI Development, Web Design & Digital Marketing{% endblock %}</title>
 
     {# Override in each template: {% block meta_description %}...{% endblock %} #}
-    <meta name="description" content="{% block meta_description %}M Agency builds AI-powered websites, mobile apps, SEO strategies and digital marketing solutions for startups and enterprises worldwide.{% endblock %}">
+    <meta name="description" content="{% block meta_description %}Magencyinfo builds AI-powered websites, mobile apps, SEO strategies and digital marketing solutions for startups and enterprises worldwide.{% endblock %}">
 
     {# ── Canonical URL (override per page to avoid duplicate content penalties) #}
     {% block canonical %}{% endblock %}
 
     {# ── Open Graph (social sharing) ──────────────────────────────────────── #}
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="M Agency">
-    <meta property="og:title" content="{% block og_title %}M Agency — AI Development, Web Design & Digital Marketing{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}M Agency builds AI-powered websites, mobile apps and digital solutions for businesses worldwide.{% endblock %}">
+    <meta property="og:site_name" content="Magencyinfo">
+    <meta property="og:title" content="{% block og_title %}Magencyinfo — AI Development, Web Design & Digital Marketing{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}Magencyinfo builds AI-powered websites, mobile apps and digital solutions for businesses worldwide.{% endblock %}">
     <meta property="og:image" content="{% block og_image %}{% static 'images/og-default.png' %}{% endblock %}">
 
     {# ── Favicon ──────────────────────────────────────────────────────────── #}
@@ -64,12 +64,10 @@
     <link rel="stylesheet" href="{% static 'css/logo.css' %}">
     <link rel="stylesheet" href="{% static 'css/video.css' %}">
     <link rel="stylesheet" href="{% static 'css/ecom.css' %}">
-    <link rel="stylesheet" href="{% static 'css/casestudy1.css' %}">
-    <link rel="stylesheet" href="{% static 'css/casestudy2.css' %}">
-    <link rel="stylesheet" href="{% static 'css/casestudy3.css' %}">
+    
     <link rel="stylesheet" href="{% static 'css/case_study_detail.css' %}">
     <link rel="stylesheet" href="{% static 'css/blog_detail.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
     {# ── Per-page CSS block (child templates add their own CSS here) ───────── #}
     {% block extra_css %}{% endblock %}
 </head>
@@ -80,6 +78,23 @@
     {% block content %}{% endblock %}
 
     {% include "base/footer.html" %}
+<div>
+    <a
+    href="https://wa.me/919942637897?text=Hello%20Magencyinfo%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20I%20would%20like%20to%20discuss%20my%20project.%20Please%20get%20in%20touch.%20Thank%20you!"
+    class="home-wa-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    id="waButton"
+  >
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 4C9.373 4 4 9.373 4 16c0 2.28.633 4.412 1.732 6.23L4 28l5.938-1.703A11.93 11.93 0 0 0 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4Z" fill="#fff"/>
+      <path d="M16 6.2c-5.412 0-9.8 4.388-9.8 9.8 0 1.94.564 3.75 1.537 5.27l-1.01 3.69 3.79-1.083A9.75 9.75 0 0 0 16 25.8c5.412 0 9.8-4.388 9.8-9.8S21.412 6.2 16 6.2Z" fill="#25D366"/>
+      <path d="M12.3 11.1c-.28-.62-.44-.62-.72-.63h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.7 0 1.6 1.16 3.14 1.33 3.35.16.22 2.28 3.62 5.63 4.93 2.78 1.09 3.35.87 3.95.82.6-.06 1.94-.79 2.21-1.55.27-.76.27-1.42.19-1.55-.08-.13-.3-.22-.6-.38-.31-.16-1.83-.9-2.11-1-.28-.1-.49-.16-.7.16-.2.32-.8 1-.98 1.2-.18.22-.36.24-.66.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.53-1.83-1.72-2.14-.18-.32-.02-.49.14-.65.14-.14.31-.36.46-.54.15-.18.2-.32.3-.53.1-.22.05-.4-.02-.56-.08-.16-.68-1.67-.99-2.28Z" fill="#fff"/>
+    </svg>
+  </a>
+  <span class="home-wa-tooltip">Chat with us</span>
+</div>
 
     {# ── Third-party JS ───────────────────────────────────────────────────── #}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -107,6 +122,7 @@
     <script src="{% static 'js/logo.js' %}"></script>
     <script src="{% static 'js/video.js' %}"></script>
     <script src="{% static 'js/ecom.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
 
     {# ── Per-page JS block (child templates add their own scripts here) ────── #}
     {% block extra_js %}{% endblock %}

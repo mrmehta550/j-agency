@@ -1,261 +1,113 @@
 /*=========================================
-GLOBAL
+GLOBAL RESET & BASE UTILITIES
 =========================================*/
+
 /*=========================================
-GLOBAL
+ICON CENTERING — GLOBAL FIX
+-----------------------------------------
+All icon containers across every service
+page use flexbox centering. The <i> tag
+inside them must NEVER be display:block
+or it will ignore the parent's flex axes.
+This universal rule ensures every icon is
+perfectly centered in its blue container
+across ALL pages — no design changes.
 =========================================*/
-
-*{
-
-    box-sizing:border-box;
-
+[class*="-icon"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
-html{
-
-    overflow-x:hidden;
-
+[class*="-icon"] > i,
+[class*="-icon"] > svg,
+[class*="-icon"] > img {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
 }
 
-body{
-
-    overflow-x:hidden;
-
+/* Box-sizing: all elements include padding/border in width */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
-img{
-
-    max-width:100%;
-
-    height:auto;
-
-    display:block;
-
+/* Prevent horizontal scroll on all pages */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-.container{
-
-    width:min(1320px,92%);
-
-    margin:auto;
-
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-section{
-
-    padding:120px 0;
-
+/* Images never overflow their container */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-/*=========================================
-992px
-=========================================*/
 
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* Centered, fluid container */
+.container {
+    width: min(1320px, 92%);
+    margin: auto;
 }
-/*=========================================
-1400px
-=========================================*/
-/*=========================================
-992px
-=========================================*/
 
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* Default section vertical rhythm */
+section {
+    padding: 120px 0;
 }
 
 /*=========================================
-1200px
-=========================================*/
-/*=========================================
-992px
+GLOBAL RESPONSIVE — TYPOGRAPHY & SPACING
 =========================================*/
 
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* 1400px */
+@media (max-width: 1400px) {
+    .container { width: min(1280px, 92%); }
 }
 
-/*=========================================
-992px
-=========================================*/
-/*=========================================
-992px
-=========================================*/
-
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* 1200px */
+@media (max-width: 1200px) {
+    section { padding: 100px 0; }
+    .container { width: min(1100px, 92%); }
 }
 
-/*=========================================
-768px
-=========================================*/
-/*=========================================
-992px
-=========================================*/
-
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* 992px — tablet landscape */
+@media (max-width: 992px) {
+    section { padding: 90px 0; }
 }
 
-/*=========================================
-576px
-=========================================*/
-/*=========================================
-992px
-=========================================*/
-
-@media (max-width:992px){
-
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* 768px — tablet portrait */
+@media (max-width: 768px) {
+    section { padding: 80px 0; }
 }
 
-/*=========================================
-420px
-=========================================*/
+/* 576px — large mobile */
+@media (max-width: 576px) {
+    section { padding: 70px 0; }
+    .container { width: min(100%, 94%); }
+}
 
-/*=========================================
-992px
-=========================================*/
+/* 480px */
+@media (max-width: 480px) {
+    section { padding: 60px 0; }
+}
 
-@media (max-width:992px){
+/* 375px */
+@media (max-width: 375px) {
+    section { padding: 55px 0; }
+}
 
-    /* Navbar */
-
-    /* Home */
-
-    /* About */
-
-    /* Services */
-
-    /* Technology */
-
-    /* Pricing */
-
-    /* Blog */
-
-    /* Contact */
-
-    /* Booking */
-
-    /* Footer */
-
+/* 320px */
+@media (max-width: 320px) {
+    section { padding: 50px 0; }
+    .container { width: 96%; }
 }

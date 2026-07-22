@@ -177,12 +177,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: visible;
 }
 
 .home-laptop {
     width: 100%;
     max-width: 620px;
-    border-radius: 28px;
+    height: auto;
+    display: block;
+    object-fit: contain;
     box-shadow: 0 35px 70px rgba(15,23,42,.15);
 }
 
@@ -300,19 +303,83 @@
 }
 
 @media (max-width: 576px) {
-    .home-hero { padding: 120px 0 70px; }
-    .home-hero-content h1 { font-size: 34px; }
-    .home-hero-tag { font-size: 12px; padding: 8px 16px; }
-    .home-hero-content p { font-size: 15px; }
-    .home-hero-image { padding-bottom: 50px; }
-    .home-mobile { position: relative; width: 120px; left: auto; bottom: auto; margin-top: -40px; }
-    .home-floating-card { position: relative; margin: 15px auto; width: 100%; max-width: 280px; animation: none; }
-    .home-card-performance, .home-card-rating, .home-card-project { top: auto; left: auto; right: auto; bottom: auto; }
-    .home-avatars { justify-content: center; }
-    .home-avatars img { width: 36px; height: 36px; }
-    .home-stat-card { padding: 18px; }
-    .home-stat-card .home-icon { width: 55px; height: 55px; font-size: 20px; }
-    .home-stat-card h3 { font-size: 26px; }
+
+    .home-hero {
+        padding: 110px 0 60px;
+    }
+
+    .home-hero-grid {
+        gap: 45px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .home-hero-content p {
+        font-size: 15px;
+    }
+
+    .home-hero-image {
+        position: relative;
+        width: 100%;
+        max-width: 330px;
+        margin: 0 auto;
+        padding-bottom: 0;
+    }
+
+    .home-laptop {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .home-mobile {
+        position: absolute;
+        width: 105px;
+        left: -12px;
+        bottom: -10px;
+        margin: 0;
+        border-radius: 18px;
+    }
+
+    .home-floating-card {
+        position: absolute;
+        padding: 12px 14px;
+        border-radius: 16px;
+        width: auto;
+        max-width: none;
+        margin: 0;
+        animation: none;
+    }
+
+    .home-floating-card span {
+        font-size: 11px;
+    }
+
+    .home-floating-card h2 {
+        font-size: 18px;
+    }
+
+    .home-card-performance {
+        top: 10px;
+        right: -10px;
+    }
+
+    .home-card-rating {
+        left: -15px;
+        top: 95px;
+    }
+
+    .home-card-project {
+        right: -10px;
+        bottom: -15px;
+    }
+
+    .home-avatars img {
+        width: 28px;
+        height: 28px;
+    }
 }
 
 @media (max-width: 400px) {
@@ -389,7 +456,7 @@
     object-fit: contain;
     opacity: .7;
     transition: .35s;
-    filter: grayscale(100%);
+    
 }
 
 .home-logo-item:hover img {
@@ -1551,7 +1618,7 @@
     overflow: hidden;
     border: 1px solid rgba(37,99,235,.08);
     box-shadow: 0 18px 45px rgba(15,23,42,.06);
-    
+    transition: .4s;
 }
 
 .home-tech-card::before {
@@ -1586,7 +1653,7 @@
     background: linear-gradient(135deg, #2563eb, #7c3aed);
     color: #ffffff;
     font-size: 36px;
-    
+    transition: .35s;
 }
 
 /* .home-tech-card:hover .home-tech-logo { transform: none; } */
@@ -2362,6 +2429,7 @@
 .home-wa-float {
     position: fixed;
     right: 30px;
+    top: 75%;
     bottom: 30px;
     width: 68px;
     height: 68px;

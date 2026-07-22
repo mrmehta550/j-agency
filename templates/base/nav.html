@@ -6,7 +6,7 @@
             
             <img src="{% static 'images/favicon.png' %}" alt="M Agency Logo">
         
-            <span>M Agency</span>
+            <span>Magencyinfo</span>
         </a>
 
         <ul id="navMenu" class="nav-menu">
@@ -20,6 +20,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="{% url 'webdev' %}">Website Development</a></li>
+                    <li><a href="{% url 'app' %}">App Development</a></li>
                     <li><a href="{% url 'ecom' %}">E-Commerce</a></li>
                     <li><a href="{% url 'uiux' %}">UI/UX Design</a></li>
                     <li><a href="{% url 'seo' %}">SEO Optimization</a></li>
@@ -29,9 +30,6 @@
                     <li><a href="{% url 'logo' %}">Logo Design</a></li>
                     <li><a href="{% url 'video' %}">Video Editing</a></li>
                 </ul>
-            </li>
-            <li>
-                <a href="#">Portfolio</a>
             </li>
             <li>
                 <a href="{% url 'price' %}">Pricing</a>

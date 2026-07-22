@@ -1,0 +1,295 @@
+/* ==========================================
+   APP DEVELOPMENT - COMING SOON
+========================================== */
+
+:root{
+    --coming-primary:#2563eb;
+    --coming-secondary:#7c3aed;
+    --coming-dark:#0f172a;
+    --coming-text:#64748b;
+    --coming-bg:#f8fbff;
+    --coming-white:#ffffff;
+    --coming-border:#e5e7eb;
+}
+
+.coming-soon-section{
+    position:relative;
+    overflow:hidden;
+    padding:120px 0;
+    background:
+        radial-gradient(circle at top left,#eef4ff 0%,transparent 45%),
+        radial-gradient(circle at bottom right,#ede9fe 0%,transparent 40%),
+        linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+}
+
+.coming-soon-container{
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:80px;
+    align-items:center;
+}
+
+.coming-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:10px 22px;
+    border-radius:50px;
+    background:#eef4ff;
+    color:var(--coming-primary);
+    font-weight:700;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.coming-soon-content h1{
+    font-size:60px;
+    line-height:1.1;
+    font-weight:800;
+    color:var(--coming-dark);
+    margin-bottom:25px;
+}
+
+.coming-soon-content h1 span{
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.coming-soon-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:var(--coming-text);
+    margin-bottom:45px;
+}
+
+.coming-features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:45px;
+}
+
+.feature-item{
+    background:#fff;
+    padding:18px 22px;
+    border-radius:18px;
+    border:1px solid rgba(37,99,235,.08);
+    box-shadow:0 10px 25px rgba(15,23,42,.05);
+    font-weight:600;
+    transition:.35s;
+}
+
+.feature-item:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 35px rgba(15,23,42,.08);
+}
+
+.coming-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.coming-btn-primary{
+    padding:16px 34px;
+    border-radius:60px;
+    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    color:#fff;
+    text-decoration:none;
+    font-weight:700;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(37,99,235,.25);
+}
+
+.coming-btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.coming-btn-secondary{
+    padding:16px 34px;
+    border-radius:60px;
+    background:#fff;
+    border:2px solid #dbe4ff;
+    color:#111827;
+    text-decoration:none;
+    font-weight:700;
+    transition:.35s;
+}
+
+.coming-btn-secondary:hover{
+    background:#2563eb;
+    color:#fff;
+    border-color:#2563eb;
+}
+
+/* ========= Right Side ========= */
+
+.coming-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.phone-card{
+    width:320px;
+    height:640px;
+    background:#111827;
+    border-radius:40px;
+    padding:18px;
+    box-shadow:0 40px 80px rgba(15,23,42,.2);
+    animation:phoneFloat 4s ease-in-out infinite;
+}
+
+.phone-screen{
+    width:100%;
+    height:100%;
+    background:linear-gradient(180deg,#ffffff,#eef4ff);
+    border-radius:28px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.app-icon{
+    width:110px;
+    height:110px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:54px;
+    color:#fff;
+    margin-bottom:30px;
+}
+
+.phone-screen h3{
+    font-size:34px;
+    color:#0f172a;
+    margin-bottom:12px;
+}
+
+.phone-screen p{
+    color:#64748b;
+    margin-bottom:35px;
+}
+
+.progress-bar{
+    width:220px;
+    height:12px;
+    background:#dbeafe;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar span{
+    display:block;
+    width:72%;
+    height:100%;
+    background:linear-gradient(90deg,#2563eb,#7c3aed);
+    animation:loading 2.5s linear infinite alternate;
+}
+
+@keyframes loading{
+
+    from{
+        width:30%;
+    }
+
+    to{
+        width:85%;
+    }
+
+}
+
+@keyframes phoneFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+}
+
+/* ========= Responsive ========= */
+
+@media(max-width:992px){
+
+    .coming-soon-container{
+        grid-template-columns:1fr;
+        text-align:center;
+        gap:60px;
+    }
+
+    .coming-soon-content h1{
+        font-size:48px;
+    }
+
+    .coming-buttons{
+        justify-content:center;
+    }
+
+    .coming-features{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .coming-soon-section{
+        padding:90px 0;
+    }
+
+    .coming-soon-content h1{
+        font-size:38px;
+    }
+
+    .coming-soon-content p{
+        font-size:16px;
+    }
+
+    .coming-features{
+        grid-template-columns:1fr;
+    }
+
+    .phone-card{
+        width:270px;
+        height:540px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .coming-soon-content h1{
+        font-size:30px;
+    }
+
+    .coming-buttons{
+        flex-direction:column;
+    }
+
+    .coming-btn-primary,
+    .coming-btn-secondary{
+        width:100%;
+        text-align:center;
+    }
+
+    .phone-card{
+        width:240px;
+        height:500px;
+    }
+
+}

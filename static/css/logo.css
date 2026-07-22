@@ -4411,7 +4411,7 @@ CARD
 
 .logo-service-pricing-card:hover{
 
-    transform:translateY(-12px);
+
 
     border-color:#2563eb;
 
@@ -4503,17 +4503,10 @@ PLAN ICON
 
     font-size:34px;
 
-    transition:.35s;
+  
 
 }
 
-.logo-service-pricing-card:hover
-.logo-service-plan-icon{
-
-    transform:rotate(-10deg)
-    scale(1.08);
-
-}
 
 /*=========================================
 TITLE
@@ -4660,7 +4653,7 @@ BUTTON
 
 .logo-service-plan-button:hover{
 
-    transform:translateY(-4px);
+    
 
     box-shadow:
 
@@ -4759,27 +4752,27 @@ ICON SHINE
 
     );
 
-    transform:rotate(25deg);
+   
 
-    transition:1s;
+    
 
 }
 
-.logo-service-pricing-card:hover
+/* .logo-service-pricing-card:hover
 .logo-service-plan-icon::before{
 
     left:180%;
 
-}
+} */
 
-.logo-service-pricing-card:hover
+/* .logo-service-pricing-card:hover
 .logo-service-plan-icon{
 
     box-shadow:
 
     0 30px 70px rgba(124,58,237,.35);
 
-}
+} */
 
 /*=========================================
 POPULAR CARD GLOW
@@ -4825,7 +4818,7 @@ FEATURE ANIMATION
 
 }
 
-.logo-service-pricing-card:hover
+
 .logo-service-plan-features li{
 
     transform:translateX(8px);
@@ -4838,7 +4831,7 @@ FEATURE ANIMATION
 
 }
 
-.logo-service-pricing-card:hover
+
 .logo-service-plan-features li i{
 
     transform:scale(1.2);
@@ -4870,12 +4863,6 @@ PRICE EFFECT
 
 }
 
-.logo-service-pricing-card:hover
-.logo-service-currency{
-
-    transform:translateY(-4px);
-
-}
 
 /*=========================================
 BUTTON EFFECT
@@ -5049,11 +5036,7 @@ RESPONSIVE 768
 
 }
 
-.logo-service-popular:hover{
 
-    transform:translateY(-10px);
-
-}
 
 .logo-service-plan-icon{
 

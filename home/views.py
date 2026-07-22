@@ -73,7 +73,20 @@ _excel_write_lock = threading.Lock()
 # ──────────────────────────────────────────────────────────────
 
 def home(request):
-    return render(request, "home/index.html")
+    top_blogs = (
+        Blog.objects
+        .filter(status=True)
+        .select_related("category")
+        .order_by("-views", "-created_at")[:3]
+    )
+
+    return render(
+        request,
+        "home/index.html",
+        {
+            "top_blogs": top_blogs,
+        }
+    )
 
 
 def price(request):
@@ -98,6 +111,9 @@ def term(request):
 
 def cloud(request):
     return render(request, "home/cloud.html")
+
+def app(request):
+    return render(request, "home/app.html")
 
 
 # ──────────────────────────────────────────────────────────────

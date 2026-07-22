@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}{{ blog.title }} | M Agency Blog{% endblock %}
+{% block title %}{{ blog.title }} | Magencyinfo Blog{% endblock %}
 {% block meta_description %}{{ blog.short_description|truncatechars:160 }}{% endblock %}
 {% block og_title %}{{ blog.title }}{% endblock %}
 {% block og_description %}{{ blog.short_description|truncatechars:200 }}{% endblock %}
@@ -115,9 +115,9 @@
 
             <div class="blog-detail-author-left">
 
-                <img
+                {% comment %} <img
                     src="{% static 'images/default-user.png' %}"
-                    alt="Author">
+                    alt="Author"> {% endcomment %}
 
                 <div>
 
@@ -137,7 +137,7 @@
 
                         {% else %}
 
-                            M Agency Team
+                            Magencyinfo Team
 
                         {% endif %}
 
@@ -145,7 +145,7 @@
 
                     <span>
 
-                        Senior Content Writer • M Agency
+                        Senior Content Writer • Magencyinfo
 
                     </span>
 
@@ -215,11 +215,7 @@
 
             {% else %}
 
-            <img
-
-                src="{% static 'images/blog/default-blog.webp' %}"
-
-                alt="Blog">
+            No Content
 
             {% endif %}
 
@@ -636,9 +632,9 @@
 
             <div class="blog-detail-author-image">
 
-                <img
+                {% comment %} <img
                     src="{% static 'images/default-user.png' %}"
-                    alt="Author">
+                    alt="Author"> {% endcomment %}
 
             </div>
 
@@ -666,7 +662,7 @@
 
                         {% else %}
 
-                            M Agency Team
+                            Magencyinfo Team
 
                         {% endif %}
 

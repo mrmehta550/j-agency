@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.querySelector('.next-btn');
 
     let currentIndex = 0;
-    const gap = 26; // This must match the gap: 26px in the CSS
+    const gap = parseFloat(getComputedStyle(track).gap) || 26; // This must match the gap: 26px in the CSS
 
     // Function to check how many cards are visible based on screen size
     function getVisibleCards() {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentIndex < 0) currentIndex = 0;
 
         // Calculate translation amount
-        const cardWidth = cards[0].offsetWidth;
+        const cardWidth = cards[0].getBoundingClientRect().width;
         const moveAmount = currentIndex * (cardWidth + gap);
 
         // Apply translation

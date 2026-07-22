@@ -418,44 +418,21 @@ item.style.transform=
 });
 
 /*=========================================
-HERO PARALLAX
+HERO PARALLAX — REMOVED
+-----------------------------------------
+Was: heroImage.style.transform = `translateY(${scroll * 0.18}px)` on scroll.
+Bug: Overrode CSS layout transform on every scroll tick, causing the hero
+image to drift upward and misalign on tablets (768–992px) and mobile.
+Fix: Removed. Smooth entrance is handled by CSS .reveal/.show classes.
 =========================================*/
-
-const hero=document.querySelector(".home-hero");
-
-const heroImage=document.querySelector(".home-hero-image");
-
-window.addEventListener("scroll",()=>{
-
-if(!hero||!heroImage) return;
-
-const scroll=window.pageYOffset;
-
-heroImage.style.transform=
-
-`translateY(${scroll*.18}px)`;
-
-});
 
 /*=========================================
-SERVICE CARD HOVER
-=========================================*/
-
-document.querySelectorAll(".home-service-card").forEach(card=>{
-
-card.addEventListener("mouseenter",()=>{
-
-card.style.transform="translateY(-12px)";
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.transform="translateY(0px)";
-
-});
-
-});
+SERVICE CARD HOVER — REMOVED
+-----------------------------------------
+Duplicate: CSS already defines .home-service-card:hover { transform: translateY(-12px) }
+in index.css. JS mouseenter/leave was redundant and created flicker when
+both JS and CSS transitions fired simultaneously.
+========================================*/
 
 /*=========================================
 TECH CARD TILT
@@ -817,48 +794,12 @@ document.querySelectorAll(".home-portfolio-image").forEach(image => {
 });
 
 /*=========================================
-BLOG CARD HOVER
-=========================================*/
-
-document.querySelectorAll(".home-blog-card").forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform =
-            "translateY(-10px)";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform =
-            "translateY(0)";
-
-    });
-
-});
-
-/*=========================================
-CTA CARD HOVER
-=========================================*/
-
-document.querySelectorAll(".home-cta-card").forEach(card => {
-
-    card.addEventListener("mouseenter", () => {
-
-        card.style.transform =
-            "translateY(-10px)";
-
-    });
-
-    card.addEventListener("mouseleave", () => {
-
-        card.style.transform =
-            "translateY(0)";
-
-    });
-
-});
+BLOG CARD + CTA CARD HOVER — REMOVED
+-----------------------------------------
+Duplicate: Both .home-blog-card and .home-cta-card hover transforms
+are already defined in CSS. Removed JS versions to eliminate the
+double-transition flicker caused by competing CSS and inline styles.
+========================================*/
 
 /*=========================================
 SERVICE CARD ICON ROTATION
@@ -890,24 +831,12 @@ SERVICE CARD ICON ROTATION
 // });
 
 /*=========================================
-SECTION TITLE UNDERLINE
-=========================================*/
-
-document.querySelectorAll(".home-section-header h2").forEach(title => {
-
-    title.addEventListener("mouseenter", () => {
-
-        title.classList.add("active");
-
-    });
-
-    title.addEventListener("mouseleave", () => {
-
-        title.classList.remove("active");
-
-    });
-
-});
+SECTION TITLE UNDERLINE — REMOVED
+-----------------------------------------
+Dead code: Added/removed .active class on .home-section-header h2
+but no CSS rule for .home-section-header h2.active exists anywhere.
+Removing eliminates unnecessary event listeners on every section title.
+========================================*/
 /*=========================================
 PART 4
 UTILITY FEATURES

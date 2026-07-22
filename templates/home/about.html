@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}About Us | M Agency — Our Story, Mission & Team{% endblock %}
-{% block meta_description %}Learn about M Agency — our story, mission, values, and the expert team behind AI development, web design, and digital marketing solutions.{% endblock %}
+{% block title %}About Us | Magencyinfo — Our Story, Mission & Team{% endblock %}
+{% block meta_description %}Learn about Magencyinfo — our story, mission, values, and the expert team behind AI development, web design, and digital marketing solutions.{% endblock %}
 
 {% block content %}
 <section class="about-hero">
@@ -36,11 +36,11 @@
 
                 <div class="hero-buttons">
 
-                    <a href="#" class="primary-btn">
+                    <a href="{% url 'contact' %}" class="primary-btn">
                         Get Started
                     </a>
 
-                    <a href="#" class="secondary-btn">
+                    <a href="{% url 'booking' %}" class="secondary-btn">
                         View Portfolio
                     </a>
 
@@ -54,15 +54,6 @@
 
                 <img src="{% static 'images/about/about.jpg' %}" alt="Team">
 
-                <div class="experience-card">
-
-                    <h2 style="color: blanchedalmond;">8+</h2>
-
-                    <p style="color: blanchedalmond;">
-                        Years of Experience
-                    </p>
-
-                </div>
 
             </div>
 

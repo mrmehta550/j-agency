@@ -18,4 +18,5 @@ urlpatterns = [
     path("terms-and-conditions/", views.term, name="term"),
 
     path("cloud/", views.cloud, name="cloud"),
+    path("app/", views.app, name="app"),
 ]

@@ -950,11 +950,7 @@ width:100%;
 
 }
 
-.service-card:hover .service-icon{
 
-    transform:rotate(-8deg) scale(1.05);
-
-}
 
 .service-icon i{
 
@@ -1435,7 +1431,7 @@ font-size:1.9rem;
 
     height:70px;
 
-    flex-shrink:0;
+    /* flex-shrink:0; */
 
     display:flex;
 
@@ -1445,21 +1441,15 @@ font-size:1.9rem;
 
     border-radius:20px;
 
-    background:linear-gradient(135deg,#2563EB,#4F46E5);
+    /* background:linear-gradient(135deg,#2563EB,#4F46E5); */
 
-    color:#fff;
+    color:#fff; 
 
     font-size:28px;
 
-    transition:.35s;
-
+    
 }
 
-.why-item:hover .icon{
-
-    transform:rotate(-10deg);
-
-}
 
 .why-item h4{
 

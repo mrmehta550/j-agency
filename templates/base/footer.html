@@ -1,157 +1,137 @@
 {% load static %}
+
 <footer class="ma-footer">
-    
-    <button id="backToTop" class="ma-footer-btn-top">
+
+    <!-- Back To Top -->
+    <button id="backToTop" class="ma-footer-btn-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <div class="ma-footer-container">
         <div class="ma-footer-grid">
-            
-            <div class="ma-footer-column ma-footer-company">
+
+            <!-- COMPANY -->
+            <div class="ma-footer-company">
                 <a href="{% url 'home' %}" class="ma-footer-logo">
-                    <img src="{% static 'images/favicon.png' %}" alt="M Agency">
-                    <span>M Agency</span>
+                    <img src="{% static 'images/favicon.png' %}" alt="Magency Info Logo">
+                    <span>Magencyinfo</span>
                 </a>
+
                 <p class="ma-footer-desc">
-                    M Agency helps startups and businesses build modern websites, AI automation, mobile applications, branding and digital marketing solutions.
+                    Magency Info is a full-service digital agency helping startups, businesses, and enterprises build modern websites, AI automation, mobile applications, UI/UX design, branding, SEO, cloud solutions, and digital marketing strategies that drive measurable business growth.
                 </p>
+
                 <div class="ma-footer-socials">
-                    <a href="https://facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://facebook.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://instagram.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/company/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
                 </div>
             </div>
 
+            <!-- QUICK LINKS -->
             <div class="ma-footer-column">
                 <h3 class="ma-footer-title">Quick Links</h3>
-                <ul class="ma-footer-list">
+                <ul class="ma-footer-contact">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="#">Services</a></li>
                     <li><a href="{% url 'price' %}">Pricing</a></li>
-                    <li><a href="{% url 'blog' %}">Blogs</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
                     <li><a href="{% url 'booking' %}">Book Consultation</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
 
+            <!-- SERVICES -->
             <div class="ma-footer-column">
-                <h3 class="ma-footer-title">Services</h3>
-                <ul class="ma-footer-list">
+                <h3 class="ma-footer-title">Our Services</h3>
+                <ul class="ma-footer-contact">
                     <li><a href="{% url 'webdev' %}">Website Development</a></li>
                     <li><a href="{% url 'ai' %}">AI Automation</a></li>
                     <li><a href="{% url 'uiux' %}">UI / UX Design</a></li>
                     <li><a href="{% url 'seo' %}">SEO Optimization</a></li>
+                    <li><a href="#">Mobile App Development</a></li>
+                    <li><a href="{% url 'logo' %}">Brand Identity</a></li>
                     <li><a href="#">Cloud Solutions</a></li>
-                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="{% url 'dm' %}">Digital Marketing</a></li>
                 </ul>
             </div>
 
+            <!-- CONTACT -->
             <div class="ma-footer-column">
-                <h3 class="ma-footer-title">Contact</h3>
+                <h3 class="ma-footer-title">Contact Us</h3>
                 <ul class="ma-footer-contact">
                     <li>
                         <i class="fa-solid fa-location-dot"></i>
-                        <a href="https://maps.google.com/?q=Chandigarh" target="_blank">Chandigarh, India</a>
+                        <a href="https://maps.google.com/?q=Punjab,India" target="_blank" rel="noopener noreferrer">Punjab, India</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-phone"></i>
-                        <a href="tel:+919876543210">+91 98765 43210</a>
+                        <a href="tel:+919942637897">+91 9942637897</a>
                     </li>
                     <li>
                         <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@magency.com">info@magency.com</a>
+                        <a href="mailto:hello@magencyinfo.com">hello@magencyinfo.com</a>
                     </li>
                     <li>
                         <i class="fa-brands fa-whatsapp"></i>
-                        <a href="https://wa.me/919876543210" target="_blank">WhatsApp Chat</a>
+                        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">WhatsApp Chat</a>
                     </li>
                 </ul>
             </div>
-            
+
         </div>
 
-        {% comment %} <div class="ma-footer-newsletter-wrap">
-            <div class="ma-footer-newsletter-info">
-                <h3 class="ma-footer-title">Subscribe Newsletter</h3>
-                <p>Get the latest updates, AI news, web development tips and exclusive offers from M Agency.</p>
-            </div>
-            <div class="ma-footer-newsletter-form-container">
-                <form id="newsletterForm" class="ma-footer-form">
-                    <input type="email" id="newsletterEmail" class="ma-footer-input" placeholder="Enter your email" required>
-                    <button type="submit" class="ma-footer-submit">Subscribe</button>
-                </form>
-                <p id="newsletterMessage" class="ma-footer-msg"></p>
-            </div>
-        </div> {% endcomment %}
-
+        <!-- FOOTER BOTTOM -->
         <div class="ma-footer-bottom">
             <div class="ma-footer-copy">
-                © <span id="currentYear"></span> <strong>M Agency</strong> All Rights Reserved.
+                © <span id="currentYear"></span> <strong>Magencyinfo</strong>. All Rights Reserved. Designed & Developed by <strong>Magencyinfo</strong>.
             </div>
             <div class="ma-footer-legal">
                 <a href="{% url 'privacy' %}">Privacy Policy</a>
                 <a href="{% url 'term' %}">Terms & Conditions</a>
-                <a href="#">Sitemap</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </div>
         </div>
     </div>
+
 </footer>
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    /*==============================
-    CURRENT YEAR
-    ==============================*/
-    document.getElementById("currentYear").textContent = new Date().getFullYear();
+    /* Current Year */
+    const year = document.getElementById("currentYear");
+    if (year) {
+        year.textContent = new Date().getFullYear();
+    }
 
-    /*==============================
-    BACK TO TOP
-    ==============================*/
+    /* Back To Top */
     const backToTop = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
-    });
-
-    backToTop.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+    if (backToTop) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add("show");
+            } else {
+                backToTop.classList.remove("show");
+            }
         });
-    });
 
-    /*==============================
-    NEWSLETTER
-    ==============================*/
-    const newsletterForm = document.getElementById("newsletterForm");
-    const email = document.getElementById("newsletterEmail");
-    const message = document.getElementById("newsletterMessage");
-
-    newsletterForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const value = email.value.trim();
-
-        if (value === "") {
-            message.style.color = "#ef4444"; // Red
-            message.innerHTML = "Please enter your email.";
-            return;
-        }
-
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!regex.test(value)) {
-            message.style.color = "#ef4444"; // Red
-            message.innerHTML = "Please enter a valid email.";
-            return;
-        }
-
-        message.style.color = "#16a34a"; // Green
-        message.innerHTML = "Thank you for subscribing!";
-        newsletterForm.reset();
-    });
+        backToTop.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    }
 });
 </script>

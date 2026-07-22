@@ -210,9 +210,9 @@ class BookingForm(forms.ModelForm):
         """
         details = self.cleaned_data.get("project_details", "").strip()
 
-        if len(details) < 20:
+        if len(details) < 10:
             raise ValidationError(
-                "Please provide at least 20 characters describing your project."
+                "Please provide at least 10 characters describing your project."
             )
 
         return details
