@@ -1,18 +1,15 @@
 {
   "version": 2,
-  "functions": {
-    "config/wsgi.py": {
-      "runtime": "@vercel/python"
+  "builds": [
+    {
+      "src": "manage.py",
+      "use": "@vercel/python"
     }
-  },
+  ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
-      "src": "(.*)",
-      "dest": "config/wsgi.py"
+      "src": "/(.*)",
+      "dest": "manage.py"
     }
   ]
 }
