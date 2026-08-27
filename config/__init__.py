@@ -3,8 +3,12 @@ import sys
 try:
     # Try importing the native mysqlclient driver
     import MySQLdb
+    # If the imported module is too old (e.g., pre-installed 1.4.6 in Vercel environment),
+    # force fallback to PyMySQL by raising ImportError.
+    if getattr(MySQLdb, 'version_info', (0, 0, 0)) < (2, 2, 1):
+        raise ImportError("Installed mysqlclient version is too old.")
 except ImportError:
-    # Fallback to PyMySQL if mysqlclient is not installed (e.g. serverless environments)
+    # Fallback to PyMySQL if mysqlclient is not installed or is outdated
     try:
         import pymysql
         pymysql.install_as_MySQLdb()
