@@ -8,5 +8,5 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
 from config.wsgi import application
 
-# Vercel python serverless handler requires a global named 'app'
+# Vercel python handler requires a global named 'app'
 app = application
