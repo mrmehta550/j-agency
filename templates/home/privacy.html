@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/privacy.css' %}?v=2.0">
+{% endblock %}
+
 {% block title %}Privacy Policy | Magency Info{% endblock %}
 
 {% block meta_description %}
@@ -9,1993 +13,258 @@ Read the official Privacy Policy of Magency Info. Learn how we collect, use, pro
 
 {% block content %}
 
-<!-- ==========================================
-                HERO SECTION
-=========================================== -->
-
-<section class="privacy-hero" style="margin-bottom:3%">
-
-    <div class="container">
-
+<!--=========================================
+    1. HERO SECTION
+    ==========================================-->
+<section class="privacy-hero">
+    <div class="privacy-container">
         <!-- Breadcrumb -->
+        <nav class="privacy-breadcrumb" aria-label="Breadcrumb">
+            <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <span class="privacy-crumb-active">Privacy Policy</span>
+        </nav>
 
-        <div class="breadcrumb">
-
-            <a href="{% url 'home' %}">
-                <i class="fa-solid fa-house"></i>
-                Home
-            </a>
-
-            <span>
-                <i class="fa-solid fa-angle-right"></i>
-            </span>
-
-            <span>
-                Privacy Policy
-            </span>
-
-        </div>
-
-        <div class="privacy-grid">
-
-            <!-- Left -->
-
-            <div class="privacy-content">
-
-                <span class="hero-badge">
-
+        <div class="privacy-hero-grid">
+            <!-- Left Content -->
+            <div class="privacy-hero-content">
+                <span class="privacy-hero-badge">
                     <i class="fa-solid fa-shield-halved"></i>
-
                     Privacy & Data Protection
-
                 </span>
 
-                <h1>
-
-                    Privacy
-                    <span>Policy</span>
-
-                </h1>
+                <h1>Privacy <span>Policy</span></h1>
 
                 <p>
-
-                    At <strong>Magency Info</strong>, we value your privacy and
-                    are committed to protecting the personal information you
-                    share with us. Whether you contact us for website
-                    development, SEO, branding, AI automation, UI/UX design,
-                    digital marketing, or business consultation, your data is
-                    handled responsibly, securely, and transparently.
-
+                    At <strong>Magency Info</strong>, we respect your privacy and are committed to protecting the personal information you share with us. Whether you engage us for web development, UI/UX design, AI automations, or digital marketing, your data is handled responsibly and securely.
                 </p>
 
-                <div class="policy-info">
-
-                    <div class="info-card">
-
+                <div class="privacy-hero-meta">
+                    <div class="privacy-meta-card">
                         <i class="fa-solid fa-calendar-days"></i>
-
                         <div>
-
-                            <h4>
-
-                                Last Updated
-
-                            </h4>
-
-                            <p>
-
-                                July 20, 2026
-
-                            </p>
-
+                            <h4>Last Updated</h4>
+                            <p>July 20, 2026</p>
                         </div>
-
                     </div>
 
-                    <div class="info-card" style="margin-top:2%;">
-
+                    <div class="privacy-meta-card">
                         <i class="fa-solid fa-lock"></i>
-
                         <div>
-
-                            <h4>
-
-                                Website Security
-
-                            </h4>
-
-                            <p>
-
-                                SSL Secured & Protected
-
-                            </p>
-
+                            <h4>Data Security</h4>
+                            <p>256-bit SSL Encrypted</p>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-            <!-- Right -->
-
-            <div class="privacy-image-wrapper">
-
-                <img
-                    src="{% static 'images/privacy/privacy-hero.jpg' %}"
-                    alt="Magency Info Privacy Policy"
-                    class="privacy-image">
-
+            <!-- Right Visual -->
+            <div class="privacy-hero-image">
+                <img src="{% static 'images/privacy/privacy-hero.jpg' %}" alt="Magency Info Privacy Policy">
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-        QUICK PRIVACY FEATURES
-==========================================-->
-
-<section class="privacy-features" style="margin-bottom:3%">
-
-    <div class="container">
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
-                    <i class="fa-solid fa-lock"></i>
-
-                </div>
-
-                <h3>
-
-                    Secure Data
-
-                </h3>
-
-                <p>
-
-                    Your personal and business information is protected using
-                    modern security practices, encrypted communication, and
-                    secure hosting infrastructure.
-
-                </p>
-
-            </div>
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
-                    <i class="fa-solid fa-cookie-bite"></i>
-
-                </div>
-
-                <h3>
-
-                    Smart Cookies
-
-                </h3>
-
-                <p>
-
-                    We use cookies to improve website functionality,
-                    personalize your browsing experience, and analyze website
-                    performance.
-
-                </p>
-
-            </div>
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
+    2. OVERVIEW PILLS
+    ==========================================-->
+<section class="privacy-overview-section">
+    <div class="privacy-container">
+        <div class="privacy-overview-grid">
+            <div class="privacy-overview-card">
+                <div class="privacy-overview-icon">
                     <i class="fa-solid fa-user-shield"></i>
-
                 </div>
-
-                <h3>
-
-                    Privacy First
-
-                </h3>
-
-                <p>
-
-                    We never sell or rent your personal information to third
-                    parties. Your trust is our highest priority.
-
-                </p>
-
+                <h3>Zero Data Selling</h3>
+                <p>We will never sell, rent, or trade your personal or business data to third-party brokers.</p>
             </div>
 
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
-                    <i class="fa-solid fa-server"></i>
-
+            <div class="privacy-overview-card">
+                <div class="privacy-overview-icon">
+                    <i class="fa-solid fa-lock"></i>
                 </div>
-
-                <h3>
-
-                    Secure Infrastructure
-
-                </h3>
-
-                <p>
-
-                    All information is stored using secure cloud infrastructure
-                    with regular monitoring and industry-standard protection.
-
-                </p>
-
+                <h3>Encrypted Storage</h3>
+                <p>Industry-standard TLS encryption across all client communications and credentials.</p>
             </div>
 
+            <div class="privacy-overview-card">
+                <div class="privacy-overview-icon">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                </div>
+                <h3>Cookie Control</h3>
+                <p>Transparent analytics cookies used strictly for optimizing user experience and performance.</p>
+            </div>
+
+            <div class="privacy-overview-card">
+                <div class="privacy-overview-icon">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3>GDPR & CCPA Compliant</h3>
+                <p>Built with global data privacy compliance and individual data subject rights.</p>
+            </div>
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-        PRIVACY CONTENT
-==========================================-->
-
-<section class="privacy-content-section" style="margin-bottom:3%">
-
-    <div class="container">
-
-        <div class="privacy-layout">
-
-            <!-- Sidebar -->
-
-            <aside class="privacy-sidebar">
-
-                <div class="sidebar-card">
-
-                    <h3>
-
-                        Table of Contents
-
-                    </h3>
-
-                    <ul>
-
-                        <li><a href="#introduction">Introduction</a></li>
-
-                        <li><a href="#collection">Information We Collect</a></li>
-
-                        <li><a href="#usage">How We Use Information</a></li>
-
-                        <li><a href="#cookies">Cookies Policy</a></li>
-
-                        <li><a href="#third-party">Third-Party Services</a></li>
-
-                        <li><a href="#security">Data Security</a></li>
-
-                        <li><a href="#rights">Your Privacy Rights</a></li>
-
-                        <li><a href="#retention">Data Retention</a></li>
-
-                        <li><a href="#contact">Contact Us</a></li>
-
-                    </ul>
-
-                </div>
-
+    3. MAIN PRIVACY CONTENT WITH SIDEBAR
+    ==========================================-->
+<section class="privacy-body-section">
+    <div class="privacy-container">
+        <div class="privacy-body-layout">
+            <!-- Sticky Sidebar -->
+            <aside class="privacy-toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul class="privacy-toc-list">
+                    <li><a href="#information" class="active">1. Information We Collect</a></li>
+                    <li><a href="#usage">2. How We Use Data</a></li>
+                    <li><a href="#cookies">3. Cookies & Tracking</a></li>
+                    <li><a href="#security">4. Data Security</a></li>
+                    <li><a href="#sharing">5. Third-Party Sharing</a></li>
+                    <li><a href="#retention">6. Data Retention</a></li>
+                    <li><a href="#rights">7. Your Privacy Rights</a></li>
+                    <li><a href="#contact">8. Contact Data Officer</a></li>
+                </ul>
             </aside>
 
-            <!-- Main -->
+            <!-- Main Articles -->
+            <div class="privacy-main-content">
+                <!-- 1. Information We Collect -->
+                <article id="information" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 1</span>
+                    <h2>1. Information We Collect</h2>
+                    <p>
+                        We collect information necessary to provide design consultations, execute client projects, and ensure website security. This includes:
+                    </p>
+                    <ul>
+                        <li><strong>Personal Identification:</strong> Name, work email address, phone number, and company name when submitting contact or consultation booking forms.</li>
+                        <li><strong>Project Specifications:</strong> Technical requirements, brand assets, API keys, and project documentation provided during discovery sprints.</li>
+                        <li><strong>Usage Analytics:</strong> IP addresses, browser types, referral sources, and page view metrics collected anonymously via performance cookies.</li>
+                    </ul>
+                </article>
 
-            <div class="privacy-main">
+                <!-- 2. How We Use Data -->
+                <article id="usage" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 2</span>
+                    <h2>2. How We Use Your Information</h2>
+                    <p>
+                        We use the collected information solely for legitimate business purposes, including:
+                    </p>
+                    <ul>
+                        <li>Delivering bespoke web, mobile, UI/UX, and AI development services.</li>
+                        <li>Responding to quote requests, consultation bookings, and technical inquiries.</li>
+                        <li>Processing milestone payments and issuing official business invoices.</li>
+                        <li>Enhancing website speed, Core Web Vitals, and user accessibility.</li>
+                    </ul>
+                    <div class="privacy-notice-box">
+                        <p>We do not train public AI models on private client code, credentials, or proprietary datasets.</p>
+                    </div>
+                </article>
 
-<!--=========================================
-        INTRODUCTION
-==========================================-->
+                <!-- 3. Cookies & Tracking -->
+                <article id="cookies" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 3</span>
+                    <h2>3. Cookies & Tracking Technologies</h2>
+                    <p>
+                        Our website uses essential and performance cookies to remember session preferences, analyze traffic flow, and ensure seamless navigation. You can adjust your browser settings to decline non-essential cookies at any time without impacting core site availability.
+                    </p>
+                </article>
 
-<section id="introduction" class="policy-card" style="margin-bottom:3%">
+                <!-- 4. Data Security -->
+                <article id="security" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 4</span>
+                    <h2>4. Data Security & Storage</h2>
+                    <p>
+                        We employ enterprise-grade administrative, technical, and physical security measures to safeguard your information against unauthorized access, disclosure, alteration, or loss. All form submissions transmit over SSL/TLS 256-bit encrypted channels.
+                    </p>
+                </article>
 
-    <span class="section-tag">
+                <!-- 5. Third-Party Sharing -->
+                <article id="sharing" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 5</span>
+                    <h2>5. Third-Party Service Providers</h2>
+                    <p>
+                        We may share necessary data with trusted third-party infrastructure providers (e.g. cloud hosting servers, payment gateways, transactional email APIs) strictly to fulfill project requirements. These providers are bound by strict confidentiality and data protection agreements.
+                    </p>
+                </article>
 
-        Introduction
+                <!-- 6. Data Retention -->
+                <article id="retention" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 6</span>
+                    <h2>6. Data Retention Policy</h2>
+                    <p>
+                        We retain client records and project deliverables only for as long as necessary to fulfill project requirements, provide ongoing maintenance support, and comply with legal or accounting obligations.
+                    </p>
+                </article>
 
-    </span>
+                <!-- 7. Your Privacy Rights -->
+                <article id="rights" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 7</span>
+                    <h2>7. Your Privacy Rights (GDPR & CCPA)</h2>
+                    <p>
+                        Depending on your jurisdiction, you have the right to request access to, correction of, or complete deletion of your personal data stored in our systems. To exercise any of these rights, please contact our data protection team.
+                    </p>
+                </article>
 
-    <h2>
-
-        Your Privacy Matters
-
-    </h2>
-
-    <p>
-
-        Welcome to <strong>Magency Info</strong> ("Magency Info", "M Agency",
-        "we", "our", or "us"). We are a digital agency providing website
-        development, search engine optimization (SEO), branding, digital
-        marketing, UI/UX design, AI automation, and business technology
-        solutions.
-
-    </p>
-
-    <p>
-
-        This Privacy Policy explains how we collect, use, protect, disclose,
-        and store your personal information whenever you visit our website,
-        request a quotation, submit a contact form, book a consultation, or
-        use any of our digital services.
-
-    </p>
-
-    <p>
-
-        By accessing or using our website, you agree to the practices
-        described in this Privacy Policy. If you do not agree with any part of
-        this policy, please discontinue using our website and services.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        INFORMATION WE COLLECT
-==========================================-->
-
-<section id="collection" class="policy-card"
-style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Information Collection
-
-    </span>
-
-    <h2>
-
-        Information We Collect
-
-    </h2>
-
-    <p>
-
-        We collect only the information necessary to deliver our services,
-        improve your experience, communicate effectively, and comply with
-        applicable legal obligations.
-
-    </p>
-
-    <div class="info-grid">
-
-        <!-- Personal -->
-
-        <div class="info-box">
-
-            <i class="fa-solid fa-user"></i>
-
-            <h4>
-
-                Personal Information
-
-            </h4>
-
-            <ul>
-
-                <li>Full Name</li>
-                <li>Email Address</li>
-                <li>Phone Number</li>
-                <li>Company or Business Name</li>
-                <li>Website URL</li>
-                <li>Country / Location</li>
-                <li>Project Requirements</li>
-                <li>Estimated Budget</li>
-                <li>Preferred Meeting Date & Time</li>
-
-            </ul>
-
+                <!-- 8. Contact Data Officer -->
+                <article id="contact" class="privacy-article-card">
+                    <span class="privacy-section-tag">Section 8</span>
+                    <h2>8. Contact Our Data Protection Team</h2>
+                    <p>
+                        If you have questions, concerns, or requests regarding this Privacy Policy or how your data is handled, please contact us.
+                    </p>
+                </article>
+            </div>
         </div>
-
-        <!-- Technical -->
-
-        <div class="info-box">
-
-            <i class="fa-solid fa-desktop"></i>
-
-            <h4>
-
-                Technical Information
-
-            </h4>
-
-            <ul>
-
-                <li>IP Address</li>
-                <li>Browser Type & Version</li>
-                <li>Operating System</li>
-                <li>Device Information</li>
-                <li>Screen Resolution</li>
-                <li>Website Pages Visited</li>
-                <li>Referral Source</li>
-                <li>Cookies & Tracking Data</li>
-                <li>Website Usage Analytics</li>
-
-            </ul>
-
-        </div>
-
     </div>
+</section>
 
-    <div class="policy-note">
-
-        <p>
-
-            <strong>Important:</strong> We collect personal information only
-            when you voluntarily provide it through our contact forms,
-            consultation booking forms, email communications, project
-            enquiries, newsletter subscriptions, or other interactions with
-            Magency Info.
-
-        </p>
-
+<!--=========================================
+    4. CONTACT & ASSISTANCE BANNER
+    ==========================================-->
+<section class="privacy-help-section">
+    <div class="privacy-container">
+        <div class="privacy-help-wrapper">
+            <h2>Have Questions About Your Data Privacy?</h2>
+            <p>Our compliance team is ready to answer your data governance and confidentiality questions.</p>
+            <div class="privacy-help-buttons">
+                <a href="{% url 'contact' %}" class="privacy-btn-primary">
+                    Contact Privacy Team
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'booking' %}" class="privacy-btn-outline">
+                    Book Consultation
+                </a>
+            </div>
+        </div>
     </div>
-
-</section>
-
-<!--=========================================
-        HOW WE USE INFORMATION
-==========================================-->
-
-<section
-    id="usage"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Information Usage
-
-    </span>
-
-    <h2>
-
-        How We Use Your Information
-
-    </h2>
-
-    <p>
-
-        At <strong>Magency Info</strong>, we use the information we collect only
-        for legitimate business purposes. Our goal is to deliver exceptional
-        digital services while maintaining transparency, security, and
-        compliance with applicable privacy laws.
-
-    </p>
-
-    <div class="usage-grid">
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-comments"></i>
-
-            <h4>
-
-                Client Communication
-
-            </h4>
-
-            <p>
-
-                Respond to enquiries, project discussions, support requests,
-                consultations, quotations, and ongoing client communication.
-
-            </p>
-
-        </div>
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-code"></i>
-
-            <h4>
-
-                Service Delivery
-
-            </h4>
-
-            <p>
-
-                Develop websites, applications, AI solutions, branding,
-                SEO strategies, marketing campaigns, and other digital
-                services requested by our clients.
-
-            </p>
-
-        </div>
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <h4>
-
-                Website Analytics
-
-            </h4>
-
-            <p>
-
-                Analyze visitor behavior, optimize website performance,
-                improve user experience, and enhance our online services.
-
-            </p>
-
-        </div>
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-shield-halved"></i>
-
-            <h4>
-
-                Security & Fraud Prevention
-
-            </h4>
-
-            <p>
-
-                Detect suspicious activity, prevent fraud,
-                secure our systems, and protect both our users
-                and business infrastructure.
-
-            </p>
-
-        </div>
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-receipt"></i>
-
-            <h4>
-
-                Billing & Payments
-
-            </h4>
-
-            <p>
-
-                Generate quotations, invoices,
-                payment confirmations, project agreements,
-                and financial records.
-
-            </p>
-
-        </div>
-
-        <div class="usage-card">
-
-            <i class="fa-solid fa-envelope-open-text"></i>
-
-            <h4>
-
-                Marketing Communication
-
-            </h4>
-
-            <p>
-
-                Send newsletters, company updates,
-                promotional offers, and educational content
-                only when you have provided consent.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CONTACT & BOOKING FORMS
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Contact Forms
-
-    </span>
-
-    <h2>
-
-        Information Submitted Through Forms
-
-    </h2>
-
-    <p>
-
-        When you contact Magency Info or request a quotation,
-        consultation, or project discussion,
-        you may voluntarily provide information including:
-
-    </p>
-
-    <div class="info-grid">
-
-        <div class="info-box">
-
-            <i class="fa-solid fa-address-card"></i>
-
-            <h4>
-
-                Contact Details
-
-            </h4>
-
-            <ul>
-
-                <li>Full Name</li>
-                <li>Email Address</li>
-                <li>Phone Number</li>
-                <li>Company Name</li>
-                <li>Business Website</li>
-
-            </ul>
-
-        </div>
-
-        <div class="info-box">
-
-            <i class="fa-solid fa-briefcase"></i>
-
-            <h4>
-
-                Project Information
-
-            </h4>
-
-            <ul>
-
-                <li>Requested Service</li>
-                <li>Project Description</li>
-                <li>Estimated Budget</li>
-                <li>Preferred Meeting Date</li>
-                <li>Preferred Meeting Time</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-    <p>
-
-        This information is used solely to evaluate your enquiry,
-        prepare quotations,
-        communicate regarding your project,
-        and deliver our services effectively.
-
-    </p>
-
-</section>
-
-<!--=========================================
-            COOKIES POLICY
-==========================================-->
-
-<section
-    id="cookies"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Cookies
-
-    </span>
-
-    <h2>
-
-        Cookies & Tracking Technologies
-
-    </h2>
-
-    <p>
-
-        Our website uses cookies and similar technologies
-        to improve functionality,
-        remember your preferences,
-        enhance website performance,
-        and better understand how visitors interact
-        with our website.
-
-    </p>
-
-    <div class="cookie-grid">
-
-        <div class="cookie-card">
-
-            <i class="fa-solid fa-cookie"></i>
-
-            <h4>
-
-                Essential Cookies
-
-            </h4>
-
-            <p>
-
-                Required for website functionality,
-                navigation,
-                security,
-                and form submissions.
-
-            </p>
-
-        </div>
-
-        <div class="cookie-card">
-
-            <i class="fa-solid fa-chart-pie"></i>
-
-            <h4>
-
-                Analytics Cookies
-
-            </h4>
-
-            <p>
-
-                Help us understand visitor activity
-                and continuously improve our website.
-
-            </p>
-
-        </div>
-
-        <div class="cookie-card">
-
-            <i class="fa-solid fa-sliders"></i>
-
-            <h4>
-
-                Preference Cookies
-
-            </h4>
-
-            <p>
-
-                Remember your language,
-                theme,
-                and browsing preferences.
-
-            </p>
-
-        </div>
-
-        <div class="cookie-card">
-
-            <i class="fa-solid fa-bullhorn"></i>
-
-            <h4>
-
-                Marketing Cookies
-
-            </h4>
-
-            <p>
-
-                Used only when applicable
-                to measure advertising campaigns
-                and deliver relevant promotions.
-
-            </p>
-
-        </div>
-
-    </div>
-
-    <p>
-
-        You may disable cookies at any time through
-        your browser settings.
-        However, some website features may not function properly.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        THIRD PARTY SERVICES
-==========================================-->
-
-<section
-    id="third-party"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Third-Party Services
-
-    </span>
-
-    <h2>
-
-        Trusted Service Providers
-
-    </h2>
-
-    <p>
-
-        We work with trusted third-party platforms
-        to operate our website,
-        deliver digital services,
-        process payments,
-        analyze traffic,
-        and improve customer experience.
-
-    </p>
-
-    <div class="third-party-grid">
-
-        <div class="third-card">
-
-            <i class="fa-brands fa-google"></i>
-
-            <h4>
-
-                Google Analytics
-
-            </h4>
-
-        </div>
-
-        <div class="third-card">
-
-            <i class="fa-brands fa-google"></i>
-
-            <h4>
-
-                Google Search Console
-
-            </h4>
-
-        </div>
-
-        <div class="third-card">
-
-            <i class="fa-solid fa-cloud"></i>
-
-            <h4>
-
-                Cloudflare
-
-            </h4>
-
-        </div>
-
-        <div class="third-card">
-
-            <i class="fa-solid fa-server"></i>
-
-            <h4>
-
-                Hostinger Cloud Hosting
-
-            </h4>
-
-        </div>
-
-        <div class="third-card">
-
-            <i class="fa-solid fa-credit-card"></i>
-
-            <h4>
-
-                Razorpay / Stripe
-
-            </h4>
-
-        </div>
-
-        <div class="third-card">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <h4>
-
-                Email Service Providers
-
-            </h4>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-            AI SERVICES
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Artificial Intelligence
-
-    </span>
-
-    <h2>
-
-        AI-Powered Services
-
-    </h2>
-
-    <p>
-
-        Magency Info may use Artificial Intelligence
-        technologies to improve website automation,
-        customer support,
-        chatbot responses,
-        workflow optimization,
-        business automation,
-        and content generation.
-
-    </p>
-
-    <p>
-
-        AI-generated outputs are intended to assist users
-        and should be reviewed before making
-        important business or legal decisions.
-
-    </p>
-
-</section>
-
-<!--=========================================
-            PAYMENTS
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Payments
-
-    </span>
-
-    <h2>
-
-        Payment Information
-
-    </h2>
-
-    <p>
-
-        Payments for our services are processed through
-        trusted third-party payment gateways.
-
-    </p>
-
-    <p>
-
-        Magency Info does not store your debit card,
-        credit card,
-        CVV,
-        banking credentials,
-        or payment passwords on its servers.
-
-    </p>
-
-    <p>
-
-        All payment transactions are encrypted
-        and handled securely by certified payment providers.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        MARKETING COMMUNICATIONS
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Marketing
-
-    </span>
-
-    <h2>
-
-        Marketing Communications
-
-    </h2>
-
-    <p>
-
-        If you subscribe to our newsletter,
-        download resources,
-        or voluntarily opt in,
-        we may send updates about new services,
-        industry insights,
-        educational content,
-        company announcements,
-        and promotional offers.
-
-    </p>
-
-    <p>
-
-        You may unsubscribe from marketing emails
-        at any time by clicking the unsubscribe link
-        or contacting our support team.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        DATA SECURITY
-==========================================-->
-
-<section
-    id="security"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Security
-
-    </span>
-
-    <h2>
-
-        How We Protect Your Information
-
-    </h2>
-
-    <p>
-
-        At <strong>Magency Info</strong>, protecting your information is one of
-        our highest priorities. We implement industry-standard technical,
-        administrative, and organizational security measures to protect your
-        personal information against unauthorized access, misuse,
-        alteration, disclosure, or destruction.
-
-    </p>
-
-    <div class="security-timeline">
-
-        <div class="security-item">
-
-            <div class="security-icon">
-
-                <i class="fa-solid fa-lock"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    SSL Encryption
-
-                </h4>
-
-                <p>
-
-                    All communication between your browser and our website
-                    is encrypted using Secure Socket Layer (SSL) technology.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="security-item">
-
-            <div class="security-icon">
-
-                <i class="fa-solid fa-server"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Secure Cloud Hosting
-
-                </h4>
-
-                <p>
-
-                    Our website and applications are hosted on reliable,
-                    secure cloud infrastructure with regular monitoring.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="security-item">
-
-            <div class="security-icon">
-
-                <i class="fa-solid fa-user-shield"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Restricted Access
-
-                </h4>
-
-                <p>
-
-                    Personal information is accessible only to authorized
-                    personnel who require it to perform their duties.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="security-item">
-
-            <div class="security-icon">
-
-                <i class="fa-solid fa-shield-halved"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Continuous Monitoring
-
-                </h4>
-
-                <p>
-
-                    We regularly update software,
-                    monitor vulnerabilities,
-                    and apply security patches.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CLIENT CONFIDENTIALITY
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Confidentiality
-
-    </span>
-
-    <h2>
-
-        Client Confidentiality
-
-    </h2>
-
-    <p>
-
-        We understand the importance of protecting confidential business
-        information. Any documents, project files, credentials,
-        source code, designs, or proprietary information shared with us
-        during a project are treated as confidential.
-
-    </p>
-
-    <p>
-
-        We never disclose confidential client information to third parties
-        without permission unless required by law.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        PORTFOLIO
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Portfolio
-
-    </span>
-
-    <h2>
-
-        Client Projects & Portfolio
-
-    </h2>
-
-    <p>
-
-        Magency Info may showcase completed client projects,
-        case studies,
-        screenshots,
-        or project summaries within our portfolio
-        for marketing purposes.
-
-    </p>
-
-    <p>
-
-        If a project is protected by a Non-Disclosure Agreement (NDA)
-        or if the client requests confidentiality,
-        the project will not be displayed publicly.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        DATA RETENTION
-==========================================-->
-
-<section
-    id="retention"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Data Retention
-
-    </span>
-
-    <h2>
-
-        How Long We Keep Your Information
-
-    </h2>
-
-    <p>
-
-        We retain personal information only for as long as necessary
-        to fulfill the purposes described in this Privacy Policy,
-        comply with legal obligations,
-        resolve disputes,
-        and enforce agreements.
-
-    </p>
-
-    <div class="retention-timeline">
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-user"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Contact Information
-
-                </h4>
-
-                <p>
-
-                    Retained for customer support,
-                    quotations,
-                    and project communication.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-file-invoice"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Financial Records
-
-                </h4>
-
-                <p>
-
-                    Stored as required by taxation,
-                    accounting,
-                    and applicable legal regulations.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-trash-can"></i>
-
-            </div>
-
-            <div>
-
-                <h4>
-
-                    Secure Deletion
-
-                </h4>
-
-                <p>
-
-                    Personal information is securely removed
-                    once it is no longer required
-                    for legitimate business purposes.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        YOUR RIGHTS
-==========================================-->
-
-<section
-    id="rights"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Your Rights
-
-    </span>
-
-    <h2>
-
-        Your Privacy Rights
-
-    </h2>
-
-    <p>
-
-        Depending on applicable privacy laws,
-        you may have the following rights regarding
-        your personal information.
-
-    </p>
-
-    <div class="rights-grid">
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-eye"></i>
-
-            <h4>
-
-                Right to Access
-
-            </h4>
-
-            <p>
-
-                Request a copy of the personal
-                information we maintain about you.
-
-            </p>
-
-        </div>
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-pen"></i>
-
-            <h4>
-
-                Right to Correction
-
-            </h4>
-
-            <p>
-
-                Correct inaccurate or incomplete
-                personal information.
-
-            </p>
-
-        </div>
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-trash"></i>
-
-            <h4>
-
-                Right to Erasure
-
-            </h4>
-
-            <p>
-
-                Request deletion of your personal
-                information where legally permitted.
-
-            </p>
-
-        </div>
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-download"></i>
-
-            <h4>
-
-                Data Portability
-
-            </h4>
-
-            <p>
-
-                Receive your personal information
-                in a structured and portable format.
-
-            </p>
-
-        </div>
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-ban"></i>
-
-            <h4>
-
-                Withdraw Consent
-
-            </h4>
-
-            <p>
-
-                Withdraw consent for marketing
-                communications or data processing
-                where applicable.
-
-            </p>
-
-        </div>
-
-        <div class="right-card">
-
-            <i class="fa-solid fa-envelope-open-text"></i>
-
-            <h4>
-
-                Marketing Preferences
-
-            </h4>
-
-            <p>
-
-                Opt out of newsletters,
-                promotional emails,
-                and marketing campaigns
-                at any time.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        INTERNATIONAL USERS
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        International Visitors
-
-    </span>
-
-    <h2>
-
-        International Data Transfers
-
-    </h2>
-
-    <p>
-
-        Our website may be accessed from countries
-        outside India. By using our website,
-        you acknowledge that your information
-        may be processed and stored in countries
-        where our hosting providers,
-        partners,
-        or service providers operate.
-
-    </p>
-
-    <p>
-
-        We take reasonable steps to ensure
-        that international transfers of personal data
-        remain protected through appropriate
-        contractual and security measures.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        LEGAL COMPLIANCE
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Legal Compliance
-
-    </span>
-
-    <h2>
-
-        Compliance With Privacy Laws
-
-    </h2>
-
-    <p>
-
-        Magency Info strives to comply with
-        applicable privacy and data protection laws,
-        including the Digital Personal Data Protection
-        Act (DPDP Act 2023) of India and,
-        where applicable,
-        internationally recognized privacy principles.
-
-    </p>
-
-    <p>
-
-        We continuously review our privacy practices
-        to improve transparency,
-        strengthen security,
-        and maintain compliance with evolving legal requirements.
-
-    </p>
-
-</section>
-
-
-<!--=========================================
-        CHILDREN'S PRIVACY
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Children's Privacy
-
-    </span>
-
-    <h2>
-
-        Children's Privacy
-
-    </h2>
-
-    <p>
-
-        Magency Info does not knowingly collect personal information from
-        children under the age of 18. Our services are intended for
-        businesses, entrepreneurs, professionals, and individuals who are
-        legally capable of entering into contracts.
-
-    </p>
-
-    <p>
-
-        If we become aware that personal information has been submitted by
-        a child without appropriate parental or legal guardian consent,
-        we will take reasonable steps to delete such information promptly.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        EXTERNAL LINKS
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        External Links
-
-    </span>
-
-    <h2>
-
-        Third-Party Websites
-
-    </h2>
-
-    <p>
-
-        Our website may contain links to third-party websites, software,
-        payment gateways, social media platforms, or external resources.
-
-    </p>
-
-    <p>
-
-        We are not responsible for the privacy practices, security,
-        or content of third-party websites. We encourage you to review
-        the privacy policies of every website you visit.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        POLICY CHANGES
-==========================================-->
-
-<section
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Policy Updates
-
-    </span>
-
-    <h2>
-
-        Changes To This Privacy Policy
-
-    </h2>
-
-    <p>
-
-        We may update this Privacy Policy from time to time to reflect
-        changes in our services, technologies, legal obligations,
-        or business operations.
-
-    </p>
-
-    <p>
-
-        Any updates will become effective immediately after being published
-        on this page. The "Last Updated" date shown at the top of this
-        Privacy Policy will always indicate the latest revision.
-
-    </p>
-
-    <div class="update-box">
-
-        <i class="fa-solid fa-bell"></i>
-
-        <div>
-
-            <h4>
-
-                Stay Updated
-
-            </h4>
-
-            <p>
-
-                We recommend reviewing this Privacy Policy periodically
-                to stay informed about how your information is collected,
-                used, and protected.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CONTACT
-==========================================-->
-
-<section
-    id="contact"
-    class="policy-card"
-    style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Contact Us
-
-    </span>
-
-    <h2>
-
-        Questions About Privacy?
-
-    </h2>
-
-    <p>
-
-        If you have any questions, concerns,
-        or requests regarding this Privacy Policy
-        or the way we process your personal information,
-        please feel free to contact us.
-
-    </p>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <h4>
-
-                Office
-
-            </h4>
-
-            <p>
-
-                Punjab, India
-
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <h4>
-
-                Email
-
-            </h4>
-
-            <p>
-
-                hello@magencyinfo.com
-
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-globe"></i>
-
-            <h4>
-
-                Website
-
-            </h4>
-
-            <p>
-
-                www.magencyinfo.com
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        PRIVACY OFFICER
-==========================================-->
-
-<section
-    class="policy-card" style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Privacy Officer
-
-    </span>
-
-    <h2>
-
-        Data Protection Contact
-
-    </h2>
-
-    <p>
-
-        For questions relating to privacy,
-        data protection,
-        account deletion,
-        personal information requests,
-        or security concerns,
-        you may contact our Privacy Team using
-        the contact information provided above.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        COPYRIGHT
-==========================================-->
-
-<section
-    class="policy-card" style="margin-bottom:3%">
-
-    <span class="section-tag">
-
-        Intellectual Property
-
-    </span>
-
-    <h2>
-
-        Copyright Notice
-
-    </h2>
-
-    <p>
-
-        Unless otherwise stated,
-        all website content,
-        graphics,
-        logos,
-        branding,
-        source code,
-        text,
-        images,
-        and digital materials available on
-        Magency Info are the intellectual property
-        of Magency Info and are protected by
-        applicable copyright and intellectual
-        property laws.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        FINAL CTA
-==========================================-->
-
-<section class="privacy-cta">
-
-    <div class="cta-box">
-
-        <span>
-
-            YOUR PRIVACY MATTERS
-
-        </span>
-
-        <h2>
-
-            We're Committed To Protecting Your Information
-
-        </h2>
-
-        <p>
-
-            Transparency, security,
-            and trust are the foundation of every project we build.
-            Whether you're contacting us for website development,
-            SEO,
-            branding,
-            AI automation,
-            or digital marketing,
-            your information is handled responsibly
-            and securely.
-
-        </p>
-
-        <a
-            href="{% url 'contact' %}"
-            class="cta-btn">
-
-            Contact Our Team
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</section>
-
-</div>
-<!-- End .privacy-main -->
-
-</div>
-<!-- End .privacy-layout -->
-
-</div>
-<!-- End .container -->
-
 </section>
 
 {% endblock %}
 
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tocLinks = document.querySelectorAll('.privacy-toc-list a');
+    const articles = document.querySelectorAll('.privacy-article-card');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        articles.forEach(article => {
+            const articleTop = article.offsetTop - 120;
+            if (window.scrollY >= articleTop) {
+                current = article.getAttribute('id');
+            }
+        });
+
+        tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

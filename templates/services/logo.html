@@ -1,2674 +1,776 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Premium Logo Design & Brand Identity Services | Magencyinfo{% endblock %}
+
+{% block meta_description %}Create a timeless, professional logo and cohesive brand identity that builds customer trust. 100% custom concepts, vector source files, brand guidelines, and stationery design.{% endblock %}
+
 {% block content %}
 
 <!--=========================================
 LOGO DESIGN HERO
 ==========================================-->
-
 <section class="logo-service-hero">
-
-    <!-- Background -->
-
+    <!-- Background Blur & Blobs -->
     <div class="logo-service-bg">
-
         <span class="logo-service-blob logo-service-blob-1"></span>
-
         <span class="logo-service-blob logo-service-blob-2"></span>
-
         <span class="logo-service-blob logo-service-blob-3"></span>
-
         <span class="logo-service-grid"></span>
-
     </div>
 
     <div class="container">
-
         <div class="logo-service-wrapper">
-
-            <!--=========================
-            LEFT CONTENT
-            =========================-->
-
-            <div class="logo-service-content">
-
+            <!-- Left Side Content -->
+            <div class="logo-service-content logo-reveal logo-revealed">
                 <div class="logo-service-badge">
-
                     <i class="fa-solid fa-pen-ruler"></i>
-
                     Premium Logo Design Agency
-
                 </div>
 
                 <h1 class="logo-service-title">
-
                     Design A Powerful
-
-                    <span>
-
-                        Brand Identity
-
-                    </span>
-
+                    <span>Brand Identity</span>
                 </h1>
 
                 <p class="logo-service-description">
-
-                    We create memorable, timeless and professional logos
-                    that build trust, increase brand recognition,
-                    and help your business stand out from competitors.
-
+                    We create memorable, timeless, and professional logos that build trust, increase brand recognition, and help your business stand out from the competition.
                 </p>
 
-                <!-- FEATURES -->
-
+                <!-- Core Trust Features -->
                 <div class="logo-service-features">
-
                     <div class="logo-service-feature">
-
                         <i class="fa-solid fa-circle-check"></i>
-
                         <span>100% Unique Concepts</span>
-
                     </div>
-
                     <div class="logo-service-feature">
-
                         <i class="fa-solid fa-circle-check"></i>
-
                         <span>Unlimited Revisions</span>
-
                     </div>
-
                     <div class="logo-service-feature">
-
                         <i class="fa-solid fa-circle-check"></i>
-
                         <span>Source Files Included</span>
-
                     </div>
-
                     <div class="logo-service-feature">
-
                         <i class="fa-solid fa-circle-check"></i>
-
-                        <span>Fast Delivery</span>
-
+                        <span>Fast Turnaround</span>
                     </div>
-
                 </div>
 
-                <!-- BUTTONS -->
-
+                <!-- CTA Buttons -->
                 <div class="logo-service-buttons">
-
-                    <a href="{% url 'contact' %}"
-
-                    class="logo-service-btn-primary">
-
-                        Get Free Quote
-
+                    <a href="{% url 'contact' %}" class="logo-service-btn-primary">
+                        Get Started
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
-
-                    <a href="#portfolio"
-
-                    class="logo-service-btn-secondary" style="margin-top:3%;">
-
+                    <a href="#portfolio" class="logo-service-btn-secondary">
                         View Portfolio
-
                     </a>
-
                 </div>
-
-                <!-- STATS -->
-
-                <div class="logo-service-stats">
-
-                    <div class="logo-service-stat-card">
-
-                        <h2>2000+</h2>
-
-                        <p>Logos Designed</p>
-
-                    </div>
-
-                    <div class="logo-service-stat-card">
-
-                        <h2>98%</h2>
-
-                        <p>Client Satisfaction</p>
-
-                    </div>
-
-                    <div class="logo-service-stat-card">
-
-                        <h2>12+</h2>
-
-                        <p>Years Experience</p>
-
-                    </div>
-
-                    <div class="logo-service-stat-card">
-
-                        <h2>40+</h2>
-
-                        <p>Industries Served</p>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <!--=========================
-            RIGHT SIDE
-            =========================-->
-
-            <div class="logo-service-visual">
-
+            <!-- Right Side Image Box with Floating Cards -->
+            <div class="logo-service-visual logo-reveal logo-revealed">
                 <div class="logo-service-image-box">
+                    <img src="{% static 'images/services/logo/logo-hero.jpg' %}" alt="Logo Design Process mockup" class="logo-service-image">
 
-                    <img
-
-                    src="{% static 'images/services/logo/logo-hero.jpg' %}"
-
-                    alt="Logo Design"
-
-                    class="logo-service-image">
-
-                    <!-- Floating Card -->
-
+                    <!-- Floating Badge Card 1 -->
                     <div class="logo-service-floating-card logo-card-1">
-
                         <div class="logo-service-card-icon">
-
                             <i class="fa-solid fa-award"></i>
-
                         </div>
-
                         <div>
-
-                            <h5>
-
-                                Premium Quality
-
-                            </h5>
-
-                            <p>
-
-                                Creative Concepts
-
-                            </p>
-
+                            <h5>Premium Quality</h5>
+                            <p>Creative Concepts</p>
                         </div>
-
                     </div>
 
-                    <!-- Floating Card -->
-
+                    <!-- Floating Badge Card 2 -->
                     <div class="logo-service-floating-card logo-card-2">
-
                         <div class="logo-service-card-icon">
-
                             <i class="fa-solid fa-palette"></i>
-
                         </div>
-
                         <div>
-
-                            <h5>
-
-                                Brand Colors
-
-                            </h5>
-
-                            <p>
-
-                                Modern Identity
-
-                            </p>
-
+                            <h5>Brand Colors</h5>
+                            <p>Modern Identity</p>
                         </div>
-
                     </div>
 
-                    <!-- Floating Card -->
-
+                    <!-- Floating Badge Card 3 -->
                     <div class="logo-service-floating-card logo-card-3">
-
                         <div class="logo-service-card-icon">
-
                             <i class="fa-solid fa-layer-group"></i>
-
                         </div>
-
                         <div>
-
-                            <h5>
-
-                                Vector Files
-
-                            </h5>
-
-                            <p>
-
-                                AI • SVG • EPS
-
-                            </p>
-
+                            <h5>Vector Files</h5>
+                            <p>AI • SVG • EPS</p>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-WHY CHOOSE OUR LOGO DESIGN
+TRUST STATS STRIP
 ==========================================-->
-
-<section class="logo-service-why">
-
+<section class="logo-service-hero-stats">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADER
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Why Choose Us
-
-            </span>
-
-            <h2>
-
-                We Don't Just Design Logos
-
-                <span>
-
-                    We Build Brands
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                A professional logo is more than just a graphic.
-                It represents your company's values, builds trust,
-                and creates a memorable first impression.
-
-            </p>
-
+        <div class="logo-service-stats-wrapper">
+            <div class="logo-service-stat-item">
+                <h3 class="logo-counter" data-target="2000" data-suffix="+">0+</h3>
+                <p>Logos Designed</p>
+            </div>
+            <div class="logo-service-stat-item">
+                <h3 class="logo-counter" data-target="500" data-suffix="+">0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="logo-service-stat-item">
+                <h3 class="logo-counter" data-target="12" data-suffix="+">0+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="logo-service-stat-item">
+                <h3 class="logo-counter" data-target="98" data-suffix="%">0%</h3>
+                <p>Satisfaction Rate</p>
+            </div>
         </div>
-
-        <!--=========================
-        GRID
-        =========================-->
-
-        <div class="logo-service-why-grid">
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-lightbulb"></i>
-
-                </div>
-
-                <h3>
-
-                    Creative Concepts
-
-                </h3>
-
-                <p>
-
-                    Every logo is designed from scratch based
-                    on your business goals and brand identity.
-
-                </p>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-pen-ruler"></i>
-
-                </div>
-
-                <h3>
-
-                    Custom Design
-
-                </h3>
-
-                <p>
-
-                    No templates.
-                    No copied ideas.
-                    100% original logo concepts.
-
-                </p>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-repeat"></i>
-
-                </div>
-
-                <h3>
-
-                    Unlimited Revisions
-
-                </h3>
-
-                <p>
-
-                    We refine every concept until
-                    you're completely satisfied.
-
-                </p>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-layer-group"></i>
-
-                </div>
-
-                <h3>
-
-                    Complete Brand Assets
-
-                </h3>
-
-                <p>
-
-                    AI, EPS, SVG, PNG,
-                    PDF and high-resolution files
-                    included.
-
-                </p>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-clock"></i>
-
-                </div>
-
-                <h3>
-
-                    Fast Delivery
-
-                </h3>
-
-                <p>
-
-                    Initial concepts delivered
-                    within just a few business days.
-
-                </p>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-why-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                </div>
-
-                <h3>
-
-                    Brand Strategy
-
-                </h3>
-
-                <p>
-
-                    We create logos that improve
-                    brand recognition and customer trust.
-
-                </p>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
+
 <!--=========================================
 LOGO DESIGN SERVICES
 ==========================================-->
-
-<section class="logo-service-services">
-
+<section class="logo-service-section logo-service-services">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADING
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Our Services
-
-            </span>
-
-            <h2>
-
-                Complete Branding
-
-                <span>
-
-                    & Logo Design Solutions
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                From startup logos to complete corporate branding,
-                we create visual identities that help businesses
-                become memorable and build lasting customer trust.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Our Services</span>
+            <h2>Complete Branding <span>& Logo Design Solutions</span></h2>
+            <p>From startup logos to complete corporate branding guidelines, we build cohesive, scalable visual identities that foster long-term customer trust.</p>
         </div>
 
-        <!--=========================
-        SERVICES GRID
-        =========================-->
-
-        <div class="logo-service-gridd">
-
-            <!-- Service -->
-
-            <div class="logo-service-card " style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-pen-ruler"></i>
-
-                </div>
-
-                <h3>
-
-                    Custom Logo Design
-
-                </h3>
-
-                <p>
-
-                    Premium logo concepts created specifically
-                    for your business and industry.
-
-                </p>
-
-                <ul>
-
-                    <li>Multiple Concepts</li>
-
-                    <li>Unlimited Revisions</li>
-
-                    <li>Vector Files</li>
-
-                    <li>Commercial License</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-arrows-rotate"></i>
-
-                </div>
-
-                <h3>
-
-                    Logo Redesign
-
-                </h3>
-
-                <p>
-
-                    Refresh outdated logos while
-                    maintaining your brand identity.
-
-                </p>
-
-                <ul>
-
-                    <li>Modern Look</li>
-
-                    <li>Brand Consistency</li>
-
-                    <li>Professional Upgrade</li>
-
-                    <li>Scalable Design</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-palette"></i>
-
-                </div>
-
-                <h3>
-
-                    Brand Identity
-
-                </h3>
-
-                <p>
-
-                    Build a consistent visual
-                    identity across every platform.
-
-                </p>
-
-                <ul>
-
-                    <li>Brand Colors</li>
-
-                    <li>Typography</li>
-
-                    <li>Icon Style</li>
-
-                    <li>Visual Identity</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-id-card"></i>
-
-                </div>
-
-                <h3>
-
-                    Business Stationery
-
-                </h3>
-
-                <p>
-
-                    Professional business cards,
-                    letterheads and office branding.
-
-                </p>
-
-                <ul>
-
-                    <li>Business Card</li>
-
-                    <li>Letterhead</li>
-
-                    <li>Email Signature</li>
-
-                    <li>Envelope Design</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-hashtag"></i>
-
-                </div>
-
-                <h3>
-
-                    Social Media Branding
-
-                </h3>
-
-                <p>
-
-                    Branded graphics for Instagram,
-                    Facebook, LinkedIn and YouTube.
-
-                </p>
-
-                <ul>
-
-                    <li>Profile Images</li>
-
-                    <li>Cover Photos</li>
-
-                    <li>Highlight</li>
-
-                    <li>Templates</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-box-open"></i>
-
-                </div>
-
-                <h3>
-
-                    Packaging Design
-
-                </h3>
-
-                <p>
-
-                    Product packaging that
-                    enhances your brand identity.
-
-                </p>
-
-                <ul>
-
-                    <li>Box Design</li>
-
-                    <li>Labels</li>
-
-                    <li>Product Mockups</li>
-
-                    <li>Print Ready Files</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
-            <div class="logo-service-card" style="margin-bottom: 5%;">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-book-open"></i>
-
-                </div>
-
-                <h3>
-
-                    Brand Guidelines
-
-                </h3>
-
-                <p>
-
-                    Complete documentation for
-                    consistent branding.
-
-                </p>
-
-                <ul>
-
-                    <li>Color Guide</li>
-
-                    <li>Typography</li>
-
-                    <li>Logo Usage</li>
-
-                    <li>Spacing Rules</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Service -->
-
+        <div class="logo-service-gridd logo-reveal">
+            <!-- Card 1 -->
             <div class="logo-service-card">
-
-                <div class="logo-service-cta-item">
-
-                    <i class="fa-solid fa-crown"></i>
-
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-pen-ruler"></i>
                 </div>
-
-                <h3>
-
-                    Complete Branding
-
-                </h3>
-
-                <p>
-
-                    End-to-end branding solution
-                    for startups and enterprises.
-
-                </p>
-
+                <h3>Custom Logo Design</h3>
+                <p>Tailored logo concepts created from scratch specifically to capture your brand vision and speak directly to your target industry.</p>
                 <ul>
-
-                    <li>Logo Design</li>
-
-                    <li>Brand Identity</li>
-
-                    <li>Marketing Assets</li>
-
-                    <li>Style Guide</li>
-
+                    <li>Multiple Concepts</li>
+                    <li>Unlimited Revisions</li>
+                    <li>Vector File Formats</li>
+                    <li>Full Ownership</li>
                 </ul>
-
             </div>
 
+            <!-- Card 2 -->
+            <div class="logo-service-card">
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                </div>
+                <h3>Logo Redesign</h3>
+                <p>Modernize your existing, outdated mark into a clean, modern design while retaining key visual elements that preserve brand equity.</p>
+                <ul>
+                    <li>Refreshed Look</li>
+                    <li>Brand Recognition</li>
+                    <li>Scalability Fixes</li>
+                    <li>Typography Upgrade</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="logo-service-card">
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <h3>Brand Identity</h3>
+                <p>Build a cohesive, unified visual presence across all online platforms, digital assets, packaging, and marketing collateral.</p>
+                <ul>
+                    <li>Custom Palettes</li>
+                    <li>Font Selection</li>
+                    <li>Layout Hierarchy</li>
+                    <li>Asset Sizing</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="logo-service-card">
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-id-card"></i>
+                </div>
+                <h3>Business Stationery</h3>
+                <p>Make a premium impression with professionally designed corporate communication tools, stationery, and business cards.</p>
+                <ul>
+                    <li>Business Cards</li>
+                    <li>Letterhead Design</li>
+                    <li>Envelope Layouts</li>
+                    <li>Email Signatures</li>
+                </ul>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="logo-service-card">
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-hashtag"></i>
+                </div>
+                <h3>Social Media Branding</h3>
+                <p>Receive optimized profile banners, templates, and layouts to ensure your branding remains consistent across social platforms.</p>
+                <ul>
+                    <li>Profile Icons</li>
+                    <li>Banner Templates</li>
+                    <li>Post Frameworks</li>
+                    <li>Highlight Icons</li>
+                </ul>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="logo-service-card">
+                <div class="logo-service-card-icon-wrapper">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
+                <h3>Brand Guidelines</h3>
+                <p>A comprehensive design handbook specifying exact colors, typography systems, spacing, and appropriate logo usages.</p>
+                <ul>
+                    <li>HEX/RGB Colors</li>
+                    <li>Type Hierarchy</li>
+                    <li>Spacing Rules</li>
+                    <li>Do's & Don'ts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+WHY CHOOSE US
+==========================================-->
+<section class="logo-service-section logo-service-why">
+    <div class="container">
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Why Choose Us</span>
+            <h2>Why Businesses Trust <span>Magencyinfo</span></h2>
+            <p>We combine design strategy with creative execution to build memorable, professional logos that support conversion and scaling.</p>
         </div>
 
-    </div>
+        <div class="logo-service-why-grid logo-reveal">
+            <!-- Point 1 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-user-tie logo-service-why-icon"></i>
+                <h3>Professional Designers</h3>
+                <p>Our branding projects are executed by experienced designers, ensuring top-tier visual outputs.</p>
+            </div>
 
-</section> 
+            <!-- Point 2 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-compass-drafting logo-service-why-icon"></i>
+                <h3>100% Unique Concepts</h3>
+                <p>We do not use stock templates or generic symbols. Every logo is custom-built based on sketches.</p>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-rotate-left logo-service-why-icon"></i>
+                <h3>Unlimited Revisions</h3>
+                <p>We iterate on concepts and refine details until you are completely satisfied with the final result.</p>
+            </div>
+
+            <!-- Point 4 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-bolt logo-service-why-icon"></i>
+                <h3>Fast Turnaround</h3>
+                <p>We value deadlines. Initial concepts are delivered to your team in just 3 to 5 business days.</p>
+            </div>
+
+            <!-- Point 5 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-file-code logo-service-why-icon"></i>
+                <h3>Source Files Included</h3>
+                <p>Receive fully editable vector source files (AI, EPS, SVG, PDF) alongside standard formats (PNG, JPG).</p>
+            </div>
+
+            <!-- Point 6 -->
+            <div class="logo-service-why-card">
+                <i class="fa-solid fa-shield-heart logo-service-why-icon"></i>
+                <h3>Business-Focused Design</h3>
+                <p>We design with longevity in mind, ensuring your mark is scalable, memorable, and industry-appropriate.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!--=========================================
 LOGO DESIGN PROCESS
 ==========================================-->
-
-<section class="logo-service-process">
-
+<section class="logo-service-section logo-service-process">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADING
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Our Process
-
-            </span>
-
-            <h2>
-
-                Our Creative
-
-                <span>
-
-                    Logo Design Process
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                Every successful logo begins with strategy.
-                Our structured design process ensures your brand
-                receives a professional identity that is timeless,
-                memorable, and built for long-term success.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Our Process</span>
+            <h2>Our Creative <span>Logo Design Process</span></h2>
+            <p>A structured approach helps us align closely with your expectations and build a logo backed by market research.</p>
         </div>
 
-        <!--=========================
-        PROCESS
-        =========================-->
-
-        <div class="logo-service-process-wrapper">
-
+        <div class="logo-service-process-wrapper logo-reveal">
             <!-- Step 1 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    01
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">01</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-magnifying-glass"></i>
-
                 </div>
-
-                <h3>
-
-                    Discovery
-
-                </h3>
-
-                <p>
-
-                    We understand your business,
-                    target audience, competitors,
-                    and brand vision.
-
-                </p>
-
+                <h3>Discovery</h3>
+                <p>We align on your values, target demographics, and competitors.</p>
             </div>
-
-            <div class="logo-service-process-line"></div>
 
             <!-- Step 2 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    02
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">02</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-lightbulb"></i>
-
                 </div>
-
-                <h3>
-
-                    Research
-
-                </h3>
-
-                <p>
-
-                    Analyze industry trends,
-                    competitors, typography,
-                    colors and branding.
-
-                </p>
-
+                <h3>Research</h3>
+                <p>We analyze trends, typography directions, and colors in your field.</p>
             </div>
-
-            <div class="logo-service-process-line"></div>
 
             <!-- Step 3 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    03
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">03</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-pencil"></i>
-
                 </div>
-
-                <h3>
-
-                    Sketch Ideas
-
-                </h3>
-
-                <p>
-
-                    Multiple creative concepts
-                    are sketched before moving
-                    into digital design.
-
-                </p>
-
+                <h3>Sketching</h3>
+                <p>We brainstorm and sketch multiple design directions on paper.</p>
             </div>
-
-            <div class="logo-service-process-line"></div>
 
             <!-- Step 4 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    04
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">04</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-bezier-curve"></i>
-
                 </div>
-
-                <h3>
-
-                    Digital Design
-
-                </h3>
-
-                <p>
-
-                    Concepts are transformed
-                    into polished vector logos
-                    with modern aesthetics.
-
-                </p>
-
+                <h3>Designing</h3>
+                <p>We bring selected concepts to life digitally as vector graphics.</p>
             </div>
-
-            <div class="logo-service-process-line"></div>
 
             <!-- Step 5 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    05
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">05</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-pen-to-square"></i>
-
                 </div>
-
-                <h3>
-
-                    Revisions
-
-                </h3>
-
-                <p>
-
-                    Refine every detail until
-                    the logo perfectly represents
-                    your brand identity.
-
-                </p>
-
+                <h3>Revisions</h3>
+                <p>We refine the chosen design based on your feedback and inputs.</p>
             </div>
-
-            <div class="logo-service-process-line"></div>
 
             <!-- Step 6 -->
-
             <div class="logo-service-process-card">
-
-                <div class="logo-service-process-number" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;">
-
-                    06
-
+                <div class="logo-service-process-number-wrapper">
+                    <span class="logo-service-process-number">06</span>
                 </div>
-
                 <div class="logo-service-process-icon">
-
                     <i class="fa-solid fa-box-open"></i>
-
                 </div>
-
-                <h3>
-
-                    Final Delivery
-
-                </h3>
-
-                <p>
-
-                    Receive AI, SVG, EPS,
-                    PDF, PNG, JPG and complete
-                    brand assets.
-
-                </p>
-
+                <h3>Delivery</h3>
+                <p>We deliver organized, high-resolution source and print files.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
 LOGO DESIGN PORTFOLIO
 ==========================================-->
-
-<section class="logo-service-portfolio" id="portfolio">
-
+<section class="logo-service-section logo-service-portfolio" id="portfolio">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADING
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Our Portfolio
-
-            </span>
-
-            <h2>
-
-                Logos That Help
-
-                <span>
-
-                    Brands Stand Out
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                Explore some of our recent logo design projects.
-                Every logo is crafted with strategy, creativity,
-                and scalability to create a memorable brand identity.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Our Portfolio</span>
+            <h2>Logos That Help <span>Brands Stand Out</span></h2>
+            <p>Browse some of our custom logo design and branding projects executed for startups and established companies.</p>
         </div>
 
-        <!--=========================
-        FILTERS
-        =========================-->
-
-        <div class="logo-service-filter">
-
-            <button class="active">
-
-                All
-
-            </button>
-
-            <button>
-
-                Minimal
-
-            </button>
-
-            <button>
-
-                Luxury
-
-            </button>
-
-            <button>
-
-                Startup
-
-            </button>
-
-            <button>
-
-                Restaurant
-
-            </button>
-
-            <button>
-
-                Technology
-
-            </button>
-
+        <!-- Filter buttons -->
+        <div class="logo-service-filter logo-reveal">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="minimal">Minimal</button>
+            <button data-filter="luxury">Luxury</button>
+            <button data-filter="startup">Startup</button>
+            <button data-filter="restaurant">Restaurant</button>
+            <button data-filter="technology">Technology</button>
         </div>
 
-        <!--=========================
-        PORTFOLIO GRID
-        =========================-->
-
-        <div class="logo-service-portfolio-grid">
-
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo1.jpg' %}"
-
-                alt="Minimal Logo">
-
+        <!-- Portfolio grid -->
+        <div class="logo-service-portfolio-grid logo-reveal">
+            <!-- Item 1 -->
+            <div class="logo-service-portfolio-card" data-category="technology">
+                <img src="{% static 'images/services/logo/logo1.jpg' %}" alt="Nexa AI Technology Logo Design">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Technology
-
-                    </span>
-
-                    <h3>
-
-                        Nexa AI
-
-                    </h3>
-
+                    <span>Technology</span>
+                    <h3>Nexa AI</h3>
                 </div>
-
             </div>
 
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo2.jpg' %}"
-
-                alt="Luxury Logo">
-
+            <!-- Item 2 -->
+            <div class="logo-service-portfolio-card" data-category="luxury">
+                <img src="{% static 'images/services/logo/logo2.jpg' %}" alt="Golden Crown Premium Logo Design">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Luxury Brand
-
-                    </span>
-
-                    <h3>
-
-                        Golden Crown
-
-                    </h3>
-
+                    <span>Luxury Brand</span>
+                    <h3>Golden Crown</h3>
                 </div>
-
             </div>
 
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo3.jpg' %}"
-
-                alt="Restaurant Logo">
-
+            <!-- Item 3 -->
+            <div class="logo-service-portfolio-card" data-category="restaurant">
+                <img src="{% static 'images/services/logo/logo3.jpg' %}" alt="Spice House Restaurant Logo Design">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Restaurant
-
-                    </span>
-
-                    <h3>
-
-                        Spice House
-
-                    </h3>
-
+                    <span>Restaurant</span>
+                    <h3>Spice House</h3>
                 </div>
-
             </div>
 
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo4.jpg' %}"
-
-                alt="Fitness Logo">
-
+            <!-- Item 4 -->
+            <div class="logo-service-portfolio-card" data-category="minimal">
+                <img src="{% static 'images/services/logo/logo4.jpg' %}" alt="Fit Pulse Minimalist Logo Design">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Fitness
-
-                    </span>
-
-                    <h3>
-
-                        Fit Pulse
-
-                    </h3>
-
+                    <span>Fitness</span>
+                    <h3>Fit Pulse</h3>
                 </div>
-
             </div>
 
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo5.jpg' %}"
-
-                alt="Medical Logo">
-
+            <!-- Item 5 -->
+            <div class="logo-service-portfolio-card" data-category="startup">
+                <img src="{% static 'images/services/logo/logo5.jpg' %}" alt="Med Care Healthcare Corporate Logo">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Healthcare
-
-                    </span>
-
-                    <h3>
-
-                        Med Care
-
-                    </h3>
-
+                    <span>Healthcare</span>
+                    <h3>Med Care</h3>
                 </div>
-
             </div>
 
-            <!-- Item -->
-
-            <div class="logo-service-portfolio-card">
-
-                <img src="{% static 'images/services/logo/logo6.jpg' %}"
-
-                alt="Education Logo">
-
+            <!-- Item 6 -->
+            <div class="logo-service-portfolio-card" data-category="startup">
+                <img src="{% static 'images/services/logo/logo6.jpg' %}" alt="Learn Hub Educational Logo branding">
                 <div class="logo-service-overlay">
-
-                    <span>
-
-                        Education
-
-                    </span>
-
-                    <h3>
-
-                        Learn Hub
-
-                    </h3>
-
+                    <span>Education</span>
+                    <h3>Learn Hub</h3>
                 </div>
-
             </div>
-
-
         </div>
-
-        <!--=========================
-        PORTFOLIO STATS
-        =========================-->
-
-        <div class="logo-service-portfolio-stats">
-
-            <div class="logo-service-portfolio-stat">
-
-                <h2>
-
-                    2000+
-
-                </h2>
-
-                <span>
-
-                    Logos Designed
-
-                </span>
-
-            </div>
-
-            <div class="logo-service-portfolio-stat">
-
-                <h2>
-
-                    500+
-
-                </h2>
-
-                <span>
-
-                    Happy Clients
-
-                </span>
-
-            </div>
-
-            <div class="logo-service-portfolio-stat">
-
-                <h2>
-
-                    40+
-
-                </h2>
-
-                <span>
-
-                    Industries
-
-                </span>
-
-            </div>
-
-            <div class="logo-service-portfolio-stat">
-
-                <h2>
-
-                    98%
-
-                </h2>
-
-                <span>
-
-                    Satisfaction Rate
-
-                </span>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
+
 <!--=========================================
 LOGO DESIGN PRICING
 ==========================================-->
-
-<section class="logo-service-pricing">
-
+<section class="logo-service-section logo-service-pricing">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADER
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Pricing Plans
-
-            </span>
-
-            <h2>
-
-                Affordable Logo Design
-
-                <span>
-
-                    Packages For Every Business
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                Whether you're launching a startup or refreshing an
-                established brand, we have flexible logo design
-                packages tailored to your needs.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Pricing Plans</span>
+            <h2>Affordable Logo Design <span>Packages For Every Business</span></h2>
+            <p>Flexible structures whether you are launching a personal brand or planning a complete corporate refresh.</p>
         </div>
 
-        <!--=========================
-        PRICING GRID
-        =========================-->
-
-        <div class="logo-service-pricing-grid">
-
-            <!--=========================
-            BASIC
-            =========================-->
-
+        <div class="logo-service-pricing-grid logo-reveal">
+            <!-- BASIC -->
             <div class="logo-service-pricing-card">
-
                 <div class="logo-service-plan-icon">
-
                     <i class="fa-solid fa-seedling"></i>
-
                 </div>
-
-                <h3>
-
-                    Basic
-
-                </h3>
-
-                <p class="logo-service-plan-description">
-
-                    Perfect for startups and personal brands.
-
-                </p>
-
+                <h3>Basic</h3>
+                <p class="logo-service-plan-description">Ideal for startups and personal brand builders.</p>
                 <div class="logo-service-price">
-
-                    <span class="logo-service-currency">
-
-                        ₹
-
-                    </span>
-
-                    <h2>
-
-                        2,999
-
-                    </h2>
-
+                    <span class="logo-service-currency">₹</span>
+                    <h2>2,999</h2>
                 </div>
-
                 <ul class="logo-service-plan-features">
-
                     <li><i class="fa-solid fa-check"></i> 2 Logo Concepts</li>
-
-                    <li><i class="fa-solid fa-check"></i> PNG & JPG Files</li>
-
-                    <li><i class="fa-solid fa-check"></i> Transparent Logo</li>
-
+                    <li><i class="fa-solid fa-check"></i> PNG & JPG (High-Res)</li>
+                    <li><i class="fa-solid fa-check"></i> Transparent Files</li>
                     <li><i class="fa-solid fa-check"></i> 3 Revisions</li>
-
                     <li><i class="fa-solid fa-check"></i> 3 Days Delivery</li>
-
                 </ul>
-
-                <a href="{% url 'contact' %}"
-
-                class="logo-service-plan-button">
-
-                    Get Started
-
-                </a>
-
+                <a href="{% url 'contact' %}" class="logo-service-plan-button">Get Started</a>
             </div>
 
-            <!--=========================
-            STANDARD
-            =========================-->
-
+            <!-- STANDARD -->
             <div class="logo-service-pricing-card">
-
-                <div class="logo-service-popular-badge">
-
-                    Most Popular
-
-                </div>
-
+                <div class="logo-service-popular-badge">Most Popular</div>
                 <div class="logo-service-plan-icon">
-
                     <i class="fa-solid fa-gem"></i>
-
                 </div>
-
-                <h3>
-
-                    Standard
-
-                </h3>
-
-                <p class="logo-service-plan-description">
-
-                    Best for growing businesses.
-
-                </p>
-
+                <h3>Standard</h3>
+                <p class="logo-service-plan-description">Best package for expanding businesses.</p>
                 <div class="logo-service-price">
-
-                    <span class="logo-service-currency">
-
-                        ₹
-
-                    </span>
-
-                    <h2>
-
-                        7,999
-
-                    </h2>
-
+                    <span class="logo-service-currency">₹</span>
+                    <h2>7,999</h2>
                 </div>
-
                 <ul class="logo-service-plan-features">
-
                     <li><i class="fa-solid fa-check"></i> 5 Logo Concepts</li>
-
                     <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
-
-                    <li><i class="fa-solid fa-check"></i> AI, SVG, EPS Files</li>
-
+                    <li><i class="fa-solid fa-check"></i> Vector Source Files</li>
                     <li><i class="fa-solid fa-check"></i> Business Card Design</li>
-
                     <li><i class="fa-solid fa-check"></i> Social Media Kit</li>
-
-                    <li><i class="fa-solid fa-check"></i> Brand Color Palette</li>
-
+                    <li><i class="fa-solid fa-check"></i> Color Palette Sheet</li>
                 </ul>
-
-                <a href="{% url 'contact' %}"
-
-                class="logo-service-plan-button">
-
-                    Choose Plan
-
-                </a>
-
+                <a href="{% url 'contact' %}" class="logo-service-plan-button">Choose Plan</a>
             </div>
 
-            <!--=========================
-            PREMIUM
-            =========================-->
-
+            <!-- PREMIUM -->
             <div class="logo-service-pricing-card">
-
                 <div class="logo-service-plan-icon">
-
                     <i class="fa-solid fa-crown"></i>
-
                 </div>
-
-                <h3>
-
-                    Premium
-
-                </h3>
-
-                <p class="logo-service-plan-description">
-
-                    Complete branding solution.
-
-                </p>
-
+                <h3>Premium</h3>
+                <p class="logo-service-plan-description">A complete brand identity and guidelines kit.</p>
                 <div class="logo-service-price">
-
-                    <span class="logo-service-currency">
-
-                        ₹
-
-                    </span>
-
-                    <h2>
-
-                        14,999
-
-                    </h2>
-
+                    <span class="logo-service-currency">₹</span>
+                    <h2>14,999</h2>
                 </div>
-
                 <ul class="logo-service-plan-features">
-
                     <li><i class="fa-solid fa-check"></i> Unlimited Concepts</li>
-
-                    <li><i class="fa-solid fa-check"></i> Brand Guidelines</li>
-
-                    <li><i class="fa-solid fa-check"></i> Stationery Design</li>
-
-                    <li><i class="fa-solid fa-check"></i> Social Media Kit</li>
-
-                    <li><i class="fa-solid fa-check"></i> Packaging Mockups</li>
-
+                    <li><i class="fa-solid fa-check"></i> Brand Guidelines Hand</li>
+                    <li><i class="fa-solid fa-check"></i> Full Stationery Set</li>
+                    <li><i class="fa-solid fa-check"></i> Social Media Branding</li>
+                    <li><i class="fa-solid fa-check"></i> 3D Packaging Mockups</li>
                     <li><i class="fa-solid fa-check"></i> Lifetime Support</li>
-
                 </ul>
-
-                <a href="{% url 'contact' %}"
-
-                class="logo-service-plan-button">
-
-                    Get Premium
-
-                </a>
-
+                <a href="{% url 'contact' %}" class="logo-service-plan-button">Get Premium</a>
             </div>
 
-            <!--=========================
-            ENTERPRISE
-            =========================-->
-
+            <!-- ENTERPRISE -->
             <div class="logo-service-pricing-card">
-
                 <div class="logo-service-plan-icon">
-
                     <i class="fa-solid fa-building"></i>
-
                 </div>
-
-                <h3>
-
-                    Enterprise
-
-                </h3>
-
-                <p class="logo-service-plan-description">
-
-                    Custom branding for large businesses.
-
-                </p>
-
+                <h3>Enterprise</h3>
+                <p class="logo-service-plan-description">Bespoke identity solutions for large organisations.</p>
                 <div class="logo-service-price">
-
-                    <span class="logo-service-currency">
-
-                        ₹
-
-                    </span>
-
-                    <h2>
-
-                        Custom
-
-                    </h2>
-
+                    <span class="logo-service-currency">₹</span>
+                    <h2>Custom</h2>
                 </div>
-
                 <ul class="logo-service-plan-features">
-
-                    <li><i class="fa-solid fa-check"></i> Dedicated Designer</li>
-
-                    <li><i class="fa-solid fa-check"></i> Complete Brand Strategy</li>
-
-                    <li><i class="fa-solid fa-check"></i> Marketing Assets</li>
-
-                    <li><i class="fa-solid fa-check"></i> Presentation Kit</li>
-
-                    <li><i class="fa-solid fa-check"></i> Priority Support</li>
-
-                    <li><i class="fa-solid fa-check"></i> Custom Deliverables</li>
-
+                    <li><i class="fa-solid fa-check"></i> Dedicated Art Director</li>
+                    <li><i class="fa-solid fa-check"></i> Full Brand Strategy Set</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Marketing Assets</li>
+                    <li><i class="fa-solid fa-check"></i> Presentation Kits</li>
+                    <li><i class="fa-solid fa-check"></i> Priority SLA Turnarounds</li>
+                    <li><i class="fa-solid fa-check"></i> Custom Assets</li>
                 </ul>
-
-                <a href="{% url 'contact' %}"
-
-                class="logo-service-plan-button">
-
-                    Contact Sales
-
-                </a>
-
+                <a href="{% url 'contact' %}" class="logo-service-plan-button">Contact Sales</a>
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
 CLIENT TESTIMONIALS
 ==========================================-->
-
-<section class="logo-service-testimonials">
-
+<section class="logo-service-section logo-service-testimonials">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADING
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Testimonials
-
-            </span>
-
-            <h2>
-
-                Trusted By
-
-                <span>
-
-                    Businesses Worldwide
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                Hundreds of startups, agencies and established
-                businesses trust us to build memorable brand
-                identities that help them stand out.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">Testimonials</span>
+            <h2>What Our <span>Clients Say About Us</span></h2>
+            <p>Read about the experiences of startups, design teams, and companies who built their branding with us.</p>
         </div>
 
-        <!--=========================
-        STATS
-        =========================-->
-
-        <div class="logo-service-review-stats">
-
-            <div class="logo-service-review-stat">
-
-                <h2>500+</h2>
-
-                <span>Happy Clients</span>
-
+        <div class="logo-service-testimonial-grid logo-reveal">
+            <!-- Card 1 -->
+            <div class="logo-service-testimonial-card">
+                <div class="logo-service-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Our new logo completely transformed our company's image. The design process was collaborative, and the final branding materials were highly detailed."</p>
+                <div class="logo-service-client">
+                    <img src="{% static 'images/services/logo/client1.jpg' %}" alt="Michael Anderson CEO Nexa">
+                    <div>
+                        <h4>Michael Anderson</h4>
+                        <span>CEO, Nexa Technologies</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="logo-service-review-stat">
-
-                <h2>98%</h2>
-
-                <span>Client Satisfaction</span>
-
+            <!-- Card 2 -->
+            <div class="logo-service-testimonial-card">
+                <div class="logo-service-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Excellent communication, modern styling choices, and prompt adjustments. Our team felt supported throughout the entire brand refresh cycle."</p>
+                <div class="logo-service-client">
+                    <img src="{% static 'images/services/logo/client2.jpg' %}" alt="Neha Johnson Founder Bloom">
+                    <div>
+                        <h4>Neha Johnson</h4>
+                        <span>Founder, Bloom Fashion</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="logo-service-review-stat">
-
-                <h2>4.9</h2>
-
-                <span>Average Rating</span>
-
+            <!-- Card 3 -->
+            <div class="logo-service-testimonial-card">
+                <div class="logo-service-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"The stationery materials and typography rules provided in the guidelines book have streamlined our marketing operations. Strongly recommended."</p>
+                <div class="logo-service-client">
+                    <img src="{% static 'images/services/logo/client3.jpg' %}" alt="David Williams Director Prime">
+                    <div>
+                        <h4>David Williams</h4>
+                        <span>Director, Prime Finance</span>
+                    </div>
+                </div>
             </div>
-
-            <div class="logo-service-review-stat">
-
-                <h2>40+</h2>
-
-                <span>Industries Served</span>
-
-            </div>
-
         </div>
-
-        <!--=========================
-        TESTIMONIAL GRID
-        =========================-->
-
-        <div class="logo-service-testimonial-grid">
-
-            <!-- Card -->
-
-            <div class="logo-service-testimonial-card">
-
-                <div class="logo-service-stars">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Our new logo completely transformed our
-                    company's image. The process was smooth,
-                    creative and delivered beyond expectations.
-
-                </p>
-
-                <div class="logo-service-client">
-
-                    <img src="{% static 'images/services/logo/client1.jpg' %}"
-
-                    alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            Michael Anderson
-
-                        </h4>
-
-                        <span>
-
-                            CEO, Nexa Technologies
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-testimonial-card">
-
-                <div class="logo-service-stars">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Professional designers, excellent communication,
-                    and unlimited revisions made the experience
-                    stress free.
-
-                </p>
-
-                <div class="logo-service-client">
-
-                    <img src="{% static 'images/services/logo/client2.jpg' %}"
-
-                    alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            Neha Johnson
-
-                        </h4>
-
-                        <span>
-
-                            Founder, Bloom Fashion
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="logo-service-testimonial-card">
-
-                <div class="logo-service-stars">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    The branding package helped us launch
-                    confidently. Every file was perfectly
-                    organized and print-ready.
-
-                </p>
-
-                <div class="logo-service-client">
-
-                    <img src="{% static 'images/services/logo/client3.jpg' %}"
-
-                    alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            David Williams
-
-                        </h4>
-
-                        <span>
-
-                            Director, Prime Finance
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
+    </div>
 </section>
+
 <!--=========================================
 LOGO DESIGN FAQ
 ==========================================-->
-
-<section class="logo-service-faq">
-
+<section class="logo-service-section logo-service-faq">
     <div class="container">
-
-        <!--=========================
-        SECTION HEADING
-        =========================-->
-
-        <div class="logo-service-heading">
-
-            <span class="logo-service-section-tag">
-
-                Frequently Asked Questions
-
-            </span>
-
-            <h2>
-
-                Everything You Need To Know
-
-                <span>
-
-                    About Logo Design
-
-                </span>
-
-            </h2>
-
-            <p>
-
-                Have questions before starting your branding project?
-                Here are the most common questions our clients ask.
-
-            </p>
-
+        <div class="logo-service-heading logo-reveal">
+            <span class="logo-service-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Have questions before launching your logo design project? Here are our answers to common questions.</p>
         </div>
 
-        <!--=========================
-        FAQ
-        =========================-->
-
-        <div class="uiux-faq-wrapper">
-
+        <div class="logo-faq-wrapper logo-reveal">
             <!-- FAQ 1 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How long does it take to design a logo?
-
-                    </span>
-
+            <div class="logo-faq-item active">
+                <button class="logo-faq-question">
+                    <span>How long does it take to design a logo?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Most logo projects take between 3–7 business days
-                        depending on the package and revision rounds.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Initial logo concepts are delivered in 3 to 5 business days. The entire branding project, including revision cycles and final deliverables compilation, is usually finalized in 7 to 10 business days.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 2 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How many logo concepts will I receive?
-
-                    </span>
-
+            <div class="logo-faq-item">
+                <button class="logo-faq-question">
+                    <span>How many concepts will I receive?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Depending on your selected package, you'll receive
-                        between 2 and unlimited unique logo concepts.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Depending on the package selected, you will receive between 2 (Basic) and unlimited (Premium) unique logo design concepts to choose from.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 3 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Do I get editable source files?
-
-                    </span>
-
+            <div class="logo-faq-item">
+                <button class="logo-faq-question">
+                    <span>Do I get editable source files?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. We provide AI, EPS, SVG, PDF,
-                        PNG and high-resolution JPG files.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Yes. All packages (except Basic) include print-ready and resizable vector files in AI, EPS, SVG, and high-resolution PDF formats, alongside web-ready transparent PNG and JPG versions.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 4 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Can you redesign my existing logo?
-
-                    </span>
-
+            <div class="logo-faq-item">
+                <button class="logo-faq-question">
+                    <span>Who owns the copyright of the logo?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Absolutely. We modernize outdated logos while
-                        maintaining brand recognition.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Once the project is completed and the final payment is cleared, you receive full commercial rights and intellectual property ownership of the approved logo design.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 5 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Do you offer unlimited revisions?
-
-                    </span>
-
+            <div class="logo-faq-item">
+                <button class="logo-faq-question">
+                    <span>Can you modernize an existing logo?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Our Professional and Premium packages
-                        include unlimited revisions.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Yes, we offer Logo Redesign services to refresh outdated typography and symbols while preserving visual elements that maintain brand recall for your current customers.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 6 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Will my logo work for printing?
-
-                    </span>
-
+            <div class="logo-faq-item">
+                <button class="logo-faq-question">
+                    <span>What are brand guidelines?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Every logo is delivered in vector format,
-                        making it suitable for print and digital media.
-
-                    </p>
-
+                <div class="logo-faq-answer">
+                    <p>Brand guidelines are a detailed guidebook specifying proper logo usage, official HEX/RGB color schemes, grid spacing rules, font styles, and layout patterns to ensure styling consistency across assets.</p>
                 </div>
-
             </div>
-
-            <!-- FAQ 7 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Do you provide brand guidelines?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Premium packages include a complete brand
-                        guideline document with colors, typography,
-                        spacing, and logo usage.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 8 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Can you design business cards too?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. We also design business cards,
-                        letterheads, social media kits,
-                        and complete branding packages.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 9 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Who owns the copyright after delivery?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Once the project is completed and payment is
-                        received, you receive full ownership and
-                        commercial rights to your approved logo.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 10 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How do I get started?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Simply contact our team, share your business
-                        details and preferences, and we'll begin
-                        crafting your brand identity.
-
-                    </p>
-
-                </div>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-LOGO DESIGN CTA
+FINAL CALL TO ACTION
 ==========================================-->
-
 <section class="logo-service-cta">
-
-    <!-- Background -->
-
     <div class="logo-service-cta-bg">
-
         <span class="logo-service-cta-blob logo-service-cta-blob-1"></span>
-
-        <span class="logo-service-cta-blob logo-service-cta-blob-2"></span>
-
-        <span class="logo-service-cta-grid"></span>
-
+        <span class="logo-service-grid"></span>
     </div>
 
     <div class="container">
+        <div class="logo-service-cta-wrapper logo-reveal">
+            <span class="logo-service-cta-tag">Let's Work Together</span>
+            <h2>Ready to Build a Brand <span>People Remember?</span></h2>
+            <p>Let's design a professional, custom logo that represents your core values and helps you secure customer trust.</p>
 
-        <div class="logo-service-cta-wrapper">
-
-            <!--=========================
-            LEFT CONTENT
-            =========================-->
-
-            <div class="logo-service-cta-content">
-
-                <span class="logo-service-cta-tag">
-
-                    Let's Build Your Brand
-
-                </span>
-
-                <h2>
-
-                    Ready To Create A
-
-                    <span>
-
-                        Memorable Logo?
-
-                    </span>
-
-                </h2>
-
-                <p>
-
-                    Whether you're launching a startup, rebranding your
-                    business, or creating a new product, our expert
-                    designers will craft a logo that truly represents
-                    your brand and helps you stand out.
-
-                </p>
-
-                <!--=========================
-                TRUST BADGES
-                =========================-->
-
-                <div class="logo-service-cta-features">
-
-                    <div class="logo-service-cta-feature">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        <span>
-
-                            100% Custom Design
-
-                        </span>
-
-                    </div>
-
-                    <div class="logo-service-cta-feature">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        <span>
-
-                            Unlimited Revisions
-
-                        </span>
-
-                    </div>
-
-                    <div class="logo-service-cta-feature">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        <span>
-
-                            Source Files Included
-
-                        </span>
-
-                    </div>
-
-                    <div class="logo-service-cta-feature">
-
-                        <i class="fa-solid fa-circle-check"></i>
-
-                        <span>
-
-                            Lifetime Support
-
-                        </span>
-
-                    </div>
-
+            <!-- Small Trust features check strip -->
+            <div class="logo-service-cta-features">
+                <div class="logo-service-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>100% Custom Design</span>
                 </div>
-
-                <!--=========================
-                BUTTONS
-                =========================-->
-
-                <div class="logo-service-cta-buttons" >
-
-                    <a href="{% url 'contact' %}"
-
-                    class="logo-service-cta-btn">
-
-                        Get Free Consultation
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                    <a href="tel:+919876543210"
-
-                    class="logo-service-cta-outline" style="margin-top:5%;">
-
-                        <i class="fa-solid fa-phone"></i>
-
-                        Call Now
-
-                    </a>
-
+                <div class="logo-service-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Unlimited Revisions</span>
                 </div>
-
+                <div class="logo-service-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Source Files Included</span>
+                </div>
+                <div class="logo-service-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Lifetime Support</span>
+                </div>
             </div>
 
-            <!--=========================
-            RIGHT CARD
-            =========================-->
-
-            <div class="logo-service-cta-card">
-
-                <div class="logo-service-cta-card-header">
-
-                    <h3>
-
-                        Why Choose Our Agency?
-
-                    </h3>
-
-                    <span>
-
-                        Premium Branding Solutions
-
-                    </span>
-
-                </div>
-
-                <div class="logo-service-cta-list">
-
-                    <div class="logo-service-cta-item" style="margin-bottom:5%;">
-
-                        <i class="fa-solid fa-award"></i>
-
-                        <div>
-
-                            <h4>
-
-                                Award-Winning Designers
-
-                            </h4>
-
-                            <p>
-
-                                Experienced branding specialists.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="logo-service-cta-item" style="margin-bottom:5%;">
-
-                        <i class="fa-solid fa-rocket"></i>
-
-                        <div>
-
-                            <h4>
-
-                                Fast Delivery
-
-                            </h4>
-
-                            <p>
-
-                                Initial concepts in 3–5 business days.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="logo-service-cta-item" style="margin-bottom:5%;">
-
-                        <i class="fa-solid fa-file-lines"></i>
-
-                        <div>
-
-                            <h4>
-
-                                Complete Brand Assets
-
-                            </h4>
-
-                            <p>
-
-                                AI, SVG, EPS, PDF, PNG & JPG files.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="logo-service-cta-item" style="margin-bottom:5%;">
-
-                        <i class="fa-solid fa-headset"></i>
-
-                        <div>
-
-                            <h4>
-
-                                Dedicated Support
-
-                            </h4>
-
-                            <p>
-
-                                We're here before and after delivery.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--=========================
-                QUICK STATS
-                =========================-->
-
-                <div class="logo-service-cta-stats">
-
-                    <div>
-
-                        <h2>
-
-                            2K+
-
-                        </h2>
-
-                        <span>
-
-                            Logos Designed
-
-                        </span>
-
-                    </div>
-
-                    <div>
-
-                        <h2>
-
-                            500+
-
-                        </h2>
-
-                        <span>
-
-                            Happy Clients
-
-                        </span>
-
-                    </div>
-
-                    <div>
-
-                        <h2>
-
-                            98%
-
-                        </h2>
-
-                        <span>
-
-                            Satisfaction
-
-                        </span>
-
-                    </div>
-
-                </div>
-
+            <!-- CTA Buttons -->
+            <div class="logo-service-cta-buttons">
+                <a href="{% url 'contact' %}" class="logo-service-cta-btn">
+                    Start Your Project
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="tel:+919942637897" class="logo-service-cta-outline">
+                    <i class="fa-solid fa-phone"></i>
+                    Call Us Now
+                </a>
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 {% endblock %}

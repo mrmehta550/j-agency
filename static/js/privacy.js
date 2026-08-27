@@ -3,6 +3,9 @@ PRIVACY PAGE
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Only execute if on the Privacy Policy page
+    const isPrivacyPage = document.querySelector(".privacy-hero");
+    if (!isPrivacyPage) return;
 
     /*==========================================
     HERO IMAGE PARALLAX

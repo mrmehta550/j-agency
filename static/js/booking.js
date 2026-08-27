@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const calendarGrid = document.querySelector(".booking-calendar-grid");
     const calendarMonth = document.querySelector(".booking-calendar-month");
-    const dateInput = document.querySelector('input[name="date"]');
+    const dateInput = document.querySelector('input[name="preferred_date"]');
 
     let selectedDate = new Date();
     let midnightTimer = null;
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
             slot.classList.add("active");
 
             const timeInput = document.querySelector(
-                'input[name="time"]'
+                'input[name="preferred_time"]'
             );
 
             if (timeInput) {
@@ -222,21 +222,18 @@ document.addEventListener("DOMContentLoaded", () => {
     buttons.forEach(button => {
 
         button.addEventListener("click", function (e) {
-
-            const target = document.querySelector(
-                this.getAttribute("href")
-            );
-
-            if (!target) return;
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-
-                behavior: "smooth"
-
-            });
-
+            const href = this.getAttribute("href");
+            if (href === "#") return;
+            try {
+                const target = document.querySelector(href);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            } catch (err) {
+                // ignore invalid selector errors
+            }
         });
 
     });

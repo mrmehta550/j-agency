@@ -1,0 +1,1380 @@
+/* ============================================================
+   SERVICES DESIGN SYSTEM — PREMIUM LIGHT THEME
+   Shared across all M Agency service pages.
+   ============================================================ */
+
+:root {
+    /* ── Brand Colors ── */
+    --svc-primary: #2563EB;
+    --svc-primary-dark: #1D4ED8;
+    --svc-accent-purple: #A855F7;
+    --svc-accent-sky: #38BDF8;
+    --svc-gradient: linear-gradient(135deg, #38BDF8, #8B5CF6);
+    --svc-gradient-soft: linear-gradient(135deg, rgba(56,189,248,0.08), rgba(168,85,247,0.08));
+
+    /* ── Text ── */
+    --svc-text-primary: #0F172A;
+    --svc-text-secondary: #475569;
+    --svc-text-muted: #64748B;
+
+    /* ── Backgrounds ── */
+    --svc-bg-primary: #FFFFFF;
+    --svc-bg-soft: #F8FAFC;
+    --svc-bg-blue-soft: #F0F9FF;
+    --svc-bg-accent-soft: rgba(37, 99, 235, 0.04);
+
+    /* ── Borders & Shadows ── */
+    --svc-border: #E2E8F0;
+    --svc-border-hover: #CBD5E1;
+    --svc-shadow-soft: 0 4px 24px rgba(15, 23, 42, 0.06);
+    --svc-shadow-md: 0 10px 35px rgba(15, 23, 42, 0.08);
+    --svc-shadow-hover: 0 20px 50px rgba(15, 23, 42, 0.12);
+
+    /* ── Typography ── */
+    --svc-font-heading: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    --svc-font-body: 'Inter', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+    /* ── Spacing & Radius ── */
+    --svc-section-py: 100px;
+    --svc-radius-xs: 8px;
+    --svc-radius-sm: 12px;
+    --svc-radius-md: 16px;
+    --svc-radius-lg: 24px;
+    --svc-radius-full: 9999px;
+
+    /* ── Transitions ── */
+    --svc-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --svc-transition-fast: all 0.2s ease;
+}
+
+/* ============================================================
+   BASE SETUP
+   ============================================================ */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ============================================================
+   SHARED SECTION BASE
+   ============================================================ */
+.svc-section {
+    padding: var(--svc-section-py) 0;
+    background-color: var(--svc-bg-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.svc-section--alt {
+    background-color: var(--svc-bg-soft);
+}
+
+.svc-section--blue-soft {
+    background-color: var(--svc-bg-blue-soft);
+}
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+.svc-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px auto;
+    position: relative;
+    z-index: 2;
+}
+
+.svc-section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--svc-font-body);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--svc-primary);
+    margin-bottom: 16px;
+    padding: 6px 16px;
+    border-radius: var(--svc-radius-full);
+    background: rgba(37, 99, 235, 0.06);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.svc-heading h2 {
+    font-family: var(--svc-font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--svc-text-primary);
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+.svc-heading h2 span {
+    background: var(--svc-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.svc-heading p {
+    font-family: var(--svc-font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--svc-text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.svc-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: var(--svc-radius-sm);
+    background: var(--svc-gradient);
+    color: #fff;
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+    transition: var(--svc-transition);
+}
+
+.svc-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.35);
+}
+
+.svc-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px 30px;
+    border-radius: var(--svc-radius-sm);
+    background: var(--svc-bg-primary);
+    color: var(--svc-text-primary);
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid var(--svc-border);
+    cursor: pointer;
+    transition: var(--svc-transition);
+}
+
+.svc-btn-secondary:hover {
+    transform: translateY(-2px);
+    border-color: var(--svc-border-hover);
+    box-shadow: var(--svc-shadow-soft);
+}
+
+/* ============================================================
+   SERVICE CARDS (EXACT MATCH TO LOGO DESIGN MASTER REFERENCE)
+   ============================================================ */
+.svc-card {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-lg);
+    padding: 36px 30px;
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+}
+
+.svc-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--svc-shadow-hover);
+    border-color: var(--svc-border-hover);
+}
+
+.svc-icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--svc-radius-sm);
+    background: var(--svc-gradient-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: var(--svc-transition);
+}
+
+.svc-icon-box i {
+    font-size: 22px;
+    color: var(--svc-primary);
+    transition: var(--svc-transition);
+}
+
+.svc-card:hover .svc-icon-box {
+    background: var(--svc-gradient);
+}
+
+.svc-card:hover .svc-icon-box i {
+    color: #fff;
+}
+
+.svc-card h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin-bottom: 12px;
+}
+
+.svc-card p {
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--svc-text-secondary);
+    margin-bottom: 16px;
+}
+
+.svc-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.svc-card ul li {
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    color: var(--svc-text-muted);
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.svc-card ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--svc-primary);
+    opacity: 0.5;
+}
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================================ */
+.svc-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.svc-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================================
+   GRID UTILITIES
+   ============================================================ */
+.svc-grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.svc-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* ============================================================
+   SHARED HERO (LIGHT)
+   ============================================================ */
+.svc-hero {
+    position: relative;
+    padding: 180px 0 100px;
+    overflow: hidden;
+    background: var(--svc-bg-primary);
+}
+
+.svc-hero-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.svc-hero-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.svc-hero-blob-1 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+    top: -150px;
+    right: -100px;
+}
+
+.svc-hero-blob-2 {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.08) 0%, transparent 70%);
+    bottom: -100px;
+    left: -80px;
+}
+
+.svc-hero-wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Hero Content */
+.svc-hero-content {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.svc-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--svc-font-body);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--svc-primary);
+    background: rgba(37, 99, 235, 0.06);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    border-radius: var(--svc-radius-full);
+    padding: 8px 18px;
+    margin-bottom: 24px;
+    align-self: flex-start;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.svc-hero-badge i {
+    font-size: 14px;
+}
+
+.svc-hero-content h1 {
+    font-family: var(--svc-font-heading);
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.15;
+    color: var(--svc-text-primary);
+    margin-bottom: 22px;
+    letter-spacing: -1.5px;
+}
+
+.svc-hero-content h1 span {
+    background: var(--svc-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.svc-hero-content > p {
+    font-family: var(--svc-font-body);
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--svc-text-secondary);
+    margin-bottom: 32px;
+    max-width: 520px;
+}
+
+/* Hero Features Checklist */
+.svc-hero-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 24px;
+    margin-bottom: 36px;
+}
+
+.svc-hero-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--svc-text-secondary);
+}
+
+.svc-hero-feature i {
+    color: #10B981;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+/* Hero Buttons */
+.svc-hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Hero Visual */
+.svc-hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svc-hero-image-box {
+    position: relative;
+    width: 100%;
+}
+
+.svc-hero-image-box img {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: var(--svc-radius-lg);
+    border: 1px solid var(--svc-border);
+    box-shadow: var(--svc-shadow-md);
+    display: block;
+}
+
+/* Floating Cards (Light Theme) */
+.svc-floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-sm);
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: var(--svc-shadow-md);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.svc-floating-card:hover {
+    transform: scale(1.04);
+}
+
+.svc-floating-card-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--svc-radius-xs);
+    background: var(--svc-gradient-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.svc-floating-card-icon i {
+    font-size: 16px;
+    color: var(--svc-primary);
+}
+
+.svc-floating-card h5 {
+    font-family: var(--svc-font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin: 0 0 2px 0;
+}
+
+.svc-floating-card p {
+    font-family: var(--svc-font-body);
+    font-size: 12px;
+    color: var(--svc-text-muted);
+    margin: 0;
+}
+
+.svc-float-1 {
+    top: 20px;
+    left: -30px;
+    animation: svcFloat1 5s ease-in-out infinite;
+}
+
+.svc-float-2 {
+    bottom: 60px;
+    right: -25px;
+    animation: svcFloat2 5.5s ease-in-out infinite;
+}
+
+.svc-float-3 {
+    bottom: 180px;
+    left: -25px;
+    animation: svcFloat3 4.8s ease-in-out infinite;
+}
+
+@keyframes svcFloat1 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+@keyframes svcFloat2 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes svcFloat3 {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ============================================================
+   TRUST STATS STRIP
+   ============================================================ */
+.svc-stats-strip {
+    padding: 40px 0;
+    background: var(--svc-bg-blue-soft);
+    border-top: 1px solid rgba(37, 99, 235, 0.08);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.08);
+}
+
+.svc-stats-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.svc-stat-item {
+    text-align: center;
+}
+
+.svc-stat-item h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--svc-primary);
+    margin: 0 0 6px 0;
+    line-height: 1;
+}
+
+.svc-stat-item p {
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--svc-text-muted);
+    margin: 0;
+}
+
+/* ============================================================
+   PROCESS SECTION STYLES
+   ============================================================ */
+.svc-process-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-process-card {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-lg);
+    padding: 36px 28px;
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+    text-align: center;
+    position: relative;
+}
+
+.svc-process-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--svc-shadow-hover);
+    border-color: var(--svc-border-hover);
+}
+
+.svc-process-number-wrapper {
+    margin-bottom: 16px;
+}
+
+.svc-process-number {
+    font-family: var(--svc-font-heading);
+    font-size: 40px;
+    font-weight: 800;
+    background: var(--svc-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.svc-process-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: var(--svc-radius-sm);
+    background: var(--svc-gradient-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px auto;
+    transition: var(--svc-transition);
+}
+
+.svc-process-icon i {
+    font-size: 20px;
+    color: var(--svc-primary);
+    transition: var(--svc-transition);
+}
+
+.svc-process-card:hover .svc-process-icon {
+    background: var(--svc-gradient);
+}
+
+.svc-process-card:hover .svc-process-icon i {
+    color: #fff;
+}
+
+.svc-process-card h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin-bottom: 10px;
+}
+
+.svc-process-card p {
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--svc-text-secondary);
+    margin: 0;
+}
+
+/* ============================================================
+   PORTFOLIO STYLES
+   ============================================================ */
+.svc-portfolio-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.svc-portfolio-filter button {
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: var(--svc-radius-full);
+    border: 1px solid var(--svc-border);
+    background: var(--svc-bg-primary);
+    color: var(--svc-text-secondary);
+    cursor: pointer;
+    transition: var(--svc-transition);
+}
+
+.svc-portfolio-filter button:hover {
+    border-color: var(--svc-primary);
+    color: var(--svc-primary);
+}
+
+.svc-portfolio-filter button.active {
+    background: var(--svc-gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.2);
+}
+
+.svc-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-portfolio-card {
+    position: relative;
+    border-radius: var(--svc-radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--svc-border);
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+    cursor: pointer;
+    background: var(--svc-bg-primary);
+}
+
+.svc-portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--svc-shadow-hover);
+}
+
+.svc-portfolio-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.svc-portfolio-card:hover img {
+    transform: scale(1.06);
+}
+
+.svc-portfolio-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.svc-portfolio-card:hover .svc-portfolio-overlay {
+    opacity: 1;
+}
+
+.svc-portfolio-overlay span {
+    font-family: var(--svc-font-body);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--svc-accent-sky);
+}
+
+.svc-portfolio-overlay h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 4px;
+}
+
+/* ============================================================
+   PRICING STYLES
+   ============================================================ */
+.svc-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.svc-pricing-card {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-lg);
+    padding: 40px 30px;
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.svc-pricing-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--svc-shadow-hover);
+    border-color: var(--svc-border-hover);
+}
+
+.svc-pricing-popular {
+    position: absolute;
+    top: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--svc-gradient);
+    color: #fff;
+    font-family: var(--svc-font-body);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 20px;
+    border-radius: 0 0 var(--svc-radius-xs) var(--svc-radius-xs);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.svc-pricing-card:has(.svc-pricing-popular) {
+    border-color: var(--svc-primary);
+    border-width: 2px;
+}
+
+.svc-pricing-card h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin-bottom: 6px;
+}
+
+.svc-pricing-card .price {
+    font-family: var(--svc-font-heading);
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--svc-text-primary);
+    margin: 20px 0;
+    line-height: 1;
+}
+
+.svc-pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 auto 0;
+    flex-grow: 1;
+}
+
+.svc-pricing-features li {
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    color: var(--svc-text-secondary);
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.svc-pricing-features li i {
+    color: #10B981;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.svc-pricing-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 24px;
+    border-radius: var(--svc-radius-sm);
+    background: var(--svc-bg-soft);
+    color: var(--svc-text-primary);
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid var(--svc-border);
+    cursor: pointer;
+    transition: var(--svc-transition);
+    margin-top: 28px;
+}
+
+.svc-pricing-button:hover {
+    background: var(--svc-gradient);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+.svc-pricing-card:has(.svc-pricing-popular) .svc-pricing-button {
+    background: var(--svc-gradient);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.2);
+}
+
+/* ============================================================
+   TESTIMONIALS STYLES
+   ============================================================ */
+.svc-testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.svc-testimonial-card {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-lg);
+    padding: 36px 30px;
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+}
+
+.svc-testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--svc-shadow-hover);
+}
+
+.svc-stars {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 18px;
+}
+
+.svc-stars i {
+    color: #F59E0B;
+    font-size: 16px;
+}
+
+.svc-testimonial-card p {
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--svc-text-secondary);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.svc-client {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.svc-client img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--svc-border);
+}
+
+.svc-client h4 {
+    font-family: var(--svc-font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin: 0 0 3px 0;
+}
+
+.svc-client span {
+    font-family: var(--svc-font-body);
+    font-size: 13px;
+    color: var(--svc-text-muted);
+}
+
+/* ============================================================
+   FAQ ACCORDION (EXACT MATCH TO LOGO DESIGN MASTER REFERENCE)
+   ============================================================ */
+.svc-faq-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.svc-faq-item {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-md);
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: var(--svc-transition);
+}
+
+.svc-faq-item:hover {
+    border-color: var(--svc-border-hover);
+}
+
+.svc-faq-item.active {
+    border-color: rgba(37, 99, 235, 0.2);
+    box-shadow: var(--svc-shadow-soft);
+}
+
+.svc-faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--svc-font-heading);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--svc-text-primary);
+    text-align: left;
+    transition: var(--svc-transition-fast);
+}
+
+.svc-faq-question:hover {
+    color: var(--svc-primary);
+}
+
+.svc-faq-question i {
+    font-size: 14px;
+    color: var(--svc-text-muted);
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.svc-faq-item.active .svc-faq-question i {
+    transform: rotate(45deg);
+    color: var(--svc-primary);
+}
+
+.svc-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.svc-faq-answer p {
+    padding: 0 28px 22px 28px;
+    font-family: var(--svc-font-body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--svc-text-secondary);
+    margin: 0;
+}
+
+/* ============================================================
+   FINAL CTA STYLES
+   ============================================================ */
+.svc-cta {
+    position: relative;
+    padding: var(--svc-section-py) 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #F0F9FF 0%, #F5F3FF 50%, #FDF4FF 100%);
+}
+
+.svc-cta-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.svc-cta-blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+    top: -100px;
+    right: -80px;
+    filter: blur(60px);
+}
+
+.svc-cta-wrapper {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.svc-cta-wrapper h2 {
+    font-family: var(--svc-font-heading);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--svc-text-primary);
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+
+.svc-cta-wrapper h2 span {
+    background: var(--svc-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.svc-cta-wrapper > p {
+    font-family: var(--svc-font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--svc-text-secondary);
+    margin-bottom: 32px;
+}
+
+.svc-cta-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.svc-cta-feature {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--svc-font-body);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--svc-text-secondary);
+}
+
+.svc-cta-feature i {
+    color: #10B981;
+    font-size: 16px;
+}
+
+.svc-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* ============================================================
+   TECH STACK CARD
+   ============================================================ */
+.svc-tech-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.svc-tech-card {
+    background: var(--svc-bg-primary);
+    border: 1px solid var(--svc-border);
+    border-radius: var(--svc-radius-md);
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: var(--svc-shadow-soft);
+    transition: var(--svc-transition);
+}
+
+.svc-tech-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--svc-shadow-hover);
+    border-color: var(--svc-border-hover);
+}
+
+.svc-tech-card img {
+    height: 56px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 auto 16px auto;
+    display: block;
+}
+
+.svc-tech-card h3 {
+    font-family: var(--svc-font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin-bottom: 6px;
+}
+
+.svc-tech-card p {
+    font-family: var(--svc-font-body);
+    font-size: 13px;
+    color: var(--svc-text-muted);
+    margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVE — SHARED BREAKPOINTS
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    :root {
+        --svc-section-py: 80px;
+    }
+
+    .svc-hero {
+        padding: 160px 0 80px;
+    }
+
+    .svc-hero-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .svc-hero-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .svc-hero-badge {
+        align-self: center;
+    }
+
+    .svc-hero-content > p {
+        max-width: 100%;
+    }
+
+    .svc-hero-features {
+        justify-items: center;
+    }
+
+    .svc-hero-buttons {
+        justify-content: center;
+    }
+
+    .svc-hero-visual {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .svc-heading h2 {
+        font-size: 36px;
+    }
+
+    .svc-grid-3,
+    .svc-process-grid,
+    .svc-portfolio-grid,
+    .svc-testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .svc-grid-4,
+    .svc-pricing-grid,
+    .svc-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .svc-cta-wrapper h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --svc-section-py: 64px;
+    }
+
+    .svc-hero {
+        padding: 140px 0 60px;
+    }
+
+    .svc-hero-content h1 {
+        font-size: 36px;
+        letter-spacing: -0.5px;
+    }
+
+    .svc-hero-content > p {
+        font-size: 16px;
+    }
+
+    .svc-hero-features {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .svc-hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .svc-hero-buttons a {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .svc-floating-card {
+        display: none;
+    }
+
+    .svc-heading h2 {
+        font-size: 28px;
+    }
+
+    .svc-heading p {
+        font-size: 15px;
+    }
+
+    .svc-grid-2,
+    .svc-grid-3,
+    .svc-grid-4,
+    .svc-process-grid,
+    .svc-portfolio-grid,
+    .svc-pricing-grid,
+    .svc-testimonial-grid,
+    .svc-tech-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .svc-stats-wrapper {
+        gap: 32px;
+    }
+
+    .svc-stat-item h3 {
+        font-size: 28px;
+    }
+
+    .svc-cta-wrapper h2 {
+        font-size: 28px;
+    }
+
+    .svc-cta-features {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .svc-cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .svc-cta-buttons a,
+    .svc-cta-buttons button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .svc-hero {
+        padding: 120px 0 48px;
+    }
+
+    .svc-hero-content h1 {
+        font-size: 30px;
+    }
+
+    .svc-hero-content > p {
+        font-size: 15px;
+    }
+
+    .svc-btn-primary,
+    .svc-btn-secondary {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+
+    .svc-stats-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .svc-cta-wrapper h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .svc-hero-content h1 {
+        font-size: 26px;
+    }
+
+    .svc-heading h2 {
+        font-size: 22px;
+    }
+}

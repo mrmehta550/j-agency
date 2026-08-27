@@ -38,36 +38,39 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     {# ── Site-wide stylesheets (nav, footer, layout) ──────────────────────── #}
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
-    <link rel="stylesheet" href="{% static 'css/nav.css' %}">
-    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}?v=3.5">
+    <link rel="stylesheet" href="{% static 'css/nav.css' %}?v=3.5">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}?v=3.5">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}?v=3.5">
+
+    {# ── Shared Services Design System ───────────────────────────────────── #}
+    <link rel="stylesheet" href="{% static 'css/services_base.css' %}?v=3.5">
 
     {# ── Page-specific stylesheets (loaded on every page for now) ─────────── #}
     {# NOTE: These are kept here to avoid breaking any pages. #}
     {# Future improvement: move each to its own template via {% block extra_css %} #}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/pricing.css' %}">
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
-    <link rel="stylesheet" href="{% static 'css/booking.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    <link rel="stylesheet" href="{% static 'css/tech.css' %}">
-    <link rel="stylesheet" href="{% static 'css/about.css' %}">
-    <link rel="stylesheet" href="{% static 'css/privacy.css' %}">
-    <link rel="stylesheet" href="{% static 'css/terms.css' %}">
-    <link rel="stylesheet" href="{% static 'css/web.css' %}">
-    <link rel="stylesheet" href="{% static 'css/uiux.css' %}">
-    <link rel="stylesheet" href="{% static 'css/seo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/dm.css' %}">
-    <link rel="stylesheet" href="{% static 'css/aisol.css' %}">
-    <link rel="stylesheet" href="{% static 'css/maint.css' %}">
-    <link rel="stylesheet" href="{% static 'css/logo.css' %}">
-    <link rel="stylesheet" href="{% static 'css/video.css' %}">
-    <link rel="stylesheet" href="{% static 'css/ecom.css' %}">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/index.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/pricing.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/contact.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/booking.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/blog.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/tech.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/about.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/privacy.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/terms.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/web.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/uiux.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/seo.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/dm.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/aisol.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/maint.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/logo.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/video.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/ecom.css' %}?v=3.5">
     
-    <link rel="stylesheet" href="{% static 'css/case_study_detail.css' %}">
-    <link rel="stylesheet" href="{% static 'css/blog_detail.css' %}">
-    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/case_study_detail.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/blog_detail.css' %}?v=3.5">
+    <link class="page-css" rel="stylesheet" href="{% static 'css/app.css' %}?v=3.5">
     {# ── Per-page CSS block (child templates add their own CSS here) ───────── #}
     {% block extra_css %}{% endblock %}
 </head>
@@ -78,7 +81,7 @@
     {% block content %}{% endblock %}
 
     {% include "base/footer.html" %}
-<div>
+<div class="home-wa-float-container" style="position: fixed; bottom: 30px; right: 30px; z-index: 99999; display: flex; align-items: center; gap: 12px; flex-direction: row-reverse;">
     <a
     href="https://wa.me/919942637897?text=Hello%20Magencyinfo%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20I%20would%20like%20to%20discuss%20my%20project.%20Please%20get%20in%20touch.%20Thank%20you!"
     class="home-wa-float"
@@ -86,43 +89,44 @@
     rel="noopener noreferrer"
     aria-label="Chat on WhatsApp"
     id="waButton"
+    style="width: 60px; height: 60px; background-color: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);"
   >
-    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 32px; height: 32px; display: block;">
       <path d="M16 4C9.373 4 4 9.373 4 16c0 2.28.633 4.412 1.732 6.23L4 28l5.938-1.703A11.93 11.93 0 0 0 16 28c6.627 0 12-5.373 12-12S22.627 4 16 4Z" fill="#fff"/>
       <path d="M16 6.2c-5.412 0-9.8 4.388-9.8 9.8 0 1.94.564 3.75 1.537 5.27l-1.01 3.69 3.79-1.083A9.75 9.75 0 0 0 16 25.8c5.412 0 9.8-4.388 9.8-9.8S21.412 6.2 16 6.2Z" fill="#25D366"/>
       <path d="M12.3 11.1c-.28-.62-.44-.62-.72-.63h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.1-1.14 2.7 0 1.6 1.16 3.14 1.33 3.35.16.22 2.28 3.62 5.63 4.93 2.78 1.09 3.35.87 3.95.82.6-.06 1.94-.79 2.21-1.55.27-.76.27-1.42.19-1.55-.08-.13-.3-.22-.6-.38-.31-.16-1.83-.9-2.11-1-.28-.1-.49-.16-.7.16-.2.32-.8 1-.98 1.2-.18.22-.36.24-.66.08-.31-.16-1.3-.48-2.48-1.53-.92-.82-1.53-1.83-1.72-2.14-.18-.32-.02-.49.14-.65.14-.14.31-.36.46-.54.15-.18.2-.32.3-.53.1-.22.05-.4-.02-.56-.08-.16-.68-1.67-.99-2.28Z" fill="#fff"/>
     </svg>
   </a>
-  <span class="home-wa-tooltip">Chat with us</span>
+  <span class="home-wa-tooltip" style="background-color: #0F172A; color: #FFFFFF; padding: 8px 16px; border-radius: 12px; font-size: 13.5px; font-weight: 600; box-shadow: 0 4px 15px rgba(15, 23, 42, 0.15); white-space: nowrap; opacity: 0; visibility: hidden; transform: translateX(10px); transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); pointer-events: none; position: relative;">Chat with us</span>
 </div>
 
     {# ── Third-party JS ───────────────────────────────────────────────────── #}
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     {# ── Site-wide JS ─────────────────────────────────────────────────────── #}
-    <script src="{% static 'js/nav.js' %}"></script>
+    <script src="{% static 'js/nav.js' %}?v=3.5"></script>
 
     {# ── Page-specific JS (loaded on every page for now) ──────────────────── #}
     {# NOTE: Kept here to avoid breaking any pages. #}
-    <script src="{% static 'js/index.js' %}"></script>
-    <script src="{% static 'js/pricing.js' %}"></script>
-    <script src="{% static 'js/about.js' %}"></script>
-    <script src="{% static 'js/contact.js' %}"></script>
-    <script src="{% static 'js/booking.js' %}"></script>
-    <script src="{% static 'js/blog.js' %}"></script>
-    <script src="{% static 'js/tech.js' %}"></script>
-    <script src="{% static 'js/privacy.js' %}"></script>
-    <script src="{% static 'js/terms.js' %}"></script>
-    <script src="{% static 'js/web.js' %}"></script>
-    <script src="{% static 'js/uiux.js' %}"></script>
-    <script src="{% static 'js/seo.js' %}"></script>
-    <script src="{% static 'js/dm.js' %}"></script>
-    <script src="{% static 'js/aisol.js' %}"></script>
-    <script src="{% static 'js/maint.js' %}"></script>
-    <script src="{% static 'js/logo.js' %}"></script>
-    <script src="{% static 'js/video.js' %}"></script>
-    <script src="{% static 'js/ecom.js' %}"></script>
-    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/index.js' %}?v=3.5"></script>
+    <script src="{% static 'js/pricing.js' %}?v=3.5"></script>
+    <script src="{% static 'js/about.js' %}?v=3.5"></script>
+    <script src="{% static 'js/contact.js' %}?v=3.5"></script>
+    <script src="{% static 'js/booking.js' %}?v=3.5"></script>
+    <script src="{% static 'js/blog.js' %}?v=3.5"></script>
+    <script src="{% static 'js/tech.js' %}?v=3.5"></script>
+    <script src="{% static 'js/privacy.js' %}?v=3.5"></script>
+    <script src="{% static 'js/terms.js' %}?v=3.5"></script>
+    <script src="{% static 'js/web.js' %}?v=3.5"></script>
+    <script src="{% static 'js/uiux.js' %}?v=3.5"></script>
+    <script src="{% static 'js/seo.js' %}?v=3.5"></script>
+    <script src="{% static 'js/dm.js' %}?v=3.5"></script>
+    <script src="{% static 'js/aisol.js' %}?v=3.5"></script>
+    <script src="{% static 'js/maint.js' %}?v=3.5"></script>
+    <script src="{% static 'js/logo.js' %}?v=3.5"></script>
+    <script src="{% static 'js/video.js' %}?v=3.5"></script>
+    <script src="{% static 'js/ecom.js' %}?v=3.5"></script>
+    <script src="{% static 'js/app.js' %}?v=3.5"></script>
 
     {# ── Per-page JS block (child templates add their own scripts here) ────── #}
     {% block extra_js %}{% endblock %}

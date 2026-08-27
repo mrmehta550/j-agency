@@ -1,194 +1,124 @@
+/**
+ * Website Maintenance Service Page Specific JavaScript
+ * Isolated to prevent global namespace pollution.
+ */
 document.addEventListener("DOMContentLoaded", () => {
+    // Only execute if we are on the Website Maintenance page
+    const maintHero = document.querySelector(".maint-service-hero");
+    if (!maintHero) return;
 
-    /*====================================
-            FAQ ACCORDION
-    ====================================*/
+    /* ==========================================================================
+       1. FAQ ACCORDION SYSTEM
+       ========================================================================== */
+    const faqItems = document.querySelectorAll(".maint-faq-item");
 
-    const faqItems = document.querySelectorAll(".maintenance-faq-item");
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector(".maint-faq-question");
+            const answer = item.querySelector(".maint-faq-answer");
 
-    faqItems.forEach(item => {
-
-        const question = item.querySelector(".maintenance-faq-question");
-
-        question.addEventListener("click", () => {
-
-            faqItems.forEach(other => {
-
-                if(other !== item){
-
-                    other.classList.remove("active");
-
-                }
-
-            });
-
-            item.classList.toggle("active");
-
-        });
-
-    });
-
-    /*====================================
-            SCROLL ANIMATION
-    ====================================*/
-
-    const observer = new IntersectionObserver((entries)=>{
-
-        entries.forEach(entry=>{
-
-            if(entry.isIntersecting){
-
-                entry.target.classList.add("show");
-
-            }
-
-        });
-
-    },{
-
-        threshold:.15
-
-    });
-
-    document.querySelectorAll(
-
-        ".maintenance-service-card,\
-        .maintenance-feature-card,\
-        .maintenance-process-card,\
-        .maintenance-pricing-card,\
-        .maintenance-stat-card"
-
-    ).forEach(card=>{
-
-        card.classList.add("hidden");
-
-        observer.observe(card);
-
-    });
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    /*=====================================
-            COUNTER ANIMATION
-    =====================================*/
-
-    const counters = document.querySelectorAll(".maintenance-counter");
-
-    const counterObserver = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            const counter = entry.target;
-
-            const target = +counter.dataset.target;
-
-            let current = 0;
-
-            const increment = Math.ceil(target / 80);
-
-            const updateCounter = () => {
-
-                current += increment;
-
-                if (current >= target) {
-
-                    counter.textContent = target + "+";
-
+            if (question && answer) {
+                // Initialize default state
+                if (item.classList.contains("active")) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
                 } else {
-
-                    counter.textContent = current + "+";
-
-                    requestAnimationFrame(updateCounter);
-
+                    answer.style.maxHeight = "0px";
                 }
 
-            };
+                question.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const isActive = item.classList.contains("active");
 
-            updateCounter();
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("active");
+                            const otherAnswer = otherItem.querySelector(".maint-faq-answer");
+                            if (otherAnswer) {
+                                otherAnswer.style.maxHeight = "0px";
+                            }
+                        }
+                    });
 
-            counterObserver.unobserve(counter);
-
+                    // Toggle current FAQ item
+                    if (isActive) {
+                        item.classList.remove("active");
+                        answer.style.maxHeight = "0px";
+                    } else {
+                        item.classList.add("active");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            }
         });
-
-    });
-
-    counters.forEach(counter => {
-
-        counterObserver.observe(counter);
-
-    });
-
-    /*=====================================
-            PARALLAX EFFECT
-    =====================================*/
-
-    const hero = document.querySelector(".maintenance-service-hero");
-
-    if(hero){
-
-        hero.addEventListener("mousemove", (e) => {
-
-            const blobs = document.querySelectorAll(".maintenance-service-blob");
-
-            blobs.forEach((blob,index)=>{
-
-                const speed = (index+1) * 8;
-
-                const x = (window.innerWidth/2 - e.clientX)/speed;
-
-                const y = (window.innerHeight/2 - e.clientY)/speed;
-
-                blob.style.transform =
-                `translate(${x}px,${y}px)`;
-
-            });
-
-        });
-
     }
 
-    /*=====================================
-            BUTTON RIPPLE
-    =====================================*/
+    /* ==========================================================================
+       2. INTERSECTION OBSERVER STATS COUNTER
+       ========================================================================== */
+    const maintCounters = document.querySelectorAll(".maint-counter");
 
-    document.querySelectorAll(
+    if (maintCounters.length > 0) {
+        const animateCounter = (counter) => {
+            if (counter.dataset.countStarted === "true") return;
+            counter.dataset.countStarted = "true";
 
-        ".maintenance-btn-primary,.maintenance-btn-outline"
+            const target = parseInt(counter.getAttribute("data-target"), 10) || 0;
+            const suffix = counter.getAttribute("data-suffix") || "";
+            const duration = 1500; // Animation duration in ms
+            const startTime = performance.now();
 
-    ).forEach(button=>{
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
 
-        button.addEventListener("click",function(e){
+                // Ease out quad
+                const easeProgress = progress * (2 - progress);
+                const currentVal = Math.floor(easeProgress * target);
 
-            const ripple=document.createElement("span");
+                counter.textContent = currentVal.toLocaleString() + suffix;
 
-            const rect=this.getBoundingClientRect();
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.textContent = target.toLocaleString() + suffix;
+                }
+            };
 
-            const size=Math.max(rect.width,rect.height);
+            requestAnimationFrame(updateCount);
+        };
 
-            ripple.style.width=size+"px";
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
 
-            ripple.style.height=size+"px";
-
-            ripple.style.left=e.clientX-rect.left-size/2+"px";
-
-            ripple.style.top=e.clientY-rect.top-size/2+"px";
-
-            ripple.className="maintenance-ripple";
-
-            this.appendChild(ripple);
-
-            setTimeout(()=>{
-
-                ripple.remove();
-
-            },600);
-
+        maintCounters.forEach(counter => {
+            counterObserver.observe(counter);
         });
+    }
 
-    });
+    /* ==========================================================================
+       3. SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    const maintRevealElements = document.querySelectorAll(".maint-reveal");
 
+    if (maintRevealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("maint-revealed");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.02 });
+
+        maintRevealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    }
 });

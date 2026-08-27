@@ -1,6 +1,9 @@
-
 {% extends "base.html" %}
 {% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/terms.css' %}?v=2.0">
+{% endblock %}
 
 {% block title %}Terms & Conditions | Magency Info{% endblock %}
 
@@ -11,2131 +14,297 @@ Read the official Terms & Conditions of Magency Info. These terms govern your us
 {% block content %}
 
 <!--=========================================
-            HERO SECTION
-==========================================-->
-
+    1. HERO SECTION
+    ==========================================-->
 <section class="terms-hero">
-
-    <div class="container">
-
+    <div class="terms-container">
         <!-- Breadcrumb -->
+        <nav class="terms-breadcrumb" aria-label="Breadcrumb">
+            <a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <span class="terms-crumb-active">Terms & Conditions</span>
+        </nav>
 
-        <div class="breadcrumb">
-
-            <a href="{% url 'home' %}">
-
-                <i class="fa-solid fa-house"></i>
-
-                Home
-
-            </a>
-
-            <span>
-
-                <i class="fa-solid fa-angle-right"></i>
-
-            </span>
-
-            <span>
-
-                Terms & Conditions
-
-            </span>
-
-        </div>
-
-        <div class="terms-grid">
-
-            <!-- Left -->
-
-            <div class="terms-content">
-
-                <span class="hero-badge">
-
+        <div class="terms-hero-grid">
+            <!-- Left Content -->
+            <div class="terms-hero-content">
+                <span class="terms-hero-badge">
                     <i class="fa-solid fa-scale-balanced"></i>
-
                     Legal Terms & Service Agreement
-
                 </span>
 
-                <h1>
-
-                    Terms &
-                    <span>Conditions</span>
-
-                </h1>
+                <h1>Terms & <span>Conditions</span></h1>
 
                 <p>
-
-                    Welcome to <strong>Magency Info</strong>. These Terms &
-                    Conditions govern your access to our website and the use
-                    of our digital services. By accessing our website,
-                    requesting a quotation, booking a consultation, or
-                    purchasing any service, you agree to comply with these
-                    Terms & Conditions.
-
+                    Welcome to <strong>Magency Info</strong>. These Terms & Conditions govern your access to our website and the use of our digital services. By accessing our website, requesting a quotation, booking a consultation, or purchasing any service, you agree to comply with these terms.
                 </p>
 
-                <div class="terms-info">
-
-                    <div class="info-card">
-
+                <div class="terms-hero-meta">
+                    <div class="terms-meta-card">
                         <i class="fa-solid fa-calendar-days"></i>
-
                         <div>
-
-                            <h4>
-
-                                Last Updated
-
-                            </h4>
-
-                            <p>
-
-                                July 20, 2026
-
-                            </p>
-
+                            <h4>Last Updated</h4>
+                            <p>July 20, 2026</p>
                         </div>
-
                     </div>
 
-                    <div class="info-card" style="margin-top:2%;">
-
+                    <div class="terms-meta-card">
                         <i class="fa-solid fa-file-contract"></i>
-
                         <div>
-
-                            <h4>
-
-                                Legal Agreement
-
-                            </h4>
-
-                            <p>
-
-                                Applicable Worldwide
-
-                            </p>
-
+                            <h4>Legal Scope</h4>
+                            <p>Applicable Worldwide</p>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
-            <!-- Right -->
-
-            <div class="terms-image-wrapper">
-
-                <img
-
-                    src="{% static 'images/privacy/terms.jpg' %}"
-
-                    alt="Magency Info Terms & Conditions"
-
-                    class="terms-image"
-
-                >
-
+            <!-- Right Visual -->
+            <div class="terms-hero-image">
+                <img src="{% static 'images/privacy/terms.jpg' %}" alt="Magency Info Terms & Conditions">
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-        OVERVIEW CARDS
-==========================================-->
-
-<section class="terms-features">
-
-    <div class="container">
-
-        <div class="feature-grid">
-
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
+    2. OVERVIEW PILLS
+    ==========================================-->
+<section class="terms-overview-section">
+    <div class="terms-container">
+        <div class="terms-overview-grid">
+            <div class="terms-overview-card">
+                <div class="terms-overview-icon">
                     <i class="fa-solid fa-file-contract"></i>
-
                 </div>
-
-                <h3>
-
-                    Transparent Agreements
-
-                </h3>
-
-                <p>
-
-                    Clear and transparent service terms that protect both
-                    Magency Info and our clients throughout every project.
-
-                </p>
-
+                <h3>Transparent Terms</h3>
+                <p>Clear milestones and deliverables that protect both parties throughout the project.</p>
             </div>
 
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
+            <div class="terms-overview-card">
+                <div class="terms-overview-icon">
                     <i class="fa-solid fa-credit-card"></i>
-
                 </div>
-
-                <h3>
-
-                    Secure Payments
-
-                </h3>
-
-                <p>
-
-                    Transparent payment schedules, invoices,
-                    milestone-based billing, and secure payment processing.
-
-                </p>
-
+                <h3>Secure Payments</h3>
+                <p>Milestone-based invoicing and encrypted payment processing gateways.</p>
             </div>
 
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
+            <div class="terms-overview-card">
+                <div class="terms-overview-icon">
                     <i class="fa-solid fa-user-shield"></i>
-
                 </div>
-
-                <h3>
-
-                    Confidential Projects
-
-                </h3>
-
-                <p>
-
-                    Your project files, credentials,
-                    business information, and intellectual
-                    property remain protected.
-
-                </p>
-
+                <h3>Strict Confidentiality</h3>
+                <p>Your business logic, credentials, and source assets remain fully confidential.</p>
             </div>
 
-            <div class="feature-card">
-
-                <div class="feature-icon">
-
+            <div class="terms-overview-card">
+                <div class="terms-overview-icon">
                     <i class="fa-solid fa-scale-balanced"></i>
-
                 </div>
-
-                <h3>
-
-                    Legal Compliance
-
-                </h3>
-
-                <p>
-
-                    Our services operate in accordance with
-                    applicable laws, professional standards,
-                    and industry best practices.
-
-                </p>
-
+                <h3>Legal Compliance</h3>
+                <p>Operations compliant with international digital contracts and IP standards.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-        TERMS CONTENT
-==========================================-->
-
-<section class="terms-content-section">
-
-    <div class="container">
-
-        <div class="terms-layout">
-
-            <!--=================================
-                    SIDEBAR
-            =================================-->
-
-            <aside class="terms-sidebar">
-
-                <div class="sidebar-card">
-
-                    <h3>
-
-                        Table of Contents
-
-                    </h3>
-
-                    <ul>
-
-                        <li><a href="#introduction">Introduction</a></li>
-
-                        <li><a href="#definitions">Definitions</a></li>
-
-                        <li><a href="#services">Services</a></li>
-
-                        <li><a href="#responsibilities">Client Responsibilities</a></li>
-
-                        <li><a href="#payments">Payment Terms</a></li>
-
-                        <li><a href="#timeline">Project Timeline</a></li>
-
-                        <li><a href="#intellectual">Intellectual Property</a></li>
-
-                        <li><a href="#refund">Cancellation & Refund</a></li>
-
-                        <li><a href="#liability">Limitation of Liability</a></li>
-
-                        <li><a href="#contact">Contact</a></li>
-
-                    </ul>
-
-                </div>
-
+    3. MAIN TERMS CONTENT WITH SIDEBAR
+    ==========================================-->
+<section class="terms-body-section">
+    <div class="terms-container">
+        <div class="terms-body-layout">
+            <!-- Sticky Sidebar -->
+            <aside class="terms-toc-sidebar">
+                <h3>Table of Contents</h3>
+                <ul class="terms-toc-list">
+                    <li><a href="#introduction" class="active">1. Introduction</a></li>
+                    <li><a href="#definitions">2. Key Definitions</a></li>
+                    <li><a href="#services">3. Services & Scope</a></li>
+                    <li><a href="#responsibilities">4. Client Obligations</a></li>
+                    <li><a href="#payments">5. Invoicing & Payments</a></li>
+                    <li><a href="#timeline">6. Project Timelines</a></li>
+                    <li><a href="#intellectual">7. Intellectual Property</a></li>
+                    <li><a href="#refund">8. Cancellations & Refunds</a></li>
+                    <li><a href="#liability">9. Limitation of Liability</a></li>
+                    <li><a href="#contact">10. Legal Inquiries</a></li>
+                </ul>
             </aside>
 
-            <!--=================================
-                    MAIN CONTENT
-            =================================-->
-
-            <div class="terms-main" style="margin-bottom:2%;">
-
-<!--=========================================
-        INTRODUCTION
-==========================================-->
-
-<section
-    id="introduction"
-    class="terms-card">
-
-    <span class="section-tag">
-
-        Introduction
-
-    </span>
-
-    <h2>
-
-        Welcome To Magency Info
-
-    </h2>
-
-    <p>
-
-        These Terms & Conditions ("Terms") constitute a legally binding
-        agreement between you ("Client", "User", or "You") and
-        <strong>Magency Info</strong> ("Magency Info", "M Agency", "Company",
-        "We", "Our", or "Us").
-
-    </p>
-
-    <p>
-
-        These Terms govern your access to and use of our website,
-        consultation services, web development, mobile app development,
-        branding, SEO, digital marketing, UI/UX design, AI automation,
-        cloud solutions, and all related digital services.
-
-    </p>
-
-    <p>
-
-        By using our website or engaging our services,
-        you acknowledge that you have read,
-        understood,
-        and agreed to these Terms & Conditions.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        DEFINITIONS
-==========================================-->
-
-<section
-    id="definitions"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Definitions
-
-    </span>
-
-    <h2>
-
-        Key Definitions
-
-    </h2>
-
-    <div class="definition-grid">
-
-        <div class="definition-card">
-
-            <i class="fa-solid fa-building"></i>
-
-            <h4>
-
-                Company
-
-            </h4>
-
-            <p>
-
-                Refers to Magency Info,
-                its owners,
-                employees,
-                contractors,
-                partners,
-                and authorized representatives.
-
-            </p>
-
-        </div>
-
-        <div class="definition-card">
-
-            <i class="fa-solid fa-user"></i>
-
-            <h4>
-
-                Client
-
-            </h4>
-
-            <p>
-
-                Any individual,
-                startup,
-                organization,
-                or business purchasing
-                or requesting our services.
-
-            </p>
-
-        </div>
-
-        <div class="definition-card">
-
-            <i class="fa-solid fa-globe"></i>
-
-            <h4>
-
-                Website
-
-            </h4>
-
-            <p>
-
-                Refers to the official
-                Magency Info website,
-                landing pages,
-                client portals,
-                and associated digital platforms.
-
-            </p>
-
-        </div>
-
-        <div class="definition-card">
-
-            <i class="fa-solid fa-laptop-code"></i>
-
-            <h4>
-
-                Services
-
-            </h4>
-
-            <p>
-
-                Website development,
-                mobile applications,
-                AI solutions,
-                SEO,
-                branding,
-                UI/UX,
-                automation,
-                cloud,
-                and digital marketing services.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!--=========================================
-        SERVICES
-==========================================-->
-
-<section
-    id="services"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Services
-
-    </span>
-
-    <h2>
-
-        Services We Provide
-
-    </h2>
-
-    <p>
-
-        Magencyinfo provides professional digital solutions for startups,
-        businesses, entrepreneurs, and enterprises. The exact scope,
-        deliverables, timeline, pricing, and project milestones will be
-        specified in the applicable proposal, quotation, invoice,
-        statement of work, or written agreement.
-
-    </p>
-
-    <div class="service-grid">
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-code"></i>
-
-            <h4>
-
-                Website Development
-
-            </h4>
-
-            <p>
-
-                Custom business websites,
-                enterprise web applications,
-                SaaS platforms,
-                landing pages,
-                and eCommerce solutions.
-
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-mobile-screen-button"></i>
-
-            <h4>
-
-                Mobile Applications
-
-            </h4>
-
-            <p>
-
-                Android, iOS and cross-platform
-                mobile applications with scalable
-                architecture and modern UI.
-
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-palette"></i>
-
-            <h4>
-
-                UI / UX Design
-
-            </h4>
-
-            <p>
-
-                Wireframes,
-                user experience,
-                interface design,
-                dashboards,
-                prototypes,
-                and branding systems.
-
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-chart-line"></i>
-
-            <h4>
-
-                SEO & Digital Marketing
-
-            </h4>
-
-            <p>
-
-                Search Engine Optimization,
-                Local SEO,
-                Google Business,
-                paid advertising,
-                and digital growth strategies.
-
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-robot"></i>
-
-            <h4>
-
-                AI Automation
-
-            </h4>
-
-            <p>
-
-                AI chatbots,
-                workflow automation,
-                LLM integration,
-                RAG solutions,
-                business automation,
-                and AI consulting.
-
-            </p>
-
-        </div>
-
-        <div class="service-card">
-
-            <i class="fa-solid fa-cloud"></i>
-
-            <h4>
-
-                Cloud & Support
-
-            </h4>
-
-            <p>
-
-                Cloud deployment,
-                maintenance,
-                security monitoring,
-                performance optimization,
-                and technical support.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CLIENT RESPONSIBILITIES
-==========================================-->
-
-<section
-    id="responsibilities"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Client Responsibilities
-
-    </span>
-
-    <h2>
-
-        Responsibilities Of The Client
-
-    </h2>
-
-    <p>
-
-        To ensure successful project delivery,
-        the Client agrees to cooperate throughout
-        the project lifecycle and fulfill the
-        following responsibilities.
-
-    </p>
-
-    <div class="responsibility-list">
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Provide complete and accurate project requirements before development begins.
-
-            </span>
-
-        </div>
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Supply logos, text, media files, branding assets and other required materials on time.
-
-            </span>
-
-        </div>
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Review project milestones and provide timely approvals or feedback.
-
-            </span>
-
-        </div>
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Keep account credentials, passwords and confidential information secure.
-
-            </span>
-
-        </div>
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Make payments according to the agreed quotation, invoice or service agreement.
-
-            </span>
-
-        </div>
-
-        <div class="responsibility-item">
-
-            <i class="fa-solid fa-circle-check"></i>
-
-            <span>
-
-                Ensure all submitted content complies with applicable laws and does not infringe third-party rights.
-
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        PAYMENT TERMS
-==========================================-->
-
-<section
-    id="payments"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Payment Policy
-
-    </span>
-
-    <h2>
-
-        Payment Terms
-
-    </h2>
-
-    <p>
-
-        Payment schedules are determined before
-        the commencement of each project and are
-        outlined in the applicable quotation,
-        invoice or written agreement.
-
-    </p>
-
-    <div class="payment-grid">
-
-        <div class="payment-card">
-
-            <i class="fa-solid fa-wallet"></i>
-
-            <h4>
-
-                Advance Payment
-
-            </h4>
-
-            <p>
-
-                An advance payment may be required
-                before work begins based on the
-                project scope and agreed proposal.
-
-            </p>
-
-        </div>
-
-        <div class="payment-card">
-
-            <i class="fa-solid fa-money-bill-wave"></i>
-
-            <h4>
-
-                Milestone Payments
-
-            </h4>
-
-            <p>
-
-                Payments may be collected according
-                to project milestones specified
-                in the project agreement.
-
-            </p>
-
-        </div>
-
-        <div class="payment-card">
-
-            <i class="fa-solid fa-receipt"></i>
-
-            <h4>
-
-                Invoice
-
-            </h4>
-
-            <p>
-
-                Digital invoices will be issued
-                for completed milestones,
-                services rendered,
-                and final project delivery.
-
-            </p>
-
-        </div>
-
-        <div class="payment-card">
-
-            <i class="fa-solid fa-clock"></i>
-
-            <h4>
-
-                Late Payments
-
-            </h4>
-
-            <p>
-
-                Delayed payments may result in
-                project delays,
-                temporary suspension,
-                or withholding of deliverables
-                until outstanding balances are cleared.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        PROJECT TIMELINE
-==========================================-->
-
-<section
-    id="timeline"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Project Workflow
-
-    </span>
-
-    <h2>
-
-        Standard Project Process
-
-    </h2>
-
-    <p>
-
-        While every project is unique,
-        Magency Info generally follows
-        a structured development process
-        to ensure transparency,
-        quality,
-        and timely delivery.
-
-    </p>
-
-    <div class="timeline">
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-comments"></i>
-
+            <!-- Main Articles -->
+            <div class="terms-main-content">
+                <!-- 1. Introduction -->
+                <article id="introduction" class="terms-article-card">
+                    <span class="terms-section-tag">Section 1</span>
+                    <h2>1. Introduction</h2>
+                    <p>
+                        These Terms & Conditions ("Terms") constitute a legally binding agreement between you ("Client", "User", or "You") and <strong>Magency Info</strong> ("Company", "We", "Our", or "Us").
+                    </p>
+                    <p>
+                        These Terms govern your access to and use of our website, consultation services, web development, mobile app development, branding, SEO, digital marketing, UI/UX design, AI automation, cloud solutions, and all related digital services.
+                    </p>
+                    <div class="terms-notice-box">
+                        <p>By using our website or booking a project, you confirm that you have read, understood, and agreed to be bound by these legal terms.</p>
+                    </div>
+                </article>
+
+                <!-- 2. Definitions -->
+                <article id="definitions" class="terms-article-card">
+                    <span class="terms-section-tag">Section 2</span>
+                    <h2>2. Key Definitions</h2>
+                    <div class="terms-def-grid">
+                        <div class="terms-def-card">
+                            <i class="fa-solid fa-building"></i>
+                            <h4>Company</h4>
+                            <p>Refers to Magency Info, its owners, engineers, designers, and authorized representatives.</p>
+                        </div>
+                        <div class="terms-def-card">
+                            <i class="fa-solid fa-user"></i>
+                            <h4>Client</h4>
+                            <p>Any individual, startup, or enterprise commissioning our agency for digital deliverables.</p>
+                        </div>
+                        <div class="terms-def-card">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h4>Deliverables</h4>
+                            <p>The codebases, Figma designs, strategy decks, and assets produced during the project.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 3. Services & Scope -->
+                <article id="services" class="terms-article-card">
+                    <span class="terms-section-tag">Section 3</span>
+                    <h2>3. Services & Scope of Work</h2>
+                    <p>
+                        Magency Info provides digital product engineering, UI/UX design, AI integration, organic search optimization, and marketing consulting. Each project is governed by a defined Statement of Work (SOW) or quotation detailing deliverables, milestone schedules, and tech stacks.
+                    </p>
+                    <ul>
+                        <li>Any features or revisions requested outside the agreed SOW will be billed as scope add-ons.</li>
+                        <li>Third-party API fees, cloud hosting costs, domain registrations, and paid font licenses remain the direct responsibility of the client.</li>
+                    </ul>
+                </article>
+
+                <!-- 4. Client Obligations -->
+                <article id="responsibilities" class="terms-article-card">
+                    <span class="terms-section-tag">Section 4</span>
+                    <h2>4. Client Obligations & Content</h2>
+                    <p>
+                        To ensure delivery velocity and milestones, clients agree to provide necessary text copy, brand guidelines, API keys, and feedback in a timely manner.
+                    </p>
+                    <p>
+                        The client warrants that all text, imagery, trademarks, and assets supplied to Magency Info are owned by the client or properly licensed. Magency Info assumes no liability for copyright infringement resulting from client-provided materials.
+                    </p>
+                </article>
+
+                <!-- 5. Invoicing & Payments -->
+                <article id="payments" class="terms-article-card">
+                    <span class="terms-section-tag">Section 5</span>
+                    <h2>5. Invoicing & Payment Terms</h2>
+                    <p>
+                        Unless explicitly specified otherwise in writing, projects require an upfront deposit before work begins, with subsequent milestone payments scheduled upon completion of predefined phases (e.g. Design Approval, Beta Staging, Final Production Rollout).
+                    </p>
+                    <ul>
+                        <li>Invoices are due within 7 business days of issuance.</li>
+                        <li>Final production source files and server root credentials are transferred upon full settlement of the remaining invoice balance.</li>
+                    </ul>
+                </article>
+
+                <!-- 6. Project Timelines -->
+                <article id="timeline" class="terms-article-card">
+                    <span class="terms-section-tag">Section 6</span>
+                    <h2>6. Project Timelines & Delays</h2>
+                    <p>
+                        Estimated delivery dates are provided in good faith based on the agreed specifications. Timelines may adjust if client feedback is delayed, scope modifications are introduced, or third-party platform dependencies experience outages.
+                    </p>
+                </article>
+
+                <!-- 7. Intellectual Property -->
+                <article id="intellectual" class="terms-article-card">
+                    <span class="terms-section-tag">Section 7</span>
+                    <h2>7. Intellectual Property Rights</h2>
+                    <p>
+                        Upon full payment settlement, 100% intellectual property and copyright of the custom design layouts, brand logos, and proprietary application code transfer to the client.
+                    </p>
+                    <p>
+                        Magency Info retains the right to display non-confidential project screenshots and case studies in our agency portfolio, unless an explicit Non-Disclosure Agreement (NDA) states otherwise.
+                    </p>
+                </article>
+
+                <!-- 8. Cancellations & Refunds -->
+                <article id="refund" class="terms-article-card">
+                    <span class="terms-section-tag">Section 8</span>
+                    <h2>8. Cancellations & Refunds</h2>
+                    <p>
+                        Either party may terminate a project with written notice. In the event of early termination, the client will be invoiced for all completed hours and deliverables up to the termination date. Upfront discovery deposits are non-refundable once design and development sprints have commenced.
+                    </p>
+                </article>
+
+                <!-- 9. Limitation of Liability -->
+                <article id="liability" class="terms-article-card">
+                    <span class="terms-section-tag">Section 9</span>
+                    <h2>9. Limitation of Liability</h2>
+                    <p>
+                        To the maximum extent permitted by applicable law, Magency Info shall not be liable for indirect, incidental, punitive, or consequential damages resulting from third-party server downtime, cyberattacks on client hosting, or search engine algorithm shifts.
+                    </p>
+                </article>
+
+                <!-- 10. Legal Inquiries -->
+                <article id="contact" class="terms-article-card">
+                    <span class="terms-section-tag">Section 10</span>
+                    <h2>10. Legal Inquiries & Jurisdiction</h2>
+                    <p>
+                        These Terms shall be governed by and construed in accordance with applicable business laws. If you have questions regarding our legal agreements, please contact our legal team directly.
+                    </p>
+                </article>
             </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Discovery & Consultation
-
-                </h4>
-
-                <p>
-
-                    Business analysis,
-                    consultation,
-                    scope definition,
-                    feature planning,
-                    and requirement gathering.
-
-                </p>
-
-            </div>
-
         </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-pen-ruler"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Design Approval
-
-                </h4>
-
-                <p>
-
-                    Wireframes,
-                    UI/UX design,
-                    prototypes,
-                    branding,
-                    and client approval.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-code"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Development
-
-                </h4>
-
-                <p>
-
-                    Frontend,
-                    backend,
-                    APIs,
-                    database,
-                    cloud infrastructure,
-                    and integrations.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-vial-circle-check"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Testing & Quality Assurance
-
-                </h4>
-
-                <p>
-
-                    Performance testing,
-                    security review,
-                    compatibility testing,
-                    and issue resolution.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-rocket"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Deployment
-
-                </h4>
-
-                <p>
-
-                    Production deployment,
-                    launch,
-                    configuration,
-                    and client handover.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="timeline-item">
-
-            <div class="timeline-icon">
-
-                <i class="fa-solid fa-headset"></i>
-
-            </div>
-
-            <div class="timeline-content">
-
-                <h4>
-
-                    Maintenance & Support
-
-                </h4>
-
-                <p>
-
-                    Ongoing maintenance,
-                    monitoring,
-                    updates,
-                    optimization,
-                    and support according to the selected service plan.
-
-                </p>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-        INTELLECTUAL PROPERTY
-==========================================-->
-
-<section
-    id="intellectual"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Ownership
-
-    </span>
-
-    <h2>
-
-        Intellectual Property Rights
-
-    </h2>
-
-    <p>
-
-        Unless otherwise agreed in writing,
-        all source code, UI/UX designs,
-        graphics, documentation,
-        wireframes, digital assets,
-        automation workflows and other
-        project deliverables created by
-        Magency Info remain our intellectual
-        property until all outstanding
-        invoices have been paid in full.
-
-    </p>
-
-    <div class="property-grid">
-
-        <div class="property-card">
-
-            <i class="fa-solid fa-code"></i>
-
-            <h4>
-
-                Source Code
-
-            </h4>
-
-            <p>
-
-                Ownership of custom source
-                code transfers to the Client
-                after full payment unless
-                otherwise specified in the
-                service agreement.
-
-            </p>
-
+    4. CONTACT & ASSISTANCE BANNER
+    ==========================================-->
+<section class="terms-help-section">
+    <div class="terms-container">
+        <div class="terms-help-wrapper">
+            <h2>Have Questions About Our Terms?</h2>
+            <p>Our team is available to clarify any aspect of our service agreements, project milestones, or privacy practices.</p>
+            <div class="terms-help-buttons">
+                <a href="{% url 'contact' %}" class="terms-btn-primary">
+                    Contact Legal Team
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'booking' %}" class="terms-btn-outline">
+                    Book Project Consultation
+                </a>
+            </div>
         </div>
-
-        <div class="property-card">
-
-            <i class="fa-solid fa-image"></i>
-
-            <h4>
-
-                Design Assets
-
-            </h4>
-
-            <p>
-
-                Approved UI designs,
-                branding materials,
-                graphics and creative assets
-                become the Client's property
-                upon project completion and
-                final payment.
-
-            </p>
-
-        </div>
-
-        <div class="property-card">
-
-            <i class="fa-solid fa-copyright"></i>
-
-            <h4>
-
-                Third-Party Licenses
-
-            </h4>
-
-            <p>
-
-                Open-source software,
-                commercial plugins,
-                fonts, APIs and licensed
-                resources remain subject
-                to their respective license
-                agreements.
-
-            </p>
-
-        </div>
-
     </div>
-
-</section>
-
-<!--=========================================
-        CONFIDENTIALITY
-==========================================-->
-
-<section
-    id="confidentiality"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Confidentiality
-
-    </span>
-
-    <h2>
-
-        Confidential Information
-
-    </h2>
-
-    <p>
-
-        Magency Info respects the confidentiality
-        of every client. Both parties agree
-        to protect confidential business
-        information shared throughout the
-        project lifecycle.
-
-    </p>
-
-    <div class="confidentiality-list">
-
-        <div class="confidentiality-item">
-
-            <i class="fa-solid fa-lock"></i>
-
-            <span>
-
-                Client credentials, business data and project files are stored securely.
-
-            </span>
-
-        </div>
-
-        <div class="confidentiality-item">
-
-            <i class="fa-solid fa-user-shield"></i>
-
-            <span>
-
-                Access to confidential information is limited to authorized personnel.
-
-            </span>
-
-        </div>
-
-        <div class="confidentiality-item">
-
-            <i class="fa-solid fa-file-shield"></i>
-
-            <span>
-
-                Information will not be disclosed without written permission unless required by law.
-
-            </span>
-
-        </div>
-
-        <div class="confidentiality-item">
-
-            <i class="fa-solid fa-user-secret"></i>
-
-            <span>
-
-                Confidentiality obligations continue even after project completion.
-
-            </span>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        REVISIONS
-==========================================-->
-
-<section
-    id="revisions"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Revisions
-
-    </span>
-
-    <h2>
-
-        Revision Policy
-
-    </h2>
-
-    <p>
-
-        Revision requests must relate to
-        the originally approved project scope.
-        The number of revisions included
-        in each project will be specified
-        in the applicable quotation,
-        proposal or service agreement.
-
-    </p>
-
-    <div class="revision-grid">
-
-        <div class="revision-card">
-
-            <h3>
-
-                Included Revisions
-
-            </h3>
-
-            <h1>
-
-                ✓
-
-            </h1>
-
-            <p style="color:#fff;">
-
-                As specified in your proposal
-
-            </p>
-
-        </div>
-
-        <div class="revision-card">
-
-            <h3>
-
-                Scope Changes
-
-            </h3>
-
-            <h1>
-
-                +
-
-            </h1>
-
-            <p style="color:#fff;">
-
-                New features may require a revised quotation
-
-            </p>
-
-        </div>
-
-        <div class="revision-card">
-
-            <h3>
-
-                Additional Work
-
-            </h3>
-
-            <h1>
-
-                ₹
-
-            </h1>
-
-            <p style="color:#fff;">
-
-                Extra revisions may incur additional charges
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CANCELLATION & REFUND
-==========================================-->
-
-<section
-    id="refund"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Cancellation
-
-    </span>
-
-    <h2>
-
-        Cancellation & Refund Policy
-
-    </h2>
-
-    <p>
-
-        Project cancellations and refund
-        requests are evaluated according
-        to the work completed,
-        project stage,
-        contractual obligations,
-        and applicable invoices.
-
-    </p>
-
-    <div class="refund-grid">
-
-        <div class="refund-card">
-
-            <i class="fa-solid fa-ban"></i>
-
-            <h4>
-
-                Client Cancellation
-
-            </h4>
-
-            <p>
-
-                Completed work,
-                consultation,
-                planning,
-                design and development
-                performed before cancellation
-                remain payable.
-
-            </p>
-
-        </div>
-
-        <div class="refund-card">
-
-            <i class="fa-solid fa-rotate-left"></i>
-
-            <h4>
-
-                Refund Requests
-
-            </h4>
-
-            <p>
-
-                Refund eligibility is reviewed
-                individually based on completed
-                milestones and contractual
-                commitments.
-
-            </p>
-
-        </div>
-
-        <div class="refund-card">
-
-            <i class="fa-solid fa-file-invoice-dollar"></i>
-
-            <h4>
-
-                Non-Refundable Items
-
-            </h4>
-
-            <p>
-
-                Domain registrations,
-                hosting,
-                SSL certificates,
-                third-party software,
-                APIs,
-                plugins,
-                and licensing fees are
-                non-refundable.
-
-            </p>
-
-        </div>
-
-        <div class="refund-card">
-
-            <i class="fa-solid fa-scale-balanced"></i>
-
-            <h4>
-
-                Mutual Resolution
-
-            </h4>
-
-            <p>
-
-                Any refund or settlement
-                may also be resolved through
-                mutual written agreement
-                between both parties.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        LIMITATION OF LIABILITY
-==========================================-->
-
-<section
-    id="liability"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Liability
-
-    </span>
-
-    <h2>
-
-        Limitation Of Liability
-
-    </h2>
-
-    <p>
-
-        Magency Info strives to provide
-        secure, reliable and high-quality
-        digital solutions. However,
-        to the maximum extent permitted
-        by law, we shall not be liable
-        for indirect, incidental,
-        consequential or special damages
-        arising from the use of our
-        services.
-
-    </p>
-
-    <div class="liability-grid">
-
-        <div class="liability-card">
-
-            <i class="fa-solid fa-server"></i>
-
-            <h4>
-
-                Hosting Providers
-
-            </h4>
-
-            <p>
-
-                We are not responsible for
-                downtime, outages or failures
-                caused by third-party hosting providers.
-
-            </p>
-
-        </div>
-
-        <div class="liability-card">
-
-            <i class="fa-solid fa-globe"></i>
-
-            <h4>
-
-                Domain Registrars
-
-            </h4>
-
-            <p>
-
-                Domain renewal,
-                DNS issues,
-                transfers or registrar
-                actions remain under the
-                control of the registrar.
-
-            </p>
-
-        </div>
-
-        <div class="liability-card">
-
-            <i class="fa-solid fa-credit-card"></i>
-
-            <h4>
-
-                Payment Providers
-
-            </h4>
-
-            <p>
-
-                Payment processing delays
-                or failures caused by external
-                payment gateways are beyond
-                our control.
-
-            </p>
-
-        </div>
-
-        <div class="liability-card">
-
-            <i class="fa-solid fa-shield-virus"></i>
-
-            <h4>
-
-                Cyber Security
-
-            </h4>
-
-            <p>
-
-                While industry-standard
-                security measures are used,
-                no online service can guarantee
-                absolute protection against
-                cyber threats.
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-        THIRD PARTY SERVICES
-==========================================-->
-
-<section
-    id="third-party"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Third-Party Services
-
-    </span>
-
-    <h2>
-
-        External Services & Integrations
-
-    </h2>
-
-    <p>
-
-        Certain services provided by Magency Info rely on trusted third-party
-        providers for hosting, payment processing, analytics, cloud
-        infrastructure, AI services, communication, and software
-        integrations. We are not responsible for the policies, availability,
-        or performance of these external providers.
-
-    </p>
-
-    <div class="third-party-grid">
-
-        <div class="third-party-card">
-            <i class="fa-brands fa-google"></i>
-            <h4>Google Services</h4>
-        </div>
-
-        <div class="third-party-card">
-            <i class="fa-brands fa-aws"></i>
-            <h4>Amazon AWS</h4>
-        </div>
-
-        <div class="third-party-card">
-            <i class="fa-solid fa-cloud"></i>
-            <h4>Cloudflare</h4>
-        </div>
-
-        <div class="third-party-card">
-            <i class="fa-solid fa-credit-card"></i>
-            <h4>Stripe / Razorpay</h4>
-        </div>
-
-        <div class="third-party-card">
-            <i class="fa-solid fa-robot"></i>
-            <h4>AI Platforms</h4>
-        </div>
-
-        <div class="third-party-card">
-            <i class="fa-solid fa-envelope"></i>
-            <h4>Email Services</h4>
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        ACCEPTABLE USE
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Acceptable Use
-
-    </span>
-
-    <h2>
-
-        Acceptable Use Policy
-
-    </h2>
-
-    <p>
-
-        Users agree not to misuse our website or services. Prohibited
-        activities include unauthorized access, hacking attempts,
-        malware distribution, spam, reverse engineering, infringement of
-        intellectual property rights, or any unlawful activity.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        AI DISCLAIMER
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        AI Services
-
-    </span>
-
-    <h2>
-
-        Artificial Intelligence Disclaimer
-
-    </h2>
-
-    <p>
-
-        Magency Info provides AI-powered solutions using third-party AI
-        technologies. AI-generated outputs may occasionally contain
-        inaccuracies or incomplete information. Clients are responsible for
-        reviewing, verifying, and approving all AI-generated content before
-        publication or business use.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        ACCOUNT SECURITY
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Account Security
-
-    </span>
-
-    <h2>
-
-        Login Credentials & Security
-
-    </h2>
-
-    <p>
-
-        Clients are responsible for maintaining the confidentiality of
-        usernames, passwords, API keys, hosting credentials, and other
-        sensitive access information. Magency Info shall not be liable for
-        losses resulting from unauthorized access caused by inadequate
-        credential security.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        FORCE MAJEURE
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Force Majeure
-
-    </span>
-
-    <h2>
-
-        Events Beyond Our Control
-
-    </h2>
-
-    <p>
-
-        Magency Info shall not be liable for delays or failure to perform
-        obligations due to events beyond our reasonable control, including
-        natural disasters, pandemics, cyber incidents, internet outages,
-        governmental actions, war, labor disputes, or other force majeure
-        events.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        TERMINATION
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Termination
-
-    </span>
-
-    <h2>
-
-        Suspension & Termination
-
-    </h2>
-
-    <p>
-
-        Either party may terminate a project in accordance with the agreed
-        service contract. All completed work and outstanding invoices remain
-        payable. Upon termination, access to project resources may be
-        suspended until financial obligations have been fulfilled.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        GOVERNING LAW
-==========================================-->
-
-<section
-    id="law"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Governing Law
-
-    </span>
-
-    <h2>
-
-        Applicable Law
-
-    </h2>
-
-    <p>
-
-        These Terms & Conditions shall be governed by and interpreted in
-        accordance with the laws of India. Any disputes shall be subject to
-        the jurisdiction of the competent courts in Punjab, India, unless
-        otherwise agreed in writing.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        ENTIRE AGREEMENT
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Legal Agreement
-
-    </span>
-
-    <h2>
-
-        Entire Agreement
-
-    </h2>
-
-    <p>
-
-        These Terms & Conditions, together with any project proposal,
-        quotation, invoice, or written agreement, constitute the complete
-        agreement between Magency Info and the Client regarding the services
-        provided.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        SEVERABILITY
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Severability
-
-    </span>
-
-    <h2>
-
-        Validity Of Remaining Provisions
-
-    </h2>
-
-    <p>
-
-        If any provision of these Terms is determined to be invalid or
-        unenforceable, the remaining provisions shall continue in full force
-        and effect.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        WAIVER
-==========================================-->
-
-<section
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Waiver
-
-    </span>
-
-    <h2>
-
-        No Waiver Of Rights
-
-    </h2>
-
-    <p>
-
-        Failure by Magency Info to enforce any provision of these Terms shall
-        not constitute a waiver of any rights or future enforcement of that
-        provision.
-
-    </p>
-
-</section>
-
-<!--=========================================
-        CONTACT
-==========================================-->
-
-<section
-    id="contact"
-    class="terms-card"
-    style="margin-top:2%;">
-
-    <span class="section-tag">
-
-        Contact
-
-    </span>
-
-    <h2>
-
-        Questions About These Terms?
-
-    </h2>
-
-    <p>
-
-        If you have any questions regarding these Terms & Conditions, please
-        contact our team.
-
-    </p>
-
-    <div class="contact-grid">
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-location-dot"></i>
-
-            <h4>
-
-                Office
-
-            </h4>
-
-            <p>
-
-                Punjab, India
-
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-envelope"></i>
-
-            <h4>
-
-                Email
-
-            </h4>
-
-            <p>
-
-                hello@magencyinfo.com
-
-            </p>
-
-        </div>
-
-        <div class="contact-card">
-
-            <i class="fa-solid fa-globe"></i>
-
-            <h4>
-
-                Website
-
-            </h4>
-
-            <p>
-
-                www.magencyinfo.com
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-        CTA
-==========================================-->
-
-<section class="terms-cta" style="margin-top:2%;">
-
-    <div class="cta-box">
-
-        <span>
-
-            NEED MORE INFORMATION?
-
-        </span>
-
-        <h2>
-
-            We're Here To Help
-
-        </h2>
-
-        <p>
-
-            If you require clarification regarding our services, project
-            process, payment policies, or legal terms, our team is happy to
-            assist you.
-
-        </p>
-
-        <a href="{% url 'contact' %}" class="cta-btn">
-
-            Contact Our Team
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</section>
-
-</div>
-<!-- End .terms-main -->
-
-</div>
-<!-- End .terms-layout -->
-
-</div>
-<!-- End .container -->
-
 </section>
 
 {% endblock %}
 
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const tocLinks = document.querySelectorAll('.terms-toc-list a');
+    const articles = document.querySelectorAll('.terms-article-card');
+
+    window.addEventListener('scroll', function() {
+        let current = '';
+        articles.forEach(article => {
+            const articleTop = article.offsetTop - 120;
+            if (window.scrollY >= articleTop) {
+                current = article.getAttribute('id');
+            }
+        });
+
+        tocLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === '#' + current) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

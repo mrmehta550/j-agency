@@ -1,77 +1,83 @@
-/*=========================================
-   TECHNOLOGY PAGE JAVASCRIPT
-   tech.js
-   -----------------------------------------
-   Handles:
-   1. Logo track duplication (infinite scroll)
-   2. Category filter (show/hide tech cards)
-   3. No floating animations on tech icons
-=========================================*/
-
+/**
+ * Technology Stack Page Functionality
+ * Handles infinite logo scrolling and category filter section transitions.
+ */
 document.addEventListener("DOMContentLoaded", () => {
-
-    /*=========================================
-    LOGO SLIDER — Infinite Duplicate
-    -----------------------------------------
-    Both .technology-logo-track and
-    .technology-client-track use CSS animation
-    to scroll horizontally. We double the HTML
-    content so the loop is seamless.
-    =========================================*/
-
+    /* ── Logo Slider Duplication ── */
     const logoTrack = document.querySelector(".technology-logo-track");
     if (logoTrack) {
         logoTrack.innerHTML += logoTrack.innerHTML;
     }
 
-    const clientTrack = document.querySelector(".technology-client-track");
-    if (clientTrack) {
-        clientTrack.innerHTML += clientTrack.innerHTML;
-    }
-
-    /*=========================================
-    CATEGORY FILTER
-    -----------------------------------------
-    Clicking a category button shows only the
-    matching stack cards and hides others.
-    No rotation or transform on tech icons.
-    =========================================*/
-
+    /* ── Category Filter Sections Switcher ── */
     const categoryBtns = document.querySelectorAll(".technology-category-btn");
-    const stackCards   = document.querySelectorAll(".technology-stack-card");
+    
+    const sections = {
+        frontend: document.querySelector(".technology-stack-section"),
+        backend: document.querySelector(".technology-backend-section"),
+        ai: document.querySelector(".technology-ai-section"),
+        database: document.querySelector(".technology-database-section"),
+        cloud: document.querySelector(".technology-cloud-section"),
+        devops: document.querySelector(".technology-cloud-section")
+    };
 
+    // Initialize: Only Frontend section is visible, others hidden
+    Object.keys(sections).forEach(key => {
+        const sec = sections[key];
+        if (sec) {
+            if (key === "frontend") {
+                sec.style.display = "block";
+                sec.style.opacity = "1";
+                sec.classList.add("section-fade-in");
+            } else {
+                sec.style.display = "none";
+                sec.style.opacity = "0";
+            }
+        }
+    });
+
+    // Handle category button clicks
     categoryBtns.forEach(btn => {
-
         btn.addEventListener("click", () => {
-
-            // Update active button state
+            // Update active class on buttons
             categoryBtns.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
 
-            const filter = btn.dataset.filter || "all";
+            const filter = btn.getAttribute("data-filter");
+            if (!filter) return;
 
-            stackCards.forEach(card => {
-
-                const match = filter === "all" || card.dataset.category === filter;
-
-                if (match) {
-                    card.style.display = "";
-                    // Defer opacity so display takes effect first
-                    requestAnimationFrame(() => {
-                        card.style.opacity = "1";
-                        card.style.transform = "";
-                    });
-                } else {
-                    card.style.opacity = "0";
-                    setTimeout(() => {
-                        card.style.display = "none";
-                    }, 280);
+            // Hide all sections first
+            Object.keys(sections).forEach(key => {
+                const sec = sections[key];
+                if (sec) {
+                    sec.style.display = "none";
+                    sec.style.opacity = "0";
+                    sec.classList.remove("section-fade-in");
                 }
-
             });
 
+            // Show target section
+            const targetSec = sections[filter];
+            if (targetSec) {
+                targetSec.style.display = "block";
+                // Trigger layout reflow for animation to take effect
+                targetSec.offsetHeight; 
+                targetSec.style.opacity = "1";
+                targetSec.classList.add("section-fade-in");
+                
+                // Scroll to filter nav bar smoothly so the user sees the cards directly
+                const navBar = document.getElementById("technology-stack");
+                if (navBar) {
+                    const offset = 100; // offset for sticky navigation header
+                    const elementPosition = navBar.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.scrollY - offset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            }
         });
-
     });
-
 });

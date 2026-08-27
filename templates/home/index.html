@@ -1,1784 +1,704 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+
 {% block title %}Magencyinfo — AI Development, Web Design, Digital Marketing & Business Automation{% endblock %}
 {% block meta_description %}Magencyinfo is a full-service digital agency specialising in AI development, website design, mobile apps, SEO, and digital marketing for startups and businesses worldwide.{% endblock %}
 
 {% block content %}
 
+<!--=========================================
+    1. HERO SECTION
+    ==========================================-->
 <section class="home-hero">
-
     <div class="home-hero-bg"></div>
+    <div class="home-hero-orb home-hero-orb-1"></div>
+    <div class="home-hero-orb home-hero-orb-2"></div>
 
     <div class="home-container">
-
         <div class="home-hero-grid">
-
-            <div class="home-hero-content">
-
+            <div class="home-hero-content home-reveal home-revealed">
                 <span class="home-hero-tag">
-
-                    Magencyinfo — A Creative Digital Agency
-
+                    <i class="fa-solid fa-sparkles"></i>
+                    A Full-Service Digital Agency
                 </span>
 
                 <h1>
-
-                    Building Websites
-
-                    <br>
-
-                    That Turn Visitors
-
-                    <br>
-
-                    Into
-
-                    <span>
-
-                    Customers
-
-                    </span>
-
+                    Building Digital Products<br>
+                    That Turn Visitors Into <span>Customers</span>
                 </h1>
 
                 <p>
-
-                    Magencyinfo helps businesses modernize,
-
-                    grow and scale with custom
-
-                    websites, powerful applications,
-
-                    AI automation and digital
-
-                    strategies that deliver measurable
-
-                    business results.
-
+                    We help modern businesses grow and scale with custom high-converting websites, AI automation, custom software, and digital marketing strategies that deliver measurable revenue.
                 </p>
 
                 <div class="home-hero-buttons">
-
                     <a href="#services" class="home-btn-primary">
-
                         Explore Services
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
-
-                    <a href="#portfolio" class="home-btn-outline" style="color: black;">
-
+                    <a href="#portfolio" class="home-btn-outline">
                         <i class="fa-solid fa-play"></i>
-
-                        View Our Work
-
+                        View Portfolio
                     </a>
-
                 </div>
 
+                <!-- Hero Stats Grid -->
                 <div class="home-hero-stats">
-
-                    <div class="home-stat-card home-reveal">
-
+                    <div class="home-stat-card">
                         <div class="home-icon">
-
                             <i class="fa-solid fa-layer-group"></i>
-
                         </div>
-
                         <div>
-
-                            <h3 data-count="250">0+</h3>
-
-                            <span>
-
-                                Projects Completed
-
-                            </span>
-
+                            <h3 class="home-counter" data-target="250" data-suffix="+">0+</h3>
+                            <span>Projects Completed</span>
                         </div>
-
                     </div>
 
-                    <div class="home-stat-card home-reveal">
-
+                    <div class="home-stat-card">
                         <div class="home-icon">
-
                             <i class="fa-solid fa-users"></i>
-
                         </div>
-
                         <div>
-
-                            <h3 data-count="120">0+</h3>
-
-                            <span>
-
-                                Happy Clients
-
-                            </span>
-
+                            <h3 class="home-counter" data-target="120" data-suffix="+">0+</h3>
+                            <span>Happy Clients</span>
                         </div>
-
                     </div>
 
-                    <div class="home-stat-card home-reveal">
-
+                    <div class="home-stat-card">
                         <div class="home-icon">
-
                             <i class="fa-regular fa-clock"></i>
-
                         </div>
-
                         <div>
-
-                            <h3 data-count="8">0+</h3>
-
-                            <span>
-
-                                Years Experience
-
-                            </span>
-
+                            <h3 class="home-counter" data-target="8" data-suffix="+">0+</h3>
+                            <span>Years Experience</span>
                         </div>
-
                     </div>
 
-                    <div class="home-stat-card home-reveal">
-
+                    <div class="home-stat-card">
                         <div class="home-icon">
-
-                            <i class="fa-solid fa-user-group"></i>
-
+                            <i class="fa-solid fa-shield-halved"></i>
                         </div>
-
                         <div>
+                            <h3 class="home-counter" data-target="99" data-suffix="%">0%</h3>
+                            <span>Satisfaction Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                            <h3 data-count="25">0+</h3>
+            <!-- Central Dashboard Mockup Visual -->
+            <div class="home-hero-image home-reveal home-revealed">
+                <div class="hv-browser">
+                    <div class="hv-browser-bar">
+                        <div class="hv-dot hv-dot-r"></div>
+                        <div class="hv-dot hv-dot-y"></div>
+                        <div class="hv-dot hv-dot-g"></div>
+                        <div class="hv-url-bar"><i class="fa-solid fa-lock"></i><span>magencyinfo.com</span></div>
+                    </div>
 
-                            <span>
-
-                                Team Members
-
-                            </span>
-
+                    <div class="hv-browser-body">
+                        <!-- Top KPI Row -->
+                        <div class="hv-kpi-row">
+                            <div class="hv-kpi">
+                                <span class="hv-kpi-label">Revenue Growth</span>
+                                <span class="hv-kpi-val">$84.2K</span>
+                                <span class="hv-kpi-up"><i class="fa-solid fa-arrow-trend-up"></i> +24%</span>
+                            </div>
+                            <div class="hv-kpi">
+                                <span class="hv-kpi-label">Active Clients</span>
+                                <span class="hv-kpi-val">120+</span>
+                                <span class="hv-kpi-up"><i class="fa-solid fa-arrow-trend-up"></i> +18%</span>
+                            </div>
+                            <div class="hv-kpi">
+                                <span class="hv-kpi-label">Completed Builds</span>
+                                <span class="hv-kpi-val">250+</span>
+                                <span class="hv-kpi-up"><i class="fa-solid fa-arrow-trend-up"></i> +31%</span>
+                            </div>
                         </div>
 
-                    </div>
+                        <!-- Chart Area -->
+                        <div class="hv-chart-area">
+                            <div class="hv-chart-label">Client Conversion & Growth Rate</div>
+                            <div class="hv-bars">
+                                <div class="hv-bar-wrap"><div class="hv-bar" style="--h:55%"></div><span>Jan</span></div>
+                                <div class="hv-bar-wrap"><div class="hv-bar" style="--h:72%"></div><span>Feb</span></div>
+                                <div class="hv-bar-wrap"><div class="hv-bar" style="--h:60%"></div><span>Mar</span></div>
+                                <div class="hv-bar-wrap"><div class="hv-bar" style="--h:88%"></div><span>Apr</span></div>
+                                <div class="hv-bar-wrap"><div class="hv-bar" style="--h:75%"></div><span>May</span></div>
+                                <div class="hv-bar-wrap"><div class="hv-bar hv-bar-active" style="--h:96%"></div><span>Jun</span></div>
+                            </div>
+                        </div>
 
+                        <!-- Status Row -->
+                        <div class="hv-status-row">
+                            <div class="hv-status-item"><span class="hv-pulse hv-pulse-green"></span><span>SEO Active</span></div>
+                            <div class="hv-status-item"><span class="hv-pulse hv-pulse-blue"></span><span>AI Automation Live</span></div>
+                            <div class="hv-status-item"><span class="hv-pulse hv-pulse-purple"></span><span>99.9% Uptime SLA</span></div>
+                        </div>
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="home-hero-image">
-
-                <img
-
-                    src="{% static 'images/hero/laptop.jpg' %}"
-
-                    class="home-laptop"
-
-                    alt="M Agency Laptop Showcase"
-
-                >
-
-                <img
-
-                    src="{% static 'images/hero/mobile.jpg' %}"
-
-                    class="home-mobile"
-
-                    alt="M Agency Mobile Showcase"
-
-                >
-
+                <!-- Floating Performance Badge -->
                 <div class="home-floating-card home-card-performance">
-
-                    <span>
-
-                        Performance
-
-                    </span>
-
-                    <h2>
-
-                        98%
-
-                    </h2>
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                </div>
-
-                <div class="home-floating-card home-card-rating">
-
-                    <span>
-
-                        Happy Clients
-
-                    </span>
-
-                    <h2>
-
-                        4.9 ★★★★★
-
-                    </h2>
-
-                </div>
-
-                <div class="home-floating-card home-card-project">
-
-                    <span>
-
-                        Projects Done
-
-                    </span>
-
-                    <h2>
-
-                        250+
-
-                    </h2>
-
-                    <div class="home-avatars">
-
-                        <img src="{% static 'images/services/video/client1.jpg' %}" alt="M Agency client">
-
-                        <img src="{% static 'images/services/video/client2.jpg' %}" alt="M Agency client">
-
-                        <img src="{% static 'images/services/video/client3.jpg' %}" alt="M Agency client">
-
-                        <img src="{% static 'images/services/logo/client1.jpg' %}" alt="M Agency client">
-
+                    <i class="fa-solid fa-bolt"></i>
+                    <div>
+                        <span>Page Speed Score</span>
+                        <h2>99 / 100</h2>
                     </div>
-
                 </div>
 
+                <!-- Floating Rating Badge -->
+                <div class="home-floating-card home-card-rating">
+                    <span>Verified Reviews</span>
+                    <h2>4.9 / 5.0 ★★★★★</h2>
+                </div>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
+<!--=========================================
+    2. TRUSTED BY SECTION
+    ==========================================-->
 <section class="home-trusted">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Trusted Worldwide
-
-            </span>
-
-            <h2>
-
-                Built on Global Standards
-
-
-            </h2>
-
-            <p>
-
-                At Magencyinfo, we follow the design, engineering, and customer experience principles adopted by leading global technology companies.
-
-            </p>
-
+            <span class="home-section-tag">Trusted Worldwide</span>
+            <h2>Built on Global Industry Standards</h2>
+            <p>We build with the design, engineering, and security principles adopted by world-class software teams.</p>
         </div>
 
         <div class="home-logo-slider">
-
             <div class="home-logo-track">
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/google.svg' %}" alt="Google">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/microsoft.svg' %}" alt="Microsoft">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/meta.svg' %}" alt="Meta">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/netflix.svg' %}" alt="Netflix">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/spotify.svg' %}" alt="Spotify">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/slack.svg' %}" alt="Slack">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/google.svg' %}" alt="Google">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/microsoft.svg' %}" alt="Microsoft">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/meta.svg' %}" alt="Meta">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/netflix.svg' %}" alt="Netflix">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/spotify.svg' %}" alt="Spotify">
-
-                </div>
-
-                <div class="home-logo-item">
-
-                    <img src="{% static 'images/logos/slack.svg' %}" alt="Slack">
-
-                </div>
-
+                <div class="home-logo-item"><img src="{% static 'images/logos/google.svg' %}" alt="Google"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/microsoft.svg' %}" alt="Microsoft"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/meta.svg' %}" alt="Meta"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/netflix.svg' %}" alt="Netflix"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/spotify.svg' %}" alt="Spotify"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/slack.svg' %}" alt="Slack"></div>
+                <!-- Duplicate set for infinite loop -->
+                <div class="home-logo-item"><img src="{% static 'images/logos/google.svg' %}" alt="Google"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/microsoft.svg' %}" alt="Microsoft"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/meta.svg' %}" alt="Meta"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/netflix.svg' %}" alt="Netflix"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/spotify.svg' %}" alt="Spotify"></div>
+                <div class="home-logo-item"><img src="{% static 'images/logos/slack.svg' %}" alt="Slack"></div>
             </div>
-
         </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    3. SERVICES SECTION
+    ==========================================-->
 <section class="home-services" id="services">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-                Our Services
-            </span>
-
-            <h2>
-                Digital Solutions Built For Modern Businesses
-            </h2>
-
-            <p>
-                Magencyinfo builds scalable websites, AI-powered applications,
-                cloud solutions and digital products that help
-                companies grow faster.
-            </p>
-
+            <span class="home-section-tag">Our Expertise</span>
+            <h2>Solutions Built for High-Growth Brands</h2>
+            <p>From scalable web applications and AI automations to performance marketing and maintenance.</p>
         </div>
 
         <div class="home-services-grid">
-
+            <!-- 1. Web Development -->
             <div class="home-service-card home-reveal">
-
                 <div class="home-service-icon">
-
                     <i class="fa-solid fa-code"></i>
-
                 </div>
-
-                <h3>Website Development</h3>
-
-                <p>
-
-                    Responsive, secure and high-performance websites
-                    built with modern technologies.
-
-                </p>
-
+                <h3>Web Development</h3>
+                <p>Custom, scalable, and ultra-fast web portals built with Django, React, Python, and Next.js.</p>
                 <a href="{% url 'webdev' %}">
-
-                    Learn More
-
+                    Explore Web Dev
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
+            <!-- 2. UI/UX Design -->
             <div class="home-service-card home-reveal">
-
                 <div class="home-service-icon">
-
-                    <i class="fa-solid fa-mobile-screen"></i>
-
+                    <i class="fa-solid fa-palette"></i>
                 </div>
-
-                <h3>Mobile Apps</h3>
-
-                <p>
-
-                    Native and cross-platform mobile applications
-                    with premium user experiences.
-
-                </p>
-
-                <a href="{% url 'app' %}">
-
-                    Learn More
-
+                <h3>UI/UX Design</h3>
+                <p>User research, interactive Figma prototypes, and complete design systems that maximize conversion.</p>
+                <a href="{% url 'uiux' %}">
+                    Explore UI/UX
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
+            <!-- 3. AI Solutions -->
             <div class="home-service-card home-reveal">
-
                 <div class="home-service-icon">
-
                     <i class="fa-solid fa-robot"></i>
-
                 </div>
-
-                <h3>AI Automation</h3>
-
-                <p>
-
-                    AI chatbots, workflow automation and intelligent
-                    business solutions powered by LLMs.
-
-                </p>
-
+                <h3>AI Solutions</h3>
+                <p>Custom LLM chatbots, workflow automation, and RAG database architectures for smart business scaling.</p>
                 <a href="{% url 'ai' %}">
-
-                    Learn More
-
+                    Explore AI Solutions
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
+            <!-- 4. Digital Marketing -->
             <div class="home-service-card home-reveal">
-
                 <div class="home-service-icon">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
+                    <i class="fa-solid fa-bullseye"></i>
                 </div>
-
                 <h3>Digital Marketing</h3>
-
-                <p>
-
-                    SEO, paid advertising and marketing strategies
-                    that increase your online visibility.
-
-                </p>
-
+                <p>Targeted PPC ad campaigns, funnel optimization, and social advertising to generate qualified leads.</p>
                 <a href="{% url 'dm' %}">
-
-                    Learn More
-
+                    Explore Marketing
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
+            <!-- 5. SEO Optimization -->
             <div class="home-service-card home-reveal">
-
                 <div class="home-service-icon">
-
-                    <i class="fa-solid fa-cloud"></i>
-
+                    <i class="fa-solid fa-chart-line"></i>
                 </div>
-
-                <h3>Video Editing</h3>
-
-                <p>
-
-                    High-quality video editing, motion graphics, color grading, and cinematic
-                    storytelling to create engaging content that drives results.
-
-                </p>
-
-                <a href="{% url 'video' %}">
-
-                    Learn More
-
+                <h3>SEO Optimization</h3>
+                <p>Technical search audits, keyword architecture, and backlink strategies to rank on Page 1 of Google.</p>
+                <a href="{% url 'seo' %}">
+                    Explore SEO
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
 
-            <div class="home-service-card">
-
-                <span class="home-badge">
-
-                    Most Popular
-
-                </span>
-
+            <!-- 6. Logo Design -->
+            <div class="home-service-card home-reveal">
                 <div class="home-service-icon">
-
-                    <i class="fa-solid fa-shield-halved"></i>
-
+                    <i class="fa-solid fa-pen-ruler"></i>
                 </div>
-
-                <h3>Cyber Security</h3>
-
-                <p>
-
-                    Enterprise-grade security audits,
-                    penetration testing and continuous monitoring.
-
-                </p>
-
-                <a href="#">
-
-                    Learn More
-
+                <h3>Logo & Brand Identity</h3>
+                <p>Bespoke visual marks, typography guidelines, and brand booklets tailored to your industry.</p>
+                <a href="{% url 'logo' %}">
+                    Explore Logo Design
                     <i class="fa-solid fa-arrow-right"></i>
-
                 </a>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    4. WHY CHOOSE US SECTION
+    ==========================================-->
 <section class="home-why-us">
-
     <div class="home-container">
-
         <div class="home-why-grid">
-
             <div class="home-why-content home-reveal">
-
-                <span class="home-section-tag">
-
-                    Why Choose Magencyinfo
-
-                </span>
-
-                <h2>
-
-                    We Don't Just Build Websites.
-
-                    <br>
-
-                    We Build Businesses.
-
-                </h2>
-
-                <p>
-
-                    Our team combines design, development,
-                    AI, automation and marketing to deliver
-                    products that increase revenue,
-                    improve efficiency and scale companies.
-
-                </p>
+                <span class="home-section-tag">Why Magencyinfo</span>
+                <h2>We Don't Just Build Websites. We Build Scalable Brands.</h2>
+                <p>Our multidisciplinary team blends clean engineering, conversion design, and data-driven marketing to deliver products that increase client retention and drive revenue.</p>
 
                 <div class="home-why-list">
-
                     <div class="home-why-item">
-
                         <div class="home-why-icon">
-
                             <i class="fa-solid fa-check"></i>
-
                         </div>
-
                         <div>
-
                             <h4>Modern UI/UX Design</h4>
-
-                            <p>
-
-                                Beautiful interfaces that increase
-                                customer engagement.
-
-                            </p>
-
+                            <p>Clean, high-converting interfaces crafted in Figma.</p>
                         </div>
-
                     </div>
 
                     <div class="home-why-item">
-
                         <div class="home-why-icon">
-
                             <i class="fa-solid fa-bolt"></i>
-
                         </div>
-
                         <div>
-
-                            <h4>Lightning Fast Performance</h4>
-
-                            <p>
-
-                                Optimized for speed and SEO.
-
-                            </p>
-
+                            <h4>Lightning Performance</h4>
+                            <p>Optimized for sub-second page loads and Core Web Vitals.</p>
                         </div>
-
                     </div>
 
                     <div class="home-why-item">
-
                         <div class="home-why-icon">
-
                             <i class="fa-solid fa-shield-halved"></i>
-
                         </div>
-
                         <div>
-
                             <h4>Enterprise Security</h4>
-
-                            <p>
-
-                                Security-first architecture for
-                                every project.
-
-                            </p>
-
+                            <p>Security-first architecture, SSL, and automated backups.</p>
                         </div>
-
                     </div>
 
                     <div class="home-why-item">
-
                         <div class="home-why-icon">
-
                             <i class="fa-solid fa-robot"></i>
-
                         </div>
-
                         <div>
-
-                            <h4>AI Powered Solutions</h4>
-
-                            <p>
-
-                                Chatbots, RAG systems and business automation.
-
-                            </p>
-
+                            <h4>Smart AI Automations</h4>
+                            <p>Integrated chatbots, RAG pipelines, and automated ops.</p>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
 
             <div class="home-why-image home-reveal">
-
-                <img src="{% static 'images/why/dashboard.jpg' %}" alt="M Agency Dashboard">
-
+                <img src="{% static 'images/why/dashboard.jpg' %}" alt="Magencyinfo Product Dashboard Mockup">
                 <div class="home-experience-card">
-
-                    <span>
-
-                        Experience
-
-                    </span>
-
-                    <h2>
-
-                        8+
-
-                    </h2>
-
-                    <p>
-
-                        Years Building Digital Products
-
-                    </p>
-
+                    <h2>8+</h2>
+                    <span>Years Experience</span>
                 </div>
-
                 <div class="home-clients-card">
-
-                    <span>
-
-                        Client Satisfaction
-
-                    </span>
-
-                    <h2>
-
-                        99%
-
-                    </h2>
-
+                    <h2>99%</h2>
+                    <span>Client Satisfaction</span>
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
+<!--=========================================
+    5. PORTFOLIO SHOWCASE
+    ==========================================-->
 <section class="home-portfolio" id="portfolio">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Featured Work
-
-            </span>
-
-            <h2>
-
-                Projects That Delivered Real Results
-
-            </h2>
-
-            <p>
-
-                Magencyinfo creates modern digital experiences that help businesses
-                increase conversions, improve customer experience and
-                accelerate growth.
-
-            </p>
-
+            <span class="home-section-tag">Featured Work</span>
+            <h2>Proven Results Across Industries</h2>
+            <p>Take a look at some of the web platforms, mobile apps, and branding identities we've shipped for clients.</p>
         </div>
 
         <div class="home-portfolio-grid">
-
-            <div class="home-featured-project home-reveal">
-
-                <div class="home-project-image">
-
-                    <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="Project">
-
-                    <div class="home-project-overlay">
-
-                        <a href="#">
-
-                            View Case Study
-
-                            <i class="fa-solid fa-arrow-right"></i>
-
-                        </a>
-
-                    </div>
-
+            <!-- Project 1 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="Enterprise AI Assistant Platform">
+                <div class="home-card-content">
+                    <span>AI Platform</span>
+                    <h4>Enterprise AI Automation Suite</h4>
                 </div>
-
-                <div class="home-project-content">
-
-                    <span class="home-project-category">
-
-                        AI Platform
-
-                    </span>
-
-                    <h3>
-
-                        Enterprise AI Assistant Platform
-
-                    </h3>
-
-                    <p>
-
-                        Built a scalable AI platform with
-                        authentication, analytics,
-                        vector search and automation.
-
-                    </p>
-
-                    <div class="home-tech-stack">
-
-                        <span>Django</span>
-
-                        <span>React</span>
-
-                        <span>LangChain</span>
-
-                        <span>OpenAI</span>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <div class="home-project-list">
-
-                <div class="home-project-card home-reveal">
-
-                    <img src="{% static 'images/portfolio/project-2.jpg' %}" alt="">
-
-                    <div class="home-card-content">
-
-                        <span>E-Commerce</span>
-
-                        <h4>
-
-                            Fashion Store
-
-                        </h4>
-
-                    </div>
-
+            <!-- Project 2 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/portfolio/project-2.jpg' %}" alt="E-Commerce Fashion Store">
+                <div class="home-card-content">
+                    <span>E-Commerce</span>
+                    <h4>Luxury Fashion Marketplace</h4>
                 </div>
-
-                <div class="home-project-card home-reveal">
-
-                    <img src="{% static 'images/portfolio/project-3.jpg' %}" alt="">
-
-                    <div class="home-card-content">
-
-                        <span>Healthcare</span>
-
-                        <h4>
-
-                            Hospital Management
-
-                        </h4>
-
-                    </div>
-
-                </div>
-
-                <div class="home-project-card home-reveal">
-
-                    <img src="{% static 'images/portfolio/project-4.jpg' %}" alt="">
-
-                    <div class="home-card-content">
-
-                        <span>Education</span>
-
-                        <h4>
-
-                            Student Portal
-
-                        </h4>
-
-                    </div>
-
-                </div>
-
-                <div class="home-project-card home-reveal">
-
-                    <img src="{% static 'images/portfolio/project-5.jpg' %}" alt="">
-
-                    <div class="home-card-content">
-
-                        <span>Finance</span>
-
-                        <h4>
-
-                            Banking Dashboard
-
-                        </h4>
-
-                    </div>
-
-                </div>
-
             </div>
 
+            <!-- Project 3 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/portfolio/project-3.jpg' %}" alt="Hospital Management System">
+                <div class="home-card-content">
+                    <span>Healthcare</span>
+                    <h4>Hospital Portal & Scheduling</h4>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/portfolio/project-4.jpg' %}" alt="Student Education Portal">
+                <div class="home-card-content">
+                    <span>EdTech</span>
+                    <h4>Interactive Learning Platform</h4>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/portfolio/project-5.jpg' %}" alt="Banking Dashboard">
+                <div class="home-card-content">
+                    <span>FinTech</span>
+                    <h4>FinFlow Banking Analytics</h4>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="home-project-card home-reveal">
+                <img src="{% static 'images/services/video/portfolio1.jpg' %}" alt="Commercial SaaS Promo">
+                <div class="home-card-content">
+                    <span>Video & Media</span>
+                    <h4>SaaS Product Commercial Reel</h4>
+                </div>
+            </div>
         </div>
-
-        <div class="home-portfolio-stats">
-
-            <div class="home-portfolio-stat home-reveal">
-
-                <h2 data-count="250">0+</h2>
-
-                <span>Completed Projects</span>
-
-            </div>
-
-            <div class="home-portfolio-stat home-reveal">
-
-                <h2 data-count="98">0%</h2>
-
-                <span>Client Satisfaction</span>
-
-            </div>
-
-            <div class="home-portfolio-stat home-reveal">
-
-                <h2 data-count="35">0+</h2>
-
-                <span>Industry Experts</span>
-
-            </div>
-
-            <div class="home-portfolio-stat home-reveal">
-
-                <h2 data-count="12">0+</h2>
-
-                <span>Countries Served</span>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    6. PROCESS SECTION
+    ==========================================-->
 <section class="home-process">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Our Process
-
-            </span>
-
-            <h2>
-
-                A Proven Process That
-                Delivers Results
-
-            </h2>
-
-            <p>
-
-                Every successful M Agency project follows a
-                structured workflow that keeps you
-                informed from idea to launch.
-
-            </p>
-
+            <span class="home-section-tag">Our Process</span>
+            <h2>A Proven 6-Step Workflow</h2>
+            <p>Every project follows a structured methodology to ensure transparency, velocity, and quality deliverables.</p>
         </div>
 
         <div class="home-process-wrapper">
-
-            <div class="home-process-line"></div>
-
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    01
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-comments"></i>
-
-                </div>
-
-                <h3>
-
-                    Discovery
-
-                </h3>
-
-                <p>
-
-                    Understanding your business,
-                    competitors and project goals.
-
-                </p>
-
+                <div class="home-step-number">01</div>
+                <div class="home-process-icon"><i class="fa-solid fa-comments"></i></div>
+                <h3>Discovery</h3>
+                <p>Auditing business objectives, target users, and competitive gaps.</p>
             </div>
 
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    02
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-pencil-ruler"></i>
-
-                </div>
-
-                <h3>
-
-                    Planning
-
-                </h3>
-
-                <p>
-
-                    Creating wireframes,
-                    user flow and technical
-                    architecture.
-
-                </p>
-
+                <div class="home-step-number">02</div>
+                <div class="home-process-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                <h3>Planning</h3>
+                <p>Structuring interactive wireframes, data models, and sitemaps.</p>
             </div>
 
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    03
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-laptop-code"></i>
-
-                </div>
-
-                <h3>
-
-                    Development
-
-                </h3>
-
-                <p>
-
-                    Building scalable frontend,
-                    backend and APIs.
-
-                </p>
-
+                <div class="home-step-number">03</div>
+                <div class="home-process-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>Development</h3>
+                <p>Writing clean, maintainable backend code and modern frontend views.</p>
             </div>
 
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    04
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-vial"></i>
-
-                </div>
-
-                <h3>
-
-                    Testing
-
-                </h3>
-
-                <p>
-
-                    QA testing,
-                    performance optimization
-                    and security review.
-
-                </p>
-
+                <div class="home-step-number">04</div>
+                <div class="home-process-icon"><i class="fa-solid fa-vial"></i></div>
+                <h3>Testing</h3>
+                <p>Rigorous QA testing, responsive audits, and security vulnerability scans.</p>
             </div>
 
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    05
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-rocket"></i>
-
-                </div>
-
-                <h3>
-
-                    Launch
-
-                </h3>
-
-                <p>
-
-                    Production deployment,
-                    monitoring and analytics.
-
-                </p>
-
+                <div class="home-step-number">05</div>
+                <div class="home-process-icon"><i class="fa-solid fa-rocket"></i></div>
+                <h3>Launch</h3>
+                <p>Smooth production rollout, cloud DNS configuration, and live monitoring.</p>
             </div>
 
             <div class="home-process-card home-reveal">
-
-                <div class="home-step-number" style="color: powderblue;">
-
-                    06
-
-                </div>
-
-                <div class="home-process-icon">
-
-                    <i class="fa-solid fa-headset"></i>
-
-                </div>
-
-                <h3>
-
-                    Support
-
-                </h3>
-
-                <p>
-
-                    Continuous improvements,
-                    maintenance and updates.
-
-                </p>
-
+                <div class="home-step-number">06</div>
+                <div class="home-process-icon"><i class="fa-solid fa-headset"></i></div>
+                <h3>Support</h3>
+                <p>Continuous monitoring, regular updates, and ongoing technical care.</p>
             </div>
-
         </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    7. TECHNOLOGY STACK
+    ==========================================-->
 <section class="home-technology">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Technologies We Use
-
-            </span>
-
-            <h2>
-
-                Modern Technologies
-                For Modern Businesses
-
-            </h2>
-
-            <p>
-
-                Magencyinfo builds scalable digital products using
-                industry-leading technologies trusted by
-                startups and enterprises worldwide.
-
-            </p>
-
+            <span class="home-section-tag">Tech Stack</span>
+            <h2>Powered by Industry-Leading Technologies</h2>
+            <p>We choose reliable, scalable frameworks suited for modern high-performance web products.</p>
         </div>
 
         <div class="home-tech-grid">
-
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-brands fa-python"></i>
-
-                </div>
-
+                <div class="home-tech-logo"><i class="fa-brands fa-python"></i></div>
                 <h3>Python</h3>
-
-                <p>
-
-                    Powerful backend development,
-                    AI automation and APIs.
-
-                </p>
-
+                <p>Backend & AI Logic</p>
             </div>
 
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-solid fa-leaf"></i>
-
-                </div>
-
+                <div class="home-tech-logo"><i class="fa-solid fa-leaf"></i></div>
                 <h3>Django</h3>
-
-                <p>
-
-                    Secure enterprise-grade web
-                    applications.
-
-                </p>
-
+                <p>Secure Web Apps</p>
             </div>
 
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-brands fa-react"></i>
-
-                </div>
-
+                <div class="home-tech-logo"><i class="fa-brands fa-react"></i></div>
                 <h3>React</h3>
-
-                <p>
-
-                    Modern interactive
-                    frontend applications.
-
-                </p>
-
+                <p>Interactive Interfaces</p>
             </div>
 
-            <div class="home-tech-card">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-brands fa-node-js"></i>
-
-                </div>
-
+            <div class="home-tech-card home-reveal">
+                <div class="home-tech-logo"><i class="fa-brands fa-node-js"></i></div>
                 <h3>Node.js</h3>
-
-                <p>
-
-                    High-performance
-                    backend services.
-
-                </p>
-
-            </div>
-
-            <div class="home-tech-card">
-
-                <span class="home-badge">
-
-                    Trending
-
-                </span>
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-solid fa-robot"></i>
-
-                </div>
-
-                <h3>
-
-                    Artificial Intelligence
-
-                </h3>
-
-                <p>
-
-                    Chatbots, RAG Systems,
-                    AI Agents & Automation.
-
-                </p>
-
+                <p>Fast Real-Time APIs</p>
             </div>
 
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-solid fa-cloud"></i>
-
-                </div>
-
-                <h3>Cloud</h3>
-
-                <p> 
-
-                    AWS, Azure, Docker
-                    and scalable deployment.
-
-                </p>
-
+                <div class="home-tech-logo"><i class="fa-solid fa-robot"></i></div>
+                <h3>AI & LLMs</h3>
+                <p>RAG & Agents</p>
             </div>
 
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-solid fa-database"></i>
-
-                </div>
-
-                <h3>Database</h3>
-
-                <p>
-
-                    PostgreSQL, MySQL,
-                    MongoDB and Redis.
-
-                </p>
-
+                <div class="home-tech-logo"><i class="fa-brands fa-aws"></i></div>
+                <h3>AWS Cloud</h3>
+                <p>Scalable Infrastructure</p>
             </div>
 
             <div class="home-tech-card home-reveal">
-
-                <div class="home-tech-logo">
-
-                    <i class="fa-solid fa-code-branch"></i>
-
-                </div>
-
-                <h3>DevOps</h3>
-
-                <p>
-
-                    CI/CD,
-                    GitHub Actions,
-                    Kubernetes.
-
-                </p>
-
+                <div class="home-tech-logo"><i class="fa-solid fa-database"></i></div>
+                <h3>PostgreSQL</h3>
+                <p>Relational Databases</p>
             </div>
 
+            <div class="home-tech-card home-reveal">
+                <div class="home-tech-logo"><i class="fa-brands fa-docker"></i></div>
+                <h3>Docker</h3>
+                <p>Containerized DevOps</p>
+            </div>
         </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    8. CLIENT TESTIMONIALS
+    ==========================================-->
 <section class="home-testimonials">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Client Testimonials
-
-            </span>
-
-            <h2>
-
-                What Our Clients
-                Say About Us
-
-            </h2>
-
-            <p>
-
-                Businesses around the world trust M Agency to
-                build modern digital solutions that help
-                them grow faster.
-
-            </p>
-
+            <span class="home-section-tag">Client Reviews</span>
+            <h2>What Our Clients Say</h2>
+            <p>Founders and marketing leaders share their experience working with Magencyinfo.</p>
         </div>
 
         <div class="home-testimonial-slider">
-
             <div class="home-testimonial-track">
-
-                <div class="home-testimonial-card">
-
-                    <div class="home-quote">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <p class="home-testimonial-text">
-
-                        Magencyinfo transformed our entire
-                        business with a modern website and
-                        AI automation. The results exceeded
-                        our expectations.
-
-                    </p>
-
-                    <div class="home-rating">
-
-                        ★★★★★
-
-                    </div>
-
+                <div class="home-testimonial-card home-reveal">
+                    <div class="home-quote"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="home-testimonial-text">"Magencyinfo transformed our entire web experience and automated our customer onboarding. The speed and quality exceeded all expectations."</p>
+                    <div class="home-rating">★★★★★</div>
                     <div class="home-client">
-
-                        <img src="{% static 'images/services/web/client3.png' %}" alt="">
-
+                        <img src="{% static 'images/services/logo/client1.jpg' %}" alt="Mohan Singh">
                         <div>
-
-                            <h4>
-
-                                Mohan Singh
-
-                            </h4>
-
-                            <span>
-
-                                CEO, Techio
-
-                            </span>
-
+                            <h4>Mohan Singh</h4>
+                            <span>CEO, Techio Global</span>
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="home-testimonial-card">
-
-                    <div class="home-quote">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <p class="home-testimonial-text">
-
-                        Amazing UI, fast delivery,
-                        professional communication and
-                        excellent support.
-
-                    </p>
-
-                    <div class="home-rating">
-
-                        ★★★★★
-
-                    </div>
-
+                <div class="home-testimonial-card home-reveal">
+                    <div class="home-quote"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="home-testimonial-text">"Flawless UI, fast turnaround, and proactive communication. Our conversion rates increased by 40% within the first month of launch."</p>
+                    <div class="home-rating">★★★★★</div>
                     <div class="home-client">
-
-                        <img src="{% static 'images/services/web/client2.png' %}" alt="">
-
+                        <img src="{% static 'images/services/logo/client2.jpg' %}" alt="Sarah Johnson">
                         <div>
-
-                            <h4>
-
-                                Sarah Johnson
-
-                            </h4>
-
-                            <span>
-
-                                Founder, FinFlow
-
-                            </span>
-
+                            <h4>Sarah Johnson</h4>
+                            <span>Founder, FinFlow Apps</span>
                         </div>
-
                     </div>
-
                 </div>
 
-                <div class="home-testimonial-card">
-
-                    <div class="home-quote">
-
-                        <i class="fa-solid fa-quote-left"></i>
-
-                    </div>
-
-                    <p class="home-testimonial-text" >
-
-                        Their AI chatbot helped reduce
-                        customer support workload by over
-                        60%.
-
-                    </p>
-
-                    <div class="home-rating">
-
-                        ★★★★★
-
-                    </div>
-
+                <div class="home-testimonial-card home-reveal">
+                    <div class="home-quote"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="home-testimonial-text">"Their AI chatbot and backend integration cut down our support workload by over 60%. Absolute top-tier engineering talent."</p>
+                    <div class="home-rating">★★★★★</div>
                     <div class="home-client">
-
-                        <img src="{% static 'images/services/web/client1.png' %}" alt="">
-
+                        <img src="{% static 'images/services/logo/client3.jpg' %}" alt="Michael Brown">
                         <div>
-
-                            <h4>
-
-                                Michael Brown
-
-                            </h4>
-
-                            <span>
-
-                                Director, CloudTech
-
-                            </span>
-
+                            <h4>Michael Brown</h4>
+                            <span>Director, CloudTech</span>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
-
-
     </div>
-
 </section>
-<section class="home-cta" style="margin-top: 5%;">
 
+<!--=========================================
+    9. HIGH-CONVERTING FINAL CTA
+    ==========================================-->
+<section class="home-cta">
     <div class="home-container">
-
         <div class="home-cta-wrapper">
-
             <div class="home-cta-left home-reveal">
-
-                <span class="home-section-tag">
-
-                    Ready To Grow?
-
-                </span>
-
-                <h2>
-
-                    Let's Build Something
-
-                    Amazing Together
-
-                </h2>
-
-                <p>
-
-                    Whether you need a modern website,
-
-                    AI solution, SaaS platform,
-
-                    mobile app or digital strategy,
-
-                    the Magencyinfo team is ready to help.
-
-                </p>
-
+                <span class="home-section-tag">Let's Work Together</span>
+                <h2>Ready to Build Something Remarkable?</h2>
+                <p>Whether you need a high-converting website, custom AI integration, mobile app, or search optimization, our team is ready to deliver.</p>
                 <div class="home-cta-buttons">
-
-                    <a href="{% url 'booking' %}"
-
-                       class="home-btn-primary">
-
+                    <a href="{% url 'booking' %}" class="home-btn-primary">
                         Book Free Consultation
-
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <a href="{% url 'contact' %}"
-
-                       class="home-btn-outline" style="color: blue">
-
+                    <a href="{% url 'contact' %}" class="home-btn-outline">
                         Contact Us
-
                     </a>
-
                 </div>
-
             </div>
 
             <div class="home-cta-right home-reveal">
-
-                    <div class="home-cta-card">
-
-                    <div class="home-cta-icon">
-
-                        <i class="fa-solid fa-rocket"></i>
-
+                <div class="home-cta-card">
+                    <div class="home-cta-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div>
+                        <h3>Fast Kickoff</h3>
+                        <p>Receive your project proposal within 24 hours.</p>
                     </div>
-
-                    <h3>
-
-                        Start Your Project
-
-                    </h3>
-
-                    <p>
-
-                        Free consultation with our experts.
-
-                    </p>
-
                 </div>
 
                 <div class="home-cta-card">
-
-                    <div class="home-cta-icon">
-
-                        <i class="fa-solid fa-headset"></i>
-
+                    <div class="home-cta-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div>
+                        <h3>24/7 Dedicated Support</h3>
+                        <p>Direct communication with our engineering leads.</p>
                     </div>
-
-                    <h3>
-
-                        24/7 Support
-
-                    </h3>
-
-                    <p>
-
-                        Dedicated support for every client.
-
-                    </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
+<!--=========================================
+    10. LATEST BLOGS (DYNAMIC DJANGO QUERY)
+    ==========================================-->
 <section class="home-latest-blogs">
-
     <div class="home-container">
-
         <div class="home-section-header home-reveal">
-
-            <span class="home-section-tag">
-
-                Latest Insights
-
-            </span>
-
-            <h2>
-
-                Latest Articles & Industry News
-
-            </h2>
-
-            <p>
-
-                Explore Magencyinfo's latest articles on AI,
-                Web Development, SEO,
-                Cloud and Digital Transformation.
-
-            </p>
-
+            <span class="home-section-tag">Latest Insights</span>
+            <h2>Articles & Industry Analysis</h2>
+            <p>Read our latest deep-dives on Web Design, Artificial Intelligence, SEO, and Digital Growth.</p>
         </div>
 
         <div class="home-blog-grid">
+            {% for blog in top_blogs %}
+            <article class="home-blog-card home-reveal">
+                <div class="home-blog-image">
+                    {% if blog.image %}
+                        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                    {% else %}
+                        <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="{{ blog.title }}">
+                    {% endif %}
+                    {% if blog.category %}
+                        <span class="home-blog-category">{{ blog.category.name }}</span>
+                    {% endif %}
+                </div>
 
-{% for blog in top_blogs %}
+                <div class="home-blog-content">
+                    <div class="home-blog-meta">
+                        <span><i class="fa-regular fa-calendar"></i> {{ blog.created_at|date:"M d, Y" }}</span>
+                        {% if blog.read_time %}
+                            <span><i class="fa-regular fa-clock"></i> {{ blog.read_time }} min read</span>
+                        {% endif %}
+                    </div>
 
-<article class="home-blog-card home-reveal">
+                    <h3>{{ blog.title }}</h3>
+                    <p>{{ blog.short_description|truncatewords:18 }}</p>
 
-    <div class="home-blog-image">
-
-        {% if blog.image %}
-            <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
-        {% endif %}
-
-        <span class="home-blog-category">
-
-            {{ blog.category.name }}
-
-        </span>
-
-    </div>
-
-    <div class="home-blog-content">
-
-        <div class="home-blog-meta">
-
-            <span>
-
-                <i class="fa-regular fa-calendar"></i>
-
-                {{ blog.created_at|date:"F d, Y" }}
-
-            </span>
-
-            <span>
-
-                <i class="fa-regular fa-clock"></i>
-
-                {{ blog.read_time }} min read
-
-            </span>
-
+                    <a href="{% url 'blog_detail' blog.slug %}">
+                        Read Article
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% empty %}
+            <p class="home-no-blogs">Explore our blog to read the latest tech insights.</p>
+            {% endfor %}
         </div>
 
-        <h3>
-
-            {{ blog.title }}
-
-        </h3>
-
-        <p>
-
-            {{ blog.short_description|truncatewords:18 }}
-
-        </p>
-
-        <a href="{% url 'blog_detail' blog.slug %}">
-
-            Read More
-
-            <i class="fa-solid fa-arrow-right"></i>
-
-        </a>
-
-    </div>
-
-</article>
-
-{% empty %}
-
-<p>No blogs available.</p>
-
-{% endfor %}
-
-</div>
-
-        <div class="home-blog-btn">
-
-            <a href="{% url 'blog' %}"
-
-               class="home-btn-primary">
-
+        <div class="home-blog-btn home-reveal">
+            <a href="{% url 'blog' %}" class="home-btn-primary">
                 View All Articles
-
+                <i class="fa-solid fa-arrow-right"></i>
             </a>
-
         </div>
-
     </div>
-
 </section>
 
+{% endblock %}
 
-
-
-</div>
-
-{% endblock %} 
+{% block extra_js %}
+<script src="{% static 'js/index.js' %}"></script>
+{% endblock %}

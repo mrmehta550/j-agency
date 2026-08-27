@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     SCROLL REVEAL
     =====================================*/
 
-    const revealElements = document.querySelectorAll(
+    const blogRevealElements = document.querySelectorAll(
 
         ".blog-card,.sidebar-widget,.newsletter-box"
 
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    revealElements.forEach(item => {
+    blogRevealElements.forEach(item => {
 
         item.classList.add("hidden");
 

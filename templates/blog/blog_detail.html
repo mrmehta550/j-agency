@@ -1,11 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog_detail.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}{{ blog.title }} | Magencyinfo Blog{% endblock %}
 {% block meta_description %}{{ blog.short_description|truncatechars:160 }}{% endblock %}
 {% block og_title %}{{ blog.title }}{% endblock %}
 {% block og_description %}{{ blog.short_description|truncatechars:200 }}{% endblock %}
-{% if blog.image %}{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{{ blog.image.url }}{% endblock %}{% endif %}
+{% block og_image %}{% if blog.image %}{{ request.scheme }}://{{ request.get_host }}{{ blog.image.url }}{% endif %}{% endblock %}
 
 {% block content %}
 
@@ -32,9 +37,7 @@
             <i class="fa-solid fa-angle-right"></i>
 
             <a href="{% url 'blog' %}">
-
                 Blog
-
             </a>
 
             <i class="fa-solid fa-angle-right"></i>
@@ -115,9 +118,7 @@
 
             <div class="blog-detail-author-left">
 
-                {% comment %} <img
-                    src="{% static 'images/default-user.png' %}"
-                    alt="Author"> {% endcomment %}
+                {% comment %} <img src="{% static 'images/default-user.png' %}" alt="Author"> {% endcomment %}
 
                 <div>
 
@@ -125,19 +126,19 @@
 
                         {% if blog.author %}
 
-                            {% if blog.author.get_full_name %}
+                        {% if blog.author.get_full_name %}
 
-                                {{ blog.author.get_full_name }}
-
-                            {% else %}
-
-                                {{ blog.author.username }}
-
-                            {% endif %}
+                        {{ blog.author.get_full_name }}
 
                         {% else %}
 
-                            Magencyinfo Team
+                        {{ blog.author.username }}
+
+                        {% endif %}
+
+                        {% else %}
+
+                        Magencyinfo Team
 
                         {% endif %}
 
@@ -207,11 +208,7 @@
 
             {% if blog.image %}
 
-            <img
-
-                src="{{ blog.image.url }}"
-
-                alt="{{ blog.title }}">
+            <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
 
             {% else %}
 
@@ -240,7 +237,7 @@
             =========================-->
 
             <div class="blog-detail-left-column">
-                                <!--=========================================
+                <!--=========================================
                         ARTICLE CONTENT
                 ==========================================-->
 
@@ -293,11 +290,7 @@
 
                     <div class="blog-detail-inline-image">
 
-                        <img
-
-                            src="{{ blog.image.url }}"
-
-                            alt="{{ blog.title }}">
+                        <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
 
                     </div>
 
@@ -465,18 +458,9 @@
 
                     </h3>
 
-                    <form
-                        method="GET"
-                        action="{% url 'blog' %}"
-                        class="blog-detail-search-form">
+                    <form method="GET" action="{% url 'blog' %}" class="blog-detail-search-form">
 
-                        <input
-
-                            type="text"
-
-                            name="search"
-
-                            placeholder="Search articles...">
+                        <input type="text" name="search" placeholder="Search articles...">
 
                         <button>
 
@@ -500,19 +484,11 @@
 
                     {% for item in latest %}
 
-                    <a
-
-                        href="{% url 'blog_detail' item.slug %}"
-
-                        class="blog-detail-latest-item">
+                    <a href="{% url 'blog_detail' item.slug %}" class="blog-detail-latest-item">
 
                         {% if item.image %}
 
-                        <img
-
-                            src="{{ item.image.url }}"
-
-                            alt="{{ item.title }}">
+                        <img src="{{ item.image.url }}" alt="{{ item.title }}">
 
                         {% endif %}
 
@@ -552,9 +528,7 @@
 
                         {% for category in categories %}
 
-                        <a
-
-                            href="{% url 'blog' %}?category={{ category.slug }}">
+                        <a href="{% url 'blog' %}?category={{ category.slug }}">
 
                             <span>
 
@@ -597,11 +571,7 @@
 
                     <form>
 
-                        <input
-
-                            type="email"
-
-                            placeholder="Enter your email">
+                        <input type="email" placeholder="Enter your email">
 
                         <button>
 
@@ -632,9 +602,7 @@
 
             <div class="blog-detail-author-image">
 
-                {% comment %} <img
-                    src="{% static 'images/default-user.png' %}"
-                    alt="Author"> {% endcomment %}
+                {% comment %} <img src="{% static 'images/default-user.png' %}" alt="Author"> {% endcomment %}
 
             </div>
 
@@ -648,23 +616,23 @@
 
                 <h2>
 
-                        {% if blog.author %}
+                    {% if blog.author %}
 
-                            {% if blog.author.get_full_name %}
+                    {% if blog.author.get_full_name %}
 
-                                {{ blog.author.get_full_name }}
+                    {{ blog.author.get_full_name }}
 
-                            {% else %}
+                    {% else %}
 
-                                {{ blog.author.username }}
+                    {{ blog.author.username }}
 
-                            {% endif %}
+                    {% endif %}
 
-                        {% else %}
+                    {% else %}
 
-                            Magencyinfo Team
+                    Magencyinfo Team
 
-                        {% endif %}
+                    {% endif %}
 
                 </h2>
 
@@ -726,11 +694,7 @@
 
             {% if previous_blog %}
 
-            <a
-
-                href="{% url 'blog_detail' previous_blog.slug %}"
-
-                class="blog-detail-navigation-card">
+            <a href="{% url 'blog_detail' previous_blog.slug %}" class="blog-detail-navigation-card">
 
                 <small>
 
@@ -752,10 +716,7 @@
 
             {% if next_blog %}
 
-            <a
-
-                href="{% url 'blog_detail' next_blog.slug %}"
-
+            <a href="{% url 'blog_detail' next_blog.slug %}"
                 class="blog-detail-navigation-card blog-detail-navigation-next">
 
                 <small>
@@ -816,11 +777,7 @@
 
                     {% if item.image %}
 
-                    <img
-
-                        src="{{ item.image.url }}"
-
-                        alt="{{ item.title }}">
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
 
                     {% endif %}
 
@@ -858,9 +815,7 @@
 
                     </p>
 
-                    <a
-
-                        href="{% url 'blog_detail' item.slug %}">
+                    <a href="{% url 'blog_detail' item.slug %}">
 
                         Read Article
 
@@ -885,86 +840,59 @@
 ==========================================-->
 
 <section class="blog-detail-comment-section">
-
     <div class="container">
-
         <div class="blog-detail-comment-wrapper">
-
+            
             <div class="blog-detail-section-heading">
-
-                <span>
-
-                    YOUR FEEDBACK
-
-                </span>
-
-                <h2>
-
-                    Leave a Comment
-
-                </h2>
-
+                <span>FEEDBACK & DISCUSSIONS</span>
+                <h2>Comments (<span id="commentCount">2</span>)</h2>
             </div>
 
-            <form
-
-                method="POST"
-
-                class="blog-detail-comment-form">
-
-                {% csrf_token %}
-
-                <div class="blog-detail-comment-grid">
-
-                    <input
-
-                        type="text"
-
-                        name="name"
-
-                        placeholder="Your Name"
-
-                        required>
-
-                    <input
-
-                        type="email"
-
-                        name="email"
-
-                        placeholder="Your Email"
-
-                        required>
-
+            <!-- Comments List -->
+            <div class="blog-comments-list" id="blogCommentsList">
+                <div class="blog-comment-item">
+                    <div class="comment-avatar">JD</div>
+                    <div class="comment-details">
+                        <div class="comment-meta">
+                            <h5>John Doe</h5>
+                            <span>August 24, 2026</span>
+                        </div>
+                        <p>This is an incredibly helpful article! The insights on AI development and automation are spot on. Looking forward to more guides like this.</p>
+                    </div>
                 </div>
 
-                <textarea
+                <div class="blog-comment-item">
+                    <div class="comment-avatar">AS</div>
+                    <div class="comment-details">
+                        <div class="comment-meta">
+                            <h5>Alice Smith</h5>
+                            <span>August 23, 2026</span>
+                        </div>
+                        <p>Very detailed write-up. The examples make it very easy to follow along. Keep up the great work!</p>
+                    </div>
+                </div>
+            </div>
 
-                    name="message"
+            <div class="blog-detail-section-heading" style="margin-top: 50px;">
+                <span>YOUR OPINION</span>
+                <h2>Leave a Comment</h2>
+            </div>
 
-                    rows="7"
-
-                    placeholder="Write your comment..."
-
-                    required>
-
-                </textarea>
-
-                <button
-                    type="submit">
-
+            <form method="POST" class="blog-detail-comment-form" id="commentForm">
+                {% csrf_token %}
+                <div class="blog-detail-comment-grid">
+                    <input type="text" name="name" id="commentName" placeholder="Your Name" required>
+                    <input type="email" name="email" id="commentEmail" placeholder="Your Email" required>
+                </div>
+                <textarea name="message" id="commentMessage" rows="7" placeholder="Write your comment..." required></textarea>
+                <button type="submit" id="submitCommentBtn">
                     <i class="fa-solid fa-paper-plane"></i>
-
                     Post Comment
-
                 </button>
-
             </form>
 
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
@@ -1002,22 +930,11 @@
 
             </div>
 
-            <form
-                method="POST"
-
-                class="blog-detail-newsletter-form">
+            <form method="POST" class="blog-detail-newsletter-form">
 
                 {% csrf_token %}
 
-                <input
-
-                    type="email"
-
-                    name="email"
-
-                    placeholder="Enter your email"
-
-                    required>
+                <input type="email" name="email" placeholder="Enter your email" required>
 
                 <button>
 
@@ -1033,20 +950,18 @@
 
 </section>
 
-<button
-id="blogDetailBackTop"
-
-class="blog-detail-back-top">
+<button id="blogDetailBackTop" class="blog-detail-back-top">
 
     <i class="fa-solid fa-arrow-up"></i>
 
 </button>
 
-<div
-id="blogDetailReadingProgress"
-
-class="blog-detail-reading-progress">
+<div id="blogDetailReadingProgress" class="blog-detail-reading-progress">
 
 </div>
 
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/blog_detail.js' %}?v=1.0"></script>
 {% endblock %}

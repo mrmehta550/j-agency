@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}Book Free Consultation | Magencyinfo — AI, Web & Marketing Experts{% endblock %}
 {% block meta_description %}Book a free strategy consultation with Magencyinfo. Our experts in AI development, web design, SEO, and digital marketing will contact you within 30 minutes.{% endblock %}
 
@@ -11,6 +16,10 @@ BOOKING HERO
 ==========================================-->
 
 <section class="booking-hero">
+    <!-- Decorative overlays -->
+    <div class="hero-grid-texture"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
 
     <div class="container">
 
@@ -23,40 +32,29 @@ BOOKING HERO
             <div class="booking-content">
 
                 <span class="booking-tag">
-
                     BOOK YOUR FREE CONSULTATION
-
                 </span>
 
                 <h1>
-
                     Grow Your Business With
-
                     <span>Magencyinfo</span>
-
                 </h1>
 
                 <p>
-
                     Partner with Magencyinfo to build powerful digital experiences.
                     From AI Automation and Website Development to SEO,
                     Digital Marketing and Business Growth, we help brands
                     scale faster with modern technology.
-
                 </p>
 
                 <div class="booking-buttons">
 
                     <a href="#bookingForm" class="booking-btn booking-primary-btn">
-
-                        Book Free Consultation
-
+                        <i class="fa-solid fa-calendar-check"></i> Book Free Consultation
                     </a>
 
                     <a href="#booking-services" class="booking-btn booking-outline-btn">
-
-                        Explore Services
-
+                        <i class="fa-solid fa-magnifying-glass"></i> Explore Services
                     </a>
 
                 </div>
@@ -70,25 +68,12 @@ BOOKING HERO
                     <div class="booking-feature-box">
 
                         <div class="booking-feature-icon">
-
-                            ⚡
-
+                            <i class="fa-solid fa-bolt"></i>
                         </div>
 
                         <div>
-
-                            <h4>
-
-                                Fast Response
-
-                            </h4>
-
-                            <span>
-
-                                Reply Within 30 Minutes
-
-                            </span>
-
+                            <h4>Fast Response</h4>
+                            <span>Reply Within 30 Minutes</span>
                         </div>
 
                     </div>
@@ -96,25 +81,12 @@ BOOKING HERO
                     <div class="booking-feature-box">
 
                         <div class="booking-feature-icon">
-
-                            🤖
-
+                            <i class="fa-solid fa-robot"></i>
                         </div>
 
                         <div>
-
-                            <h4>
-
-                                AI Experts
-
-                            </h4>
-
-                            <span>
-
-                                Automation & LLM Solutions
-
-                            </span>
-
+                            <h4>AI Experts</h4>
+                            <span>Automation & LLM Solutions</span>
                         </div>
 
                     </div>
@@ -122,25 +94,12 @@ BOOKING HERO
                     <div class="booking-feature-box">
 
                         <div class="booking-feature-icon">
-
-                            🌍
-
+                            <i class="fa-solid fa-globe"></i>
                         </div>
 
                         <div>
-
-                            <h4>
-
-                                Global Support
-
-                            </h4>
-
-                            <span>
-
-                                Remote Services Worldwide
-
-                            </span>
-
+                            <h4>Global Support</h4>
+                            <span>Remote Services Worldwide</span>
                         </div>
 
                     </div>
@@ -148,25 +107,12 @@ BOOKING HERO
                     <div class="booking-feature-box">
 
                         <div class="booking-feature-icon">
-
-                            🔒
-
+                            <i class="fa-solid fa-lock"></i>
                         </div>
 
                         <div>
-
-                            <h4>
-
-                                Trusted Process
-
-                            </h4>
-
-                            <span>
-
-                                Secure & Confidential
-
-                            </span>
-
+                            <h4>Trusted Process</h4>
+                            <span>Secure & Confidential</span>
                         </div>
 
                     </div>
@@ -184,19 +130,11 @@ BOOKING HERO
                 <div class="booking-calendar-card">
 
                     <div class="booking-calendar-header">
-
-                        <h3>
-
-                            Schedule Your Meeting
-
-                        </h3>
-
+                        <h3>Schedule Your Meeting</h3>
                     </div>
 
                     <div class="booking-calendar-month">
-
                         Available This Week
-
                     </div>
 
                     <div class="booking-calendar-grid">
@@ -209,57 +147,41 @@ BOOKING HERO
                         <span>Fr</span>
                         <span>Sa</span>
 
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button>7</button>
+                        <button type="button">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+                        <button type="button">7</button>
 
-                        <button>8</button>
-                        <button>9</button>
-                        <button>10</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">10</button>
 
-                        <button class="active">
+                        <button type="button" class="active">11</button>
 
-                            11
+                        <button type="button">12</button>
+                        <button type="button">13</button>
+                        <button type="button">14</button>
 
-                        </button>
-
-                        <button>12</button>
-                        <button>13</button>
-                        <button>14</button>
-
-                        <button>15</button>
-                        <button>16</button>
-                        <button>17</button>
-                        <button>18</button>
-                        <button>19</button>
-                        <button>20</button>
-                        <button>21</button>
+                        <button type="button">15</button>
+                        <button type="button">16</button>
+                        <button type="button">17</button>
+                        <button type="button">18</button>
+                        <button type="button">19</button>
+                        <button type="button">20</button>
+                        <button type="button">21</button>
 
                     </div>
 
                     <div class="booking-time-slots">
 
-                        <button>
+                        <button type="button">10:00 AM</button>
 
-                            10:00 AM
+                        <button type="button" class="active">02:00 PM</button>
 
-                        </button>
-
-                        <button class="active">
-
-                            02:00 PM
-
-                        </button>
-
-                        <button>
-
-                            05:00 PM
-
-                        </button>
+                        <button type="button">05:00 PM</button>
 
                     </div>
 
@@ -268,15 +190,11 @@ BOOKING HERO
                 <!-- Floating Cards -->
 
                 <div class="booking-floating booking-success-card">
-
-                    ✅ Free Strategy Session
-
+                    <i class="fa-solid fa-circle-check"></i> Free Strategy Session
                 </div>
 
                 <div class="booking-floating booking-meeting-card">
-
-                    🚀 Business Growth Call
-
+                    <i class="fa-solid fa-rocket"></i> Business Growth Call
                 </div>
 
             </div>
@@ -286,6 +204,7 @@ BOOKING HERO
     </div>
 
 </section>
+
 <!--=========================================
 BOOKING SERVICES
 ==========================================-->
@@ -327,7 +246,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    🌐
+                    <i class="fa-solid fa-globe"></i>
 
                 </div>
 
@@ -360,7 +279,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    🤖
+                    <i class="fa-solid fa-robot"></i>
 
                 </div>
 
@@ -393,7 +312,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    📱
+                    <i class="fa-solid fa-mobile-screen-button"></i>
 
                 </div>
 
@@ -426,7 +345,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    🎨
+                    <i class="fa-solid fa-palette"></i>
 
                 </div>
 
@@ -459,7 +378,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    🔍
+                    <i class="fa-solid fa-magnifying-glass"></i>
 
                 </div>
 
@@ -492,7 +411,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    📈
+                    <i class="fa-solid fa-chart-line"></i>
 
                 </div>
 
@@ -525,7 +444,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    ☁️
+                    <i class="fa-solid fa-cloud"></i>
 
                 </div>
 
@@ -558,7 +477,7 @@ BOOKING SERVICES
 
                 <div class="booking-service-icon">
 
-                    🛒
+                    <i class="fa-solid fa-cart-shopping"></i>
 
                 </div>
 
@@ -630,7 +549,7 @@ BOOKING FORM
 
                         <div class="booking-info-icon">
 
-                            📞
+                            <i class="fa-solid fa-phone"></i>
 
                         </div>
 
@@ -656,7 +575,7 @@ BOOKING FORM
 
                         <div class="booking-info-icon">
 
-                            📧
+                            <i class="fa-solid fa-envelope"></i>
 
                         </div>
 
@@ -682,7 +601,7 @@ BOOKING FORM
 
                         <div class="booking-info-icon">
 
-                            🌍
+                            <i class="fa-solid fa-calendar-days"></i>
 
                         </div>
 
@@ -708,7 +627,7 @@ BOOKING FORM
 
                         <div class="booking-info-icon">
 
-                            ⚡
+                            <i class="fa-solid fa-bolt"></i>
 
                         </div>
 
@@ -740,15 +659,62 @@ BOOKING FORM
 
             <div class="booking-form-card">
 
-                <!-- Django flash messages (success / error / warning) -->
+                <!-- Django flash messages toast notification (success / error / warning) -->
                 {% if messages %}
-                  <div class="booking-messages" role="alert" aria-live="polite">
+                  <div class="contact-toast-container" id="toastContainer">
                     {% for message in messages %}
-                      <div class="booking-message booking-message--{{ message.tags }}">
-                        {{ message }}
+                      <div class="contact-toast contact-toast--{{ message.tags }}" role="alert" aria-live="polite">
+                        <div class="contact-toast-icon">
+                          {% if message.tags == 'success' %}
+                            <i class="fa-solid fa-circle-check"></i>
+                          {% elif message.tags == 'error' or message.tags == 'danger' %}
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                          {% elif message.tags == 'warning' %}
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                          {% else %}
+                            <i class="fa-solid fa-circle-info"></i>
+                          {% endif %}
+                        </div>
+                        <div class="contact-toast-content">
+                          <span class="contact-toast-title">
+                            {% if message.tags == 'success' %}
+                              Success
+                            {% elif message.tags == 'error' or message.tags == 'danger' %}
+                              Error
+                            {% elif message.tags == 'warning' %}
+                              Warning
+                            {% else %}
+                              Notification
+                            {% endif %}
+                          </span>
+                          <p class="contact-toast-msg">{{ message }}</p>
+                        </div>
+                        <button type="button" class="contact-toast-close" aria-label="Close notification" onclick="this.parentElement.classList.add('is-closing'); setTimeout(() => this.parentElement.remove(), 400)">
+                          <i class="fa-solid fa-xmark"></i>
+                        </button>
+                        <div class="contact-toast-progress"></div>
                       </div>
                     {% endfor %}
                   </div>
+
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      const toasts = document.querySelectorAll('.contact-toast');
+                      toasts.forEach(toast => {
+                        // Auto close after 5 seconds
+                        setTimeout(() => {
+                          if (toast && toast.parentNode) {
+                            toast.classList.add('is-closing');
+                            setTimeout(() => {
+                              if (toast && toast.parentNode) {
+                                toast.remove();
+                              }
+                            }, 400);
+                          }
+                        }, 5000);
+                      });
+                    });
+                  </script>
                 {% endif %}
 
                 <form method="POST" action="{% url 'booking' %}" id="bookingForm">
@@ -1233,66 +1199,7 @@ FINAL CTA
 
 </section>
 
-{% endblock %}
 
-<style>
-  /* ── Booking flash message styles ──────────────────────── */
-  .booking-messages {
-    margin-bottom: 1.25rem;
-  }
-  .booking-message {
-    padding: 0.85rem 1.1rem;
-    border-radius: 8px;
-    font-size: 0.93rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    border-left: 4px solid transparent;
-  }
-  .booking-message--success {
-    background: #d1fae5;
-    color: #065f46;
-    border-color: #10b981;
-  }
-  .booking-message--error {
-    background: #fee2e2;
-    color: #991b1b;
-    border-color: #ef4444;
-  }
-  .booking-message--warning {
-    background: #fef3c7;
-    color: #92400e;
-    border-color: #f59e0b;
-  }
-  .booking-message--info {
-    background: #dbeafe;
-    color: #1e40af;
-    border-color: #3b82f6;
-  }
-
-  /* ── Submit button loading state ──────────────────────── */
-  #bookingSubmitBtn.is-loading {
-    opacity: 0.75;
-    cursor: not-allowed;
-    pointer-events: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-  }
-  .booking-spinner {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    animation: booking-spin 0.7s linear infinite;
-    flex-shrink: 0;
-  }
-  @keyframes booking-spin {
-    to { transform: rotate(360deg); }
-  }
-</style>
 
 <script>
 (function () {
@@ -1338,3 +1245,5 @@ FINAL CTA
   });
 }());
 </script>
+
+{% endblock %}

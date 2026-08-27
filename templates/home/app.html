@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/app.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}Blog | Magencyinfo — AI, Web Design & Digital Marketing Insights{% endblock %}
 {% block meta_description %}Read Magencyinfo's expert blog on AI development, web design, SEO, digital marketing, and technology trends. Practical insights for growing businesses.{% endblock %}
 

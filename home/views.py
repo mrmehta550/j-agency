@@ -145,10 +145,11 @@ def _save_contact_to_excel(contact: Contact) -> None:
     cannot interleave their reads and writes to the file.
     """
     with _excel_write_lock:
-        if not os.path.exists(settings.MEDIA_ROOT):
-            os.makedirs(settings.MEDIA_ROOT)
+        private_dir = os.path.join(settings.BASE_DIR, "private")
+        if not os.path.exists(private_dir):
+            os.makedirs(private_dir)
 
-        excel_file = os.path.join(settings.MEDIA_ROOT, "contacts.xlsx")
+        excel_file = os.path.join(private_dir, "contacts.xlsx")
 
         # Load the existing workbook or create a fresh one if it is
         # missing, empty, or corrupt.
@@ -778,7 +779,7 @@ def booking(request):
 def blog(request):
     blogs_qs = Blog.objects.filter(status=True).order_by("-created_at")
 
-    query = request.GET.get("search")
+    query = request.GET.get("q") or request.GET.get("search")
     if query:
         blogs_qs = blogs_qs.filter(
             Q(title__icontains=query) |
@@ -804,7 +805,9 @@ def blog(request):
     context = {
         "blogs":             blogs_page,
         "featured_blog":     featured_blog,
+        "latest":            latest_posts,
         "latest_posts":      latest_posts,
+        "popular":           popular_posts,
         "popular_posts":     popular_posts,
         "top_blogs":         top_blogs,
         "categories":        categories,
@@ -877,3 +880,24 @@ def blog_detail(request, slug):
     }
 
     return render(request, "blog/blog_detail.html", context)
+
+
+from django.contrib.admin.views.decorators import staff_member_required
+from django.http import HttpResponse, Http404
+
+@staff_member_required
+def download_contacts(request):
+    """
+    Secure view to download the contacts Excel file.
+    Only accessible by staff/admin users.
+    """
+    excel_file = os.path.join(settings.BASE_DIR, "private", "contacts.xlsx")
+    if os.path.exists(excel_file):
+        with open(excel_file, 'rb') as f:
+            response = HttpResponse(
+                f.read(),
+                content_type='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+            )
+            response['Content-Disposition'] = 'attachment; filename="contacts.xlsx"'
+            return response
+    raise Http404("Contacts file not found.")

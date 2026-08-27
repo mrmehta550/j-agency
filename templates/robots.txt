@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /media/
 Allow: /
 
-Sitemap: https://magencyinfo.com/sitemap.xml
+Sitemap: https://magencyinfo.in/sitemap.xml

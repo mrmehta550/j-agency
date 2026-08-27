@@ -1,103 +1,107 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}Contact Us | Magencyinfo — Get a Free Consultation{% endblock %}
 {% block meta_description %}Contact Magencyinfo for a free consultation on AI development, web design, digital marketing, SEO, and mobile app development. Reply within 30 minutes.{% endblock %}
 
 {% block content %}
-
   <!-- =========================================
-CONTACT HERO
+CONTACT HERO — Centered, No Image
 ========================================== -->
 
   <section class="contact-hero">
+    <!-- Decorative layers -->
+    <div class="hero-grid-texture"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
     <div class="container">
-      <div class="contact-grid">
-        <!-- ==============================
-            LEFT CONTENT
-            ============================== -->
+      <div class="contact-hero-inner">
 
-        <div class="contact-content">
-          <span class="contact-section-tag">CONTACT US</span>
+        <!-- Badge -->
+        <div class="contact-hero-badge">
+          <span class="badge-dot"></span>
+          <span>Available 24/7 — Reply in &lt; 1 Hour</span>
+        </div>
 
-          <h1>Let's Build Something Amazing Together</h1>
+        <!-- Headline -->
+        <h1 class="contact-hero-title">
+          Let's Build Something
+          <span class="hero-title-gradient">Amazing Together</span>
+        </h1>
 
-          <p>Whether you need a professional website, AI automation, digital marketing, or a custom software solution, Magencyinfo is ready to help your business grow.</p>
+        <!-- Sub text -->
+        <p class="contact-hero-desc">
+          Whether you need a professional website, AI automation, digital marketing,
+          or a custom software solution — Magencyinfo is ready to help your business grow.
+        </p>
 
-          <div class="contact-hero-buttons">
-            <a href="#contactForm" class="contact-btn-primary">Get Free Consultation</a>
+        <!-- CTA Buttons -->
+        <div class="contact-hero-buttons">
+          <a href="#contactForm" class="contact-btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Send Us a Message
+          </a>
+          <a href="#map" class="contact-btn-outline">
+            <i class="fa-solid fa-location-dot"></i> Find Our Office
+          </a>
+        </div>
 
-            <a href="#map" class="contact-btn-outline">Find Our Office</a>
+        <!-- Contact Info Chips Row -->
+        <div class="contact-hero-chips">
+          <div class="contact-chip">
+            <div class="contact-chip-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-chip-text">
+              <span class="chip-label">Call Us</span>
+              <span class="chip-value">+91 XXXXX XXXXX</span>
+            </div>
           </div>
-
-          <!-- ==============================
-                HIGHLIGHTS
-                ============================== -->
-
-          <div class="contact-highlights">
-            <!-- Card -->
-
-            <div class="contact-highlight-card">
-              <div class="contact-highlight-icon">📞</div>
-
-              <div>
-                <h4>Call Us</h4>
-
-                <span>+91 XXXXX XXXXX</span>
-              </div>
+          <div class="chip-divider"></div>
+          <div class="contact-chip">
+            <div class="contact-chip-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-chip-text">
+              <span class="chip-label">Email</span>
+              <span class="chip-value">info@magency.com</span>
             </div>
-
-            <!-- Card -->
-
-            <div class="contact-highlight-card">
-              <div class="contact-highlight-icon">✉️</div>
-
-              <div>
-                <h4>Email Us</h4>
-
-                <span>info@magency.com</span>
-              </div>
-            </div>
-
-            <!-- Card -->
-
-            <div class="contact-highlight-card">
-              <div class="contact-highlight-icon">📍</div>
-
-              <div>
-                <h4>Office</h4>
-
-                <span>Chandigarh, India</span>
-              </div>
+          </div>
+          <div class="chip-divider"></div>
+          <div class="contact-chip">
+            <div class="contact-chip-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="contact-chip-text">
+              <span class="chip-label">Office</span>
+              <span class="chip-value">Chandigarh, India</span>
             </div>
           </div>
         </div>
 
-        <!-- ==============================
-            RIGHT IMAGE
-            ============================== -->
-
-        <div class="contact-image">
-          <div class="contact-image-bg"></div>
-
-          <img src="{% static 'images/services/contact/contact-dashboard.jpg' %}" alt="Contact M Agency" />
-
-          <!-- Floating Card -->
-
-          <div class="contact-floating-card contact-card-one">
-            <h3>500+</h3>
-
-            <span>Projects Delivered</span>
+        <!-- Stats Row -->
+        <div class="contact-hero-stats">
+          <div class="hero-stat">
+            <h3>500<span>+</span></h3>
+            <p>Projects Delivered</p>
           </div>
-
-          <!-- Floating Card -->
-
-          <div class="contact-floating-card contact-card-two">
-            <h3>24/7</h3>
-
-            <span>Expert Support</span>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <h3>98<span>%</span></h3>
+            <p>Client Satisfaction</p>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <h3>24<span>/7</span></h3>
+            <p>Expert Support</p>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <h3>10<span>+</span></h3>
+            <p>Digital Services</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -122,7 +126,7 @@ CONTACT FORM
           <!-- Info Card -->
 
           <div class="contact-info-box">
-            <div class="contact-info-icon">📞</div>
+            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
 
             <div>
               <h4>Phone Number</h4>
@@ -134,7 +138,7 @@ CONTACT FORM
           <!-- Info Card -->
 
           <div class="contact-info-box">
-            <div class="contact-info-icon">✉️</div>
+            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
 
             <div>
               <h4>Email Address</h4>
@@ -146,7 +150,7 @@ CONTACT FORM
           <!-- Info Card -->
 
           <div class="contact-info-box">
-            <div class="contact-info-icon">📍</div>
+            <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
 
             <div>
               <h4>Office</h4>
@@ -158,7 +162,7 @@ CONTACT FORM
           <!-- Info Card -->
 
           <div class="contact-info-box">
-            <div class="contact-info-icon">🕒</div>
+            <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
 
             <div>
               <h4>Working Hours</h4>
@@ -178,16 +182,64 @@ CONTACT FORM
             CONTACT FORM
             ================================== -->
 
-        <!-- Django flash messages (success / error / warning) -->
+        <!-- Django flash messages toast notification (success / error / warning) -->
         {% if messages %}
-          <div class="contact-messages" role="alert" aria-live="polite">
+          <div class="contact-toast-container" id="toastContainer">
             {% for message in messages %}
-              <div class="contact-message contact-message--{{ message.tags }}">
-                {{ message }}
+              <div class="contact-toast contact-toast--{{ message.tags }}" role="alert" aria-live="polite">
+                <div class="contact-toast-icon">
+                  {% if message.tags == 'success' %}
+                    <i class="fa-solid fa-circle-check"></i>
+                  {% elif message.tags == 'error' or message.tags == 'danger' %}
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                  {% elif message.tags == 'warning' %}
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                  {% else %}
+                    <i class="fa-solid fa-circle-info"></i>
+                  {% endif %}
+                </div>
+                <div class="contact-toast-content">
+                  <span class="contact-toast-title">
+                    {% if message.tags == 'success' %}
+                      Success
+                    {% elif message.tags == 'error' or message.tags == 'danger' %}
+                      Error
+                    {% elif message.tags == 'warning' %}
+                      Warning
+                    {% else %}
+                      Notification
+                    {% endif %}
+                  </span>
+                  <p class="contact-toast-msg">{{ message }}</p>
+                </div>
+                <button type="button" class="contact-toast-close" aria-label="Close notification" onclick="this.parentElement.classList.add('is-closing'); setTimeout(() => this.parentElement.remove(), 400)">
+                  <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="contact-toast-progress"></div>
               </div>
             {% endfor %}
           </div>
+
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const toasts = document.querySelectorAll('.contact-toast');
+              toasts.forEach(toast => {
+                // Auto close after 5 seconds
+                setTimeout(() => {
+                  if (toast && toast.parentNode) {
+                    toast.classList.add('is-closing');
+                    setTimeout(() => {
+                      if (toast && toast.parentNode) {
+                        toast.remove();
+                      }
+                    }, 400);
+                  }
+                }, 5000);
+              });
+            });
+          </script>
         {% endif %}
+
 
         <div class="contact-form-card">
           <form method="POST" action="{% url 'contact' %}" id="contactForm">
@@ -317,7 +369,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">📍</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-location-dot"></i></div>
 
             <div>
               <h3>Head Office</h3>
@@ -329,7 +381,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">📞</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-phone"></i></div>
 
             <div>
               <h3>Phone</h3>
@@ -341,7 +393,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">✉️</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-envelope"></i></div>
 
             <div>
               <h3>Email</h3>
@@ -353,7 +405,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">🌐</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-globe"></i></div>
 
             <div>
               <h3>Website</h3>
@@ -365,7 +417,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">🕒</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-clock"></i></div>
 
             <div>
               <h3>Business Hours</h3>
@@ -383,7 +435,7 @@ OFFICE LOCATION
           <!-- Card -->
 
           <div class="contact-office-card">
-            <div class="contact-office-icon">💬</div>
+            <div class="contact-office-icon"><i class="fa-solid fa-comments"></i></div>
 
             <div>
               <h3>Live Support</h3>
@@ -413,7 +465,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 1 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🚀</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-rocket"></i></div>
 
           <h3>Fast Project Delivery</h3>
 
@@ -423,7 +475,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 2 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🤖</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-robot"></i></div>
 
           <h3>AI Powered Solutions</h3>
 
@@ -433,7 +485,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 3 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🌐</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-globe"></i></div>
 
           <h3>Modern Web Development</h3>
 
@@ -443,7 +495,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 4 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">📱</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
 
           <h3>Mobile Applications</h3>
 
@@ -453,7 +505,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 5 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🔒</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
 
           <h3>Secure & Reliable</h3>
 
@@ -463,7 +515,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 6 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">📈</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
 
           <h3>Digital Marketing</h3>
 
@@ -473,7 +525,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 7 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🎯</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-bullseye"></i></div>
 
           <h3>Business Strategy</h3>
 
@@ -483,7 +535,7 @@ WHY CHOOSE M AGENCY
         <!-- Card 8 -->
 
         <div class="contact-feature-card">
-          <div class="contact-feature-icon">🤝</div>
+          <div class="contact-feature-icon"><i class="fa-solid fa-handshake"></i></div>
 
           <h3>Lifetime Support</h3>
 
@@ -515,7 +567,7 @@ CONTACT CTA
 
         <div class="contact-cta-right">
           <div class="contact-cta-card">
-            <div class="contact-cta-icon">🚀</div>
+            <div class="contact-cta-icon"><i class="fa-solid fa-rocket"></i></div>
 
             <h3>Free Consultation</h3>
 
@@ -523,7 +575,7 @@ CONTACT CTA
           </div>
 
           <div class="contact-cta-card">
-            <div class="contact-cta-icon">⚡</div>
+            <div class="contact-cta-icon"><i class="fa-solid fa-bolt"></i></div>
 
             <h3>Fast Response</h3>
 
@@ -531,7 +583,7 @@ CONTACT CTA
           </div>
 
           <div class="contact-cta-card">
-            <div class="contact-cta-icon">🤝</div>
+            <div class="contact-cta-icon"><i class="fa-solid fa-users"></i></div>
 
             <h3>Dedicated Team</h3>
 
@@ -539,7 +591,7 @@ CONTACT CTA
           </div>
 
           <div class="contact-cta-card">
-            <div class="contact-cta-icon">⭐</div>
+            <div class="contact-cta-icon"><i class="fa-solid fa-star"></i></div>
 
             <h3>500+ Projects</h3>
 
@@ -598,63 +650,8 @@ NEWSLETTER
     </div>
   </section>
 
-<style>
-  /* ── Flash message styles ───────────────────────────────── */
-  .contact-messages {
-    margin-bottom: 1.25rem;
-  }
-  .contact-message {
-    padding: 0.85rem 1.1rem;
-    border-radius: 8px;
-    font-size: 0.93rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    border-left: 4px solid transparent;
-  }
-  .contact-message--success {
-    background: #d1fae5;
-    color: #065f46;
-    border-color: #10b981;
-  }
-  .contact-message--error {
-    background: #fee2e2;
-    color: #991b1b;
-    border-color: #ef4444;
-  }
-  .contact-message--warning {
-    background: #fef3c7;
-    color: #92400e;
-    border-color: #f59e0b;
-  }
-  .contact-message--info {
-    background: #dbeafe;
-    color: #1e40af;
-    border-color: #3b82f6;
-  }
 
-  /* ── Submit button loading state ───────────────────────── */
-  #submitBtn.is-loading {
-    opacity: 0.75;
-    cursor: not-allowed;
-    pointer-events: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .contact-spinner {
-    display: inline-block;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    border-top-color: #ffffff;
-    border-radius: 50%;
-    animation: contact-spin 0.7s linear infinite;
-    flex-shrink: 0;
-  }
-  @keyframes contact-spin {
-    to { transform: rotate(360deg); }
-  }
-</style>
+
 
 <script>
 (function () {

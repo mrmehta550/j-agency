@@ -9,9 +9,6 @@ def uiux(request):
     context = {"case_studies": case_studies,}
     return render(request, "services/uiux.html",context)
 
-def ecom(request):
-    return render(request, "services/ecom.html")
-
 def seo(request):
     case_studies = CaseStudy.objects.filter(category="SEO").order_by("-created_at")[:3]
     context = {"seo_case_studies": case_studies,}

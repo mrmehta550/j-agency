@@ -19,4 +19,5 @@ urlpatterns = [
 
     path("cloud/", views.cloud, name="cloud"),
     path("app/", views.app, name="app"),
+    path("download-contacts/", views.download_contacts, name="download_contacts"),
 ]

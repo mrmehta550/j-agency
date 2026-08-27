@@ -1,1559 +1,523 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Professional Video Editing & Production Services | Magencyinfo{% endblock %}
+
+{% block meta_description %}Produce cinematic advertisements, YouTube cuts, social reels, and corporate presentations with Magencyinfo's video editing services.{% endblock %}
+
 {% block content %}
 
-{% load static %}
-
 <!--=========================================
-        VIDEO SERVICE HERO
-==========================================-->
-
-<section class="video-hero">
-
-    <div class="video-hero-bg">
-
-        <div class="video-blob blob-1"></div>
-        <div class="video-blob blob-2"></div>
-        <div class="video-blob blob-3"></div>
-
-        <div class="video-grid-pattern"></div>
-
+    VIDEO SERVICE HERO
+    ==========================================-->
+<section class="svc-hero video-service-hero">
+    <div class="svc-hero-bg">
+        <span class="svc-hero-blob svc-hero-blob-1"></span>
+        <span class="svc-hero-blob svc-hero-blob-2"></span>
     </div>
 
     <div class="container">
-
-        <div class="video-hero-wrapper">
-
-            <!--=================================
-                    LEFT CONTENT
-            ==================================-->
-
-            <div class="video-hero-content">
-
-                <div class="video-badge">
-
+        <div class="svc-hero-wrapper">
+            <!-- Left Side Content -->
+            <div class="svc-hero-content video-reveal video-revealed">
+                <span class="svc-hero-badge">
                     <i class="fa-solid fa-film"></i>
-
-                    Premium Video Editing Agency
-
-                </div>
+                    Premium Video Production
+                </span>
 
                 <h1>
-
-                    Professional
-
-                    <span>Video Editing</span>
-
-                    That Grows Your Brand
-
+                    Professional Video Editing
+                    <span>That Builds Brands</span>
                 </h1>
 
                 <p>
-
-                    We create cinematic videos, YouTube edits,
-                    reels, advertisements, podcasts, corporate
-                    videos and social media content that helps
-                    businesses attract more customers and
-                    increase engagement.
-
+                    We create cinematic videos, YouTube cuts, social media reels, commercial ads, podcast cuts, and corporate slide packages to help your business reach more clients and increase conversion metrics.
                 </p>
 
-                <!--==========================
-                        FEATURES
-                ===========================-->
-
-                <div class="video-feature-list">
-
-                    <div class="video-feature">
-
+                <!-- Core Features -->
+                <div class="svc-hero-features">
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        <span>4K Professional Editing</span>
-
+                        <span>4K Post-Production Editing</span>
                     </div>
-
-                    <div class="video-feature">
-
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        <span>Motion Graphics</span>
-
+                        <span>Dynamic Motion Graphics</span>
                     </div>
-
-                    <div class="video-feature">
-
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        <span>Color Grading</span>
-
+                        <span>Color Grading & Sound Design</span>
                     </div>
-
-                    <div class="video-feature">
-
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        <span>Fast Delivery</span>
-
+                        <span>Fast Project Turnarounds</span>
                     </div>
-
                 </div>
 
-                <!--==========================
-                        BUTTONS
-                ===========================-->
-
-                <div class="video-buttons">
-
-                    <a href="{% url 'booking' %}" class="video-btn-primary">
-
+                <!-- CTA Buttons -->
+                <div class="svc-hero-buttons">
+                    <a href="{% url 'booking' %}" class="svc-btn-primary">
                         Get Free Consultation
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
-
-                    <a href="#portfolio" class="video-btn-outline">
-
-                        View Portfolio
-
+                    <a href="#portfolio" class="svc-btn-secondary">
+                        View Showreel
                     </a>
-
                 </div>
-
-                <!--==========================
-                        STATS
-                ===========================-->
-
-                <div class="video-stats">
-
-                    <div class="video-stat">
-
-                        <h2>500+</h2>
-
-                        <span>Videos Delivered</span>
-
-                    </div>
-
-                    <div class="video-stat">
-
-                        <h2>150+</h2>
-
-                        <span>Happy Clients</span>
-
-                    </div>
-
-                    <div class="video-stat">
-
-                        <h2>98%</h2>
-
-                        <span>Client Satisfaction</span>
-
-                    </div>
-
-                    <div class="video-stat">
-
-                        <h2>24/7</h2>
-
-                        <span>Support</span>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <!--=================================
-                    RIGHT IMAGE
-            ==================================-->
+            <!-- Right Side Image Box with Floating Cards -->
+            <div class="svc-hero-visual video-reveal video-revealed">
+                <div class="svc-hero-image-box">
+                    <img src="{% static 'images/services/video/video-hero.jpg' %}" alt="Video Editor dashboard mockup" class="svc-hero-image">
 
-            <div class="video-hero-image">
+                    <!-- Floating Badge Card 1 -->
+                    <div class="svc-floating-card svc-float-1">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-clapperboard"></i>
+                        </div>
+                        <div>
+                            <h5>Editing</h5>
+                            <p>Cinematic Visuals</p>
+                        </div>
+                    </div>
 
-                <div class="video-image-card">
+                    <!-- Floating Badge Card 2 -->
+                    <div class="svc-floating-card svc-float-2">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div>
+                            <h5>FX</h5>
+                            <p>Motion Graphics</p>
+                        </div>
+                    </div>
 
-                    <img
-                        src="{% static 'images/services/video/video-hero.jpg' %}"
-                        alt="Professional Video Editing">
-
+                    <!-- Floating Badge Card 3 -->
+                    <div class="svc-floating-card svc-float-3">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <div>
+                            <h5>Audio</h5>
+                            <p>Sound Design</p>
+                        </div>
+                    </div>
                 </div>
-
-                <!--==========================
-                        FLOAT CARD 1
-                ===========================-->
-
-                <div class="video-floating-card card-one">
-
-                    <div class="video-floating-icon">
-
-                        <i class="fa-solid fa-play"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4>500+</h4>
-
-                        <p>Projects Completed</p>
-
-                    </div>
-
-                </div>
-
-                <!--==========================
-                        FLOAT CARD 2
-                ===========================-->
-
-                
-
-                <!--==========================
-                        FLOAT CARD 3
-                ===========================-->
-
-                <div class="video-floating-card card-three">
-
-                    <div class="video-floating-icon">
-
-                        <i class="fa-solid fa-clock"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h4>24 Hours</h4>
-
-                        <p>Quick Delivery</p>
-
-                    </div>
-
-                </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-        VIDEO SERVICES
-==========================================-->
-
-<section class="video-services">
-
+    TRUST STATS STRIP
+    ==========================================-->
+<section class="svc-stats-strip">
     <div class="container">
+        <div class="svc-stats-wrapper">
+            <div class="svc-stat-item">
+                <h3 class="video-counter" data-target="500" data-suffix="+">0+</h3>
+                <p>Videos Delivered</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="video-counter" data-target="150" data-suffix="+">0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="video-counter" data-target="98" data-suffix="%">0%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="video-counter" data-target="10" data-suffix="M+">0M+</h3>
+                <p>Organic Views Generated</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <div class="video-section-heading">
-
-            <span>
-
-                OUR SERVICES
-
-            </span>
-
-            <h2>
-
-                Professional Video Editing
-                Services We Offer
-
-            </h2>
-
-            <p>
-
-                We create high-quality videos that help businesses,
-                creators and brands attract more customers,
-                increase engagement and build trust.
-
-            </p>
-
+<!--=========================================
+    WHAT WE DO (SERVICES)
+    ==========================================-->
+<section class="svc-section">
+    <div class="container">
+        <div class="svc-heading video-reveal">
+            <span class="svc-section-tag">Our Services</span>
+            <h2>Complete Post-Production <span>Solutions</span></h2>
+            <p>From social media cuts to cinematic commercial packages, we polish raw footage into engaging stories.</p>
         </div>
 
-        <div class="video-services-grid">
-
-            <!--=========================
-                    CARD 1
-            ==========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-video"></i>
-
+        <div class="svc-grid-3 video-reveal">
+            <!-- Card 1 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-film"></i>
                 </div>
-
-                <h3>
-
-                    YouTube Video Editing
-
-                </h3>
-
-                <p>
-
-                    Professional editing with motion graphics,
-                    transitions, subtitles and cinematic effects.
-
-                </p>
-
+                <h3>Social Video Reels</h3>
+                <p>High-engagement short videos structured for TikTok, Instagram Reels, and YouTube Shorts to maximize virality.</p>
                 <ul>
-
-                    <li>4K Editing</li>
-
-                    <li>Motion Graphics</li>
-
-                    <li>Color Grading</li>
-
-                    <li>Audio Enhancement</li>
-
+                    <li>Dynamic Subtitles</li>
+                    <li>Fast Visual Pacing</li>
+                    <li>Trend Audio Sync</li>
                 </ul>
-
             </div>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-brands fa-instagram"></i>
-
+            <!-- Card 2 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-photo-film"></i>
                 </div>
-
-                <h3>
-
-                    Reels & Shorts
-
-                </h3>
-
-                <p>
-
-                    Viral Instagram Reels,
-                    YouTube Shorts and TikTok
-                    videos with engaging edits.
-
-                </p>
-
+                <h3>YouTube Video Cuts</h3>
+                <p>Polishing raw talk logs, vlogs, tutorials, or explainers, optimizing engagement retention curves throughout clips.</p>
                 <ul>
-
-                    <li>Trending Effects</li>
-
-                    <li>Captions</li>
-
-                    <li>Hooks</li>
-
-                    <li>Fast Delivery</li>
-
+                    <li>Retention Hook Edits</li>
+                    <li>B-Roll & Sound Effects</li>
+                    <li>Custom Thumbnail Designs</li>
                 </ul>
-
             </div>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-bullhorn"></i>
-
+            <!-- Card 3 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-rectangle-ad"></i>
                 </div>
-
-                <h3>
-
-                    Advertisement Videos
-
-                </h3>
-
-                <p>
-
-                    Commercial videos for
-                    products, startups and
-                    business marketing.
-
-                </p>
-
+                <h3>Commercial Video Ads</h3>
+                <p>Cinematic promotional clips built to explain products, highlight testimonials, and drive conversions in ad sets.</p>
                 <ul>
-
-                    <li>Product Ads</li>
-
-                    <li>Facebook Ads</li>
-
-                    <li>Google Ads</li>
-
-                    <li>Promotional Videos</li>
-
+                    <li>Product Mockup Edits</li>
+                    <li>Script Timing Tuning</li>
+                    <li>Call-To-Action Banners</li>
                 </ul>
-
             </div>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-microphone-lines"></i>
-
+            <!-- Card 4 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-palette"></i>
                 </div>
-
-                <h3>
-
-                    Podcast Editing
-
-                </h3>
-
-                <p>
-
-                    Audio cleanup,
-                    multi-camera editing,
-                    intros and outros.
-
-                </p>
-
+                <h3>Color Grading</h3>
+                <p>Color correction and aesthetic grading to establish a premium, cinematic tone matching your brand guidelines.</p>
                 <ul>
-
-                    <li>Noise Removal</li>
-
-                    <li>Audio Mixing</li>
-
-                    <li>Captions</li>
-
-                    <li>Brand Intro</li>
-
+                    <li>LUT Customizations</li>
+                    <li>Skin Tone Balancing</li>
+                    <li>Atmospheric Tinting</li>
                 </ul>
-
             </div>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-briefcase"></i>
-
-                </div>
-
-                <h3>
-
-                    Corporate Videos
-
-                </h3>
-
-                <p>
-
-                    Professional videos
-                    for businesses,
-                    presentations and events.
-
-                </p>
-
-                <ul>
-
-                    <li>Company Profile</li>
-
-                    <li>Events</li>
-
-                    <li>Interviews</li>
-
-                    <li>Presentations</li>
-
-                </ul>
-
-            </div>
-
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
+            <!-- Card 5 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
-
                 </div>
-
-                <h3>
-
-                    Motion Graphics
-
-                </h3>
-
-                <p>
-
-                    Creative animations,
-                    logo reveals,
-                    intros and visual effects.
-
-                </p>
-
+                <h3>Motion Graphics</h3>
+                <p>Integrating professional transitions, logo animations, data charts, lower-thirds, and explainers directly into clips.</p>
                 <ul>
-
-                    <li>Logo Animation</li>
-
-                    <li>Intro & Outro</li>
-
-                    <li>Visual Effects</li>
-
-                    <li>Custom Animation</li>
-
+                    <li>Interactive Data Graphs</li>
+                    <li>Logo Intro & Outro Packs</li>
+                    <li>Explainer Animations</li>
                 </ul>
-
             </div>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-clapperboard"></i>
-
+            <!-- Card 6 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-volume-high"></i>
                 </div>
-
-                <h3>
-
-                    Documentary Editing
-
-                </h3>
-
-                <p>
-
-                    Cinematic storytelling
-                    with professional editing
-                    and sound design.
-
-                </p>
-
+                <h3>Sound Design</h3>
+                <p>Professional noise cancellation, vocal balancing, SFX placement, and copyright-free ambient music integration.</p>
                 <ul>
-
-                    <li>Storytelling</li>
-
-                    <li>Color Correction</li>
-
-                    <li>Sound Design</li>
-
-                    <li>Transitions</li>
-
+                    <li>Audio Noise Cleaning</li>
+                    <li>Music Sound Leveling</li>
+                    <li>Immersive Sound Effects</li>
                 </ul>
-
             </div>
+        </div>
+    </div>
+</section>
 
-            <!--=========================-->
-
-            <div class="video-service-card">
-
-                <div class="video-service-icon">
-
-                    <i class="fa-solid fa-camera-retro"></i>
-
-                </div>
-
-                <h3>
-
-                    Wedding Videos
-
-                </h3>
-
-                <p>
-
-                    Emotional wedding films
-                    with cinematic color grading
-                    and smooth transitions.
-
-                </p>
-
-                <ul>
-
-                    <li>Highlight Film</li>
-
-                    <li>Full Wedding</li>
-
-                    <li>Drone Footage</li>
-
-                    <li>4K Export</li>
-
-                </ul>
-
-            </div>
-
+<!--=========================================
+    PORTFOLIO SHOWCASE
+    ==========================================-->
+<section class="svc-section svc-section--alt" id="portfolio">
+    <div class="container">
+        <div class="svc-heading video-reveal">
+            <span class="svc-section-tag">Portfolio</span>
+            <h2>Logos & Videos <span>That Captivate</span></h2>
+            <p>Explore some of our recent professional edits and advertising campaigns.</p>
         </div>
 
+        <div class="svc-portfolio-filter video-portfolio-filter video-reveal">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="commercial">Commercials</button>
+            <button data-filter="social">Social Reels</button>
+            <button data-filter="youtube">YouTube</button>
+            <button data-filter="corporate">Corporate</button>
+        </div>
+
+        <div class="svc-portfolio-grid video-reveal">
+            <!-- Project 1 -->
+            <div class="svc-portfolio-card video-portfolio-card" data-category="commercial">
+                <img src="{% static 'images/services/video/portfolio1.jpg' %}" alt="Commercial ad project mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>Commercial Ads</span>
+                    <h3>SaaS Product Promo</h3>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="svc-portfolio-card video-portfolio-card" data-category="social">
+                <img src="{% static 'images/services/video/portfolio2.jpg' %}" alt="Social reel project mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>Social Reels</span>
+                    <h3>Influencer Brand Reels</h3>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="svc-portfolio-card video-portfolio-card" data-category="youtube">
+                <img src="{% static 'images/services/video/portfolio3.jpg' %}" alt="YouTube explainer project mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>YouTube Cuts</span>
+                    <h3>AI Tech Explainer</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    PRICING
+    ==========================================-->
+<section class="svc-section" id="pricing">
+    <div class="container">
+        <div class="svc-heading video-reveal">
+            <span class="svc-section-tag">Pricing Plans</span>
+            <h2>Flexible Packages <span>For Content Creators</span></h2>
+            <p>Affordable project pricing for social creators, startup brands, and corporate media teams.</p>
+        </div>
+
+        <div class="svc-pricing-grid video-reveal">
+            <!-- Basic Plan -->
+            <div class="svc-pricing-card">
+                <h3>Social Starter</h3>
+                <p class="logo-service-plan-description">Best for creators scaling TikTok, Reels, or Shorts.</p>
+                <div class="price">₹4,999<span>/mo</span></div>
+                <ul class="svc-pricing-features">
+                    <li><i class="fa-solid fa-check"></i> 10 Social Short Videos</li>
+                    <li><i class="fa-solid fa-check"></i> Dynamic Subtitle Packs</li>
+                    <li><i class="fa-solid fa-check"></i> Sound Effects & Zoom Cuts</li>
+                    <li><i class="fa-solid fa-check"></i> 2 Days Turnaround / video</li>
+                    <li><i class="fa-solid fa-check"></i> 2 Revision Rounds / video</li>
+                </ul>
+                <a href="{% url 'booking' %}" class="svc-pricing-button">Get Started</a>
+            </div>
+
+            <!-- Popular Plan -->
+            <div class="svc-pricing-card">
+                <div class="svc-pricing-popular">Most Popular</div>
+                <h3>Creator Pro</h3>
+                <p class="logo-service-plan-description">Ideal package for active YouTube and Ad campaigns.</p>
+                <div class="price">₹14,999<span>/mo</span></div>
+                <ul class="svc-pricing-features">
+                    <li><i class="fa-solid fa-check"></i> 4 YouTube Long-Form Edits</li>
+                    <li><i class="fa-solid fa-check"></i> 8 Social Short Cutouts</li>
+                    <li><i class="fa-solid fa-check"></i> Advanced Color Grading</li>
+                    <li><i class="fa-solid fa-check"></i> Custom Motion Graphic assets</li>
+                    <li><i class="fa-solid fa-check"></i> 3 Revision Rounds / video</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated Slack Workspace</li>
+                </ul>
+                <a href="{% url 'booking' %}" class="svc-pricing-button">Choose Plan</a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="svc-pricing-card">
+                <h3>Commercial Elite</h3>
+                <p class="logo-service-plan-description">Cinematic commercial and corporate presentation edits.</p>
+                <div class="price">Custom</div>
+                <ul class="svc-pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Custom Commercial Ads</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited Long & Short Cuts</li>
+                    <li><i class="fa-solid fa-check"></i> High-End 3D Motion Graphics</li>
+                    <li><i class="fa-solid fa-check"></i> Pro Sound Design & Foley</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited revisions</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated Art Director</li>
+                </ul>
+                <a href="{% url 'booking' %}" class="svc-pricing-button">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    CLIENT TESTIMONIALS
+    ==========================================-->
+<section class="svc-section svc-section--alt">
+    <div class="container">
+        <div class="svc-heading video-reveal">
+            <span class="svc-section-tag">Testimonials</span>
+            <h2>Trusted By <span>Publishers Globally</span></h2>
+            <p>Read about client experiences collaborating with our video editing agency.</p>
+        </div>
+
+        <div class="svc-testimonial-grid uiux-reveal">
+            <!-- Testimonial 1 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"The dynamic subtitles and visual hooks they integrate kept our social retention metrics 40% higher. Absolutely top-tier editing."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client1.jpg' %}" alt="David Croft Creator">
+                    <div>
+                        <h4>David Croft</h4>
+                        <span>Host, Croft Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"They designed cinematic ad promos that significantly boosted our paid traffic conversions on Facebook and Instagram."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client2.jpg' %}" alt="Clara Higgins Director">
+                    <div>
+                        <h4>Clara Higgins</h4>
+                        <span>VP Marketing, Trendify</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Super fast turnaround speeds and clean color grading. They delivered a fully finished commercial in under 4 business days."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client3.jpg' %}" alt="Liam Gallagher Producer">
+                    <div>
+                        <h4>Liam Gallagher</h4>
+                        <span>Producer, Oasis Creative</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    FAQ
+    ==========================================-->
+<section class="svc-section">
+    <div class="container">
+        <div class="svc-heading video-reveal">
+            <span class="svc-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Have questions about footage transfers, revision cycles, or software editors? Read below.</p>
+        </div>
+
+        <div class="svc-faq-wrapper video-reveal">
+            <!-- FAQ 1 -->
+            <div class="svc-faq-item video-faq-item active">
+                <button class="svc-faq-question video-faq-question">
+                    <span>How do I send my raw footage files?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer video-faq-answer">
+                    <p>You can upload raw files directly to shared folders on Google Drive, Dropbox, or Frame.io. We organize assets and download them directly to our editing workstations.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="svc-faq-item video-faq-item">
+                <button class="svc-faq-question video-faq-question">
+                    <span>What software editors do you use?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer video-faq-answer">
+                    <p>We edit using Adobe Premiere Pro, DaVinci Resolve Studio (for grading), and After Effects (for motion graphics transitions).</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="svc-faq-item video-faq-item">
+                <button class="svc-faq-question video-faq-question">
+                    <span>How many revision cycles are included?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer video-faq-answer">
+                    <p>Depending on your plan tier, we include between 2 and unlimited revision rounds. You specify edit adjustments using timestamps on video preview channels.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="svc-faq-item video-faq-item">
+                <button class="svc-faq-question video-faq-question">
+                    <span>Do you provide sound design and music?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer video-faq-answer">
+                    <p>Yes. All video packages include background noise cleaning, vocal level balancing, immersive sound effects (SFX), and licensing of copyright-free tracks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    FINAL CTA
+    ==========================================-->
+<section class="svc-cta">
+    <div class="svc-cta-bg">
+        <span class="svc-cta-blob"></span>
     </div>
 
-</section>
-<!--=========================================
-        WHY CHOOSE US
-==========================================-->
-
-<section class="video-why-section">
-
     <div class="container">
-
-        <div class="video-why-wrapper">
-
-            <!--==============================
-                    LEFT IMAGE
-            ==============================-->
-
-            <div class="video-why-image">
-
-                <img
-                    src="{% static 'images/services/video/why-cta.jpg' %}"
-                    alt="Video Editing Team">
-
-                <div class="video-why-badge badge-one">
-
-                    <i class="fa-solid fa-award"></i>
-
-                    <div>
-
-                        <h4>5+ Years</h4>
-
-                        <p>Industry Experience</p>
-
-                    </div>
-
-                </div>
-
-                <div class="video-why-badge badge-two">
-
-                    <i class="fa-solid fa-users"></i>
-
-                    <div>
-
-                        <h4>300+</h4>
-
-                        <p>Satisfied Clients</p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--==============================
-                    RIGHT CONTENT
-            ==============================-->
-
-            <div class="video-why-content">
-
-                <span class="video-section-tag">
-
-                    WHY CHOOSE US
-
-                </span>
-
-                <h2>
-
-                    We Don't Just Edit Videos,
-                    We Create Stories That Convert.
-
-                </h2>
-
-                <p>
-
-                    Our creative editors combine storytelling,
-                    cinematic editing, motion graphics and AI-powered
-                    workflows to create videos that increase engagement,
-                    build trust and generate more sales.
-
-                </p>
-
-                <div class="video-why-grid">
-
-                    <!-- Card -->
-
-                    <div class="video-why-card">
-
-                        <div class="video-why-icon">
-
-                            <i class="fa-solid fa-film"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-
-                                Cinematic Editing
-
-                            </h3>
-
-                            <p>
-
-                                Premium transitions, color grading
-                                and storytelling.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="video-why-card">
-
-                        <div class="video-why-icon">
-
-                            <i class="fa-solid fa-gauge-high"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-
-                                Fast Delivery
-
-                            </h3>
-
-                            <p>
-
-                                Quick turnaround without
-                                compromising quality.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="video-why-card">
-
-                        <div class="video-why-icon">
-
-                            <i class="fa-solid fa-layer-group"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-
-                                Unlimited Revisions
-
-                            </h3>
-
-                            <p>
-
-                                We keep improving until
-                                you're completely satisfied.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Card -->
-
-                    <div class="video-why-card">
-
-                        <div class="video-why-icon">
-
-                            <i class="fa-solid fa-shield-halved"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h3>
-
-                                100% Secure
-
-                            </h3>
-
-                            <p>
-
-                                Your project files remain
-                                confidential and protected.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <a href="{% url 'booking' %}" class="video-why-btn">
-
-                    Start Your Project
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-            OUR PROCESS
-==========================================-->
-
-<section class="video-process-section">
-
-    <div class="container">
-
-        <div class="video-process-heading">
-
-            <span>
-
-                OUR PROCESS
-
-            </span>
-
-            <h2>
-
-                Our Professional
-                Video Editing Workflow
-
-            </h2>
-
-            <p>
-
-                From receiving your raw footage to delivering
-                a polished masterpiece, we follow a streamlined
-                process that guarantees quality and fast delivery.
-
-            </p>
-
-        </div>
-
-        <div class="video-process-grid">
-
-            <!--=========================
-                    STEP 1
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    01
-
-                </div>
-
-                <div class="video-process-icon">
-
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-
-                </div>
-
-                <h3>
-
-                    Upload Footage
-
-                </h3>
-
-                <p>
-
-                    Share your raw videos, audio,
-                    branding assets and editing
-                    instructions securely.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 2
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    02
-
-                </div>
-
-                <div class="video-process-icon">
-
-                    <i class="fa-solid fa-comments"></i>
-
-                </div>
-
-                <h3>
-
-                    Project Discussion
-
-                </h3>
-
-                <p>
-
-                    We understand your goals,
-                    audience, editing style
-                    and delivery timeline.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 3
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    03
-
-                </div>
-
-                <div class="video-process-icon">
-
-                    <i class="fa-solid fa-scissors"></i>
-
-                </div>
-
-                <h3>
-
-                    Editing Begins
-
-                </h3>
-
-                <p>
-
-                    Professional editing,
-                    transitions, effects,
-                    subtitles and sound design.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 4
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    04
-
-                </div>
-
-                <div class="video-process-icon">
-
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
-
-                </div>
-
-                <h3>
-
-                    Review & Revisions
-
-                </h3>
-
-                <p>
-
-                    We collect your feedback
-                    and make revisions until
-                    you're completely satisfied.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 5
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    05
-
-                </div>
-
-                <div class="video-process-icon">
-
+        <div class="svc-cta-wrapper video-reveal">
+            <span class="svc-section-tag">Let's Work Together</span>
+            <h2>Ready to Produce High-Impact <span>Branded Content?</span></h2>
+            <p>Schedule a call with our creative directors to outline your social content pipeline or commercial ad campaign.</p>
+
+            <div class="svc-cta-features">
+                <div class="svc-cta-feature">
                     <i class="fa-solid fa-circle-check"></i>
-
+                    <span>Licensing Assets Included</span>
                 </div>
-
-                <h3>
-
-                    Quality Check
-
-                </h3>
-
-                <p>
-
-                    Every frame is reviewed
-                    for quality, audio,
-                    color and consistency.
-
-                </p>
-
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Frame.io Preview Rooms</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Cancel Plans Anytime</span>
+                </div>
             </div>
 
-            <!--=========================
-                    STEP 6
-            =========================-->
-
-            <div class="video-process-card">
-
-                <div class="video-process-number">
-
-                    06
-
-                </div>
-
-                <div class="video-process-icon">
-
-                    <i class="fa-solid fa-paper-plane"></i>
-
-                </div>
-
-                <h3>
-
-                    Final Delivery
-
-                </h3>
-
-                <p>
-
-                    Receive your final videos
-                    in high quality with all
-                    source files included.
-
-                </p>
-
+            <div class="svc-cta-buttons">
+                <a href="{% url 'booking' %}" class="svc-btn-primary">
+                    Book Consultation Call
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="svc-btn-secondary">
+                    Talk To Producer
+                </a>
             </div>
-
         </div>
-
     </div>
-
 </section>
 
-<!--=========================================
-        CLIENT TESTIMONIALS
-==========================================-->
-
-<section class="video-testimonial-section">
-
-    <div class="container">
-
-        <div class="video-testimonial-heading">
-
-            <span>
-
-                CLIENT REVIEWS
-
-            </span>
-
-            <h2>
-
-                Trusted By Businesses
-                Around The World
-
-            </h2>
-
-            <p>
-
-                Our clients love our creativity,
-                fast turnaround time and premium
-                quality video editing services.
-
-            </p>
-
-        </div>
-
-        <div class="video-testimonial-grid">
-
-            <!--========================-->
-
-            <div class="video-testimonial-card">
-
-                <div class="video-testimonial-quote">
-
-                    <i class="fa-solid fa-quote-left"></i>
-
-                </div>
-
-                <p>
-
-                    Magencyinfo completely transformed our
-                    YouTube content. The editing quality
-                    is outstanding and audience retention
-                    increased significantly.
-
-                </p>
-
-                <div class="video-testimonial-rating">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <div class="video-testimonial-client">
-
-                    <img src="{% static 'images/services/video/client1.jpg' %}" alt="">
-
-                    <div>
-
-                        <h4>
-
-                            John Smith
-
-                        </h4>
-
-                        <span>
-
-                            CEO • TechNova
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--========================-->
-
-            <div class="video-testimonial-card featured">
-
-                <div class="video-testimonial-quote">
-
-                    <i class="fa-solid fa-quote-left"></i>
-
-                </div>
-
-                <p>
-
-                    Their reels and advertisement videos
-                    generated millions of views.
-                    Professional communication and
-                    incredible creativity.
-
-                </p>
-
-                <div class="video-testimonial-rating">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <div class="video-testimonial-client">
-
-                    <img src="{% static 'images/services/video/client2.jpg' %}" alt="">
-
-                    <div>
-
-                        <h4>
-
-                            Sarah Johnson
-
-                        </h4>
-
-                        <span>
-
-                            Founder • FinFlow
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--========================-->
-
-            <div class="video-testimonial-card">
-
-                <div class="video-testimonial-quote">
-
-                    <i class="fa-solid fa-quote-left"></i>
-
-                </div>
-
-                <p>
-
-                    We hired Magencyinfo for corporate
-                    presentations and promotional videos.
-                    The results exceeded all expectations.
-
-                </p>
-
-                <div class="video-testimonial-rating">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <div class="video-testimonial-client">
-
-                    <img src="{% static 'images/services/video/client3.jpg' %}" alt="">
-
-                    <div>
-
-                        <h4>
-
-                            David Lee
-
-                        </h4>
-
-                        <span>
-
-                            Marketing Director
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        <!--=========================
-                COMPANY STATS
-        ==========================-->
-
-        <div class="video-review-stats">
-
-            <div class="video-review-box">
-
-                <h2>
-
-                    4.9★
-
-                </h2>
-
-                <p>
-
-                    Average Rating
-
-                </p>
-
-            </div>
-
-            <div class="video-review-box">
-
-                <h2>
-
-                    500+
-
-                </h2>
-
-                <p>
-
-                    Videos Delivered
-
-                </p>
-
-            </div>
-
-            <div class="video-review-box">
-
-                <h2>
-
-                    300+
-
-                </h2>
-
-                <p>
-
-                    Happy Clients
-
-                </p>
-
-            </div>
-
-            <div class="video-review-box">
-
-                <h2>
-
-                    98%
-
-                </h2>
-
-                <p>
-
-                    Client Satisfaction
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-                FAQ SECTION
-==========================================-->
-
-<section class="video-faq-section">
-
-    <div class="container">
-
-        <div class="video-faq-heading">
-
-            <span>
-
-                FREQUENTLY ASKED QUESTIONS
-
-            </span>
-
-            <h2>
-
-                Everything You Need To Know
-
-            </h2>
-
-            <p>
-
-                Have questions about our video editing services?
-                Here are the answers to the most common questions.
-
-            </p>
-
-        </div>
-
-        <div class="video-faq-wrapper">
-
-            <!-- FAQ -->
-
-            <div class="video-faq-item active">
-
-                <button class="video-faq-question">
-
-                    <span>
-
-                        What types of videos do you edit?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="video-faq-answer">
-
-                    <p>
-
-                        We edit YouTube videos, Instagram Reels,
-                        TikTok videos, advertisements, podcasts,
-                        documentaries, corporate videos,
-                        weddings and promotional content.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="video-faq-item">
-
-                <button class="video-faq-question">
-
-                    <span>
-
-                        How long does delivery take?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="video-faq-answer">
-
-                    <p>
-
-                        Delivery usually takes between
-                        24 hours and 5 business days
-                        depending on project complexity.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="video-faq-item">
-
-                <button class="video-faq-question">
-
-                    <span>
-
-                        Do you provide unlimited revisions?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="video-faq-answer">
-
-                    <p>
-
-                        Yes.
-                        We provide revisions until
-                        you're completely satisfied
-                        with the final result.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="video-faq-item">
-
-                <button class="video-faq-question">
-
-                    <span>
-
-                        Which file formats do you deliver?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="video-faq-answer">
-
-                    <p>
-
-                        We deliver MP4, MOV, AVI,
-                        ProRes, social media formats
-                        and project files whenever required.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-            CALL TO ACTION
-==========================================-->
-
-<section class="video-cta-section">
-
-    <div class="container">
-
-        <div class="video-cta-wrapper">
-
-            <div class="video-cta-content">
-
-                <span>
-
-                    READY TO START?
-
-                </span>
-
-                <h2>
-
-                    Let's Turn Your Footage Into
-                    Stunning Videos
-
-                </h2>
-
-                <p>
-
-                    Whether you're a creator,
-                    startup or enterprise,
-                    we'll help you produce
-                    professional videos that
-                    engage your audience and
-                    grow your business.
-
-                </p>
-
-                <div class="video-cta-buttons">
-
-                    <a href="{% url 'booking' %}" class="video-btn-primary">
-
-                        Book Free Consultation
-
-                    </a>
-
-                    <a href="{% url 'contact' %}" class="video-btn-outline">
-
-                        Contact Us
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div class="video-cta-image">
-
-                <img
-                    src="{% static 'images/services/mt/support.jpg' %}"
-                    alt="Video Editing">
-
-                <div class="video-cta-floating">
-
-                    <i class="fa-solid fa-circle-play"></i>
-
-                    <div>
-
-                        <h4>
-
-                            500+
-
-                        </h4>
-
-                        <p>
-
-                            Successful Projects
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 {% endblock %}

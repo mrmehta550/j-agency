@@ -1,2005 +1,377 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Data-Driven Digital Marketing Services | Magencyinfo{% endblock %}
+
+{% block meta_description %}Maximize your organic reach, launch targeted paid ads, run social campaigns, and track conversions with Magencyinfo's digital marketing services.{% endblock %}
+
 {% block content %}
 
 <!--=========================================
-DIGITAL MARKETING HERO
-==========================================-->
-
-<section class="digital-hero-section">
+    DIGITAL MARKETING HERO
+    ==========================================-->
+<section class="svc-hero dm-service-hero">
+    <div class="svc-hero-bg">
+        <span class="svc-hero-blob svc-hero-blob-1"></span>
+        <span class="svc-hero-blob svc-hero-blob-2"></span>
+    </div>
 
     <div class="container">
-
-        <div class="digital-hero-wrapper">
-
-            <!--=================================
-            LEFT CONTENT
-            =================================-->
-
-            <div class="digital-hero-content">
-
-                <span class="digital-hero-tag">
-
-                    DIGITAL MARKETING AGENCY
-
+        <div class="svc-hero-wrapper">
+            <!-- Left Side Content -->
+            <div class="svc-hero-content dm-reveal dm-revealed">
+                <span class="svc-hero-badge">
+                    <i class="fa-solid fa-bullseye"></i>
+                    Performance-Driven Agency
                 </span>
 
                 <h1>
-
-                    Data-Driven Marketing
-                    Strategies That Drive
-                    <span>Real Business Growth</span>
-
+                    Grow Traffic & Convert
+                    <span>More Customers</span>
                 </h1>
 
                 <p>
-
-                    We help startups, SMEs and enterprise businesses
-                    increase traffic, generate qualified leads,
-                    improve conversions and maximize ROI through
-                    performance-driven digital marketing.
-
+                    We help startups, brands, and enterprises acquire qualified customers, increase traffic, optimize lead conversion, and maximize marketing ROI through data-driven campaigns.
                 </p>
 
-                <!-- Buttons -->
+                <!-- Core Features -->
+                <div class="svc-hero-features">
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Search Engine Marketing (SEM)</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Paid Social Ad Management</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Content Strategy & Copywriting</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Detailed Analytics & Reporting</span>
+                    </div>
+                </div>
 
-                <div class="digital-hero-buttons">
-
-                    <a href="{% url 'contact' %}" class="digital-hero-btn">
-
+                <!-- CTA Buttons -->
+                <div class="svc-hero-buttons">
+                    <a href="{% url 'contact' %}" class="svc-btn-primary">
                         Get Free Proposal
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
-
-                    <a href="#" class="digital-hero-outline">
-
-                        View Case Studies
-
+                    <a href="#services" class="svc-btn-secondary">
+                        View Marketing Services
                     </a>
-
                 </div>
-
-                <!-- Statistics -->
-
-                <div class="digital-hero-stats">
-
-                    <div class="digital-stat-box">
-
-                        <h3>
-
-                            250+
-
-                        </h3>
-
-                        <span>
-
-                            Happy Clients
-
-                        </span>
-
-                    </div>
-
-                    <div class="digital-stat-box">
-
-                        <h3>
-
-                            700+
-
-                        </h3>
-
-                        <span>
-
-                            Marketing Campaigns
-
-                        </span>
-
-                    </div>
-
-                    <div class="digital-stat-box">
-
-                        <h3>
-
-                            8+
-
-                        </h3>
-
-                        <span>
-
-                            Years Experience
-
-                        </span>
-
-                    </div>
-
-                    <div class="digital-stat-box">
-
-                        <h3>
-
-                            96%
-
-                        </h3>
-
-                        <span>
-
-                            Client Retention
-
-                        </span>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <!--=================================
-            RIGHT SIDE
-            =================================-->
+            <!-- Right Side Image Box with Floating Cards -->
+            <div class="svc-hero-visual dm-reveal dm-revealed">
+                <div class="svc-hero-image-box">
+                    <img src="{% static 'images/services/dm/hero-dashboard.jpg' %}" alt="Marketing Dashboard analytics mockup" class="svc-hero-image">
 
-            <div class="digital-hero-visual">
+                    <!-- Floating Badge Card 1 -->
+                    <div class="svc-floating-card svc-float-1">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-square-poll-vertical"></i>
+                        </div>
+                        <div>
+                            <h5>Paid Ads</h5>
+                            <p>Targeted PPC Campaigns</p>
+                        </div>
+                    </div>
 
-                <!-- Main Dashboard -->
+                    <!-- Floating Badge Card 2 -->
+                    <div class="svc-floating-card svc-float-2">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div>
+                            <h5>Social Growth</h5>
+                            <p>Brand Awareness</p>
+                        </div>
+                    </div>
 
-                <img src="{% static 'images/services/dm/hero-dashboard.jpg' %}"
-
-                alt="Marketing Dashboard"
-
-                class="digital-dashboard-image">
-
-                <!-- Floating Card -->
-
-                
-
-                <!-- Floating Card -->
-
-               
-
-                <!-- Floating Card -->
-
-                
-
-                <!-- Floating Card -->
-
-                
-
-                <!-- Social /*width:100%;*/s -->
-
-                <div class="digital-social digital-social-facebook">
-
-                    <i class="fa-brands fa-facebook-f" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
+                    <!-- Floating Badge Card 3 -->
+                    <div class="svc-floating-card svc-float-3">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
+                        <div>
+                            <h5>Funnel Optim</h5>
+                            <p>Convert Traffic</p>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="digital-social digital-social-instagram">
-
-                    <i class="fa-brands fa-instagram" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-                </div>
-
-                <div class="digital-social digital-social-linkedin">
-
-                    <i class="fa-brands fa-linkedin-in" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-                </div>
-
-                <div class="digital-social digital-social-youtube">
-
-                    <i class="fa-brands fa-youtube" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-                </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-DIGITAL MARKETING SERVICES
-==========================================-->
-
-<section class="digital-service-section">
-
+    TRUST STATS STRIP
+    ==========================================-->
+<section class="svc-stats-strip">
     <div class="container">
+        <div class="svc-stats-wrapper">
+            <div class="svc-stat-item">
+                <h3 class="dm-counter" data-target="250" data-suffix="+">0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="dm-counter" data-target="700" data-suffix="+">0+</h3>
+                <p>Campaigns Managed</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="dm-counter" data-target="8" data-suffix="+">0+</h3>
+                <p>Years Experience</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="dm-counter" data-target="96" data-suffix="%">0%</h3>
+                <p>Client Retention Rate</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!--=========================
-        SECTION HEADER
-        =========================-->
-
-        <div class="digital-service-header">
-
-            <span class="digital-service-tag">
-
-                OUR DIGITAL MARKETING SERVICES
-
-            </span>
-
-            <h2>
-
-                Complete Digital Marketing
-                Solutions For Every Business
-
-            </h2>
-
-            <p>
-
-                From SEO to paid advertising, social media,
-                content marketing and analytics, we help your
-                business attract more customers and grow online.
-
-            </p>
-
+<!--=========================================
+    WHAT WE DO (SERVICES)
+    ==========================================-->
+<section class="svc-section" id="services">
+    <div class="container">
+        <div class="svc-heading dm-reveal">
+            <span class="svc-section-tag">Our Capabilities</span>
+            <h2>Performance Marketing <span>Solutions</span></h2>
+            <p>We combine conversion-centered copy with audience analytics to execute campaigns that deliver revenue growth.</p>
         </div>
 
-        <!--=========================
-        SERVICES GRID
-        =========================-->
-
-        <div class="digital-service-grid">
-
+        <div class="svc-grid-3 dm-reveal">
             <!-- Card 1 -->
-
-            <div class="digital-service-card">
-
-                <div class="digital-service-icon">
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
-
                 </div>
-
-                <h3>
-
-                    Search Engine Optimization
-
-                </h3>
-
-                <p>
-
-                    Improve search rankings, increase organic
-                    traffic and generate long-term business growth.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Keyword Research</li>
-
-                    <li>Technical SEO</li>
-
-                    <li>On-Page SEO</li>
-
+                <h3>PPC Ad Management</h3>
+                <p>Managing Google Ads and Bing Campaigns targeting high-intent keywords to drive conversions and minimize spend.</p>
+                <ul>
+                    <li>A/B Testing Setup</li>
+                    <li>Negative Keyword Management</li>
+                    <li>Target ROAS Optimization</li>
                 </ul>
-
-                
-
             </div>
 
             <!-- Card 2 -->
-
-            <div class="digital-service-card">
-
-                <div class="digital-service-icon">
-
-                    <i class="fa-brands fa-facebook"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-share-nodes"></i>
                 </div>
-
-                <h3>
-
-                    Social Media Marketing
-
-                </h3>
-
-                <p>
-
-                    Build brand awareness and engage your
-                    audience across social media platforms.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Facebook Marketing</li>
-
-                    <li>Instagram Growth</li>
-
-                    <li>LinkedIn Strategy</li>
-
+                <h3>Paid Social Campaigns</h3>
+                <p>Developing Facebook, Instagram, and LinkedIn ads utilizing demographics and retargeting filters to acquire leads.</p>
+                <ul>
+                    <li>Audience Retargeting maps</li>
+                    <li>Creative Copywriting</li>
+                    <li>Conversion Tracking pixels</li>
                 </ul>
-
-                
-
             </div>
 
             <!-- Card 3 -->
-
-            <div class="digital-service-card ">
-
-                <div class="digital-service-icon">
-
-                    <i class="fa-brands fa-google"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-file-signature"></i>
                 </div>
-
-                <h3>
-
-                    Google Ads (PPC)
-
-                </h3>
-
-                <p>
-
-                    Launch high-converting advertising campaigns
-                    with measurable ROI and qualified leads.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Search Ads</li>
-
-                    <li>Display Ads</li>
-
-                    <li>Shopping Ads</li>
-
+                <h3>Content Marketing</h3>
+                <p>Creating professional SEO articles, guidebooks, and copywriting assets that educate users and boost rankings.</p>
+                <ul>
+                    <li>Lead Magnets Setup</li>
+                    <li>Blog Management Schedules</li>
+                    <li>Press Release Outreach</li>
                 </ul>
-
-                
-
             </div>
 
             <!-- Card 4 -->
-
-            <div class="digital-service-card">
-
-                <div class="digital-service-icon">
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
                     <i class="fa-solid fa-envelope-open-text"></i>
-
                 </div>
-
-                <h3>
-
-                    Email Marketing
-
-                </h3>
-
-                <p>
-
-                    Increase customer retention and boost
-                    sales through personalized campaigns.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Automation</li>
-
-                    <li>Newsletter</li>
-
-                    <li>Lead Nurturing</li>
-
+                <h3>Email Marketing</h3>
+                <p>Designing custom email campaigns and cart-abandonment drip flows to nurture prospects and convert leads.</p>
+                <ul>
+                    <li>Drip Campaigns setup</li>
+                    <li>A/B Subject Testing</li>
+                    <li>List Segmentation splits</li>
                 </ul>
-
-                
-
             </div>
 
             <!-- Card 5 -->
-
-            <div class="digital-service-card">
-
-                <div class="digital-service-icon">
-
-                    <i class="fa-solid fa-pen-nib"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-bullhorn"></i>
                 </div>
-
-                <h3>
-
-                    Content Marketing
-
-                </h3>
-
-                <p>
-
-                    Create high-quality content that educates,
-                    engages and converts your audience.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Blog Writing</li>
-
-                    <li>Copywriting</li>
-
-                    <li>Content Strategy</li>
-
+                <h3>Social Media Management</h3>
+                <p>Organizing content calendars, managing brand feeds, and engaging with audiences to increase brand loyalty.</p>
+                <ul>
+                    <li>Visual Feed Templates</li>
+                    <li>Comment Response guides</li>
+                    <li>Hashtag Trend mapping</li>
                 </ul>
-
-                
-
             </div>
 
             <!-- Card 6 -->
-
-            <div class="digital-service-card">
-
-                <div class="digital-service-icon">
-
-                    <i class="fa-solid fa-chart-pie"></i>
-
-                </div>
-
-                <h3>
-
-                    Analytics & Reporting
-
-                </h3>
-
-                <p>
-
-                    Measure campaign performance with detailed
-                    dashboards and actionable insights.
-
-                </p>
-
-                <ul class="digital-service-list">
-
-                    <li>Google Analytics</li>
-
-                    <li>Conversion Tracking</li>
-
-                    <li>Performance Reports</li>
-
-                </ul>
-
-                
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-WHY CHOOSE US
-==========================================-->
-
-<section class="digital-why-section">
-
-    <div class="container">
-
-        <!--=========================
-        SECTION HEADER
-        =========================-->
-
-        <div class="digital-why-header">
-
-            <span class="digital-why-tag">
-
-                WHY CHOOSE US
-
-            </span>
-
-            <h2>
-
-                Your Trusted Partner For
-                Digital Marketing Success
-
-            </h2>
-
-            <p>
-
-                We combine creativity, technology, and data-driven
-                strategies to help your business achieve sustainable
-                online growth and maximize return on investment.
-
-            </p>
-
-        </div>
-
-        <div class="digital-why-wrapper">
-
-            <!--=========================
-            LEFT CONTENT
-            =========================-->
-
-            <div class="digital-why-content">
-
-                <div class="digital-why-card">
-
-                    <div class="digital-why-icon">
-
-                        <i class="fa-solid fa-chart-line"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-
-                            Proven ROI
-
-                        </h3>
-
-                        <p>
-
-                            Every campaign is focused on measurable
-                            growth, qualified leads, and higher
-                            conversion rates.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="digital-why-card" style="margin-top:3%;">
-
-                    <div class="digital-why-icon">
-
-                        <i class="fa-solid fa-bullseye"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-
-                            Targeted Campaigns
-
-                        </h3>
-
-                        <p>
-
-                            Reach the right audience at the right
-                            time through advanced audience targeting.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <div class="digital-why-card" style="margin-top:3%;">
-
-                    <div class="digital-why-icon">
-
-                        <i class="fa-solid fa-users"></i>
-
-                    </div>
-
-                    <div>
-
-                        <h3>
-
-                            Dedicated Experts
-
-                        </h3>
-
-                        <p>
-
-                            Our experienced marketers optimize every
-                            campaign for maximum performance.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--=========================
-            RIGHT SIDE
-            =========================-->
-
-            <div class="digital-why-visual">
-
-                <img src="{% static 'images/services/dm/marketing-growth.jpg' %}"
-
-                alt="Marketing Growth">
-            </div>
-
-        </div>
-
-        <!--=========================
-        BOTTOM STATS
-        =========================-->
-
-        <div class="digital-why-stats">
-
-            <div class="digital-why-stat">
-
-                <h3>
-
-                    500+
-
-                </h3>
-
-                <span>
-
-                    Successful Campaigns
-
-                </span>
-
-            </div>
-
-            <div class="digital-why-stat">
-
-                <h3>
-
-                    98%
-
-                </h3>
-
-                <span>
-
-                    Client Satisfaction
-
-                </span>
-
-            </div>
-
-            <div class="digital-why-stat">
-
-                <h3>
-
-                    120+
-
-                </h3>
-
-                <span>
-
-                    Marketing Experts
-
-                </span>
-
-            </div>
-
-            <div class="digital-why-stat">
-
-                <h3>
-
-                    35+
-
-                </h3>
-
-                <span>
-
-                    Countries Served
-
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-DIGITAL MARKETING PROCESS
-==========================================-->
-
-<section class="digital-process-section">
-
-    <div class="container">
-
-        <!--=========================
-        SECTION HEADER
-        =========================-->
-
-        <div class="digital-process-header">
-
-            <span class="digital-process-tag">
-
-                OUR PROCESS
-
-            </span>
-
-            <h2>
-
-                Our Proven Digital
-                Marketing Process
-
-            </h2>
-
-            <p>
-
-                We follow a strategic and transparent
-                marketing framework that helps businesses
-                achieve sustainable growth.
-
-            </p>
-
-        </div>
-
-        <!--=========================
-        PROCESS GRID
-        =========================-->
-
-        <div class="digital-process-grid">
-
-            <!-- Step 1 -->
-
-            <div class="digital-process-card">
-
-                <div class="digital-process-number">
-
-                    01
-
-                </div>
-
-                <div class="digital-process-icon">
-
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-
-                </div>
-
-                <h3>
-
-                    Research &
-                    Discovery
-
-                </h3>
-
-                <p>
-
-                    We analyze your business,
-                    competitors, audience and
-                    current marketing performance.
-
-                </p>
-
-            </div>
-
-            <!-- Step 2 -->
-
-            <div class="digital-process-card">
-
-                <div class="digital-process-number">
-
-                    02
-
-                </div>
-
-                <div class="digital-process-icon">
-
-                    <i class="fa-solid fa-lightbulb"></i>
-
-                </div>
-
-                <h3>
-
-                    Strategy
-                    Planning
-
-                </h3>
-
-                <p>
-
-                    We build a custom marketing
-                    strategy focused on ROI,
-                    growth and conversions.
-
-                </p>
-
-            </div>
-
-            <!-- Step 3 -->
-
-            <div class="digital-process-card ">
-
-                <div class="digital-process-number">
-
-                    03
-
-                </div>
-
-                <div class="digital-process-icon">
-
-                    <i class="fa-solid fa-rocket"></i>
-
-                </div>
-
-                <h3>
-
-                    Campaign
-                    Execution
-
-                </h3>
-
-                <p>
-
-                    Our experts launch and
-                    optimize campaigns across
-                    multiple digital channels.
-
-                </p>
-
-            </div>
-
-            <!-- Step 4 -->
-
-            <div class="digital-process-card">
-
-                <div class="digital-process-number">
-
-                    04
-
-                </div>
-
-                <div class="digital-process-icon">
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
                     <i class="fa-solid fa-chart-line"></i>
-
                 </div>
-
-                <h3>
-
-                    Analyze &
-                    Scale
-
-                </h3>
-
-                <p>
-
-                    We continuously optimize
-                    campaigns using real-time
-                    analytics and reporting.
-
-                </p>
-
-            </div>
-
-        </div>
-
-        <!--=========================
-        BOTTOM CTA
-        =========================-->
-
-        <div class="digital-process-footer">
-
-            <a href="{% url 'contact' %}" class="digital-process-btn">
-
-                Start Your Marketing Journey
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-DIGITAL CASE STUDIES
-==========================================-->
-
-<section class="digital-case-section">
-
-    <div class="container">
-
-        <!--=========================
-        HEADER
-        =========================-->
-
-        <div class="digital-case-header">
-
-            <span class="digital-case-tag">
-
-                SUCCESS STORIES
-
-            </span>
-
-            <h2>
-
-                Real Results
-                For Real Businesses
-
-            </h2>
-
-            <p>
-
-                Every campaign we create is backed by
-                data, creativity and continuous optimization
-                to deliver measurable business growth.
-
-            </p>
-
-        </div>
-
-        <!--=========================
-        CASE STUDIES
-        =========================-->
-
-        <div class="digital-case-grid">
-
-            <!--====================
-            CASE 1
-            ====================-->
-
-            <div class="digital-case-card">
-
-                <div class="digital-case-image">
-
-                    <img src="{% static 'images/services/dm/case1.jpg' %}"
-
-                    alt="SEO Campaign">
-
-                    <span class="digital-case-category">
-
-                        SEO
-
-                    </span>
-
-                </div>
-
-                <div class="digital-case-content">
-
-                    <h3>
-
-                        eCommerce Growth Strategy
-
-                    </h3>
-
-                    <p>
-
-                        Increased organic visibility
-                        and online sales through
-                        technical SEO and content marketing.
-
-                    </p>
-
-                    <div class="digital-case-stats">
-
-                        <div>
-
-                            <h4>
-
-                                +320%
-
-                            </h4>
-
-                            <span>
-
-                                Organic Traffic
-
-                            </span>
-
-                        </div>
-
-                        <div style="margin-top:3%;">
-
-                            <h4>
-
-                                +185%
-
-                            </h4>
-
-                            <span>
-
-                                Revenue
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--====================
-            CASE 2
-            ====================-->
-
-            <div class="digital-case-card digital-case-featured">
-
-                <div class="digital-case-image">
-
-                    <img src="{% static 'images/services/dm/case2.jpg' %}"
-
-                    alt="Google Ads">
-
-                    <span class="digital-case-category">
-
-                        PPC
-
-                    </span>
-
-                </div>
-
-                <div class="digital-case-content">
-
-                    <h3>
-
-                        Google Ads Campaign
-
-                    </h3>
-
-                    <p>
-
-                        Optimized Google Ads campaign
-                        delivering higher conversions
-                        with a significantly lower cost per lead.
-
-                    </p>
-
-                    <div class="digital-case-stats">
-
-                        <div>
-
-                            <h4>
-
-                                8.4X
-
-                            </h4>
-
-                            <span>
-
-                                ROI
-
-                            </span>
-
-                        </div>
-
-                        <div style="margin-top:3%;">
-
-                            <h4>
-
-                                -42%
-
-                            </h4>
-
-                            <span>
-
-                                Cost Per Lead
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--====================
-            CASE 3
-            ====================-->
-
-            <div class="digital-case-card">
-
-                <div class="digital-case-image">
-
-                    <img src="{% static 'images/services/dm/case3.jpg' %}"
-
-                    alt="Social Media">
-
-                    <span class="digital-case-category">
-
-                        SOCIAL MEDIA
-
-                    </span>
-
-                </div>
-
-                <div class="digital-case-content">
-
-                    <h3>
-
-                        Brand Awareness Campaign
-
-                    </h3>
-
-                    <p>
-
-                        Built a multi-platform
-                        social media campaign
-                        generating thousands of
-                        qualified leads.
-
-                    </p>
-
-                    <div class="digital-case-stats">
-
-                        <div>
-
-                            <h4>
-
-                                +540%
-
-                            </h4>
-
-                            <span>
-
-                                Engagement
-
-                            </span>
-
-                        </div>
-
-                        <div style="margin-top:3%;">
-
-                            <h4>
-
-                                12K+
-
-                            </h4>
-
-                            <span>
-
-                                Leads
-
-                            </span>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-DIGITAL MARKETING PRICING
-==========================================-->
-
-<section class="digital-pricing-section">
-
-    <div class="container">
-
-        <!--=========================
-        HEADER
-        =========================-->
-
-        <div class="digital-pricing-header">
-
-            <span class="digital-pricing-tag">
-
-                PRICING PLANS
-
-            </span>
-
-            <h2>
-
-                Flexible Pricing For
-                Every Business Size
-
-            </h2>
-
-            <p>
-
-                Whether you're a startup or an enterprise,
-                choose a marketing package that fits your
-                business goals and budget.
-
-            </p>
-
-        </div>
-
-        <!--=========================
-        PRICING GRID
-        =========================-->
-
-        <div class="digital-pricing-grid">
-
-            <!--=====================
-            STARTER
-            ======================-->
-
-            <div class="digital-pricing-card">
-
-                <span class="digital-pricing-plan">
-
-                    Starter
-
-                </span>
-
-                <h3>
-
-                    ₹14,999
-
-                </h3>
-
-                <p class="digital-pricing-duration">
-
-                    / Month
-
-                </p>
-
-                <p class="digital-pricing-description">
-
-                    Perfect for startups and
-                    small businesses.
-
-                </p>
-
-                <ul class="digital-pricing-list">
-
-                    <li>SEO Optimization</li>
-
-                    <li>Google Business Profile</li>
-
-                    <li>Social Media Management</li>
-
-                    <li>Monthly Report</li>
-
-                    <li>Email Support</li>
-
+                <h3>Conversion Rate Audits</h3>
+                <p>Analyzing bounce rates, diagnosing layout bottlenecks, and rebuilding sitemaps to optimize conversion flows.</p>
+                <ul>
+                    <li>Heatmap Testing Reports</li>
+                    <li>Form Design audits</li>
+                    <li>Checkout Friction Audits</li>
                 </ul>
-
-                <a href="{% url 'contact' %}" class="digital-pricing-btn">
-
-                    Get Started
-
-                </a>
-
             </div>
+        </div>
+    </div>
+</section>
 
-            <!--=====================
-            GROWTH
-            ======================-->
-
-            <div class="digital-pricing-card">
-
-                <div class="digital-pricing-badge">
-
-                    MOST POPULAR
-
-                </div>
-
-                <span class="digital-pricing-plan">
-
-                    Growth
-
-                </span>
-
-                <h3>
-
-                    ₹29,999
-
-                </h3>
-
-                <p class="digital-pricing-duration">
-
-                    / Month
-
-                </p>
-
-                <p class="digital-pricing-description">
-
-                    Ideal for growing businesses
-                    looking to scale faster.
-
-                </p>
-
-                <ul class="digital-pricing-list">
-
-                    <li>Complete SEO</li>
-
-                    <li>Google Ads Management</li>
-
-                    <li>Facebook & Instagram Ads</li>
-
-                    <li>Content Marketing</li>
-
-                    <li>Email Marketing</li>
-
-                    <li>Conversion Tracking</li>
-
-                    <li>Priority Support</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}" class="digital-pricing-btn">
-
-                    Choose Plan
-
-                </a>
-
-            </div>
-
-            <!--=====================
-            ENTERPRISE
-            ======================-->
-
-            <div class="digital-pricing-card">
-
-                <span class="digital-pricing-plan">
-
-                    Enterprise
-
-                </span>
-
-                <h3>
-
-                    Custom
-
-                </h3>
-
-                <p class="digital-pricing-duration">
-
-                    Pricing
-
-                </p>
-
-                <p class="digital-pricing-description">
-
-                    Fully customized digital
-                    marketing solutions.
-
-                </p>
-
-                <ul class="digital-pricing-list">
-
-                    <li>Dedicated Marketing Team</li>
-
-                    <li>Multi-channel Campaigns</li>
-
-                    <li>Marketing Automation</li>
-
-                    <li>Advanced Analytics</li>
-
-                    <li>Custom Dashboard</li>
-
-                    <li>Weekly Strategy Calls</li>
-
-                    <li>24/7 Priority Support</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}" class="digital-pricing-btn">
-
-                    Contact Sales
-
-                </a>
-
-            </div>
-
+<!--=========================================
+    WHY CHOOSE M AGENCY
+    ==========================================-->
+<section class="svc-section svc-section--alt">
+    <div class="container">
+        <div class="svc-heading dm-reveal">
+            <span class="svc-section-tag">Why M Agency</span>
+            <h2>Strategic Execution <span>Focused on ROI</span></h2>
+            <p>We avoid generic vanity metrics and focus on tracking total leads, acquisition costs, and customer value.</p>
         </div>
 
+        <div class="svc-grid-3 dm-reveal">
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+                <h3>Vanity Metrics Ignored</h3>
+                <p>We focus on sales volumes and customer acquisition costs rather than simple social followers or impressions.</p>
+            </div>
+
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+                <h3>Strict A/B Testing</h3>
+                <p>We test copy, banners, target groups, and funnel cards iteratively to locate optimal conversion ratios.</p>
+            </div>
+
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+                <h3>Transparent Reporting</h3>
+                <p>Receive weekly charts detailing spend rates, traffic acquisitions, conversion totals, and ROAS performance.</p>
+            </div>
+        </div>
     </div>
-
 </section>
-<!--=========================================
-DIGITAL TESTIMONIALS
-==========================================-->
 
-<section class="digital-testimonial-section">
+<!--=========================================
+    FAQ
+    ==========================================-->
+<section class="svc-section">
+    <div class="container">
+        <div class="svc-heading dm-reveal">
+            <span class="svc-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Find answers to common questions about our PPC campaigns and performance metrics.</p>
+        </div>
+
+        <div class="svc-faq-wrapper dm-reveal">
+            <!-- FAQ 1 -->
+            <div class="svc-faq-item dm-faq-item active">
+                <button class="svc-faq-question dm-faq-question">
+                    <span>What is PPC ad management?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer dm-faq-answer">
+                    <p>Pay-Per-Click (PPC) ad management involves designing, launch monitoring, and optimizing advertising budgets on Google and social media to target queries and maximize ROI.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="svc-faq-item dm-faq-item">
+                <button class="svc-faq-question dm-faq-question">
+                    <span>Do you provide creative ad designs?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer dm-faq-answer">
+                    <p>Yes. Our designers create high-performing advertising graphics, banners, and copywriting copy, following modern brand guidelines.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="svc-faq-item dm-faq-item">
+                <button class="svc-faq-question dm-faq-question">
+                    <span>How do you track campaign conversions?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer dm-faq-answer">
+                    <p>We integrate Google Tag Manager, Google Analytics 4, Meta conversion pixels, and server-side tracking APIs to trace leads directly to their traffic source.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="svc-faq-item dm-faq-item">
+                <button class="svc-faq-question dm-faq-question">
+                    <span>What is a typical advertising budget?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer dm-faq-answer">
+                    <p>Budgets depend on industry competition and targeting goals. We optimize campaign structure to capture conversions matching your acquisition targets.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    FINAL CTA
+    ==========================================-->
+<section class="svc-cta">
+    <div class="svc-cta-bg">
+        <span class="svc-cta-blob"></span>
+    </div>
 
     <div class="container">
+        <div class="svc-cta-wrapper dm-reveal">
+            <span class="svc-section-tag">Let's Work Together</span>
+            <h2>Ready to Maximize Your <span>Marketing ROI?</span></h2>
+            <p>Schedule a marketing strategy call with our planners to review your current funnel efficiency.</p>
 
-        <!--=========================
-        HEADER
-        =========================-->
+            <div class="svc-cta-features">
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Free Funnel Audits</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Tag Manager Setups</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Conversion Pixel Tuning</span>
+                </div>
+            </div>
 
-        <div class="digital-testimonial-header">
-
-            <span class="digital-testimonial-tag">
-
-                CLIENT TESTIMONIALS
-
-            </span>
-
-            <h2>
-
-                Businesses Trust Us
-                To Deliver Results
-
-            </h2>
-
-            <p>
-
-                We build long-term partnerships by delivering
-                measurable marketing results that help businesses
-                grow faster.
-
-            </p>
-
+            <div class="svc-cta-buttons">
+                <a href="{% url 'contact' %}" class="svc-btn-primary">
+                    Get Free Proposal
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="svc-btn-secondary">
+                    Talk To Marketer
+                </a>
+            </div>
         </div>
-
-        <!--=========================
-        TESTIMONIAL GRID
-        =========================-->
-
-        <div class="digital-testimonial-grid">
-
-            <!-- Card 1 -->
-
-            <div class="digital-testimonial-card">
-
-                <div class="digital-testimonial-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Magencyinfo transformed our online presence.
-                    Within just four months our organic traffic
-                    increased by over 300% and our monthly leads
-                    doubled.
-
-                </p>
-
-                <div class="digital-testimonial-client">
-
-                    <img src="{% static 'images/services/dm/client1.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            Sophia Brown
-
-                        </h4>
-
-                        <span>
-
-                            CEO, BrightTech
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Featured -->
-
-            <div class="digital-testimonial-card">
-
-                <div class="digital-testimonial-quote">
-
-                    <i class="fa-solid fa-quote-right"></i>
-
-                </div>
-
-                <div class="digital-testimonial-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Their Google Ads strategy generated an
-                    incredible ROI. Every campaign was optimized
-                    and every report was transparent.
-
-                </p>
-
-                <div class="digital-testimonial-client">
-
-                    <img src="{% static 'images/services/dm/client2.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            
-                            James Wilson
-
-                        </h4>
-
-                        <span>
-
-                            Founder, StartupX
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card -->
-
-            <div class="digital-testimonial-card">
-
-                <div class="digital-testimonial-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Our social media engagement increased by
-                    more than 500%. Their creative team truly
-                    understands branding and audience growth.
-
-                </p>
-
-                <div class="digital-testimonial-client">
-
-                    <img src="{% static 'images/services/dm/client3.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>
-
-                            David Lee
-
-                        </h4>
-
-                        <span>
-
-                            Marketing Director
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </div>
-
 </section>
-<!--=========================================
-DIGITAL FAQ
-==========================================-->
 
-<section class="digital-faq-section">
-
-    <div class="container">
-
-        <!--=========================
-        HEADER
-        =========================-->
-
-        <div class="digital-faq-header">
-
-            <span class="digital-faq-tag">
-
-                FREQUENTLY ASKED QUESTIONS
-
-            </span>
-
-            <h2>
-
-                Everything You Need
-                To Know About
-                Digital Marketing
-
-            </h2>
-
-            <p>
-
-                Find answers to the most common questions about
-                our digital marketing services, pricing,
-                campaign management and results.
-
-            </p>
-
-        </div>
-
-        <!--=========================
-        FAQ LIST
-        =========================-->
-
-        <div class="digital-faq-wrapper">
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How long does digital marketing take to show results?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        SEO generally takes 3–6 months for significant
-                        improvements, while PPC and Social Media Ads
-                        can start generating leads within a few days.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Which platforms do you manage?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        We manage Google Ads, Facebook,
-                        Instagram, LinkedIn, YouTube,
-                        Pinterest, TikTok and X campaigns.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Do you provide monthly reports?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Every month you'll receive detailed
-                        reports including traffic, conversions,
-                        ROI and campaign performance.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Can you manage both SEO and PPC together?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Absolutely. Combining SEO and PPC
-                        delivers both short-term and long-term
-                        business growth.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Will I have a dedicated marketing manager?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Every client gets a dedicated account
-                        manager for communication, reporting and
-                        campaign optimization.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How do I get started?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Simply contact us for a free consultation.
-                        We'll analyze your business and recommend
-                        the best marketing strategy.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-DIGITAL CTA
-==========================================-->
-
-<section class="digital-cta-section">
-
-    <div class="container">
-
-        <div class="digital-cta-wrapper">
-
-            <!-- Floating /*width:100%;*/s -->
-
-            <div class="digital-cta-shape digital-cta-shape-one">
-
-                <i class="fa-brands fa-google" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-            </div>
-
-            <div class="digital-cta-shape digital-cta-shape-two">
-
-                <i class="fa-brands fa-facebook-f" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-            </div>
-
-            <div class="digital-cta-shape digital-cta-shape-three">
-
-                <i class="fa-solid fa-chart-line" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-            </div>
-
-            <div class="digital-cta-shape digital-cta-shape-four">
-
-                <i class="fa-solid fa-bullseye" style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:20px 25px;"></i>
-
-            </div>
-
-            <!-- Content -->
-
-            <div class="digital-cta-content">
-
-                <span class="digital-cta-tag">
-
-                    READY TO GROW?
-
-                </span>
-
-                <h2>
-
-                    Let's Build Your
-                    Next High-Performing
-                    Marketing Campaign
-
-                </h2>
-
-                <p>
-
-                    Whether you need SEO, Google Ads,
-                    Social Media Marketing or a complete
-                    digital growth strategy, our experts
-                    are ready to help.
-
-                </p>
-
-                <div class="digital-cta-buttons">
-
-                    <a href="{% url 'contact' %}"
-
-                    class="digital-cta-btn">
-
-                        Get Free Consultation
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                    <a href="#"
-
-                    class="digital-cta-outline" style="margin-top:3%;">
-
-                        View Portfolio
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- Bottom Stats -->
-
-            <div class="digital-cta-stats">
-
-                <div class="digital-cta-stat">
-
-                    <h3>
-
-                        500+
-
-                    </h3>
-
-                    <span>
-
-                        Campaigns Delivered
-
-                    </span>
-
-                </div>
-
-                <div class="digital-cta-stat">
-
-                    <h3>
-
-                        250+
-
-                    </h3>
-
-                    <span>
-
-                        Happy Clients
-
-                    </span>
-
-                </div>
-
-                <div class="digital-cta-stat">
-
-                    <h3>
-
-                        96%
-
-                    </h3>
-
-                    <span>
-
-                        Client Retention
-
-                    </span>
-
-                </div>
-
-                <div class="digital-cta-stat">
-
-                    <h3>
-
-                        8+
-
-                    </h3>
-
-                    <span>
-
-                        Years Experience
-
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
 {% endblock %}

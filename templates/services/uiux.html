@@ -1,2026 +1,549 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}Professional UI/UX Design Services | Magencyinfo{% endblock %}
+
+{% block meta_description %}Craft beautiful, intuitive, and conversion-focused user interfaces with Magencyinfo. Expert user research, prototyping, app interfaces, and design systems.{% endblock %}
+
 {% block content %}
 
 <!--=========================================
-BREADCRUMB
-==========================================-->
-
-<section class="service-breadcrumb" style="margin-top: -42px;" >
-
-    <div class="container">
-
-        <!-- Breadcrumb -->
-
-        <div class="breadcrumb" style="margin-top: 12px;">
-
-            <a href="{% url 'home' %}">Home</a>
-
-            <span>/</span>
-
-            <a href="#">Services</a>
-
-            <span>/</span>
-
-            <span class="active"> UI/UX Design</span>
-
-        </div>
-
-</section>
-
-<!--=========================================
-HERO
-==========================================-->
-
-<section class="service-hero" style="margin-top: -120px;">
+    UI/UX HERO
+    ==========================================-->
+<section class="svc-hero uiux-service-hero">
+    <div class="svc-hero-bg">
+        <span class="svc-hero-blob svc-hero-blob-1"></span>
+        <span class="svc-hero-blob svc-hero-blob-2"></span>
+    </div>
 
     <div class="container">
-
-        <div class="hero-wrapper">
-
-            <!--=========================
-            LEFT
-            ==========================-->
-
-            <div class="hero-content">
-
-                <span class="hero-badge">
-
-                    PREMIUM UI/UX DESIGN
-
+        <div class="svc-hero-wrapper">
+            <!-- Left Side Content -->
+            <div class="svc-hero-content uiux-reveal uiux-revealed">
+                <span class="svc-hero-badge">
+                    <i class="fa-solid fa-palette"></i>
+                    Premium UI/UX Design
                 </span>
 
                 <h1>
-
-                    Design Beautiful Digital Experiences
-                    That Users Love
-
+                    Design Beautiful experiences
+                    <span>That Users Love</span>
                 </h1>
 
                 <p>
-
-                    We craft modern, intuitive and conversion-focused
-                    user interfaces for websites, mobile apps and SaaS
-                    products. Our UI/UX design process combines creativity,
-                    usability and business strategy to deliver exceptional
-                    digital experiences.
-
+                    We craft modern, intuitive, and conversion-focused user interfaces for web platforms, mobile applications, and SaaS systems, backed by detailed user research and strategy.
                 </p>
 
-                <ul class="hero-list">
-
-                    <li>
-
+                <!-- Core Features -->
+                <div class="svc-hero-features">
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        User Research & Strategy
-
-                    </li>
-
-                    <li>
-
+                        <span>User Research & Strategy</span>
+                    </div>
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        Wireframes & Interactive Prototypes
-
-                    </li>
-
-                    <li>
-
+                        <span>Wireframes & Interactive Prototypes</span>
+                    </div>
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
-
-                        Responsive UI Design
-
-                    </li>
-
-                    <li>
-
+                        <span>Fluid Responsive UI Layouts</span>
+                    </div>
+                    <div class="svc-hero-feature">
                         <i class="fa-solid fa-circle-check"></i>
+                        <span>Custom Design Systems</span>
+                    </div>
+                </div>
 
-                        Design Systems
-
-                    </li>
-
-                </ul>
-
-                <div class="hero-buttons">
-
-                    <a href="{% url 'booking' %}" class="btn-primary">
-
+                <!-- CTA Buttons -->
+                <div class="svc-hero-buttons">
+                    <a href="{% url 'booking' %}" class="svc-btn-primary">
                         Book Free Consultation
-
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <a href="#portfolio" class="btn-outline">
-
-                        View Portfolio
-
+                    <a href="#portfolio" class="svc-btn-secondary">
+                        View Case Studies
                     </a>
-
                 </div>
-
-                <div class="hero-stats">
-
-                    <div>
-
-                        <h3>350+</h3>
-
-                        <span>Design Projects</span>
-
-                    </div>
-
-                    <div>
-
-                        <h3>120+</h3>
-
-                        <span>Happy Clients</span>
-
-                    </div>
-
-                    <div>
-
-                        <h3>98%</h3>
-
-                        <span>Client Satisfaction</span>
-
-                    </div>
-
-                </div>
-
             </div>
 
-            <!--=========================
-            RIGHT
-            ==========================-->
+            <!-- Right Side Image Box with Floating Cards -->
+            <div class="svc-hero-visual uiux-reveal uiux-revealed">
+                <div class="svc-hero-image-box">
+                    <img src="{% static 'images/services/uiux/hero.jpg' %}" alt="UI/UX Designers wireframing mockup" class="svc-hero-image">
 
-            <div class="hero-image">
-
-                <div class="glow glow-1"></div>
-
-                <div class="glow glow-2"></div>
-
-                <div class="glow glow-3"></div>
-
-                <img src="{% static 'images/services/uiux/uiux-hero.jpg' %}" alt="UI UX Design">
-
-                <!-- Floating Card -->
-
-                <div class="floating-card card-1">
-
-                    <i class="fa-brands fa-figma"></i>
-
-                    <div>
-
-                        <strong>Figma</strong>
-
-                        <span>Design System</span>
-
+                    <!-- Floating Badge Card 1 -->
+                    <div class="svc-floating-card svc-float-1">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div>
+                            <h5>Mobile UI</h5>
+                            <p>Pixel-Perfect App Views</p>
+                        </div>
                     </div>
 
-                </div>
-
-                <!-- Floating Card -->
-
-                <div class="floating-card card-2">
-
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-
-                    <div>
-
-                        <strong>Responsive</strong>
-
-                        <span>All Devices</span>
-
+                    <!-- Floating Badge Card 2 -->
+                    <div class="svc-floating-card svc-float-2">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <div>
+                            <h5>Prototypes</h5>
+                            <p>Interactive Flows</p>
+                        </div>
                     </div>
 
-                </div>
-
-                <!-- Floating Card -->
-
-                <div class="floating-card card-3">
-
-                    <i class="fa-solid fa-pen-ruler"></i>
-
-                    <div>
-
-                        <strong>Prototype</strong>
-
-                        <span>Interactive UI</span>
-
+                    <!-- Floating Badge Card 3 -->
+                    <div class="svc-floating-card svc-float-3">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div>
+                            <h5>Figma Systems</h5>
+                            <p>Re-usable Tokens</p>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-UI/UX SERVICES
-==========================================-->
-
-<section class="services-section">
-
+    TRUST STATS STRIP
+    ==========================================-->
+<section class="svc-stats-strip">
     <div class="container">
+        <div class="svc-stats-wrapper">
+            <div class="svc-stat-item">
+                <h3 class="uiux-counter" data-target="350" data-suffix="+">0+</h3>
+                <p>Design Projects</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="uiux-counter" data-target="120" data-suffix="+">0+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="uiux-counter" data-target="6" data-suffix="+">0+</h3>
+                <p>Senior Designers</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="uiux-counter" data-target="98" data-suffix="%">0%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                OUR UI/UX SERVICES
-
-            </span>
-
-            <h2>
-
-                Complete UI/UX Design
-                Solutions For Modern Businesses
-
-            </h2>
-
-            <p>
-
-                From research to final design, we create
-                user experiences that are intuitive,
-                visually stunning and conversion-focused.
-
-            </p>
-
+<!--=========================================
+    WHAT WE DO (SERVICES)
+    ==========================================-->
+<section class="svc-section">
+    <div class="container">
+        <div class="svc-heading uiux-reveal">
+            <span class="svc-section-tag">Our Services</span>
+            <h2>Intuitive UI/UX <span>Design Capabilities</span></h2>
+            <p>We blend behavioral psychology with modern styling guidelines to build engaging digital interfaces.</p>
         </div>
 
-        <div class="services-grid">
-
+        <div class="svc-grid-3 uiux-reveal">
             <!-- Card 1 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
                 </div>
-
-                <h3>
-
-                    UX Research
-
-                </h3>
-
-                <p>
-
-                    Understand your users through research,
-                    interviews and usability analysis.
-
-                </p>
-
+                <h3>UX Research</h3>
+                <p>Detailed mapping of target customer personas, user journeys, operational gaps, and digital layout trends in your field.</p>
+                <ul>
+                    <li>Competitor Audits</li>
+                    <li>User Personas</li>
+                    <li>Information Architecture</li>
+                </ul>
             </div>
 
             <!-- Card 2 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-sitemap"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-bezier-curve"></i>
                 </div>
-
-                <h3>
-
-                    User Flow
-
-                </h3>
-
-                <p>
-
-                    Plan intuitive navigation and user
-                    journeys for better experiences.
-
-                </p>
-
+                <h3>Wireframing</h3>
+                <p>Low and high-fidelity structural layouts mapped to organize information clearly before visual design begins.</p>
+                <ul>
+                    <li>Interactive Mockups</li>
+                    <li>Layout Hierarchies</li>
+                    <li>Navigation Pathways</li>
+                </ul>
             </div>
 
             <!-- Card 3 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-pen-ruler"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
-
-                <h3>
-
-                    Wireframing
-
-                </h3>
-
-                <p>
-
-                    Low and high-fidelity wireframes
-                    to validate design ideas quickly.
-
-                </p>
-
+                <h3>Mobile UI Design</h3>
+                <p>Bespoke visual interface styling for iOS and Android apps, matching modern human interface and material guidelines.</p>
+                <ul>
+                    <li>Pixel-Perfect Screens</li>
+                    <li>Gesture Controls</li>
+                    <li>Asset Export Kit</li>
+                </ul>
             </div>
 
             <!-- Card 4 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-brands fa-figma"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-laptop-code"></i>
                 </div>
-
-                <h3>
-
-                    UI Design
-
-                </h3>
-
-                <p>
-
-                    Beautiful, responsive and
-                    pixel-perfect interfaces.
-
-                </p>
-
+                <h3>Web UI Design</h3>
+                <p>High-converting website interfaces built to reduce drop-offs, optimize lead-generation forms, and adapt beautifully to layouts.</p>
+                <ul>
+                    <li>Responsive Layout grids</li>
+                    <li>Form Design Audits</li>
+                    <li>Typography Schemes</li>
+                </ul>
             </div>
 
             <!-- Card 5 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-shuffle"></i>
                 </div>
-
-                <h3>
-
-                    Mobile App Design
-
-                </h3>
-
-                <p>
-
-                    Android & iOS app interfaces
-                    with intuitive user experience.
-
-                </p>
-
+                <h3>Prototyping</h3>
+                <p>Clickable, high-fidelity prototypes built in Figma to test workflows and transitions before committing to developer hours.</p>
+                <ul>
+                    <li>Micro-Animations</li>
+                    <li>User Path Testing</li>
+                    <li>Developer Hand-off Sets</li>
+                </ul>
             </div>
 
             <!-- Card 6 -->
-
-            <div class="why-item">
-
-                <div class="service-icon" >
-
-                    <i class="fa-solid fa-desktop" ></i>
-
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-cubes"></i>
                 </div>
-
-                <h3>
-
-                    Dashboard Design
-
-                </h3>
-
-                <p>
-
-                    Admin dashboards,
-                    CRM and SaaS interfaces.
-
-                </p>
-
+                <h3>Design Systems</h3>
+                <p>Comprehensive design libraries specifying style tokens, typography hierarchies, reusable button layouts, and color variables.</p>
+                <ul>
+                    <li>Reusable Component Sets</li>
+                    <li>Figma Token Organization</li>
+                    <li>Style Guide Booklets</li>
+                </ul>
             </div>
-
-            <!-- Card 7 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-layer-group"></i>
-
-                </div>
-
-                <h3>
-
-                    Design System
-
-                </h3>
-
-                <p>
-
-                    Consistent components,
-                    colors and typography for scalability.
-
-                </p>
-
-            </div>
-
-            <!-- Card 8 -->
-
-            <div class="why-item">
-
-                <div class="service-icon">
-
-                    <i class="fa-solid fa-hand-pointer"></i>
-
-                </div>
-
-                <h3>
-
-                    Interactive Prototype
-
-                </h3>
-
-                <p>
-
-                    Clickable prototypes to
-                    validate ideas before development.
-
-                </p>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-WHY CHOOSE US
-==========================================-->
-
-<section class="why-choose">
-
+    OUR DESIGN PROCESS
+    ==========================================-->
+<section class="svc-section svc-section--alt">
     <div class="container">
-
-        <div class="why-wrapper">
-
-            <!--=========================
-            LEFT SIDE
-            ==========================-->
-
-            <div class="why-image">
-
-                <img src="{% static 'images/services/uiux/why-uiux.jpg' %}" alt="UI UX Design">
-
-                <!-- Experience -->
-
-                <div class="experience-card">
-
-                    <h2 style="color: black;">
-
-                        5+
-
-                    </h2>
-
-                    <p style="color: black;">
-
-                        Years Experience
-
-                    </p>
-
-                </div>
-
-                <!-- Floating Badge -->
-
-                <div class="floating-badge badge-1">
-
-                    <i class="fa-brands fa-figma"></i>
-
-                    <span>
-
-                        Figma Expert
-
-                    </span>
-
-                </div>
-
-                <!-- Floating Badge -->
-
-                <div class="floating-badge badge-2">
-
-                    <i class="fa-solid fa-users"></i>
-
-                    <span>
-
-                        User-Centered Design
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <!--=========================
-            RIGHT SIDE
-            ==========================-->
-
-            <div class="why-content">
-
-                <span class="section-tag">
-
-                    WHY CHOOSE US
-
-                </span>
-
-                <h2>
-
-                    We Design Experiences
-                    That Users Remember
-
-                </h2>
-
-                <p>
-
-                    Our UI/UX design process combines creativity,
-                    usability and business strategy to create
-                    beautiful products that improve engagement,
-                    increase conversions and deliver outstanding
-                    customer experiences.
-
-                </p>
-
-                <div class="why-list">
-
-                    <!-- Item -->
-
-                    <div class="why-item">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-user-check"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4>
-
-                                User-Centered Design
-
-                            </h4>
-
-                            <p>
-
-                                Every interface is designed around
-                                real user behavior and needs.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Item -->
-
-                    <div class="why-item">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-pen-ruler"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4>
-
-                                Pixel Perfect UI
-
-                            </h4>
-
-                            <p>
-
-                                Modern interfaces with clean layouts,
-                                typography and visual hierarchy.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Item -->
-
-                    <div class="why-item">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4>
-
-                                Responsive Design
-
-                            </h4>
-
-                            <p>
-
-                                Optimized experiences across desktop,
-                                tablet and mobile devices.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Item -->
-
-                    <div class="why-item">
-
-                        <div class="icon">
-
-                            <i class="fa-solid fa-layer-group"></i>
-
-                        </div>
-
-                        <div>
-
-                            <h4>
-
-                                Design Systems
-
-                            </h4>
-
-                            <p>
-
-                                Scalable component libraries for
-                                faster development and consistency.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
+        <div class="svc-heading uiux-reveal">
+            <span class="svc-section-tag">Our Process</span>
+            <h2>Our Creative <span>UI/UX Workflow</span></h2>
+            <p>A structured approach helps us align with your product objectives and ensure logical page interactions.</p>
         </div>
 
-    </div>
-
-</section>
-<!--=========================================
-UI/UX DESIGN PROCESS
-==========================================-->
-
-<section class="design-process">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                OUR DESIGN PROCESS
-
-            </span>
-
-            <h2>
-
-                From Research To
-                Pixel Perfect Design
-
-            </h2>
-
-            <p>
-
-                Every successful digital product starts with
-                understanding users. Our structured design
-                process ensures intuitive, engaging and
-                conversion-focused experiences.
-
-            </p>
-
-        </div>
-
-        <div class="process-grid">
-
-            <!-- STEP 1 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    01
-
+        <div class="svc-process-grid uiux-reveal">
+            <!-- Step 1 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">01</span>
                 </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-lightbulb"></i>
-
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
-
-                <h3>
-
-                    Discovery
-
-                </h3>
-
-                <p>
-
-                    We understand your business goals,
-                    target audience and project vision.
-
-                </p>
-
+                <h3>Research</h3>
+                <p>We analyze competitor features, target demographics, and product goals.</p>
             </div>
 
-            <!-- STEP 2 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    02
-
+            <!-- Step 2 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">02</span>
                 </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-
-                </div>
-
-                <h3>
-
-                    User Research
-
-                </h3>
-
-                <p>
-
-                    Research competitors,
-                    user behavior and pain points.
-
-                </p>
-
-            </div>
-
-            <!-- STEP 3 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    03
-
-                </div>
-
-                <div class="process-icon">
-
+                <div class="svc-process-icon">
                     <i class="fa-solid fa-sitemap"></i>
-
                 </div>
-
-                <h3>
-
-                    User Flow
-
-                </h3>
-
-                <p>
-
-                    Design information architecture
-                    and seamless navigation paths.
-
-                </p>
-
+                <h3>Strategy</h3>
+                <p>Draft user journeys, sitemaps, and core information architecture.</p>
             </div>
 
-            <!-- STEP 4 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    04
-
+            <!-- Step 3 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">03</span>
                 </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-brands fa-figma"></i>
-
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-pencil"></i>
                 </div>
-
-                <h3>
-
-                    UI Design
-
-                </h3>
-
-                <p>
-
-                    Create beautiful,
-                    responsive interfaces
-                    using modern design systems.
-
-                </p>
-
+                <h3>Wireframes</h3>
+                <p>Map low-fidelity structural cards to test information layouts.</p>
             </div>
 
-            <!-- STEP 5 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    05
-
+            <!-- Step 4 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">04</span>
                 </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-hand-pointer"></i>
-
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-palette"></i>
                 </div>
-
-                <h3>
-
-                    Interactive Prototype
-
-                </h3>
-
-                <p>
-
-                    Build clickable prototypes
-                    to validate the user experience.
-
-                </p>
-
+                <h3>Visual Design</h3>
+                <p>Develop beautiful high-fidelity interfaces, color palettes, and fonts.</p>
             </div>
 
-            <!-- STEP 6 -->
-
-            <div class="process-card">
-
-                <div class="step" style="color: black;">
-
-                    06
-
+            <!-- Step 5 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">05</span>
                 </div>
-
-                <div class="process-icon">
-
-                    <i class="fa-solid fa-code"></i>
-
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-bezier-curve"></i>
                 </div>
-
-                <h3>
-
-                    Developer Handoff
-
-                </h3>
-
-                <p>
-
-                    Deliver organized design files,
-                    assets and documentation
-                    for smooth development.
-
-                </p>
-
+                <h3>Prototype</h3>
+                <p>Build high-fidelity clickable Figma flows for review and testing.</p>
             </div>
 
+            <!-- Step 6 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">06</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-code-commit"></i>
+                </div>
+                <h3>Hand-off</h3>
+                <p>Deliver organized design specs and code components to dev teams.</p>
+            </div>
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-DESIGN TOOLS
-==========================================-->
-
-<section class="design-tools">
-
+    FEATURED PROJECTS / CASE STUDIES
+    ==========================================-->
+<section class="svc-section" id="portfolio">
     <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                OUR TOOLKIT
-
-            </span>
-
-            <h2>
-
-                Professional Design
-                Tools We Use
-
-            </h2>
-
-            <p>
-
-                We use industry-leading design tools to create
-                beautiful, scalable and developer-friendly
-                digital experiences.
-
-            </p>
-
+        <div class="svc-heading uiux-reveal">
+            <span class="svc-section-tag">Case Studies</span>
+            <h2>Featured UI/UX <span>Design Projects</span></h2>
+            <p>Explore some of our recent visual systems built for web platforms and mobile apps.</p>
         </div>
 
-        <div class="tools-grid">
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/figma.svg' %}" alt="Figma">
-
-                <h3>Figma</h3>
-
-                <span>UI Design</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/adobe-xd.svg' %}" alt="Adobe XD">
-
-                <h3>Adobe XD</h3>
-
-                <span>Prototyping</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/photoshop.svg' %}" alt="Photoshop">
-
-                <h3>Photoshop</h3>
-
-                <span>Image Editing</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/illustrator.svg' %}" alt="Illustrator">
-
-                <h3>Illustrator</h3>
-
-                <span>Vector Graphics</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/figjam.svg' %}" alt="FigJam">
-
-                <h3>FigJam</h3>
-
-                <span>Brainstorming</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/miro.svg' %}" alt="Miro">
-
-                <h3>Miro</h3>
-
-                <span>User Flow</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/framer.svg' %}" alt="Framer">
-
-                <h3>Framer</h3>
-
-                <span>Interactive Design</span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="tool-card">
-
-                <img src="{% static 'images/services/uiux/lottie.svg' %}" alt="Lottie">
-
-                <h3>Lottie</h3>
-
-                <span>Animations</span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-UI/UX PORTFOLIO
-==========================================-->
-
-<section class="ui-portfolio" id="portfolio">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                CASE STUDIES
-
-            </span>
-
-            <h2>
-
-                Featured UI/UX Design Projects
-
-            </h2>
-
-            <p>
-
-                Discover some of our recent UI/UX projects where
-                strategy, creativity and user experience came together
-                to create impactful digital products.
-
-            </p>
-
-        </div>
-
-        <div class="portfolio-grid">
-
+        <div class="svc-portfolio-grid uiux-reveal">
             {% for case in case_studies %}
-
-            <div class="portfolio-card {% if forloop.counter == 2 %}featured{% endif %}">
-
-                <div class="portfolio-image">
-
-                    {% if case.image %}
-
-                    <img
-
-                        src="{{ case.image.url }}"
-
-                        alt="{{ case.title }}">
-
-                    {% else %}
-
-                    <img
-
-                        src="{% static 'images/case-study/default-case-study.webp' %}"
-
-                        alt="{{ case.title }}">
-
-                    {% endif %}
-
-                    <span class="portfolio-tag">
-
-                        {{ case.category }}
-
-                    </span>
-
+            <div class="svc-portfolio-card" onclick="window.location.href='{% url 'case_study_detail' case.slug %}'">
+                {% if case.image %}
+                <img src="{{ case.image.url }}" alt="{{ case.title }}">
+                {% else %}
+                <img src="{% static 'images/case-study/default-case-study.webp' %}" alt="{{ case.title }}">
+                {% endif %}
+                <div class="svc-portfolio-overlay">
+                    <span>{{ case.category }}</span>
+                    <h3>{{ case.title }}</h3>
                 </div>
-
-                <div class="portfolio-content">
-
-                    <h3>
-
-                        {{ case.title }}
-
-                    </h3>
-
-                    <p>
-
-                        {{ case.short_description|truncatewords:18 }}
-
-                    </p>
-
-                    <!--==============================
-                            FEATURE TAGS
-                    ==============================-->
-
-                    <ul>
-
-                        <li>Responsive Design</li>
-
-                        <li style="margin-top:2%;">Modern UI</li>
-
-                        <li style="margin-top:2%;">User Experience</li>
-
-                    </ul>
-
-                    <a href="{% url 'case_study_detail' case.slug %}">
-
-                        Read Case Study
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
             </div>
-
             {% empty %}
-
-            <div class="no-case-study">
-
-                <h3>
-
-                    No UI/UX Case Studies Available
-
-                </h3>
-
+            <!-- Fallback Mockups if no dynamic cases exist -->
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/uiux/portfolio1.jpg' %}" alt="App UI Mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>Mobile App UI</span>
+                    <h3>Fintech Banking App</h3>
+                </div>
             </div>
-
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/uiux/portfolio2.jpg' %}" alt="SaaS Mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>SaaS Portal</span>
+                    <h3>Analytics Dashboard</h3>
+                </div>
+            </div>
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/uiux/portfolio3.jpg' %}" alt="Web Design Mockup">
+                <div class="svc-portfolio-overlay">
+                    <span>Landing Page</span>
+                    <h3>AI Assistant Platform</h3>
+                </div>
+            </div>
             {% endfor %}
-
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-UI/UX PRICING
-==========================================-->
-
-<section class="pricing-section">
-
+    CLIENT TESTIMONIALS
+    ==========================================-->
+<section class="svc-section svc-section--alt">
     <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                PRICING PLANS
-
-            </span>
-
-            <h2>
-
-                Choose The Perfect
-                Design Package
-
-            </h2>
-
-            <p>
-
-                Flexible pricing designed for startups,
-                businesses and enterprise products.
-
-            </p>
-
+        <div class="svc-heading uiux-reveal">
+            <span class="svc-section-tag">Testimonials</span>
+            <h2>Trusted By <span>Design Teams Globally</span></h2>
+            <p>Read client reviews about their collaboration experience with our UI/UX designers.</p>
         </div>
 
-        <div class="pricing-grid">
-
-            <!-- Starter -->
-
-            <div class="pricing-card">
-
-                <span class="pricing-type">
-
-                    STARTER
-
-                </span>
-
-                <h3>
-
-                    Landing Page Design
-
-                </h3>
-
-                <div class="price">
-
-                    ₹9,999
-
+        <div class="svc-testimonial-grid uiux-reveal">
+            <!-- Testimonial 1 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
-
-                <p>
-
-                    Perfect for a single landing page with a clean, responsive UI.
-
-                </p>
-
-                <ul>
-
-                    <li><i class="fa-solid fa-check"></i> 1 Landing Page</li>
-
-                    <li><i class="fa-solid fa-check"></i> Responsive Design</li>
-
-                    <li><i class="fa-solid fa-check"></i> Figma File</li>
-
-                    <li><i class="fa-solid fa-check"></i> Prototype</li>
-
-                    <li><i class="fa-solid fa-check"></i> 2 Revisions</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}" class="pricing-btn">
-
-                    Get Started
-
-                </a>
-
+                <p>"Their wireframes and design system simplified our developer workflows. They built a unified design language that matches our operations."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client1.jpg' %}" alt="Alex Mercer Product Lead">
+                    <div>
+                        <h4>Alex Mercer</h4>
+                        <span>Product Lead, Velo</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="pricing-card">
-
-                <div class="popular">
-
-                    MOST POPULAR
-
+            <!-- Testimonial 2 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
-
-                <span class="pricing-type">
-
-                    PROFESSIONAL
-
-                </span>
-
-                <h3>
-
-                    Website UI Design
-
-                </h3>
-
-                <div class="price">
-
-                    ₹24,999
-
+                <p>"The clickable high-fidelity Figma prototypes allowed us to validate page structures with users before committing developer hours."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client2.jpg' %}" alt="Elena Rostova Director">
+                    <div>
+                        <h4>Elena Rostova</h4>
+                        <span>Director, Prime Health</span>
+                    </div>
                 </div>
-
-                <p>
-
-                    Ideal for business websites and SaaS.
-
-                </p>
-
-                <ul>
-
-                    <li><i class="fa-solid fa-check"></i> Up to 10 Pages</li>
-
-                    <li><i class="fa-solid fa-check"></i> Responsive UI</li>
-
-                    <li><i class="fa-solid fa-check"></i> Design System</li>
-
-                    <li><i class="fa-solid fa-check"></i> Interactive Prototype</li>
-
-                    <li><i class="fa-solid fa-check"></i> Unlimited Revisions</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}" class="pricing-btn">
-
-                    Choose Plan
-
-                </a>
-
             </div>
 
-            <!-- Enterprise -->
-
-            <div class="pricing-card">
-
-                <span class="pricing-type">
-
-                    ENTERPRISE
-
-                </span>
-
-                <h3>
-
-                    Product Design
-
-                </h3>
-
-                <div class="price">
-
-                    Custom
-
+            <!-- Testimonial 3 -->
+            <div class="svc-testimonial-card">
+                <div class="svc-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
                 </div>
-
-                <p>
-
-                    Complete UX strategy and enterprise solutions.
-
-                </p>
-
-                <ul>
-
-                    <li><i class="fa-solid fa-check"></i> UX Research</li>
-
-                    <li><i class="fa-solid fa-check"></i> User Testing</li>
-
-                    <li><i class="fa-solid fa-check"></i> Design System</li>
-
-                    <li><i class="fa-solid fa-check"></i> Developer Handoff</li>
-
-                    <li><i class="fa-solid fa-check"></i> Priority Support</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}" class="pricing-btn">
-
-                    Contact Sales
-
-                </a>
-
+                <p>"Outstanding visual quality. They delivered a responsive and clean layout that instantly elevated our brand identity."</p>
+                <div class="svc-client">
+                    <img src="{% static 'images/services/logo/client3.jpg' %}" alt="Marcus Vance CTO">
+                    <div>
+                        <h4>Marcus Vance</h4>
+                        <span>CTO, Nexus Corp</span>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
-
 </section>
+
 <!--=========================================
-CLIENT TESTIMONIALS
-==========================================-->
-
-<section class="ux-testimonial-section">
-
+    FAQ
+    ==========================================-->
+<section class="svc-section">
     <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-                CLIENT TESTIMONIALS
-            </span>
-
-            <h2>
-                Trusted By Startups
-                And Growing Businesses
-            </h2>
-
-            <p>
-                We create experiences that users love.
-                Here's what our clients say about working with us.
-            </p>
-
+        <div class="svc-heading uiux-reveal">
+            <span class="svc-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Have questions before starting your interface design project? Here are our answers.</p>
         </div>
 
-        <div class="ux-testimonial-grid">
-
-            <!-- Card 1 -->
-
-            <div class="ux-testimonial-card">
-
-                <div class="ux-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Magencyinfo completely redesigned our SaaS
-                    dashboard. The new interface is clean,
-                    modern and much easier for our users.
-                    Our onboarding time dropped by nearly 40%.
-
-                </p>
-
-                <div class="ux-client-info">
-
-                    <img src="{% static 'images/services/uiux/client1.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>James Wilson</h4>
-
-                        <span>Product Manager</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 2 -->
-
-            <div class="ux-testimonial-card">
-
-                <div class="ux-quote">
-
-                    <i class="fa-solid fa-quote-right"></i>
-
-                </div>
-
-                <div class="ux-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    Their UI/UX process was incredible.
-                    Every screen was carefully designed,
-                    and the prototype helped us validate
-                    ideas before development.
-
-                </p>
-
-                <div class="ux-client-info">
-
-                    <img src="{% static 'images/services/uiux/client2.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>Sophia Brown</h4>
-
-                        <span>Founder, StartupX</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!-- Card 3 -->
-
-            <div class="ux-testimonial-card">
-
-                <div class="ux-stars">
-
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-
-                </div>
-
-                <p>
-
-                    The design system they created
-                    has made our development process
-                    much faster. Every component is
-                    consistent and developer-friendly.
-
-                </p>
-
-                <div class="ux-client-info">
-
-                    <img src="{% static 'images/services/uiux/client3.jpg' %}" alt="Client">
-
-                    <div>
-
-                        <h4>David Lee</h4>
-
-                        <span>CTO, TechNova</span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-UI/UX FAQ SECTION
-==========================================-->
-
-<section class="faq-section">
-
-    <div class="container">
-
-        <div class="section-header">
-
-            <span class="section-tag">
-
-                FREQUENTLY ASKED QUESTIONS
-
-            </span>
-
-            <h2>
-
-                Everything You Need
-                To Know About
-                UI/UX Design
-
-            </h2>
-
-            <p>
-
-                Find answers to the most common questions
-                about our UI/UX design services,
-                workflow and delivery process.
-
-            </p>
-
-        </div>
-
-        <div class="uiux-faq-wrapper">
-
+        <div class="svc-faq-wrapper uiux-reveal">
             <!-- FAQ 1 -->
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        What is UI/UX Design?
-
-                    </span>
-
+            <div class="svc-faq-item uiux-faq-item active">
+                <button class="svc-faq-question uiux-faq-question">
+                    <span>What design software do you use?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        UI focuses on visual design while UX
-                        focuses on creating smooth,
-                        intuitive and enjoyable user experiences.
-
-                    </p>
-
+                <div class="svc-faq-answer uiux-faq-answer">
+                    <p>We primarily use Figma as our standard platform. This allows clients to inspect wireframes, add comments, and view interactive flows in real-time.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 2 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Which tools do you use?
-
-                    </span>
-
+            <div class="svc-faq-item uiux-faq-item">
+                <button class="svc-faq-question uiux-faq-question">
+                    <span>What is a custom design system?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        We primarily use Figma,
-                        FigJam, Adobe Photoshop,
-                        Illustrator, Framer and
-                        other professional tools.
-
-                    </p>
-
+                <div class="svc-faq-answer uiux-faq-answer">
+                    <p>A design system is a comprehensive library of style tokens (reusable buttons, color styles, form inputs, sitemap elements, and sizing parameters) that keeps branding consistent across web pages and mobile views.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 3 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Do you provide responsive designs?
-
-                    </span>
-
+            <div class="svc-faq-item uiux-faq-item">
+                <button class="svc-faq-question uiux-faq-question">
+                    <span>Can you adapt layouts from sketches?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes. Every design is optimized
-                        for desktop,
-                        tablet and mobile devices.
-
-                    </p>
-
+                <div class="svc-faq-answer uiux-faq-answer">
+                    <p>Yes. We can start from raw sketches, business outlines, or detailed operational wireframes and refine them into modern, conversion-focused UI layouts.</p>
                 </div>
-
             </div>
 
             <!-- FAQ 4 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Will I receive the Figma file?
-
-                    </span>
-
+            <div class="svc-faq-item uiux-faq-item">
+                <button class="svc-faq-question uiux-faq-question">
+                    <span>How do you handle developer handoff?</span>
                     <i class="fa-solid fa-plus"></i>
-
                 </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Absolutely.
-                        After project completion,
-                        you'll receive all editable
-                        source files.
-
-                    </p>
-
+                <div class="svc-faq-answer uiux-faq-answer">
+                    <p>We organize our Figma canvas with proper layouts, name variables cleanly, organize vector icons, and coordinate with engineering teams to ensure pixel-perfect conversion.</p>
                 </div>
-
             </div>
-
-            <!-- FAQ 5 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        How long does a UI/UX project take?
-
-                    </span>
-
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Depending on complexity,
-                        projects generally take
-                        between one and six weeks.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-            <!-- FAQ 6 -->
-
-            <div class="faq-item">
-
-                <button class="faq-question">
-
-                    <span>
-
-                        Can you redesign my existing website?
-
-                    </span>
- 
-                    <i class="fa-solid fa-plus"></i>
-
-                </button>
-
-                <div class="faq-answer">
-
-                    <p>
-
-                        Yes.
-                        We redesign existing websites,
-                        SaaS dashboards,
-                        mobile applications
-                        and enterprise platforms.
-
-                    </p>
-
-                </div>
-
-            </div>
-
         </div>
-
     </div>
-
 </section>
-<!--=========================================
-UI/UX CTA
-==========================================-->
 
-<section class="uiux-cta-section">
+<!--=========================================
+    FINAL CTA
+    ==========================================-->
+<section class="svc-cta">
+    <div class="svc-cta-bg">
+        <span class="svc-cta-blob"></span>
+    </div>
 
     <div class="container">
+        <div class="svc-cta-wrapper uiux-reveal">
+            <span class="svc-section-tag">Let's Work Together</span>
+            <h2>Ready to Elevate Your <span>Product Interface?</span></h2>
+            <p>Work with our senior UI/UX designers to sketch, test, and build a beautiful, high-converting digital experience.</p>
 
-        <div class="uiux-cta-wrapper">
-
-            <div class="uiux-cta-content">
-
-                <span class="uiux-cta-tag">
-
-                    LET'S DESIGN SOMETHING AMAZING
-
-                </span>
-
-                <h2>
-
-                    Ready To Transform
-                    Your Digital Experience?
-
-                </h2>
-
-                <p>
-
-                    Whether you're launching a startup,
-                    redesigning an existing product,
-                    or building your next SaaS platform,
-                    our UI/UX experts are ready to help.
-
-                </p>
-
-                <div class="uiux-cta-buttons">
-
-                    <a href="{% url 'booking' %}" class="uiux-primary-btn">
-
-                        Book Free Consultation
-
-                    </a>
-
-                    <a href="{% url 'contact' %}" class="uiux-outline-btn">
-
-                        Talk To Designer
-
-                    </a>
-
+            <div class="svc-cta-features">
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Figma Specs Included</span>
                 </div>
-
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Interactive Prototypes</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Clear Dev Hand-off</span>
+                </div>
             </div>
 
-            <div class="uiux-cta-image">
-
-                <img src="{% static 'images/services/uiux/uicta.png' %}" alt="UI UX">
-
-                <div class="uiux-floating-card one">
-
-                    <i class="fa-brands fa-figma"></i>
-
-                    <span>
-
-                        Figma Design
-
-                    </span>
-
-                </div>
-
-                <div class="uiux-floating-card two">
-
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-
-                    <span>
-
-                        Responsive UI
-
-                    </span>
-
-                </div>
-
-                <div class="uiux-floating-card three">
-
-                    <i class="fa-solid fa-star"></i>
-
-                    <span>
-
-                        100% Satisfaction
-
-                    </span>
-
-                </div>
-
+            <div class="svc-cta-buttons">
+                <a href="{% url 'booking' %}" class="svc-btn-primary">
+                    Start Your Project
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="svc-btn-secondary">
+                    Talk To Designer
+                </a>
             </div>
-
         </div>
-
     </div>
-
 </section>
-<!--=========================================
-RELATED SERVICES
-==========================================-->
 
-<section class="uiux-related-section">
-
-    <div class="container">
-
-        <div class="uiux-related-header">
-
-            <span class="uiux-related-tag">
-
-                EXPLORE MORE SERVICES
-
-            </span>
-
-            <h2>
-
-                Complete Digital
-                Solutions Under
-                One Roof
-
-            </h2>
-
-            <p>
-
-                Beyond UI/UX Design, we help businesses
-                build, launch and scale digital products.
-
-            </p>
-
-        </div>
-
-        <div class="uiux-related-grid">
-
-            <!-- Card -->
-
-            <a href="{% url 'webdev' %}" class="uiux-related-card">
-
-                <div class="uiux-related-icon"
-     style="width:80px;height:80px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#2563eb,#38bdf8);border-radius:22px;margin-bottom:30px;overflow:hidden;">
-
-    <i class="fa-solid fa-code"
-       style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;font-size:34px;color:#fff;line-height:1;margin:0;padding:0;"></i>
-
-</div>
-
-                <h3>
-
-                    Website Development
-
-                </h3>
-
-                <p>
-
-                    Fast, scalable and secure
-                    business websites.
-
-                </p>
-
-                <span>
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </span>
-
-            </a>
-
-            <!-- Card -->
-
-            <a href="{% url 'ecom' %}" class="uiux-related-card">
-
-                <div class="uiux-related-icon"
-     style="width:80px;height:80px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#2563eb,#38bdf8);border-radius:22px;margin-bottom:30px;overflow:hidden;">
-
-    <i class="fa-solid fa-code"
-       style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;font-size:34px;color:#fff;line-height:1;margin:0;padding:0;"></i>
-
-</div>
-
-                <h3>
-
-                    E-Commerce Solutions
-
-                </h3>
-
-                <p>
-
-                    Online stores that
-                    increase conversions.
-
-                </p>
-
-                <span>
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </span>
-
-            </a>
-
-            <!-- Card -->
-
-            <a href="{% url 'seo' %}" class="uiux-related-card">
-
-                <div class="uiux-related-icon"
-     style="width:80px;height:80px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#2563eb,#38bdf8);border-radius:22px;margin-bottom:30px;overflow:hidden;">
-
-    <i class="fa-solid fa-code"
-       style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;font-size:34px;color:#fff;line-height:1;margin:0;padding:0;"></i>
-
-</div>
-
-                <h3>
-
-                    SEO Optimization
-
-                </h3>
-
-                <p>
-
-                    Rank higher on Google
-                    and attract more customers.
-
-                </p>
-
-                <span>
-
-                    Learn More
-
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </span>
-
-            </a>
-
-            <!-- Card -->
-
-            <a href="{% url 'ai' %}" class="uiux-related-card">
-
-                <div class="uiux-related-icon"
-     style="width:80px;height:80px;display:flex;justify-content:center;align-items:center;background:linear-gradient(135deg,#2563eb,#38bdf8);border-radius:22px;margin-bottom:30px;overflow:hidden;">
-
-    <i class="fa-solid fa-code"
-       style="display:flex;justify-content:center;align-items:center;width:100%;height:100%;font-size:34px;color:#fff;line-height:1;margin:0;padding:0;"></i>
-
-</div>
-
-                <h3>
-
-                    AI Development
-
-                </h3>
-
-                <p>
-
-                    AI chatbots,
-                    automation and custom AI solutions.
-
-                </p>
-
-                <span>
-
-                    Learn More
-
-                    <i class="fa-solid fa-arrow-right"></i>
-
-                </span>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
 {% endblock %}

@@ -1,0 +1,188 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/case_study.css' %}">
+{% endblock %}
+
+{% block title %}Case Studies & Client Portfolio | Magencyinfo{% endblock %}
+{% block meta_description %}Discover our portfolio of successful digital projects. Real results in web development, AI automation, UI/UX design, and brand growth for businesses worldwide.{% endblock %}
+
+{% block content %}
+
+<!--=========================================
+    1. HERO SECTION
+    ==========================================-->
+<section class="case-hero-section">
+    <div class="case-hero-bg"></div>
+    <div class="case-hero-orb case-hero-orb-1"></div>
+
+    <div class="case-container">
+        <div class="case-hero-content">
+            <span class="case-hero-tag">
+                <i class="fa-solid fa-briefcase"></i>
+                Portfolio & Case Studies
+            </span>
+            <h1>Real Client Projects, Measurable <span>Business Growth</span></h1>
+            <p>Discover how we partner with ambitious startups and established companies to design, build, and scale high-performing digital products.</p>
+
+            <!-- Stats Strip -->
+            <div class="case-hero-stats">
+                <div class="case-stat-item">
+                    <h3>50+</h3>
+                    <span>Projects Shipped</span>
+                </div>
+                <div class="case-stat-item">
+                    <h3>99%</h3>
+                    <span>Client Satisfaction</span>
+                </div>
+                <div class="case-stat-item">
+                    <h3>12+</h3>
+                    <span>Global Industries</span>
+                </div>
+                <div class="case-stat-item">
+                    <h3>4.9★</h3>
+                    <span>Client Rating</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    2. CASE STUDY LISTING GRID
+    ==========================================-->
+<section class="case-list-section">
+    <div class="case-container">
+        <!-- Filter Tabs -->
+        <div class="case-filter-wrapper">
+            <div class="case-filter-tabs">
+                <button class="case-filter-btn active" data-filter="all">All Projects</button>
+                <button class="case-filter-btn" data-filter="UI/UX Design">UI/UX Design</button>
+                <button class="case-filter-btn" data-filter="Web Design">Web Design</button>
+                <button class="case-filter-btn" data-filter="SEO">SEO</button>
+                <button class="case-filter-btn" data-filter="Mobile App">Mobile App</button>
+                <button class="case-filter-btn" data-filter="Branding">Branding</button>
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="case-grid">
+            {% for item in case_studies %}
+            <article class="case-card" data-category="{{ item.category }}">
+                <div class="case-card-image">
+                    {% if item.image %}
+                    <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                    {% else %}
+                    <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="{{ item.title }}">
+                    {% endif %}
+                    <span class="case-card-category">{{ item.category }}</span>
+                </div>
+
+                <div class="case-card-body">
+                    <h3>{{ item.title }}</h3>
+                    <p>{{ item.short_description|truncatewords:20 }}</p>
+                    <a href="{% url 'case_study_detail' item.slug %}" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            {% empty %}
+            <div class="case-empty-state">
+                <i class="fa-solid fa-folder-open"></i>
+                <h3>No Case Studies Found</h3>
+                <p>We are currently updating our latest project showcases. Check back shortly!</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    3. OUR PROVEN IMPACT FEATURE ROW
+    ==========================================-->
+<section class="case-impact-section">
+    <div class="case-container">
+        <div class="case-impact-header">
+            <h2>Why Our Projects Drive Real ROI</h2>
+            <p>Every digital product we design and engineer focuses on long-term performance and user conversion.</p>
+        </div>
+
+        <div class="case-impact-grid">
+            <div class="case-impact-card">
+                <div class="case-impact-icon"><i class="fa-solid fa-chart-line"></i></div>
+                <h4>High Conversion Rate</h4>
+                <p>Data-informed interfaces engineered to turn passive visitors into paying customers.</p>
+            </div>
+
+            <div class="case-impact-card">
+                <div class="case-impact-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h4>Speed Optimized</h4>
+                <p>Sub-second load times and lightweight frontend builds that ace Core Web Vitals.</p>
+            </div>
+
+            <div class="case-impact-card">
+                <div class="case-impact-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                <h4>Scalable Architecture</h4>
+                <p>Enterprise-grade Django and cloud backends built to support millions of requests.</p>
+            </div>
+
+            <div class="case-impact-card">
+                <div class="case-impact-icon"><i class="fa-solid fa-gem"></i></div>
+                <h4>Brand Longevity</h4>
+                <p>Timeless visual identities and design systems crafted to scale for years.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    4. FINAL CALL TO ACTION
+    ==========================================-->
+<section class="case-cta-section">
+    <div class="case-container">
+        <div class="case-cta-wrapper">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's discuss how our design and engineering team can transform your vision into a scalable, high-converting digital product.</p>
+            <div class="case-cta-buttons">
+                <a href="{% url 'booking' %}" class="case-btn-primary">
+                    Book Free Consultation
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="case-btn-outline">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.case-filter-btn');
+    const caseCards = document.querySelectorAll('.case-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+
+            caseCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
+{% endblock %}

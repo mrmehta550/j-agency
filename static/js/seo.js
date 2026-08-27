@@ -1,216 +1,124 @@
-/*=========================================
-        SCROLL PROGRESS BAR
-=========================================*/
+/**
+ * SEO Optimization Service Page Specific JavaScript
+ * Isolated to prevent global namespace pollution.
+ */
+document.addEventListener("DOMContentLoaded", () => {
+    // Only execute if we are on the SEO Optimization page
+    const seoHero = document.querySelector(".seo-service-hero");
+    if (!seoHero) return;
 
-const seoProgress = document.querySelector(".seo-progress");
+    /* ==========================================================================
+       1. FAQ ACCORDION SYSTEM
+       ========================================================================== */
+    const faqItems = document.querySelectorAll(".seo-faq-item");
 
-window.addEventListener("scroll", () => {
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const question = item.querySelector(".seo-faq-question");
+            const answer = item.querySelector(".seo-faq-answer");
 
-    if(!seoProgress) return;
+            if (question && answer) {
+                // Initialize default state
+                if (item.classList.contains("active")) {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                } else {
+                    answer.style.maxHeight = "0px";
+                }
 
-    const totalHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
+                question.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const isActive = item.classList.contains("active");
 
-    const progress =
-    (window.pageYOffset / totalHeight) * 100;
+                    // Close all other FAQ items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove("active");
+                            const otherAnswer = otherItem.querySelector(".seo-faq-answer");
+                            if (otherAnswer) {
+                                otherAnswer.style.maxHeight = "0px";
+                            }
+                        }
+                    });
 
-    seoProgress.style.width = progress + "%";
-
-});
-
-/*=========================================
-        BACK TO TOP
-=========================================*/
-
-const seoBackTop = document.querySelector(".seo-back-top");
-
-window.addEventListener("scroll", () => {
-
-    if(!seoBackTop) return;
-
-    if(window.scrollY > 500){
-
-        seoBackTop.classList.add("show");
-
-    }else{
-
-        seoBackTop.classList.remove("show");
-
+                    // Toggle current FAQ item
+                    if (isActive) {
+                        item.classList.remove("active");
+                        answer.style.maxHeight = "0px";
+                    } else {
+                        item.classList.add("active");
+                        answer.style.maxHeight = answer.scrollHeight + "px";
+                    }
+                });
+            }
+        });
     }
 
-});
-
-seoBackTop?.addEventListener("click",()=>{
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
-
-    });
-
-});
-
-/*=========================================
-        SCROLL REVEAL
-=========================================*/
-
-const seoReveal = document.querySelectorAll(
-
-".seo-service-card,\
-.seo-benefit-card,\
-.seo-process-card,\
-.seo-tool-card,\
-.seo-case-study-card,\
-.seo-price-card,\
-.seo-testimonial-card"
-
-);
-
-const seoObserver = new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("seo-show");
-
-}
-
-});
-
-},
-
-{
-
-threshold:.15
-
-}
-
-);
-
-seoReveal.forEach(item=>{
-
-item.classList.add("seo-hidden");
-
-seoObserver.observe(item);
-
-});
-
-/*=========================================
-        FAQ
-=========================================*/
-
-const seoFaq = document.querySelectorAll(
-
-".seo-faq-wrapper details"
-
-);
-
-seoFaq.forEach(item=>{
-
-item.addEventListener("toggle",()=>{
-
-if(item.open){
-
-seoFaq.forEach(other=>{
-
-if(other!==item){
-
-other.removeAttribute("open");
-
-}
-
-});
-
-}
-
-});
-
-});
-
-/*=========================================
-        HERO PARALLAX
-=========================================*/
-
-const seoHeroImage = document.querySelector(
-
-".seo-hero-visual"
-
-);
-
-window.addEventListener("mousemove",(e)=>{
-
-if(!seoHeroImage) return;
-
-const x=(window.innerWidth/2-e.clientX)/45;
-
-const y=(window.innerHeight/2-e.clientY)/45;
-
-seoHeroImage.style.transform=
-
-`translate(${x}px,${y}px)`;
-
-});
-
-/*=========================================
-        COUNTER
-=========================================*/
-
-const counters = document.querySelectorAll(
-
-".seo-stat-box h3"
-
-);
-
-const counterObserver = new IntersectionObserver(
-
-(entries)=>{
-
-entries.forEach(entry=>{
-
-if(!entry.isIntersecting) return;
-
-const counter = entry.target;
-
-const target = parseInt(counter.innerText);
-
-let count = 0;
-
-const speed = target / 60;
-
-const update=()=>{
-
-count += speed;
-
-if(count < target){
-
-counter.innerText=Math.ceil(count)+"+";
-
-requestAnimationFrame(update);
-
-}else{
-
-counter.innerText=target+"+";
-
-}
-
-};
-
-update();
-
-counterObserver.unobserve(counter);
-
-});
-
-});
-
-counters.forEach(counter=>{
-
-counterObserver.observe(counter);
-
+    /* ==========================================================================
+       2. INTERSECTION OBSERVER STATS COUNTER
+       ========================================================================== */
+    const seoCounters = document.querySelectorAll(".seo-counter");
+
+    if (seoCounters.length > 0) {
+        const animateCounter = (counter) => {
+            if (counter.dataset.countStarted === "true") return;
+            counter.dataset.countStarted = "true";
+
+            const target = parseInt(counter.getAttribute("data-target"), 10) || 0;
+            const suffix = counter.getAttribute("data-suffix") || "";
+            const duration = 1500; // Animation duration in ms
+            const startTime = performance.now();
+
+            const updateCount = (currentTime) => {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Ease out quad
+                const easeProgress = progress * (2 - progress);
+                const currentVal = Math.floor(easeProgress * target);
+
+                counter.textContent = currentVal.toLocaleString() + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.textContent = target.toLocaleString() + suffix;
+                }
+            };
+
+            requestAnimationFrame(updateCount);
+        };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        seoCounters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
+    }
+
+    /* ==========================================================================
+       3. SCROLL REVEAL ANIMATIONS
+       ========================================================================== */
+    const seoRevealElements = document.querySelectorAll(".seo-reveal");
+
+    if (seoRevealElements.length > 0) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("seo-revealed");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.02 });
+
+        seoRevealElements.forEach(el => {
+            revealObserver.observe(el);
+        });
+    }
 });

@@ -3,6 +3,9 @@ TERMS & CONDITIONS PAGE
 ==================================================*/
 
 document.addEventListener("DOMContentLoaded",()=>{
+    // Only execute if on the Terms & Conditions page
+    const isTermsPage = document.querySelector(".terms-hero");
+    if (!isTermsPage) return;
 
 /*==================================================
 HERO PARALLAX

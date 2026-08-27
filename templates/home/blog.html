@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}Blog | Magencyinfo — AI, Web Design & Digital Marketing Insights{% endblock %}
 {% block meta_description %}Read Magencyinfo's expert blog on AI development, web design, SEO, digital marketing, and technology trends. Practical insights for growing businesses.{% endblock %}
 
@@ -11,7 +16,8 @@ BLOG HERO
 ==========================================-->
 
 <section class="blog-hero">
-
+    <div class="blog-orb blog-orb-1"></div>
+    <div class="blog-orb blog-orb-2"></div>
     <div class="container">
 
         <div class="blog-hero-wrapper">
@@ -51,19 +57,14 @@ BLOG HERO
                     method="GET"
                     action="{% url 'blog' %}"
                     class="blog-search-form">
-
                     <input
                         type="text"
-                        name="search"
-                        value="{{ request.GET.search }}"
+                        name="q"
+                        value="{{ request.GET.q }}"
                         placeholder="Search articles...">
-
-                    <button>
-
+                    <button type="submit" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-
                     </button>
-
                 </form>
 
                 <!-- Stats -->
@@ -482,113 +483,58 @@ LATEST ARTICLES
                 <div class="sidebar-widget">
 
                     <h3>
-
-                        Search
-
-                    </h3>
-
+                <!-- Search -->
+                <div class="sidebar-widget">
+                    <h3>Search</h3>
                     <form
                         method="GET"
                         action="{% url 'blog' %}"
                         class="sidebar-search">
-
                         <input
                             type="text"
-                            name="search"
+                            name="q"
+                            value="{{ request.GET.q }}"
                             placeholder="Search article">
-
-                        <button>
-
+                        <button type="submit" aria-label="Search">
                             <i class="fa-solid fa-search"></i>
-
                         </button>
-
                     </form>
-
                 </div>
 
                 <!-- Latest -->
-
                 <div class="sidebar-widget">
-
-                    <h3>
-
-                        Latest Posts
-
-                    </h3>
-
-                    {% for latest in latest_posts %}
-
+                    <h3>Latest Posts</h3>
+                    {% for latest_post in latest %}
                     <a
-                        href="{% url 'blog_detail' latest.slug %}"
+                        href="{% url 'blog_detail' latest_post.slug %}"
                         class="sidebar-post">
-
                         <img
-                            src="{{ latest.image.url }}"
-                            alt="{{ latest.title }}">
-
+                            src="{{ latest_post.image.url }}"
+                            alt="{{ latest_post.title }}">
                         <div>
-
-                            <h4>
-
-                                {{ latest.title|truncatewords:6 }}
-
-                            </h4>
-
-                            <span>
-
-                                {{ latest.created_at|date:"M d, Y" }}
-
-                            </span>
-
+                            <h4>{{ latest_post.title|truncatewords:6 }}</h4>
+                            <span>{{ latest_post.created_at|date:"M d, Y" }}</span>
                         </div>
-
                     </a>
-
                     {% endfor %}
-
                 </div>
 
                 <!-- Popular -->
-
                 <div class="sidebar-widget">
-
-                    <h3>
-
-                        Popular Posts
-
-                    </h3>
-
-                    {% for blog in popular_posts %}
-
+                    <h3>Popular Posts</h3>
+                    {% for pop_post in popular %}
                     <a
-                        href="{% url 'blog_detail' blog.slug %}"
+                        href="{% url 'blog_detail' pop_post.slug %}"
                         class="sidebar-post">
-
                         <img
-                            src="{{ blog.image.url }}"
-                            alt="{{ blog.title }}">
-
+                            src="{{ pop_post.image.url }}"
+                            alt="{{ pop_post.title }}">
                         <div>
-
-                            <h4>
-
-                                {{ blog.title|truncatewords:6 }}
-
-                            </h4>
-
-                            <span>
-
-                                {{ blog.views }} Views
-
-                            </span>
-
+                            <h4>{{ pop_post.title|truncatewords:6 }}</h4>
+                            <span>{{ pop_post.views }} Views</span>
                         </div>
-
                     </a>
-
                     {% endfor %}
-
                 </div>
 
                 <!-- Categories -->

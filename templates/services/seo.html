@@ -1,1746 +1,477 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<!--=========================================
-                SEO HERO
-==========================================-->
 
-<section class="seo-hero-section">
+{% block title %}Search Engine Optimization (SEO) Services | Magencyinfo{% endblock %}
+
+{% block meta_description %}Rank #1 on Google and grow organic traffic with Magencyinfo. Professional local SEO, keyword strategy, link building, and audit reports.{% endblock %}
+
+{% block content %}
+
+<!--=========================================
+    SEO HERO
+    ==========================================-->
+<section class="svc-hero seo-service-hero">
+    <div class="svc-hero-bg">
+        <span class="svc-hero-blob svc-hero-blob-1"></span>
+        <span class="svc-hero-blob svc-hero-blob-2"></span>
+    </div>
 
     <div class="container">
-
-        <div class="seo-hero-wrapper">
-
-            <!--=================================
-                    LEFT CONTENT
-            ==================================-->
-
-            <div class="seo-hero-content">
-
-                <span class="seo-hero-tag">
-
+        <div class="svc-hero-wrapper">
+            <!-- Left Side Content -->
+            <div class="svc-hero-content seo-reveal seo-revealed">
+                <span class="svc-hero-badge">
                     <i class="fa-solid fa-chart-line"></i>
-
-                    #1 SEO Agency For Business Growth
-
+                    #1 SEO Agency For Growth
                 </span>
 
                 <h1>
-
                     Rank Higher On
-
-                    <span>
-
-                        Google
-
-                    </span>
-
-                    & Generate More Customers
-
+                    <span>Google Search</span>
                 </h1>
 
                 <p>
-
-                    Magencyinfo helps startups, local businesses and enterprises
-                    dominate search engines with data-driven SEO strategies,
-                    technical optimization, content marketing and high-quality
-                    link building that delivers measurable growth.
-
+                    We help startups, local brands, and enterprises dominate search engine rankings with data-driven SEO strategies, technical site audits, content marketing, and premium link building.
                 </p>
 
-                <!--=======================
-                        BUTTONS
-                ========================-->
+                <!-- Core Features -->
+                <div class="svc-hero-features">
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Technical Site Audits</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Keyword Intent Mapping</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>High-Authority Backlinks</span>
+                    </div>
+                    <div class="svc-hero-feature">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Content Strategy Plans</span>
+                    </div>
+                </div>
 
-                <div class="seo-hero-buttons">
-
-                    <a href="{% url 'booking' %}"
-
-                       class="seo-btn-primary">
-
+                <!-- CTA Buttons -->
+                <div class="svc-hero-buttons">
+                    <a href="{% url 'booking' %}" class="svc-btn-primary">
                         Get Free SEO Audit
-
-                    </a>
-
-                    <a href="{% url 'contact' %}"
-
-                       class="seo-btn-outline">
-
-                        Talk To SEO Expert
-
-                    </a>
-
-                </div>
-
-                <!--=======================
-                        STATS
-                ========================-->
-
-                <div class="seo-hero-stats">
-
-                    <div class="seo-stat-box">
-
-                        <h3>
-
-                            500+
-
-                        </h3>
-
-                        <span>
-
-                            Successful Projects
-
-                        </span>
-
-                    </div>
-
-                    <div class="seo-stat-box">
-
-                        <h3>
-
-                            98%
-
-                        </h3>
-
-                        <span>
-
-                            Client Satisfaction
-
-                        </span>
-
-                    </div>
-
-                    <div class="seo-stat-box">
-
-                        <h3>
-
-                            320%
-
-                        </h3>
-
-                        <span>
-
-                            Average Traffic Growth
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--=================================
-                    RIGHT IMAGE
-            ==================================-->
-
-            <div class="seo-hero-visual">
-
-                <!-- Analytics Card -->
-
-                
-
-                <!-- Google Ranking -->
-
-                
-
-                <!-- Keywords -->
-
-                
-                <!-- Hero Image -->
-
-                <div class="seo-main-image">
-
-                    <img
-
-                        src="{% static 'images/services/seo/hero.jpg' %}"
-
-                        alt="SEO Services"
-
-                    >
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-            SEO SERVICES
-==========================================-->
-
-<section class="seo-services-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                OUR SEO SERVICES
-
-            </span>
-
-            <h2>
-
-                Complete SEO Solutions For Every Business
-
-            </h2>
-
-            <p>
-
-                From technical optimization to local SEO, we help businesses
-                improve visibility, increase organic traffic and generate more
-                qualified leads.
-
-            </p>
-
-        </div>
-
-        <div class="seo-services-grid">
-
-            <!--=========================
-                    CARD 1
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                </div>
-
-                <h3>
-
-                    Technical SEO
-
-                </h3>
-
-                <p>
-
-                    Optimize your website architecture, Core Web Vitals,
-                    crawling and indexing for better rankings.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>Website Audit</li>
-
-                    <li>Core Web Vitals</li>
-
-                    <li>Schema Markup</li>
-
-                    <li>Speed Optimization</li>
-
-                </ul>
-
-                
-
-            </article>
-
-            <!--=========================
-                    CARD 2
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <span class="seo-service-tag">
-
-                    Popular
-
-                </span>
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-brands fa-google"></i>
-
-                </div>
-
-                <h3>
-
-                    Complete SEO
-
-                </h3>
-
-                <p>
-
-                    End-to-end SEO strategy including technical SEO,
-                    on-page, off-page and content optimization.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>Keyword Research</li>
-
-                    <li>On-Page SEO</li>
-
-                    <li>Off-Page SEO</li>
-
-                    <li>Monthly Reports</li>
-
-                </ul>
-
-                
-
-            </article>
-
-            <!--=========================
-                    CARD 3
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-solid fa-location-dot"></i>
-
-                </div>
-
-                <h3>
-
-                    Local SEO
-
-                </h3>
-
-                <p>
-
-                    Rank your business in Google Maps and local search
-                    results to attract nearby customers.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>Google Business</li>
-
-                    <li>Local Citations</li>
-
-                    <li>Maps Ranking</li>
-
-                    <li>Reviews</li>
-
-                </ul>
-
-                
-
-            </article>
-
-            <!--=========================
-                    CARD 4
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-solid fa-file-lines"></i>
-
-                </div>
-
-                <h3>
-
-                    Content Marketing
-
-                </h3>
-
-                <p>
-
-                    SEO-focused content that builds authority,
-                    increases traffic and improves conversions.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>SEO Blogs</li>
-
-                    <li>Landing Pages</li>
-
-                    <li>Content Strategy</li>
-
-                    <li>Content Calendar</li>
-
-                </ul>
-
-                
-
-            </article>
-
-            <!--=========================
-                    CARD 5
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-solid fa-link"></i>
-
-                </div>
-
-                <h3>
-
-                    Link Building
-
-                </h3>
-
-                <p>
-
-                    Build high-quality backlinks that improve your
-                    domain authority and search rankings.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>Guest Posting</li>
-
-                    <li>Authority Links</li>
-
-                    <li>Outreach</li>
-
-                    <li>Backlink Audit</li>
-
-                </ul>
-
-                
-
-            </article>
-
-            <!--=========================
-                    CARD 6
-            ==========================-->
-
-            <article class="seo-service-card">
-
-                <div class="seo-service-icon">
-
-                    <i class="fa-solid fa-chart-column"></i>
-
-                </div>
-
-                <h3>
-
-                    SEO Analytics
-
-                </h3>
-
-                <p>
-
-                    Track keyword rankings, traffic, conversions
-                    and ROI with detailed monthly reports.
-
-                </p>
-
-                <ul class="seo-service-features">
-
-                    <li>Google Analytics</li>
-
-                    <li>Search Console</li>
-
-                    <li>Monthly Reports</li>
-
-                    <li>Competitor Analysis</li>
-
-                </ul>
-
-                
-
-            </article>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-            WHY CHOOSE US
-==========================================-->
-
-<section class="seo-why-section">
-
-    <div class="container">
-
-        <div class="seo-why-grid">
-
-            <!--=================================
-                    LEFT IMAGE
-            =================================-->
-
-            <div class="seo-why-image">
-
-                <img
-
-                    src="{% static 'images/services/seo/why-seo.jpg' %}"
-
-                    alt="Why Choose M Agency"
-
-                >
-
-                <!-- Experience Card -->
-
-                <div class="seo-experience-card">
-
-                    <h2>
-
-                        5+
-
-                    </h2>
-
-                    <span>
-
-                        Years of SEO Excellence
-
-                    </span>
-
-                </div>
-
-            </div>
-
-            <!--=================================
-                    RIGHT CONTENT
-            =================================-->
-
-            <div class="seo-why-content">
-
-                <span>
-
-                    WHY Magencyinfo
-
-                </span>
-
-                <h2>
-
-                    Your Growth Partner For Long-Term SEO Success
-
-                </h2>
-
-                <p>
-
-                    At Magencyinfo, we don't just improve rankings—we build
-                    sustainable SEO strategies that generate qualified traffic,
-                    increase leads, and help your business grow consistently.
-                    Every campaign is backed by data, industry best practices,
-                    and continuous optimization.
-
-                </p>
-
-                <!--=============================
-                        BENEFITS
-                ==============================-->
-
-                <div class="seo-benefits-grid">
-
-                    <!-- Benefit -->
-
-                    <div class="seo-benefit-card">
-
-                        <div class="seo-benefit-icon">
-
-                            <i class="fa-solid fa-chart-line"></i>
-
-                        </div>
-
-                        <div class="seo-benefit-content">
-
-                            <h4>
-
-                                Proven Growth
-
-                            </h4>
-
-                            <p>
-
-                                Increase your organic traffic with
-                                result-driven SEO campaigns.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Benefit -->
-
-                    <div class="seo-benefit-card">
-
-                        <div class="seo-benefit-icon">
-
-                            <i class="fa-solid fa-user-group"></i>
-
-                        </div>
-
-                        <div class="seo-benefit-content">
-
-                            <h4>
-
-                                SEO Experts
-
-                            </h4>
-
-                            <p>
-
-                                Work with experienced SEO specialists
-                                focused on measurable business growth.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Benefit -->
-
-                    <div class="seo-benefit-card">
-
-                        <div class="seo-benefit-icon">
-
-                            <i class="fa-solid fa-shield-halved"></i>
-
-                        </div>
-
-                        <div class="seo-benefit-content">
-
-                            <h4>
-
-                                White Hat SEO
-
-                            </h4>
-
-                            <p>
-
-                                Safe and Google-approved SEO
-                                techniques for long-term rankings.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Benefit -->
-
-                    <div class="seo-benefit-card">
-
-                        <div class="seo-benefit-icon">
-
-                            <i class="fa-solid fa-file-lines"></i>
-
-                        </div>
-
-                        <div class="seo-benefit-content">
-
-                            <h4>
-
-                                Transparent Reports
-
-                            </h4>
-
-                            <p>
-
-                                Monthly reports showing rankings,
-                                traffic, conversions and ROI.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <!--=============================
-                        STATS
-                ==============================-->
-
-                <div class="seo-why-stats">
-
-                    <div class="seo-stat-item">
-
-                        <h3>
-
-                            500+
-
-                        </h3>
-
-                        <span>
-
-                            SEO Campaigns
-
-                        </span>
-
-                    </div>
-
-                    <div class="seo-stat-item">
-
-                        <h3>
-
-                            98%
-
-                        </h3>
-
-                        <span>
-
-                            Client Retention
-
-                        </span>
-
-                    </div>
-
-                    <div class="seo-stat-item">
-
-                        <h3>
-
-                            15M+
-
-                        </h3>
-
-                        <span>
-
-                            Organic Visitors
-
-                        </span>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-            SEO PROCESS
-==========================================-->
-
-<section class="seo-process-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                OUR SEO PROCESS
-
-            </span>
-
-            <h2>
-
-                Our Proven SEO Workflow
-
-            </h2>
-
-            <p>
-
-                We follow a transparent and data-driven SEO strategy that
-                helps businesses improve rankings, traffic and conversions.
-
-            </p>
-
-        </div>
-
-        <div class="seo-process-grid">
-
-            <!--=========================
-                    STEP 1
-            =========================-->
-
-            <div class="seo-process-card">
-
-                <div class="seo-process-number">
-
-                    01
-
-                </div>
-
-                <div class="seo-process-icon">
-
-                    <i class="fa-solid fa-magnifying-glass-chart"></i>
-
-                </div>
-
-                <h3>
-
-                    SEO Audit
-
-                </h3>
-
-                <p>
-
-                    Complete website analysis to identify technical,
-                    content and ranking issues.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 2
-            =========================-->
-
-            <div class="seo-process-card">
-
-                <div class="seo-process-number">
-
-                    02
-
-                </div>
-
-                <div class="seo-process-icon">
-
-                    <i class="fa-solid fa-key"></i>
-
-                </div>
-
-                <h3>
-
-                    Keyword Research
-
-                </h3>
-
-                <p>
-
-                    Find high-converting keywords with strong search
-                    volume and low competition.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 3
-            =========================-->
-
-            <div class="seo-process-card">
-
-                <div class="seo-process-number">
-
-                    03
-
-                </div>
-
-                <div class="seo-process-icon">
-
-                    <i class="fa-solid fa-gears"></i>
-
-                </div>
-
-                <h3>
-
-                    Optimization
-
-                </h3>
-
-                <p>
-
-                    Improve on-page SEO, technical SEO and website
-                    performance for better rankings.
-
-                </p>
-
-            </div>
-
-            <!--=========================
-                    STEP 4
-            =========================-->
-
-            <div class="seo-process-card">
-
-                <div class="seo-process-number">
-
-                    04
-
-                </div>
-
-                <div class="seo-process-icon">
-
-                    <i class="fa-solid fa-chart-line"></i>
-
-                </div>
-
-                <h3>
-
-                    Growth & Reporting
-
-                </h3>
-
-                <p>
-
-                    Monitor rankings, improve performance and deliver
-                    transparent monthly reports.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-            SEO TOOLS
-==========================================-->
-
-<section class="seo-tools-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                SEO TOOLS
-
-            </span>
-
-            <h2>
-
-                Industry-Leading Tools We Use
-
-            </h2>
-
-            <p>
-
-                We use trusted SEO platforms and analytics tools to
-                optimize every campaign and deliver measurable results.
-
-            </p>
-
-        </div>
-
-        <div class="seo-tools-grid">
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/google-search-console.svg' %}" alt="Google Search Console">
-
-                <h4>
-
-                    Search Console
-
-                </h4>
-
-                <span>
-
-                    Performance Tracking
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/google-analytics.svg' %}" alt="Google Analytics">
-
-                <h4>
-
-                    Google Analytics
-
-                </h4>
-
-                <span>
-
-                    Traffic Insights
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/semrush.svg' %}" alt="SEMrush">
-
-                <h4>
-
-                    SEMrush
-
-                </h4>
-
-                <span>
-
-                    Competitor Research
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/ahrefs.svg' %}" alt="Ahrefs">
-
-                <h4>
-
-                    Ahrefs
-
-                </h4>
-
-                <span>
-
-                    Backlink Analysis
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/screaming-frog.svg' %}" alt="Screaming Frog">
-
-                <h4>
-
-                    Screagmin Frog
-
-                </h4>
-
-                <span>
-
-                    Technical SEO
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/page-speed.svg' %}" alt="PageSpeed">
-
-                <h4>
-
-                    PageSpeed
-
-                </h4>
-
-                <span>
-
-                    Speed Optimization
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/google-keyword-planner.svg' %}" alt="Keyword Planner">
-
-                <h4>
-
-                    Keyword Planner
-
-                </h4>
-
-                <span>
-
-                    Keyword Research
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/google-trends.svg' %}" alt="Google Trends">
-
-                <h4>
-
-                    Google Trends
-
-                </h4>
-
-                <span>
-
-                    Search Trends
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/chatgpt.svg' %}" alt="AI SEO">
-
-                <h4>
-
-                    AI Optimization
-
-                </h4>
-
-                <span>
-
-                    Content Strategy
-
-                </span>
-
-            </div>
-
-            <!-- Tool -->
-
-            <div class="seo-tool-card"
-     style="display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            text-align:center;
-            padding:35px 25px;">
-
-                <img src="{% static 'images/services/seo/hotjar.svg' %}" alt="Hotjar">
-
-                <h4>
-
-                    Hotjar
-
-                </h4>
-
-                <span>
-
-                    User Behavior
-
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-<!--=========================================
-            CASE STUDIES
-==========================================-->
-
-<section class="seo-case-study-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                SUCCESS STORIES
-
-            </span>
-
-            <h2>
-
-                Real Results For Real Businesses
-
-            </h2>
-
-            <p>
-
-                Discover how our SEO strategies have helped businesses
-                improve rankings, increase traffic and generate more revenue.
-
-            </p>
-
-        </div>
-
-        <div class="seo-case-study-grid">
-
-            {% for case in seo_case_studies %}
-
-            <article class="seo-case-study-card">
-
-                <div class="seo-case-image">
-
-                    {% if case.image %}
-
-                    <img
-
-                        src="{{ case.image.url }}"
-
-                        alt="{{ case.title }}">
-
-                    {% else %}
-
-                    <img
-
-                        src="{% static 'images/case-study/default-case-study.webp' %}"
-
-                        alt="{{ case.title }}">
-
-                    {% endif %}
-
-                </div>
-
-                <div class="seo-case-content">
-
-                    <span>
-
-                        {{ case.category }}
-
-                    </span>
-
-                    <h3>
-
-                        {{ case.title }}
-
-                    </h3>
-
-                    <p>
-
-                        {{ case.short_description|truncatewords:18 }}
-
-                    </p>
-
-                    <ul>
-
-                    {% for tag in case.tag_list %}
-
-    <li>
-
-        {{ tag }}
-
-    </li>
-
-    {% endfor %}
-
-</ul>
-                    
-
-                    <a href="{% url 'case_study_detail' case.slug %}">
-
-                        Read Case Study
-
                         <i class="fa-solid fa-arrow-right"></i>
-
                     </a>
-
+                    <a href="{% url 'contact' %}" class="svc-btn-secondary">
+                        Talk To SEO Expert
+                    </a>
                 </div>
+            </div>
 
-            </article>
+            <!-- Right Side Image Box with Floating Cards -->
+            <div class="svc-hero-visual seo-reveal seo-revealed">
+                <div class="svc-hero-image-box">
+                    <img src="{% static 'images/services/seo/hero-dashboard.jpg' %}" alt="SEO Analytics Dashboard mockup" class="svc-hero-image">
 
+                    <!-- Floating Badge Card 1 -->
+                    <div class="svc-floating-card svc-float-1">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-chart-simple"></i>
+                        </div>
+                        <div>
+                            <h5>Rankings</h5>
+                            <p>Page 1 Positions</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge Card 2 -->
+                    <div class="svc-floating-card svc-float-2">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <div>
+                            <h5>Keywords</h5>
+                            <p>High Search Volume</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge Card 3 -->
+                    <div class="svc-floating-card svc-float-3">
+                        <div class="svc-floating-card-icon">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <div>
+                            <h5>Backlinks</h5>
+                            <p>Authority Outreach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    TRUST STATS STRIP
+    ==========================================-->
+<section class="svc-stats-strip">
+    <div class="container">
+        <div class="svc-stats-wrapper">
+            <div class="svc-stat-item">
+                <h3 class="seo-counter" data-target="500" data-suffix="+">0+</h3>
+                <p>Successful Projects</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="seo-counter" data-target="98" data-suffix="%">0%</h3>
+                <p>Client Satisfaction</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="seo-counter" data-target="320" data-suffix="%">0%</h3>
+                <p>Average Traffic Growth</p>
+            </div>
+            <div class="svc-stat-item">
+                <h3 class="seo-counter" data-target="10" data-suffix="M+">0M+</h3>
+                <p>Revenue Generated</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    WHAT WE OFFER (SERVICES)
+    ==========================================-->
+<section class="svc-section">
+    <div class="container">
+        <div class="svc-heading seo-reveal">
+            <span class="svc-section-tag">Our Offerings</span>
+            <h2>Comprehensive SEO <span>Marketing Strategies</span></h2>
+            <p>We execute data-backed SEO routines to boost search visibility and acquire qualified organic traffic.</p>
+        </div>
+
+        <div class="svc-grid-3 seo-reveal">
+            <!-- Card 1 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h3>Keyword Research</h3>
+                <p>Finding high-intent terms your customers search, mapping transactional keywords to match user search intent.</p>
+                <ul>
+                    <li>Search Intent Mapping</li>
+                    <li>Competitor Keyword Audits</li>
+                    <li>Long-Tail Targets</li>
+                </ul>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>Technical SEO</h3>
+                <p>Optimizing sitemaps, robots tags, clean URL slugs, structured schema markups, and core site speed parameters.</p>
+                <ul>
+                    <li>Core Web Vitals Boost</li>
+                    <li>Sitemap Formatting</li>
+                    <li>Mobile Crawl Diagnostics</li>
+                </ul>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-file-pen"></i>
+                </div>
+                <h3>On-Page Optimization</h3>
+                <p>Structuring proper header hierarchies, keyword densities, internal page-link structures, and image alt descriptions.</p>
+                <ul>
+                    <li>Header Tags Config</li>
+                    <li>Meta Tags Audit</li>
+                    <li>Image Optimizations</li>
+                </ul>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <h3>Link Building</h3>
+                <p>Acquiring clean guest posts, directory mentions, and high-authority contextual links to build domain trust.</p>
+                <ul>
+                    <li>Guest Blogging Outreach</li>
+                    <li>Broken Link Building</li>
+                    <li>Brand Mentions</li>
+                </ul>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </div>
+                <h3>Local SEO</h3>
+                <p>Optimizing Google Business profiles, tracking local citations, and boosting localized visibility for search queries.</p>
+                <ul>
+                    <li>Map Pack Listings</li>
+                    <li>Local Citations</li>
+                    <li>Review Management</li>
+                </ul>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="svc-card">
+                <div class="svc-icon-box">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <h3>Analytics Reports</h3>
+                <p>Tracking organic keyword metrics, traffic trends, conversion ratios, and technical crawling performance monthly.</p>
+                <ul>
+                    <li>Keyword Position Tracking</li>
+                    <li>Search Console Reports</li>
+                    <li>Monthly Performance Audits</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    OUR SEO PROCESS
+    ==========================================-->
+<section class="svc-section svc-section--alt">
+    <div class="container">
+        <div class="svc-heading seo-reveal">
+            <span class="svc-section-tag">Our Process</span>
+            <h2>How We Optimize <span>Your Search Presence</span></h2>
+            <p>Our structured workflow takes your platform from rank-zero to top search result rankings.</p>
+        </div>
+
+        <div class="svc-process-grid seo-reveal">
+            <!-- Step 1 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">01</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+                <h3>SEO Audit</h3>
+                <p>Comprehensive crawling of technical bugs, layout defects, and indexing errors.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">02</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <h3>Keyword Map</h3>
+                <p>Identify high-volume, low-difficulty search queries matching visitor intent.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">03</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-pencil"></i>
+                </div>
+                <h3>On-Page Tuning</h3>
+                <p>Optimize body structures, meta descriptions, title cards, and content.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">04</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-wrench"></i>
+                </div>
+                <h3>Technical Fixes</h3>
+                <p>Improve page load latency, file weights, schemas, and indexing problems.</p>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">05</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h3>Authority Link</h3>
+                <p>Outreach and safe white-hat backlink building to expand domain authority.</p>
+            </div>
+
+            <!-- Step 6 -->
+            <div class="svc-process-card">
+                <div class="svc-process-number-wrapper">
+                    <span class="svc-process-number">06</span>
+                </div>
+                <div class="svc-process-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3>Tracking</h3>
+                <p>Continuous monitoring of position tracking and monthly organic charts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--=========================================
+    FEATURED PROJECTS / CASE STUDIES
+    ==========================================-->
+<section class="svc-section" id="portfolio">
+    <div class="container">
+        <div class="svc-heading seo-reveal">
+            <span class="svc-section-tag">Case Studies</span>
+            <h2>Real Results <span>For Real Brands</span></h2>
+            <p>Explore some of our recent SEO campaign achievements and organic growth metrics.</p>
+        </div>
+
+        <div class="svc-portfolio-grid seo-reveal">
+            {% for case in seo_case_studies %}
+            <div class="svc-portfolio-card" onclick="window.location.href='{% url 'case_study_detail' case.slug %}'">
+                {% if case.image %}
+                <img src="{{ case.image.url }}" alt="{{ case.title }}">
+                {% else %}
+                <img src="{% static 'images/case-study/default-case-study.webp' %}" alt="{{ case.title }}">
+                {% endif %}
+                <div class="svc-portfolio-overlay">
+                    <span>{{ case.category }}</span>
+                    <h3>{{ case.title }}</h3>
+                </div>
+            </div>
             {% empty %}
-
-            <div class="seo-empty">
-
-                <h3>
-
-                    No SEO Case Studies Available
-
-                </h3>
-
+            <!-- Fallback Mockups -->
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/seo/portfolio1.jpg' %}" alt="SaaS SEO Growth">
+                <div class="svc-portfolio-overlay">
+                    <span>SaaS Organic</span>
+                    <h3>320% Traffic Scale</h3>
+                </div>
             </div>
-
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/seo/portfolio2.jpg' %}" alt="eCommerce SEO Growth">
+                <div class="svc-portfolio-overlay">
+                    <span>E-Commerce SEO</span>
+                    <h3>Organic Revenue Growth</h3>
+                </div>
+            </div>
+            <div class="svc-portfolio-card">
+                <img src="{% static 'images/services/seo/portfolio3.jpg' %}" alt="Local Business Map Pack">
+                <div class="svc-portfolio-overlay">
+                    <span>Local SEO</span>
+                    <h3>Top 3 Map Rankings</h3>
+                </div>
+            </div>
             {% endfor %}
-
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-            SEO PRICING
-==========================================-->
-
-<section class="seo-pricing-section">
-
+    FAQ
+    ==========================================-->
+<section class="svc-section svc-section--alt">
     <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                PRICING
-
-            </span>
-
-            <h2>
-
-                Choose The Perfect SEO Plan
-
-            </h2>
-
+        <div class="svc-heading seo-reveal">
+            <span class="svc-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Find answers to common questions about organic search visibility and rankings.</p>
         </div>
 
-        <div class="seo-pricing-grid">
-
-            <!-- Starter -->
-
-            <div class="seo-price-card">
-
-                <h3>
-
-                    Starter
-
-                </h3>
-
-                <h2>
-
-                    ₹15K
-
-                </h2>
-
-                <ul>
-
-                    <li>✔ Website Audit</li>
-
-                    <li>✔ Keyword Research</li>
-
-                    <li>✔ On-Page SEO</li>
-
-                    <li>✔ Monthly Report</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}">
-
-                    Get Started
-
-                </a>
-
-            </div>
-
-            <!-- Professional -->
-
-            <div class="seo-price-card">
-
-                <span class="seo-popular" style="margin-top:5%;">
-
-                    Most Popular
-
-                </span>
-
-                <h3>
-
-                    Professional
-
-                </h3>
-
-                <h2>
-
-                    ₹35K
-
-                </h2>
-
-                <ul>
-
-                    <li>✔ Complete SEO</li>
-
-                    <li>✔ Local SEO</li>
-
-                    <li>✔ Content Marketing</li>
-
-                    <li>✔ Link Building</li>
-
-                    <li>✔ Monthly Reports</li>
-
-                    <li>✔ Dedicated Manager</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}">
-
-                    Choose Plan
-
-                </a>
-
-            </div>
-
-            <!-- Enterprise -->
-
-            <div class="seo-price-card">
-
-                <h3>
-
-                    Enterprise
-
-                </h3>
-
-                <h2>
-
-                    Custom
-
-                </h2>
-
-                <ul>
-
-                    <li>✔ Enterprise SEO</li>
-
-                    <li>✔ International SEO</li>
-
-                    <li>✔ Unlimited Keywords</li>
-
-                    <li>✔ Weekly Meetings</li>
-
-                </ul>
-
-                <a href="{% url 'contact' %}">
-
-                    Contact Us
-
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!--=========================================
-            TESTIMONIALS
-==========================================-->
-
-<section class="seo-testimonial-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                CLIENT REVIEWS
-
-            </span>
-
-            <h2>
-
-                What Our Clients Say
-
-            </h2>
-
-        </div>
-
-        <div class="seo-testimonial-grid">
-
-            <div class="seo-testimonial-card">
-
-                <div class="seo-stars">
-
-                    ★★★★★
-
+        <div class="svc-faq-wrapper seo-reveal">
+            <!-- FAQ 1 -->
+            <div class="svc-faq-item seo-faq-item active">
+                <button class="svc-faq-question seo-faq-question">
+                    <span>How long does it take to see SEO results?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer seo-faq-answer">
+                    <p>Typically, noticeable organic visibility changes require 3–6 months. SEO is a long-term strategy built on domain trust, index optimization, and content relevance.</p>
                 </div>
-
-                <p>
-
-                    Magencyinfo transformed our online presence.
-                    We now rank on the first page for our
-                    most competitive keywords.
-
-                </p>
-
-                <h4>
-
-                    Rahul Sharma
-
-                </h4>
-
-                <span>
-
-                    CEO • Fashion Store
-
-                </span>
-
             </div>
 
-            <div class="seo-testimonial-card">
-
-                <div class="seo-stars">
-
-                    ★★★★★
-
+            <!-- FAQ 2 -->
+            <div class="svc-faq-item seo-faq-item">
+                <button class="svc-faq-question seo-faq-question">
+                    <span>Do you use white-hat link building?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer seo-faq-answer">
+                    <p>Yes. We strictly execute manual outreach guest blogging, authority references, and local directory listings, avoiding risky private blog networks (PBNs) or spam links.</p>
                 </div>
-
-                <p>
-
-                    Excellent communication, transparent reports
-                    and consistent traffic growth every month.
-
-                </p>
-
-                <h4>
-
-                    Priya Singh
-
-                </h4>
-
-                <span>
-
-                    Healthcare Business
-
-                </span>
-
             </div>
 
-            <div class="seo-testimonial-card">
-
-                <div class="seo-stars">
-
-                    ★★★★★
-
+            <!-- FAQ 3 -->
+            <div class="svc-faq-item seo-faq-item">
+                <button class="svc-faq-question seo-faq-question">
+                    <span>What metrics do you track monthly?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer seo-faq-answer">
+                    <p>We analyze organic keyword ranking tracks, average search position, total click volume inside Search Console, Google Analytics goals, and crawling warnings.</p>
                 </div>
-
-                <p>
-
-                    Their technical SEO and content strategy
-                    significantly improved our organic revenue.
-
-                </p>
-
-                <h4>
-
-                    Aman Verma
-
-                </h4>
-
-                <span>
-
-                    eCommerce Owner
-
-                </span>
-
             </div>
 
+            <!-- FAQ 4 -->
+            <div class="svc-faq-item seo-faq-item">
+                <button class="svc-faq-question seo-faq-question">
+                    <span>Do you fix core site speed?</span>
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+                <div class="svc-faq-answer seo-faq-answer">
+                    <p>Yes, as part of our technical SEO optimization phase, we compress static file sizes, optimize code structure, configure caching, and format sitemaps.</p>
+                </div>
+            </div>
         </div>
-
     </div>
-
 </section>
 
 <!--=========================================
-            FAQ
-==========================================-->
-
-<section class="seo-faq-section">
-
-    <div class="container">
-
-        <div class="seo-section-heading">
-
-            <span>
-
-                FAQ
-
-            </span>
-
-            <h2>
-
-                Frequently Asked Questions
-
-            </h2>
-
-        </div>
-
-        <div class="seo-faq-wrapper">
-
-            <details>
-
-                <summary>
-
-                    How long does SEO take?
-
-                </summary>
-
-                <p>
-
-                    Most businesses begin to see noticeable improvements
-                    within 3–6 months, depending on competition,
-                    website quality and industry.
-
-                </p>
-
-            </details>
-
-            <details>
-
-                <summary>
-
-                    Do you guarantee first-page rankings?
-
-                </summary>
-
-                <p>
-
-                    We follow ethical SEO practices and focus on
-                    sustainable long-term growth. No agency can
-                    honestly guarantee specific rankings.
-
-                </p>
-
-            </details>
-
-            <details>
-
-                <summary>
-
-                    Will I receive monthly reports?
-
-                </summary>
-
-                <p>
-
-                    Yes. Every SEO package includes transparent
-                    monthly reporting with rankings, traffic,
-                    conversions and recommendations.
-
-                </p>
-
-            </details>
-
-            <details>
-
-                <summary>
-
-                    Do you provide Local SEO?
-
-                </summary>
-
-                <p>
-
-                    Yes. We optimize your Google Business Profile,
-                    local citations and location-based keywords.
-
-                </p>
-
-            </details>
-
-        </div>
-
+    FINAL CTA
+    ==========================================-->
+<section class="svc-cta">
+    <div class="svc-cta-bg">
+        <span class="svc-cta-blob"></span>
     </div>
 
-</section>
-
-<!--=========================================
-            CTA
-==========================================-->
-
-<section class="seo-cta-section">
-
     <div class="container">
+        <div class="svc-cta-wrapper seo-reveal">
+            <span class="svc-section-tag">Let's Work Together</span>
+            <h2>Ready to Dominate Search <span>Engine Rankings?</span></h2>
+            <p>Schedule an organic strategy call with our SEO experts to audit your current search presence.</p>
 
-        <div class="seo-cta-box">
-
-            <span>
-
-                READY TO GROW?
-
-            </span>
-
-            <h2>
-
-                Let's Rank Your Business Higher
-
-            </h2>
-
-            <p>
-
-                Get a free SEO consultation and discover how
-                Magencyinfo can help you generate more traffic,
-                leads and sales.
-
-            </p>
-
-            <div class="seo-cta-buttons">
-
-                <a href="{% url 'booking' %}"
-
-                   class="seo-btn-primary">
-
-                    Get Free SEO Audit
-
-                </a>
-
-                <a href="{% url 'contact' %}"
-
-                   class="seo-btn-outline">
-
-                    Talk To An Expert
-
-                </a>
-
+            <div class="svc-cta-features">
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Free Index Crawl Audit</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>White-Hat Outreach Links</span>
+                </div>
+                <div class="svc-cta-feature">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Search Console Map Setup</span>
+                </div>
             </div>
 
+            <div class="svc-cta-buttons">
+                <a href="{% url 'booking' %}" class="svc-btn-primary">
+                    Request Free Audit
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'contact' %}" class="svc-btn-secondary">
+                    Talk To SEO Expert
+                </a>
+            </div>
         </div>
-
     </div>
-
 </section>
-
 
 {% endblock %}

@@ -1,371 +1,436 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/pricing.css' %}?v=1.0">
+{% endblock %}
+
+
 {% block title %}Pricing & Packages | Magencyinfo — Transparent Digital Solutions{% endblock %}
 {% block meta_description %}View Magencyinfo's transparent pricing for web development, AI automation, SEO, digital marketing, and mobile app development. Plans for every budget.{% endblock %}
 
 {% block content %}
 
-<!-- ===========================
-      PRICING SECTION
-=========================== -->
+<!-- =============================================
+     PRICING HERO
+============================================= -->
+<section class="pr-hero">
+    <div class="pr-hero-bg"></div>
+    <div class="pr-orb pr-orb-1"></div>
+    <div class="pr-orb pr-orb-2"></div>
+    <div class="pr-orb pr-orb-3"></div>
 
-<section class="pricing-section">
+    <div class="pr-container">
+        <div class="pr-hero-inner">
 
-    <div class="container">
-
-        <div class="pricing-header">
-
-            <span class="pricing-badge">
-                OUR PRICING
+            <span class="pr-badge">
+                <span class="pr-badge-dot"></span>
+                Transparent Pricing
             </span>
 
-            <h2>
-                Pricing Plans For Every
-                <span>Digital Service</span>
-            </h2>
+            <h1 class="pr-hero-title">
+                Simple, Honest
+                <span class="pr-gradient-text">Pricing Plans</span>
+            </h1>
 
-            <p>
-                Flexible pricing tailored for startups, businesses and enterprises.
-                Choose the perfect service package for your business growth.
+            <p class="pr-hero-desc">
+                No hidden fees, no surprises. Choose the service package that fits
+                your business and budget. All plans include dedicated support.
             </p>
+
+            <!-- Toggle -->
+            <div class="pr-toggle-wrap">
+                <span class="pr-toggle-label" id="labelMonthly">Monthly</span>
+                <button class="pr-toggle" id="billingToggle" aria-label="Toggle billing period">
+                    <span class="pr-toggle-thumb"></span>
+                </button>
+                <span class="pr-toggle-label" id="labelAnnual">Annual</span>
+                <span class="pr-save-badge">Save 20%</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- =============================================
+     PRICING CARDS SLIDER
+============================================= -->
+<section class="pr-cards-section">
+    <div class="pr-container">
+
+        <!-- Slider Wrapper -->
+        <div class="pr-slider-container">
+            
+            <div class="pr-slider">
+                <div class="pr-track" id="pricingTrack">
+
+                    <!-- Card 1: Web Development -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-blue">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">Web Development</h3>
+                            <p class="pr-card-sub">Responsive & Scalable Websites</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="10,000" data-annual="8,000">10,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Responsive Website Design</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Admin Dashboard</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Contact & Lead Forms</li>
+                            <li><i class="fa-solid fa-circle-check"></i> SEO Friendly Structure</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 30 Days Support</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: Mobile App (POPULAR) -->
+                    <div class="pr-card pr-card-popular active">
+                        <div class="pr-popular-badge">
+                            <i class="fa-solid fa-star"></i> Most Popular
+                        </div>
+                        <div class="pr-card-icon pr-icon-purple">
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">Mobile App</h3>
+                            <p class="pr-card-sub">Android & iOS Applications</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="40,000" data-annual="32,000">40,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Android & iOS App</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Admin Panel</li>
+                            <li><i class="fa-solid fa-circle-check"></i> API Integration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Play Store Upload</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 60 Days Support</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn pr-btn-primary">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: AI Development -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-cyan">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">AI Development</h3>
+                            <p class="pr-card-sub">Smart AI-Powered Solutions</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="50,000" data-annual="40,000">50,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Custom Chatbot</li>
+                            <li><i class="fa-solid fa-circle-check"></i> AI Automation</li>
+                            <li><i class="fa-solid fa-circle-check"></i> OpenAI Integration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Vector Database</li>
+                            <li><i class="fa-solid fa-circle-check"></i> API Development</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: UI/UX Design -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-pink">
+                            <i class="fa-solid fa-pen-nib"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">UI / UX Design</h3>
+                            <p class="pr-card-sub">User Interface & Prototyping</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="8,000" data-annual="6,400">8,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Figma Design</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Prototype</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Mobile UI</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Desktop UI</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Unlimited Revisions</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 5: E-Commerce -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-green">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">E-Commerce</h3>
+                            <p class="pr-card-sub">Full-Featured Online Stores</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="50,000" data-annual="40,000">50,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Product Management</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Payment Gateway</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Order System</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Coupons System</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Admin Dashboard</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 6: SEO Optimization -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-orange">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">SEO Optimization</h3>
+                            <p class="pr-card-sub">Rank Higher on Search Engines</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="10,000" data-annual="8,000">10,000</span>
+                                <span class="pr-period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> On Page SEO</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Off Page SEO</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Technical SEO</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Google Ranking</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Monthly Report</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 7: Digital Marketing -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-red">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">Digital Marketing</h3>
+                            <p class="pr-card-sub">Social Media & Lead Campaigns</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="20,000" data-annual="16,000">20,000</span>
+                                <span class="pr-period">/month</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> Meta Ads</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Google Ads</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Content Marketing</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Social Media Management</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Lead Generation</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 8: Cloud & DevOps -->
+                    <div class="pr-card">
+                        <div class="pr-card-icon pr-icon-teal">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <div class="pr-card-top">
+                            <h3 class="pr-card-title">Cloud & DevOps</h3>
+                            <p class="pr-card-sub">AWS Deployment & Automation</p>
+                            <div class="pr-price-wrap">
+                                <span class="pr-currency">₹</span>
+                                <span class="pr-amount" data-monthly="40,000" data-annual="32,000">40,000</span>
+                                <span class="pr-period">/project</span>
+                            </div>
+                        </div>
+                        <ul class="pr-features">
+                            <li><i class="fa-solid fa-circle-check"></i> AWS Deployment</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Docker Setup</li>
+                            <li><i class="fa-solid fa-circle-check"></i> CI/CD Pipeline</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Nginx & SSL Configuration</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Server Monitoring</li>
+                        </ul>
+                        <a href="{% url 'contact' %}" class="pr-btn">
+                            Get Quote <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="pr-arrow pr-arrow-left" id="prevSlide" aria-label="Previous service">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="pr-arrow pr-arrow-right" id="nextSlide" aria-label="Next service">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
         </div>
 
+        <!-- Slider Dots indicator -->
+        <div class="pr-dots" id="sliderDots"></div>
 
-        
+        <!-- Trust Bar -->
+        <div class="pr-trust-bar">
+            <div class="pr-trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>100% Secure Payment</span>
+            </div>
+            <div class="pr-trust-divider"></div>
+            <div class="pr-trust-item">
+                <i class="fa-solid fa-rotate-left"></i>
+                <span>Money-Back Guarantee</span>
+            </div>
+            <div class="pr-trust-divider"></div>
+            <div class="pr-trust-item">
+                <i class="fa-solid fa-headset"></i>
+                <span>24/7 Dedicated Support</span>
+            </div>
+            <div class="pr-trust-divider"></div>
+            <div class="pr-trust-item">
+                <i class="fa-solid fa-certificate"></i>
+                <span>Certified Professionals</span>
+            </div>
+        </div>
 
+    </div>
+</section>
 
-        <!-- Slider -->
+<!-- =============================================
+     FAQ SECTION
+============================================= -->
+<section class="pr-faq-section">
+    <div class="pr-container">
 
-        <div class="pricing-slider">
+        <div class="pr-faq-header">
+            <span class="pr-section-tag">
+                <i class="fa-solid fa-circle-question"></i> FAQ
+            </span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Everything you need to know about our pricing and services.</p>
+        </div>
 
-            <div class="pricing-track" id="pricingTrack">
+        <div class="pr-faq-grid">
 
-                <!-- ================= Card 1 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        💻
-                    </div>
-
-                    <h3>Web Development</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹10,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Responsive Website</li>
-
-                        <li>✔ Admin Dashboard</li>
-
-                        <li>✔ Contact Forms</li>
-
-                        <li>✔ SEO Friendly</li>
-
-                        <li>✔ 30 Days Support</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>Are there any hidden fees?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>No hidden fees whatsoever. The price you see is what you pay. We believe in complete transparency with our clients.</p>
                 </div>
+            </div>
 
-
-                <!-- ================= Card 2 ================= -->
-
-                <div class="pricing-card active">
-
-                    <span class="popular">
-                        MOST POPULAR
-                    </span>
-
-                    <div class="service-icon">
-                        📱
-                    </div>
-
-                    <h3>Mobile App</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹40,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Android App</li>
-
-                        <li>✔ iOS Ready</li>
-
-                        <li>✔ Admin Panel</li>
-
-                        <li>✔ API Integration</li>
-
-                        <li>✔ Play Store Upload</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>Can I customize a package?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>Absolutely! All our packages are fully customizable. Contact us and we'll build a solution tailored specifically for your business needs and budget.</p>
                 </div>
+            </div>
 
-
-                <!-- ================= Card 3 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        🤖
-                    </div>
-
-                    <h3>AI Development</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹50,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Chatbot</li>
-
-                        <li>✔ AI Automation</li>
-
-                        <li>✔ OpenAI Integration</li>
-
-                        <li>✔ Vector Database</li>
-
-                        <li>✔ API Development</li>
-
-                    </ul>
-
-                    <a href="#" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>We accept all major payment methods including UPI, bank transfer, credit/debit cards, and international wire transfers.</p>
                 </div>
+            </div>
 
-
-                <!-- ================= Card 4 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        🎨
-                    </div>
-
-                    <h3>UI / UX Design</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹8,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Figma Design</li>
-
-                        <li>✔ Prototype</li>
-
-                        <li>✔ Mobile UI</li>
-
-                        <li>✔ Desktop UI</li>
-
-                        <li>✔ Unlimited Revision</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>Do you offer refunds?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>Yes, we offer a satisfaction guarantee. If you're not happy with our work within the first 14 days, we'll either fix it or offer a full refund.</p>
                 </div>
+            </div>
 
-
-                <!-- ================= Card 5 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        🛒
-                    </div>
-
-                    <h3>E-Commerce</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹50,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Product Management</li>
-
-                        <li>✔ Payment Gateway</li>
-
-                        <li>✔ Orders</li>
-
-                        <li>✔ Coupons</li>
-
-                        <li>✔ Admin Dashboard</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>How long does a project take?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>Timelines vary by project. A basic website takes 1–2 weeks, mobile apps take 4–8 weeks, and AI solutions can take 6–12 weeks depending on complexity.</p>
                 </div>
+            </div>
 
-
-                <!-- ================= Card 6 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        📈
-                    </div>
-
-                    <h3>SEO Optimization</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹10,000</div>
-
-                    <ul>
-
-                        <li>✔ On Page SEO</li>
-
-                        <li>✔ Off Page SEO</li>
-
-                        <li>✔ Technical SEO</li>
-
-                        <li>✔ Google Ranking</li>
-
-                        <li>✔ Monthly Report</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
+            <div class="pr-faq-item">
+                <button class="pr-faq-q" aria-expanded="false">
+                    <span>What does ongoing support include?</span>
+                    <i class="fa-solid fa-chevron-down pr-faq-icon"></i>
+                </button>
+                <div class="pr-faq-a">
+                    <p>Support includes bug fixes, minor feature updates, performance monitoring, security patches, and priority email/chat response within 24 hours.</p>
                 </div>
-
-
-                <!-- ================= Card 7 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        📣
-                    </div>
-
-                    <h3>Digital Marketing</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹20,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ Meta Ads</li>
-
-                        <li>✔ Google Ads</li>
-
-                        <li>✔ Content Marketing</li>
-
-                        <li>✔ Social Media</li>
-
-                        <li>✔ Lead Generation</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
-                </div>
-
-
-                <!-- ================= Card 8 ================= -->
-
-                <div class="pricing-card">
-
-                    <div class="service-icon">
-                        ☁️
-                    </div>
-
-                    <h3>Cloud & DevOps</h3>
-
-                    <h4>Starting at</h4>
-
-                    <div class="price">
-                        ₹40,000
-                    </div>
-
-                    <ul>
-
-                        <li>✔ AWS Deployment</li>
-
-                        <li>✔ Docker</li>
-
-                        <li>✔ CI/CD</li>
-
-                        <li>✔ Nginx Setup</li>
-
-                        <li>✔ Server Monitoring</li>
-
-                    </ul>
-
-                    <a href="{% url 'contact' %}" class="pricing-btn">
-                        Get Quote
-                    </a>
-
-                </div>
-
             </div>
 
         </div>
 
-        <!-- Bottom Buttons -->
- 
-        <div class="bottom-buttons">
-
-            <button class="prev-btn">
-                ← Previous
-            </button>
-
-            <button class="next-btn">
-                Next →
-            </button>
-
-        </div>
-
     </div>
-
 </section>
 
+<!-- =============================================
+     CTA SECTION
+============================================= -->
+<section class="pr-cta-section">
+    <div class="pr-orb pr-cta-orb-1"></div>
+    <div class="pr-orb pr-cta-orb-2"></div>
+    <div class="pr-container">
+        <div class="pr-cta-inner">
+            <div class="pr-cta-icon">
+                <i class="fa-solid fa-rocket"></i>
+            </div>
+            <h2>Ready to Start Your <span>Project?</span></h2>
+            <p>Book a free 30-minute consultation and let's build something amazing together.</p>
+            <div class="pr-cta-btns">
+                <a href="{% url 'booking' %}" class="pr-cta-btn-primary">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Book Free Consultation
+                </a>
+                <a href="{% url 'contact' %}" class="pr-cta-btn-outline">
+                    <i class="fa-solid fa-envelope"></i>
+                    Send a Message
+                </a>
+            </div>
+            <div class="pr-cta-trust">
+                <span><i class="fa-solid fa-check"></i> No commitment required</span>
+                <span><i class="fa-solid fa-check"></i> Free project estimate</span>
+                <span><i class="fa-solid fa-check"></i> Response within 2 hours</span>
+            </div>
+        </div>
+    </div>
+</section>
 
-{% endblock %} 
+{% endblock %}
+
 {% block extra_js %}
-
-<script src="{% static 'js/pricing.js' %}"></script>
-
 {% endblock %}
