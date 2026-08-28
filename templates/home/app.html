@@ -2,102 +2,434 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'css/app.css' %}?v=1.0">
+<link rel="stylesheet" href="{% static 'css/app.css' %}?v=1.1">
 {% endblock %}
 
-
-{% block title %}Blog | Magencyinfo — AI, Web Design & Digital Marketing Insights{% endblock %}
-{% block meta_description %}Read Magencyinfo's expert blog on AI development, web design, SEO, digital marketing, and technology trends. Practical insights for growing businesses.{% endblock %}
+{% block title %}Mobile App Development Services | Android & iOS Apps | Magencyinfo{% endblock %}
+{% block meta_description %}Design, build, and deploy premium iOS, Android, and Cross-Platform (Flutter, React Native) mobile applications. Calculate your app budget with our interactive estimator.{% endblock %}
 
 {% block content %}
 
-<section class="coming-soon-section">
+<!-- ==========================================
+            MOBILE HERO SECTION
+=========================================== -->
+<section class="app-hero">
+    <div class="app-hero-glow"></div>
+    <div class="app-container">
+        <div class="app-hero-grid">
+            <!-- Left: Hero Text -->
+            <div class="app-hero-content">
+                <span class="app-badge">
+                    <i class="fa-solid fa-mobile-screen-button"></i> Premium App Engineering
+                </span>
+                <h1>Build Scalable & <br><span>Stunning Mobile Apps</span></h1>
+                <p>
+                    We design and develop high-performance, custom mobile applications for iOS and Android. From native Swift & Kotlin development to powerful cross-platform Flutter engines, we turn your app ideas into scalable business realities.
+                </p>
 
-    <div class="coming-soon-container">
-
-        <div class="coming-soon-content">
-
-            <span class="coming-badge">
-                🚀 Mobile App Development
-            </span>
-
-            <h1>
-                Our Mobile App Development
-                <span>Service Is Coming Soon</span>
-            </h1>
-
-            <p>
-                We're building a premium mobile app development service to help
-                businesses launch fast, scalable, and user-friendly Android and
-                iOS applications. Stay tuned for something amazing.
-            </p>
-
-            <div class="coming-features">
-
-                <div class="feature-item">
-                    ✅ Android App Development
+                <div class="app-hero-bullets">
+                    <div class="bullet-item"><i class="fa-solid fa-circle-check"></i> Clean architecture</div>
+                    <div class="bullet-item"><i class="fa-solid fa-circle-check"></i> High-speed load times</div>
+                    <div class="bullet-item"><i class="fa-solid fa-circle-check"></i> Google/Apple Store deployment</div>
+                    <div class="bullet-item"><i class="fa-solid fa-circle-check"></i> UI/UX micro-interactions</div>
                 </div>
 
-                <div class="feature-item">
-                    ✅ iOS App Development
+                <div class="app-hero-ctas">
+                    <a href="#calculator" class="app-btn-primary">Calculate App Cost <i class="fa-solid fa-calculator"></i></a>
+                    <a href="#portfolio" class="app-btn-secondary">View Case Studies</a>
                 </div>
-
-                <div class="feature-item">
-                    ✅ Flutter Development
-                </div>
-
-                <div class="feature-item">
-                    ✅ API Integration
-                </div>
-
-                <div class="feature-item">
-                    ✅ Firebase Integration
-                </div>
-
-                <div class="feature-item">
-                    ✅ Play Store & App Store Publishing
-                </div>
-
             </div>
 
-            <div class="coming-buttons">
+            <!-- Right: Beautiful Mockup Container -->
+            <div class="app-hero-visual">
+                <div class="app-visual-blob"></div>
+                <div class="floating-device-wrapper">
+                    <div class="smartphone-frame">
+                        <div class="smartphone-notch"></div>
+                        <div class="smartphone-screen-display">
+                            <!-- Simulated Premium Dashboard UI -->
+                            <div class="sim-app-header">
+                                <div class="sim-profile">
+                                    <div class="sim-avatar">M</div>
+                                    <div>
+                                        <h5>Welcome to Magency</h5>
+                                        <span>Client Hub Pro</span>
+                                    </div>
+                                </div>
+                                <button class="sim-notif"><i class="fa-solid fa-bell"></i></button>
+                            </div>
 
-                <a href="{% url 'contact' %}" class="coming-btn-primary">
-                    Notify Me
-                </a>
+                            <div class="sim-card">
+                                <span>Active Project Stats</span>
+                                <h3>$12,450.00</h3>
+                                <div class="sim-status">
+                                    <span class="status-dot"></span> In Development (82%)
+                                </div>
+                            </div>
 
-                <a href="{% url 'home' %}" class="coming-btn-secondary">
-                    Back to Home
-                </a>
+                            <div class="sim-row-grid">
+                                <div class="sim-grid-item">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>Swift Engine</span>
+                                </div>
+                                <div class="sim-grid-item">
+                                    <i class="fa-solid fa-bolt"></i>
+                                    <span>Fast APIs</span>
+                                </div>
+                            </div>
 
-            </div>
+                            <div class="sim-chart-mock">
+                                <div class="chart-bar" style="height: 40%"></div>
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 50%"></div>
+                                <div class="chart-bar" style="height: 85%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                            </div>
 
-        </div>
-
-        <div class="coming-image">
-
-            <div class="phone-card">
-
-                <div class="phone-screen">
-
-                    <div class="app-icon">📱</div>
-
-                    <h3>Coming Soon</h3>
-
-                    <p>Premium Mobile Apps</p>
-
-                    <div class="progress-bar">
-                        <span></span>
+                            <div class="sim-nav">
+                                <span class="active"><i class="fa-solid fa-house"></i></span>
+                                <span><i class="fa-solid fa-chart-simple"></i></span>
+                                <span><i class="fa-solid fa-user"></i></span>
+                            </div>
+                        </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
-
 </section>
 
+<!-- ==========================================
+            CAPABILITIES SECTION
+=========================================== -->
+<section class="app-capabilities">
+    <div class="app-container">
+        <div class="app-section-header">
+            <span class="app-badge">Our Expertise</span>
+            <h2>Tailored Mobile Platforms</h2>
+            <p>We leverage cutting-edge tech stacks to build robust mobile products targeting your exact audience.</p>
+        </div>
+
+        <div class="capabilities-grid">
+            <!-- iOS -->
+            <div class="capability-card">
+                <div class="cap-icon ios-icon"><i class="fa-brands fa-apple"></i></div>
+                <h3>iOS Development</h3>
+                <p>Native Swift & SwiftUI applications engineered specifically for Apple devices, conforming perfectly to Apple's Human Interface Guidelines.</p>
+                <span class="tech-tag">Swift</span>
+                <span class="tech-tag">SwiftUI</span>
+                <span class="tech-tag">Combine</span>
+            </div>
+
+            <!-- Android -->
+            <div class="capability-card">
+                <div class="cap-icon android-icon"><i class="fa-brands fa-android"></i></div>
+                <h3>Android Development</h3>
+                <p>Native Kotlin & Jetpack Compose apps optimizing performance, system utilities, and responsiveness across all Android device architectures.</p>
+                <span class="tech-tag">Kotlin</span>
+                <span class="tech-tag">Jetpack Compose</span>
+                <span class="tech-tag">Coroutines</span>
+            </div>
+
+            <!-- Cross Platform -->
+            <div class="capability-card">
+                <div class="cap-icon flutter-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <h3>Hybrid Apps (Flutter)</h3>
+                <p>High-fidelity, cross-platform apps developed using a single codebase. Flutter and React Native allow us to ship fast without duplicating budgets.</p>
+                <span class="tech-tag">Flutter</span>
+                <span class="tech-tag">React Native</span>
+                <span class="tech-tag">Dart</span>
+            </div>
+
+            <!-- PWAs -->
+            <div class="capability-card">
+                <div class="cap-icon pwa-icon"><i class="fa-solid fa-globe"></i></div>
+                <h3>Progressive Web Apps</h3>
+                <p>Lightweight mobile solutions accessible instantly via web browsers, featuring offline database synchronization, cache-control, and push notifications.</p>
+                <span class="tech-tag">PWA</span>
+                <span class="tech-tag">Workbox</span>
+                <span class="tech-tag">Service Workers</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+        INTERACTIVE MOCKUP PLAYGROUND
+=========================================== -->
+<section class="mockup-playground">
+    <div class="app-container">
+        <div class="playground-grid">
+            <!-- Left Info -->
+            <div class="playground-content">
+                <span class="app-badge">Interactive Preview</span>
+                <h2>Explore App Interfaces</h2>
+                <p>Click the options below to experience different pre-designed interfaces simulated live inside our smartphone framework mockup.</p>
+
+                <div class="screen-selector-tabs">
+                    <button class="selector-tab active" data-screen="ecom">
+                        <i class="fa-solid fa-cart-shopping"></i> E-commerce / Shop
+                    </button>
+                    <button class="selector-tab" data-screen="chat">
+                        <i class="fa-solid fa-comments"></i> Real-time Chat / Social
+                    </button>
+                    <button class="selector-tab" data-screen="health">
+                        <i class="fa-solid fa-heart-pulse"></i> Health & Tracking
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Smartphone Mockup -->
+            <div class="playground-device-col">
+                <div class="smartphone-frame shadow-effect">
+                    <div class="smartphone-notch"></div>
+                    <div class="smartphone-screen-display screen-bg-white" id="interactive-screen-container">
+                        <!-- Default Ecom Screen -->
+                        <div class="sim-screen active" id="screen-ecom">
+                            <div class="screen-header">
+                                <h4>TrendShop</h4>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div class="screen-hero-banner">
+                                <span>New Arrivals</span>
+                                <h3>Summer Collection</h3>
+                            </div>
+                            <div class="screen-list">
+                                <div class="screen-item">
+                                    <div class="item-img"><i class="fa-solid fa-shirt"></i></div>
+                                    <div class="item-info">
+                                        <h5>Premium Tee</h5>
+                                        <span>$29.00</span>
+                                    </div>
+                                    <button class="item-btn"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <div class="screen-item">
+                                    <div class="item-img"><i class="fa-solid fa-glasses"></i></div>
+                                    <div class="item-info">
+                                        <h5>Sunglasses</h5>
+                                        <span>$45.00</span>
+                                    </div>
+                                    <button class="item-btn"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chat Screen -->
+                        <div class="sim-screen" id="screen-chat">
+                            <div class="screen-header">
+                                <h4>Messages</h4>
+                                <i class="fa-solid fa-pen-to-square"></i>
+                            </div>
+                            <div class="chat-threads">
+                                <div class="chat-thread">
+                                    <div class="thread-avatar av-blue">VK</div>
+                                    <div class="thread-content">
+                                        <h5>Vishal Kumar</h5>
+                                        <p>The code is deployed perfectly.</p>
+                                    </div>
+                                    <span class="thread-time">12:30 PM</span>
+                                </div>
+                                <div class="chat-thread">
+                                    <div class="thread-avatar av-purple">JK</div>
+                                    <div class="thread-content">
+                                        <h5>Jashanpreet Kaur</h5>
+                                        <p>Check out the UI review updates.</p>
+                                    </div>
+                                    <span class="thread-time">Yesterday</span>
+                                </div>
+                                <div class="chat-thread">
+                                    <div class="thread-avatar av-green">C</div>
+                                    <div class="thread-content">
+                                        <h5>Active Client</h5>
+                                        <p>Can we scale our Flutter app?</p>
+                                    </div>
+                                    <span class="thread-time">Yesterday</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Health Screen -->
+                        <div class="sim-screen" id="screen-health">
+                            <div class="screen-header">
+                                <h4>Fitness Tracker</h4>
+                                <i class="fa-solid fa-gear"></i>
+                            </div>
+                            <div class="health-progress-circle">
+                                <div class="circle-inner">
+                                    <h3>8,450</h3>
+                                    <span>Steps Today</span>
+                                </div>
+                            </div>
+                            <div class="health-stats-cards">
+                                <div class="health-stat-card">
+                                    <i class="fa-solid fa-fire text-red"></i>
+                                    <span>340 kcal</span>
+                                </div>
+                                <div class="health-stat-card">
+                                    <i class="fa-solid fa-stopwatch text-blue"></i>
+                                    <span>45 mins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+        INTERACTIVE COST CALCULATOR
+=========================================== -->
+<section class="app-calculator-section" id="calculator">
+    <div class="app-container">
+        <div class="app-section-header">
+            <span class="app-badge">Cost Estimator</span>
+            <h2>Estimate Your Project Budget</h2>
+            <p>Pick the platforms and specific features you want in your mobile app, and get an instant cost and development timeline range.</p>
+        </div>
+
+        <div class="calculator-wrapper">
+            <!-- Left Side Inputs -->
+            <div class="calculator-inputs">
+                <!-- Step 1: Platforms -->
+                <div class="calc-step-box">
+                    <h4>1. Target Platforms</h4>
+                    <div class="calc-options-grid">
+                        <label class="calc-pill">
+                            <input type="checkbox" name="platform" value="ios" checked>
+                            <span class="pill-content">
+                                <i class="fa-brands fa-apple"></i> iOS App
+                            </span>
+                        </label>
+                        <label class="calc-pill">
+                            <input type="checkbox" name="platform" value="android" checked>
+                            <span class="pill-content">
+                                <i class="fa-brands fa-android"></i> Android App
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Step 2: Features -->
+                <div class="calc-step-box">
+                    <h4>2. Core Features</h4>
+                    <div class="calc-features-list">
+                        <label class="calc-check-row">
+                            <input type="checkbox" name="feature" value="auth" checked>
+                            <span class="custom-check"></span>
+                            <span class="check-label-text">User Authentication (Sign Up/Login, OTP, Google/Apple Login)</span>
+                        </label>
+                        <label class="calc-check-row">
+                            <input type="checkbox" name="feature" value="push" checked>
+                            <span class="custom-check"></span>
+                            <span class="check-label-text">Push Notifications (Firebase Notification Hub)</span>
+                        </label>
+                        <label class="calc-check-row">
+                            <input type="checkbox" name="feature" value="payment">
+                            <span class="custom-check"></span>
+                            <span class="check-label-text">Stripe / Apple Pay Payment Integrations</span>
+                        </label>
+                        <label class="calc-check-row">
+                            <input type="checkbox" name="feature" value="database">
+                            <span class="custom-check"></span>
+                            <span class="check-label-text">Database Sync (Offline Storage & Real-Time sync)</span>
+                        </label>
+                        <label class="calc-check-row">
+                            <input type="checkbox" name="feature" value="admin" checked>
+                            <span class="custom-check"></span>
+                            <span class="check-label-text">Admin Panel Dashboard (To manage app data, users, and logs)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side Results Display -->
+            <div class="calculator-results">
+                <div class="results-inner-card">
+                    <h3>Estimated Project Cost</h3>
+                    <div class="price-range">
+                        <span id="price-min">$4,500</span> - <span id="price-max">$8,500</span>
+                    </div>
+                    <div class="timeline-estimate">
+                        <i class="fa-solid fa-calendar-days"></i> Delivery Timeline: <strong id="timeline-text">4 - 6 Weeks</strong>
+                    </div>
+                    <hr>
+                    <p class="calc-disclaimer">
+                        *This estimate is calculated dynamically based on average industry project scope and complexity. Contact us for a highly detailed and tailored proposal.
+                    </p>
+                    <a href="{% url 'booking' %}" class="calc-book-btn">
+                        Book Free Consultation <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+                PROCESS SECTION
+=========================================== -->
+<section class="app-process-section">
+    <div class="app-container">
+        <div class="app-section-header">
+            <span class="app-badge">Our Workflow</span>
+            <h2>App Development Roadmap</h2>
+            <p>From strategic wireframes to active App Store publishing, we build apps systematically for long-term success.</p>
+        </div>
+
+        <div class="process-steps">
+            <!-- Step 1 -->
+            <div class="process-step">
+                <div class="step-num">01</div>
+                <h4>Blueprint & Wireframes</h4>
+                <p>We map out the application's user flows, database structures, and high-fidelity wireframes using Figma.</p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+                <div class="step-num">02</div>
+                <h4>UI/UX Styling</h4>
+                <p>We construct detailed design systems, theme sets, and smooth animations optimized for touch screen actions.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+                <div class="step-num">03</div>
+                <h4>Agile Coding</h4>
+                <p>Our developers write scalable Swift, Kotlin, or Dart code, integrating secure databases and REST APIs.</p>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+                <div class="step-num">04</div>
+                <h4>QA Testing & Launch</h4>
+                <p>We perform security assessments and beta test via TestFlight, before launching on Apple App & Google Play Store.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+            CALL TO ACTION
+=========================================== -->
+<section class="app-cta-banner">
+    <div class="app-container">
+        <div class="cta-banner-wrapper">
+            <h2>Have a Premium App Idea?</h2>
+            <p>Let's collaborate! Partner with Magencyinfo experts to design and develop your custom iOS and Android products.</p>
+            <div class="cta-banner-buttons">
+                <a href="{% url 'contact' %}" class="cta-btn-primary">Start Your Project <i class="fa-solid fa-paper-plane"></i></a>
+                <a href="https://wa.me/919999999999" class="cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/app.js' %}?v=1.1"></script>
 {% endblock %}
