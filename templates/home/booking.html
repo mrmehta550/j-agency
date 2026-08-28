@@ -7,7 +7,8 @@
 
 
 {% block title %}Book Free Consultation | Magencyinfo — AI, Web & Marketing Experts{% endblock %}
-{% block meta_description %}Book a free strategy consultation with Magencyinfo. Our experts in AI development, web design, SEO, and digital marketing will contact you within 30 minutes.{% endblock %}
+{% block meta_description %}Book a free strategy consultation with Magencyinfo. Our experts in AI development, web
+design, SEO, and digital marketing will contact you within 30 minutes.{% endblock %}
 
 {% block content %}
 
@@ -241,8 +242,7 @@ BOOKING SERVICES
 
             <!-- Website Development -->
 
-            <div class="booking-service-card active"
-                 data-service="Website Development">
+            <div class="booking-service-card active" data-service="Website Development">
 
                 <div class="booking-service-icon">
 
@@ -274,8 +274,7 @@ BOOKING SERVICES
 
             <!-- AI Automation -->
 
-            <div class="booking-service-card"
-                 data-service="AI Automation">
+            <div class="booking-service-card" data-service="AI Automation">
 
                 <div class="booking-service-icon">
 
@@ -307,8 +306,7 @@ BOOKING SERVICES
 
             <!-- Mobile Apps -->
 
-            <div class="booking-service-card"
-                 data-service="Mobile App Development">
+            <div class="booking-service-card" data-service="Mobile App Development">
 
                 <div class="booking-service-icon">
 
@@ -340,8 +338,7 @@ BOOKING SERVICES
 
             <!-- UI UX -->
 
-            <div class="booking-service-card"
-                 data-service="UI UX Design">
+            <div class="booking-service-card" data-service="UI UX Design">
 
                 <div class="booking-service-icon">
 
@@ -373,8 +370,7 @@ BOOKING SERVICES
 
             <!-- SEO -->
 
-            <div class="booking-service-card"
-                 data-service="SEO">
+            <div class="booking-service-card" data-service="SEO">
 
                 <div class="booking-service-icon">
 
@@ -406,8 +402,7 @@ BOOKING SERVICES
 
             <!-- Marketing -->
 
-            <div class="booking-service-card"
-                 data-service="Digital Marketing">
+            <div class="booking-service-card" data-service="Digital Marketing">
 
                 <div class="booking-service-icon">
 
@@ -439,8 +434,7 @@ BOOKING SERVICES
 
             <!-- Cloud -->
 
-            <div class="booking-service-card"
-                 data-service="Cloud Solutions">
+            <div class="booking-service-card" data-service="Cloud Solutions">
 
                 <div class="booking-service-icon">
 
@@ -472,8 +466,7 @@ BOOKING SERVICES
 
             <!-- Ecommerce -->
 
-            <div class="booking-service-card"
-                 data-service="E-Commerce Development">
+            <div class="booking-service-card" data-service="E-Commerce Development">
 
                 <div class="booking-service-icon">
 
@@ -563,7 +556,7 @@ BOOKING FORM
 
                             <span>
 
-                                +91 XXXXX XXXXX
+                                +91 9942637897
 
                             </span>
 
@@ -653,7 +646,7 @@ BOOKING FORM
 
             </div>
 
-        <!--==============================
+            <!--==============================
             RIGHT SIDE
             ==============================-->
 
@@ -661,60 +654,61 @@ BOOKING FORM
 
                 <!-- Django flash messages toast notification (success / error / warning) -->
                 {% if messages %}
-                  <div class="contact-toast-container" id="toastContainer">
+                <div class="contact-toast-container" id="toastContainer">
                     {% for message in messages %}
-                      <div class="contact-toast contact-toast--{{ message.tags }}" role="alert" aria-live="polite">
+                    <div class="contact-toast contact-toast--{{ message.tags }}" role="alert" aria-live="polite">
                         <div class="contact-toast-icon">
-                          {% if message.tags == 'success' %}
+                            {% if message.tags == 'success' %}
                             <i class="fa-solid fa-circle-check"></i>
-                          {% elif message.tags == 'error' or message.tags == 'danger' %}
+                            {% elif message.tags == 'error' or message.tags == 'danger' %}
                             <i class="fa-solid fa-circle-exclamation"></i>
-                          {% elif message.tags == 'warning' %}
+                            {% elif message.tags == 'warning' %}
                             <i class="fa-solid fa-triangle-exclamation"></i>
-                          {% else %}
+                            {% else %}
                             <i class="fa-solid fa-circle-info"></i>
-                          {% endif %}
+                            {% endif %}
                         </div>
                         <div class="contact-toast-content">
-                          <span class="contact-toast-title">
-                            {% if message.tags == 'success' %}
-                              Success
-                            {% elif message.tags == 'error' or message.tags == 'danger' %}
-                              Error
-                            {% elif message.tags == 'warning' %}
-                              Warning
-                            {% else %}
-                              Notification
-                            {% endif %}
-                          </span>
-                          <p class="contact-toast-msg">{{ message }}</p>
+                            <span class="contact-toast-title">
+                                {% if message.tags == 'success' %}
+                                Success
+                                {% elif message.tags == 'error' or message.tags == 'danger' %}
+                                Error
+                                {% elif message.tags == 'warning' %}
+                                Warning
+                                {% else %}
+                                Notification
+                                {% endif %}
+                            </span>
+                            <p class="contact-toast-msg">{{ message }}</p>
                         </div>
-                        <button type="button" class="contact-toast-close" aria-label="Close notification" onclick="this.parentElement.classList.add('is-closing'); setTimeout(() => this.parentElement.remove(), 400)">
-                          <i class="fa-solid fa-xmark"></i>
+                        <button type="button" class="contact-toast-close" aria-label="Close notification"
+                            onclick="this.parentElement.classList.add('is-closing'); setTimeout(() => this.parentElement.remove(), 400)">
+                            <i class="fa-solid fa-xmark"></i>
                         </button>
                         <div class="contact-toast-progress"></div>
-                      </div>
+                    </div>
                     {% endfor %}
-                  </div>
+                </div>
 
-                  <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                      const toasts = document.querySelectorAll('.contact-toast');
-                      toasts.forEach(toast => {
-                        // Auto close after 5 seconds
-                        setTimeout(() => {
-                          if (toast && toast.parentNode) {
-                            toast.classList.add('is-closing');
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const toasts = document.querySelectorAll('.contact-toast');
+                        toasts.forEach(toast => {
+                            // Auto close after 5 seconds
                             setTimeout(() => {
-                              if (toast && toast.parentNode) {
-                                toast.remove();
-                              }
-                            }, 400);
-                          }
-                        }, 5000);
-                      });
+                                if (toast && toast.parentNode) {
+                                    toast.classList.add('is-closing');
+                                    setTimeout(() => {
+                                        if (toast && toast.parentNode) {
+                                            toast.remove();
+                                        }
+                                    }, 400);
+                                }
+                            }, 5000);
+                        });
                     });
-                  </script>
+                </script>
                 {% endif %}
 
                 <form method="POST" action="{% url 'booking' %}" id="bookingForm">
@@ -729,11 +723,7 @@ BOOKING FORM
 
                         </label>
 
-                        <input
-                            type="text"
-                            name="full_name"
-                            placeholder="Enter your full name"
-                           required>
+                        <input type="text" name="full_name" placeholder="Enter your full name" required>
 
                     </div>
 
@@ -745,10 +735,7 @@ BOOKING FORM
 
                         </label>
 
-                        <input
-                            type="text"
-                            name="company"
-                            placeholder="Your company">
+                        <input type="text" name="company" placeholder="Your company">
 
                     </div>
 
@@ -762,11 +749,7 @@ BOOKING FORM
 
                             </label>
 
-                            <input
-                                type="email"
-                                name="email"
-                                placeholder="you@example.com"
-                                required>
+                            <input type="email" name="email" placeholder="you@example.com" required>
 
                         </div>
 
@@ -778,11 +761,7 @@ BOOKING FORM
 
                             </label>
 
-                            <input
-                                type="tel"
-                                name="phone"
-                                placeholder="+91 XXXXX XXXXX"
-                                required>
+                            <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required>
 
                         </div>
 
@@ -804,43 +783,43 @@ BOOKING FORM
                             -->
                             <select id="selectedService" name="service">
 
-    <option value="Web Development">
-        Website Development
-    </option>
+                                <option value="Web Development">
+                                    Website Development
+                                </option>
 
-    <option value="AI Development">
-        AI Automation
-    </option>
+                                <option value="AI Development">
+                                    AI Automation
+                                </option>
 
-    <option value="Mobile App Development">
-        Mobile App Development
-    </option>
+                                <option value="Mobile App Development">
+                                    Mobile App Development
+                                </option>
 
-    <option value="UI/UX Design">
-        UI / UX Design
-    </option>
+                                <option value="UI/UX Design">
+                                    UI / UX Design
+                                </option>
 
-    <option value="SEO Optimization">
-        SEO Optimization
-    </option>
+                                <option value="SEO Optimization">
+                                    SEO Optimization
+                                </option>
 
-    <option value="Digital Marketing">
-        Digital Marketing
-    </option>
+                                <option value="Digital Marketing">
+                                    Digital Marketing
+                                </option>
 
-    <option value="Cloud Solutions">
-        Cloud Solutions
-    </option>
+                                <option value="Cloud Solutions">
+                                    Cloud Solutions
+                                </option>
 
-    <option value="Cyber Security">
-        Cyber Security
-    </option>
+                                <option value="Cyber Security">
+                                    Cyber Security
+                                </option>
 
-    <option value="Another Service">
-        Another Service
-    </option>
+                                <option value="Another Service">
+                                    Another Service
+                                </option>
 
-</select>
+                            </select>
 
                         </div>
 
@@ -856,8 +835,7 @@ BOOKING FORM
                                 value= attributes are required so the browser
                                 sends the clean key, not the display text.
                             -->
-                            <select
-                                name="budget">
+                            <select name="budget">
 
                                 <option value="Under ₹25,000">
 
@@ -887,7 +865,7 @@ BOOKING FORM
                                 </option>
                                 <option value="5L+">
                                     ₹5L+
-                                 </option>
+                                </option>
 
                             </select>
 
@@ -908,10 +886,7 @@ BOOKING FORM
                             name="project_details".  The old value was silently
                             dropped and an empty string saved to the database.
                         -->
-                        <textarea
-                            rows="6"
-                            name="project_details"
-                            placeholder="Describe your project..."></textarea>
+                        <textarea rows="6" name="project_details" placeholder="Describe your project..."></textarea>
 
                     </div>
 
@@ -929,9 +904,7 @@ BOOKING FORM
                                 BUGFIX: was name="date" — BookingForm expects
                                 name="preferred_date". Date was never saved.
                             -->
-                            <input
-                                type="date"
-                                name="preferred_date">
+                            <input type="date" name="preferred_date">
 
                         </div>
 
@@ -947,22 +920,15 @@ BOOKING FORM
                                 BUGFIX: was name="time" — BookingForm expects
                                 name="preferred_time". Time was never saved.
                             -->
-                            <input
-                                type="time"
-                                name="preferred_time">
+                            <input type="time" name="preferred_time">
 
                         </div>
 
                     </div>
 
-                    <button
-                        type="submit"
-                        class="booking-submit-btn"
-                        id="bookingSubmitBtn"
-                        aria-label="Submit your booking"
-                        data-default-text="Book Free Consultation"
-                        data-loading-text="Booking…"
-                    >Book Free Consultation</button>
+                    <button type="submit" class="booking-submit-btn" id="bookingSubmitBtn"
+                        aria-label="Submit your booking" data-default-text="Book Free Consultation"
+                        data-loading-text="Booking…">Book Free Consultation</button>
 
                 </form>
 
@@ -1177,15 +1143,13 @@ FINAL CTA
 
             <div class="booking-cta-buttons">
 
-                <a href="#bookingForm"
-                   class="booking-btn booking-primary-btn">
+                <a href="#bookingForm" class="booking-btn booking-primary-btn">
 
                     Book Free Consultation
 
                 </a>
 
-                <a href="{% url 'contact' %}"
-                   class="booking-btn booking-outline-btn">
+                <a href="{% url 'contact' %}" class="booking-btn booking-outline-btn">
 
                     Contact Us
 
@@ -1202,48 +1166,48 @@ FINAL CTA
 
 
 <script>
-(function () {
-  "use strict";
+    (function () {
+        "use strict";
 
-  var form      = document.getElementById("bookingForm");
-  var submitBtn = document.getElementById("bookingSubmitBtn");
+        var form = document.getElementById("bookingForm");
+        var submitBtn = document.getElementById("bookingSubmitBtn");
 
-  if (!form || !submitBtn) return;   // guard: elements must exist
+        if (!form || !submitBtn) return;   // guard: elements must exist
 
-  var defaultText  = submitBtn.dataset.defaultText  || "Book Free Consultation";
-  var loadingText  = submitBtn.dataset.loadingText  || "Booking\u2026";
-  var isSubmitting = false;   // in-memory flag prevents double-submission
+        var defaultText = submitBtn.dataset.defaultText || "Book Free Consultation";
+        var loadingText = submitBtn.dataset.loadingText || "Booking\u2026";
+        var isSubmitting = false;   // in-memory flag prevents double-submission
 
-  // ── Disable the button and show the spinner on first submit ──
-  form.addEventListener("submit", function () {
-    if (isSubmitting) {
-      // Second click while already submitting — do nothing.
-      return;
-    }
+        // ── Disable the button and show the spinner on first submit ──
+        form.addEventListener("submit", function () {
+            if (isSubmitting) {
+                // Second click while already submitting — do nothing.
+                return;
+            }
 
-    isSubmitting = true;
+            isSubmitting = true;
 
-    // Swap button text → spinner + loading label.
-    submitBtn.classList.add("is-loading");
-    submitBtn.disabled = true;
-    submitBtn.innerHTML =
-      '<span class="booking-spinner" aria-hidden="true"></span>' +
-      '<span>' + loadingText + '</span>';
-  });
+            // Swap button text → spinner + loading label.
+            submitBtn.classList.add("is-loading");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML =
+                '<span class="booking-spinner" aria-hidden="true"></span>' +
+                '<span>' + loadingText + '</span>';
+        });
 
-  // ── Re-enable the button when the user navigates back ──────
-  // Without this, a browser back-navigation leaves the button
-  // permanently disabled because the browser restores the DOM
-  // in its last-seen state (bfcache).
-  window.addEventListener("pageshow", function (event) {
-    if (event.persisted || isSubmitting) {
-      isSubmitting = false;
-      submitBtn.disabled = false;
-      submitBtn.classList.remove("is-loading");
-      submitBtn.innerHTML = defaultText;
-    }
-  });
-}());
+        // ── Re-enable the button when the user navigates back ──────
+        // Without this, a browser back-navigation leaves the button
+        // permanently disabled because the browser restores the DOM
+        // in its last-seen state (bfcache).
+        window.addEventListener("pageshow", function (event) {
+            if (event.persisted || isSubmitting) {
+                isSubmitting = false;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove("is-loading");
+                submitBtn.innerHTML = defaultText;
+            }
+        });
+    }());
 </script>
 
 {% endblock %}

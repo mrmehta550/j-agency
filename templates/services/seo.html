@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/case_study.css' %}">
+{% endblock %}
+
 {% block title %}Search Engine Optimization (SEO) Services | Magencyinfo{% endblock %}
 
-{% block meta_description %}Rank #1 on Google and grow organic traffic with Magencyinfo. Professional local SEO, keyword strategy, link building, and audit reports.{% endblock %}
+{% block meta_description %}Rank #1 on Google and grow organic traffic with Magencyinfo. Professional local SEO, keyword
+strategy, link building, and audit reports.{% endblock %}
 
 {% block content %}
 
@@ -31,7 +36,8 @@
                 </h1>
 
                 <p>
-                    We help startups, local brands, and enterprises dominate search engine rankings with data-driven SEO strategies, technical site audits, content marketing, and premium link building.
+                    We help startups, local brands, and enterprises dominate search engine rankings with data-driven SEO
+                    strategies, technical site audits, content marketing, and premium link building.
                 </p>
 
                 <!-- Core Features -->
@@ -69,7 +75,8 @@
             <!-- Right Side Image Box with Floating Cards -->
             <div class="svc-hero-visual seo-reveal seo-revealed">
                 <div class="svc-hero-image-box">
-                    <img src="{% static 'images/services/seo/hero-dashboard.jpg' %}" alt="SEO Analytics Dashboard mockup" class="svc-hero-image">
+                    <img src="{% static 'images/services/seo/hero.jpg' %}" alt="SEO Analytics Dashboard mockup"
+                        class="svc-hero-image">
 
                     <!-- Floating Badge Card 1 -->
                     <div class="svc-floating-card svc-float-1">
@@ -153,7 +160,8 @@
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </div>
                 <h3>Keyword Research</h3>
-                <p>Finding high-intent terms your customers search, mapping transactional keywords to match user search intent.</p>
+                <p>Finding high-intent terms your customers search, mapping transactional keywords to match user search
+                    intent.</p>
                 <ul>
                     <li>Search Intent Mapping</li>
                     <li>Competitor Keyword Audits</li>
@@ -167,7 +175,8 @@
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <h3>Technical SEO</h3>
-                <p>Optimizing sitemaps, robots tags, clean URL slugs, structured schema markups, and core site speed parameters.</p>
+                <p>Optimizing sitemaps, robots tags, clean URL slugs, structured schema markups, and core site speed
+                    parameters.</p>
                 <ul>
                     <li>Core Web Vitals Boost</li>
                     <li>Sitemap Formatting</li>
@@ -181,7 +190,8 @@
                     <i class="fa-solid fa-file-pen"></i>
                 </div>
                 <h3>On-Page Optimization</h3>
-                <p>Structuring proper header hierarchies, keyword densities, internal page-link structures, and image alt descriptions.</p>
+                <p>Structuring proper header hierarchies, keyword densities, internal page-link structures, and image
+                    alt descriptions.</p>
                 <ul>
                     <li>Header Tags Config</li>
                     <li>Meta Tags Audit</li>
@@ -195,7 +205,8 @@
                     <i class="fa-solid fa-link"></i>
                 </div>
                 <h3>Link Building</h3>
-                <p>Acquiring clean guest posts, directory mentions, and high-authority contextual links to build domain trust.</p>
+                <p>Acquiring clean guest posts, directory mentions, and high-authority contextual links to build domain
+                    trust.</p>
                 <ul>
                     <li>Guest Blogging Outreach</li>
                     <li>Broken Link Building</li>
@@ -209,7 +220,8 @@
                     <i class="fa-solid fa-map-location-dot"></i>
                 </div>
                 <h3>Local SEO</h3>
-                <p>Optimizing Google Business profiles, tracking local citations, and boosting localized visibility for search queries.</p>
+                <p>Optimizing Google Business profiles, tracking local citations, and boosting localized visibility for
+                    search queries.</p>
                 <ul>
                     <li>Map Pack Listings</li>
                     <li>Local Citations</li>
@@ -223,7 +235,8 @@
                     <i class="fa-solid fa-chart-pie"></i>
                 </div>
                 <h3>Analytics Reports</h3>
-                <p>Tracking organic keyword metrics, traffic trends, conversion ratios, and technical crawling performance monthly.</p>
+                <p>Tracking organic keyword metrics, traffic trends, conversion ratios, and technical crawling
+                    performance monthly.</p>
                 <ul>
                     <li>Keyword Position Tracking</li>
                     <li>Search Console Reports</li>
@@ -332,42 +345,70 @@
             <p>Explore some of our recent SEO campaign achievements and organic growth metrics.</p>
         </div>
 
-        <div class="svc-portfolio-grid seo-reveal">
+        <div class="case-grid seo-reveal">
             {% for case in seo_case_studies %}
-            <div class="svc-portfolio-card" onclick="window.location.href='{% url 'case_study_detail' case.slug %}'">
-                {% if case.image %}
-                <img src="{{ case.image.url }}" alt="{{ case.title }}">
-                {% else %}
-                <img src="{% static 'images/case-study/default-case-study.webp' %}" alt="{{ case.title }}">
-                {% endif %}
-                <div class="svc-portfolio-overlay">
-                    <span>{{ case.category }}</span>
-                    <h3>{{ case.title }}</h3>
+            <article class="case-card">
+                <div class="case-card-image">
+                    {% if case.image %}
+                    <img src="{{ case.image.url }}" alt="{{ case.title }}">
+                    {% else %}
+                    <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="{{ case.title }}">
+                    {% endif %}
+                    <span class="case-card-category">{{ case.category }}</span>
                 </div>
-            </div>
+                <div class="case-card-body">
+                    <h3>{{ case.title }}</h3>
+                    <p>{{ case.short_description|truncatewords:20 }}</p>
+                    <a href="{% url 'case_study_detail' case.slug %}" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
             {% empty %}
             <!-- Fallback Mockups -->
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/seo/portfolio1.jpg' %}" alt="SaaS SEO Growth">
-                <div class="svc-portfolio-overlay">
-                    <span>SaaS Organic</span>
-                    <h3>320% Traffic Scale</h3>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/seo/portfolio1.jpg' %}" alt="SaaS SEO Growth">
+                    <span class="case-card-category">SEO</span>
                 </div>
-            </div>
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/seo/portfolio2.jpg' %}" alt="eCommerce SEO Growth">
-                <div class="svc-portfolio-overlay">
-                    <span>E-Commerce SEO</span>
-                    <h3>Organic Revenue Growth</h3>
+                <div class="case-card-body">
+                    <h3>320% Traffic Scale for SaaS Brand</h3>
+                    <p>Optimized technical crawl paths, restructured site architecture, and scaled organic content pipelines.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-            </div>
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/seo/portfolio3.jpg' %}" alt="Local Business Map Pack">
-                <div class="svc-portfolio-overlay">
-                    <span>Local SEO</span>
-                    <h3>Top 3 Map Rankings</h3>
+            </article>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/seo/portfolio2.jpg' %}" alt="eCommerce SEO Growth">
+                    <span class="case-card-category">SEO</span>
                 </div>
-            </div>
+                <div class="case-card-body">
+                    <h3>Organic Revenue Growth for E-Commerce</h3>
+                    <p>Designed structured product schemas and keyword-focused category landing page maps.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/seo/portfolio3.jpg' %}" alt="Local Business Map Pack">
+                    <span class="case-card-category">SEO</span>
+                </div>
+                <div class="case-card-body">
+                    <h3>Top 3 Map Rankings for Multi-Location Service</h3>
+                    <p>Polished Google Business Profile optimization, local citations, and localized landing pages.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
             {% endfor %}
         </div>
     </div>
@@ -392,7 +433,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer seo-faq-answer">
-                    <p>Typically, noticeable organic visibility changes require 3–6 months. SEO is a long-term strategy built on domain trust, index optimization, and content relevance.</p>
+                    <p>Typically, noticeable organic visibility changes require 3–6 months. SEO is a long-term strategy
+                        built on domain trust, index optimization, and content relevance.</p>
                 </div>
             </div>
 
@@ -403,7 +445,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer seo-faq-answer">
-                    <p>Yes. We strictly execute manual outreach guest blogging, authority references, and local directory listings, avoiding risky private blog networks (PBNs) or spam links.</p>
+                    <p>Yes. We strictly execute manual outreach guest blogging, authority references, and local
+                        directory listings, avoiding risky private blog networks (PBNs) or spam links.</p>
                 </div>
             </div>
 
@@ -414,7 +457,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer seo-faq-answer">
-                    <p>We analyze organic keyword ranking tracks, average search position, total click volume inside Search Console, Google Analytics goals, and crawling warnings.</p>
+                    <p>We analyze organic keyword ranking tracks, average search position, total click volume inside
+                        Search Console, Google Analytics goals, and crawling warnings.</p>
                 </div>
             </div>
 
@@ -425,7 +469,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer seo-faq-answer">
-                    <p>Yes, as part of our technical SEO optimization phase, we compress static file sizes, optimize code structure, configure caching, and format sitemaps.</p>
+                    <p>Yes, as part of our technical SEO optimization phase, we compress static file sizes, optimize
+                        code structure, configure caching, and format sitemaps.</p>
                 </div>
             </div>
         </div>

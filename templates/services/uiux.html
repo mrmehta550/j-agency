@@ -1,9 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/case_study.css' %}">
+{% endblock %}
+
 {% block title %}Professional UI/UX Design Services | Magencyinfo{% endblock %}
 
-{% block meta_description %}Craft beautiful, intuitive, and conversion-focused user interfaces with Magencyinfo. Expert user research, prototyping, app interfaces, and design systems.{% endblock %}
+{% block meta_description %}Craft beautiful, intuitive, and conversion-focused user interfaces with Magencyinfo. Expert
+user research, prototyping, app interfaces, and design systems.{% endblock %}
 
 {% block content %}
 
@@ -31,7 +36,8 @@
                 </h1>
 
                 <p>
-                    We craft modern, intuitive, and conversion-focused user interfaces for web platforms, mobile applications, and SaaS systems, backed by detailed user research and strategy.
+                    We craft modern, intuitive, and conversion-focused user interfaces for web platforms, mobile
+                    applications, and SaaS systems, backed by detailed user research and strategy.
                 </p>
 
                 <!-- Core Features -->
@@ -69,7 +75,8 @@
             <!-- Right Side Image Box with Floating Cards -->
             <div class="svc-hero-visual uiux-reveal uiux-revealed">
                 <div class="svc-hero-image-box">
-                    <img src="{% static 'images/services/uiux/hero.jpg' %}" alt="UI/UX Designers wireframing mockup" class="svc-hero-image">
+                    <img src="{% static 'images/services/uiux/uiux-hero.jpg' %}"
+                        alt="UI/UX Designers wireframing mockup" class="svc-hero-image">
 
                     <!-- Floating Badge Card 1 -->
                     <div class="svc-floating-card svc-float-1">
@@ -153,7 +160,8 @@
                     <i class="fa-solid fa-magnifying-glass-chart"></i>
                 </div>
                 <h3>UX Research</h3>
-                <p>Detailed mapping of target customer personas, user journeys, operational gaps, and digital layout trends in your field.</p>
+                <p>Detailed mapping of target customer personas, user journeys, operational gaps, and digital layout
+                    trends in your field.</p>
                 <ul>
                     <li>Competitor Audits</li>
                     <li>User Personas</li>
@@ -167,7 +175,8 @@
                     <i class="fa-solid fa-bezier-curve"></i>
                 </div>
                 <h3>Wireframing</h3>
-                <p>Low and high-fidelity structural layouts mapped to organize information clearly before visual design begins.</p>
+                <p>Low and high-fidelity structural layouts mapped to organize information clearly before visual design
+                    begins.</p>
                 <ul>
                     <li>Interactive Mockups</li>
                     <li>Layout Hierarchies</li>
@@ -181,7 +190,8 @@
                     <i class="fa-solid fa-mobile-screen-button"></i>
                 </div>
                 <h3>Mobile UI Design</h3>
-                <p>Bespoke visual interface styling for iOS and Android apps, matching modern human interface and material guidelines.</p>
+                <p>Bespoke visual interface styling for iOS and Android apps, matching modern human interface and
+                    material guidelines.</p>
                 <ul>
                     <li>Pixel-Perfect Screens</li>
                     <li>Gesture Controls</li>
@@ -195,7 +205,8 @@
                     <i class="fa-solid fa-laptop-code"></i>
                 </div>
                 <h3>Web UI Design</h3>
-                <p>High-converting website interfaces built to reduce drop-offs, optimize lead-generation forms, and adapt beautifully to layouts.</p>
+                <p>High-converting website interfaces built to reduce drop-offs, optimize lead-generation forms, and
+                    adapt beautifully to layouts.</p>
                 <ul>
                     <li>Responsive Layout grids</li>
                     <li>Form Design Audits</li>
@@ -209,7 +220,8 @@
                     <i class="fa-solid fa-shuffle"></i>
                 </div>
                 <h3>Prototyping</h3>
-                <p>Clickable, high-fidelity prototypes built in Figma to test workflows and transitions before committing to developer hours.</p>
+                <p>Clickable, high-fidelity prototypes built in Figma to test workflows and transitions before
+                    committing to developer hours.</p>
                 <ul>
                     <li>Micro-Animations</li>
                     <li>User Path Testing</li>
@@ -223,7 +235,8 @@
                     <i class="fa-solid fa-cubes"></i>
                 </div>
                 <h3>Design Systems</h3>
-                <p>Comprehensive design libraries specifying style tokens, typography hierarchies, reusable button layouts, and color variables.</p>
+                <p>Comprehensive design libraries specifying style tokens, typography hierarchies, reusable button
+                    layouts, and color variables.</p>
                 <ul>
                     <li>Reusable Component Sets</li>
                     <li>Figma Token Organization</li>
@@ -242,7 +255,8 @@
         <div class="svc-heading uiux-reveal">
             <span class="svc-section-tag">Our Process</span>
             <h2>Our Creative <span>UI/UX Workflow</span></h2>
-            <p>A structured approach helps us align with your product objectives and ensure logical page interactions.</p>
+            <p>A structured approach helps us align with your product objectives and ensure logical page interactions.
+            </p>
         </div>
 
         <div class="svc-process-grid uiux-reveal">
@@ -332,42 +346,70 @@
             <p>Explore some of our recent visual systems built for web platforms and mobile apps.</p>
         </div>
 
-        <div class="svc-portfolio-grid uiux-reveal">
+        <div class="case-grid uiux-reveal">
             {% for case in case_studies %}
-            <div class="svc-portfolio-card" onclick="window.location.href='{% url 'case_study_detail' case.slug %}'">
-                {% if case.image %}
-                <img src="{{ case.image.url }}" alt="{{ case.title }}">
-                {% else %}
-                <img src="{% static 'images/case-study/default-case-study.webp' %}" alt="{{ case.title }}">
-                {% endif %}
-                <div class="svc-portfolio-overlay">
-                    <span>{{ case.category }}</span>
-                    <h3>{{ case.title }}</h3>
+            <article class="case-card">
+                <div class="case-card-image">
+                    {% if case.image %}
+                    <img src="{{ case.image.url }}" alt="{{ case.title }}">
+                    {% else %}
+                    <img src="{% static 'images/portfolio/project-1.jpg' %}" alt="{{ case.title }}">
+                    {% endif %}
+                    <span class="case-card-category">{{ case.category }}</span>
                 </div>
-            </div>
+                <div class="case-card-body">
+                    <h3>{{ case.title }}</h3>
+                    <p>{{ case.short_description|truncatewords:20 }}</p>
+                    <a href="{% url 'case_study_detail' case.slug %}" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
             {% empty %}
             <!-- Fallback Mockups if no dynamic cases exist -->
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/uiux/portfolio1.jpg' %}" alt="App UI Mockup">
-                <div class="svc-portfolio-overlay">
-                    <span>Mobile App UI</span>
-                    <h3>Fintech Banking App</h3>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/uiux/portfolio1.jpg' %}" alt="App UI Mockup">
+                    <span class="case-card-category">UI/UX Design</span>
                 </div>
-            </div>
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/uiux/portfolio2.jpg' %}" alt="SaaS Mockup">
-                <div class="svc-portfolio-overlay">
-                    <span>SaaS Portal</span>
-                    <h3>Analytics Dashboard</h3>
+                <div class="case-card-body">
+                    <h3>Fintech Banking Mobile Application</h3>
+                    <p>Designed end-to-end transaction flows, secure authentication systems, and customizable user profile screens.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-            </div>
-            <div class="svc-portfolio-card">
-                <img src="{% static 'images/services/uiux/portfolio3.jpg' %}" alt="Web Design Mockup">
-                <div class="svc-portfolio-overlay">
-                    <span>Landing Page</span>
-                    <h3>AI Assistant Platform</h3>
+            </article>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/uiux/portfolio2.jpg' %}" alt="SaaS Mockup">
+                    <span class="case-card-category">UI/UX Design</span>
                 </div>
-            </div>
+                <div class="case-card-body">
+                    <h3>Enterprise Analytics Dashboard Portal</h3>
+                    <p>Created interactive charting interfaces, clean data filter selectors, and cross-platform navigation layouts.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            <article class="case-card">
+                <div class="case-card-image">
+                    <img src="{% static 'images/services/uiux/portfolio3.jpg' %}" alt="Web Design Mockup">
+                    <span class="case-card-category">UI/UX Design</span>
+                </div>
+                <div class="case-card-body">
+                    <h3>AI Assistant SaaS Landing Platform</h3>
+                    <p>Developed dynamic web design systems, interactive components mockups, and conversion funnel landing assets.</p>
+                    <a href="#" class="case-card-btn">
+                        Read Case Study
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
             {% endfor %}
         </div>
     </div>
@@ -394,7 +436,8 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Their wireframes and design system simplified our developer workflows. They built a unified design language that matches our operations."</p>
+                <p>"Their wireframes and design system simplified our developer workflows. They built a unified design
+                    language that matches our operations."</p>
                 <div class="svc-client">
                     <img src="{% static 'images/services/logo/client1.jpg' %}" alt="Alex Mercer Product Lead">
                     <div>
@@ -413,7 +456,8 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>"The clickable high-fidelity Figma prototypes allowed us to validate page structures with users before committing developer hours."</p>
+                <p>"The clickable high-fidelity Figma prototypes allowed us to validate page structures with users
+                    before committing developer hours."</p>
                 <div class="svc-client">
                     <img src="{% static 'images/services/logo/client2.jpg' %}" alt="Elena Rostova Director">
                     <div>
@@ -432,7 +476,8 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>"Outstanding visual quality. They delivered a responsive and clean layout that instantly elevated our brand identity."</p>
+                <p>"Outstanding visual quality. They delivered a responsive and clean layout that instantly elevated our
+                    brand identity."</p>
                 <div class="svc-client">
                     <img src="{% static 'images/services/logo/client3.jpg' %}" alt="Marcus Vance CTO">
                     <div>
@@ -464,7 +509,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer uiux-faq-answer">
-                    <p>We primarily use Figma as our standard platform. This allows clients to inspect wireframes, add comments, and view interactive flows in real-time.</p>
+                    <p>We primarily use Figma as our standard platform. This allows clients to inspect wireframes, add
+                        comments, and view interactive flows in real-time.</p>
                 </div>
             </div>
 
@@ -475,7 +521,9 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer uiux-faq-answer">
-                    <p>A design system is a comprehensive library of style tokens (reusable buttons, color styles, form inputs, sitemap elements, and sizing parameters) that keeps branding consistent across web pages and mobile views.</p>
+                    <p>A design system is a comprehensive library of style tokens (reusable buttons, color styles, form
+                        inputs, sitemap elements, and sizing parameters) that keeps branding consistent across web pages
+                        and mobile views.</p>
                 </div>
             </div>
 
@@ -486,7 +534,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer uiux-faq-answer">
-                    <p>Yes. We can start from raw sketches, business outlines, or detailed operational wireframes and refine them into modern, conversion-focused UI layouts.</p>
+                    <p>Yes. We can start from raw sketches, business outlines, or detailed operational wireframes and
+                        refine them into modern, conversion-focused UI layouts.</p>
                 </div>
             </div>
 
@@ -497,7 +546,8 @@
                     <i class="fa-solid fa-plus"></i>
                 </button>
                 <div class="svc-faq-answer uiux-faq-answer">
-                    <p>We organize our Figma canvas with proper layouts, name variables cleanly, organize vector icons, and coordinate with engineering teams to ensure pixel-perfect conversion.</p>
+                    <p>We organize our Figma canvas with proper layouts, name variables cleanly, organize vector icons,
+                        and coordinate with engineering teams to ensure pixel-perfect conversion.</p>
                 </div>
             </div>
         </div>
@@ -516,7 +566,8 @@
         <div class="svc-cta-wrapper uiux-reveal">
             <span class="svc-section-tag">Let's Work Together</span>
             <h2>Ready to Elevate Your <span>Product Interface?</span></h2>
-            <p>Work with our senior UI/UX designers to sketch, test, and build a beautiful, high-converting digital experience.</p>
+            <p>Work with our senior UI/UX designers to sketch, test, and build a beautiful, high-converting digital
+                experience.</p>
 
             <div class="svc-cta-features">
                 <div class="svc-cta-feature">
