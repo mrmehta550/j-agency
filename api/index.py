@@ -17,7 +17,53 @@ except ImportError:
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
-from config.wsgi import application
+class DebuggingWSGIApplication:
+    def __init__(self):
+        self.real_app = None
+        self.import_error = None
+        self.traceback_str = None
 
-# Vercel python handler requires a global named 'app'
-app = application
+    def get_real_app(self):
+        if self.real_app is not None:
+            return self.real_app
+        if self.import_error is not None:
+            return None
+        try:
+            from config.wsgi import application
+            self.real_app = application
+            return self.real_app
+        except Exception as e:
+            import traceback
+            self.import_error = e
+            self.traceback_str = traceback.format_exc()
+            return None
+
+    def __call__(self, environ, start_response):
+        real_app = self.get_real_app()
+        if real_app is not None:
+            try:
+                return real_app(environ, start_response)
+            except Exception as e:
+                import traceback
+                self.traceback_str = traceback.format_exc()
+        
+        # Render error traceback
+        status = '500 Internal Server Error'
+        headers = [('Content-Type', 'text/html; charset=utf-8')]
+        start_response(status, headers)
+        
+        tb = self.traceback_str or "Unknown boot error"
+        html = f"""
+        <html>
+        <head><title>Vercel Django Boot Error</title></head>
+        <body style="font-family: monospace; padding: 20px; background: #fafafa; color: #333;">
+            <h1 style="color: #d9534f;">Django Boot / Request Execution Failed</h1>
+            <p>The following traceback was captured during serverless function execution:</p>
+            <pre style="background: #eee; padding: 15px; border-radius: 5px; overflow-x: auto; border: 1px solid #ccc;">{tb}</pre>
+        </body>
+        </html>
+        """
+        return [html.encode('utf-8')]
+
+app = DebuggingWSGIApplication()
+
