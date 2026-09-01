@@ -46,11 +46,11 @@ except ImportError:
         _mysql_password = os.getenv('MYSQLPASSWORD')
         _mysql_db = os.getenv('MYSQLDATABASE')
     # Export unified variables for DATABASES usage
-    MYSQLHOST = _mysql_host
-    MYSQLPORT = _mysql_port
-    MYSQLUSER = _mysql_user
-    MYSQLPASSWORD = _mysql_password
-    MYSQLDATABASE = _mysql_db
+    MYSQLHOST = _mysql_host or ''
+    MYSQLPORT = _mysql_port or ''
+    MYSQLUSER = _mysql_user or ''
+    MYSQLPASSWORD = _mysql_password or ''
+    MYSQLDATABASE = _mysql_db or ''
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -128,16 +128,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.getenv('MYSQLDATABASE'),
-            'USER': os.getenv('MYSQLUSER'),
-            'PASSWORD': os.getenv('MYSQLPASSWORD'),
-            'HOST': os.getenv('MYSQLHOST'),
-            'PORT': os.getenv('MYSQLPORT'),
+        'NAME': os.getenv('MYSQLDATABASE', ''),
+        'USER': os.getenv('MYSQLUSER', ''),
+        'PASSWORD': os.getenv('MYSQLPASSWORD', ''),
+        'HOST': os.getenv('MYSQLHOST', ''),
+        'PORT': os.getenv('MYSQLPORT', ''),
         'OPTIONS': {
-            'charset': 'utf8mb4',       # full Unicode support (emoji, etc.)
+            'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         },
-        'CONN_MAX_AGE': 60,             # persistent connections (reduces overhead)
+        'CONN_MAX_AGE': 60,
     }
 }
 
