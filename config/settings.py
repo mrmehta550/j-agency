@@ -64,8 +64,15 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: must be False in production.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-# Comma-separated list: "magencyinfo.com,www.magencyinfo.com"
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '.railway.app,.vercel.app,localhost,127.0.0.1').split(',')
+# Comma-separated list via ALLOWED_HOSTS env var; includes Railway production domain by default.
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.getenv(
+        "ALLOWED_HOSTS",
+        "localhost,127.0.0.1,j-agency-production.up.railway.app"
+    ).split(",")
+    if host.strip()
+]
 
 
 # ── Installed Apps ────────────────────────────────────────────────────────────
