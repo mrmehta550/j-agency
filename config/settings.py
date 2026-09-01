@@ -40,10 +40,10 @@ SECRET_KEY = os.environ.get(
 )
 
 # SECURITY WARNING: must be False in production.
-DEBUG = os.environ.get('DJANGO_DEBUG', 'True') == 'True'
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 # Comma-separated list: "magencyinfo.com,www.magencyinfo.com"
-ALLOWED_HOSTS = ['.vercel.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '.vercel.app,localhost,127.0.0.1').split(',')
 
 
 # ── Installed Apps ────────────────────────────────────────────────────────────
@@ -103,11 +103,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'magency'),
-        'USER': os.environ.get('DB_USER', 'root'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', ''),
-        'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'NAME': os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', 'magency'),
+        'USER': os.getenv('MYSQLUSER') or os.getenv('DB_USER', ''),
+        'PASSWORD': os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', ''),
+        'HOST': os.getenv('MYSQLHOST') or os.getenv('DB_HOST'),
+        'PORT': os.getenv('MYSQLPORT') or os.getenv('DB_PORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',       # full Unicode support (emoji, etc.)
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
