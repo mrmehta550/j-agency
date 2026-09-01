@@ -65,7 +65,7 @@ SECRET_KEY = os.environ.get(
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 # Comma-separated list: "magencyinfo.com,www.magencyinfo.com"
-ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '.vercel.app,localhost,127.0.0.1').split(',')
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', '.railway.app,.vercel.app,localhost,127.0.0.1').split(',')
 
 
 # ── Installed Apps ────────────────────────────────────────────────────────────
