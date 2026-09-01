@@ -26,6 +26,31 @@ try:
     load_dotenv()
 except ImportError:
     pass   # Production environment sets variables natively — this is fine.
+    # ------------------------------------------------------------------
+    # Resolve Railway MySQL connection details.
+    # If MYSQLHOST resolves to localhost/127.0.0.1 (common in Railway's UI),
+    # fall back to parsing MYSQL_URL which contains the correct host/port/user/password/db.
+    import urllib.parse as _urlparse
+    _mysql_url = os.getenv('MYSQL_URL', '')
+    if _mysql_url:
+        _parsed = _urlparse.urlparse(_mysql_url)
+        _mysql_host = _parsed.hostname
+        _mysql_port = str(_parsed.port) if _parsed.port else ''
+        _mysql_user = _parsed.username
+        _mysql_password = _parsed.password
+        _mysql_db = _parsed.path.lstrip('/') if _parsed.path else ''
+    else:
+        _mysql_host = os.getenv('MYSQLHOST')
+        _mysql_port = os.getenv('MYSQLPORT')
+        _mysql_user = os.getenv('MYSQLUSER')
+        _mysql_password = os.getenv('MYSQLPASSWORD')
+        _mysql_db = os.getenv('MYSQLDATABASE')
+    # Export unified variables for DATABASES usage
+    MYSQLHOST = _mysql_host
+    MYSQLPORT = _mysql_port
+    MYSQLUSER = _mysql_user
+    MYSQLPASSWORD = _mysql_password
+    MYSQLDATABASE = _mysql_db
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -103,11 +128,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', 'magency'),
-        'USER': os.getenv('MYSQLUSER') or os.getenv('DB_USER', ''),
-        'PASSWORD': os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', ''),
-        'HOST': os.getenv('MYSQLHOST') or os.getenv('DB_HOST'),
-        'PORT': os.getenv('MYSQLPORT') or os.getenv('DB_PORT'),
+            'NAME': os.getenv('MYSQLDATABASE'),
+            'USER': os.getenv('MYSQLUSER'),
+            'PASSWORD': os.getenv('MYSQLPASSWORD'),
+            'HOST': os.getenv('MYSQLHOST'),
+            'PORT': os.getenv('MYSQLPORT'),
         'OPTIONS': {
             'charset': 'utf8mb4',       # full Unicode support (emoji, etc.)
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
