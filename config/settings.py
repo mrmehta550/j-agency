@@ -26,31 +26,28 @@ try:
     load_dotenv()
 except ImportError:
     pass   # Production environment sets variables natively — this is fine.
-    # ------------------------------------------------------------------
-    # Resolve Railway MySQL connection details.
-    # If MYSQLHOST resolves to localhost/127.0.0.1 (common in Railway's UI),
-    # fall back to parsing MYSQL_URL which contains the correct host/port/user/password/db.
-    import urllib.parse as _urlparse
-    _mysql_url = os.getenv('MYSQL_URL', '')
-    if _mysql_url:
-        _parsed = _urlparse.urlparse(_mysql_url)
-        _mysql_host = _parsed.hostname
-        _mysql_port = str(_parsed.port) if _parsed.port else ''
-        _mysql_user = _parsed.username
-        _mysql_password = _parsed.password
-        _mysql_db = _parsed.path.lstrip('/') if _parsed.path else ''
-    else:
-        _mysql_host = os.getenv('MYSQLHOST')
-        _mysql_port = os.getenv('MYSQLPORT')
-        _mysql_user = os.getenv('MYSQLUSER')
-        _mysql_password = os.getenv('MYSQLPASSWORD')
-        _mysql_db = os.getenv('MYSQLDATABASE')
-    # Export unified variables for DATABASES usage
-    MYSQLHOST = _mysql_host or ''
-    MYSQLPORT = _mysql_port or ''
-    MYSQLUSER = _mysql_user or ''
-    MYSQLPASSWORD = _mysql_password or ''
-    MYSQLDATABASE = _mysql_db or ''
+
+# ── Resolve Railway MySQL connection ─────────────────────────────────────────
+# Railway's MYSQLHOST often shows 127.0.0.1 which doesn't work between
+# separate services. MYSQL_URL contains the correct internal host
+# (e.g. mysql.railway.internal), so we parse it when available.
+import urllib.parse as _urlparse
+
+_mysql_url = os.getenv('MYSQL_URL', '')
+if _mysql_url:
+    _parsed = _urlparse.urlparse(_mysql_url)
+    _db_host = _parsed.hostname or ''
+    _db_port = str(_parsed.port) if _parsed.port else '3306'
+    _db_user = _parsed.username or ''
+    _db_password = _urlparse.unquote(_parsed.password) if _parsed.password else ''
+    _db_name = _parsed.path.lstrip('/') if _parsed.path else ''
+else:
+    # Fallback: use individual MYSQL* vars (Railway), or DB_* vars (local dev)
+    _db_host = os.getenv('MYSQLHOST') or os.getenv('DB_HOST', '127.0.0.1')
+    _db_port = os.getenv('MYSQLPORT') or os.getenv('DB_PORT', '3306')
+    _db_user = os.getenv('MYSQLUSER') or os.getenv('DB_USER', 'root')
+    _db_password = os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', '')
+    _db_name = os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', 'magency')
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -123,16 +120,17 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # ── Database ──────────────────────────────────────────────────────────────────
-# All credentials read from environment variables.
+# Production: parsed from MYSQL_URL (correct internal host)
+# Local dev:  falls back to DB_* env vars or defaults
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQLDATABASE', ''),
-        'USER': os.getenv('MYSQLUSER', ''),
-        'PASSWORD': os.getenv('MYSQLPASSWORD', ''),
-        'HOST': os.getenv('MYSQLHOST', ''),
-        'PORT': os.getenv('MYSQLPORT', ''),
+        'NAME': _db_name,
+        'USER': _db_user,
+        'PASSWORD': _db_password,
+        'HOST': _db_host,
+        'PORT': _db_port,
         'OPTIONS': {
             'charset': 'utf8mb4',
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
