@@ -146,24 +146,33 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # ── Database ──────────────────────────────────────────────────────────────────
-# Production: parsed from MYSQL_URL (correct internal host)
-# Local dev:  falls back to DB_* env vars or defaults
+# Production: parsed from MYSQL_URL / DATABASE_URL (Railway) or DB_* (local dev)
+# Fallback: SQLite3 if no MySQL variables are present
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': _db_name,
-        'USER': _db_user,
-        'PASSWORD': _db_password,
-        'HOST': _db_host,
-        'PORT': _db_port,
-        'OPTIONS': {
-            'charset': 'utf8mb4',
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        },
-        'CONN_MAX_AGE': 60,
+if _mysql_url or os.getenv('MYSQLHOST') or os.getenv('DB_NAME'):
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': _db_name,
+            'USER': _db_user,
+            'PASSWORD': _db_password,
+            'HOST': _db_host,
+            'PORT': _db_port,
+            'OPTIONS': {
+                'charset': 'utf8mb4',
+                'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            },
+            'CONN_MAX_AGE': 60,
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
 
 
 # ── Password Validation ───────────────────────────────────────────────────────
