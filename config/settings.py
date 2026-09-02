@@ -64,12 +64,12 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: must be False in production.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-# Comma-separated list via ALLOWED_HOSTS env var; includes Railway production domain by default.
+# Comma-separated list via ALLOWED_HOSTS env var; includes Railway & custom domains by default.
 ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "localhost,127.0.0.1,j-agency-production.up.railway.app"
+        "localhost,127.0.0.1,j-agency-production.up.railway.app,magencyinfo.com,www.magencyinfo.com,.up.railway.app,.railway.app"
     ).split(",")
     if host.strip()
 ]
@@ -79,7 +79,7 @@ CSRF_TRUSTED_ORIGINS = [
     origin.strip()
     for origin in os.getenv(
         "CSRF_TRUSTED_ORIGINS",
-        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,http://localhost,http://127.0.0.1"
+        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,https://magencyinfo.com,https://www.magencyinfo.com,http://localhost,http://127.0.0.1"
     ).split(",")
     if origin.strip()
 ]
