@@ -197,6 +197,16 @@ def _send_contact_emails(contact: Contact) -> None:
     Called OUTSIDE the atomic block so a transient email error never
     rolls back the already-committed database record.
     """
+    if not getattr(settings, "EMAIL_HOST_USER", None):
+        logger.info("EMAIL_HOST_USER not configured. Skipping contact email delivery.")
+        return
+
+    submitted_at_str = (
+        contact.created_at.strftime("%d-%m-%Y %H:%M")
+        if getattr(contact, "created_at", None)
+        else timezone.now().strftime("%d-%m-%Y %H:%M")
+    )
+
     # ── Admin notification ──────────────────────────────────────
     admin_subject = f"🚀 New Contact Request - {contact.full_name}"
     admin_message = f"""\
@@ -229,20 +239,24 @@ def _send_contact_emails(contact: Contact) -> None:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Submitted At:
-{contact.created_at.strftime("%d-%m-%Y %H:%M")}
+{submitted_at_str}
 """
 
-    send_mail(
-        subject=admin_subject,
-        message=admin_message,
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[settings.EMAIL_HOST_USER],
-        fail_silently=False,
-    )
+    try:
+        send_mail(
+            subject=admin_subject,
+            message=admin_message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[settings.EMAIL_HOST_USER],
+            fail_silently=True,
+        )
+    except Exception:
+        logger.exception("Failed to send admin contact notification email.")
 
     # ── Client confirmation ─────────────────────────────────────
-    client_subject = "✅ We've Received Your Request | Magency"
-    client_message = f"""\
+    if contact.email:
+        client_subject = "✅ We've Received Your Request | Magency"
+        client_message = f"""\
 Hi {contact.full_name},
 
 Thank you for contacting Magency.
@@ -293,13 +307,16 @@ Magency Team
 📧 magency550@gmail.com
 """
 
-    send_mail(
-        subject=client_subject,
-        message=client_message,
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[contact.email],
-        fail_silently=False,
-    )
+        try:
+            send_mail(
+                subject=client_subject,
+                message=client_message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[contact.email],
+                fail_silently=True,
+            )
+        except Exception:
+            logger.exception("Failed to send client contact confirmation email.")
 
 
 def _cleanup_old_submission_locks() -> None:
@@ -507,15 +524,24 @@ def _send_booking_emails(booking: Contact) -> None:
     Called OUTSIDE the atomic block so a transient SMTP error never rolls
     back the already-committed booking record.
     """
+    if not getattr(settings, "EMAIL_HOST_USER", None):
+        logger.info("EMAIL_HOST_USER not configured. Skipping booking email delivery.")
+        return
+
     preferred_date_str = (
         booking.preferred_date.strftime("%d %B %Y")
-        if booking.preferred_date
+        if getattr(booking, "preferred_date", None)
         else "Not specified"
     )
     preferred_time_str = (
         booking.preferred_time.strftime("%I:%M %p")
-        if booking.preferred_time
+        if getattr(booking, "preferred_time", None)
         else "Not specified"
+    )
+    booked_at_str = (
+        booking.created_at.strftime("%d-%m-%Y %H:%M")
+        if getattr(booking, "created_at", None)
+        else timezone.now().strftime("%d-%m-%Y %H:%M")
     )
 
     # ── Admin notification ─────────────────────────────────
@@ -556,20 +582,24 @@ def _send_booking_emails(booking: Contact) -> None:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 Booked At:
-{booking.created_at.strftime("%d-%m-%Y %H:%M")}
+{booked_at_str}
 """
 
-    send_mail(
-        subject=admin_subject,
-        message=admin_message,
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[settings.EMAIL_HOST_USER],
-        fail_silently=False,
-    )
+    try:
+        send_mail(
+            subject=admin_subject,
+            message=admin_message,
+            from_email=settings.EMAIL_HOST_USER,
+            recipient_list=[settings.EMAIL_HOST_USER],
+            fail_silently=True,
+        )
+    except Exception:
+        logger.exception("Failed to send admin booking notification email.")
 
     # ── Client confirmation ─────────────────────────
-    client_subject = "✅ Your Consultation is Booked | Magency"
-    client_message = f"""\
+    if booking.email:
+        client_subject = "✅ Your Consultation is Booked | Magency"
+        client_message = f"""\
 Hi {booking.full_name},
 
 Thank you for booking a consultation with Magency.
@@ -623,13 +653,16 @@ Magency Team
 📧 magency550@gmail.com
 """
 
-    send_mail(
-        subject=client_subject,
-        message=client_message,
-        from_email=settings.EMAIL_HOST_USER,
-        recipient_list=[booking.email],
-        fail_silently=False,
-    )
+        try:
+            send_mail(
+                subject=client_subject,
+                message=client_message,
+                from_email=settings.EMAIL_HOST_USER,
+                recipient_list=[booking.email],
+                fail_silently=True,
+            )
+        except Exception:
+            logger.exception("Failed to send client booking confirmation email.")
 
 
 # ──────────────────────────────────────────────────────────────
