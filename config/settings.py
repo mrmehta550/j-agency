@@ -28,12 +28,16 @@ except ImportError:
     pass   # Production environment sets variables natively — this is fine.
 
 # ── Resolve Railway MySQL connection ─────────────────────────────────────────
-# Railway's MYSQLHOST often shows 127.0.0.1 which doesn't work between
-# separate services. MYSQL_URL contains the correct internal host
-# (e.g. mysql.railway.internal), so we parse it when available.
 import urllib.parse as _urlparse
 
-_mysql_url = os.getenv('MYSQL_URL', '')
+_mysql_url = (
+    os.getenv('MYSQL_URL')
+    or os.getenv('DATABASE_URL')
+    or os.getenv('DATABASE_PRIVATE_URL')
+    or os.getenv('MYSQL_PRIVATE_URL')
+    or ''
+)
+
 if _mysql_url:
     _parsed = _urlparse.urlparse(_mysql_url)
     _db_host = _parsed.hostname or ''
@@ -47,7 +51,8 @@ else:
     _db_port = os.getenv('MYSQLPORT') or os.getenv('DB_PORT', '3306')
     _db_user = os.getenv('MYSQLUSER') or os.getenv('DB_USER', 'root')
     _db_password = os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', '')
-    _db_name = os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', 'magency')
+    _db_name = os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', 'railway')
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 

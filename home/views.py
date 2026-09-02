@@ -175,6 +175,12 @@ def _save_contact_to_excel(contact: Contact) -> None:
                 "Service", "Budget", "Message", "Created At",
             ])
 
+        created_at_val = (
+            contact.created_at.strftime("%d-%m-%Y %H:%M:%S")
+            if getattr(contact, "created_at", None)
+            else timezone.now().strftime("%d-%m-%Y %H:%M:%S")
+        )
+
         worksheet.append([
             contact.full_name,
             contact.email,
@@ -183,7 +189,7 @@ def _save_contact_to_excel(contact: Contact) -> None:
             contact.service,
             contact.budget,
             contact.message,
-            contact.created_at.strftime("%d-%m-%Y %H:%M:%S"),
+            created_at_val,
         ])
 
         workbook.save(excel_file)
