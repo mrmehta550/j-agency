@@ -74,6 +74,20 @@ ALLOWED_HOSTS = [
     if host.strip()
 ]
 
+# CSRF Trusted Origins (Required in Django 4.0+ for HTTPS form submissions)
+CSRF_TRUSTED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "CSRF_TRUSTED_ORIGINS",
+        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,http://localhost,http://127.0.0.1"
+    ).split(",")
+    if origin.strip()
+]
+
+# Reverse proxy SSL header (essential for Railway / Cloudflare / Nginx HTTPS detection)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
 
 # ── Installed Apps ────────────────────────────────────────────────────────────
 
