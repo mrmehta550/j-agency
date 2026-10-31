@@ -69,12 +69,12 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: must be False in production.
 DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
-# Comma-separated list via ALLOWED_HOSTS env var; includes Railway & custom domains by default.
+# Comma-separated list via ALLOWED_HOSTS env var; includes Railway, Render & custom domains by default.
 ALLOWED_HOSTS = [
     host.strip()
     for host in os.getenv(
         "ALLOWED_HOSTS",
-        "localhost,127.0.0.1,j-agency-production.up.railway.app,magencyinfo.com,www.magencyinfo.com,.up.railway.app,.railway.app"
+        "localhost,127.0.0.1,j-agency-production.up.railway.app,magencyinfo.com,www.magencyinfo.com,.up.railway.app,.railway.app,.onrender.com"
     ).split(",")
     if host.strip()
 ]
@@ -84,7 +84,7 @@ CSRF_TRUSTED_ORIGINS = [
     origin.strip()
     for origin in os.getenv(
         "CSRF_TRUSTED_ORIGINS",
-        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,https://magencyinfo.com,https://www.magencyinfo.com,http://localhost,http://127.0.0.1"
+        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,https://magencyinfo.com,https://www.magencyinfo.com,https://*.onrender.com,http://localhost,http://127.0.0.1"
     ).split(",")
     if origin.strip()
 ]
@@ -105,6 +105,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',   # for sitemap.xml
+    'corsheaders',
+    'rest_framework',
     'home',
     'services',
     'blog',
@@ -115,6 +117,7 @@ INSTALLED_APPS = [
 # ── Middleware ────────────────────────────────────────────────────────────────
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -124,6 +127,23 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# ── CORS Settings ─────────────────────────────────────────────────────────────
+CORS_ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv(
+        "CORS_ALLOWED_ORIGINS",
+        "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000"
+    ).split(",")
+    if origin.strip()
+]
+CORS_ALLOW_CREDENTIALS = True
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
 
 ROOT_URLCONF = 'config.urls'
 
