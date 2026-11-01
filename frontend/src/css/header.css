@@ -1,0 +1,243 @@
+/*=========================
+        NAVBAR
+==========================*/
+
+.navbar{
+    width:100%;
+    height:80px;
+    padding:0 8%;
+    align-items:center;
+    justify-content:space-between;
+    background:#fff;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,.05);
+}
+
+/*=========================
+        LOGO
+==========================*/
+
+.logo-container{
+    width:100%;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:var(--primary-dark);
+    font-size:28px;
+    font-weight:700;
+    flex-shrink:0;
+}
+
+.logo-icon{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    background:var(--primary-dark);
+    color:#fff;
+    /* width:100%; */
+    align-items:center;
+    justify-content:center;
+    font-size:18px;
+    font-weight:700;
+}
+
+/*=========================
+      NAVIGATION
+==========================*/
+
+.nav-links{
+    width:100%;
+    align-items:center;
+    justify-content:center;
+    list-style:none;
+    gap:35px;
+    flex:1;
+    margin:0 40px;
+}
+
+.nav-links li{
+    list-style:none;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:var(--text-main);
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+    position:relative;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:var(--primary-dark);
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.nav-links a:hover{
+    color:var(--primary-dark);
+}
+
+/*=========================
+        BUTTON
+==========================*/
+
+.nav-btn{
+    flex-shrink:0;
+}
+
+.btn-primary{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 28px;
+    border-radius:50px;
+    background:var(--primary-dark);
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    background:var(--primary-accent);
+    transform:translateY(-2px);
+}
+
+/*=========================
+      HAMBURGER
+==========================*/
+
+.hamburger{
+    display:none;
+    border:none;
+    background:none;
+    cursor:pointer;
+    padding:15px;
+    
+}
+
+.hamburger span{
+    display:block;
+    width:28px;
+    height:3px;
+    background:var(--primary-dark);
+    margin:3px 0;
+    border-radius:10px;
+    transition:.3s;
+}
+
+/*=========================
+    MOBILE RESPONSIVE
+==========================*/
+
+@media(max-width:991px){
+
+    .navbar{
+        padding:0 10px;
+    }
+
+    .nav-container-mobile{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
+    }
+
+    .logo-container{
+        margin-right:auto;
+    }
+
+    .hamburger{
+        display:block;
+        margin-left:auto;   /* Right side push */
+        z-index:1001;
+    }
+
+    .nav-btn{
+        display:none;
+    }
+
+    .nav-container-mobile .nav-links{
+        position:fixed;
+        top:80px;
+        right:-100%;
+        width:300px;
+        height:calc(100vh - 80px);
+
+        background:#fff;
+
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:flex-start;
+
+        gap:28px;
+        padding:40px 30px;
+
+        margin:0;
+
+        box-shadow:-8px 0 25px rgba(0,0,0,.08);
+
+        transition:.35s ease;
+    }
+
+    .nav-container-mobile .nav-links.active{
+        right:0;
+    }
+
+
+}
+
+/*=========================
+      SMALL MOBILE
+==========================*/
+
+@media(max-width:576px){
+
+    .navbar{
+        padding:0 8px;   /* 20px se 8px kar do */
+    }
+
+    .nav-container-mobile{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        width:100%;
+    }
+
+    .logo-container{
+        display:flex;
+        align-items:center;
+        gap:8px;
+        font-size:22px;
+        margin:0;
+    }
+
+    .logo-icon{
+        width:34px;
+        height:34px;
+    }
+
+    .hamburger{
+        margin-left:auto;
+        margin-right:0;
+    }
+
+    .nav-links{
+        width:100%;
+    }
+
+}

@@ -1,0 +1,727 @@
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+
+export default function LogoDesignPage() {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [openFaq, setOpenFaq] = useState(0);
+
+  useEffect(() => {
+    document.title = "Premium Logo Design & Brand Identity Services | Magencyinfo";
+  }, []);
+
+  const toggleFaq = (idx) => {
+    setOpenFaq(openFaq === idx ? null : idx);
+  };
+
+  const portfolioItems = [
+    {
+      id: 1,
+      category: "technology",
+      title: "Nexa AI",
+      tag: "Technology",
+      img: "/images/services/logo/logo1.jpg",
+    },
+    {
+      id: 2,
+      category: "luxury",
+      title: "Golden Crown",
+      tag: "Luxury Brand",
+      img: "/images/services/logo/logo2.jpg",
+    },
+    {
+      id: 3,
+      category: "restaurant",
+      title: "Spice House",
+      tag: "Restaurant",
+      img: "/images/services/logo/logo3.jpg",
+    },
+    {
+      id: 4,
+      category: "minimal",
+      title: "Fit Pulse",
+      tag: "Fitness",
+      img: "/images/services/logo/logo4.jpg",
+    },
+    {
+      id: 5,
+      category: "startup",
+      title: "Med Care",
+      tag: "Healthcare",
+      img: "/images/services/logo/logo5.jpg",
+    },
+    {
+      id: 6,
+      category: "startup",
+      title: "Learn Hub",
+      tag: "Education",
+      img: "/images/services/logo/logo6.jpg",
+    },
+  ];
+
+  const filteredItems =
+    activeFilter === "all"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeFilter);
+
+  const faqs = [
+    {
+      q: "How long does it take to design a logo?",
+      a: "Initial logo concepts are delivered in 3 to 5 business days. The entire branding project, including revision cycles and final deliverables compilation, is usually finalized in 7 to 10 business days.",
+    },
+    {
+      q: "How many concepts will I receive?",
+      a: "Depending on the package selected, you will receive between 2 (Basic) and unlimited (Premium) unique logo design concepts to choose from.",
+    },
+    {
+      q: "Do I get editable source files?",
+      a: "Yes. All packages (except Basic) include print-ready and resizable vector files in AI, EPS, SVG, and high-resolution PDF formats, alongside web-ready transparent PNG and JPG versions.",
+    },
+    {
+      q: "Who owns the copyright of the logo?",
+      a: "Once the project is completed and the final payment is cleared, you receive full commercial rights and intellectual property ownership of the approved logo design.",
+    },
+    {
+      q: "Can you modernize an existing logo?",
+      a: "Yes, we offer Logo Redesign services to refresh outdated typography and symbols while preserving visual elements that maintain brand recall for your current customers.",
+    },
+    {
+      q: "What are brand guidelines?",
+      a: "Brand guidelines are a detailed guidebook specifying proper logo usage, official HEX/RGB color schemes, grid spacing rules, font styles, and layout patterns to ensure styling consistency across assets.",
+    },
+  ];
+
+  return (
+    <main>
+      {/* LOGO DESIGN HERO */}
+      <section className="logo-service-hero">
+        <div className="logo-service-bg">
+          <span className="logo-service-blob logo-service-blob-1"></span>
+          <span className="logo-service-blob logo-service-blob-2"></span>
+          <span className="logo-service-blob logo-service-blob-3"></span>
+          <span className="logo-service-grid"></span>
+        </div>
+
+        <div className="container">
+          <div className="logo-service-wrapper">
+            <div className="logo-service-content logo-reveal logo-revealed">
+              <div className="logo-service-badge">
+                <i className="fa-solid fa-pen-ruler"></i>
+                Premium Logo Design Agency
+              </div>
+
+              <h1 className="logo-service-title">
+                Design A Powerful
+                <span> Brand Identity</span>
+              </h1>
+
+              <p className="logo-service-description">
+                We create memorable, timeless, and professional logos that build trust, increase brand recognition, and help your business stand out from the competition.
+              </p>
+
+              <div className="logo-service-features">
+                <div className="logo-service-feature">
+                  <i className="fa-solid fa-circle-check"></i>
+                  <span>100% Unique Concepts</span>
+                </div>
+                <div className="logo-service-feature">
+                  <i className="fa-solid fa-circle-check"></i>
+                  <span>Unlimited Revisions</span>
+                </div>
+                <div className="logo-service-feature">
+                  <i className="fa-solid fa-circle-check"></i>
+                  <span>Source Files Included</span>
+                </div>
+                <div className="logo-service-feature">
+                  <i className="fa-solid fa-circle-check"></i>
+                  <span>Fast Turnaround</span>
+                </div>
+              </div>
+
+              <div className="logo-service-buttons">
+                <Link to="/contact" className="logo-service-btn-primary">
+                  Get Started
+                  <i className="fa-solid fa-arrow-right"></i>
+                </Link>
+                <a href="#portfolio" className="logo-service-btn-secondary">
+                  View Portfolio
+                </a>
+              </div>
+            </div>
+
+            <div className="logo-service-visual logo-reveal logo-revealed">
+              <div className="logo-service-image-box">
+                <img
+                  src="/images/services/logo/logo-hero.jpg"
+                  alt="Logo Design Process mockup"
+                  className="logo-service-image"
+                />
+
+                <div className="logo-service-floating-card logo-card-1">
+                  <div className="logo-service-card-icon">
+                    <i className="fa-solid fa-award"></i>
+                  </div>
+                  <div>
+                    <h5>Premium Quality</h5>
+                    <p>Creative Concepts</p>
+                  </div>
+                </div>
+
+                <div className="logo-service-floating-card logo-card-2">
+                  <div className="logo-service-card-icon">
+                    <i className="fa-solid fa-palette"></i>
+                  </div>
+                  <div>
+                    <h5>Brand Colors</h5>
+                    <p>Modern Identity</p>
+                  </div>
+                </div>
+
+                <div className="logo-service-floating-card logo-card-3">
+                  <div className="logo-service-card-icon">
+                    <i className="fa-solid fa-layer-group"></i>
+                  </div>
+                  <div>
+                    <h5>Vector Files</h5>
+                    <p>AI • SVG • EPS</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST STATS STRIP */}
+      <section className="logo-service-hero-stats">
+        <div className="container">
+          <div className="logo-service-stats-wrapper">
+            <div className="logo-service-stat-item">
+              <h3 className="logo-counter">2000+</h3>
+              <p>Logos Designed</p>
+            </div>
+            <div className="logo-service-stat-item">
+              <h3 className="logo-counter">500+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div className="logo-service-stat-item">
+              <h3 className="logo-counter">12+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div className="logo-service-stat-item">
+              <h3 className="logo-counter">98%</h3>
+              <p>Satisfaction Rate</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO DESIGN SERVICES */}
+      <section className="logo-service-section logo-service-services">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Our Services</span>
+            <h2>Complete Branding <span>& Logo Design Solutions</span></h2>
+            <p>From startup logos to complete corporate branding guidelines, we build cohesive, scalable visual identities that foster long-term customer trust.</p>
+          </div>
+
+          <div className="logo-service-gridd logo-reveal">
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-pen-ruler"></i>
+              </div>
+              <h3>Custom Logo Design</h3>
+              <p>Tailored logo concepts created from scratch specifically to capture your brand vision and speak directly to your target industry.</p>
+              <ul>
+                <li>Multiple Concepts</li>
+                <li>Unlimited Revisions</li>
+                <li>Vector File Formats</li>
+                <li>Full Ownership</li>
+              </ul>
+            </div>
+
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-arrows-rotate"></i>
+              </div>
+              <h3>Logo Redesign</h3>
+              <p>Modernize your existing, outdated mark into a clean, modern design while retaining key visual elements that preserve brand equity.</p>
+              <ul>
+                <li>Refreshed Look</li>
+                <li>Brand Recognition</li>
+                <li>Scalability Fixes</li>
+                <li>Typography Upgrade</li>
+              </ul>
+            </div>
+
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-palette"></i>
+              </div>
+              <h3>Brand Identity</h3>
+              <p>Build a cohesive, unified visual presence across all online platforms, digital assets, packaging, and marketing collateral.</p>
+              <ul>
+                <li>Custom Palettes</li>
+                <li>Font Selection</li>
+                <li>Layout Hierarchy</li>
+                <li>Asset Sizing</li>
+              </ul>
+            </div>
+
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-id-card"></i>
+              </div>
+              <h3>Business Stationery</h3>
+              <p>Make a premium impression with professionally designed corporate communication tools, stationery, and business cards.</p>
+              <ul>
+                <li>Business Cards</li>
+                <li>Letterhead Design</li>
+                <li>Envelope Layouts</li>
+                <li>Email Signatures</li>
+              </ul>
+            </div>
+
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-hashtag"></i>
+              </div>
+              <h3>Social Media Branding</h3>
+              <p>Receive optimized profile banners, templates, and layouts to ensure your branding remains consistent across social platforms.</p>
+              <ul>
+                <li>Profile Icons</li>
+                <li>Banner Templates</li>
+                <li>Post Frameworks</li>
+                <li>Highlight Icons</li>
+              </ul>
+            </div>
+
+            <div className="logo-service-card">
+              <div className="logo-service-card-icon-wrapper">
+                <i className="fa-solid fa-book-open"></i>
+              </div>
+              <h3>Brand Guidelines</h3>
+              <p>A comprehensive design handbook specifying exact colors, typography systems, spacing, and appropriate logo usages.</p>
+              <ul>
+                <li>HEX/RGB Colors</li>
+                <li>Type Hierarchy</li>
+                <li>Spacing Rules</li>
+                <li>Do's & Don'ts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY CHOOSE US */}
+      <section className="logo-service-section logo-service-why">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Why Choose Us</span>
+            <h2>Why Businesses Trust <span>Magencyinfo</span></h2>
+            <p>We combine design strategy with creative execution to build memorable, professional logos that support conversion and scaling.</p>
+          </div>
+
+          <div className="logo-service-why-grid logo-reveal">
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-user-tie logo-service-why-icon"></i>
+              <h3>Professional Designers</h3>
+              <p>Our branding projects are executed by experienced designers, ensuring top-tier visual outputs.</p>
+            </div>
+
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-compass-drafting logo-service-why-icon"></i>
+              <h3>100% Unique Concepts</h3>
+              <p>We do not use stock templates or generic symbols. Every logo is custom-built based on sketches.</p>
+            </div>
+
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-rotate-left logo-service-why-icon"></i>
+              <h3>Unlimited Revisions</h3>
+              <p>We iterate on concepts and refine details until you are completely satisfied with the final result.</p>
+            </div>
+
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-bolt logo-service-why-icon"></i>
+              <h3>Fast Turnaround</h3>
+              <p>We value deadlines. Initial concepts are delivered to your team in just 3 to 5 business days.</p>
+            </div>
+
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-file-code logo-service-why-icon"></i>
+              <h3>Source Files Included</h3>
+              <p>Receive fully editable vector source files (AI, EPS, SVG, PDF) alongside standard formats (PNG, JPG).</p>
+            </div>
+
+            <div className="logo-service-why-card">
+              <i className="fa-solid fa-shield-heart logo-service-why-icon"></i>
+              <h3>Business-Focused Design</h3>
+              <p>We design with longevity in mind, ensuring your mark is scalable, memorable, and industry-appropriate.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO DESIGN PROCESS */}
+      <section className="logo-service-section logo-service-process">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Our Process</span>
+            <h2>Our Creative <span>Logo Design Process</span></h2>
+            <p>A structured approach helps us align closely with your expectations and build a logo backed by market research.</p>
+          </div>
+
+          <div className="logo-service-process-wrapper logo-reveal">
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">01</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <h3>Discovery</h3>
+              <p>We align on your values, target demographics, and competitors.</p>
+            </div>
+
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">02</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-lightbulb"></i>
+              </div>
+              <h3>Research</h3>
+              <p>We analyze trends, typography directions, and colors in your field.</p>
+            </div>
+
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">03</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-pencil"></i>
+              </div>
+              <h3>Sketching</h3>
+              <p>We brainstorm and sketch multiple design directions on paper.</p>
+            </div>
+
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">04</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-bezier-curve"></i>
+              </div>
+              <h3>Designing</h3>
+              <p>We bring selected concepts to life digitally as vector graphics.</p>
+            </div>
+
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">05</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-pen-to-square"></i>
+              </div>
+              <h3>Revisions</h3>
+              <p>We refine the chosen design based on your feedback and inputs.</p>
+            </div>
+
+            <div className="logo-service-process-card">
+              <div className="logo-service-process-number-wrapper">
+                <span className="logo-service-process-number">06</span>
+              </div>
+              <div className="logo-service-process-icon">
+                <i className="fa-solid fa-box-open"></i>
+              </div>
+              <h3>Delivery</h3>
+              <p>We deliver organized, high-resolution source and print files.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO DESIGN PORTFOLIO */}
+      <section className="logo-service-section logo-service-portfolio" id="portfolio">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Our Portfolio</span>
+            <h2>Logos That Help <span>Brands Stand Out</span></h2>
+            <p>Browse some of our custom logo design and branding projects executed for startups and established companies.</p>
+          </div>
+
+          <div className="logo-service-filter logo-reveal">
+            {[
+              { label: "All", val: "all" },
+              { label: "Minimal", val: "minimal" },
+              { label: "Luxury", val: "luxury" },
+              { label: "Startup", val: "startup" },
+              { label: "Restaurant", val: "restaurant" },
+              { label: "Technology", val: "technology" },
+            ].map((btn) => (
+              <button
+                key={btn.val}
+                className={activeFilter === btn.val ? "active" : ""}
+                onClick={() => setActiveFilter(btn.val)}
+              >
+                {btn.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="logo-service-portfolio-grid logo-reveal">
+            {filteredItems.map((item) => (
+              <div key={item.id} className="logo-service-portfolio-card" data-category={item.category}>
+                <img src={item.img} alt={`${item.title} Logo Design`} />
+                <div className="logo-service-overlay">
+                  <span>{item.tag}</span>
+                  <h3>{item.title}</h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO DESIGN PRICING */}
+      <section className="logo-service-section logo-service-pricing">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Pricing Plans</span>
+            <h2>Affordable Logo Design <span>Packages For Every Business</span></h2>
+            <p>Flexible structures whether you are launching a personal brand or planning a complete corporate refresh.</p>
+          </div>
+
+          <div className="logo-service-pricing-grid logo-reveal">
+            <div className="logo-service-pricing-card">
+              <div className="logo-service-plan-icon">
+                <i className="fa-solid fa-seedling"></i>
+              </div>
+              <h3>Basic</h3>
+              <p className="logo-service-plan-description">Ideal for startups and personal brand builders.</p>
+              <div className="logo-service-price">
+                <span className="logo-service-currency">₹</span>
+                <h2>2,999</h2>
+              </div>
+              <ul className="logo-service-plan-features">
+                <li><i className="fa-solid fa-check"></i> 2 Logo Concepts</li>
+                <li><i className="fa-solid fa-check"></i> PNG & JPG (High-Res)</li>
+                <li><i className="fa-solid fa-check"></i> Transparent Files</li>
+                <li><i className="fa-solid fa-check"></i> 3 Revisions</li>
+                <li><i className="fa-solid fa-check"></i> 3 Days Delivery</li>
+              </ul>
+              <Link to="/contact" className="logo-service-plan-button">Get Started</Link>
+            </div>
+
+            <div className="logo-service-pricing-card">
+              <div className="logo-service-popular-badge">Most Popular</div>
+              <div className="logo-service-plan-icon">
+                <i className="fa-solid fa-gem"></i>
+              </div>
+              <h3>Standard</h3>
+              <p className="logo-service-plan-description">Best package for expanding businesses.</p>
+              <div className="logo-service-price">
+                <span className="logo-service-currency">₹</span>
+                <h2>7,999</h2>
+              </div>
+              <ul className="logo-service-plan-features">
+                <li><i className="fa-solid fa-check"></i> 5 Logo Concepts</li>
+                <li><i className="fa-solid fa-check"></i> Unlimited Revisions</li>
+                <li><i className="fa-solid fa-check"></i> Vector Source Files</li>
+                <li><i className="fa-solid fa-check"></i> Business Card Design</li>
+                <li><i className="fa-solid fa-check"></i> Social Media Kit</li>
+                <li><i className="fa-solid fa-check"></i> Color Palette Sheet</li>
+              </ul>
+              <Link to="/contact" className="logo-service-plan-button">Choose Plan</Link>
+            </div>
+
+            <div className="logo-service-pricing-card">
+              <div className="logo-service-plan-icon">
+                <i className="fa-solid fa-crown"></i>
+              </div>
+              <h3>Premium</h3>
+              <p className="logo-service-plan-description">A complete brand identity and guidelines kit.</p>
+              <div className="logo-service-price">
+                <span className="logo-service-currency">₹</span>
+                <h2>14,999</h2>
+              </div>
+              <ul className="logo-service-plan-features">
+                <li><i className="fa-solid fa-check"></i> Unlimited Concepts</li>
+                <li><i className="fa-solid fa-check"></i> Brand Guidelines Hand</li>
+                <li><i className="fa-solid fa-check"></i> Full Stationery Set</li>
+                <li><i className="fa-solid fa-check"></i> Social Media Branding</li>
+                <li><i className="fa-solid fa-check"></i> 3D Packaging Mockups</li>
+                <li><i className="fa-solid fa-check"></i> Lifetime Support</li>
+              </ul>
+              <Link to="/contact" className="logo-service-plan-button">Get Premium</Link>
+            </div>
+
+            <div className="logo-service-pricing-card">
+              <div className="logo-service-plan-icon">
+                <i className="fa-solid fa-building"></i>
+              </div>
+              <h3>Enterprise</h3>
+              <p className="logo-service-plan-description">Bespoke identity solutions for large organisations.</p>
+              <div className="logo-service-price">
+                <span className="logo-service-currency">₹</span>
+                <h2>Custom</h2>
+              </div>
+              <ul className="logo-service-plan-features">
+                <li><i className="fa-solid fa-check"></i> Dedicated Art Director</li>
+                <li><i className="fa-solid fa-check"></i> Full Brand Strategy Set</li>
+                <li><i className="fa-solid fa-check"></i> Unlimited Marketing Assets</li>
+                <li><i className="fa-solid fa-check"></i> Presentation Kits</li>
+                <li><i className="fa-solid fa-check"></i> Priority SLA Turnarounds</li>
+                <li><i className="fa-solid fa-check"></i> Custom Assets</li>
+              </ul>
+              <Link to="/contact" className="logo-service-plan-button">Contact Sales</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CLIENT TESTIMONIALS */}
+      <section className="logo-service-section logo-service-testimonials">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">Testimonials</span>
+            <h2>What Our <span>Clients Say About Us</span></h2>
+            <p>Read about the experiences of startups, design teams, and companies who built their branding with us.</p>
+          </div>
+
+          <div className="logo-service-testimonial-grid logo-reveal">
+            <div className="logo-service-testimonial-card">
+              <div className="logo-service-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p>&quot;Our new logo completely transformed our company's image. The design process was collaborative, and the final branding materials were highly detailed.&quot;</p>
+              <div className="logo-service-client">
+                <img src="/images/services/logo/client1.jpg" alt="Michael Anderson CEO Nexa" />
+                <div>
+                  <h4>Michael Anderson</h4>
+                  <span>CEO, Nexa Technologies</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="logo-service-testimonial-card">
+              <div className="logo-service-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p>&quot;Excellent communication, modern styling choices, and prompt adjustments. Our team felt supported throughout the entire brand refresh cycle.&quot;</p>
+              <div className="logo-service-client">
+                <img src="/images/services/logo/client2.jpg" alt="Neha Johnson Founder Bloom" />
+                <div>
+                  <h4>Neha Johnson</h4>
+                  <span>Founder, Bloom Fashion</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="logo-service-testimonial-card">
+              <div className="logo-service-stars">
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+                <i className="fa-solid fa-star"></i>
+              </div>
+              <p>&quot;The stationery materials and typography rules provided in the guidelines book have streamlined our marketing operations. Strongly recommended.&quot;</p>
+              <div className="logo-service-client">
+                <img src="/images/services/logo/client3.jpg" alt="David Williams Director Prime" />
+                <div>
+                  <h4>David Williams</h4>
+                  <span>Director, Prime Finance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* LOGO DESIGN FAQ */}
+      <section className="logo-service-section logo-service-faq">
+        <div className="container">
+          <div className="logo-service-heading logo-reveal">
+            <span className="logo-service-section-tag">FAQ</span>
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <p>Have questions before launching your logo design project? Here are our answers to common questions.</p>
+          </div>
+
+          <div className="logo-faq-wrapper logo-reveal">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className={`logo-faq-item ${openFaq === idx ? "active" : ""}`}>
+                <button
+                  type="button"
+                  className="logo-faq-question"
+                  onClick={() => toggleFaq(idx)}
+                >
+                  <span>{faq.q}</span>
+                  <i className={`fa-solid ${openFaq === idx ? "fa-minus" : "fa-plus"}`}></i>
+                </button>
+                {openFaq === idx && (
+                  <div className="logo-faq-answer" style={{ display: "block" }}>
+                    <p>{faq.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CALL TO ACTION */}
+      <section className="logo-service-cta">
+        <div className="logo-service-cta-bg">
+          <span className="logo-service-cta-blob logo-service-cta-blob-1"></span>
+          <span className="logo-service-grid"></span>
+        </div>
+
+        <div className="container">
+          <div className="logo-service-cta-wrapper logo-reveal">
+            <span className="logo-service-cta-tag">Let's Work Together</span>
+            <h2>Ready to Build a Brand <span>People Remember?</span></h2>
+            <p>Let's design a professional, custom logo that represents your core values and helps you secure customer trust.</p>
+
+            <div className="logo-service-cta-features">
+              <div className="logo-service-cta-feature">
+                <i className="fa-solid fa-circle-check"></i>
+                <span>100% Custom Design</span>
+              </div>
+              <div className="logo-service-cta-feature">
+                <i className="fa-solid fa-circle-check"></i>
+                <span>Unlimited Revisions</span>
+              </div>
+              <div className="logo-service-cta-feature">
+                <i className="fa-solid fa-circle-check"></i>
+                <span>Source Files Included</span>
+              </div>
+              <div className="logo-service-cta-feature">
+                <i className="fa-solid fa-circle-check"></i>
+                <span>Lifetime Support</span>
+              </div>
+            </div>
+
+            <div className="logo-service-cta-buttons">
+              <Link to="/contact" className="logo-service-cta-btn">
+                Start Your Project
+                <i className="fa-solid fa-arrow-right"></i>
+              </Link>
+              <a href="tel:+919942637897" className="logo-service-cta-outline">
+                <i className="fa-solid fa-phone"></i>
+                Call Us Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -1,0 +1,15 @@
+/* ==========================================================================
+   UI/UX DESIGN SERVICE PAGE — SCOPED STYLES
+   All major UI styles are inherited from services_base.css.
+   ========================================================================== */
+
+.uiux-reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.uiux-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,91 @@
+/* Magencyinfo Global Stylesheet Bundle */
+@import "./css/header.css";
+@import "./css/nav.css";
+@import "./css/footer.css";
+@import "./css/services_base.css";
+@import "./css/index.css";
+@import "./css/pricing.css";
+@import "./css/contact.css";
+@import "./css/booking.css";
+@import "./css/blog.css";
+@import "./css/tech.css";
+@import "./css/about.css";
+@import "./css/privacy.css";
+@import "./css/terms.css";
+@import "./css/web.css";
+@import "./css/uiux.css";
+@import "./css/seo.css";
+@import "./css/dm.css";
+@import "./css/aisol.css";
+@import "./css/maint.css";
+@import "./css/logo.css";
+@import "./css/video.css";
+@import "./css/case_study.css";
+@import "./css/case_study_detail.css";
+@import "./css/blog_detail.css";
+@import "./css/app.css";
+@import "./css/responsive.css";
+
+/* Floating WhatsApp tooltip hover behavior matching original HTML */
+.home-wa-float-container:hover .home-wa-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(0) !important;
+}
+
+.home-wa-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.5) !important;
+}
+
+/* ============================================================
+   UNIVERSAL REVEAL & VISIBILITY FIXES
+   Ensures 100% of service and home page sections are properly visible
+   ============================================================ */
+.web-reveal,
+.video-reveal,
+.uiux-reveal,
+.svc-reveal,
+.seo-reveal,
+.maint-reveal,
+.logo-reveal,
+.dm-reveal,
+.ai-reveal,
+.home-reveal {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+
+/* Ensure active FAQ answer is visible and smoothly readable */
+.svc-faq-item.active .svc-faq-answer,
+.logo-faq-item.active .logo-faq-answer,
+.web-faq-item.active .web-faq-answer,
+.uiux-faq-item.active .uiux-faq-answer,
+.seo-faq-item.active .seo-faq-answer,
+.ai-faq-item.active .ai-faq-answer,
+.dm-faq-item.active .dm-faq-answer,
+.maint-faq-item.active .maint-faq-answer,
+.video-faq-item.active .video-faq-answer {
+  max-height: 800px !important;
+  display: block !important;
+  overflow: visible !important;
+  opacity: 1 !important;
+}
+
+/* Ensure all service cards, portfolios, and pricing cards render cleanly */
+.svc-card,
+.svc-process-card,
+.svc-tech-card,
+.svc-portfolio-card,
+.svc-pricing-card,
+.svc-testimonial-card,
+.logo-service-card,
+.logo-service-why-card,
+.logo-service-process-card,
+.logo-service-portfolio-card,
+.logo-service-pricing-card,
+.logo-service-testimonial-card {
+  visibility: visible !important;
+  opacity: 1 !important;
+}

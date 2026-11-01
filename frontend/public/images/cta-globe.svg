@@ -1,0 +1,48 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="globeGradient" cx="35%" cy="35%">
+      <stop offset="0%" style="stop-color:#1a9b96;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0a3d3a;stop-opacity:0.9" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <circle cx="200" cy="200" r="200" fill="#0a0e1d"/>
+  
+  <!-- Main Globe -->
+  <circle cx="200" cy="200" r="150" fill="url(#globeGradient)" filter="url(#glow)"/>
+  
+  <!-- Network nodes -->
+  <circle cx="200" cy="100" r="4" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="270" cy="160" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="280" cy="230" r="3" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="240" cy="290" r="4" fill="#00d4ff" opacity="0.7"/>
+  <circle cx="150" cy="280" r="3" fill="#00d4ff" opacity="0.6"/>
+  <circle cx="110" cy="220" r="3" fill="#00d4ff" opacity="0.5"/>
+  <circle cx="130" cy="140" r="4" fill="#00d4ff" opacity="0.7"/>
+  
+  <!-- Network lines -->
+  <line x1="200" y1="100" x2="270" y2="160" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="270" y1="160" x2="280" y2="230" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <line x1="280" y1="230" x2="240" y2="290" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="240" y1="290" x2="150" y2="280" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <line x1="150" y1="280" x2="110" y2="220" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="110" y1="220" x2="130" y2="140" stroke="#00d4ff" stroke-width="1" opacity="0.3"/>
+  <line x1="130" y1="140" x2="200" y2="100" stroke="#00d4ff" stroke-width="1" opacity="0.4"/>
+  <line x1="200" y1="100" x2="240" y2="290" stroke="#00d4ff" stroke-width="1" opacity="0.2"/>
+  
+  <!-- Tech patterns -->
+  <path d="M 200 80 Q 220 100 200 120 Q 180 100 200 80" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <path d="M 160 200 Q 140 220 160 240 Q 180 220 160 200" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  <path d="M 240 200 Q 260 180 280 200 Q 260 220 240 200" fill="none" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  
+  <!-- Highlight arc -->
+  <path d="M 250 120 A 100 100 0 0 1 280 200" fill="none" stroke="#00ffff" stroke-width="2" opacity="0.3"/>
+</svg>
