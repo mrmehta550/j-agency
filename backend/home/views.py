@@ -35,6 +35,7 @@ from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.db import IntegrityError, transaction
 from django.db.models import Q
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from openpyxl import Workbook, load_workbook
@@ -73,20 +74,25 @@ _excel_write_lock = threading.Lock()
 # ──────────────────────────────────────────────────────────────
 
 def home(request):
-    top_blogs = (
-        Blog.objects
-        .filter(status=True)
-        .select_related("category")
-        .order_by("-views", "-created_at")[:3]
-    )
-
-    return render(
-        request,
-        "home/index.html",
-        {
-            "top_blogs": top_blogs,
-        }
-    )
+    """
+    Root health-check and service status endpoint.
+    The client-facing UI is hosted independently on Vercel.
+    """
+    admin_path = f"/{settings.ADMIN_URL.lstrip('/')}" if hasattr(settings, 'ADMIN_URL') else "/admin/"
+    return JsonResponse({
+        "status": "online",
+        "service": "J-Agency Backend API",
+        "version": "1.0.0",
+        "message": "J-Agency backend service is running successfully.",
+        "endpoints": {
+            "categories": "/api/categories/",
+            "blogs": "/api/blogs/",
+            "case_studies": "/api/case-studies/",
+            "contact": "/api/contact/",
+            "booking": "/api/booking/",
+            "admin": admin_path,
+        },
+    }, status=200)
 
 
 def price(request):
