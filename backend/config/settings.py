@@ -65,37 +65,53 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ── Core Security ─────────────────────────────────────────────────────────────
 
-# Generate a new key with:
-#   python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
-SECRET_KEY = os.environ.get(
-    'DJANGO_SECRET_KEY',
-    'django-insecure-dev-only-do-not-use-in-production-replace-me',
+# Secret Key: read from DJANGO_SECRET_KEY or SECRET_KEY (set in Render environment)
+SECRET_KEY = (
+    os.environ.get('DJANGO_SECRET_KEY')
+    or os.environ.get('SECRET_KEY')
+    or 'django-insecure-dev-only-do-not-use-in-production-replace-me'
 )
 
 # SECURITY WARNING: must be False in production.
-DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
+_debug_env = os.environ.get('DJANGO_DEBUG', os.environ.get('DEBUG', 'False'))
+DEBUG = _debug_env.lower() in ('true', '1', 'yes')
 
-# Comma-separated list via ALLOWED_HOSTS env var; includes Railway, Render & custom domains by default.
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.getenv(
-        "ALLOWED_HOSTS",
-        "localhost,127.0.0.1,j-agency-production.up.railway.app,magencyinfo.com,www.magencyinfo.com,.up.railway.app,.railway.app,.onrender.com"
-    ).split(",")
-    if host.strip()
-]
+# Comma-separated list via ALLOWED_HOSTS env var; includes Render & local defaults.
+_allowed_hosts_env = os.getenv("ALLOWED_HOSTS", "")
+if _allowed_hosts_env:
+    ALLOWED_HOSTS = [host.strip() for host in _allowed_hosts_env.split(",") if host.strip()]
+else:
+    ALLOWED_HOSTS = [
+        "localhost",
+        "127.0.0.1",
+        ".onrender.com",
+        "magencyinfo.com",
+        "www.magencyinfo.com",
+    ]
+
+# Render automatically provides RENDER_EXTERNAL_HOSTNAME (e.g. your-backend-domain.onrender.com)
+_render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")
+if _render_hostname and _render_hostname not in ALLOWED_HOSTS:
+    ALLOWED_HOSTS.append(_render_hostname)
 
 # CSRF Trusted Origins (Required in Django 4.0+ for HTTPS form submissions)
-CSRF_TRUSTED_ORIGINS = [
-    origin.strip()
-    for origin in os.getenv(
-        "CSRF_TRUSTED_ORIGINS",
-        "https://j-agency-production.up.railway.app,https://*.up.railway.app,https://*.railway.app,https://magencyinfo.com,https://www.magencyinfo.com,https://*.onrender.com,http://localhost,http://127.0.0.1"
-    ).split(",")
-    if origin.strip()
-]
+_csrf_origins_env = os.getenv("CSRF_TRUSTED_ORIGINS", "")
+if _csrf_origins_env:
+    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in _csrf_origins_env.split(",") if origin.strip()]
+else:
+    CSRF_TRUSTED_ORIGINS = [
+        "https://*.onrender.com",
+        "https://j-agency-wlpt.vercel.app",
+        "https://*.vercel.app",
+        "https://magencyinfo.com",
+        "https://www.magencyinfo.com",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+    ]
 
-# Reverse proxy SSL header (essential for Railway / Cloudflare / Nginx HTTPS detection)
+# Reverse proxy SSL header (essential for Render / Cloudflare / Nginx HTTPS detection)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 
@@ -135,19 +151,35 @@ MIDDLEWARE = [
 ]
 
 # ── CORS Settings ─────────────────────────────────────────────────────────────
-CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.getenv(
-        "CORS_ALLOWED_ORIGINS",
-        "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,https://magencyinfo.com,https://www.magencyinfo.com"
-    ).split(",")
-    if origin.strip()
-]
+# Strict origin isolation for production - never allow all origins
+CORS_ALLOW_ALL_ORIGINS = False
 
-# Allow any Vercel preview or production deployments automatically
-CORS_ALLOWED_ORIGIN_REGEXES = [
-    r"^https:\/\/.*\.vercel\.app$",
-]
+_cors_origins_env = os.getenv("CORS_ALLOWED_ORIGINS", "")
+if _cors_origins_env:
+    CORS_ALLOWED_ORIGINS = [
+        origin.strip() for origin in _cors_origins_env.split(",") if origin.strip()
+    ]
+else:
+    CORS_ALLOWED_ORIGINS = [
+        "https://j-agency-wlpt.vercel.app",
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "http://localhost:3000",
+        "http://127.0.0.1:3000",
+        "https://magencyinfo.com",
+        "https://www.magencyinfo.com",
+    ]
+
+# Allow Vercel preview deployments for the project if enabled via env or matching project name
+_cors_regex_env = os.getenv("CORS_ALLOWED_ORIGIN_REGEXES", "")
+if _cors_regex_env:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r.strip() for r in _cors_regex_env.split(",") if r.strip()
+    ]
+else:
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        r"^https:\/\/j-agency-wlpt.*\.vercel\.app$",
+    ]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -251,6 +283,16 @@ STATICFILES_DIRS = [
 # Run: python manage.py collectstatic --noinput
 # Previously missing — collectstatic would crash.
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+# WhiteNoise storage: compresses files efficiently without crashing on missing source maps
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage",
+    },
+}
 
 
 # ── Media Files (user uploads) ────────────────────────────────────────────────

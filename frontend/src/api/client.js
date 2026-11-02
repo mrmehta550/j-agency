@@ -1,30 +1,101 @@
-export const API_BASE_URL = (import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000').replace(/\/+$/, '');
+/**
+ * Centralized API Client for J-Agency Frontend
+ *
+ * Configures base URL from environment (VITE_API_URL),
+ * handles request timeouts, authentication token propagation,
+ * and standardizes error/success responses.
+ */
 
+export const API_BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  import.meta.env.VITE_API_BASE_URL ||
+  'http://127.0.0.1:8000'
+).replace(/\/+$/, '');
+
+const DEFAULT_TIMEOUT_MS = 25000;
+
+/**
+ * Universal request wrapper with timeout and token handling
+ */
 async function request(endpoint, options = {}) {
   const url = `${API_BASE_URL}${endpoint}`;
+  const timeoutMs = options.timeout || DEFAULT_TIMEOUT_MS;
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+
+  // Retrieve optional auth token if present in client storage
+  const token =
+    typeof window !== 'undefined'
+      ? localStorage.getItem('token') || localStorage.getItem('access_token')
+      : null;
+
+  const headers = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    ...options.headers,
+  };
+
   const config = {
     ...options,
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-      ...options.headers,
-    },
+    headers,
+    signal: options.signal || controller.signal,
   };
 
   try {
     const response = await fetch(url, config);
-    const data = await response.json();
-    if (!response.ok) {
-      return { ok: false, status: response.status, data, error: data?.error || data?.message };
+    clearTimeout(timeoutId);
+
+    // Handle 204 No Content
+    if (response.status === 204) {
+      return { ok: true, status: 204, data: null, error: null };
     }
-    return { ok: true, status: response.status, data };
+
+    let data;
+    const contentType = response.headers.get('content-type') || '';
+    if (contentType.includes('application/json')) {
+      data = await response.json();
+    } else {
+      const text = await response.text();
+      try {
+        data = JSON.parse(text);
+      } catch {
+        data = { message: text };
+      }
+    }
+
+    if (!response.ok) {
+      const errorMessage =
+        data?.message ||
+        data?.error ||
+        data?.detail ||
+        `Request failed with status ${response.status}`;
+
+      return {
+        ok: false,
+        status: response.status,
+        data,
+        error: errorMessage,
+      };
+    }
+
+    return { ok: true, status: response.status, data, error: null };
   } catch (error) {
-    console.error(`API Error on ${endpoint}:`, error);
+    clearTimeout(timeoutId);
+
+    const isTimeout = error.name === 'AbortError';
+    const message = isTimeout
+      ? 'Request timed out. The server is taking longer than expected to respond.'
+      : 'Network error. Please check your internet connection or verify the backend is running.';
+
+    console.error(`API Error on [${options.method || 'GET'} ${endpoint}]:`, error);
+
     return {
       ok: false,
-      status: 0,
+      status: isTimeout ? 408 : 0,
       data: {
-        message: 'Network error. Please make sure the backend server is running.',
+        message,
         error: error.message,
       },
       error: error.message,
@@ -32,22 +103,28 @@ async function request(endpoint, options = {}) {
   }
 }
 
-export const getCategories = () => request('/api/categories/');
+// ── Categories ────────────────────────────────────────────────
+export const getCategories = (options = {}) =>
+  request('/api/categories/', options);
 
-export const getBlogs = (params = {}) => {
+// ── Blogs ─────────────────────────────────────────────────────
+export const getBlogs = (params = {}, options = {}) => {
   const searchParams = new URLSearchParams();
   if (params.category && params.category !== 'all') searchParams.set('category', params.category);
   if (params.search) searchParams.set('search', params.search);
   if (params.q) searchParams.set('q', params.q);
   if (params.page) searchParams.set('page', params.page);
   if (params.page_size) searchParams.set('page_size', params.page_size);
+
   const qs = searchParams.toString();
-  return request(`/api/blogs/${qs ? `?${qs}` : ''}`);
+  return request(`/api/blogs/${qs ? `?${qs}` : ''}`, options);
 };
 
-export const getBlogDetail = (slug) => request(`/api/blogs/${encodeURIComponent(slug)}/`);
+export const getBlogDetail = (slug, options = {}) =>
+  request(`/api/blogs/${encodeURIComponent(slug)}/`, options);
 
-export const getCaseStudies = (categoryOrParams = '') => {
+// ── Case Studies ──────────────────────────────────────────────
+export const getCaseStudies = (categoryOrParams = '', options = {}) => {
   const searchParams = new URLSearchParams();
   if (typeof categoryOrParams === 'string' && categoryOrParams && categoryOrParams !== 'all') {
     searchParams.set('category', categoryOrParams);
@@ -58,20 +135,25 @@ export const getCaseStudies = (categoryOrParams = '') => {
     if (categoryOrParams.featured) searchParams.set('featured', categoryOrParams.featured);
     if (categoryOrParams.limit) searchParams.set('limit', categoryOrParams.limit);
   }
+
   const qs = searchParams.toString();
-  return request(`/api/case-studies/${qs ? `?${qs}` : ''}`);
+  return request(`/api/case-studies/${qs ? `?${qs}` : ''}`, options);
 };
 
-export const getCaseStudyDetail = (slug) => request(`/api/case-studies/${encodeURIComponent(slug)}/`);
+export const getCaseStudyDetail = (slug, options = {}) =>
+  request(`/api/case-studies/${encodeURIComponent(slug)}/`, options);
 
-export const submitContact = (formData) =>
+// ── Contact & Booking Submissions ─────────────────────────────
+export const submitContact = (formData, options = {}) =>
   request('/api/contact/', {
+    ...options,
     method: 'POST',
     body: JSON.stringify(formData),
   });
 
-export const submitBooking = (formData) =>
+export const submitBooking = (formData, options = {}) =>
   request('/api/booking/', {
+    ...options,
     method: 'POST',
     body: JSON.stringify(formData),
   });
