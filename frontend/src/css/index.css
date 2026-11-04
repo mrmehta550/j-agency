@@ -1184,6 +1184,10 @@
     color: var(--home-text-secondary);
 }
 
+.home-logo-slider:hover .home-logo-track {
+    animation-play-state: paused;
+}
+
 .home-logo-slider {
     overflow: hidden;
     white-space: nowrap;
@@ -1214,18 +1218,18 @@
 .home-logo-track {
     display: inline-flex;
     gap: 48px;
-    animation: homeLogoScroll 25s linear infinite;
+    animation: homeLogoScroll 12s linear infinite;
 }
 
 .home-logo-item img {
     height: 36px;
     width: auto;
-    filter: grayscale(100%) opacity(50%);
+    filter: none; opacity: 0.95;
     transition: filter 0.3s ease;
 }
 
 .home-logo-item:hover img {
-    filter: grayscale(0%) opacity(100%);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12)); opacity: 1; transform: translateY(-3px) scale(1.12);
 }
 
 @keyframes homeLogoScroll {
