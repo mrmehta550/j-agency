@@ -251,37 +251,29 @@ export default function HomePage() {
           <div className="home-hero-stats" style={{ marginTop: 0 }}>
             <div className="home-stat-card">
               <div className="home-icon">
-                <i className="fa-solid fa-layer-group"></i>
+                <i className="fa-solid fa-compass"></i>
               </div>
               <div>
-                <h3 className="home-counter" data-target="250" data-suffix="+">
-                  0+
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
+                  01 — One Vision
                 </h3>
-                <span>Projects Completed</span>
+                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
+                  Building better digital experiences.
+                </span>
               </div>
             </div>
 
             <div className="home-stat-card">
               <div className="home-icon">
-                <i className="fa-solid fa-users"></i>
+                <i className="fa-solid fa-shapes"></i>
               </div>
               <div>
-                <h3 className="home-counter" data-target="120" data-suffix="+">
-                  0+
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
+                  360° — Digital Solutions
                 </h3>
-                <span>Happy Clients</span>
-              </div>
-            </div>
-
-            <div className="home-stat-card">
-              <div className="home-icon">
-                <i className="fa-regular fa-clock"></i>
-              </div>
-              <div>
-                <h3 className="home-counter" data-target="8" data-suffix="+">
-                  0+
-                </h3>
-                <span>Years Experience</span>
+                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
+                  Design, development and digital growth.
+                </span>
               </div>
             </div>
 
@@ -290,10 +282,26 @@ export default function HomePage() {
                 <i className="fa-solid fa-shield-halved"></i>
               </div>
               <div>
-                <h3 className="home-counter" data-target="99" data-suffix="%">
-                  0%
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
+                  100% — Commitment
                 </h3>
-                <span>Satisfaction Rate</span>
+                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
+                  Focused on quality and client success.
+                </span>
+              </div>
+            </div>
+
+            <div className="home-stat-card">
+              <div className="home-icon">
+                <i className="fa-solid fa-infinity"></i>
+              </div>
+              <div>
+                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
+                  ∞ — Possibilities
+                </h3>
+                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
+                  Turning ambitious ideas into digital products.
+                </span>
               </div>
             </div>
           </div>
@@ -481,12 +489,12 @@ export default function HomePage() {
             <div className="home-why-image home-reveal">
               <img src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" />
               <div className="home-experience-card">
-                <h2>8+</h2>
-                <span>Years Experience</span>
+                <h2>360°</h2>
+                <span>Digital Solutions</span>
               </div>
               <div className="home-clients-card">
-                <h2>99%</h2>
-                <span>Client Satisfaction</span>
+                <h2>100%</h2>
+                <span>Commitment</span>
               </div>
             </div>
           </div>

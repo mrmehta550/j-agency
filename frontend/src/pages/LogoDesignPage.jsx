@@ -196,20 +196,24 @@ export default function LogoDesignPage() {
         <div className="container">
           <div className="logo-service-stats-wrapper">
             <div className="logo-service-stat-item">
-              <h3 className="logo-counter">2000+</h3>
-              <p>Logos Designed</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="logo-service-stat-item">
-              <h3 className="logo-counter">500+</h3>
-              <p>Happy Clients</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="logo-service-stat-item">
-              <h3 className="logo-counter">12+</h3>
-              <p>Years Experience</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="logo-service-stat-item">
-              <h3 className="logo-counter">98%</h3>
-              <p>Satisfaction Rate</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>

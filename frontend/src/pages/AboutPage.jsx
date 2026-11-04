@@ -67,20 +67,24 @@ export default function AboutPage() {
             {/* Stats Row */}
             <div className="about-hero-stats">
               <div className="about-stat-item">
-                <h2>250+</h2>
-                <span>Projects Delivered</span>
+                <h2>01</h2>
+                <h4>One Vision</h4>
+                <span>Building better digital experiences.</span>
               </div>
               <div className="about-stat-item">
-                <h2>120+</h2>
-                <span>Happy Clients</span>
+                <h2>360°</h2>
+                <h4>Digital Solutions</h4>
+                <span>Design, development and digital growth.</span>
               </div>
               <div className="about-stat-item">
-                <h2>98%</h2>
-                <span>Client Satisfaction</span>
+                <h2>100%</h2>
+                <h4>Commitment</h4>
+                <span>Focused on quality and client success.</span>
               </div>
               <div className="about-stat-item">
-                <h2>24/7</h2>
-                <span>Premium Support</span>
+                <h2>∞</h2>
+                <h4>Possibilities</h4>
+                <span>Turning ambitious ideas into digital products.</span>
               </div>
             </div>
           </div>
@@ -111,8 +115,8 @@ export default function AboutPage() {
                 <img src="/images/about/team-work.jpg" alt="Magencystudio Team" />
               </div>
               <div className="about-experience-card">
-                <h2>5+</h2>
-                <span>Years of Innovation</span>
+                <h2>360°</h2>
+                <span>Digital Excellence</span>
               </div>
             </div>
 

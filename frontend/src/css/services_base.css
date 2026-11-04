@@ -578,12 +578,22 @@
     line-height: 1;
 }
 
+.svc-stat-item h4 {
+    font-family: var(--svc-font-heading);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--svc-text-primary);
+    margin: 0 0 4px 0;
+}
+
 .svc-stat-item p {
     font-family: var(--svc-font-body);
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 13px;
+    font-weight: 400;
     color: var(--svc-text-muted);
     margin: 0;
+    line-height: 1.45;
+    max-width: 230px;
 }
 
 /* ============================================================

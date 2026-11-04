@@ -60,20 +60,24 @@ export default function TechPage() {
             {/* Hero Stats Row */}
             <div className="technology-hero-stats">
               <div className="technology-stat-card">
-                <h2>250+</h2>
-                <span>Projects Delivered</span>
+                <h2>01</h2>
+                <h4>One Vision</h4>
+                <span>Building better digital experiences.</span>
               </div>
               <div className="technology-stat-card">
-                <h2>50+</h2>
-                <span>Technologies</span>
+                <h2>360°</h2>
+                <h4>Digital Solutions</h4>
+                <span>Design, development and digital growth.</span>
               </div>
               <div className="technology-stat-card">
-                <h2>40+</h2>
-                <span>Experts</span>
+                <h2>100%</h2>
+                <h4>Commitment</h4>
+                <span>Focused on quality and client success.</span>
               </div>
               <div className="technology-stat-card">
-                <h2>99.9%</h2>
-                <span>Uptime</span>
+                <h2>∞</h2>
+                <h4>Possibilities</h4>
+                <span>Turning ambitious ideas into digital products.</span>
               </div>
             </div>
           </div>

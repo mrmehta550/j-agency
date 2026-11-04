@@ -135,20 +135,24 @@ export default function DigitalMarketingPage() {
         <div className="container">
           <div className="svc-stats-wrapper">
             <div className="svc-stat-item">
-              <h3 className="dm-counter">250+</h3>
-              <p>Happy Clients</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="dm-counter">700+</h3>
-              <p>Campaigns Managed</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="dm-counter">8+</h3>
-              <p>Years Experience</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="dm-counter">96%</h3>
-              <p>Client Retention Rate</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>

@@ -149,20 +149,24 @@ export default function UiUxPage() {
         <div className="container">
           <div className="svc-stats-wrapper">
             <div className="svc-stat-item">
-              <h3 className="uiux-counter">350+</h3>
-              <p>Design Projects</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="uiux-counter">120+</h3>
-              <p>Happy Clients</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="uiux-counter">6+</h3>
-              <p>Senior Designers</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="uiux-counter">98%</h3>
-              <p>Client Satisfaction</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>

@@ -149,20 +149,24 @@ export default function SeoPage() {
         <div className="container">
           <div className="svc-stats-wrapper">
             <div className="svc-stat-item">
-              <h3 className="seo-counter">500+</h3>
-              <p>Successful Projects</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="seo-counter">98%</h3>
-              <p>Client Satisfaction</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="seo-counter">320%</h3>
-              <p>Average Traffic Growth</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="seo-counter">10M+</h3>
-              <p>Revenue Generated</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>

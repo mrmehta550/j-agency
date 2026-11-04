@@ -135,20 +135,24 @@ export default function MaintenancePage() {
         <div className="container">
           <div className="svc-stats-wrapper">
             <div className="svc-stat-item">
-              <h3 className="maint-counter">150+</h3>
-              <p>Websites Maintained</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="maint-counter">99.9%</h3>
-              <p>Uptime Guaranteed</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="maint-counter">24/7</h3>
-              <p>Active Server Monitoring</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="maint-counter">5000+</h3>
-              <p>Bugs Fixed Fast</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>

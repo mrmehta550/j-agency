@@ -165,20 +165,24 @@ export default function VideoEditingPage() {
         <div className="container">
           <div className="svc-stats-wrapper">
             <div className="svc-stat-item">
-              <h3 className="video-counter">500+</h3>
-              <p>Videos Delivered</p>
+              <h3>01</h3>
+              <h4>One Vision</h4>
+              <p>Building better digital experiences.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="video-counter">150+</h3>
-              <p>Happy Clients</p>
+              <h3>360°</h3>
+              <h4>Digital Solutions</h4>
+              <p>Design, development and digital growth.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="video-counter">98%</h3>
-              <p>Client Satisfaction</p>
+              <h3>100%</h3>
+              <h4>Commitment</h4>
+              <p>Focused on quality and client success.</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="video-counter">10M+</h3>
-              <p>Organic Views Generated</p>
+              <h3>∞</h3>
+              <h4>Possibilities</h4>
+              <p>Turning ambitious ideas into digital products.</p>
             </div>
           </div>
         </div>
