@@ -143,7 +143,7 @@ export default function WebDevPage() {
               <p>Happy Clients</p>
             </div>
             <div className="svc-stat-item">
-              <h3 className="web-counter">8+</h3>
+              <h3 className="web-counter">3+</h3>
               <p>Years Experience</p>
             </div>
             <div className="svc-stat-item">
@@ -473,7 +473,7 @@ export default function WebDevPage() {
             <div className="svc-pricing-card">
               <h3>Starter</h3>
               <p className="logo-service-plan-description">Best for startups and landing page builders.</p>
-              <div className="price">₹24,999</div>
+              <div className="price">₹9,999</div>
               <ul className="svc-pricing-features">
                 <li><i className="fa-solid fa-check"></i> Up to 5 Pages</li>
                 <li><i className="fa-solid fa-check"></i> Responsive Design</li>
@@ -488,14 +488,14 @@ export default function WebDevPage() {
               <div className="svc-pricing-popular">Most Popular</div>
               <h3>Professional</h3>
               <p className="logo-service-plan-description">Ideal package for corporate scaling.</p>
-              <div className="price">₹59,999</div>
+              <div className="price">₹39,999</div>
               <ul className="svc-pricing-features">
                 <li><i className="fa-solid fa-check"></i> Unlimited Pages</li>
                 <li><i className="fa-solid fa-check"></i> Admin Dashboard Setup</li>
                 <li><i className="fa-solid fa-check"></i> CMS Integration</li>
                 <li><i className="fa-solid fa-check"></i> Advanced SEO Tools</li>
                 <li><i className="fa-solid fa-check"></i> Core Speed Audit</li>
-                <li><i className="fa-solid fa-check"></i> 6 Months Support</li>
+                <li><i className="fa-solid fa-check"></i> 3 Months Support</li>
               </ul>
               <Link to="/booking" className="svc-pricing-button">Book Consultation</Link>
             </div>

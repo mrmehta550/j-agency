@@ -235,7 +235,7 @@ if _database_url:
             conn_health_checks=True,
         )
     }
-elif _mysql_url or os.getenv('MYSQLHOST') or (os.getenv('DB_NAME') and os.getenv('DB_NAME') != 'railway'):
+elif _mysql_url or (os.getenv('MYSQLHOST') and os.getenv('MYSQLPASSWORD')) or (os.getenv('DB_NAME') and os.getenv('DB_PASSWORD')):
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
