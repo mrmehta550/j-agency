@@ -6,11 +6,23 @@
  * and standardizes error/success responses.
  */
 
-export const API_BASE_URL = (
-  import.meta.env.VITE_API_URL ||
-  import.meta.env.VITE_API_BASE_URL ||
-  'http://127.0.0.1:8000'
-).replace(/\/+$/, '');
+export const API_BASE_URL = (() => {
+  const envUrl = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL;
+  // If explicitly provided and not pointing to localhost, use it
+  if (envUrl && !envUrl.includes('127.0.0.1') && !envUrl.includes('localhost')) {
+    return envUrl;
+  }
+  // When running in production browser (Vercel, custom domain, etc.), always target the live Render backend
+  if (
+    typeof window !== 'undefined' &&
+    window.location.hostname &&
+    window.location.hostname !== 'localhost' &&
+    window.location.hostname !== '127.0.0.1'
+  ) {
+    return 'https://j-agency-1.onrender.com';
+  }
+  return envUrl || 'http://127.0.0.1:8000';
+})().replace(/\/+$/, '');
 
 const DEFAULT_TIMEOUT_MS = 25000;
 
