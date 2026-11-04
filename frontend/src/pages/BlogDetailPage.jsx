@@ -100,8 +100,8 @@ export default function BlogDetailPage() {
           <div className="blog-detail-author-bar">
             <div className="blog-detail-author-left">
               <div>
-                <h4>{blog.author_name || 'Magencyinfo Team'}</h4>
-                <span>Senior Content Writer • Magencyinfo</span>
+                <h4>{blog.author_name || 'Magencystudio Team'}</h4>
+                <span>Senior Content Writer • Magencystudio</span>
               </div>
             </div>
 

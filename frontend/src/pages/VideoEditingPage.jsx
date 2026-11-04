@@ -6,7 +6,7 @@ export default function VideoEditingPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional Video Editing & Production Services | Magencyinfo";
+    document.title = "Professional Video Editing & Production Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {
@@ -380,7 +380,7 @@ export default function VideoEditingPage() {
           <div className="svc-heading video-reveal">
             <span className="svc-section-tag">Testimonials</span>
             <h2>Trusted By <span>Publishers Globally</span></h2>
-            <p>Read about client experiences collaborating with our video editing magencyinfo.</p>
+            <p>Read about client experiences collaborating with our video editing magencystudio.</p>
           </div>
 
           <div className="svc-testimonial-grid video-reveal">

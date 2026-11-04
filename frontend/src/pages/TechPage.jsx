@@ -36,7 +36,7 @@ export default function TechPage() {
             </h1>
 
             <p>
-              Magencyinfo helps startups and enterprises build secure, scalable, and high-performance applications using the latest technologies including AI, Cloud, DevOps, Full Stack Development, and Automation.
+              Magencystudio helps startups and enterprises build secure, scalable, and high-performance applications using the latest technologies including AI, Cloud, DevOps, Full Stack Development, and Automation.
             </p>
 
             <div className="technology-hero-buttons">

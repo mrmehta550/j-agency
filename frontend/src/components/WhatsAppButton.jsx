@@ -16,7 +16,7 @@ export default function WhatsAppButton() {
       }}
     >
       <a
-        href="https://wa.me/919942637897?text=Hello%20Magencyinfo%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20I%20would%20like%20to%20discuss%20my%20project.%20Please%20get%20in%20touch.%20Thank%20you!"
+        href="https://wa.me/919942637897?text=Hello%20Magencystudio%2C%20I%20visited%20your%20website%20and%20I'm%20interested%20in%20your%20services.%20I%20would%20like%20to%20discuss%20my%20project.%20Please%20get%20in%20touch.%20Thank%20you!"
         className="home-wa-float"
         target="_blank"
         rel="noopener noreferrer"

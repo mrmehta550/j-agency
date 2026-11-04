@@ -19,7 +19,7 @@ export default function AppDevPage() {
   const [timelineText, setTimelineText] = useState("4 - 6 Weeks");
 
   useEffect(() => {
-    document.title = "Mobile App Development Services | Android & iOS Apps | Magencyinfo";
+    document.title = "Mobile App Development Services | Android & iOS Apps | Magencystudio";
   }, []);
 
   // Recalculate price and timeline when inputs change
@@ -517,7 +517,7 @@ export default function AppDevPage() {
         <div className="app-container">
           <div className="cta-banner-wrapper">
             <h2>Have a Premium App Idea?</h2>
-            <p>Let's collaborate! Partner with Magencyinfo experts to design and develop your custom iOS and Android products.</p>
+            <p>Let's collaborate! Partner with Magencystudio experts to design and develop your custom iOS and Android products.</p>
             <div className="cta-banner-buttons">
               <Link to="/contact" className="cta-btn-primary">Start Your Project <i className="fa-solid fa-paper-plane"></i></Link>
               <a href="https://wa.me/919999999999" className="cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">

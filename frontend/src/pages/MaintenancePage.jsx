@@ -5,7 +5,7 @@ export default function MaintenancePage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional Website Maintenance Services | Magencyinfo";
+    document.title = "Professional Website Maintenance Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {

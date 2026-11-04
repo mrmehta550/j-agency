@@ -5,7 +5,7 @@ export default function WebDevPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Custom Web Development & Web App Services | Magencyinfo";
+    document.title = "Custom Web Development & Web App Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {
@@ -536,7 +536,7 @@ export default function WebDevPage() {
                 <i className="fa-solid fa-star"></i>
                 <i className="fa-solid fa-star"></i>
               </div>
-              <p>&quot;Magencyinfo transformed our outdated business website into a modern, fast platform. Our inbound leads grew by over 60% in two months.&quot;</p>
+              <p>&quot;Magencystudio transformed our outdated business website into a modern, fast platform. Our inbound leads grew by over 60% in two months.&quot;</p>
               <div className="svc-client">
                 <img src="/images/services/web-development/client1.png" alt="Puna Anderson CEO TechNova" />
                 <div>

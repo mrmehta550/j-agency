@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="about-hero-content">
             <span className="about-hero-badge">
               <i className="fa-solid fa-sparkles"></i>
-              About Magencyinfo
+              About Magencystudio
             </span>
 
             <h1>
@@ -51,7 +51,7 @@ export default function AboutPage() {
             </h1>
 
             <p>
-              Magencyinfo is a full-service digital agency helping startups, brands, and enterprises create exceptional websites, AI-powered solutions, mobile applications, and scalable digital products that deliver measurable business growth.
+              Magencystudio is a full-service digital agency helping startups, brands, and enterprises create exceptional websites, AI-powered solutions, mobile applications, and scalable digital products that deliver measurable business growth.
             </p>
 
             <div className="about-hero-buttons">
@@ -108,7 +108,7 @@ export default function AboutPage() {
             {/* Left Side Image */}
             <div className="about-who-image">
               <div className="about-image-wrapper">
-                <img src="/images/about/team-work.jpg" alt="Magencyinfo Team" />
+                <img src="/images/about/team-work.jpg" alt="Magencystudio Team" />
               </div>
               <div className="about-experience-card">
                 <h2>5+</h2>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               <span className="about-section-badge">Who We Are</span>
               <h2>Your Trusted Technology Partner For Modern Digital Solutions.</h2>
               <p>
-                At <strong>Magencyinfo</strong>, we believe technology should help businesses grow—not make things more complicated. Our team combines creativity, engineering, and strategic thinking to build digital products that solve real business challenges.
+                At <strong>Magencystudio</strong>, we believe technology should help businesses grow—not make things more complicated. Our team combines creativity, engineering, and strategic thinking to build digital products that solve real business challenges.
               </p>
               <p>
                 From custom websites and AI-powered automation to enterprise software, branding, and digital marketing, we create scalable solutions designed for long-term success.
@@ -170,7 +170,7 @@ export default function AboutPage() {
             <span className="about-section-badge">Our Core Values</span>
             <h2>Principles That Drive Every Project We Build</h2>
             <p>
-              At Magencyinfo, every solution is built around innovation, transparency, quality, and long-term partnerships. These values define how we work and how we help businesses grow.
+              At Magencystudio, every solution is built around innovation, transparency, quality, and long-term partnerships. These values define how we work and how we help businesses grow.
             </p>
           </div>
 
@@ -276,13 +276,13 @@ export default function AboutPage() {
       </section>
 
       {/* ==========================================
-          WHY CHOOSE MAGENCYINFO
+          WHY CHOOSE MAGENCYSTUDIO
       =========================================== */}
       <section className="about-why-choose">
         <div className="about-container">
           <div className="about-section-heading">
             <span className="about-section-badge">Why Choose Us</span>
-            <h2>Why Businesses Choose Magencyinfo</h2>
+            <h2>Why Businesses Choose Magencystudio</h2>
             <p>
               We don't just build websites or software—we create digital solutions that help businesses increase efficiency, strengthen their brand, and achieve sustainable growth.
             </p>
@@ -344,7 +344,7 @@ export default function AboutPage() {
         <div className="about-container">
           <div className="about-section-heading">
             <span className="about-section-badge">Our Team</span>
-            <h2>Meet The People Behind Magencyinfo</h2>
+            <h2>Meet The People Behind Magencystudio</h2>
             <p>
               Our team combines creativity, engineering, and business strategy to deliver digital experiences that help brands grow.
             </p>
@@ -448,7 +448,7 @@ export default function AboutPage() {
               <span className="about-section-badge">Let's Build Something Amazing</span>
               <h2>Ready To Transform Your Business With Digital Innovation?</h2>
               <p>
-                Whether you're launching a startup, redesigning your website, developing a custom application, or integrating AI into your business, Magencyinfo is here to help you achieve your goals with scalable and future-ready solutions.
+                Whether you're launching a startup, redesigning your website, developing a custom application, or integrating AI into your business, Magencystudio is here to help you achieve your goals with scalable and future-ready solutions.
               </p>
 
               <div className="about-cta-features">

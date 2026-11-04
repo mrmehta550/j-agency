@@ -5,7 +5,7 @@ export default function DigitalMarketingPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Data-Driven Digital Marketing Services | Magencyinfo";
+    document.title = "Data-Driven Digital Marketing Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {

@@ -5,7 +5,7 @@ export default function AiSolutionPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Artificial Intelligence & LLM Automation Services | Magencyinfo";
+    document.title = "Artificial Intelligence & LLM Automation Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {

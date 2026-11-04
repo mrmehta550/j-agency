@@ -5,7 +5,7 @@ export default function PrivacyPage() {
   const [activeSection, setActiveSection] = useState("information");
 
   useEffect(() => {
-    document.title = "Privacy Policy | Magency Info";
+    document.title = "Privacy Policy | Magency Studio";
 
     const handleScroll = () => {
       const sections = [
@@ -65,7 +65,7 @@ export default function PrivacyPage() {
               <h1>Privacy <span>Policy</span></h1>
 
               <p>
-                At <strong>Magency Info</strong>, we respect your privacy and are committed to protecting the personal information you share with us. Whether you engage us for web development, UI/UX design, AI automations, or digital marketing, your data is handled responsibly and securely.
+                At <strong>Magency Studio</strong>, we respect your privacy and are committed to protecting the personal information you share with us. Whether you engage us for web development, UI/UX design, AI automations, or digital marketing, your data is handled responsibly and securely.
               </p>
 
               <div className="privacy-hero-meta">
@@ -88,7 +88,7 @@ export default function PrivacyPage() {
             </div>
 
             <div className="privacy-hero-image">
-              <img src="/images/privacy/privacy-hero.jpg" alt="Magency Info Privacy Policy" />
+              <img src="/images/privacy/privacy-hero.jpg" alt="Magency Studio Privacy Policy" />
             </div>
           </div>
         </div>

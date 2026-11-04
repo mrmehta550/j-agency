@@ -42,25 +42,25 @@ export default function Footer() {
           {/* COMPANY */}
           <div className="ma-footer-company">
             <Link to="/" className="ma-footer-logo">
-              <img src="/images/favicon.png" alt="Magency Info Logo" />
-              <span>Magencyinfo</span>
+              <img src="/images/favicon.png" alt="Magency Studio Logo" />
+              <span>Magencystudio</span>
             </Link>
 
             <p className="ma-footer-desc">
-              Magency Info is a full-service digital agency helping startups, businesses, and enterprises build modern websites, AI automation, mobile applications, UI/UX design, branding, SEO, cloud solutions, and digital marketing strategies that drive measurable business growth.
+              Magency Studio is a full-service digital agency helping startups, businesses, and enterprises build modern websites, AI automation, mobile applications, UI/UX design, branding, SEO, cloud solutions, and digital marketing strategies that drive measurable business growth.
             </p>
 
             <div className="ma-footer-socials">
-              <a href="https://facebook.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <a href="https://facebook.com/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
-              <a href="https://linkedin.com/company/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://linkedin.com/company/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="https://x.com/magencyinfo" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
+              <a href="https://x.com/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X">
                 <i className="fa-brands fa-x-twitter"></i>
               </a>
             </div>
@@ -111,7 +111,7 @@ export default function Footer() {
               </li>
               <li>
                 <i className="fa-solid fa-envelope"></i>
-                <a href="mailto:hello@magencyinfo.com">hello@magencyinfo.com</a>
+                <a href="mailto:hello@magencystudio.com">hello@magencystudio.com</a>
               </li>
               <li>
                 <i className="fa-brands fa-whatsapp"></i>
@@ -126,7 +126,7 @@ export default function Footer() {
         {/* FOOTER BOTTOM */}
         <div className="ma-footer-bottom">
           <div className="ma-footer-copy">
-            © <span id="currentYear">{currentYear}</span> <strong>Magencyinfo</strong>. All Rights Reserved. Designed & Developed by <strong>Magencyinfo</strong>.
+            © <span id="currentYear">{currentYear}</span> <strong>Magencystudio</strong>. All Rights Reserved. Designed & Developed by <strong>Magencystudio</strong>.
           </div>
           <div className="ma-footer-legal">
             <Link to="/privacy/">Privacy Policy</Link>

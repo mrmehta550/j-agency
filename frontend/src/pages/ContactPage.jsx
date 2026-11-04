@@ -120,7 +120,7 @@ export default function ContactPage() {
             </h1>
 
             <p className="contact-hero-desc">
-              Whether you need a professional website, AI automation, digital marketing, or a custom software solution — Magencyinfo is ready to help your business grow.
+              Whether you need a professional website, AI automation, digital marketing, or a custom software solution — Magencystudio is ready to help your business grow.
             </p>
 
             <div className="contact-hero-buttons">
@@ -358,7 +358,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="contact-section-title">
             <span>OUR OFFICE</span>
-            <h2>Visit Magencyinfo</h2>
+            <h2>Visit Magencystudio</h2>
             <p>We work with clients across the globe. You can visit our office, schedule a meeting, or connect with us online.</p>
           </div>
 
@@ -401,7 +401,7 @@ export default function ContactPage() {
                 <div className="contact-office-icon"><i className="fa-solid fa-globe"></i></div>
                 <div>
                   <h3>Website</h3>
-                  <p>www.magencyinfo.com</p>
+                  <p>www.magencystudio.com</p>
                 </div>
               </div>
 
@@ -431,7 +431,7 @@ export default function ContactPage() {
       <section className="contact-why-section">
         <div className="container">
           <div className="contact-section-title">
-            <span>WHY CHOOSE Magencyinfo</span>
+            <span>WHY CHOOSE Magencystudio</span>
             <h2>We Build Digital Experiences That Drive Real Business Growth</h2>
             <p>From startups to enterprise businesses, we combine creativity, technology and AI to deliver world-class digital solutions.</p>
           </div>
@@ -496,7 +496,7 @@ export default function ContactPage() {
           <div className="contact-cta-box">
             <div className="contact-cta-left">
               <span className="contact-section-tag">START YOUR PROJECT</span>
-              <h2>Ready To Grow Your Business With Magencyinfo?</h2>
+              <h2>Ready To Grow Your Business With Magencystudio?</h2>
               <p>
                 Whether you're looking for a modern website, AI automation, mobile application, digital marketing, or complete digital transformation, our experts are ready to help.
               </p>
@@ -542,7 +542,7 @@ export default function ContactPage() {
         <div className="container">
           <div className="contact-newsletter-box">
             <span>NEWSLETTER</span>
-            <h2>Stay Updated With Magencyinfo</h2>
+            <h2>Stay Updated With Magencystudio</h2>
             <p>Subscribe to receive the latest updates, AI trends, web development insights, SEO tips and exclusive business resources.</p>
             <form className="contact-newsletter-form" onSubmit={(e) => { e.preventDefault(); alert('Thank you for subscribing!'); }}>
               <input type="email" placeholder="Enter your email address" required />

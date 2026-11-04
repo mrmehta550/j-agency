@@ -431,7 +431,7 @@ export default function HomePage() {
         <div className="home-container">
           <div className="home-why-grid">
             <div className="home-why-content home-reveal">
-              <span className="home-section-tag">Why Magencyinfo</span>
+              <span className="home-section-tag">Why Magencystudio</span>
               <h2>We Don't Just Build Websites. We Build Scalable Brands.</h2>
               <p>Our multidisciplinary team blends clean engineering, conversion design, and data-driven marketing to deliver products that increase client retention and drive revenue.</p>
 
@@ -479,7 +479,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-why-image home-reveal">
-              <img src="/images/why/dashboard.jpg" alt="Magencyinfo Product Dashboard Mockup" />
+              <img src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" />
               <div className="home-experience-card">
                 <h2>8+</h2>
                 <span>Years Experience</span>
@@ -684,7 +684,7 @@ export default function HomePage() {
           <div className="home-section-header home-reveal">
             <span className="home-section-tag">Client Reviews</span>
             <h2>What Our Clients Say</h2>
-            <p>Founders and marketing leaders share their experience working with Magencyinfo.</p>
+            <p>Founders and marketing leaders share their experience working with Magencystudio.</p>
           </div>
 
           <div className="home-testimonial-slider">
@@ -692,7 +692,7 @@ export default function HomePage() {
               <div className="home-testimonial-card home-reveal">
                 <div className="home-quote"><i className="fa-solid fa-quote-left"></i></div>
                 <p className="home-testimonial-text">
-                  "Magencyinfo transformed our entire web experience and automated our customer onboarding. The speed and quality exceeded all expectations."
+                  "Magencystudio transformed our entire web experience and automated our customer onboarding. The speed and quality exceeded all expectations."
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">

@@ -7,7 +7,7 @@ export default function UiUxPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional UI/UX Design Services | Magencyinfo";
+    document.title = "Professional UI/UX Design Services | Magencystudio";
     loadCaseStudies();
   }, []);
 

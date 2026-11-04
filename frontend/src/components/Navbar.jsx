@@ -84,7 +84,7 @@ export default function Navbar() {
         <div className="container">
           <Link to="/" className="logo">
             <img src="/images/favicon.png" alt="M Agency Logo" />
-            <span>Magencyinfo</span>
+            <span>Magencystudio</span>
           </Link>
 
           <ul id="navMenu" className={`nav-menu ${isOpen ? 'active' : ''}`}>

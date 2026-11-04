@@ -86,6 +86,10 @@ else:
         "127.0.0.1",
         "testserver",
         ".onrender.com",
+        "magencystudio.com",
+        "magencystudio.in",
+        "www.magencystudio.com",
+        "www.magencystudio.in",
         "magencyinfo.com",
         "www.magencyinfo.com",
     ]
@@ -104,6 +108,10 @@ else:
         "https://*.onrender.com",
         "https://j-agency-wlpt.vercel.app",
         "https://*.vercel.app",
+        "https://magencystudio.com",
+        "https://www.magencystudio.com",
+        "https://magencystudio.in",
+        "https://www.magencystudio.in",
         "https://magencyinfo.com",
         "https://www.magencyinfo.com",
         "http://localhost:5173",
@@ -163,12 +171,16 @@ if _cors_origins_env:
 else:
     CORS_ALLOWED_ORIGINS = [
         "https://j-agency-wlpt.vercel.app",
+        "https://magencystudio.com",
+        "https://www.magencystudio.com",
+        "https://magencystudio.in",
+        "https://www.magencystudio.in",
+        "https://magencyinfo.com",
+        "https://www.magencyinfo.com",
         "http://localhost:5173",
         "http://127.0.0.1:5173",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
-        "https://magencyinfo.com",
-        "https://www.magencyinfo.com",
     ]
 
 # Allow Vercel preview deployments for the project if enabled via env or matching project name

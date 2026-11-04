@@ -7,7 +7,7 @@ export default function SeoPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Search Engine Optimization (SEO) Services | Magencyinfo";
+    document.title = "Search Engine Optimization (SEO) Services | Magencystudio";
     loadCaseStudies();
   }, []);
 

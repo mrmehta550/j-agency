@@ -6,7 +6,7 @@ export default function LogoDesignPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Premium Logo Design & Brand Identity Services | Magencyinfo";
+    document.title = "Premium Logo Design & Brand Identity Services | Magencystudio";
   }, []);
 
   const toggleFaq = (idx) => {
@@ -317,7 +317,7 @@ export default function LogoDesignPage() {
         <div className="container">
           <div className="logo-service-heading logo-reveal">
             <span className="logo-service-section-tag">Why Choose Us</span>
-            <h2>Why Businesses Trust <span>Magencyinfo</span></h2>
+            <h2>Why Businesses Trust <span>Magencystudio</span></h2>
             <p>We combine design strategy with creative execution to build memorable, professional logos that support conversion and scaling.</p>
           </div>
 

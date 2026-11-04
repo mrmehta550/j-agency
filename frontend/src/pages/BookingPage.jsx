@@ -194,11 +194,11 @@ export default function BookingPage() {
               <span className="booking-tag">BOOK YOUR FREE CONSULTATION</span>
 
               <h1>
-                Grow Your Business With <span>Magencyinfo</span>
+                Grow Your Business With <span>Magencystudio</span>
               </h1>
 
               <p>
-                Partner with Magencyinfo to build powerful digital experiences. From AI Automation and Website Development to SEO, Digital Marketing and Business Growth, we help brands scale faster with modern technology.
+                Partner with Magencystudio to build powerful digital experiences. From AI Automation and Website Development to SEO, Digital Marketing and Business Growth, we help brands scale faster with modern technology.
               </p>
 
               <div className="booking-buttons">
@@ -560,7 +560,7 @@ export default function BookingPage() {
             <span>READY TO GROW?</span>
             <h2>Let's Build Something Amazing Together</h2>
             <p>
-              Whether you need an AI solution, website, mobile application, SEO strategy, or complete digital transformation, Magencyinfo is here to help your business succeed.
+              Whether you need an AI solution, website, mobile application, SEO strategy, or complete digital transformation, Magencystudio is here to help your business succeed.
             </p>
             <div className="booking-cta-buttons">
               <a href="#bookingForm" className="booking-btn booking-primary-btn">

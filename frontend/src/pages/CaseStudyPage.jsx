@@ -8,7 +8,7 @@ export default function CaseStudyPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Case Studies & Client Portfolio | Magencyinfo";
+    document.title = "Case Studies & Client Portfolio | Magencystudio";
     loadCaseStudies();
   }, []);
 

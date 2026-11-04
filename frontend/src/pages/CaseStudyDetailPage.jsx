@@ -21,7 +21,7 @@ export default function CaseStudyDetailPage() {
       if (res.ok && res.data) {
         setCaseStudy(res.data.case_study);
         setRelated(res.data.related || []);
-        document.title = `${res.data.case_study.title} — Case Study | Magencyinfo`;
+        document.title = `${res.data.case_study.title} — Case Study | Magencystudio`;
       } else {
         setError(res.error || "Case study not found");
       }
