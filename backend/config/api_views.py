@@ -283,10 +283,33 @@ def submit_contact(request):
         }, status=status.HTTP_429_TOO_MANY_REQUESTS)
     except Exception as exc:
         logger.error('Failed to save contact submission: %s', exc, exc_info=True)
-        return Response({
-            'success': False,
-            'message': 'A server error occurred while processing your request. Please try again later.',
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        exc_str = str(exc).lower()
+        if 'no such table' in exc_str or 'does not exist' in exc_str:
+            try:
+                from django.core.management import call_command
+                logger.info('Auto-migrating missing tables for contact submission...')
+                call_command('migrate', interactive=False)
+                contact = Contact.objects.create(
+                    full_name=full_name,
+                    email=email,
+                    phone=phone,
+                    company=company,
+                    service=service,
+                    budget=budget,
+                    message=message,
+                    status='Pending',
+                )
+            except Exception as retry_exc:
+                logger.error('Auto-migration retry failed: %s', retry_exc)
+                return Response({
+                    'success': False,
+                    'message': 'A server error occurred while processing your request. Please try again later.',
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response({
+                'success': False,
+                'message': 'A server error occurred while processing your request. Please try again later.',
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     # Background / side-effect tasks
     try:
@@ -375,10 +398,24 @@ def submit_booking(request):
         }, status=status.HTTP_429_TOO_MANY_REQUESTS)
     except Exception as exc:
         logger.error('Failed to save booking submission: %s', exc, exc_info=True)
-        return Response({
-            'success': False,
-            'message': 'A server error occurred while processing your booking. Please try again later.',
-        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        exc_str = str(exc).lower()
+        if 'no such table' in exc_str or 'does not exist' in exc_str:
+            try:
+                from django.core.management import call_command
+                logger.info('Auto-migrating missing tables for booking submission...')
+                call_command('migrate', interactive=False)
+                booking = form.save()
+            except Exception as retry_exc:
+                logger.error('Auto-migration retry failed: %s', retry_exc)
+                return Response({
+                    'success': False,
+                    'message': 'A server error occurred while processing your booking. Please try again later.',
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        else:
+            return Response({
+                'success': False,
+                'message': 'A server error occurred while processing your booking. Please try again later.',
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
     try:
         _save_contact_to_excel(booking)
