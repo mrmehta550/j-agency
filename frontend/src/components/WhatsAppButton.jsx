@@ -6,7 +6,7 @@ export default function WhatsAppButton() {
       className="home-wa-float-container"
       style={{
         position: 'fixed',
-        bottom: '30px',
+        bottom: '90px',
         right: '30px',
         zIndex: 99999,
         display: 'flex',

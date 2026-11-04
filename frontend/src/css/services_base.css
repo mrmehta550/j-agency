@@ -518,20 +518,20 @@
 }
 
 .svc-float-1 {
-    top: 20px;
-    left: -30px;
+    top: 25px;
+    left: -35px;
     animation: svcFloat1 5s ease-in-out infinite;
 }
 
 .svc-float-2 {
-    bottom: 60px;
-    right: -25px;
+    bottom: 35px;
+    right: -30px;
     animation: svcFloat2 5.5s ease-in-out infinite;
 }
 
 .svc-float-3 {
-    bottom: 180px;
-    left: -25px;
+    bottom: 45px;
+    left: -35px;
     animation: svcFloat3 4.8s ease-in-out infinite;
 }
 
