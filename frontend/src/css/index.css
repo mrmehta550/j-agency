@@ -1254,6 +1254,8 @@
 
 @keyframes homeLogoScroll {
     0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 
 @media (max-width: 768px) {
