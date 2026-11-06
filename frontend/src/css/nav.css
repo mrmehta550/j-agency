@@ -828,3 +828,32 @@ WHATSAPP FLOATING BUTTON
         display: none;
     }
 }
+/* Mobile Contact Highlight */
+@media (max-width: 991px) {
+    .nav-contact-item {
+        margin-top: 15px;
+        padding-top: 8px;
+    }
+    .nav-contact-item .nav-contact-link {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+        color: #ffffff !important;
+        border-radius: 12px;
+        padding: 14px 20px !important;
+        justify-content: center !important;
+        font-weight: 700 !important;
+        border-bottom: none !important;
+        box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+        display: flex !important;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .nav-contact-item .nav-contact-link:hover,
+    .nav-contact-item .nav-contact-link.active {
+        color: #ffffff !important;
+        background: linear-gradient(135deg, #1d4ed8, #1e40af) !important;
+    }
+    .nav-contact-item .nav-contact-link::after {
+        display: none !important;
+    }
+}

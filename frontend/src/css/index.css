@@ -1190,8 +1190,8 @@
 
 .home-logo-slider {
     overflow: hidden;
-    white-space: nowrap;
     position: relative;
+    width: 100%;
 }
 
 .home-logo-slider::before,
@@ -1200,7 +1200,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 100px;
+    width: 60px;
     z-index: 2;
     pointer-events: none;
 }
@@ -1216,24 +1216,60 @@
 }
 
 .home-logo-track {
-    display: inline-flex;
+    display: flex;
+    width: max-content;
+    animation: homeLogoScroll 15s linear infinite;
+}
+
+.home-logo-group {
+    display: flex;
+    align-items: center;
     gap: 48px;
-    animation: homeLogoScroll 12s linear infinite;
+    padding-right: 48px;
+    flex-shrink: 0;
+}
+
+.home-logo-item {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .home-logo-item img {
     height: 36px;
     width: auto;
-    filter: none; opacity: 0.95;
-    transition: filter 0.3s ease;
+    display: block;
+    object-fit: contain;
+    filter: none;
+    opacity: 0.95;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .home-logo-item:hover img {
-    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12)); opacity: 1; transform: translateY(-3px) scale(1.12);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+    opacity: 1;
+    transform: translateY(-3px) scale(1.12);
 }
 
 @keyframes homeLogoScroll {
     0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+    .home-logo-slider::before,
+    .home-logo-slider::after {
+        width: 25px;
+    }
+    .home-logo-group {
+        gap: 32px;
+        padding-right: 32px;
+    }
+    .home-logo-item img {
+        height: 28px;
+    }
+}
     100% { transform: translateX(-50%); }
 }
 

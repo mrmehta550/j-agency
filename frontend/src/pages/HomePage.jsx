@@ -245,69 +245,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Hero Stats Section */}
-      <section className="home-stats-strip" style={{ background: '#FFFFFF', padding: '30px 0 60px' }}>
-        <div className="home-container">
-          <div className="home-hero-stats" style={{ marginTop: 0 }}>
-            <div className="home-stat-card">
-              <div className="home-icon">
-                <i className="fa-solid fa-compass"></i>
-              </div>
-              <div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
-                  01 — One Vision
-                </h3>
-                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
-                  Building better digital experiences.
-                </span>
-              </div>
-            </div>
-
-            <div className="home-stat-card">
-              <div className="home-icon">
-                <i className="fa-solid fa-shapes"></i>
-              </div>
-              <div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
-                  360° — Digital Solutions
-                </h3>
-                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
-                  Design, development and digital growth.
-                </span>
-              </div>
-            </div>
-
-            <div className="home-stat-card">
-              <div className="home-icon">
-                <i className="fa-solid fa-shield-halved"></i>
-              </div>
-              <div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
-                  100% — Commitment
-                </h3>
-                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
-                  Focused on quality and client success.
-                </span>
-              </div>
-            </div>
-
-            <div className="home-stat-card">
-              <div className="home-icon">
-                <i className="fa-solid fa-infinity"></i>
-              </div>
-              <div>
-                <h3 style={{ fontSize: '22px', fontWeight: 800, color: 'var(--home-primary)', margin: '0 0 2px 0' }}>
-                  ∞ — Possibilities
-                </h3>
-                <span style={{ fontSize: '13px', color: 'var(--home-text-secondary)', display: 'block', lineHeight: 1.4 }}>
-                  Turning ambitious ideas into digital products.
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/*=========================================
           2. TRUSTED BY SECTION
           ==========================================*/}
@@ -321,25 +258,22 @@ export default function HomePage() {
 
           <div className="home-logo-slider">
             <div className="home-logo-track">
-              <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
-              <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
-              <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
-              <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
-              <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
-              <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
-              {/* Duplicate set for infinite loop */}
-              <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
-              <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
-              <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
-              <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
-              <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
-              <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
-              <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
-              <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
-              <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
-              <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
-              <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
-              <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+              <div className="home-logo-group">
+                <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
+                <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
+                <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
+                <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
+                <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
+                <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+              </div>
+              <div className="home-logo-group" aria-hidden="true">
+                <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
+                <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
+                <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
+                <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
+                <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
+                <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+              </div>
             </div>
           </div>
         </div>

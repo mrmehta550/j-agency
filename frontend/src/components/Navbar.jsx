@@ -126,8 +126,8 @@ export default function Navbar() {
                 <li><Link to="/blogs/">Blogs</Link></li>
               </ul>
             </li>
-            <li>
-              <NavLink to="/contact/" className={({ isActive }) => (isActive ? 'active' : '')}>
+            <li className="nav-contact-item">
+              <NavLink to="/contact/" className={({ isActive }) => `nav-contact-link ${isActive ? 'active' : ''}`}>
                 Contact
               </NavLink>
             </li>
