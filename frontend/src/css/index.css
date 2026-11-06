@@ -2014,9 +2014,12 @@
     .home-process-wrapper,
     .home-testimonial-track,
     .home-blog-grid,
-    .home-tech-grid,
     .home-why-list {
         grid-template-columns: 1fr;
+    }
+    .home-tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
     .home-hero-stats {
         grid-template-columns: 1fr;
