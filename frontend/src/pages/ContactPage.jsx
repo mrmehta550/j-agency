@@ -401,7 +401,7 @@ export default function ContactPage() {
                 <div className="contact-office-icon"><i className="fa-solid fa-globe"></i></div>
                 <div>
                   <h3>Website</h3>
-                  <p>www.magencystudio.com</p>
+                  <p>www.magencystudio.in</p>
                 </div>
               </div>
 

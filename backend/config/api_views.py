@@ -1,3 +1,4 @@
+import threading
 import logging
 from datetime import timedelta
 from django.conf import settings
@@ -33,6 +34,26 @@ from .serializers import (
 )
 
 logger = logging.getLogger(__name__)
+
+def _dispatch_background_tasks(instance, email_func):
+    """Dispatch Excel save, SMTP emails, and cleanup to a background daemon thread so response is instant."""
+    def _task():
+        try:
+            _save_contact_to_excel(instance)
+        except Exception as exc:
+            logger.error('Excel write error: %s', exc, exc_info=True)
+
+        try:
+            email_func(instance)
+        except Exception as exc:
+            logger.error('Email sending error: %s', exc, exc_info=True)
+
+        try:
+            _cleanup_old_submission_locks()
+        except Exception:
+            pass
+
+    threading.Thread(target=_task, daemon=True).start()
 
 
 @api_view(['GET'])
@@ -311,21 +332,8 @@ def submit_contact(request):
                 'message': 'A server error occurred while processing your request. Please try again later.',
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    # Background / side-effect tasks
-    try:
-        _save_contact_to_excel(contact)
-    except Exception as exc:
-        logger.error('Excel write error: %s', exc, exc_info=True)
-
-    try:
-        _send_contact_emails(contact)
-    except Exception as exc:
-        logger.error('Email sending error: %s', exc, exc_info=True)
-
-    try:
-        _cleanup_old_submission_locks()
-    except Exception:
-        pass
+    # Dispatch side-effect tasks asynchronously so response returns in <50ms
+    _dispatch_background_tasks(contact, _send_contact_emails)
 
     return Response({
         'success': True,
@@ -417,20 +425,8 @@ def submit_booking(request):
                 'message': 'A server error occurred while processing your booking. Please try again later.',
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-    try:
-        _save_contact_to_excel(booking)
-    except Exception as exc:
-        logger.error('Excel write error: %s', exc, exc_info=True)
-
-    try:
-        _send_booking_emails(booking)
-    except Exception as exc:
-        logger.error('Email sending error: %s', exc, exc_info=True)
-
-    try:
-        _cleanup_old_submission_locks()
-    except Exception:
-        pass
+    # Dispatch side-effect tasks asynchronously so response returns in <50ms
+    _dispatch_background_tasks(booking, _send_booking_emails)
 
     return Response({
         'success': True,

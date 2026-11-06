@@ -334,6 +334,12 @@ export default function HomePage() {
               <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
               <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
               <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+              <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
+              <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
+              <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
+              <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
+              <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
+              <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
             </div>
           </div>
         </div>
