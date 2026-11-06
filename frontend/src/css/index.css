@@ -1254,8 +1254,7 @@
 
 @keyframes homeLogoScroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
+
 
 @media (max-width: 768px) {
     .home-logo-slider::before,
@@ -1270,8 +1269,7 @@
         height: 28px;
     }
 }
-    100% { transform: translateX(-50%); }
-}
+
 
 /* ==========================================================================
    3. SERVICES SECTION
