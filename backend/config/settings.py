@@ -77,22 +77,23 @@ _debug_env = os.environ.get('DJANGO_DEBUG', os.environ.get('DEBUG', 'False'))
 DEBUG = _debug_env.lower() in ('true', '1', 'yes')
 
 # Comma-separated list via ALLOWED_HOSTS env var; includes Render & local defaults.
+_essential_hosts = [
+    "localhost",
+    "127.0.0.1",
+    "testserver",
+    ".onrender.com",
+    "magencystudio.com",
+    "magencystudio.in",
+    "www.magencystudio.com",
+    "www.magencystudio.in",
+    "magencyinfo.com",
+    "www.magencyinfo.com",
+]
 _allowed_hosts_env = os.getenv("ALLOWED_HOSTS", "")
 if _allowed_hosts_env:
-    ALLOWED_HOSTS = [host.strip() for host in _allowed_hosts_env.split(",") if host.strip()]
+    ALLOWED_HOSTS = list(dict.fromkeys(_essential_hosts + [host.strip() for host in _allowed_hosts_env.split(",") if host.strip()]))
 else:
-    ALLOWED_HOSTS = [
-        "localhost",
-        "127.0.0.1",
-        "testserver",
-        ".onrender.com",
-        "magencystudio.com",
-        "magencystudio.in",
-        "www.magencystudio.com",
-        "www.magencystudio.in",
-        "magencyinfo.com",
-        "www.magencyinfo.com",
-    ]
+    ALLOWED_HOSTS = _essential_hosts
 
 # Render automatically provides RENDER_EXTERNAL_HOSTNAME (e.g. your-backend-domain.onrender.com)
 _render_hostname = os.getenv("RENDER_EXTERNAL_HOSTNAME")
@@ -100,25 +101,26 @@ if _render_hostname and _render_hostname not in ALLOWED_HOSTS:
     ALLOWED_HOSTS.append(_render_hostname)
 
 # CSRF Trusted Origins (Required in Django 4.0+ for HTTPS form submissions)
+_essential_csrf = [
+    "https://*.onrender.com",
+    "https://j-agency-wlpt.vercel.app",
+    "https://*.vercel.app",
+    "https://magencystudio.com",
+    "https://www.magencystudio.com",
+    "https://magencystudio.in",
+    "https://www.magencystudio.in",
+    "https://magencyinfo.com",
+    "https://www.magencyinfo.com",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
 _csrf_origins_env = os.getenv("CSRF_TRUSTED_ORIGINS", "")
 if _csrf_origins_env:
-    CSRF_TRUSTED_ORIGINS = [origin.strip() for origin in _csrf_origins_env.split(",") if origin.strip()]
+    CSRF_TRUSTED_ORIGINS = list(dict.fromkeys(_essential_csrf + [origin.strip() for origin in _csrf_origins_env.split(",") if origin.strip()]))
 else:
-    CSRF_TRUSTED_ORIGINS = [
-        "https://*.onrender.com",
-        "https://j-agency-wlpt.vercel.app",
-        "https://*.vercel.app",
-        "https://magencystudio.com",
-        "https://www.magencystudio.com",
-        "https://magencystudio.in",
-        "https://www.magencystudio.in",
-        "https://magencyinfo.com",
-        "https://www.magencyinfo.com",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ]
+    CSRF_TRUSTED_ORIGINS = _essential_csrf
 
 # Reverse proxy SSL header (essential for Render / Cloudflare / Nginx HTTPS detection)
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -163,36 +165,37 @@ MIDDLEWARE = [
 # Strict origin isolation for production - never allow all origins
 CORS_ALLOW_ALL_ORIGINS = False
 
+_essential_cors_origins = [
+    "https://j-agency-wlpt.vercel.app",
+    "https://magencystudio.in",
+    "https://www.magencystudio.in",
+    "https://magencystudio.com",
+    "https://www.magencystudio.com",
+    "https://magencyinfo.com",
+    "https://www.magencyinfo.com",
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 _cors_origins_env = os.getenv("CORS_ALLOWED_ORIGINS", "")
 if _cors_origins_env:
-    CORS_ALLOWED_ORIGINS = [
-        origin.strip() for origin in _cors_origins_env.split(",") if origin.strip()
-    ]
+    CORS_ALLOWED_ORIGINS = list(dict.fromkeys(_essential_cors_origins + [origin.strip() for origin in _cors_origins_env.split(",") if origin.strip()]))
 else:
-    CORS_ALLOWED_ORIGINS = [
-        "https://j-agency-wlpt.vercel.app",
-        "https://magencystudio.com",
-        "https://www.magencystudio.com",
-        "https://magencystudio.in",
-        "https://www.magencystudio.in",
-        "https://magencyinfo.com",
-        "https://www.magencyinfo.com",
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ]
+    CORS_ALLOWED_ORIGINS = _essential_cors_origins
 
-# Allow Vercel preview deployments for the project if enabled via env or matching project name
+# Allow Vercel preview deployments and custom subdomains
+_default_regexes = [
+    r"^https:\/\/.*\.vercel\.app$",
+    r"^https:\/\/.*\.magencystudio\.in$",
+    r"^https:\/\/.*\.magencystudio\.com$",
+]
 _cors_regex_env = os.getenv("CORS_ALLOWED_ORIGIN_REGEXES", "")
 if _cors_regex_env:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        r.strip() for r in _cors_regex_env.split(",") if r.strip()
-    ]
+    CORS_ALLOWED_ORIGIN_REGEXES = list(dict.fromkeys(_default_regexes + [r.strip() for r in _cors_regex_env.split(",") if r.strip()]))
 else:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        r"^https:\/\/j-agency-wlpt.*\.vercel\.app$",
-    ]
+    CORS_ALLOWED_ORIGIN_REGEXES = _default_regexes
 
 CORS_ALLOW_CREDENTIALS = True
 

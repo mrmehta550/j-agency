@@ -24,7 +24,13 @@ export const API_BASE_URL = (() => {
   return envUrl || 'http://127.0.0.1:8000';
 })().replace(/\/+$/, '');
 
-const DEFAULT_TIMEOUT_MS = 25000;
+const DEFAULT_TIMEOUT_MS = 60000; // 60s accommodates Render free tier cold-start wakeups
+
+export const pingBackend = () => {
+  if (typeof window !== 'undefined') {
+    fetch(`${API_BASE_URL}/api/categories/`, { method: 'GET', mode: 'cors' }).catch(() => {});
+  }
+};
 
 /**
  * Universal request wrapper with timeout and token handling

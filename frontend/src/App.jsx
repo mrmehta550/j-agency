@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useEffect } from "react";
+import { pingBackend } from "./api/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 // Shared Layout Components (eager for instant shell render)
@@ -83,6 +84,9 @@ function NotFoundPage() {
 }
 
 export default function App() {
+  useEffect(() => {
+    pingBackend();
+  }, []);
   return (
     <BrowserRouter>
       <ScrollToTop />

@@ -154,6 +154,9 @@ export default function HomePage() {
                 src="/images/hero-hand-human-left.png"
                 alt="Human Hand"
                 className="home-machina-hand-img"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           </div>
@@ -171,6 +174,9 @@ export default function HomePage() {
                 src="/images/hero-hand-robot-right.png"
                 alt="Robot Hand"
                 className="home-machina-hand-img"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
               />
             </div>
           </div>
@@ -427,7 +433,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-why-image home-reveal">
-              <img src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" />
+              <img src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" loading="lazy" decoding="async" />
               <div className="home-experience-card">
                 <h2>360°</h2>
                 <span>Digital Solutions</span>
@@ -454,7 +460,7 @@ export default function HomePage() {
 
           <div className="home-portfolio-grid">
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-1.jpg" alt="Enterprise AI Assistant Platform" />
+              <img src="/images/portfolio/project-1.jpg" loading="lazy" decoding="async" alt="Enterprise AI Assistant Platform" />
               <div className="home-card-content">
                 <span>AI Platform</span>
                 <h4>Enterprise AI Automation Suite</h4>
@@ -462,7 +468,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-2.jpg" alt="E-Commerce Fashion Store" />
+              <img src="/images/portfolio/project-2.jpg" loading="lazy" decoding="async" alt="E-Commerce Fashion Store" />
               <div className="home-card-content">
                 <span>E-Commerce</span>
                 <h4>Luxury Fashion Marketplace</h4>
@@ -470,7 +476,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-3.jpg" alt="Hospital Management System" />
+              <img src="/images/portfolio/project-3.jpg" loading="lazy" decoding="async" alt="Hospital Management System" />
               <div className="home-card-content">
                 <span>Healthcare</span>
                 <h4>Hospital Portal & Scheduling</h4>
@@ -478,7 +484,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-4.jpg" alt="Student Education Portal" />
+              <img src="/images/portfolio/project-4.jpg" loading="lazy" decoding="async" alt="Student Education Portal" />
               <div className="home-card-content">
                 <span>EdTech</span>
                 <h4>Interactive Learning Platform</h4>
@@ -486,7 +492,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-5.jpg" alt="Banking Dashboard" />
+              <img src="/images/portfolio/project-5.jpg" loading="lazy" decoding="async" alt="Banking Dashboard" />
               <div className="home-card-content">
                 <span>FinTech</span>
                 <h4>FinFlow Banking Analytics</h4>
@@ -494,7 +500,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-6.jpg" alt="Commercial SaaS Promo" />
+              <img src="/images/portfolio/project-6.jpg" loading="lazy" decoding="async" alt="Commercial SaaS Promo" />
               <div className="home-card-content">
                 <span>Video & Media</span>
                 <h4>SaaS Product Commercial Reel</h4>
@@ -644,7 +650,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client1.jpg" alt="Mohan Singh" />
+                  <img src="/images/services/logo/client1.jpg" loading="lazy" decoding="async" alt="Mohan Singh" />
                   <div>
                     <h4>Mohan Singh</h4>
                     <span>CEO, Techio Global</span>
@@ -659,7 +665,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client2.jpg" alt="Sarah Johnson" />
+                  <img src="/images/services/logo/client2.jpg" loading="lazy" decoding="async" alt="Sarah Johnson" />
                   <div>
                     <h4>Sarah Johnson</h4>
                     <span>Founder, FinFlow Apps</span>
@@ -674,7 +680,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client3.jpg" alt="Michael Brown" />
+                  <img src="/images/services/logo/client3.jpg" loading="lazy" decoding="async" alt="Michael Brown" />
                   <div>
                     <h4>Michael Brown</h4>
                     <span>Director, CloudTech</span>
@@ -744,7 +750,7 @@ export default function HomePage() {
               topBlogs.map((blog) => (
                 <article key={blog.id} className="home-blog-card home-reveal">
                   <div className="home-blog-image">
-                    <img src={getImageUrl(blog.image)} alt={blog.title} />
+                    <img src={getImageUrl(blog.image)} alt={blog.title} loading="lazy" decoding="async" />
                     {blog.category && (
                       <span className="home-blog-category">{blog.category.name}</span>
                     )}
