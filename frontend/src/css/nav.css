@@ -40,7 +40,7 @@ body.menu-open{
 
 
 /*==================================================
-LOGO
+LOGO (PROFESSIONAL TECH-AGENCY BRANDING)
 ==================================================*/
 
 .logo{
@@ -51,6 +51,7 @@ LOGO
     text-decoration:none;
     line-height:1;
     transition:transform .2s ease;
+    user-select:none;
 }
 
 .logo img,
@@ -61,44 +62,55 @@ LOGO
     object-fit:cover;
     display:block;
     flex-shrink:0;
-    box-shadow:0 2px 8px rgba(37,99,235,0.15);
-    transition:transform .25s ease;
+    border:1.5px solid rgba(37,99,235,0.18);
+    box-shadow:0 2px 8px rgba(37,99,235,0.14);
+    background:#ffffff;
+    transition:transform .25s ease, box-shadow .25s ease;
 }
 
 .logo:hover img,
 .logo:hover .logo-img{
     transform:scale(1.05);
+    box-shadow:0 4px 12px rgba(37,99,235,0.24);
 }
 
-.logo span,
 .logo .logo-brand{
-    font-family:'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
-    font-size:24px;
+    font-family:'Plus Jakarta Sans', 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size:22px;
     font-weight:800;
     line-height:1;
     color:#0f172a;
     white-space:nowrap;
-    letter-spacing:-0.4px;
+    letter-spacing:-0.5px;
     display:inline-flex;
     align-items:center;
+    transform:translateY(-0.5px);
 }
 
 .logo .logo-brand-main{
     color:#0f172a;
     font-weight:800;
+    letter-spacing:-0.5px;
+    transition:color .2s ease;
 }
 
 .logo .logo-brand-accent{
     color:#2563eb;
     font-weight:700;
-    margin-left:1px;
+    letter-spacing:-0.3px;
+    margin-left:2px;
+    transition:color .2s ease;
 }
 
 .logo:hover{
-    transform:translateY(-2px);
+    transform:translateY(-1px);
 }
 
-.logo:hover span{
+.logo:hover .logo-brand-main{
+    color:#1e293b;
+}
+
+.logo:hover .logo-brand-accent{
     color:#1d4ed8;
 }
 
@@ -540,7 +552,6 @@ TABLET
         height:36px;
     }
 
-    .logo span,
     .logo .logo-brand{
         font-size:22px;
     }
@@ -599,7 +610,6 @@ MOBILE
         height:34px;
     }
 
-    .logo span,
     .logo .logo-brand{
         font-size:20px;
     }
@@ -652,7 +662,6 @@ SMALL MOBILE
         height:32px;
     }
 
-    .logo span,
     .logo .logo-brand{
         font-size:19px;
     }

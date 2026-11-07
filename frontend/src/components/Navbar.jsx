@@ -86,7 +86,7 @@ export default function Navbar() {
             <img src="/images/favicon.png" alt="Magency Studio Logo" className="logo-img" />
             <span className="logo-brand">
               <span className="logo-brand-main">Magency</span>
-              <span className="logo-brand-accent">studio</span>
+              <span className="logo-brand-accent">Studio</span>
             </span>
           </Link>
 
