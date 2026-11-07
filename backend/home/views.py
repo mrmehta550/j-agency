@@ -260,7 +260,7 @@ Submitted At:
             message=admin_message,
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[settings.EMAIL_HOST_USER],
-            fail_silently=True,
+            fail_silently=False,
         )
     except Exception:
         logger.exception("Failed to send admin contact notification email.")
@@ -315,7 +315,7 @@ Best Regards,
 
 Magency Team
 
-🌐 https://magencyinfo.com
+🌐 https://magencystudio.com
 📧 magency550@gmail.com
 """
 
@@ -325,7 +325,7 @@ Magency Team
                 message=client_message,
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[contact.email],
-                fail_silently=True,
+                fail_silently=False,
             )
         except Exception:
             logger.exception("Failed to send client contact confirmation email.")
@@ -603,7 +603,7 @@ Booked At:
             message=admin_message,
             from_email=settings.EMAIL_HOST_USER,
             recipient_list=[settings.EMAIL_HOST_USER],
-            fail_silently=True,
+            fail_silently=False,
         )
     except Exception:
         logger.exception("Failed to send admin booking notification email.")
@@ -661,7 +661,7 @@ Best Regards,
 
 Magency Team
 
-🌐 https://magencyinfo.com
+🌐 https://magencystudio.com
 📧 magency550@gmail.com
 """
 
@@ -671,7 +671,7 @@ Magency Team
                 message=client_message,
                 from_email=settings.EMAIL_HOST_USER,
                 recipient_list=[booking.email],
-                fail_silently=True,
+                fail_silently=False,
             )
         except Exception:
             logger.exception("Failed to send client booking confirmation email.")

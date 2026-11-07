@@ -323,12 +323,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Credentials read from environment — never hardcoded.
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
+EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '').strip()
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').replace(' ', '').strip()
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER or 'magency550@gmail.com'
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
+EMAIL_TIMEOUT = 10
 
 
 # ── Admin URL ────────────────────────────────────────────────────────────────
