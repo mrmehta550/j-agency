@@ -44,29 +44,54 @@ LOGO
 ==================================================*/
 
 .logo{
-    display:flex;
+    display:inline-flex;
     align-items:center;
-    gap:12px;
+    gap:10px;
     flex-shrink:0;
     text-decoration:none;
-    transition:.3s ease;
+    line-height:1;
+    transition:transform .2s ease;
 }
 
-.logo img{
-    width:48px;
-    height:48px;
-    object-fit:contain;
+.logo img,
+.logo .logo-img{
+    width:38px;
+    height:38px;
+    border-radius:50%;
+    object-fit:cover;
     display:block;
+    flex-shrink:0;
+    box-shadow:0 2px 8px rgba(37,99,235,0.15);
+    transition:transform .25s ease;
 }
 
-.logo span{
-    font-size:30px;
+.logo:hover img,
+.logo:hover .logo-img{
+    transform:scale(1.05);
+}
+
+.logo span,
+.logo .logo-brand{
+    font-family:'Space Grotesk', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size:24px;
     font-weight:800;
     line-height:1;
-    color:#2563eb;
+    color:#0f172a;
     white-space:nowrap;
-    letter-spacing:-0.5px;
-    transition:.3s;
+    letter-spacing:-0.4px;
+    display:inline-flex;
+    align-items:center;
+}
+
+.logo .logo-brand-main{
+    color:#0f172a;
+    font-weight:800;
+}
+
+.logo .logo-brand-accent{
+    color:#2563eb;
+    font-weight:700;
+    margin-left:1px;
 }
 
 .logo:hover{
@@ -506,16 +531,18 @@ TABLET
     }
 
     .logo{
-        gap:10px;
+        gap:9px;
     }
 
-    .logo img{
-        width:42px;
-        height:42px;
+    .logo img,
+    .logo .logo-img{
+        width:36px;
+        height:36px;
     }
 
-    .logo span{
-        font-size:26px;
+    .logo span,
+    .logo .logo-brand{
+        font-size:22px;
     }
 
 }
@@ -559,20 +586,22 @@ MOBILE
     }
 
     .logo{
-        gap:2px;
-        margin: 0;
+        gap:8px;
+        margin:0;
         padding:0;
+        display:inline-flex;
+        align-items:center;
     }
 
-    .logo img{
-
-        width:38px;
-        height:38px;
+    .logo img,
+    .logo .logo-img{
+        width:34px;
+        height:34px;
     }
 
-    .logo span{
-
-        font-size:22px;
+    .logo span,
+    .logo .logo-brand{
+        font-size:20px;
     }
 
     .nav-right{
@@ -612,19 +641,20 @@ SMALL MOBILE
     }
 
     .logo{
-
-        gap:8px;
+        gap:7px;
+        display:inline-flex;
+        align-items:center;
     }
 
-    .logo img{
-
-        width:34px;
-        height:34px;
+    .logo img,
+    .logo .logo-img{
+        width:32px;
+        height:32px;
     }
 
-    .logo span{
-
-        font-size:20px;
+    .logo span,
+    .logo .logo-brand{
+        font-size:19px;
     }
 
     .hamburger{

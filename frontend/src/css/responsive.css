@@ -308,12 +308,14 @@ forms, layout wrapping and text hierarchies.
 
 /* --- Extremely Narrow Viewports (max-width: 360px) --- */
 @media (max-width: 360px) {
-    .logo span {
-        font-size: 18px !important;
+    .logo span,
+    .logo .logo-brand {
+        font-size: 17px !important;
     }
-    .logo img {
-        width: 32px !important;
-        height: 32px !important;
+    .logo img,
+    .logo .logo-img {
+        width: 30px !important;
+        height: 30px !important;
     }
     .navbar .container {
         padding: 0 8px !important;

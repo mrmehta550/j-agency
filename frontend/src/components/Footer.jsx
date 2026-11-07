@@ -41,9 +41,12 @@ export default function Footer() {
         <div className="ma-footer-grid">
           {/* COMPANY */}
           <div className="ma-footer-company">
-            <Link to="/" className="ma-footer-logo">
-              <img src="/images/favicon.png" alt="Magency Studio Logo" />
-              <span>Magencystudio</span>
+            <Link to="/" className="ma-footer-logo" aria-label="Magency Studio Home">
+              <img src="/images/favicon.png" alt="Magency Studio Logo" className="ma-footer-logo-img" />
+              <span className="logo-brand">
+                <span className="logo-brand-main">Magency</span>
+                <span className="logo-brand-accent">studio</span>
+              </span>
             </Link>
 
             <p className="ma-footer-desc">
@@ -54,7 +57,7 @@ export default function Footer() {
               <a href="https://facebook.com/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <a href="https://instagram.com/magencystudio.in" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <i className="fa-brands fa-instagram"></i>
               </a>
               <a href="https://linkedin.com/company/magencystudio" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">

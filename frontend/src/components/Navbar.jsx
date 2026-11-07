@@ -82,9 +82,12 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHide ? 'hide' : ''}`}>
         <div className="container">
-          <Link to="/" className="logo">
-            <img src="/images/favicon.png" alt="M Agency Logo" />
-            <span>Magencystudio</span>
+          <Link to="/" className="logo" aria-label="Magency Studio Home">
+            <img src="/images/favicon.png" alt="Magency Studio Logo" className="logo-img" />
+            <span className="logo-brand">
+              <span className="logo-brand-main">Magency</span>
+              <span className="logo-brand-accent">studio</span>
+            </span>
           </Link>
 
           <ul id="navMenu" className={`nav-menu ${isOpen ? 'active' : ''}`}>
