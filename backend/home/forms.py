@@ -121,8 +121,8 @@ class ContactForm(forms.Form):
         """Require a minimum project description so submissions are actionable."""
         message = self.cleaned_data["message"]
 
-        if len(message.strip()) < 20:
-            raise ValidationError("Please provide at least 20 characters describing your project.")
+        if len(message.strip()) < 5:
+            raise ValidationError("Please provide at least 5 characters describing your project.")
 
         return message.strip()
 
@@ -210,9 +210,9 @@ class BookingForm(forms.ModelForm):
         """
         details = self.cleaned_data.get("project_details", "").strip()
 
-        if len(details) < 10:
+        if len(details) < 5:
             raise ValidationError(
-                "Please provide at least 10 characters describing your project."
+                "Please provide at least 5 characters describing your project."
             )
 
         return details

@@ -54,7 +54,7 @@ from .models import Contact, ContactSubmissionLock
 logger = logging.getLogger(__name__)
 
 # How long a fingerprint blocks re-submission (2-minute window).
-CONTACT_DUPLICATE_WINDOW = timedelta(minutes=2)
+CONTACT_DUPLICATE_WINDOW = timedelta(seconds=30)
 
 # Booking duplicate window — same email+phone+service+date+time
 # within 5 minutes is treated as an accidental double-click.
