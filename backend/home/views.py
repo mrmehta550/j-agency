@@ -205,130 +205,14 @@ def _save_contact_to_excel(contact: Contact) -> None:
 def _send_contact_emails(contact: Contact) -> None:
     """
     Send a notification email to the admin and a confirmation to the client.
-
-    Called OUTSIDE the atomic block so a transient email error never
-    rolls back the already-committed database record.
+    Delegates to enterprise email_service (supporting Resend HTTPS API & Gmail SMTP fallback).
+    Called OUTSIDE the atomic block so an email error never rolls back the committed record.
     """
-    if not getattr(settings, "EMAIL_HOST_USER", None):
-        logger.info("EMAIL_HOST_USER not configured. Skipping contact email delivery.")
-        return
-
-    submitted_at_str = (
-        contact.created_at.strftime("%d-%m-%Y %H:%M")
-        if getattr(contact, "created_at", None)
-        else timezone.now().strftime("%d-%m-%Y %H:%M")
-    )
-
-    # ── Admin notification ──────────────────────────────────────
-    admin_subject = f"🚀 New Contact Request - {contact.full_name}"
-    admin_message = f"""\
-🚀 NEW CONTACT REQUEST
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-👤 Name:
-{contact.full_name}
-
-📧 Email:
-{contact.email}
-
-📱 Phone:
-{contact.phone if contact.phone else "Not Provided"}
-
-🏢 Company:
-{contact.company if contact.company else "Not Provided"}
-
-💼 Service:
-{contact.service}
-
-💰 Budget:
-{contact.budget}
-
-📝 Project Details
-
-{contact.message}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Submitted At:
-{submitted_at_str}
-"""
-
     try:
-        send_mail(
-            subject=admin_subject,
-            message=admin_message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[settings.EMAIL_HOST_USER],
-            fail_silently=False,
-        )
-    except Exception:
-        logger.exception("Failed to send admin contact notification email.")
-
-    # ── Client confirmation ─────────────────────────────────────
-    if contact.email:
-        client_subject = "✅ We've Received Your Request | Magency"
-        client_message = f"""\
-Hi {contact.full_name},
-
-Thank you for contacting Magency.
-
-We have successfully received your project request.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-YOUR SUBMISSION
-
-👤 Name:
-{contact.full_name}
-
-📧 Email:
-{contact.email}
-
-📱 Phone:
-{contact.phone}
-
-🏢 Company:
-{contact.company if contact.company else "Not Provided"}
-
-💼 Service:
-{contact.service}
-
-💰 Budget:
-{contact.budget}
-
-📝 Project Details
-
-{contact.message}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Our team will carefully review your requirements.
-
-You can expect a response within the next 24 hours.
-
-If your project is urgent, simply reply to this email.
-
-Thank you for choosing Magency.
-
-Best Regards,
-
-Magency Team
-
-🌐 https://magencystudio.in
-📧 magency550@gmail.com
-"""
-
-        try:
-            send_mail(
-                subject=client_subject,
-                message=client_message,
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[contact.email],
-                fail_silently=False,
-            )
-        except Exception:
-            logger.exception("Failed to send client contact confirmation email.")
+        from home.email_service import send_contact_notification_emails
+        send_contact_notification_emails(contact)
+    except Exception as exc:
+        logger.error("Unexpected error in _send_contact_emails: %s", exc, exc_info=True)
 
 
 def _cleanup_old_submission_locks() -> None:
@@ -532,154 +416,15 @@ def _build_booking_fingerprint(
 def _send_booking_emails(booking: Contact) -> None:
     """
     Send a booking-confirmation email to the admin and a receipt to the client.
-
-    Called OUTSIDE the atomic block so a transient SMTP error never rolls
-    back the already-committed booking record.
+    Delegates to enterprise email_service (supporting Resend HTTPS API & Gmail SMTP fallback).
+    Called OUTSIDE the atomic block so an email error never rolls back the committed record.
     """
-    if not getattr(settings, "EMAIL_HOST_USER", None):
-        logger.info("EMAIL_HOST_USER not configured. Skipping booking email delivery.")
-        return
-
-    preferred_date_str = (
-        booking.preferred_date.strftime("%d %B %Y")
-        if getattr(booking, "preferred_date", None)
-        else "Not specified"
-    )
-    preferred_time_str = (
-        booking.preferred_time.strftime("%I:%M %p")
-        if getattr(booking, "preferred_time", None)
-        else "Not specified"
-    )
-    booked_at_str = (
-        booking.created_at.strftime("%d-%m-%Y %H:%M")
-        if getattr(booking, "created_at", None)
-        else timezone.now().strftime("%d-%m-%Y %H:%M")
-    )
-
-    # ── Admin notification ─────────────────────────────────
-    admin_subject = f"📅 New Booking Request - {booking.full_name}"
-    admin_message = f"""\
-📅 NEW BOOKING REQUEST
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-👤 Name:
-{booking.full_name}
-
-📧 Email:
-{booking.email}
-
-📱 Phone:
-{booking.phone if booking.phone else "Not Provided"}
-
-🏢 Company:
-{booking.company if booking.company else "Not Provided"}
-
-💼 Service:
-{booking.service}
-
-💰 Budget:
-{booking.budget}
-
-🗓️ Preferred Date:
-{preferred_date_str}
-
-⏰ Preferred Time:
-{preferred_time_str}
-
-📝 Project Details
-
-{booking.project_details}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-Booked At:
-{booked_at_str}
-"""
-
     try:
-        send_mail(
-            subject=admin_subject,
-            message=admin_message,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[settings.EMAIL_HOST_USER],
-            fail_silently=False,
-        )
-    except Exception:
-        logger.exception("Failed to send admin booking notification email.")
+        from home.email_service import send_booking_notification_emails
+        send_booking_notification_emails(booking)
+    except Exception as exc:
+        logger.error("Unexpected error in _send_booking_emails: %s", exc, exc_info=True)
 
-    # ── Client confirmation ─────────────────────────
-    if booking.email:
-        client_subject = "✅ Your Consultation is Booked | Magency"
-        client_message = f"""\
-Hi {booking.full_name},
-
-Thank you for booking a consultation with Magency.
-
-Our team will reach out within 30 minutes to confirm your session.
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-YOUR BOOKING DETAILS
-
-👤 Name:
-{booking.full_name}
-
-📧 Email:
-{booking.email}
-
-📱 Phone:
-{booking.phone}
-
-🏢 Company:
-{booking.company if booking.company else "Not Provided"}
-
-💼 Service:
-{booking.service}
-
-💰 Budget:
-{booking.budget}
-
-🗓️ Preferred Date:
-{preferred_date_str}
-
-⏰ Preferred Time:
-{preferred_time_str}
-
-📝 Project Details
-
-{booking.project_details}
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-If you need to reschedule or have any questions,
-simply reply to this email.
-
-Thank you for choosing Magency.
-
-Best Regards,
-
-Magency Team
-
-🌐 https://magencystudio.in
-📧 magency550@gmail.com
-"""
-
-        try:
-            send_mail(
-                subject=client_subject,
-                message=client_message,
-                from_email=settings.EMAIL_HOST_USER,
-                recipient_list=[booking.email],
-                fail_silently=False,
-            )
-        except Exception:
-            logger.exception("Failed to send client booking confirmation email.")
-
-
-# ──────────────────────────────────────────────────────────────
-# Booking view  (PRG + fingerprint deduplication + atomic write)
-# ──────────────────────────────────────────────────────────────
 
 def booking(request):
     """
