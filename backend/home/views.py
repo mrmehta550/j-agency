@@ -315,7 +315,7 @@ Best Regards,
 
 Magency Team
 
-🌐 https://magencystudio.com
+🌐 https://magencystudio.in
 📧 magency550@gmail.com
 """
 
@@ -661,7 +661,7 @@ Best Regards,
 
 Magency Team
 
-🌐 https://magencystudio.com
+🌐 https://magencystudio.in
 📧 magency550@gmail.com
 """
 
