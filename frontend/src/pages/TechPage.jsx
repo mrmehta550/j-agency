@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function TechPage() {
   const [activeFilter, setActiveFilter] = useState('frontend');
@@ -17,6 +18,13 @@ export default function TechPage() {
 
   return (
     <div>
+      <SEO
+        title="Our Technology Stack & Modern Tooling | Magency Studio"
+        description="Discover the modern frameworks and cloud tools we use to build robust software: React, Django, Next.js, Python, PostgreSQL, AWS, Docker, and PyTorch."
+        canonical="https://www.magencystudio.in/technology"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Technology Stack', url: '/technology' }]}
+      />
+
       {/*=========================================
               TECHNOLOGY HERO
       ==========================================*/}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function MaintenancePage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional Website Maintenance Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -33,6 +34,25 @@ export default function MaintenancePage() {
 
   return (
     <main>
+      <SEO
+        title="Website Maintenance & Support Plans | Magency Studio"
+        description="Keep your website fast, secure, and up-to-date with 24/7 uptime monitoring, security patching, core updates, automated backups, and emergency tech support."
+        canonical="https://www.magencystudio.in/services/maintenance"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Website Maintenance', url: '/services/maintenance' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Website Maintenance & Technical Support',
+        description: 'Keep your website fast, secure, and up-to-date with 24/7 uptime monitoring, security patching, core updates, automated backups, and emergency tech support.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* MAINTENANCE HERO */}
       <section className="svc-hero maint-service-hero">
         <div className="svc-hero-bg">

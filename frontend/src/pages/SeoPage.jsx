@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
+import SEO from '../components/SEO';
 
 export default function SeoPage() {
   const [caseStudies, setCaseStudies] = useState([]);
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Search Engine Optimization (SEO) Services | Magencystudio";
+    
     loadCaseStudies();
   }, []);
 
@@ -47,6 +48,25 @@ export default function SeoPage() {
 
   return (
     <main>
+      <SEO
+        title="Technical SEO & Search Engine Optimization Services | Magency Studio"
+        description="Drive organic rankings and traffic with technical SEO audits, Core Web Vitals optimization, on-page SEO, speed acceleration, and high-impact keyword strategies."
+        canonical="https://www.magencystudio.in/services/seo-optimization"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'SEO Optimization', url: '/services/seo-optimization' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Technical SEO & Search Optimization',
+        description: 'Drive organic rankings and traffic with technical SEO audits, Core Web Vitals optimization, on-page SEO, speed acceleration, and high-impact keyword strategies.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* SEO HERO */}
       <section className="svc-hero seo-service-hero">
         <div className="svc-hero-bg">

@@ -1,3 +1,4 @@
+import SEO from '../components/SEO';
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getCaseStudyDetail } from "../api/client";
@@ -21,7 +22,7 @@ export default function CaseStudyDetailPage() {
       if (res.ok && res.data) {
         setCaseStudy(res.data.case_study);
         setRelated(res.data.related || []);
-        document.title = `${res.data.case_study.title} — Case Study | Magencystudio`;
+        
       } else {
         setError(res.error || "Case study not found");
       }
@@ -71,6 +72,16 @@ export default function CaseStudyDetailPage() {
 
   return (
     <main>
+      <SEO
+        title={`${caseStudy.title} — Case Study`}
+        description={caseStudy.short_description || `Discover how Magency Studio partnered with ${caseStudy.client_name || 'our client'} to achieve measurable results.`}
+        canonical={`https://www.magencystudio.in/case-study/${slug}`}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Case Studies', url: '/case-study' },
+          { name: caseStudy.title, url: `/case-study/${slug}` },
+        ]}
+      />
       {/* 1. CASE STUDY HERO / HEADER */}
       <header className="case-study-hero">
         <div className="case-reading-container">

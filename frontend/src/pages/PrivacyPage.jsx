@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function PrivacyPage() {
   const [activeSection, setActiveSection] = useState("information");
 
   useEffect(() => {
-    document.title = "Privacy Policy | Magency Studio";
+    
 
     const handleScroll = () => {
       const sections = [
@@ -46,6 +47,13 @@ export default function PrivacyPage() {
 
   return (
     <main>
+      <SEO
+        title="Privacy Policy | Magency Studio"
+        description="Read Magency Studio's privacy policy to understand how we collect, protect, and handle client information and project data securely."
+        canonical="https://www.magencystudio.in/privacy"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy' }]}
+      />
+
       {/* 1. HERO SECTION */}
       <section className="privacy-hero">
         <div className="privacy-container">

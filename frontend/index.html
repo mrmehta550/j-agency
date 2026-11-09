@@ -3,10 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magencystudio — AI Development, Web Design & Digital Marketing</title>
-    <meta name="description" content="Magencystudio builds AI-powered websites, mobile apps, SEO strategies and digital marketing solutions for startups and enterprises worldwide." />
+    <title>Magency Studio — AI Development, Web Design & Digital Marketing</title>
+    <meta name="description" content="Magency Studio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing." />
+    <link rel="canonical" href="https://www.magencystudio.in/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
 
-        <!-- Backend API Preconnect for Instant Requests -->
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Magency Studio" />
+    <meta property="og:title" content="Magency Studio — AI Development, Web Design & Digital Marketing" />
+    <meta property="og:description" content="Magency Studio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing." />
+    <meta property="og:url" content="https://www.magencystudio.in/" />
+    <meta property="og:image" content="https://www.magencystudio.in/images/favicon.png" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Magency Studio — AI Development, Web Design & Digital Marketing" />
+    <meta name="twitter:description" content="Magency Studio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing." />
+    <meta name="twitter:image" content="https://www.magencystudio.in/images/favicon.png" />
+
+    <!-- Backend API Preconnect for Instant Requests -->
     <link rel="dns-prefetch" href="https://j-agency-1.onrender.com" />
     <link rel="preconnect" href="https://j-agency-1.onrender.com" crossorigin />
 
@@ -24,8 +41,52 @@
 
     <!-- Swiper 11 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Structured Data (Organization & WebSite Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.magencystudio.in/#organization",
+          "name": "Magency Studio",
+          "url": "https://www.magencystudio.in/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://www.magencystudio.in/#logo",
+            "url": "https://www.magencystudio.in/images/favicon.png",
+            "caption": "Magency Studio"
+          },
+          "image": "https://www.magencystudio.in/images/favicon.png",
+          "description": "Magency Studio builds AI-powered websites, custom mobile apps, UI/UX designs, and scalable digital solutions for high-growth businesses.",
+          "email": "magency550@gmail.com",
+          "sameAs": [
+            "https://www.magencystudio.in"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.magencystudio.in/#website",
+          "url": "https://www.magencystudio.in/",
+          "name": "Magency Studio",
+          "publisher": {
+            "@id": "https://www.magencystudio.in/#organization"
+          },
+          "inLanguage": "en-US"
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
+    <noscript>
+      <div style="padding: 24px; text-align: center; font-family: sans-serif;">
+        <h2>Magency Studio</h2>
+        <p>AI Development, Custom Web Design, Mobile Apps & Digital Marketing Agency.</p>
+        <p>Please enable JavaScript to view the full interactive experience.</p>
+      </div>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

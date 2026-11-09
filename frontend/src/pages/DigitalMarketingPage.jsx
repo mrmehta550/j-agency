@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function DigitalMarketingPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Data-Driven Digital Marketing Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -33,6 +34,25 @@ export default function DigitalMarketingPage() {
 
   return (
     <main>
+      <SEO
+        title="Performance Digital Marketing & Growth Strategy | Magency Studio"
+        description="Accelerate revenue with data-driven PPC advertising, social media marketing, conversion rate optimization (CRO), and high-converting growth funnels."
+        canonical="https://www.magencystudio.in/services/digital-marketing"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Digital Marketing', url: '/services/digital-marketing' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Performance Digital Marketing',
+        description: 'Accelerate revenue with data-driven PPC advertising, social media marketing, conversion rate optimization (CRO), and high-converting growth funnels.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* DIGITAL MARKETING HERO */}
       <section className="svc-hero dm-service-hero">
         <div className="svc-hero-bg">

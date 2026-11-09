@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
+import SEO from '../components/SEO';
 
 export default function UiUxPage() {
   const [caseStudies, setCaseStudies] = useState([]);
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional UI/UX Design Services | Magencystudio";
+    
     loadCaseStudies();
   }, []);
 
@@ -47,6 +48,25 @@ export default function UiUxPage() {
 
   return (
     <main>
+      <SEO
+        title="UI/UX Design & User Experience Consulting | Magency Studio"
+        description="Transform your digital product with human-centered UI/UX design, wireframing, interactive prototyping in Figma, and conversion-focused design systems."
+        canonical="https://www.magencystudio.in/services/ui-ux"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'UI/UX Design', url: '/services/ui-ux' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'UI/UX Design & Product Consulting',
+        description: 'Transform your digital product with human-centered UI/UX design, wireframing, interactive prototyping in Figma, and conversion-focused design systems.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* UI/UX HERO */}
       <section className="svc-hero uiux-service-hero">
         <div className="svc-hero-bg">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
+import SEO from '../components/SEO';
 
 export default function CaseStudyPage() {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -8,7 +9,7 @@ export default function CaseStudyPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    document.title = "Case Studies & Client Portfolio | Magencystudio";
+    
     loadCaseStudies();
   }, []);
 
@@ -33,6 +34,13 @@ export default function CaseStudyPage() {
 
   return (
     <main>
+      <SEO
+        title="Client Case Studies & Proven Results | Magency Studio"
+        description="Explore real-world client success stories, product transformations, and measurable business growth powered by Magency Studio."
+        canonical="https://www.magencystudio.in/case-study"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Case Studies', url: '/case-study' }]}
+      />
+
       {/* 1. HERO SECTION */}
       <section className="case-hero-section">
         <div className="case-hero-bg"></div>

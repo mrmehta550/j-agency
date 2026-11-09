@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function WebDevPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Custom Web Development & Web App Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -33,6 +34,25 @@ export default function WebDevPage() {
 
   return (
     <main>
+      <SEO
+        title="Custom Web Development & Modern Web Apps | Magency Studio"
+        description="Enterprise-grade website and web application development using React, Next.js, Django, and Node.js. Fast, secure, and search-optimized web solutions."
+        canonical="https://www.magencystudio.in/services/web-dev"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Web Development', url: '/services/web-dev' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Custom Web Development',
+        description: 'Enterprise-grade website and web application development using React, Next.js, Django, and Node.js. Fast, secure, and search-optimized web solutions.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* WEB DEVELOPMENT HERO */}
       <section className="svc-hero web-service-hero">
         <div className="svc-hero-bg">

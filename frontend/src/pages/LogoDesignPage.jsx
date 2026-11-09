@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function LogoDesignPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Premium Logo Design & Brand Identity Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -92,6 +93,25 @@ export default function LogoDesignPage() {
 
   return (
     <main>
+      <SEO
+        title="Brand Identity & Custom Logo Design Services | Magency Studio"
+        description="Craft a memorable brand with distinctive vector logo designs, typography guidelines, brand style kits, and visual identity collateral that resonates with customers."
+        canonical="https://www.magencystudio.in/services/logo-design"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Logo Design', url: '/services/logo-design' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Brand Identity & Logo Design',
+        description: 'Craft a memorable brand with distinctive vector logo designs, typography guidelines, brand style kits, and visual identity collateral that resonates with customers.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* LOGO DESIGN HERO */}
       <section className="logo-service-hero">
         <div className="logo-service-bg">

@@ -56,6 +56,43 @@ export default function BlogDetailPage() {
 
   return (
     <div>
+      <SEO
+        title={blog.title}
+        description={blog.short_description || blog.title}
+        canonical={`https://www.magencystudio.in/blog/${slug}`}
+        ogType="article"
+        ogImage={getImageUrl(blog.image)}
+        breadcrumbs={[
+          { name: 'Home', url: '/' },
+          { name: 'Blogs', url: '/blogs' },
+          { name: blog.title, url: `/blog/${slug}` },
+        ]}
+        schema={{
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: blog.title,
+          description: blog.short_description || blog.title,
+          image: getImageUrl(blog.image),
+          datePublished: blog.created_at,
+          author: {
+            '@type': 'Organization',
+            name: 'Magency Studio',
+            url: 'https://www.magencystudio.in/',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Magency Studio',
+            logo: {
+              '@type': 'ImageObject',
+              url: 'https://www.magencystudio.in/images/favicon.png',
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://www.magencystudio.in/blog/${slug}`,
+          },
+        }}
+      />
       {/*=========================================
           BLOG DETAIL HERO
           ==========================================*/}

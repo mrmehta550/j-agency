@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -33,6 +34,13 @@ export default function AboutPage() {
 
   return (
     <div ref={containerRef}>
+      <SEO
+        title="About Magency Studio — Digital Innovation & Engineering Team"
+        description="Learn about Magency Studio's mission, values, and expert team of developers, designers, and AI specialists creating transformative digital products."
+        canonical="https://www.magencystudio.in/about"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'About Us', url: '/about' }]}
+      />
+
       {/* ==========================================
           ABOUT HERO
       =========================================== */}

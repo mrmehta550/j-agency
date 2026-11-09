@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const pricingPlans = [
   {
@@ -207,6 +208,13 @@ export default function PricingPage() {
 
   return (
     <div>
+      <SEO
+        title="Transparent Pricing Plans & Service Packages | Magency Studio"
+        description="Clear, transparent pricing packages for web development, AI integration, SEO, and digital marketing. Choose the plan that fits your business scale."
+        canonical="https://www.magencystudio.in/price"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Pricing', url: '/price' }]}
+      />
+
       {/* =============================================
            PRICING HERO
       ============================================= */}

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function AiSolutionPage() {
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Artificial Intelligence & LLM Automation Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -33,6 +34,25 @@ export default function AiSolutionPage() {
 
   return (
     <main>
+      <SEO
+        title="Custom AI Solutions, LLM Integration & Automation | Magency Studio"
+        description="Empower your enterprise with custom AI agent workflows, LLM integrations, OpenAI & Claude fine-tuning, intelligent chatbots, and business automation."
+        canonical="https://www.magencystudio.in/services/ai-solution"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'AI Solutions', url: '/services/ai-solution' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Custom AI Solutions & LLM Workflows',
+        description: 'Empower your enterprise with custom AI agent workflows, LLM integrations, OpenAI & Claude fine-tuning, intelligent chatbots, and business automation.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* AI HERO SECTION */}
       <section className="svc-hero ai-service-hero">
         <div className="svc-hero-bg">

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
+import SEO from '../components/SEO';
 
 export default function BlogsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -94,6 +95,13 @@ export default function BlogsPage() {
 
   return (
     <div>
+      <SEO
+        title="Engineering & Tech Insights, Guides & Articles | Magency Studio"
+        description="Read actionable articles on web engineering, artificial intelligence, technical SEO, UI/UX design trends, and scaling software architectures."
+        canonical="https://www.magencystudio.in/blogs"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blogs & Insights', url: '/blogs' }]}
+      />
+
       {/*=========================================
           BLOG HERO
           ==========================================*/}

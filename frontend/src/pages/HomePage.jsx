@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
+import SEO from '../components/SEO';
 
 export default function HomePage() {
   const [topBlogs, setTopBlogs] = useState([]);
@@ -133,6 +134,12 @@ export default function HomePage() {
 
   return (
     <div ref={containerRef}>
+      <SEO
+        title="Magency Studio — AI Development, Web Design & Digital Marketing Agency"
+        description="Magency Studio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing."
+        canonical="https://www.magencystudio.in/"
+      />
+
       {/*=========================================
           1. HERO SECTION
           ==========================================*/}

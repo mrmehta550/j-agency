@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function TermsPage() {
   const [activeSection, setActiveSection] = useState("introduction");
 
   useEffect(() => {
-    document.title = "Terms & Conditions | Magency Studio";
+    
 
     const handleScroll = () => {
       const sections = [
@@ -48,6 +49,13 @@ export default function TermsPage() {
 
   return (
     <main>
+      <SEO
+        title="Terms & Conditions | Magency Studio"
+        description="Review Magency Studio's terms of service, service level agreements, intellectual property guidelines, and client engagement policies."
+        canonical="https://www.magencystudio.in/terms-and-conditions"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Terms & Conditions', url: '/terms-and-conditions' }]}
+      />
+
       {/* 1. HERO SECTION */}
       <section className="terms-hero">
         <div className="terms-container">

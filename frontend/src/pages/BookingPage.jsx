@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../api/client';
+import SEO from '../components/SEO';
 
 const bookingServices = [
   {
@@ -153,6 +154,13 @@ export default function BookingPage() {
 
   return (
     <div>
+      <SEO
+        title="Schedule a Strategy Consultation Call | Magency Studio"
+        description="Book a 1-on-1 strategy call with our senior tech and design consultants. Discuss project scope, architecture, timelines, and tailored solutions."
+        canonical="https://www.magencystudio.in/booking"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Book Consultation', url: '/booking' }]}
+      />
+
       {/* Toast Notification */}
       {toast && (
         <div className="contact-toast-container" id="toastContainer" style={{ position: 'fixed', top: '24px', right: '24px', zIndex: 999999 }}>

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function VideoEditingPage() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
-    document.title = "Professional Video Editing & Production Services | Magencystudio";
+    
   }, []);
 
   const toggleFaq = (idx) => {
@@ -63,6 +64,25 @@ export default function VideoEditingPage() {
 
   return (
     <main>
+      <SEO
+        title="Professional Video Editing & Motion Graphics | Magency Studio"
+        description="High-retention commercial video editing, YouTube content production, short-form Reels/Shorts, 2D/3D motion graphics, and audio mastering for brands."
+        canonical="https://www.magencystudio.in/services/video-editing"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Video Editing', url: '/services/video-editing' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Commercial Video Editing & Motion Graphics',
+        description: 'High-retention commercial video editing, YouTube content production, short-form Reels/Shorts, 2D/3D motion graphics, and audio mastering for brands.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* VIDEO SERVICE HERO */}
       <section className="svc-hero video-service-hero">
         <div className="svc-hero-bg">

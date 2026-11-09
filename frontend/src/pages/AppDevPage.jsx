@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import SEO from '../components/SEO';
 
 export default function AppDevPage() {
   const [activeScreen, setActiveScreen] = useState("ecom");
@@ -19,7 +20,7 @@ export default function AppDevPage() {
   const [timelineText, setTimelineText] = useState("4 - 6 Weeks");
 
   useEffect(() => {
-    document.title = "Mobile App Development Services | Android & iOS Apps | Magencystudio";
+    
   }, []);
 
   // Recalculate price and timeline when inputs change
@@ -84,6 +85,25 @@ export default function AppDevPage() {
 
   return (
     <main>
+      <SEO
+        title="Mobile App Development Services — iOS & Android | Magency Studio"
+        description="Custom cross-platform and native mobile app development using Flutter, React Native, Swift, and Kotlin. Scalable, intuitive mobile experiences for iOS and Android."
+        canonical="https://www.magencystudio.in/app"
+        breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'App Development', url: '/app' }]}
+        schema={{
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Mobile Application Development',
+        description: 'Custom cross-platform and native mobile app development using Flutter, React Native, Swift, and Kotlin. Scalable, intuitive mobile experiences for iOS and Android.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Magency Studio',
+          url: 'https://www.magencystudio.in/',
+        },
+        areaServed: 'Worldwide',
+      }}
+      />
+
       {/* MOBILE HERO SECTION */}
       <section className="app-hero">
         <div className="app-hero-glow"></div>
