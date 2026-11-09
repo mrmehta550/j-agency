@@ -368,7 +368,7 @@ export default function AboutPage() {
                 <img src="/images/about/vishal.jpeg" alt="Vishal Kumar" />
               </div>
               <div className="about-team-content">
-                <span className="about-team-role">Founder & Full Stack Developer</span>
+                <span className="about-team-role">Founder &  Developer</span>
                 <h3>Vishal Kumar</h3>
                 <p>Passionate about building scalable web applications, AI-powered solutions, and helping businesses grow through technology.</p>
                 <div className="about-team-skills">
@@ -376,11 +376,11 @@ export default function AboutPage() {
                   <span>Django</span>
                   <span>AI</span>
                 </div>
-                <div className="about-team-social">
+                {/* <div className="about-team-social">
                   <a href="https://www.linkedin.com/in/mrmehta550" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
                   <a href="https://www.github.com/in/mrmehta550" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
                   <a href="mailto:vishalmehta9117@gmail.com"><i className="fa-solid fa-envelope"></i></a>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -397,32 +397,34 @@ export default function AboutPage() {
                   <span>Strategy</span>
                   <span>UI/UX</span>
                 </div>
-                <div className="about-team-social">
+                {/* <div className="about-team-social">
                   <a href="https://www.linkedin.com/in/jashanpreet-kaur-194a2528a" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-linkedin-in"></i></a>
                   <a href="https://www.github.com/in/Jashanpreet-kaur" target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-github"></i></a>
                   <a href="#"><i className="fa-solid fa-envelope"></i></a>
-                </div>
+                </div> */}
               </div>
             </div>
 
             <div className="about-team-card">
               <div className="about-team-image">
-                <img src="/images/about/developer.jpg" alt="Development Team" />
+                <img src="/images/about/mawa.jpg" alt="Development Team" />
               </div>
               <div className="about-team-content">
-                <span className="about-team-role">Full Stack Developer</span>
-                <h3>Development Team</h3>
-                <p>Building responsive, scalable, and secure applications using modern web technologies.</p>
+                <span className="about-team-role">AI Automation & Workflow Specialist</span>
+                <h3>Mawa Ahtsham</h3>
+                <p> Designing intelligent automation workflows and AI-powered solutions
+                  to streamline business operations and improve efficiency.</p>
                 <div className="about-team-skills">
-                  <span>React</span>
-                  <span>Node.js</span>
-                  <span>Django</span>
+                  <span>n8n</span>
+                  <span>AI Agents</span>
+                  <span>Workflow Automation</span>
+                  <span>API Integration</span>
                 </div>
-                <div className="about-team-social">
+                {/* <div className="about-team-social">
                   <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
                   <a href="#"><i className="fa-brands fa-github"></i></a>
                   <a href="#"><i className="fa-solid fa-envelope"></i></a>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -439,11 +441,11 @@ export default function AboutPage() {
                   <span>Adobe XD</span>
                   <span>Branding</span>
                 </div>
-                <div className="about-team-social">
+                {/* <div className="about-team-social">
                   <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
                   <a href="#"><i className="fa-brands fa-github"></i></a>
                   <a href="#"><i className="fa-solid fa-envelope"></i></a>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
