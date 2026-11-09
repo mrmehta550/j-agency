@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function WebDevPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function WebDevPage() {
 
             <div className="svc-hero-visual web-reveal web-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/web-development/hero1.jpg"
                   alt="Web Development Team Mockup"
                   className="svc-hero-image"
@@ -404,42 +405,42 @@ export default function WebDevPage() {
 
           <div className="svc-tech-grid web-reveal">
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/python.jpg" alt="Python Programming" />
+              <OptimizedImage src="/images/services/web-development/python.jpg" alt="Python Programming" />
               <h3>Python</h3>
               <p>Data & Logic</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/django.jpg" alt="Django Web Framework" />
+              <OptimizedImage src="/images/services/web-development/django.jpg" alt="Django Web Framework" />
               <h3>Django</h3>
               <p>Secure Backend</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/react.jpg" alt="React JS library" />
+              <OptimizedImage src="/images/services/web-development/react.jpg" alt="React JS library" />
               <h3>React JS</h3>
               <p>Interactive UI</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/nextjs.jpg" alt="Next.js framework" />
+              <OptimizedImage src="/images/services/web-development/nextjs.jpg" alt="Next.js framework" />
               <h3>Next.js</h3>
               <p>SEO & Speed</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/docker.jpg" alt="Docker deployment" />
+              <OptimizedImage src="/images/services/web-development/docker.jpg" alt="Docker deployment" />
               <h3>Docker</h3>
               <p>DevOps</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/aws.jpg" alt="AWS hosting" />
+              <OptimizedImage src="/images/services/web-development/aws.jpg" alt="AWS hosting" />
               <h3>AWS</h3>
               <p>Cloud Security</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/nodejs.jpg" alt="Node JS runtime" />
+              <OptimizedImage src="/images/services/web-development/nodejs.jpg" alt="Node JS runtime" />
               <h3>Node JS</h3>
               <p>JS Runtime</p>
             </div>
             <div className="svc-tech-card">
-              <img src="/images/services/web-development/php.jpg" alt="PHP Backend" />
+              <OptimizedImage src="/images/services/web-development/php.jpg" alt="PHP Backend" />
               <h3>PHP</h3>
               <p>CMS Platforms</p>
             </div>
@@ -458,7 +459,7 @@ export default function WebDevPage() {
 
           <div className="svc-portfolio-grid web-reveal">
             <div className="svc-portfolio-card">
-              <img src="/images/services/web-development/finance.jpg" alt="Finance Dashboard mockup" />
+              <OptimizedImage src="/images/services/web-development/finance.jpg" alt="Finance Dashboard mockup" />
               <div className="svc-portfolio-overlay">
                 <span>Corporate Website</span>
                 <h3>Finance Platform</h3>
@@ -466,7 +467,7 @@ export default function WebDevPage() {
             </div>
 
             <div className="svc-portfolio-card">
-              <img src="/images/services/web-development/f-cloth.jpg" alt="eCommerce Fashion App mockup" />
+              <OptimizedImage src="/images/services/web-development/f-cloth.jpg" alt="eCommerce Fashion App mockup" />
               <div className="svc-portfolio-overlay">
                 <span>E-Commerce</span>
                 <h3>Luxe Fashion Store</h3>
@@ -474,7 +475,7 @@ export default function WebDevPage() {
             </div>
 
             <div className="svc-portfolio-card">
-              <img src="/images/services/web-development/ai.jpg" alt="AI Assistant mockup" />
+              <OptimizedImage src="/images/services/web-development/ai.jpg" alt="AI Assistant mockup" />
               <div className="svc-portfolio-overlay">
                 <span>AI SaaS</span>
                 <h3>AI Business Assistant</h3>
@@ -562,7 +563,7 @@ export default function WebDevPage() {
               </div>
               <p>&quot;Magencystudio transformed our outdated business website into a modern, fast platform. Our inbound leads grew by over 60% in two months.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/web-development/client1.png" alt="Puna Anderson CEO TechNova" />
+                <OptimizedImage src="/images/services/web-development/client1.png" alt="Puna Anderson CEO TechNova" />
                 <div>
                   <h4>Puna Anderson</h4>
                   <span>CEO, TechNova</span>
@@ -580,7 +581,7 @@ export default function WebDevPage() {
               </div>
               <p>&quot;The team built our eCommerce store ahead of schedule and with secure checkouts. Communication was fast and transparent.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/web-development/client2.png" alt="Sarah Williams Founder Luxe" />
+                <OptimizedImage src="/images/services/web-development/client2.png" alt="Sarah Williams Founder Luxe" />
                 <div>
                   <h4>Sarah Williams</h4>
                   <span>Founder, Luxe Fashion</span>
@@ -598,7 +599,7 @@ export default function WebDevPage() {
               </div>
               <p>&quot;Their web development and API integration skills are top-notch. They integrated our RAG chatbots with zero downtime.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/web-development/client3.png" alt="Michael Lee CTO SmartAI" />
+                <OptimizedImage src="/images/services/web-development/client3.png" alt="Michael Lee CTO SmartAI" />
                 <div>
                   <h4>Michael Lee</h4>
                   <span>CTO, SmartAI</span>

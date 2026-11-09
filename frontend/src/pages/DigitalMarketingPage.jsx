@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function DigitalMarketingPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function DigitalMarketingPage() {
 
             <div className="svc-hero-visual dm-reveal dm-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/dm/hero-dashboard.jpg"
                   alt="Marketing Dashboard analytics mockup"
                   className="svc-hero-image"

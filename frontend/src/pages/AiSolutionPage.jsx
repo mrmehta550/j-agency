@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function AiSolutionPage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function AiSolutionPage() {
 
             <div className="svc-hero-visual ai-reveal ai-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/ai/hero-dashboard.jpg"
                   alt="AI Data Analysis Dashboard mockup"
                   className="svc-hero-image"

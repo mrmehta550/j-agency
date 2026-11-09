@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function TermsPage() {
   const [activeSection, setActiveSection] = useState("introduction");
@@ -98,7 +99,7 @@ export default function TermsPage() {
             </div>
 
             <div className="terms-hero-image">
-              <img src="/images/privacy/terms.jpg" alt="Magency Studio Terms & Conditions" />
+              <OptimizedImage src="/images/privacy/terms.jpg" alt="Magency Studio Terms & Conditions" />
             </div>
           </div>
         </div>

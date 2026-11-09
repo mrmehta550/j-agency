@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function LogoDesignPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -170,7 +171,7 @@ export default function LogoDesignPage() {
 
             <div className="logo-service-visual logo-reveal logo-revealed">
               <div className="logo-service-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/logo/logo-hero.jpg"
                   alt="Logo Design Process mockup"
                   className="logo-service-image"
@@ -495,7 +496,7 @@ export default function LogoDesignPage() {
           <div className="logo-service-portfolio-grid logo-reveal">
             {filteredItems.map((item) => (
               <div key={item.id} className="logo-service-portfolio-card" data-category={item.category}>
-                <img src={item.img} alt={`${item.title} Logo Design`} />
+                <OptimizedImage src={item.img} alt={`${item.title} Logo Design`} />
                 <div className="logo-service-overlay">
                   <span>{item.tag}</span>
                   <h3>{item.title}</h3>
@@ -623,7 +624,7 @@ export default function LogoDesignPage() {
               </div>
               <p>&quot;Our new logo completely transformed our company's image. The design process was collaborative, and the final branding materials were highly detailed.&quot;</p>
               <div className="logo-service-client">
-                <img src="/images/services/logo/client1.jpg" alt="Michael Anderson CEO Nexa" />
+                <OptimizedImage src="/images/services/logo/client1.jpg" alt="Michael Anderson CEO Nexa" />
                 <div>
                   <h4>Michael Anderson</h4>
                   <span>CEO, Nexa Technologies</span>
@@ -641,7 +642,7 @@ export default function LogoDesignPage() {
               </div>
               <p>&quot;Excellent communication, modern styling choices, and prompt adjustments. Our team felt supported throughout the entire brand refresh cycle.&quot;</p>
               <div className="logo-service-client">
-                <img src="/images/services/logo/client2.jpg" alt="Neha Johnson Founder Bloom" />
+                <OptimizedImage src="/images/services/logo/client2.jpg" alt="Neha Johnson Founder Bloom" />
                 <div>
                   <h4>Neha Johnson</h4>
                   <span>Founder, Bloom Fashion</span>
@@ -659,7 +660,7 @@ export default function LogoDesignPage() {
               </div>
               <p>&quot;The stationery materials and typography rules provided in the guidelines book have streamlined our marketing operations. Strongly recommended.&quot;</p>
               <div className="logo-service-client">
-                <img src="/images/services/logo/client3.jpg" alt="David Williams Director Prime" />
+                <OptimizedImage src="/images/services/logo/client3.jpg" alt="David Williams Director Prime" />
                 <div>
                   <h4>David Williams</h4>
                   <span>Director, Prime Finance</span>

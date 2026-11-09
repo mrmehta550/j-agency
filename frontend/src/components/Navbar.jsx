@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,7 +84,7 @@ export default function Navbar() {
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHide ? 'hide' : ''}`}>
         <div className="container">
           <Link to="/" className="logo" aria-label="Magency Studio Home">
-            <img src="/images/favicon.png" alt="Magency Studio Logo" className="logo-img" />
+            <OptimizedImage src="/images/favicon.png" alt="Magency Studio Logo" className="logo-img" />
             <span className="logo-brand">
               <span className="logo-brand-main">Magency</span>
               <span className="logo-brand-accent">Studio</span>

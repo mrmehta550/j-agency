@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function VideoEditingPage() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -139,7 +140,7 @@ export default function VideoEditingPage() {
 
             <div className="svc-hero-visual video-reveal video-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/video/video-hero.jpg"
                   alt="Video Editor dashboard mockup"
                   className="svc-hero-image"
@@ -329,7 +330,7 @@ export default function VideoEditingPage() {
           <div className="svc-portfolio-grid video-reveal">
             {filteredItems.map((item) => (
               <div key={item.id} className="svc-portfolio-card video-portfolio-card" data-category={item.category}>
-                <img src={item.img} alt={item.title} />
+                <OptimizedImage src={item.img} alt={item.title} />
                 <div className="svc-portfolio-overlay">
                   <span>{item.tag}</span>
                   <h3>{item.title}</h3>
@@ -418,7 +419,7 @@ export default function VideoEditingPage() {
               </div>
               <p>&quot;The dynamic subtitles and visual hooks they integrate kept our social retention metrics 40% higher. Absolutely top-tier editing.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client1.jpg" alt="David Croft Creator" />
+                <OptimizedImage src="/images/services/logo/client1.jpg" alt="David Croft Creator" />
                 <div>
                   <h4>David Croft</h4>
                   <span>Host, Croft Tech</span>
@@ -436,7 +437,7 @@ export default function VideoEditingPage() {
               </div>
               <p>&quot;They designed cinematic ad promos that significantly boosted our paid traffic conversions on Facebook and Instagram.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client2.jpg" alt="Clara Higgins Director" />
+                <OptimizedImage src="/images/services/logo/client2.jpg" alt="Clara Higgins Director" />
                 <div>
                   <h4>Clara Higgins</h4>
                   <span>VP Marketing, Trendify</span>
@@ -454,7 +455,7 @@ export default function VideoEditingPage() {
               </div>
               <p>&quot;Super fast turnaround speeds and clean color grading. They delivered a fully finished commercial in under 4 business days.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client3.jpg" alt="Liam Gallagher Producer" />
+                <OptimizedImage src="/images/services/logo/client3.jpg" alt="Liam Gallagher Producer" />
                 <div>
                   <h4>Liam Gallagher</h4>
                   <span>Producer, Oasis Creative</span>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function UiUxPage() {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -123,7 +124,7 @@ export default function UiUxPage() {
 
             <div className="svc-hero-visual uiux-reveal uiux-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/uiux/uiux-hero.jpg"
                   alt="UI/UX Designers wireframing mockup"
                   className="svc-hero-image"
@@ -376,7 +377,7 @@ export default function UiUxPage() {
               caseStudies.map((caseItem) => (
                 <article key={caseItem.id} className="case-card">
                   <div className="case-card-image">
-                    <img
+                    <OptimizedImage
                       src={caseItem.image || "/images/portfolio/project-1.jpg"}
                       alt={caseItem.title}
                     />
@@ -396,7 +397,7 @@ export default function UiUxPage() {
               <>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-1.jpg" alt="App UI Mockup" />
+                    <OptimizedImage src="/images/portfolio/project-1.jpg" alt="App UI Mockup" />
                     <span className="case-card-category">UI/UX Design</span>
                   </div>
                   <div className="case-card-body">
@@ -410,7 +411,7 @@ export default function UiUxPage() {
                 </article>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-2.jpg" alt="SaaS Mockup" />
+                    <OptimizedImage src="/images/portfolio/project-2.jpg" alt="SaaS Mockup" />
                     <span className="case-card-category">UI/UX Design</span>
                   </div>
                   <div className="case-card-body">
@@ -424,7 +425,7 @@ export default function UiUxPage() {
                 </article>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-3.jpg" alt="Web Design Mockup" />
+                    <OptimizedImage src="/images/portfolio/project-3.jpg" alt="Web Design Mockup" />
                     <span className="case-card-category">UI/UX Design</span>
                   </div>
                   <div className="case-card-body">
@@ -462,7 +463,7 @@ export default function UiUxPage() {
               </div>
               <p>&quot;Their wireframes and design system simplified our developer workflows. They built a unified design language that matches our operations.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client1.jpg" alt="Alex Mercer Product Lead" />
+                <OptimizedImage src="/images/services/logo/client1.jpg" alt="Alex Mercer Product Lead" />
                 <div>
                   <h4>Alex Mercer</h4>
                   <span>Product Lead, Velo</span>
@@ -480,7 +481,7 @@ export default function UiUxPage() {
               </div>
               <p>&quot;The clickable high-fidelity Figma prototypes allowed us to validate page structures with users before committing developer hours.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client2.jpg" alt="Elena Rostova Director" />
+                <OptimizedImage src="/images/services/logo/client2.jpg" alt="Elena Rostova Director" />
                 <div>
                   <h4>Elena Rostova</h4>
                   <span>Director, Prime Health</span>
@@ -498,7 +499,7 @@ export default function UiUxPage() {
               </div>
               <p>&quot;Outstanding visual quality. They delivered a responsive and clean layout that instantly elevated our brand identity.&quot;</p>
               <div className="svc-client">
-                <img src="/images/services/logo/client3.jpg" alt="Marcus Vance CTO" />
+                <OptimizedImage src="/images/services/logo/client3.jpg" alt="Marcus Vance CTO" />
                 <div>
                   <h4>Marcus Vance</h4>
                   <span>CTO, Nexus Corp</span>

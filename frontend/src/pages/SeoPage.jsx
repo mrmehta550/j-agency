@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function SeoPage() {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -123,7 +124,7 @@ export default function SeoPage() {
 
             <div className="svc-hero-visual seo-reveal seo-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/seo/hero.jpg"
                   alt="SEO Analytics Dashboard mockup"
                   className="svc-hero-image"
@@ -376,7 +377,7 @@ export default function SeoPage() {
               caseStudies.map((caseItem) => (
                 <article key={caseItem.id} className="case-card">
                   <div className="case-card-image">
-                    <img
+                    <OptimizedImage
                       src={caseItem.image || "/images/portfolio/project-1.jpg"}
                       alt={caseItem.title}
                     />
@@ -396,7 +397,7 @@ export default function SeoPage() {
               <>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-4.jpg" alt="SaaS SEO Growth" />
+                    <OptimizedImage src="/images/portfolio/project-4.jpg" alt="SaaS SEO Growth" />
                     <span className="case-card-category">SEO</span>
                   </div>
                   <div className="case-card-body">
@@ -410,7 +411,7 @@ export default function SeoPage() {
                 </article>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-5.jpg" alt="eCommerce SEO Growth" />
+                    <OptimizedImage src="/images/portfolio/project-5.jpg" alt="eCommerce SEO Growth" />
                     <span className="case-card-category">SEO</span>
                   </div>
                   <div className="case-card-body">
@@ -424,7 +425,7 @@ export default function SeoPage() {
                 </article>
                 <article className="case-card">
                   <div className="case-card-image">
-                    <img src="/images/portfolio/project-1.jpg" alt="Local Business Map Pack" />
+                    <OptimizedImage src="/images/portfolio/project-1.jpg" alt="Local Business Map Pack" />
                     <span className="case-card-category">SEO</span>
                   </div>
                   <div className="case-card-body">

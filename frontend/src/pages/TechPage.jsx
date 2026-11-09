@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function TechPage() {
   const [activeFilter, setActiveFilter] = useState('frontend');
@@ -102,23 +103,23 @@ export default function TechPage() {
           </div>
           <div className="technology-logo-slider">
             <div className="technology-logo-track">
-              <div className="technology-logo-item"><img src="/images/services/web-development/react.jpg" alt="React" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/python.jpg" alt="Python" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/django.jpg" alt="Django" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/docker.jpg" alt="Docker" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/aws.jpg" alt="AWS" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/openai.jpg" alt="OpenAI" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/langchain.jpg" alt="LangChain" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/postgresql.jpg" alt="PostgreSQL" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/react.jpg" alt="React" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/python.jpg" alt="Python" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/django.jpg" alt="Django" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/docker.jpg" alt="Docker" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/aws.jpg" alt="AWS" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/openai.jpg" alt="OpenAI" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/langchain.jpg" alt="LangChain" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/postgresql.jpg" alt="PostgreSQL" /></div>
               {/* Duplication for infinite loop */}
-              <div className="technology-logo-item"><img src="/images/services/web-development/react.jpg" alt="React" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/python.jpg" alt="Python" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/django.jpg" alt="Django" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/docker.jpg" alt="Docker" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/aws.jpg" alt="AWS" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/openai.jpg" alt="OpenAI" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/langchain.jpg" alt="LangChain" /></div>
-              <div className="technology-logo-item"><img src="/images/services/web-development/postgresql.jpg" alt="PostgreSQL" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/react.jpg" alt="React" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/python.jpg" alt="Python" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/django.jpg" alt="Django" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/docker.jpg" alt="Docker" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/aws.jpg" alt="AWS" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/openai.jpg" alt="OpenAI" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/langchain.jpg" alt="LangChain" /></div>
+              <div className="technology-logo-item"><OptimizedImage src="/images/services/web-development/postgresql.jpg" alt="PostgreSQL" /></div>
             </div>
           </div>
         </div>
@@ -180,7 +181,7 @@ export default function TechPage() {
           <div className="container">
             <div className="technology-stack-grid">
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/react.svg" alt="React" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/react.svg" alt="React" /></div>
                 <h3>React.js</h3>
                 <p>Build modern, interactive, and scalable web applications.</p>
                 <ul>
@@ -191,7 +192,7 @@ export default function TechPage() {
               </article>
 
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/nextjs.svg" alt="Next.js" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/nextjs.svg" alt="Next.js" /></div>
                 <h3>Next.js</h3>
                 <p>High-performance, SEO friendly enterprise applications.</p>
                 <ul>
@@ -202,7 +203,7 @@ export default function TechPage() {
               </article>
 
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/vue.svg" alt="Vue" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/vue.svg" alt="Vue" /></div>
                 <h3>Vue.js</h3>
                 <p>Lightweight framework for scalable, clean user interfaces.</p>
                 <ul>
@@ -213,7 +214,7 @@ export default function TechPage() {
               </article>
 
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/angular.svg" alt="Angular" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/angular.svg" alt="Angular" /></div>
                 <h3>Angular</h3>
                 <p>Robust framework for complex, enterprise-grade systems.</p>
                 <ul>
@@ -224,7 +225,7 @@ export default function TechPage() {
               </article>
 
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/tailwind.svg" alt="Tailwind" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/tailwind.svg" alt="Tailwind" /></div>
                 <h3>Tailwind CSS</h3>
                 <p>Modern utility-first CSS framework for custom styling.</p>
                 <ul>
@@ -235,7 +236,7 @@ export default function TechPage() {
               </article>
 
               <article className="technology-stack-card">
-                <div className="technology-stack-icon"><img src="/images/services/tech/typescript.svg" alt="TypeScript" /></div>
+                <div className="technology-stack-icon"><OptimizedImage src="/images/services/tech/typescript.svg" alt="TypeScript" /></div>
                 <h3>TypeScript</h3>
                 <p>Strict syntactical superset of JavaScript for typing safety.</p>
                 <ul>
@@ -257,42 +258,42 @@ export default function TechPage() {
           <div className="container">
             <div className="technology-backend-grid">
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/python.svg" alt="Python" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/python.svg" alt="Python" /></div>
                 <h3>Python</h3>
                 <p>Powerful language for automation, AI, and scalable web applications.</p>
                 <span>Automation • APIs • AI</span>
               </article>
 
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/django.svg" alt="Django" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/django.svg" alt="Django" /></div>
                 <h3>Django</h3>
                 <p>High-level Python web framework for secure and rapid development.</p>
                 <span>Django ORM • Security • REST API</span>
               </article>
 
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/fastapi.svg" alt="FastAPI" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/fastapi.svg" alt="FastAPI" /></div>
                 <h3>FastAPI</h3>
                 <p>Modern, fast, high-performance web framework for APIs.</p>
                 <span>Fast API Speed • Async Support • Typing</span>
               </article>
 
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/nodejs.svg" alt="Node.js" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/nodejs.svg" alt="Node.js" /></div>
                 <h3>Node.js</h3>
                 <p>JavaScript runtime built on Chrome's V8 engine for fast servers.</p>
                 <span>Event Driven • NPM Packages • Express</span>
               </article>
 
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/go.svg" alt="Go" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/go.svg" alt="Go" /></div>
                 <h3>Go</h3>
                 <p>Google's open source language for concurrent backend servers.</p>
                 <span>Goroutines • Microservices • High Speed</span>
               </article>
 
               <article className="technology-backend-card">
-                <div className="technology-backend-icon"><img src="/images/services/tech/java.svg" alt="Java" /></div>
+                <div className="technology-backend-icon"><OptimizedImage src="/images/services/tech/java.svg" alt="Java" /></div>
                 <h3>Java</h3>
                 <p>Object-oriented language for stable, enterprise-scale software.</p>
                 <span>Spring Boot • Scalable ERP • Secure</span>
@@ -310,56 +311,56 @@ export default function TechPage() {
           <div className="container">
             <div className="technology-ai-grid">
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/openai.svg" alt="OpenAI" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/openai.svg" alt="OpenAI" /></div>
                 <h3>OpenAI</h3>
                 <p>Advanced LLM APIs like GPT-4o for intelligent product features.</p>
                 <span>GPT-4o • Embeddings • Agents</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/gemini.svg" alt="Gemini" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/gemini.svg" alt="Gemini" /></div>
                 <h3>Gemini</h3>
                 <p>Google's multimodal AI models for reasoning and text processing.</p>
                 <span>1.5 Pro • Multimodal • High Context</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/claude.svg" alt="Claude" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/claude.svg" alt="Claude" /></div>
                 <h3>Claude</h3>
                 <p>Anthropic's LLMs optimized for writing and complex coding tasks.</p>
                 <span>Claude 3.5 Sonnet • Complex Code</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/langchain.svg" alt="LangChain" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/langchain.svg" alt="LangChain" /></div>
                 <h3>LangChain</h3>
                 <p>Framework for building LLM applications and agent chains.</p>
                 <span>Prompt Templates • Chains • Agents</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/huggingface.svg" alt="HuggingFace" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/huggingface.svg" alt="HuggingFace" /></div>
                 <h3>HuggingFace</h3>
                 <p>Hub for open source ML models, datasets, and transformers.</p>
                 <span>Transformers • Custom Models</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/pytorch.svg" alt="PyTorch" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/pytorch.svg" alt="PyTorch" /></div>
                 <h3>PyTorch</h3>
                 <p>Deep learning framework for training and testing ML models.</p>
                 <span>Neural Networks • GPU Acceleration</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/tensorflow.svg" alt="TensorFlow" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/tensorflow.svg" alt="TensorFlow" /></div>
                 <h3>TensorFlow</h3>
                 <p>Open source framework for machine learning and deep models.</p>
                 <span>Production Scale • TF Lite • Keras</span>
               </article>
 
               <article className="technology-ai-card">
-                <div className="technology-ai-icon"><img src="/images/services/tech/rag.svg" alt="RAG" /></div>
+                <div className="technology-ai-icon"><OptimizedImage src="/images/services/tech/rag.svg" alt="RAG" /></div>
                 <h3>RAG + MCP</h3>
                 <p>Retrieval Augmented Generation and Model Context Protocols.</p>
                 <span>Vector Indexes • Knowledge Bases</span>
@@ -377,42 +378,42 @@ export default function TechPage() {
           <div className="container">
             <div className="technology-db-grid">
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/postgresql.svg" alt="PostgreSQL" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/postgresql.svg" alt="PostgreSQL" /></div>
                 <h3>PostgreSQL</h3>
                 <p>Enterprise grade relational database with rich indexing features.</p>
                 <span>ACID Compliance • JSONB • SQL</span>
               </article>
 
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/mysql.svg" alt="MySQL" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/mysql.svg" alt="MySQL" /></div>
                 <h3>MySQL</h3>
                 <p>Reliable, open source relational database for standard web apps.</p>
                 <span>Replication • Fast Read • Scalable</span>
               </article>
 
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/mongodb.svg" alt="MongoDB" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/mongodb.svg" alt="MongoDB" /></div>
                 <h3>MongoDB</h3>
                 <p>Flexible, document-oriented NoSQL database for JSON data structures.</p>
                 <span>Sharding • BSON Document • Scalable Schema</span>
               </article>
 
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/redis.svg" alt="Redis" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/redis.svg" alt="Redis" /></div>
                 <h3>Redis</h3>
                 <p>In-memory database used for database caching, sessions, and queues.</p>
                 <span>Caching Speed • Key-Value • Pub/Sub</span>
               </article>
 
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/sql.svg" alt="SQL" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/sql.svg" alt="SQL" /></div>
                 <h3>SQLite</h3>
                 <p>Lightweight, file-based relational database for development.</p>
                 <span>Local Storage • Zero Config • Serverless</span>
               </article>
 
               <article className="technology-db-card">
-                <div className="technology-db-icon"><img src="/images/services/tech/supabase.svg" alt="Supabase" /></div>
+                <div className="technology-db-icon"><OptimizedImage src="/images/services/tech/supabase.svg" alt="Supabase" /></div>
                 <h3>Supabase</h3>
                 <p>Open source Firebase alternative built on PostgreSQL backend.</p>
                 <span>Realtime APIs • Auto Auth • File Storage</span>
@@ -465,35 +466,35 @@ export default function TechPage() {
 
               <div className="technology-cloud-grid">
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/aws.svg" alt="AWS" />
+                  <OptimizedImage src="/images/services/tech/aws.svg" alt="AWS" />
                   <h4>AWS</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/azure.svg" alt="Azure" />
+                  <OptimizedImage src="/images/services/tech/azure.svg" alt="Azure" />
                   <h4>Azure</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/gcp.svg" alt="Google Cloud" />
+                  <OptimizedImage src="/images/services/tech/gcp.svg" alt="Google Cloud" />
                   <h4>Google Cloud</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/docker.svg" alt="Docker" />
+                  <OptimizedImage src="/images/services/tech/docker.svg" alt="Docker" />
                   <h4>Docker</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/kubernetes.svg" alt="Kubernetes" />
+                  <OptimizedImage src="/images/services/tech/kubernetes.svg" alt="Kubernetes" />
                   <h4>Kubernetes</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/github-actions.svg" alt="GitHub Actions" />
+                  <OptimizedImage src="/images/services/tech/github-actions.svg" alt="GitHub Actions" />
                   <h4>GitHub Actions</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/terraform.svg" alt="Terraform" />
+                  <OptimizedImage src="/images/services/tech/terraform.svg" alt="Terraform" />
                   <h4>Terraform</h4>
                 </div>
                 <div className="technology-cloud-card">
-                  <img src="/images/services/tech/linux.svg" alt="Linux" />
+                  <OptimizedImage src="/images/services/tech/linux.svg" alt="Linux" />
                   <h4>Linux</h4>
                 </div>
               </div>

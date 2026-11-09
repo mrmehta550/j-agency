@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function BlogDetailPage() {
   const { slug } = useParams();
@@ -161,7 +162,7 @@ export default function BlogDetailPage() {
           {/* Featured Image */}
           {blog.image && (
             <div className="blog-detail-featured-image">
-              <img src={getImageUrl(blog.image)} alt={blog.title} />
+              <OptimizedImage src={getImageUrl(blog.image)} alt={blog.title} />
             </div>
           )}
         </div>
@@ -250,7 +251,7 @@ export default function BlogDetailPage() {
                     to={`/blog/${item.slug}/`}
                     className="blog-detail-latest-item"
                   >
-                    {item.image && <img src={getImageUrl(item.image)} alt={item.title} />}
+                    {item.image && <OptimizedImage src={getImageUrl(item.image)} alt={item.title} />}
                     <div>
                       <h4>{item.title}</h4>
                       <span>
@@ -322,7 +323,7 @@ export default function BlogDetailPage() {
               {related.map((item) => (
                 <article key={item.id} className="blog-detail-related-card">
                   <div className="blog-detail-related-image">
-                    <img src={getImageUrl(item.image)} alt={item.title} />
+                    <OptimizedImage src={getImageUrl(item.image)} alt={item.title} />
                     {item.category && <span>{item.category.name}</span>}
                   </div>
                   <div className="blog-detail-related-content">

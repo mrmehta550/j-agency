@@ -2,6 +2,7 @@ import SEO from '../components/SEO';
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getCaseStudyDetail } from "../api/client";
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function CaseStudyDetailPage() {
   const { slug } = useParams();
@@ -128,7 +129,7 @@ export default function CaseStudyDetailPage() {
         <section className="case-banner-section">
           <div className="case-container">
             <div className="case-banner-wrapper">
-              <img src={caseStudy.image} alt={caseStudy.title} />
+              <OptimizedImage src={caseStudy.image} alt={caseStudy.title} />
             </div>
           </div>
         </section>
@@ -201,7 +202,7 @@ export default function CaseStudyDetailPage() {
               {related.map((item) => (
                 <article key={item.id} className="case-related-card">
                   <div className="case-related-image">
-                    <img
+                    <OptimizedImage
                       src={item.image || "/images/portfolio/project-1.jpg"}
                       alt={item.title}
                     />

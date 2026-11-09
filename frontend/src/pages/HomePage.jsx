@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function HomePage() {
   const [topBlogs, setTopBlogs] = useState([]);
@@ -157,7 +158,7 @@ export default function HomePage() {
                 transform: `translateX(-${(1 - touchProgress) * 160}px)`,
               }}
             >
-              <img
+              <OptimizedImage
                 src="/images/hero-hand-human-left.png"
                 alt="Human Hand"
                 className="home-machina-hand-img"
@@ -177,7 +178,7 @@ export default function HomePage() {
                 transform: `translateX(${(1 - touchProgress) * 160}px)`,
               }}
             >
-              <img
+              <OptimizedImage
                 src="/images/hero-hand-robot-right.png"
                 alt="Robot Hand"
                 className="home-machina-hand-img"
@@ -265,20 +266,20 @@ export default function HomePage() {
           <div className="home-logo-slider">
             <div className="home-logo-track">
               <div className="home-logo-group">
-                <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
-                <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
-                <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
-                <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
-                <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
-                <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/google.svg" alt="Google" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/meta.svg" alt="Meta" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/netflix.svg" alt="Netflix" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/spotify.svg" alt="Spotify" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/slack.svg" alt="Slack" /></div>
               </div>
               <div className="home-logo-group" aria-hidden="true">
-                <div className="home-logo-item"><img src="/images/logos/google.svg" alt="Google" /></div>
-                <div className="home-logo-item"><img src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
-                <div className="home-logo-item"><img src="/images/logos/meta.svg" alt="Meta" /></div>
-                <div className="home-logo-item"><img src="/images/logos/netflix.svg" alt="Netflix" /></div>
-                <div className="home-logo-item"><img src="/images/logos/spotify.svg" alt="Spotify" /></div>
-                <div className="home-logo-item"><img src="/images/logos/slack.svg" alt="Slack" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/google.svg" alt="Google" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/microsoft.svg" alt="Microsoft" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/meta.svg" alt="Meta" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/netflix.svg" alt="Netflix" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/spotify.svg" alt="Spotify" /></div>
+                <div className="home-logo-item"><OptimizedImage src="/images/logos/slack.svg" alt="Slack" /></div>
               </div>
             </div>
           </div>
@@ -433,7 +434,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-why-image home-reveal">
-              <img src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" loading="lazy" decoding="async" />
+              <OptimizedImage src="/images/why/dashboard.jpg" alt="Magencystudio Product Dashboard Mockup" loading="lazy" decoding="async" />
               <div className="home-experience-card">
                 <h2>360°</h2>
                 <span>Digital Solutions</span>
@@ -460,7 +461,7 @@ export default function HomePage() {
 
           <div className="home-portfolio-grid">
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-1.jpg" loading="lazy" decoding="async" alt="Enterprise AI Assistant Platform" />
+              <OptimizedImage src="/images/portfolio/project-1.jpg" loading="lazy" decoding="async" alt="Enterprise AI Assistant Platform" />
               <div className="home-card-content">
                 <span>AI Platform</span>
                 <h4>Enterprise AI Automation Suite</h4>
@@ -468,7 +469,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-2.jpg" loading="lazy" decoding="async" alt="E-Commerce Fashion Store" />
+              <OptimizedImage src="/images/portfolio/project-2.jpg" loading="lazy" decoding="async" alt="E-Commerce Fashion Store" />
               <div className="home-card-content">
                 <span>E-Commerce</span>
                 <h4>Luxury Fashion Marketplace</h4>
@@ -476,7 +477,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-3.jpg" loading="lazy" decoding="async" alt="Hospital Management System" />
+              <OptimizedImage src="/images/portfolio/project-3.jpg" loading="lazy" decoding="async" alt="Hospital Management System" />
               <div className="home-card-content">
                 <span>Healthcare</span>
                 <h4>Hospital Portal & Scheduling</h4>
@@ -484,7 +485,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-4.jpg" loading="lazy" decoding="async" alt="Student Education Portal" />
+              <OptimizedImage src="/images/portfolio/project-4.jpg" loading="lazy" decoding="async" alt="Student Education Portal" />
               <div className="home-card-content">
                 <span>EdTech</span>
                 <h4>Interactive Learning Platform</h4>
@@ -492,7 +493,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-5.jpg" loading="lazy" decoding="async" alt="Banking Dashboard" />
+              <OptimizedImage src="/images/portfolio/project-5.jpg" loading="lazy" decoding="async" alt="Banking Dashboard" />
               <div className="home-card-content">
                 <span>FinTech</span>
                 <h4>FinFlow Banking Analytics</h4>
@@ -500,7 +501,7 @@ export default function HomePage() {
             </div>
 
             <div className="home-project-card home-reveal">
-              <img src="/images/portfolio/project-6.jpg" loading="lazy" decoding="async" alt="Commercial SaaS Promo" />
+              <OptimizedImage src="/images/portfolio/project-6.jpg" loading="lazy" decoding="async" alt="Commercial SaaS Promo" />
               <div className="home-card-content">
                 <span>Video & Media</span>
                 <h4>SaaS Product Commercial Reel</h4>
@@ -650,7 +651,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client1.jpg" loading="lazy" decoding="async" alt="Mohan Singh" />
+                  <OptimizedImage src="/images/services/logo/client1.jpg" loading="lazy" decoding="async" alt="Mohan Singh" />
                   <div>
                     <h4>Mohan Singh</h4>
                     <span>CEO, Techio Global</span>
@@ -665,7 +666,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client2.jpg" loading="lazy" decoding="async" alt="Sarah Johnson" />
+                  <OptimizedImage src="/images/services/logo/client2.jpg" loading="lazy" decoding="async" alt="Sarah Johnson" />
                   <div>
                     <h4>Sarah Johnson</h4>
                     <span>Founder, FinFlow Apps</span>
@@ -680,7 +681,7 @@ export default function HomePage() {
                 </p>
                 <div className="home-rating">★★★★★</div>
                 <div className="home-client">
-                  <img src="/images/services/logo/client3.jpg" loading="lazy" decoding="async" alt="Michael Brown" />
+                  <OptimizedImage src="/images/services/logo/client3.jpg" loading="lazy" decoding="async" alt="Michael Brown" />
                   <div>
                     <h4>Michael Brown</h4>
                     <span>Director, CloudTech</span>
@@ -750,7 +751,7 @@ export default function HomePage() {
               topBlogs.map((blog) => (
                 <article key={blog.id} className="home-blog-card home-reveal">
                   <div className="home-blog-image">
-                    <img src={getImageUrl(blog.image)} alt={blog.title} loading="lazy" decoding="async" />
+                    <OptimizedImage src={getImageUrl(blog.image)} alt={blog.title} loading="lazy" decoding="async" />
                     {blog.category && (
                       <span className="home-blog-category">{blog.category.name}</span>
                     )}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function MaintenancePage() {
   const [openFaq, setOpenFaq] = useState(0);
@@ -109,7 +110,7 @@ export default function MaintenancePage() {
 
             <div className="svc-hero-visual maint-reveal maint-revealed">
               <div className="svc-hero-image-box">
-                <img
+                <OptimizedImage
                   src="/images/services/mt/mtdash.jpg"
                   alt="Engineer maintaining website mockup"
                   className="svc-hero-image"

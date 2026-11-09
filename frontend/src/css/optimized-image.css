@@ -1,0 +1,43 @@
+/* ==============================================================================
+   OptimizedImage — Production Skeleton, Shimmer & Error State Styles
+   ============================================================================== */
+
+@keyframes optImgShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.opt-img {
+  will-change: opacity;
+}
+
+/* Shimmer state while network request is pending */
+.opt-img-loading {
+  background: linear-gradient(
+    90deg,
+    rgba(241, 245, 249, 0.7) 0%,
+    rgba(226, 232, 240, 0.85) 50%,
+    rgba(241, 245, 249, 0.7) 100%
+  );
+  background-size: 200% 100%;
+  animation: optImgShimmer 1.5s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+/* Smooth reveal once loaded */
+.opt-img-loaded {
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Professional placeholder state if all 3 retries fail */
+.opt-img-error {
+  opacity: 1;
+  background: #f8fafc;
+  object-fit: contain !important;
+}
+

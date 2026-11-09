@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import OptimizedImage from './OptimizedImage';
 
 export default function Footer() {
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -42,7 +43,7 @@ export default function Footer() {
           {/* COMPANY */}
           <div className="ma-footer-company">
             <Link to="/" className="ma-footer-logo" aria-label="Magency Studio Home">
-              <img src="/images/favicon.png" alt="Magency Studio Logo" className="ma-footer-logo-img" />
+              <OptimizedImage src="/images/favicon.png" alt="Magency Studio Logo" className="ma-footer-logo-img" />
               <span className="logo-brand">
                 <span className="logo-brand-main">Magency</span>
                 <span className="logo-brand-accent">Studio</span>

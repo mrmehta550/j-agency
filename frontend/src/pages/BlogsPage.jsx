@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function BlogsPage() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -156,7 +157,7 @@ export default function BlogsPage() {
             </div>
 
             <div className="blog-hero-visual">
-              <img src="/images/services/blog/blog-dashboard.jpg" alt="Blog" />
+              <OptimizedImage src="/images/services/blog/blog-dashboard.jpg" alt="Blog" />
               <div className="hero-floating-card card1">
                 <i className="fa-solid fa-bolt"></i>
                 <div>
@@ -219,7 +220,7 @@ export default function BlogsPage() {
             {blogsData.top_blogs.map((b) => (
               <article key={b.id} className="featured-blog-card">
                 <div className="featured-blog-image">
-                  <img src={getImageUrl(b.image)} alt={b.title} />
+                  <OptimizedImage src={getImageUrl(b.image)} alt={b.title} />
                   {b.category && <span className="featured-category">{b.category.name}</span>}
                 </div>
                 <div className="featured-blog-content">
@@ -271,7 +272,7 @@ export default function BlogsPage() {
                   {blogsData.results.map((blog) => (
                     <article key={blog.id} className="latest-blog-card">
                       <div className="latest-blog-image">
-                        <img src={getImageUrl(blog.image)} alt={blog.title} />
+                        <OptimizedImage src={getImageUrl(blog.image)} alt={blog.title} />
                         {blog.category && <span>{blog.category.name}</span>}
                       </div>
                       <div className="latest-blog-content">
@@ -383,7 +384,7 @@ export default function BlogsPage() {
                       to={`/blog/${post.slug}/`}
                       className="sidebar-post"
                     >
-                      <img src={getImageUrl(post.image)} alt={post.title} />
+                      <OptimizedImage src={getImageUrl(post.image)} alt={post.title} />
                       <div>
                         <h4>{post.title}</h4>
                         <span>
@@ -409,7 +410,7 @@ export default function BlogsPage() {
                       to={`/blog/${post.slug}/`}
                       className="sidebar-post"
                     >
-                      <img src={getImageUrl(post.image)} alt={post.title} />
+                      <OptimizedImage src={getImageUrl(post.image)} alt={post.title} />
                       <div>
                         <h4>{post.title}</h4>
                         <span>{post.views} Views</span>

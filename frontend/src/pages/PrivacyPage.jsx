@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function PrivacyPage() {
   const [activeSection, setActiveSection] = useState("information");
@@ -96,7 +97,7 @@ export default function PrivacyPage() {
             </div>
 
             <div className="privacy-hero-image">
-              <img src="/images/privacy/privacy-hero.jpg" alt="Magency Studio Privacy Policy" />
+              <OptimizedImage src="/images/privacy/privacy-hero.jpg" alt="Magency Studio Privacy Policy" />
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function AboutPage() {
   const containerRef = useRef(null);
@@ -120,7 +121,7 @@ export default function AboutPage() {
             {/* Left Side Image */}
             <div className="about-who-image">
               <div className="about-image-wrapper">
-                <img src="/images/about/team-work.jpg" alt="Magencystudio Team" />
+                <OptimizedImage src="/images/about/team-work.jpg" alt="Magencystudio Team" />
               </div>
               <div className="about-experience-card">
                 <h2>360°</h2>
@@ -365,7 +366,7 @@ export default function AboutPage() {
           <div className="about-team-grid">
             <div className="about-team-card">
               <div className="about-team-image">
-                <img src="/images/about/vishal.jpeg" alt="Vishal Kumar" />
+                <OptimizedImage src="/images/about/vishal.jpeg" alt="Vishal Kumar" />
               </div>
               <div className="about-team-content">
                 <span className="about-team-role">Founder &  Developer</span>
@@ -386,7 +387,7 @@ export default function AboutPage() {
 
             <div className="about-team-card">
               <div className="about-team-image">
-                <img src="/images/about/jashan.jpeg" alt="Jashanpreet Kaur" />
+                <OptimizedImage src="/images/about/jashan.jpeg" alt="Jashanpreet Kaur" />
               </div>
               <div className="about-team-content">
                 <span className="about-team-role">CEO & Project Manager</span>
@@ -407,7 +408,7 @@ export default function AboutPage() {
 
             <div className="about-team-card">
               <div className="about-team-image">
-                <img src="/images/about/mawa.jpg" alt="Development Team" />
+                <OptimizedImage src="/images/about/mawa.jpg" alt="Development Team" />
               </div>
               <div className="about-team-content">
                 <span className="about-team-role">AI Automation & Workflow Specialist</span>
@@ -430,7 +431,7 @@ export default function AboutPage() {
 
             <div className="about-team-card">
               <div className="about-team-image">
-                <img src="/images/about/designer.jpg" alt="Design Team" />
+                <OptimizedImage src="/images/about/designer.jpg" alt="Design Team" />
               </div>
               <div className="about-team-content">
                 <span className="about-team-role">UI / UX Designer</span>

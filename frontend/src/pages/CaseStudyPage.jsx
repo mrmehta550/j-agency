@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
 import SEO from '../components/SEO';
+import OptimizedImage from '../components/OptimizedImage';
 
 export default function CaseStudyPage() {
   const [caseStudies, setCaseStudies] = useState([]);
@@ -113,7 +114,7 @@ export default function CaseStudyPage() {
               caseStudies.map((item) => (
                 <article key={item.id} className="case-card" data-category={item.category}>
                   <div className="case-card-image">
-                    <img
+                    <OptimizedImage
                       src={item.image || "/images/portfolio/project-1.jpg"}
                       alt={item.title}
                     />
