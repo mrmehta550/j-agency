@@ -408,7 +408,7 @@ export default function AboutPage() {
 
             <div className="about-team-card">
               <div className="about-team-image">
-                <OptimizedImage src="/images/about/mawa.jpg" alt="Development Team" />
+                <OptimizedImage src="/images/about/mawa.png" alt="Development Team" />
               </div>
               <div className="about-team-content">
                 <span className="about-team-role">AI Automation & Workflow Specialist</span>
