@@ -189,15 +189,8 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Center Ambient Orb & Spark */}
+        {/* Center Ambient Orb */}
         <div className="home-machina-orb"></div>
-        <div
-          className="home-machina-spark"
-          style={{
-            opacity: touchProgress >= 0.4 ? (touchProgress - 0.4) / 0.6 : 0,
-            transform: `translate(-50%, -50%) scale(${0.3 + touchProgress * 0.9})`,
-          }}
-        ></div>
 
         <div className="home-container" style={{ position: 'relative', zIndex: 3 }}>
           <div className="home-hero-grid">

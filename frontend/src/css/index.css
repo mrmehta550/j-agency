@@ -177,18 +177,7 @@
 }
 
 .home-machina-spark {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: radial-gradient(circle, #FFFFFF 0%, #38BDF8 35%, #2563EB 75%, transparent 100%);
-    box-shadow: 0 0 30px #38BDF8, 0 0 70px #2563EB;
-    pointer-events: none;
-    z-index: 4;
-    transition: opacity 0.15s ease, transform 0.15s ease;
+    display: none !important;
 }
 
 /* ── Typography Entrance Animations ─────────────────────────────── */
@@ -378,17 +367,69 @@
     transform: translateY(-2px);
 }
 
+/* Optimized Responsive Mobile Layout for Robot & Human Hands */
 @media (max-width: 1024px) {
-    .home-machina-hand-left { width: 44vw; left: -25px; }
-    .home-machina-hand-right { width: 44vw; right: -25px; }
+    .home-machina-left-wrapper {
+        width: 36vw;
+        left: -30px;
+        top: 50%;
+        opacity: 0.55;
+    }
+    .home-machina-right-wrapper {
+        width: 36vw;
+        right: -30px;
+        top: 50%;
+        opacity: 0.55;
+    }
 }
 
 @media (max-width: 768px) {
-    .home-hero { min-height: 680px; padding: 130px 0 60px; }
-    .home-machina-hand-left { width: 52vw; left: -30px; top: 40%; opacity: 0.85; }
-    .home-machina-hand-right { width: 52vw; right: -30px; top: 46%; opacity: 0.85; }
-    .home-machina-bottom-bar { flex-direction: column; gap: 16px; text-align: center; }
-    .home-machina-bottom-prompt { text-align: center; }
+    .home-hero {
+        min-height: 620px;
+        padding: 110px 0 50px;
+    }
+    /* Keep hands gracefully as subtle watermark background behind buttons & text */
+    .home-machina-hand-wrapper {
+        top: 48%;
+        z-index: 0 !important;
+        opacity: 0.22 !important;
+        pointer-events: none !important;
+    }
+    .home-machina-left-wrapper {
+        width: 175px;
+        left: -35px;
+    }
+    .home-machina-right-wrapper {
+        width: 175px;
+        right: -35px;
+    }
+    .home-machina-hand-inner {
+        transform: none !important;
+    }
+    .home-machina-bottom-bar {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    .home-machina-bottom-prompt {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-machina-hand-wrapper {
+        top: 46%;
+        z-index: 0 !important;
+        opacity: 0.18 !important;
+    }
+    .home-machina-left-wrapper {
+        width: 145px;
+        left: -30px;
+    }
+    .home-machina-right-wrapper {
+        width: 145px;
+        right: -30px;
+    }
 }
 
 /* Ambient Background Blobs */
