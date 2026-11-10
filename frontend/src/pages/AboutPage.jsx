@@ -418,8 +418,8 @@ export default function AboutPage() {
                 <div className="about-team-skills">
                   <span>n8n</span>
                   <span>AI Agents</span>
-                  <span>Workflow Automation</span>
                   <span>API Integration</span>
+                  <span>Workflow Automation</span>
                 </div>
                 {/* <div className="about-team-social">
                   <a href="#"><i className="fa-brands fa-linkedin-in"></i></a>
