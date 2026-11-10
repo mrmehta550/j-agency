@@ -38,10 +38,6 @@
   <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
-  <link rel="shortcut icon" href="/favicon.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,44 +55,51 @@
   <!-- Swiper 11 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-  <!-- Structured Data (Organization & WebSite Schema) -->
-
+  <!-- Structured Data: Google Site Name & Organization Schema -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
-      "@id": "https://www.magencystudio.in/#organization",
-      "name": "Magencystudio",
-      "alternateName": "Magency Studio",
-      "url": "https://www.magencystudio.in/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.magencystudio.in/images/logo.png"
-      },
-      "image": "https://www.magencystudio.in/images/logo.png",
-      "description": "Magency Studio builds AI-powered websites, custom mobile apps, UI/UX designs, and scalable digital solutions for businesses.",
-      "email": "magency550@gmail.com",
-      "sameAs": [
-        "https://www.magencystudio.in",
-        <!-- "YOUR_INSTAGRAM_URL" -->
-      ]
-    },
-    {
       "@type": "WebSite",
       "@id": "https://www.magencystudio.in/#website",
       "url": "https://www.magencystudio.in/",
       "name": "Magency Studio",
-      "alternateName": "Magency",
+      "alternateName": [
+        "Magencystudio",
+        "MagencyStudio",
+        "Magency"
+      ],
       "publisher": {
         "@id": "https://www.magencystudio.in/#organization"
       },
       "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.magencystudio.in/#organization",
+      "name": "Magency Studio",
+      "alternateName": [
+        "Magencystudio",
+        "MagencyStudio"
+      ],
+      "url": "https://www.magencystudio.in/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://www.magencystudio.in/#logo",
+        "url": "https://www.magencystudio.in/favicon.png",
+        "caption": "Magency Studio"
+      },
+      "image": "https://www.magencystudio.in/favicon.png",
+      "description": "Magency Studio builds AI-powered websites, custom mobile apps, UI/UX designs, and scalable digital solutions for modern businesses.",
+      "email": "magency550@gmail.com",
+      "sameAs": [
+        "https://www.magencystudio.in"
+      ]
     }
   ]
 }
-</script>
+  </script>
 
 </head>
 
