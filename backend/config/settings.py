@@ -327,9 +327,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
-EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')
+# EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
+EMAIL_PORT = 587 
+# EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
+EMAIL_USE_TLS = True
+# EMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')
+EMAIL_USE_SSL = False 
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '').strip()
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '').replace(' ', '').strip()
 DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL', '').strip() or EMAIL_HOST_USER or 'magency550@gmail.com'
@@ -416,3 +419,13 @@ if not DEBUG:
     CSRF_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Lax'
     CSRF_COOKIE_SAMESITE = 'Lax'
+
+
+{
+  "tool": "edit_file",
+  "args": {
+    "Path": "c:/Users/hp/Desktop/startup/backend/config/settings.py",
+    "Target": "EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))\nEMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')\nEMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')",
+    "Replacement": "EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False"
+  }
+}
