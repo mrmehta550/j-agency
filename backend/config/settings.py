@@ -424,8 +424,8 @@ if not DEBUG:
 {
   "tool": "edit_file",
   "args": {
-    "Path": "c:/Users/hp/Desktop/startup/backend/config/settings.py",
-    "Target": "EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))\nEMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')\nEMAIL_USE_SSL = os.environ.get('EMAIL_USE_SSL', 'False').lower() in ('true', '1', 'yes')",
-    "Replacement": "EMAIL_PORT = 587\nEMAIL_USE_TLS = True\nEMAIL_USE_SSL = False"
+    "Path": "c:/Users/hp/Desktop/startup/.env",
+    "Target": "EMAIL_HOST_PASSWORD=qgms gobf qsps tauk",
+    "Replacement": "EMAIL_HOST_PASSWORD=qgmsgobfqspstauk"
   }
 }
