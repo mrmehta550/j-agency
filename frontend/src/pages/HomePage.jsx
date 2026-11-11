@@ -159,7 +159,8 @@ export default function HomePage() {
               }}
             >
               <OptimizedImage
-                src="/images/hero-hand-human-left.png"
+                src="/images/hero-hand-human-left.webp"
+                fallbackSrc="/images/hero-hand-human-left.png"
                 alt="Human Hand"
                 className="home-machina-hand-img"
                 loading="eager"
@@ -179,7 +180,8 @@ export default function HomePage() {
               }}
             >
               <OptimizedImage
-                src="/images/hero-hand-robot-right.png"
+                src="/images/hero-hand-robot-right.webp"
+                fallbackSrc="/images/hero-hand-robot-right.png"
                 alt="Robot Hand"
                 className="home-machina-hand-img"
                 loading="eager"

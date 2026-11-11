@@ -33,6 +33,12 @@
 
   <!-- Favicon & Icons (Google Search & Multi-device compliant) -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <!-- Preload hero images (WebP) for faster LCP -->
+  <link rel="preload" as="image" href="/images/hero-hand-human-left.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/hero-hand-robot-right.webp" type="image/webp" fetchpriority="high" />
+  <!-- Non‑blocking FontAwesome & Swiper CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
   <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
