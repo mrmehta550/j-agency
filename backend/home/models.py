@@ -64,6 +64,9 @@ class Contact(models.Model):
     company = models.CharField(max_length=200, blank=True)
     service = models.CharField(max_length=100, choices=SERVICE_CHOICES)
     budget = models.CharField(max_length=50, choices=BUDGET_CHOICES)
+    state = models.CharField(max_length=100, blank=True, default='')
+    country = models.CharField(max_length=100, blank=True, default='')
+    city = models.CharField(max_length=100, blank=True, default='')
     # FIXED: blank=True, default='' — the BookingForm uses 'project_details'
     # instead of 'message'. Without this, every booking form.save() raises
     # IntegrityError in MySQL strict mode (empty string on required column).

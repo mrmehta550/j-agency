@@ -84,7 +84,30 @@ class ContactForm(forms.Form):
         error_messages={"required": "Please select an estimated budget."},
     )
 
-    message = forms.CharField(
+    state = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.TextInput(attrs={
+            "placeholder": "State (Optional)",
+            "autocomplete": "address-level1",
+        }),
+    )
+    country = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.TextInput(attrs={
+            "placeholder": "Country (Optional)",
+            "autocomplete": "country",
+        }),
+    )
+    city = forms.CharField(
+        max_length=100,
+        required=False,
+        widget=forms.TextInput(attrs={
+            "placeholder": "City (Optional)",
+            "autocomplete": "address-level2",
+        }),
+    )
         strip=True,
         error_messages={"required": "Please describe your project."},
         widget=forms.Textarea(attrs={
