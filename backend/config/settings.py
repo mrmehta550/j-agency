@@ -427,5 +427,4 @@ if not DEBUG:
     "Path": "c:/Users/hp/Desktop/startup/.env",
     "Target": "EMAIL_HOST_PASSWORD=qgms gobf qsps tauk",
     "Replacement": "EMAIL_HOST_PASSWORD=qgmsgobfqspstauk"
-  }
 }

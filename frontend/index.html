@@ -31,17 +31,9 @@
   <link rel="dns-prefetch" href="https://j-agency-1.onrender.com" />
   <link rel="preconnect" href="https://j-agency-1.onrender.com" crossorigin />
 
-  <!-- Favicon & Icons (Google Search & Multi-device compliant) -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <!-- Preload hero images (WebP) for faster LCP -->
-  <link rel="preload" as="image" href="/images/hero-hand-human-left.webp" type="image/webp" fetchpriority="high" />
-  <link rel="preload" as="image" href="/images/hero-hand-robot-right.webp" type="image/webp" fetchpriority="high" />
-  <!-- Non‑blocking FontAwesome & Swiper CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" media="print" onload="this.media='all'" />
+  <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
-  <link rel="icon" type="image/jpeg" href="/logo.jpeg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
@@ -61,6 +53,14 @@
   <!-- Swiper 11 CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <!-- Permanent www redirect (client‑side) -->
+  <meta http-equiv="refresh" content="0; url=https://www.magencystudio.in%{REQUEST_URI}" />
+  <script>
+    if (location.hostname === 'magencystudio.in') {
+      location.replace('https://www.magencystudio.in' + location.pathname + location.search + location.hash);
+    }
+  </script>
+
   <!-- Structured Data: Google Site Name & Organization Schema -->
   <script type="application/ld+json">
 {
@@ -79,7 +79,12 @@
       "publisher": {
         "@id": "https://www.magencystudio.in/#organization"
       },
-      "inLanguage": "en-US"
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.magencystudio.in/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     },
     {
       "@type": "Organization",
