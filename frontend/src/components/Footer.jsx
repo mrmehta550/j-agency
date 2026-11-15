@@ -42,8 +42,8 @@ export default function Footer() {
         <div className="ma-footer-grid">
           {/* COMPANY */}
           <div className="ma-footer-company">
-            <Link to="/" className="ma-footer-logo" aria-label="Magency Studio Home">
-              <OptimizedImage src="/images/favicon.png" alt="Magency Studio Logo" className="ma-footer-logo-img" />
+            <Link to="/" className="ma-footer-logo" aria-label="MagencyStudio Home">
+              <OptimizedImage src="/images/favicon.png" alt="MagencyStudio Logo" className="ma-footer-logo-img" />
               <span className="logo-brand">
                 <span className="logo-brand-main">Magency</span>
                 <span className="logo-brand-accent">Studio</span>
@@ -51,7 +51,7 @@ export default function Footer() {
             </Link>
 
             <p className="ma-footer-desc">
-              Magency Studio is a full-service digital agency helping startups, businesses, and enterprises build modern websites, AI automation, mobile applications, UI/UX design, branding, SEO, cloud solutions, and digital marketing strategies that drive measurable business growth.
+              MagencyStudio is a full-service digital agency helping startups, businesses, and enterprises build modern websites, AI automation, mobile applications, UI/UX design, branding, SEO, cloud solutions, and digital marketing strategies that drive measurable business growth.
             </p>
 
             <div className="ma-footer-socials">

@@ -136,8 +136,8 @@ export default function HomePage() {
   return (
     <div ref={containerRef}>
       <SEO
-        title="Magency Studio — AI Development, Web Design & Digital Marketing Agency"
-        description="Magency Studio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing."
+        title="MagencyStudio — AI Development, Web Design & Digital Marketing Agency"
+        description="MagencyStudio is a premier digital agency building high-performance websites, custom AI solutions, mobile apps, UI/UX designs, and data-driven marketing."
         canonical="https://www.magencystudio.in/"
       />
 

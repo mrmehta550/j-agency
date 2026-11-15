@@ -36,7 +36,7 @@ export default function AiSolutionPage() {
   return (
     <main>
       <SEO
-        title="Custom AI Solutions, LLM Integration & Automation | Magency Studio"
+        title="Custom AI Solutions, LLM Integration & Automation | MagencyStudio"
         description="Empower your enterprise with custom AI agent workflows, LLM integrations, OpenAI & Claude fine-tuning, intelligent chatbots, and business automation."
         canonical="https://www.magencystudio.in/services/ai-solution"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'AI Solutions', url: '/services/ai-solution' }]}
@@ -47,7 +47,7 @@ export default function AiSolutionPage() {
         description: 'Empower your enterprise with custom AI agent workflows, LLM integrations, OpenAI & Claude fine-tuning, intelligent chatbots, and business automation.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

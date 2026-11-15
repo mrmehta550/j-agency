@@ -49,8 +49,8 @@ export default function PrivacyPage() {
   return (
     <main>
       <SEO
-        title="Privacy Policy | Magency Studio"
-        description="Read Magency Studio's privacy policy to understand how we collect, protect, and handle client information and project data securely."
+        title="Privacy Policy | MagencyStudio"
+        description="Read MagencyStudio's privacy policy to understand how we collect, protect, and handle client information and project data securely."
         canonical="https://www.magencystudio.in/privacy"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy' }]}
       />
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
               <h1>Privacy <span>Policy</span></h1>
 
               <p>
-                At <strong>Magency Studio</strong>, we respect your privacy and are committed to protecting the personal information you share with us. Whether you engage us for web development, UI/UX design, AI automations, or digital marketing, your data is handled responsibly and securely.
+                At <strong>MagencyStudio</strong>, we respect your privacy and are committed to protecting the personal information you share with us. Whether you engage us for web development, UI/UX design, AI automations, or digital marketing, your data is handled responsibly and securely.
               </p>
 
               <div className="privacy-hero-meta">
@@ -97,7 +97,7 @@ export default function PrivacyPage() {
             </div>
 
             <div className="privacy-hero-image">
-              <OptimizedImage src="/images/privacy/privacy-hero.jpg" alt="Magency Studio Privacy Policy" />
+              <OptimizedImage src="/images/privacy/privacy-hero.jpg" alt="MagencyStudio Privacy Policy" />
             </div>
           </div>
         </div>

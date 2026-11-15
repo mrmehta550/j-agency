@@ -20,7 +20,7 @@ export default function TechPage() {
   return (
     <div>
       <SEO
-        title="Our Technology Stack & Modern Tooling | Magency Studio"
+        title="Our Technology Stack & Modern Tooling | MagencyStudio"
         description="Discover the modern frameworks and cloud tools we use to build robust software: React, Django, Next.js, Python, PostgreSQL, AWS, Docker, and PyTorch."
         canonical="https://www.magencystudio.in/technology"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Technology Stack', url: '/technology' }]}

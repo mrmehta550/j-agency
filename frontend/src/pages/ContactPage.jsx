@@ -75,8 +75,8 @@ export default function ContactPage() {
   return (
     <div>
       <SEO
-        title="Contact Magency Studio — Get in Touch With Our Team"
-        description="Ready to start your next digital project? Contact Magency Studio for custom quotes, technical consultations, and project inquiries. We reply within 24 hours."
+        title="Contact MagencyStudio — Get in Touch With Our Team"
+        description="Ready to start your next digital project? Contact MagencyStudio for custom quotes, technical consultations, and project inquiries. We reply within 24 hours."
         canonical="https://www.magencystudio.in/contact"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }]}
       />

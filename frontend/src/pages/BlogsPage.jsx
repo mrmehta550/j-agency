@@ -97,7 +97,7 @@ export default function BlogsPage() {
   return (
     <div>
       <SEO
-        title="Engineering & Tech Insights, Guides & Articles | Magency Studio"
+        title="Engineering & Tech Insights, Guides & Articles | MagencyStudio"
         description="Read actionable articles on web engineering, artificial intelligence, technical SEO, UI/UX design trends, and scaling software architectures."
         canonical="https://www.magencystudio.in/blogs"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Blogs & Insights', url: '/blogs' }]}

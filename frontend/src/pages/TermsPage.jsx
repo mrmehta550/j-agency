@@ -51,8 +51,8 @@ export default function TermsPage() {
   return (
     <main>
       <SEO
-        title="Terms & Conditions | Magency Studio"
-        description="Review Magency Studio's terms of service, service level agreements, intellectual property guidelines, and client engagement policies."
+        title="Terms & Conditions | MagencyStudio"
+        description="Review MagencyStudio's terms of service, service level agreements, intellectual property guidelines, and client engagement policies."
         canonical="https://www.magencystudio.in/terms-and-conditions"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Terms & Conditions', url: '/terms-and-conditions' }]}
       />
@@ -76,7 +76,7 @@ export default function TermsPage() {
               <h1>Terms & <span>Conditions</span></h1>
 
               <p>
-                Welcome to <strong>Magency Studio</strong>. These Terms & Conditions govern your access to our website and the use of our digital services. By accessing our website, requesting a quotation, booking a consultation, or purchasing any service, you agree to comply with these terms.
+                Welcome to <strong>MagencyStudio</strong>. These Terms & Conditions govern your access to our website and the use of our digital services. By accessing our website, requesting a quotation, booking a consultation, or purchasing any service, you agree to comply with these terms.
               </p>
 
               <div className="terms-hero-meta">
@@ -99,7 +99,7 @@ export default function TermsPage() {
             </div>
 
             <div className="terms-hero-image">
-              <OptimizedImage src="/images/privacy/terms.jpg" alt="Magency Studio Terms & Conditions" />
+              <OptimizedImage src="/images/privacy/terms.jpg" alt="MagencyStudio Terms & Conditions" />
             </div>
           </div>
         </div>
@@ -249,7 +249,7 @@ export default function TermsPage() {
                 <span className="terms-section-tag">Section 1</span>
                 <h2>1. Introduction</h2>
                 <p>
-                  These Terms & Conditions (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;Client&quot;, &quot;User&quot;, or &quot;You&quot;) and <strong>Magency Studio</strong> (&quot;Company&quot;, &quot;We&quot;, &quot;Our&quot;, or &quot;Us&quot;).
+                  These Terms & Conditions (&quot;Terms&quot;) constitute a legally binding agreement between you (&quot;Client&quot;, &quot;User&quot;, or &quot;You&quot;) and <strong>MagencyStudio</strong> (&quot;Company&quot;, &quot;We&quot;, &quot;Our&quot;, or &quot;Us&quot;).
                 </p>
                 <p>
                   These Terms govern your access to and use of our website, consultation services, web development, mobile app development, branding, SEO, digital marketing, UI/UX design, AI automation, cloud solutions, and all related digital services.
@@ -266,7 +266,7 @@ export default function TermsPage() {
                   <div className="terms-def-card">
                     <i className="fa-solid fa-building"></i>
                     <h4>Company</h4>
-                    <p>Refers to Magency Studio, its owners, engineers, designers, and authorized representatives.</p>
+                    <p>Refers to MagencyStudio, its owners, engineers, designers, and authorized representatives.</p>
                   </div>
                   <div className="terms-def-card">
                     <i className="fa-solid fa-user"></i>
@@ -285,7 +285,7 @@ export default function TermsPage() {
                 <span className="terms-section-tag">Section 3</span>
                 <h2>3. Services & Scope of Work</h2>
                 <p>
-                  Magency Studio provides digital product engineering, UI/UX design, AI integration, organic search optimization, and marketing consulting. Each project is governed by a defined Statement of Work (SOW) or quotation detailing deliverables, milestone schedules, and tech stacks.
+                  MagencyStudio provides digital product engineering, UI/UX design, AI integration, organic search optimization, and marketing consulting. Each project is governed by a defined Statement of Work (SOW) or quotation detailing deliverables, milestone schedules, and tech stacks.
                 </p>
                 <ul>
                   <li>Any features or revisions requested outside the agreed SOW will be billed as scope add-ons.</li>
@@ -300,7 +300,7 @@ export default function TermsPage() {
                   To ensure delivery velocity and milestones, clients agree to provide necessary text copy, brand guidelines, API keys, and feedback in a timely manner.
                 </p>
                 <p>
-                  The client warrants that all text, imagery, trademarks, and assets supplied to Magency Studio are owned by the client or properly licensed. Magency Studio assumes no liability for copyright infringement resulting from client-provided materials.
+                  The client warrants that all text, imagery, trademarks, and assets supplied to MagencyStudio are owned by the client or properly licensed. MagencyStudio assumes no liability for copyright infringement resulting from client-provided materials.
                 </p>
               </article>
 
@@ -331,7 +331,7 @@ export default function TermsPage() {
                   Upon full payment settlement, 100% intellectual property and copyright of the custom design layouts, brand logos, and proprietary application code transfer to the client.
                 </p>
                 <p>
-                  Magency Studio retains the right to display non-confidential project screenshots and case studies in our agency portfolio, unless an explicit Non-Disclosure Agreement (NDA) states otherwise.
+                  MagencyStudio retains the right to display non-confidential project screenshots and case studies in our agency portfolio, unless an explicit Non-Disclosure Agreement (NDA) states otherwise.
                 </p>
               </article>
 
@@ -347,7 +347,7 @@ export default function TermsPage() {
                 <span className="terms-section-tag">Section 9</span>
                 <h2>9. Limitation of Liability</h2>
                 <p>
-                  To the maximum extent permitted by applicable law, Magency Studio shall not be liable for indirect, incidental, punitive, or consequential damages resulting from third-party server downtime, cyberattacks on client hosting, or search engine algorithm shifts.
+                  To the maximum extent permitted by applicable law, MagencyStudio shall not be liable for indirect, incidental, punitive, or consequential damages resulting from third-party server downtime, cyberattacks on client hosting, or search engine algorithm shifts.
                 </p>
               </article>
 

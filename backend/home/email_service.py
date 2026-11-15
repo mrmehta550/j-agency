@@ -1,5 +1,5 @@
 """
-Enterprise Email Service for Magency Studio (Render & Production Compatible)
+Enterprise Email Service for MagencyStudio (Render & Production Compatible)
 =============================================================================
 Supports:
 1. Resend API over HTTPS (Port 443) - Recommended for Render (never blocked).
@@ -60,7 +60,7 @@ def send_via_resend(
     if not api_key:
         return False, "RESEND_API_KEY is not configured."
 
-    sender = from_email or getattr(settings, "RESEND_FROM_EMAIL", "Magency Studio <notifications@magencystudio.in>").strip()
+    sender = from_email or getattr(settings, "RESEND_FROM_EMAIL", "MagencyStudio <notifications@magencystudio.in>").strip()
     endpoint = "https://api.resend.com/emails"
 
     payload: Dict[str, Any] = {
@@ -325,11 +325,11 @@ Website: https://magencystudio.in
 
     # 2. Client Confirmation
     if contact.email:
-        client_subject = "✅ We've Received Your Request | Magency Studio"
+        client_subject = "✅ We've Received Your Request | MagencyStudio"
         client_body = f"""\
 Hi {contact.full_name},
 
-Thank you for contacting Magency Studio.
+Thank you for contacting MagencyStudio.
 
 We have successfully received your project inquiry and our team is already reviewing your details.
 
@@ -348,7 +348,7 @@ What happens next?
 • If your request is urgent, simply reply directly to this email.
 
 Best Regards,
-The Magency Studio Team
+The MagencyStudio Team
 
 🌐 https://magencystudio.in
 📧 magency550@gmail.com
@@ -447,11 +447,11 @@ Website: https://magencystudio.in
 
     # 2. Client Consultation Confirmation
     if booking.email:
-        client_subject = "✅ Your Consultation is Scheduled | Magency Studio"
+        client_subject = "✅ Your Consultation is Scheduled | MagencyStudio"
         client_body = f"""\
 Hi {booking.full_name},
 
-Thank you for booking a consultation session with Magency Studio.
+Thank you for booking a consultation session with MagencyStudio.
 
 We have received your appointment request and our team will reach out shortly to confirm the call link and session schedule.
 
@@ -469,7 +469,7 @@ YOUR BOOKING SUMMARY
 If you need to reschedule or have questions before our call, simply reply directly to this email.
 
 Best Regards,
-The Magency Studio Team
+The MagencyStudio Team
 
 🌐 https://magencystudio.in
 📧 magency550@gmail.com

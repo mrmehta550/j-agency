@@ -86,7 +86,7 @@ export default function AppDevPage() {
   return (
     <main>
       <SEO
-        title="Mobile App Development Services — iOS & Android | Magency Studio"
+        title="Mobile App Development Services — iOS & Android | MagencyStudio"
         description="Custom cross-platform and native mobile app development using Flutter, React Native, Swift, and Kotlin. Scalable, intuitive mobile experiences for iOS and Android."
         canonical="https://www.magencystudio.in/app"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'App Development', url: '/app' }]}
@@ -97,7 +97,7 @@ export default function AppDevPage() {
         description: 'Custom cross-platform and native mobile app development using Flutter, React Native, Swift, and Kotlin. Scalable, intuitive mobile experiences for iOS and Android.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

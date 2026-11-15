@@ -155,7 +155,7 @@ export default function BookingPage() {
   return (
     <div>
       <SEO
-        title="Schedule a Strategy Consultation Call | Magency Studio"
+        title="Schedule a Strategy Consultation Call | MagencyStudio"
         description="Book a 1-on-1 strategy call with our senior tech and design consultants. Discuss project scope, architecture, timelines, and tailored solutions."
         canonical="https://www.magencystudio.in/booking"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Book Consultation', url: '/booking' }]}

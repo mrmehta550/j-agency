@@ -50,7 +50,7 @@ export default function UiUxPage() {
   return (
     <main>
       <SEO
-        title="UI/UX Design & User Experience Consulting | Magency Studio"
+        title="UI/UX Design & User Experience Consulting | MagencyStudio"
         description="Transform your digital product with human-centered UI/UX design, wireframing, interactive prototyping in Figma, and conversion-focused design systems."
         canonical="https://www.magencystudio.in/services/ui-ux"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'UI/UX Design', url: '/services/ui-ux' }]}
@@ -61,7 +61,7 @@ export default function UiUxPage() {
         description: 'Transform your digital product with human-centered UI/UX design, wireframing, interactive prototyping in Figma, and conversion-focused design systems.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

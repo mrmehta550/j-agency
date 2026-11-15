@@ -341,7 +341,7 @@ EMAIL_TIMEOUT = 10
 
 # Resend API (HTTPS Port 443 — Recommended for Render cloud production)
 RESEND_API_KEY = os.environ.get('RESEND_API_KEY', '').strip()
-RESEND_FROM_EMAIL = os.environ.get('RESEND_FROM_EMAIL', '').strip() or 'Magency Studio <onboarding@resend.dev>'
+RESEND_FROM_EMAIL = os.environ.get('RESEND_FROM_EMAIL', '').strip() or 'MagencyStudio <onboarding@resend.dev>'
 ADMIN_NOTIFICATION_EMAIL = os.environ.get('ADMIN_NOTIFICATION_EMAIL', '').strip() or EMAIL_HOST_USER or 'magency550@gmail.com'
 
 

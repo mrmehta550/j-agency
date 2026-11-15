@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 /**
- * Enterprise Production SEO Component for Magency Studio
+ * Enterprise Production SEO Component for MagencyStudio
  * - Dynamically manages Document Title, Meta Description, Canonical URLs
  * - Synchronizes Open Graph (Facebook/LinkedIn) and Twitter Cards
  * - Injects Google-compliant JSON-LD structured data (Breadcrumbs & Services)
@@ -26,7 +26,7 @@ export default function SEO({
     path = path.slice(0, -1);
   }
   const computedCanonical = canonical || (path === '/' ? `${baseUrl}/` : `${baseUrl}${path}`);
-  const fullTitle = title.includes('Magency Studio') ? title : `${title} | Magency Studio`;
+  const fullTitle = title.includes('MagencyStudio') ? title : `${title} | MagencyStudio`;
 
   useEffect(() => {
     // 1. Page Title
@@ -63,7 +63,7 @@ export default function SEO({
     setMeta('property', 'og:url', computedCanonical);
     setMeta('property', 'og:type', ogType);
     setMeta('property', 'og:image', ogImage);
-    setMeta('property', 'og:site_name', 'Magency Studio');
+    setMeta('property', 'og:site_name', 'MagencyStudio');
     setMeta('property', 'og:locale', 'en_US');
 
     // 5. Twitter Card Metadata

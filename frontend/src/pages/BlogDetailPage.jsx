@@ -77,12 +77,12 @@ export default function BlogDetailPage() {
           datePublished: blog.created_at,
           author: {
             '@type': 'Organization',
-            name: 'Magency Studio',
+            name: 'MagencyStudio',
             url: 'https://www.magencystudio.in/',
           },
           publisher: {
             '@type': 'Organization',
-            name: 'Magency Studio',
+            name: 'MagencyStudio',
             logo: {
               '@type': 'ImageObject',
               url: 'https://www.magencystudio.in/images/favicon.png',

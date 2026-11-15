@@ -36,8 +36,8 @@ export default function CaseStudyPage() {
   return (
     <main>
       <SEO
-        title="Client Case Studies & Proven Results | Magency Studio"
-        description="Explore real-world client success stories, product transformations, and measurable business growth powered by Magency Studio."
+        title="Client Case Studies & Proven Results | MagencyStudio"
+        description="Explore real-world client success stories, product transformations, and measurable business growth powered by MagencyStudio."
         canonical="https://www.magencystudio.in/case-study"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Case Studies', url: '/case-study' }]}
       />

@@ -52,9 +52,9 @@ class Command(BaseCommand):
 
         self.stdout.write(f"\nDispatching test email to: {recipient} ...")
 
-        subject = "🧪 Magency Studio — Email Delivery Verification"
+        subject = "🧪 MagencyStudio — Email Delivery Verification"
         body = f"""\
-This is an automated verification email from Magency Studio.
+This is an automated verification email from MagencyStudio.
 
 Engine: {'Resend API (HTTPS)' if resend_ok else 'Django SMTP'}
 Recipient: {recipient}

@@ -75,7 +75,7 @@ export default function CaseStudyDetailPage() {
     <main>
       <SEO
         title={`${caseStudy.title} — Case Study`}
-        description={caseStudy.short_description || `Discover how Magency Studio partnered with ${caseStudy.client_name || 'our client'} to achieve measurable results.`}
+        description={caseStudy.short_description || `Discover how MagencyStudio partnered with ${caseStudy.client_name || 'our client'} to achieve measurable results.`}
         canonical={`https://www.magencystudio.in/case-study/${slug}`}
         breadcrumbs={[
           { name: 'Home', url: '/' },

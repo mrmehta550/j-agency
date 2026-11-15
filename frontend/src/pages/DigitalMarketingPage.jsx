@@ -36,7 +36,7 @@ export default function DigitalMarketingPage() {
   return (
     <main>
       <SEO
-        title="Performance Digital Marketing & Growth Strategy | Magency Studio"
+        title="Performance Digital Marketing & Growth Strategy | MagencyStudio"
         description="Accelerate revenue with data-driven PPC advertising, social media marketing, conversion rate optimization (CRO), and high-converting growth funnels."
         canonical="https://www.magencystudio.in/services/digital-marketing"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Digital Marketing', url: '/services/digital-marketing' }]}
@@ -47,7 +47,7 @@ export default function DigitalMarketingPage() {
         description: 'Accelerate revenue with data-driven PPC advertising, social media marketing, conversion rate optimization (CRO), and high-converting growth funnels.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

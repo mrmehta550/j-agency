@@ -83,8 +83,8 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${isScrolled ? 'scrolled' : ''} ${isHide ? 'hide' : ''}`}>
         <div className="container">
-          <Link to="/" className="logo" aria-label="Magency Studio Home">
-            <OptimizedImage src="/images/favicon.png" alt="Magency Studio Logo" className="logo-img" />
+          <Link to="/" className="logo" aria-label="MagencyStudio Home">
+            <OptimizedImage src="/images/favicon.png" alt="MagencyStudio Logo" className="logo-img" />
             <span className="logo-brand">
               <span className="logo-brand-main">Magency</span>
               <span className="logo-brand-accent">Studio</span>

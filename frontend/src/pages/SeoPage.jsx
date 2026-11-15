@@ -50,7 +50,7 @@ export default function SeoPage() {
   return (
     <main>
       <SEO
-        title="Technical SEO & Search Engine Optimization Services | Magency Studio"
+        title="Technical SEO & Search Engine Optimization Services | MagencyStudio"
         description="Drive organic rankings and traffic with technical SEO audits, Core Web Vitals optimization, on-page SEO, speed acceleration, and high-impact keyword strategies."
         canonical="https://www.magencystudio.in/services/seo-optimization"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'SEO Optimization', url: '/services/seo-optimization' }]}
@@ -61,7 +61,7 @@ export default function SeoPage() {
         description: 'Drive organic rankings and traffic with technical SEO audits, Core Web Vitals optimization, on-page SEO, speed acceleration, and high-impact keyword strategies.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

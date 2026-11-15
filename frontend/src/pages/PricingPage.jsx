@@ -209,7 +209,7 @@ export default function PricingPage() {
   return (
     <div>
       <SEO
-        title="Transparent Pricing Plans & Service Packages | Magency Studio"
+        title="Transparent Pricing Plans & Service Packages | MagencyStudio"
         description="Clear, transparent pricing packages for web development, AI integration, SEO, and digital marketing. Choose the plan that fits your business scale."
         canonical="https://www.magencystudio.in/price"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Pricing', url: '/price' }]}

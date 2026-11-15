@@ -95,7 +95,7 @@ export default function LogoDesignPage() {
   return (
     <main>
       <SEO
-        title="Brand Identity & Custom Logo Design Services | Magency Studio"
+        title="Brand Identity & Custom Logo Design Services | MagencyStudio"
         description="Craft a memorable brand with distinctive vector logo designs, typography guidelines, brand style kits, and visual identity collateral that resonates with customers."
         canonical="https://www.magencystudio.in/services/logo-design"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Logo Design', url: '/services/logo-design' }]}
@@ -106,7 +106,7 @@ export default function LogoDesignPage() {
         description: 'Craft a memorable brand with distinctive vector logo designs, typography guidelines, brand style kits, and visual identity collateral that resonates with customers.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

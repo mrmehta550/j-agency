@@ -36,7 +36,7 @@ export default function MaintenancePage() {
   return (
     <main>
       <SEO
-        title="Website Maintenance & Support Plans | Magency Studio"
+        title="Website Maintenance & Support Plans | MagencyStudio"
         description="Keep your website fast, secure, and up-to-date with 24/7 uptime monitoring, security patching, core updates, automated backups, and emergency tech support."
         canonical="https://www.magencystudio.in/services/maintenance"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Website Maintenance', url: '/services/maintenance' }]}
@@ -47,7 +47,7 @@ export default function MaintenancePage() {
         description: 'Keep your website fast, secure, and up-to-date with 24/7 uptime monitoring, security patching, core updates, automated backups, and emergency tech support.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',

@@ -36,7 +36,7 @@ export default function WebDevPage() {
   return (
     <main>
       <SEO
-        title="Custom Web Development & Modern Web Apps | Magency Studio"
+        title="Custom Web Development & Modern Web Apps | MagencyStudio"
         description="Enterprise-grade website and web application development using React, Next.js, Django, and Node.js. Fast, secure, and search-optimized web solutions."
         canonical="https://www.magencystudio.in/services/web-dev"
         breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'Services', url: '/services/web-dev' }, { name: 'Web Development', url: '/services/web-dev' }]}
@@ -47,7 +47,7 @@ export default function WebDevPage() {
         description: 'Enterprise-grade website and web application development using React, Next.js, Django, and Node.js. Fast, secure, and search-optimized web solutions.',
         provider: {
           '@type': 'Organization',
-          name: 'Magency Studio',
+          name: 'MagencyStudio',
           url: 'https://www.magencystudio.in/',
         },
         areaServed: 'Worldwide',
