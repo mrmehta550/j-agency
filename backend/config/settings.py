@@ -421,10 +421,10 @@ if not DEBUG:
     CSRF_COOKIE_SAMESITE = 'Lax'
 
 
-{
-  "tool": "edit_file",
-  "args": {
-    "Path": "c:/Users/hp/Desktop/startup/.env",
-    "Target": "EMAIL_HOST_PASSWORD=qgms gobf qsps tauk",
-    "Replacement": "EMAIL_HOST_PASSWORD=qgmsgobfqspstauk"
-}
+
+#   "tool": "edit_file",
+#   "args": {
+#     "Path": "c:/Users/hp/Desktop/startup/.env",
+#     "Target": "EMAIL_HOST_PASSWORD=qgms gobf qsps tauk",
+#     "Replacement": "EMAIL_HOST_PASSWORD=qgmsgobfqspstauk"
+# }
