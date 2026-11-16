@@ -108,12 +108,16 @@ class ContactForm(forms.Form):
             "autocomplete": "address-level2",
         }),
     )
+
+    # ----- Message field (project description) -----
+    message = forms.CharField(
         strip=True,
         error_messages={"required": "Please describe your project."},
         widget=forms.Textarea(attrs={
             "rows": 6,
             "placeholder": "Tell us about your project...",
         }),
+    )
     )
 
     # ----------------------------------------------------------
