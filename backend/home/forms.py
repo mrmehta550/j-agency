@@ -30,7 +30,7 @@ class ContactForm(forms.Form):
             "placeholder": "Enter your full name",
             "autocomplete": "name",
         }),
-    )
+
 
     email = forms.EmailField(
         error_messages={"required": "Please enter your email address."},
@@ -38,7 +38,7 @@ class ContactForm(forms.Form):
             "placeholder": "example@gmail.com",
             "autocomplete": "email",
         }),
-    )
+
 
     phone = forms.CharField(
         max_length=20,
@@ -48,7 +48,7 @@ class ContactForm(forms.Form):
             "placeholder": "+91 XXXXX XXXXX",
             "autocomplete": "tel",
         }),
-    )
+
 
     company = forms.CharField(
         max_length=200,
@@ -58,7 +58,7 @@ class ContactForm(forms.Form):
             "placeholder": "Your Company (Optional)",
             "autocomplete": "organization",
         }),
-    )
+
 
     service = forms.ChoiceField(
         choices=[
@@ -72,7 +72,7 @@ class ContactForm(forms.Form):
             ("E-Commerce Development", "E-Commerce Development"),
         ],
         error_messages={"required": "Please select a service."},
-    )
+
 
     budget = forms.ChoiceField(
         choices=[
@@ -82,7 +82,7 @@ class ContactForm(forms.Form):
             ("Above ₹1,00,000", "Above ₹1,00,000"),
         ],
         error_messages={"required": "Please select an estimated budget."},
-    )
+
 
     state = forms.CharField(
         max_length=100,
@@ -91,7 +91,7 @@ class ContactForm(forms.Form):
             "placeholder": "State (Optional)",
             "autocomplete": "address-level1",
         }),
-    )
+
     country = forms.CharField(
         max_length=100,
         required=False,
@@ -99,7 +99,7 @@ class ContactForm(forms.Form):
             "placeholder": "Country (Optional)",
             "autocomplete": "country",
         }),
-    )
+
     city = forms.CharField(
         max_length=100,
         required=False,
@@ -107,7 +107,7 @@ class ContactForm(forms.Form):
             "placeholder": "City (Optional)",
             "autocomplete": "address-level2",
         }),
-    )
+
 
     # ----- Message field (project description) -----
     message = forms.CharField(
@@ -118,7 +118,8 @@ class ContactForm(forms.Form):
             "placeholder": "Tell us about your project...",
         }),
     )
-    )
+
+
 
     # ----------------------------------------------------------
     # Field-level cleaners
@@ -223,7 +224,7 @@ class BookingForm(forms.ModelForm):
         if not normalised.isdigit():
             raise ValidationError(
                 "Phone number must contain only digits, spaces, dashes or a leading +."
-            )
+        
 
         if len(normalised) < 10:
             raise ValidationError("Phone number must contain at least 10 digits.")
@@ -240,7 +241,7 @@ class BookingForm(forms.ModelForm):
         if len(details) < 5:
             raise ValidationError(
                 "Please provide at least 5 characters describing your project."
-            )
+        
 
         return details
 

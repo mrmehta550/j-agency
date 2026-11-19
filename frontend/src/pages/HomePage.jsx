@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { api, API_BASE_URL } from '../api/client';
 import SEO from '../components/SEO';
 import OptimizedImage from '../components/OptimizedImage';
+import ContactForm from '../components/ContactForm';
 
 export default function HomePage() {
   const [topBlogs, setTopBlogs] = useState([]);
