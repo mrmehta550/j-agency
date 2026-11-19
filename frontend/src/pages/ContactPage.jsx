@@ -248,6 +248,39 @@ export default function ContactPage() {
 
 
                   <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
                     <label>Full Name</label>
                     <input
                       type="text"
