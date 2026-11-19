@@ -37,6 +37,7 @@ from django.db import IntegrityError, transaction
 from django.db.models import Q
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
+from django.views.decorators.csrf import csrf_exempt
 from django.utils import timezone
 from openpyxl import Workbook, load_workbook
 from openpyxl.utils.exceptions import InvalidFileException
@@ -237,6 +238,7 @@ def _cleanup_old_submission_locks() -> None:
 # Contact view  (PRG pattern)
 # ──────────────────────────────────────────────────────────────
 
+@csrf_exempt
 def contact(request):
     """
     GET  → render the blank contact form.
