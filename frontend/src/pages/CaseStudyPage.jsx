@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getCaseStudies } from "../api/client";
 import SEO from '../components/SEO';
+import ContactForm from '../components/ContactForm';
 import OptimizedImage from '../components/OptimizedImage';
 
 export default function CaseStudyPage() {
@@ -77,6 +78,7 @@ export default function CaseStudyPage() {
           </div>
         </div>
       </section>
+      <ContactForm />
 
       {/* 2. CASE STUDY LISTING GRID */}
       <section className="case-list-section">
@@ -141,6 +143,7 @@ export default function CaseStudyPage() {
           </div>
         </div>
       </section>
+      <ContactForm />
 
       {/* 3. OUR PROVEN IMPACT FEATURE ROW */}
       <section className="case-impact-section">
@@ -177,6 +180,7 @@ export default function CaseStudyPage() {
           </div>
         </div>
       </section>
+      <ContactForm />
 
       {/* 4. FINAL CALL TO ACTION */}
       <section className="case-cta-section">
@@ -196,6 +200,7 @@ export default function CaseStudyPage() {
           </div>
         </div>
       </section>
+      <ContactForm />
     </main>
   );
 }
