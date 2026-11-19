@@ -9,6 +9,9 @@ export default function ContactPage() {
     email: '',
     phone: '',
     company: '',
+    state: '',
+    country: '',
+    city: '',
     service: 'Website Development',
     budget: 'Under ₹25,000',
     message: '',
@@ -188,7 +191,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-        </div>
+
       </section>
 
       {/* =========================================
@@ -243,6 +246,39 @@ export default function ContactPage() {
               <form onSubmit={handleSubmit} id="contactForm">
                 <div className="contact-input-grid">
                   <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
                     <label>Full Name</label>
                     <input
                       type="text"
@@ -253,7 +289,73 @@ export default function ContactPage() {
                       required
                     />
                   </div>
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                   <div className="contact-input-group">
                     <label>Email Address</label>
                     <input
@@ -265,9 +367,75 @@ export default function ContactPage() {
                       required
                     />
                   </div>
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                 </div>
 
                 <div className="contact-input-grid">
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                   <div className="contact-input-group">
                     <label>Phone Number</label>
                     <input
@@ -279,7 +447,73 @@ export default function ContactPage() {
                       required
                     />
                   </div>
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
                   <div className="contact-input-group">
                     <label>Company Name</label>
                     <input
@@ -288,6 +522,39 @@ export default function ContactPage() {
                       placeholder="Your Company"
                       value={formData.company}
                       onChange={handleChange}
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="State"
+                      value={formData.state}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="Country"
+                      value={formData.country}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="City"
+                      value={formData.city}
+                      onChange={handleChange}
+                      required
                     />
                   </div>
                 </div>
