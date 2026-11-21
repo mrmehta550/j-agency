@@ -52,11 +52,29 @@ _mysql_url = (
     or ''
 )
 
-if _mysql_url:
-        # Use MySQL configuration as defined above
-        pass
-    # If no explicit MySQL configuration, fall back to SQLite for local development
-    if not _database_url and not _mysql_url and not os.getenv('MYSQLHOST'):
+# Determine database configuration
+if _database_url:
+    # PostgreSQL configuration is handled later
+    pass
+else:
+    if _mysql_url:
+        # Parse MySQL URL
+        _parsed = _urlparse.urlparse(_mysql_url)
+        _db_host = _parsed.hostname or ''
+        _db_port = str(_parsed.port) if _parsed.port else '3306'
+        _db_user = _parsed.username or ''
+        _db_password = _urlparse.unquote(_parsed.password) if _parsed.password else ''
+        _db_name = _parsed.path.lstrip('/') if _parsed.path else ''
+    else:
+        # Individual MySQL environment variables (or defaults)
+        _db_host = os.getenv('MYSQLHOST') or os.getenv('DB_HOST', '127.0.0.1')
+        _db_port = os.getenv('MYSQLPORT') or os.getenv('DB_PORT', '3306')
+        _db_user = os.getenv('MYSQLUSER') or os.getenv('DB_USER', 'root')
+        _db_password = os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', '')
+        _db_name = os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', '')
+
+    # Choose SQLite when no MySQL configuration is present
+    if not _mysql_url and not os.getenv('MYSQLHOST'):
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.sqlite3',
@@ -64,7 +82,6 @@ if _mysql_url:
             }
         }
     else:
-        # Existing MySQL configuration
         DATABASES = {
             'default': {
                 'ENGINE': 'django.db.backends.mysql',
@@ -78,18 +95,8 @@ if _mysql_url:
                 },
             }
         }
-    _parsed = _urlparse.urlparse(_mysql_url)
-    _db_host = _parsed.hostname or ''
-    _db_port = str(_parsed.port) if _parsed.port else '3306'
-    _db_user = _parsed.username or ''
-    _db_password = _urlparse.unquote(_parsed.password) if _parsed.password else ''
-    _db_name = _parsed.path.lstrip('/') if _parsed.path else ''
-else:
-    _db_host = os.getenv('MYSQLHOST') or os.getenv('DB_HOST', '127.0.0.1')
-    _db_port = os.getenv('MYSQLPORT') or os.getenv('DB_PORT', '3306')
-    _db_user = os.getenv('MYSQLUSER') or os.getenv('DB_USER', 'root')
-    _db_password = os.getenv('MYSQLPASSWORD') or os.getenv('DB_PASSWORD', '')
-    _db_name = os.getenv('MYSQLDATABASE') or os.getenv('DB_NAME', '')
+
+
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent

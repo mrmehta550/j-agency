@@ -50,6 +50,9 @@ export default function ContactPage() {
         email: '',
         phone: '',
         company: '',
+        state: '',
+        country: '',
+        city: '',
         service: 'Website Development',
         budget: 'Under ₹25,000',
         message: '',
@@ -191,7 +194,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-
+        </div>
       </section>
 
       {/* =========================================
@@ -245,8 +248,6 @@ export default function ContactPage() {
             <div className="contact-form-card">
               <form onSubmit={handleSubmit} id="contactForm">
                 <div className="contact-input-grid">
-
-
                   <div className="contact-input-group">
                     <label>State</label>
                     <input
@@ -291,11 +292,6 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-
-
-
-
-
                   <div className="contact-input-group">
                     <label>Email Address</label>
                     <input
@@ -307,13 +303,9 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-
-
                 </div>
 
                 <div className="contact-input-grid">
-
-
                   <div className="contact-input-group">
                     <label>Phone Number</label>
                     <input
@@ -325,11 +317,6 @@ export default function ContactPage() {
                       required
                     />
                   </div>
-
-
-
-
-
                   <div className="contact-input-group">
                     <label>Company Name</label>
                     <input
@@ -340,54 +327,49 @@ export default function ContactPage() {
                       onChange={handleChange}
                     />
                   </div>
-
-
-                </div>
-
-                <div className="contact-input-group">
-                  <label>Select Service</label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="Website Development">Website Development</option>
-                    <option value="AI Automation">AI Automation</option>
-                    <option value="Mobile App Development">Mobile App Development</option>
-                    <option value="UI / UX Design">UI / UX Design</option>
-                    <option value="SEO Optimization">SEO Optimization</option>
-                    <option value="Digital Marketing">Digital Marketing</option>
-                    <option value="Cloud Solutions">Cloud Solutions</option>
-                    <option value="E-Commerce Development">E-Commerce Development</option>
-                  </select>
-                </div>
-
-                <div className="contact-input-group">
-                  <label>Estimated Budget</label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="Under ₹25,000">Under ₹25,000</option>
-                    <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
-                    <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
-                    <option value="Above ₹1,00,000">Above ₹1,00,000</option>
-                  </select>
-                </div>
-
-                <div className="contact-input-group">
-                  <label>Project Details</label>
-                  <textarea
-                    rows="6"
-                    name="message"
-                    placeholder="Tell us about your project..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
+                  <div className="contact-input-group">
+                    <label>Select Service</label>
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="Website Development">Website Development</option>
+                      <option value="AI Automation">AI Automation</option>
+                      <option value="Mobile App Development">Mobile App Development</option>
+                      <option value="UI / UX Design">UI / UX Design</option>
+                      <option value="SEO Optimization">SEO Optimization</option>
+                      <option value="Digital Marketing">Digital Marketing</option>
+                      <option value="Cloud Solutions">Cloud Solutions</option>
+                      <option value="E-Commerce Development">E-Commerce Development</option>
+                    </select>
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Estimated Budget</label>
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="Under ₹25,000">Under ₹25,000</option>
+                      <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
+                      <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                      <option value="Above ₹1,00,000">Above ₹1,00,000</option>
+                    </select>
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Project Details</label>
+                    <textarea
+                      rows="6"
+                      name="message"
+                      placeholder="Tell us about your project..."
+                      value={formData.message}
+                      onChange={handleChange}
+                      required
+                    ></textarea>
+                  </div>
                 </div>
 
                 <button
@@ -486,7 +468,7 @@ export default function ContactPage() {
       </section>
 
       {/* =========================================
-          WHY CHOOSE M AGENCY
+          WHY CHOOSE MAGENCYSTUDIO
           ========================================== */}
       <section className="contact-why-section">
         <div className="container">
@@ -523,7 +505,7 @@ export default function ContactPage() {
 
             <div className="contact-feature-card">
               <div className="contact-feature-icon"><i className="fa-solid fa-shield-halved"></i></div>
-              <h3>Secure & Reliable</h3>
+              <h3>Secure &amp; Reliable</h3>
               <p>Enterprise-grade security, cloud infrastructure and reliable deployment.</p>
             </div>
 
@@ -582,7 +564,7 @@ export default function ContactPage() {
               <div className="contact-cta-card">
                 <div className="contact-cta-icon"><i className="fa-solid fa-users"></i></div>
                 <h3>Dedicated Team</h3>
-                <p>Professional Designers, Developers & AI Experts</p>
+                <p>Professional Designers, Developers &amp; AI Experts</p>
               </div>
 
               <div className="contact-cta-card">
