@@ -18,6 +18,13 @@ For production deployment:
 import os
 from pathlib import Path
 
+# Enable PyMySQL as MySQLdb fallback for environments without mysqlclient
+try:
+    import pymysql
+    pymysql.install_as_MySQLdb()
+except ImportError:
+    pass
+
 # ── Load .env file in development ────────────────────────────
 # python-dotenv reads key=value pairs from .env into os.environ.
 # If not installed (production servers set vars natively), we skip gracefully.
@@ -46,6 +53,31 @@ _mysql_url = (
 )
 
 if _mysql_url:
+        # Use MySQL configuration as defined above
+        pass
+    # If no explicit MySQL configuration, fall back to SQLite for local development
+    if not _database_url and not _mysql_url and not os.getenv('MYSQLHOST'):
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.sqlite3',
+                'NAME': BASE_DIR / 'db.sqlite3',
+            }
+        }
+    else:
+        # Existing MySQL configuration
+        DATABASES = {
+            'default': {
+                'ENGINE': 'django.db.backends.mysql',
+                'HOST': _db_host,
+                'PORT': _db_port,
+                'USER': _db_user,
+                'PASSWORD': _db_password,
+                'NAME': _db_name,
+                'OPTIONS': {
+                    'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+                },
+            }
+        }
     _parsed = _urlparse.urlparse(_mysql_url)
     _db_host = _parsed.hostname or ''
     _db_port = str(_parsed.port) if _parsed.port else '3306'

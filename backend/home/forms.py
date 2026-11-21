@@ -5,7 +5,6 @@ from django.core.exceptions import ValidationError
 
 from .models import Contact
 
-
 # ============================================================
 # ContactForm — used by the /contact/ page
 # ============================================================
@@ -31,6 +30,7 @@ class ContactForm(forms.Form):
             "autocomplete": "name",
         }),
 
+    )
 
     email = forms.EmailField(
         error_messages={"required": "Please enter your email address."},
@@ -39,6 +39,7 @@ class ContactForm(forms.Form):
             "autocomplete": "email",
         }),
 
+    )
 
     phone = forms.CharField(
         max_length=20,
@@ -49,6 +50,7 @@ class ContactForm(forms.Form):
             "autocomplete": "tel",
         }),
 
+    )
 
     company = forms.CharField(
         max_length=200,
@@ -59,6 +61,7 @@ class ContactForm(forms.Form):
             "autocomplete": "organization",
         }),
 
+    )
 
     service = forms.ChoiceField(
         choices=[
@@ -73,6 +76,7 @@ class ContactForm(forms.Form):
         ],
         error_messages={"required": "Please select a service."},
 
+    )
 
     budget = forms.ChoiceField(
         choices=[
@@ -83,6 +87,7 @@ class ContactForm(forms.Form):
         ],
         error_messages={"required": "Please select an estimated budget."},
 
+    )
 
     state = forms.CharField(
         max_length=100,
@@ -92,6 +97,8 @@ class ContactForm(forms.Form):
             "autocomplete": "address-level1",
         }),
 
+    )
+
     country = forms.CharField(
         max_length=100,
         required=False,
@@ -99,6 +106,8 @@ class ContactForm(forms.Form):
             "placeholder": "Country (Optional)",
             "autocomplete": "country",
         }),
+
+    )
 
     city = forms.CharField(
         max_length=100,
@@ -108,6 +117,7 @@ class ContactForm(forms.Form):
             "autocomplete": "address-level2",
         }),
 
+    )
 
     # ----- Message field (project description) -----
     message = forms.CharField(
@@ -118,8 +128,6 @@ class ContactForm(forms.Form):
             "placeholder": "Tell us about your project...",
         }),
     )
-
-
 
     # ----------------------------------------------------------
     # Field-level cleaners
@@ -153,7 +161,6 @@ class ContactForm(forms.Form):
             raise ValidationError("Please provide at least 5 characters describing your project.")
 
         return message.strip()
-
 
 # ============================================================
 # BookingForm — used by the /booking/ page
@@ -224,7 +231,7 @@ class BookingForm(forms.ModelForm):
         if not normalised.isdigit():
             raise ValidationError(
                 "Phone number must contain only digits, spaces, dashes or a leading +."
-        
+            )
 
         if len(normalised) < 10:
             raise ValidationError("Phone number must contain at least 10 digits.")
@@ -241,7 +248,7 @@ class BookingForm(forms.ModelForm):
         if len(details) < 5:
             raise ValidationError(
                 "Please provide at least 5 characters describing your project."
-        
+            )
 
         return details
 
