@@ -249,6 +249,9 @@ def submit_contact(request):
     service   = cd['service']
     budget    = cd['budget']
     message   = cd['message']
+    state     = cd.get('state', '')
+    country   = cd.get('country', '')
+    city      = cd.get('city', '')
 
     submission_fingerprint = _build_contact_fingerprint(
         email=email,
@@ -290,6 +293,9 @@ def submit_contact(request):
                 service=service,
                 budget=budget,
                 message=message,
+                state=state,
+                country=country,
+                city=city,
                 status='Pending',
             )
 
@@ -318,6 +324,9 @@ def submit_contact(request):
                     service=service,
                     budget=budget,
                     message=message,
+                    state=state,
+                    country=country,
+                    city=city,
                     status='Pending',
                 )
             except Exception as retry_exc:

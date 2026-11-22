@@ -593,6 +593,15 @@ FORM CARD
     gap: 20px;
 }
 
+.contact-input-grid--3col {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-input-group--full {
+    grid-column: 1 / -1;
+    margin-bottom: 22px;
+}
+
 .contact-input-group {
     display: flex;
     flex-direction: column;
@@ -700,6 +709,7 @@ FORM RESPONSIVE
     .contact-form-card    { padding: 30px; }
     .contact-info h2      { font-size: 34px; }
     .contact-input-grid   { grid-template-columns: 1fr; }
+    .contact-input-grid--3col { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {

@@ -247,42 +247,10 @@ export default function ContactPage() {
             {/* FORM CARD */}
             <div className="contact-form-card">
               <form onSubmit={handleSubmit} id="contactForm">
+                {/* Row 1: Full Name | Email */}
                 <div className="contact-input-grid">
                   <div className="contact-input-group">
-                    <label>State</label>
-                    <input
-                      type="text"
-                      name="state"
-                      placeholder="State"
-                      value={formData.state}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="contact-input-group">
-                    <label>Country</label>
-                    <input
-                      type="text"
-                      name="country"
-                      placeholder="Country"
-                      value={formData.country}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="contact-input-group">
-                    <label>City</label>
-                    <input
-                      type="text"
-                      name="city"
-                      placeholder="City"
-                      value={formData.city}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="contact-input-group">
-                    <label>Full Name</label>
+                    <label>Full Name <span style={{color:'#e74c3c'}}>*</span></label>
                     <input
                       type="text"
                       name="full_name"
@@ -293,7 +261,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div className="contact-input-group">
-                    <label>Email Address</label>
+                    <label>Email Address <span style={{color:'#e74c3c'}}>*</span></label>
                     <input
                       type="email"
                       name="email"
@@ -305,9 +273,10 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+                {/* Row 2: Phone | Company */}
                 <div className="contact-input-grid">
                   <div className="contact-input-group">
-                    <label>Phone Number</label>
+                    <label>Phone Number <span style={{color:'#e74c3c'}}>*</span></label>
                     <input
                       type="text"
                       name="phone"
@@ -322,13 +291,51 @@ export default function ContactPage() {
                     <input
                       type="text"
                       name="company"
-                      placeholder="Your Company"
+                      placeholder="Your Company (optional)"
                       value={formData.company}
                       onChange={handleChange}
                     />
                   </div>
+                </div>
+
+                {/* Row 3: State | City | Country */}
+                <div className="contact-input-grid contact-input-grid--3col">
                   <div className="contact-input-group">
-                    <label>Select Service</label>
+                    <label>State</label>
+                    <input
+                      type="text"
+                      name="state"
+                      placeholder="e.g. Punjab"
+                      value={formData.state}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>City</label>
+                    <input
+                      type="text"
+                      name="city"
+                      placeholder="e.g. Chandigarh"
+                      value={formData.city}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="contact-input-group">
+                    <label>Country</label>
+                    <input
+                      type="text"
+                      name="country"
+                      placeholder="e.g. India"
+                      value={formData.country}
+                      onChange={handleChange}
+                    />
+                  </div>
+                </div>
+
+                {/* Row 4: Service | Budget */}
+                <div className="contact-input-grid">
+                  <div className="contact-input-group">
+                    <label>Select Service <span style={{color:'#e74c3c'}}>*</span></label>
                     <select
                       name="service"
                       value={formData.service}
@@ -346,7 +353,7 @@ export default function ContactPage() {
                     </select>
                   </div>
                   <div className="contact-input-group">
-                    <label>Estimated Budget</label>
+                    <label>Estimated Budget <span style={{color:'#e74c3c'}}>*</span></label>
                     <select
                       name="budget"
                       value={formData.budget}
@@ -359,17 +366,19 @@ export default function ContactPage() {
                       <option value="Above ₹1,00,000">Above ₹1,00,000</option>
                     </select>
                   </div>
-                  <div className="contact-input-group">
-                    <label>Project Details</label>
-                    <textarea
-                      rows="6"
-                      name="message"
-                      placeholder="Tell us about your project..."
-                      value={formData.message}
-                      onChange={handleChange}
-                      required
-                    ></textarea>
-                  </div>
+                </div>
+
+                {/* Row 5: Project Details — full width */}
+                <div className="contact-input-group contact-input-group--full">
+                  <label>Project Details <span style={{color:'#e74c3c'}}>*</span></label>
+                  <textarea
+                    rows="6"
+                    name="message"
+                    placeholder="Tell us about your project — goals, features, timeline..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
 
                 <button
