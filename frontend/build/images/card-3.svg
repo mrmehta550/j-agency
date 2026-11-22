@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#0d2e27"/>
+  <rect x="100" y="140" width="400" height="320" rx="40" fill="#194138"/>
+  <rect x="220" y="190" width="160" height="40" rx="20" fill="#ffffff" opacity="0.2"/>
+  <rect x="170" y="280" width="260" height="70" rx="24" fill="#ffffff"/>
+  <text x="300" y="327" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#0d2e27">$25,000</text>
+  <circle cx="300" cy="430" r="50" fill="#ffffff" opacity="0.9"/>
+  <path d="M280 430l18 18 42-42" stroke="#0d2e27" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
