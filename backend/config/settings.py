@@ -14,10 +14,11 @@ For production deployment:
   Set environment variables in your hosting platform
   (cPanel, Heroku, AWS, Railway, etc.)
 """
-
+from pathlib import Path
 import os
 from pathlib import Path
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Enable PyMySQL as MySQLdb fallback for environments without mysqlclient
 try:
     import pymysql
