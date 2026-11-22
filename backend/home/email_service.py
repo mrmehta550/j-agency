@@ -291,25 +291,33 @@ def send_contact_notification_emails(contact: Any) -> Dict[str, Any]:
     }
 
     # 1. Admin Notification
-    admin_subject = f"🚀 New Contact Request - {contact.full_name}"
+    admin_subject = f"🚀 New Contact Request — {contact.full_name} | MagencyStudio"
     admin_body = f"""\
-🚀 NEW CONTACT REQUEST
-━━━━━━━━━━━━━━━━━━━━━━━━━━
+🚀 NEW CONTACT REQUEST — MagencyStudio
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-👤 Name: {contact.full_name}
-📧 Email: {contact.email}
-📱 Phone: {contact.phone or "Not Provided"}
-🏢 Company: {contact.company or "Not Provided"}
-💼 Service: {contact.service}
-💰 Budget: {contact.budget}
+👤  Full Name   : {contact.full_name}
+📧  Email       : {contact.email}
+📱  Phone       : {contact.phone or "Not Provided"}
+🏢  Company     : {contact.company or "Not Provided"}
 
-📝 Project Details:
+📍  Location
+    State       : {getattr(contact, 'state', '') or "Not Provided"}
+    City        : {getattr(contact, 'city', '') or "Not Provided"}
+    Country     : {getattr(contact, 'country', '') or "Not Provided"}
+
+💼  Service     : {contact.service}
+💰  Budget      : {contact.budget}
+
+📝  Project Details:
 {contact.message}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-Submitted At: {submitted_at_str}
-Reference ID: #{contact_id}
-Website: https://magencystudio.in
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Submitted At  : {submitted_at_str}
+Reference ID  : #{contact_id}
+Admin Panel   : https://j-agency-1.onrender.com/admin/
+Website       : https://magencystudio.in
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
 
     ok_admin, info_admin = send_single_email(
@@ -329,29 +337,42 @@ Website: https://magencystudio.in
         client_body = f"""\
 Hi {contact.full_name},
 
-Thank you for contacting MagencyStudio.
+Thank you for reaching out to MagencyStudio! 🎉
 
-We have successfully received your project inquiry and our team is already reviewing your details.
+We have successfully received your project inquiry and our team is already reviewing your details. We will get back to you within 24 hours.
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-YOUR SUBMISSION SUMMARY
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-👤 Name: {contact.full_name}
-💼 Service: {contact.service}
-💰 Budget: {contact.budget}
-📝 Details: {contact.message}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 YOUR SUBMISSION SUMMARY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤  Full Name   : {contact.full_name}
+📧  Email       : {contact.email}
+📱  Phone       : {contact.phone or "Not Provided"}
+🏢  Company     : {contact.company or "Not Provided"}
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━
-What happens next?
-• Our engineering team will review your requirements.
-• You can expect a personalized response within the next 24 hours.
-• If your request is urgent, simply reply directly to this email.
+📍  Location
+    State       : {getattr(contact, 'state', '') or "Not Provided"}
+    City        : {getattr(contact, 'city', '') or "Not Provided"}
+    Country     : {getattr(contact, 'country', '') or "Not Provided"}
+
+💼  Service     : {contact.service}
+💰  Budget      : {contact.budget}
+
+📝  Project Details:
+{contact.message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+⏭️  What Happens Next?
+  • Our team will review your requirements carefully.
+  • You'll receive a personalized response within 24 hours.
+  • For urgent requests, reply directly to this email.
 
 Best Regards,
 The MagencyStudio Team
 
 🌐 https://magencystudio.in
 📧 magency550@gmail.com
+📱 +91 9942637897
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """
 
         ok_client, info_client = send_single_email(
