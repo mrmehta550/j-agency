@@ -19,9 +19,9 @@ sitemaps = {
 }
 
 urlpatterns = [
-    # Admin at configurable path (set DJANGO_ADMIN_URL in environment)
-    # Default: admin/ — change to a secret path in production
-    path(settings.ADMIN_URL, admin.site.urls),
+    # Admin at configurable path + fallback to standard admin/
+    path('admin/', admin.site.urls),
+    *( [path(settings.ADMIN_URL, admin.site.urls)] if settings.ADMIN_URL != 'admin/' else [] ),
 
     # Core apps
     path('api/', include('config.api_urls')),
