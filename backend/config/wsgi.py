@@ -16,9 +16,10 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 application = get_wsgi_application()
 app = application
 
-# Automatically run unapplied migrations on server startup (e.g. Render)
+# Automatically run unapplied migrations & create/sync admin on server startup (e.g. Render)
 try:
     from django.core.management import call_command
     call_command('migrate', interactive=False)
+    call_command('create_admin', interactive=False)
 except Exception as _exc:
-    logging.getLogger('django').warning('Startup auto-migration skipped or failed: %s', _exc)
+    logging.getLogger('django').warning('Startup auto-migration/admin setup skipped or failed: %s', _exc)

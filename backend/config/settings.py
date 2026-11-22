@@ -385,6 +385,11 @@ RESEND_FROM_EMAIL = os.environ.get('RESEND_FROM_EMAIL', '').strip() or 'MagencyS
 ADMIN_NOTIFICATION_EMAIL = os.environ.get('ADMIN_NOTIFICATION_EMAIL', '').strip() or EMAIL_HOST_USER or 'magency550@gmail.com'
 
 
+AUTHENTICATION_BACKENDS = [
+    'home.backends.EmailOrUsernameModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
 # ── Admin URL ────────────────────────────────────────────────────────────────
 # Obscure the admin path via environment variable.
 # Default 'admin/' keeps backward compatibility during development.

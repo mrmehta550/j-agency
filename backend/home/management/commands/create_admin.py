@@ -16,26 +16,32 @@ Usage (add to Render release command):
 import os
 from django.contrib.auth import get_user_model
 from django.core.management.base import BaseCommand
+from django.db.models import Q
 
 
 class Command(BaseCommand):
-    help = "Create a superuser from environment variables (safe to run on every deploy)."
+    help = "Create or update superuser from environment variables (safe to run on every deploy)."
 
     def handle(self, *args, **options):
         User = get_user_model()
 
-        username = os.environ.get("DJANGO_ADMIN_USERNAME", "").strip()
-        email    = os.environ.get("DJANGO_ADMIN_EMAIL", "").strip()
+        username = os.environ.get("DJANGO_ADMIN_USERNAME", "").strip() or "admin"
+        email    = os.environ.get("DJANGO_ADMIN_EMAIL", "").strip() or "magency550@gmail.com"
         password = os.environ.get("DJANGO_ADMIN_PASSWORD", "").strip()
 
-        if not username or not password:
+        if not password:
             self.stdout.write(self.style.WARNING(
-                "create_admin: DJANGO_ADMIN_USERNAME or DJANGO_ADMIN_PASSWORD not set — skipping."
+                "create_admin: DJANGO_ADMIN_PASSWORD not set in environment — skipping."
             ))
             return
 
-        user = User.objects.filter(username=username).first()
+        lookup = Q(username__iexact=username)
+        if email:
+            lookup |= Q(email__iexact=email)
+
+        user = User.objects.filter(lookup).first()
         if user:
+            user.username = username
             user.set_password(password)
             user.is_superuser = True
             user.is_staff = True
@@ -44,7 +50,7 @@ class Command(BaseCommand):
                 user.email = email
             user.save()
             self.stdout.write(self.style.SUCCESS(
-                f"create_admin: Superuser '{username}' password updated successfully."
+                f"create_admin: Superuser '{username}' ({user.email}) credentials synced successfully."
             ))
             return
 
