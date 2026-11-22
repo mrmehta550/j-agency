@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [react()],
   build: {
     target: 'esnext',
+    outDir: 'build', // use a fresh output folder to avoid permission issues with existing `dist`
+    emptyOutDir: true,
     cssCodeSplit: true,
     rollupOptions: {
       output: {
